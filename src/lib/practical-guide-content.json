@@ -7,7 +7,7 @@
       "interest-rate",
       "finance"
     ],
-    "title": "How to Read Amortization, Loan Payments and Implied Rates",
+    "title": "How to Calculate an Amortization Schedule and Read Loan Payments",
     "answer": "A loan schedule separates the installment from interest and principal. A rate solver reverses that calculation; a TVM calculator also requires consistent cash-flow signs and payment frequencies. None of these tools supplies a lender APR disclosure.",
     "sections": [
       {
@@ -21,6 +21,10 @@
       {
         "title": "Reverse the equation without confusing rate and APR",
         "text": "Interest Rate solves the nominal annual rate implied by entered principal, duration and fixed monthly payment. A larger entered payment with the same term can imply a larger rate. Finance uses signed PV, PMT and FV; money supplied and money received need opposing signs. Its payment and compounding frequencies can differ. The solved rate excludes unentered fees and is not automatically an APR or an effective annual yield."
+      },
+      {
+        "title": "Calculate the first amortization row by hand",
+        "text": "For the baseline $100,000 loan at 6% nominal annual interest, the monthly rate is 0.06 / 12 = 0.005. The fixed installment is about $1,110.21 over 120 months. First-month interest is $500.00, leaving about $610.21 toward principal and $99,389.79 unpaid after that installment. Those row amounts use rounded display values; the schedule keeps internal precision. Adding $100 of extra principal reduces that first closing balance by another $100 under the same payment timing. It does not change the original fixed-rate formula into a lender recast."
       }
     ],
     "questions": [
@@ -43,6 +47,14 @@
       {
         "question": "How do I use an amortization calculator with extra payments?",
         "answer": "Enter the original loan terms and optional monthly, yearly or one-time extra principal. Review the remaining balance and interest in the resulting schedule; the final payment is capped."
+      },
+      {
+        "question": "What is the formula for a fixed monthly amortization payment?",
+        "answer": "Use M = P × i / [1 − (1 + i)^−N], where P is the loan amount, i is the nominal annual rate divided by twelve and N is the monthly payment count. Interest for each row is opening balance × i; principal is the regular payment minus that interest. At zero interest, use P / N. This is loan amortization, not an intangible-asset expense schedule."
+      },
+      {
+        "question": "Can I calculate car loan amortization with the same formula?",
+        "answer": "Yes, for fixed monthly installments on the entered financed balance. Include financed taxes and fees in principal if they are part of the loan, but keep cash paid upfront separate. Vehicle trade-in, rebates and financing details belong in the Auto Loan calculator; the amortization equation alone does not infer them."
       }
     ],
     "sources": [
@@ -1335,7 +1347,7 @@
     "ids": [
       "bond"
     ],
-    "title": "Bond Price, Coupon and Yield: How the Calculation Works",
+    "title": "How to Calculate Bond Price and Yield to Maturity",
     "answer": "A fixed-coupon bond price discounts its scheduled coupons and principal at the entered yield. Coupon rate, current price and yield to maturity are different quantities.",
     "sections": [
       {
@@ -1349,6 +1361,10 @@
       {
         "title": "Choose ordinary periods or settlement-date pricing deliberately",
         "text": "The ordinary modes use periodic cash flows. Settlement-date pricing adds date and accrued-interest conventions; clean and dirty prices must not be mixed. The calculator is not an executable quote, a credit assessment or a full model for callable, floating-rate or defaulted bonds. Taxes, liquidity and bid-ask spreads can materially change realized results."
+      },
+      {
+        "title": "Separate current yield from yield to maturity",
+        "text": "The baseline annual coupon is $50 on $1,000 face value. At the modeled price of $925.61, current yield is about 5.40% ($50 divided by the unrounded price). The entered yield to maturity is 6%, because that rate also discounts the return of face value at maturity. Coupon rate remains 5% even when price changes. Yield to maturity is the cash-flow discount rate in this fixed-coupon model; it is not a prediction that every coupon can be reinvested at that rate or that the bond can be sold at a particular price."
       }
     ],
     "questions": [
@@ -1389,6 +1405,14 @@
             "label": "Use settlement and maturity dates"
           }
         ]
+      },
+      {
+        "question": "How do I calculate current yield on a bond?",
+        "answer": "Divide annual coupon dollars by purchase price, then multiply by 100 for a percentage. In this guide, $50 divided by about $925.61 is roughly 5.40%. Current yield ignores the difference between purchase price and maturity principal, so it is not the same as the modeled 6% yield to maturity."
+      },
+      {
+        "question": "How do I find yield to maturity from a bond price?",
+        "answer": "Use Solve Yield with price, face value, coupon, remaining maturity and payment frequency. The solver finds the rate that discounts the remaining modeled coupons and principal to that price. For a real dated transaction, settlement, accrued interest and day-count conventions matter; use Settlement-Date Pricing where appropriate and compare quote conventions."
       }
     ],
     "sources": [
@@ -1526,7 +1550,7 @@
       "mutual-fund",
       "investment-fee"
     ],
-    "title": "How Fund Fees and Advisory Costs Affect Investment Growth",
+    "title": "How to Calculate Mutual Fund Returns After Fees",
     "answer": "Compare fees on the same contribution and gross-return assumptions. A fee impact includes both deducted charges and growth those dollars no longer earn.",
     "sections": [
       {
@@ -1540,6 +1564,10 @@
       {
         "title": "Compare equivalent plans and retain the cost limitation",
         "text": "The Investment Fee cases add a 1% advisory charge to an otherwise identical scenario. The difference in ending balances is a compound cost illustration, not an advisory-value judgment. Products can differ in risk, service, taxes and holdings. Match contribution timing, horizon and gross return, and do not present a higher modeled after-fee balance as evidence that a product will outperform."
+      },
+      {
+        "title": "Translate an expense ratio into a comparable cost assumption",
+        "text": "An expense ratio is annual fund operating expenses relative to average net assets. A 0.20% expense ratio on a constant $10,000 balance is approximately $20 per year; actual deductions depend on daily assets and fund accounting. Published fund returns often already reflect operating expenses. For Investment Fee, choose After fund fees if that is the return basis, and enter any separate advisor fee. For Mutual Fund, the operating-expense adjustment should be consistent with the assumed return: do not deduct the same expense twice. The fee-free comparison is hypothetical growth under matching contributions, not a different fund’s actual performance."
       }
     ],
     "questions": [
@@ -1570,6 +1598,14 @@
             "label": "Project fund contributions and fees"
           }
         ]
+      },
+      {
+        "question": "What is a good expense ratio?",
+        "answer": "There is no universal cutoff. Compare the same asset class, investment strategy, share class and services, then check operating expenses, sales loads and separate advisor charges. Lower recurring fees leave more assets invested when other assumptions match; a lower fee alone does not establish suitability or guarantee a better realized return."
+      },
+      {
+        "question": "How is an expense ratio calculated, and why can gross and net differ?",
+        "answer": "A fund expense ratio relates annual operating expenses to average net assets. Gross expenses are measured before applicable fee waivers or reimbursements; net expenses reflect them. Check the prospectus for what is included, how long a waiver lasts and any conditions. Use the expense assumption appropriate to the projected period; these calculators do not look up prospectuses or forecast a waiver’s renewal."
       }
     ],
     "sources": [
@@ -6801,7 +6837,7 @@
     "ids": [
       "tax-equivalent-yield"
     ],
-    "title": "Tax-Equivalent Yield: Break-Even Rate vs. After-Tax Dollars",
+    "title": "How to Calculate Tax-Equivalent Yield and After-Tax Income",
     "answer": "Tax-equivalent yield converts the entered exempt-option income into the taxable yield required to match it under selected marginal-tax assumptions. It is not a risk-adjusted recommendation.",
     "sections": [
       {
@@ -6815,6 +6851,10 @@
       {
         "title": "Compare more than the break-even percentage",
         "text": "A higher taxable marginal rate raises the required taxable yield when exempt income is unchanged. It does not make two securities equally risky. Credit, duration, liquidity, fund expenses, AMT-sensitive income, capital gains and retirement-account treatment are separate. The annual income figures assume an ordinary taxable-account comparison without compounding."
+      },
+      {
+        "title": "Derive the tax-equivalent yield from after-tax income",
+        "text": "Set the two income amounts equal before solving: taxable yield × (1 − taxable-option tax rate) = exempt-option yield × (1 − exempt-option tax rate). For a fully exempt 4% yield and a 24% tax rate on the taxable option, 4% / 0.76 = 5.2632%. The guide’s 5% taxable comparison yields 3.80% after that tax, versus 4.00% on the fully exempt side. These are hypothetical annual yield assumptions. If municipal interest is partly taxable, adjust that side as well; do not keep the fully exempt shortcut while changing its state tax treatment."
       }
     ],
     "questions": [
@@ -6837,6 +6877,14 @@
       {
         "question": "Does the sensitivity table show current tax brackets?",
         "answer": "No. The table tests different combined tax rates for the taxable option. The exempt option keeps the tax treatment you selected. These are comparison scenarios, not current federal or state tax brackets."
+      },
+      {
+        "question": "How do I calculate tax-equivalent yield on municipal bonds?",
+        "answer": "For fully exempt interest, divide its yield by one minus the applicable marginal rate on the taxable comparison. This guide’s 4% / (1 − 24%) is about 5.26%. If the municipal interest incurs state or local tax, reduce its yield by that applicable tax before dividing. The calculator requires those tax assumptions rather than establishing exemption for a bond or investor."
+      },
+      {
+        "question": "Should tax-equivalent yield use my marginal or effective tax rate?",
+        "answer": "Use the marginal rates that apply to the next dollar of the interest being compared. An average effective rate across all income may not reflect that dollar’s tax. This form adds the non-overlapping rates you enter and does not infer brackets, deductions, AMT or whether NIIT applies."
       }
     ],
     "sources": [
@@ -7111,7 +7159,7 @@
     "ids": [
       "treasury-bill"
     ],
-    "title": "Treasury Bill Discount Rate vs. Return on Purchase Cost",
+    "title": "How to Calculate Treasury Bill Interest and Yield",
     "answer": "A Treasury bill discount rate uses face value and a 360-day convention. Your holding-period return instead compares the maturity payoff with the actual purchase cost.",
     "sections": [
       {
@@ -7125,6 +7173,10 @@
       {
         "title": "Deduct the entered fee and appropriate tax separately",
         "text": "A $20 purchase fee lowers net maturity profit in the comparison while the quoted pre-fee bill price remains unchanged. Ordinary Treasury bill interest is federally taxable and exempt from state/local income tax, but the model uses entered federal and additional rates rather than a complete return. Selling before maturity, broker pricing and reinvestment outcomes are outside the fixed-payoff illustration."
+      },
+      {
+        "title": "Reconcile a 13-week bill price and its interest",
+        "text": "In the baseline, bank discount interest = $10,000 × 4.5% × 91 / 360 = $113.75. Price before fees is $9,886.25. Gross holding-period return is $113.75 / $9,886.25, about 1.1506%; simple 365-day annualization is about 4.6150%. The 4.5% bank discount quote and 4.6150% annualized purchase-price return have different denominators. Neither means the bill pays a coupon monthly. Its face value is repaid at maturity, and a hypothetical reinvestment yield assumes a rate for later purchases that is not known today."
       }
     ],
     "questions": [
@@ -7147,6 +7199,14 @@
       {
         "question": "Is the effective annual yield guaranteed?",
         "answer": "No. It assumes reinvestment repeatedly at the same holding-period return across a full year. Bills pay at maturity, and future auction rates are unknown. It is a mathematical comparison figure, not an accrued daily payout or guaranteed annual return."
+      },
+      {
+        "question": "How is interest on Treasury bills calculated?",
+        "answer": "For a bill held to maturity, gross discount interest is face value minus purchase price. This guide’s $10,000 face value minus $9,886.25 price gives $113.75. Purchase fees lower net profit; estimated federal tax is separate. If starting from a bank discount quote, calculate the discount using face value and a 360-day basis rather than treating that quote as APY."
+      },
+      {
+        "question": "Are Treasury bills taxable at the federal and state levels?",
+        "answer": "Interest on US Treasury bills is generally subject to federal income tax and exempt from state and local income tax. This model estimates federal tax on positive gross discount interest using entered rates; it does not resolve secondary-sale gains, investor-specific basis, accrual rules or filing schedules. Its tax estimate is not a determination of your personal liability."
       }
     ],
     "sources": [

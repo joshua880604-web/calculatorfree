@@ -6367,6 +6367,10 @@
       {
         "question": "Does this include tax and inflation?",
         "answer": "No automatic adjustments are made for them. Use the Savings or Compound Interest calculator for those additional assumptions, and review the input conventions."
+      },
+      {
+        "question": "How do I calculate future value in Excel?",
+        "answer": "For the annual base, =FV(5%,10,-1000,-10000,0) returns about $28,866.84: a $10,000 starting balance plus ten $1,000 year-end deposits at an assumed 5%. Change the last argument to 1 for beginning-period deposits, giving about $29,495.73. Negative principal and payment arguments represent your contributions in Excel; this website uses positive deposit amounts. Convert annual quotes consistently before using monthly periods."
       }
     ],
     "limitations": [
@@ -6514,6 +6518,10 @@
       {
         "question": "Is present value the same as net present value or market price?",
         "answer": "No. PV discounts the entered future receipts. An initial purchase cost, market conditions and risk assessment are separate; none is inferred automatically here."
+      },
+      {
+        "question": "How do I calculate present value in Excel?",
+        "answer": "For this guide’s $10,000 future lump sum at 5% over ten years, =PV(5%,10,0,-10000,0) returns about $6,139.13. For the lump sum plus ten $1,000 year-end receipts, =PV(5%,10,-1000,-10000,0) returns about $13,860.87. Change the last argument to 1 only for beginning-period recurring receipts. Excel uses opposing cash-flow signs; the website accepts positive future receipts. Match the rate and period units."
       }
     ],
     "limitations": [
