@@ -231,3 +231,7 @@ for(const slug of ['home-equity-and-heloc','debt-consolidation'])contentUpdatedO
 
 for(const id of ['auto-loan','boat-loan'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
 contentUpdatedOn['/glossary/amortization/']='2026-11-01';
+
+for(const id of ['auto-lease','cash-back-or-low-interest'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+contentUpdatedOn['/glossary/apr/']='2026-11-01';
+contentUpdatedOn['/glossary/lease-residual-value/']='2026-11-01';

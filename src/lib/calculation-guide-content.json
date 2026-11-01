@@ -5064,5 +5064,288 @@
         "label": "Amortization glossary"
       }
     ]
+  },
+  "lease": {
+    "meta": {
+      "path": "/guides/how-to-calculate-auto-lease-payments/",
+      "title": "How to Calculate Auto Lease Payments and Rent Charges",
+      "heading": "How to Calculate Auto Lease Payments and Rent Charges",
+      "description": "Calculate a simplified auto lease payment from capitalized cost, residual, rent charge and monthly tax. Five reproducible cases compare money factor, cash reduction and price solving.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "auto-lease"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "How to Calculate Auto Lease Payments and Rent Charges",
+      "cardIntro": "Calculate a simplified auto lease payment from capitalized cost, residual, rent charge and monthly tax. Five reproducible cases compare money factor, cash reduction and price solving.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/auto-lease-calculator",
+    "calculatorLabel": "Auto Lease Calculator",
+    "intro": "Separate negotiated price, capitalized cost, residual value and rent charge before comparing lease payments. The calculator uses a simplified monthly depreciation-plus-rent model with entered tax. A lease installment is not a loan installment toward outright ownership, and the modeled cash outlay does not include an optional buyout.",
+    "answer": "With a $35,000 negotiated price, $3,000 cash reduction, no trade, $700 capitalized fees and a $20,000 residual over 36 months, capitalized cost is $32,700. Using the illustrative 5% rate-equivalent selector and 7% monthly tax gives a $494.95 payment. A quoted money factor of 0.0025 instead raises that payment to $518.44.",
+    "sections": [
+      {
+        "id": "capital",
+        "title": "Calculate capitalized cost separately from vehicle price",
+        "paragraphs": [
+          "The base capitalized cost is $35,000 − $3,000 − $0 + $700 = $32,700. Cash down and a trade credit reduce the modeled capitalized amount; acquisition fees entered here are added to it. The negotiated vehicle price remains a separate quantity.",
+          "A residual is entered as a dollar amount, not estimated from MSRP by this tool. Use the quote’s applicable figures and review which charges are capitalized versus paid separately. The model does not reconstruct every line of a real lease agreement."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "components",
+        "title": "Split depreciation, rent charge and monthly tax",
+        "paragraphs": [
+          "Depreciation is ($32,700 − $20,000) / 36 = $352.7778 per month before rounding. The 5% illustrative equivalent converts to a money factor of 5 / 2400. Applying that factor to $32,700 + $20,000 gives a $109.7917 monthly rent charge.",
+          "Base payment is approximately $462.5694. Entered 7% monthly tax adds $32.3799, producing $494.9493 before display rounding. This tax method is an assumption in the model, not a determination of the applicable state or local lease-tax treatment."
+        ],
+        "formula": "Monthly payment = [(capitalized cost − residual)/months + (capitalized cost + residual) × money factor] × (1 + monthly tax rate)"
+      },
+      {
+        "id": "factor",
+        "title": "Distinguish a quoted money factor from a loan APR",
+        "paragraphs": [
+          "Selecting Money factor and entering 0.0025 produces a $131.75 rent charge and $518.44 tax-inclusive monthly payment under the other base inputs. Multiplying 0.0025 by 2400 gives 6 under the calculator’s illustrative percentage-equivalent convention.",
+          "The APR (%) selector is not a regulatory lease APR disclosure or an amortizing-loan interest calculation. If a contract supplies a money factor, use the matching input unit and that factor. Do not enter 0.0025 as a percentage or assume a car-loan APR can replace the actual lease terms."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "residual",
+        "title": "A higher residual changes both depreciation and rent",
+        "paragraphs": [
+          "Holding other inputs constant but entering a $22,000 residual reduces the depreciation charge while increasing the rent-charge base. The combined monthly payment falls to $439.96 and modeled cash outlay to $18,838.68. Both components must be included; changing depreciation alone would miss part of the effect.",
+          "A smaller payment does not establish a better ownership outcome. A residual can also affect an available end purchase option, while other contract conditions remain separate. This model does not price a complete lease-versus-buy decision or guarantee the vehicle’s later market value."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "cash",
+        "title": "Compare down payment with full modeled cash outlay",
+        "paragraphs": [
+          "Removing the $3,000 cash capital reduction raises the monthly payment to $590.80. Its modeled total cash outlay is $21,268.92 over 36 months, compared with $20,818.18 for the base case. A lower installment in the base case partly reflects cash committed at the beginning.",
+          "The displayed cash outlay equals installments plus entered cash down. It does not include the economic value of a trade-in, refundable deposits, unentered upfront charges, disposition, excess mileage, wear, early termination or an optional buyout. Avoid calling this a complete ownership cost."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "solve",
+        "title": "Reverse the formula without turning it into approval",
+        "paragraphs": [
+          "With the other base inputs retained, a $500 tax-inclusive monthly payment solves a negotiated vehicle price of $35,158.07. The model first solves capitalized cost, then adds cash reduction and trade and subtracts capitalized fees to recover price. That result is a mathematical estimate, not an available lease quote.",
+          "To reproduce the base example, compute capitalized cost, subtract residual for depreciation, add the rent charge and apply the entered monthly tax. Review actual lease documents for additional terms. CFPB explains the distinction between paying depreciation and rent during a lease and building vehicle ownership through a purchase loan."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Vehicle price",
+      "Monthly lease payment",
+      "Monthly rent charge",
+      "Modeled lease cash outlay"
+    ],
+    "chart": "lease-guide",
+    "chartAlt": "Monthly lease payments under different money factors, residuals, cash reductions and a solved vehicle price.",
+    "chartCaption": "Simplified monthly tax and depreciation-plus-rent model. Cash outlay includes scheduled payments plus cash down, but excludes trade-in value, buyout and unentered end charges.",
+    "questions": [
+      {
+        "question": "What is capitalized cost?",
+        "answer": "In this model it is negotiated price minus cash reduction and trade credit plus capitalized acquisition fees."
+      },
+      {
+        "question": "Is the money-factor equivalent a true lease APR?",
+        "answer": "No. The percentage selector converts by dividing by 2400 as an illustration. It is not a regulatory lease APR disclosure or a loan-amortization rate."
+      },
+      {
+        "question": "Does a higher residual always lower the whole cost?",
+        "answer": "It lowers the monthly payment in the controlled case, but buyout, contract terms and unentered charges are separate. The tool does not make a complete ownership comparison."
+      },
+      {
+        "question": "Does the total cash outlay include my trade-in?",
+        "answer": "It includes installments and cash down only. The value of a trade-in and other excluded costs must be considered separately."
+      },
+      {
+        "question": "Is the 7% monthly tax a state rule?",
+        "answer": "No. It is an entered example applied to the base monthly payment. Actual lease tax rules can differ."
+      },
+      {
+        "question": "What price fits a $500 monthly lease payment?",
+        "answer": "Under the guide’s complete base assumptions, $35,158.07. Different residual, rent factor, cash or fees change the result."
+      }
+    ],
+    "limitations": [
+      "Hypothetical inputs, not live manufacturer offers, approval or a personalized recommendation.",
+      "Money-factor equivalent is illustrative, not a regulatory lease APR or an amortizing-loan rate.",
+      "Monthly tax is applied to base payment; no automatic jurisdiction-specific upfront tax, mileage, wear, disposition, early termination or buyout cost."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-leasing-versus-buying-a-car-en-815/",
+        "label": "CFPB: lease components and leasing versus buying"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-auto-loan-payments/",
+        "label": "Auto purchase financing guide"
+      },
+      {
+        "href": "/guides/cash-rebate-vs-low-interest-financing/",
+        "label": "Rebate versus low-rate purchase financing"
+      },
+      {
+        "href": "/auto-loan-calculator",
+        "label": "Auto Loan Calculator"
+      },
+      {
+        "href": "/glossary/lease-residual-value/",
+        "label": "Lease residual value glossary"
+      }
+    ]
+  },
+  "rebate": {
+    "meta": {
+      "path": "/guides/cash-rebate-vs-low-interest-financing/",
+      "title": "Cash Rebate vs. Low-Interest Financing: How to Compare",
+      "heading": "Cash Rebate vs. Low-Interest Financing: How to Compare",
+      "description": "Compare cash rebate versus promotional low-rate financing using five reproducible cases. Include installment totals, upfront cash and explicit manual tax assumptions.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "cash-back-or-low-interest"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "Cash Rebate vs. Low-Interest Financing: How to Compare",
+      "cardIntro": "Compare cash rebate versus promotional low-rate financing using five reproducible cases. Include installment totals, upfront cash and explicit manual tax assumptions.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/cash-back-or-low-interest-calculator",
+    "calculatorLabel": "Cash Back or Low Interest Calculator",
+    "intro": "Compare the complete purchase-financing outflow for the same vehicle, down payment and term. A rebate reduces one option’s financed balance, while a promotional rate reduces the other option’s interest. Enter actual offer terms and selected tax assumptions; this model does not find promotions or decide whether you qualify.",
+    "answer": "For a hypothetical $35,000 car with $5,000 down over 60 months, a $2,500 rebate at 7% gives $544.53 monthly, versus $537.73 at a 2.9% promotional rate without the rebate. Including the same upfront cash, the low-rate option costs $408.26 less. Increasing the rebate to $4,000 reverses the comparison: cash back costs $1,373.85 less under the stated assumptions.",
+    "sections": [
+      {
+        "id": "offers",
+        "title": "Keep shared purchase inputs consistent",
+        "paragraphs": [
+          "The base case has no tax, fees, trade or trade debt to isolate the financing choice. The rebate option borrows $35,000 − $5,000 − $2,500 = $27,500 at 7%. The promotional option borrows $30,000 at 2.9%. Both run for 60 months.",
+          "Cash back in this model reduces the purchase financing immediately. It is not modeled as a separate later payment or as credit-card rewards. If an actual incentive pays differently or has additional conditions, the calculation does not automatically adapt to those terms."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "cost",
+        "title": "Include upfront cash as well as installments",
+        "paragraphs": [
+          "The rebate case has $32,671.98 scheduled payments plus $5,000 upfront cash, totaling $37,671.98. The low-rate case totals $32,263.72 installments plus the same $5,000, or $37,263.72. The difference is $408.26 in favor of low-rate financing.",
+          "The displayed Cash-back cost advantage is low-rate outflow minus cash-back outflow. A positive result favors cash back; a negative result favors the low-rate option. Preserve the sign. The base advantage is −$408.26, not a positive cash-back saving."
+        ],
+        "formula": "Cash-back cost advantage = low-rate payments + low-rate upfront cash − cash-back payments − cash-back upfront cash"
+      },
+      {
+        "id": "size",
+        "title": "A larger rebate can reverse the result",
+        "paragraphs": [
+          "At a $4,000 rebate, the rebate loan balance falls to $26,000 while the promotional loan remains $30,000. The cash-back installment becomes $514.83, and its payments plus upfront cash total $35,889.87. The unchanged low-rate option totals $37,263.72.",
+          "Cash-back advantage is now $1,373.85. This is not a universal threshold for every offer: price, down payment, term, rates, fees and tax treatment can all change the comparison. No current manufacturer incentive is supplied by the calculator."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "term",
+        "title": "Term can change both the payment and the favored offer",
+        "paragraphs": [
+          "Keeping the original $2,500 rebate but comparing both offers over 36 months produces payments of $849.12 with cash back and $871.11 with the low rate. Full outflows are $35,568.33 and $36,360.13, giving a $791.81 cash-back advantage.",
+          "The shorter term leaves less time for the low rate to offset the rebate. It also raises the monthly commitment. Actual promotional financing may specify a particular term, so compare terms that are actually offered instead of assuming every rate is available for every duration."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "tax",
+        "title": "Show manual rebate-tax treatment explicitly",
+        "paragraphs": [
+          "A separate pair of cases adds 7% Manual purchase tax and $500 financed fees. Without a selected rebate tax credit, both options use tax on the full $35,000 price and the cash-back advantage is −$740.47. The tax and fees increase both financed balances.",
+          "Selecting a Manual rebate tax credit reduces the cash-back taxable price by the $2,500 rebate but does not change the promotional option. Its advantage becomes −$532.56, still favoring the low-rate option in this case. This setting is a controlled assumption, not a statement that a jurisdiction permits the credit."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "limits",
+        "title": "Do not turn the cost comparison into an eligibility claim",
+        "paragraphs": [
+          "The examples assume both loans are held for the full entered term, with no early payoff, refinancing or changing rates. Early repayment can change the relative value of a rebate and lower interest; the tool does not simulate that alternate timeline. Unentered charges and opportunity cost are also outside this comparison.",
+          "CFPB explains that promotional financing can have qualification and term conditions. Verify the offers, their purchase-price basis and the applicable tax treatment. A lower modeled outflow is not a credit approval, a recommendation to borrow or evidence that both offers are available together."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Cash-back monthly payment",
+      "Low-rate monthly payment",
+      "Cash-back payments + upfront cash",
+      "Low-rate payments + upfront cash",
+      "Cash-back cost advantage"
+    ],
+    "chart": "rebate-guide",
+    "chartAlt": "Signed cash-back cost advantages show changes from rebate size, loan term and selected manual tax treatment.",
+    "chartCaption": "Positive advantage favors the cash-back offer; negative favors the low-rate offer. Both options share entered purchase settings. Tax examples are Manual assumptions, not jurisdiction rules.",
+    "questions": [
+      {
+        "question": "Should I choose cash back or a low rate?",
+        "answer": "The lower modeled outflow depends on the complete entered offers. The guide’s $2,500 rebate favors low rate over 60 months, while its $4,000 rebate favors cash back."
+      },
+      {
+        "question": "What does a negative cash-back advantage mean?",
+        "answer": "It means the low-rate option has lower payments-plus-upfront-cash outflow under the entered assumptions."
+      },
+      {
+        "question": "Is cash back modeled as a separate check?",
+        "answer": "No. It reduces the purchase financing at the start in this tool. A delayed payment would require a different cash-flow comparison."
+      },
+      {
+        "question": "Can a shorter term reverse the comparison?",
+        "answer": "Yes. The original $2,500 rebate favors cash back over 36 months in the checked example, while low rate wins over 60 months."
+      },
+      {
+        "question": "Does the model check promotional eligibility?",
+        "answer": "No. Enter actual qualifying offer terms; credit requirements, vehicle eligibility and availability are not determined."
+      },
+      {
+        "question": "Does a rebate automatically reduce sales tax?",
+        "answer": "No universal rule is inferred. The examples use explicit Manual settings; confirm the applicable purchase tax treatment."
+      }
+    ],
+    "limitations": [
+      "Hypothetical inputs, not live manufacturer offers, approval or a personalized recommendation.",
+      "Both options are modeled to the same entered full term; no early payoff, refinancing, changing rates or offer-eligibility assessment.",
+      "Cash back reduces financing at purchase; it is not a credit-card reward or a separate delayed rebate check."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-qualify-for-an-advertised-0-auto-financing-en-781/",
+        "label": "CFPB: promotional financing requirements and terms"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-auto-loan-payments/",
+        "label": "Auto payment and trade-equity guide"
+      },
+      {
+        "href": "/guides/pay-off-car-loan-early/",
+        "label": "Early car-loan payoff considerations"
+      },
+      {
+        "href": "/guides/how-to-calculate-auto-lease-payments/",
+        "label": "Auto lease payment components"
+      },
+      {
+        "href": "/glossary/apr/",
+        "label": "APR glossary"
+      }
+    ]
   }
 }

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="648pt" height="360pt" viewBox="0 0 648 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 648 360 
+L 648 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 70.58 294.392 
+L 636.12 294.392 
+L 636.12 27.96 
+L 70.58 27.96 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 96.286364 189.167454 
+L 181.974242 189.167454 
+L 181.974242 225.253159 
+L 96.286364 225.253159 
+z
+" clip-path="url(#p56ebfc0510)" style="fill: #b34d54"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 203.396212 189.167454 
+L 289.084091 189.167454 
+L 289.084091 67.734924 
+L 203.396212 67.734924 
+z
+" clip-path="url(#p56ebfc0510)" style="fill: #6653cc"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 310.506061 189.167454 
+L 396.193939 189.167454 
+L 396.193939 119.180662 
+L 310.506061 119.180662 
+z
+" clip-path="url(#p56ebfc0510)" style="fill: #6653cc"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 417.615909 189.167454 
+L 503.303788 189.167454 
+L 503.303788 254.617076 
+L 417.615909 254.617076 
+z
+" clip-path="url(#p56ebfc0510)" style="fill: #b34d54"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 524.725758 189.167454 
+L 610.413636 189.167454 
+L 610.413636 236.239948 
+L 524.725758 236.239948 
+z
+" clip-path="url(#p56ebfc0510)" style="fill: #b34d54"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m03922c5e04" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m03922c5e04" x="139.130303" y="294.392" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(102.276006 309.750281)">Rebate 2,500</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(109.66835 322.067875)">60 months</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m03922c5e04" x="246.240152" y="294.392" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(209.385855 309.750281)">Rebate 4,000</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(216.778198 322.067875)">60 months</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m03922c5e04" x="353.35" y="294.392" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(316.495703 309.750281)">Rebate 2,500</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(323.888047 322.067875)">36 months</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m03922c5e04" x="460.459848" y="294.392" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(429.944302 309.750281)">Manual tax</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(415.83852 322.067875)">No rebate credit</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m03922c5e04" x="567.569697" y="294.392" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(537.05415 309.750281)">Manual tax</text>
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'" transform="translate(530.739463 322.067875)">Rebate credit</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="m7281f992ea" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m7281f992ea" x="70.58" y="277.556175" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.58" y="281.735315" transform="rotate(-0 63.58 281.735315)">−1000</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m7281f992ea" x="70.58" y="233.361814" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.58" y="237.540955" transform="rotate(-0 63.58 237.540955)">−500</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m7281f992ea" x="70.58" y="189.167454" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.58" y="193.346595" transform="rotate(-0 63.58 193.346595)">0</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m7281f992ea" x="70.58" y="144.973093" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.58" y="149.152234" transform="rotate(-0 63.58 149.152234)">500</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m7281f992ea" x="70.58" y="100.778733" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.58" y="104.957874" transform="rotate(-0 63.58 104.957874)">1000</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m7281f992ea" x="70.58" y="56.584373" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.58" y="60.763513" transform="rotate(-0 63.58 60.763513)">1500</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="20.079688" y="161.176" transform="rotate(-90 20.079688 161.176)">Low-rate outflow minus cash-back outflow (USD)</text>
+    </g>
+   </g>
+   <g id="line2d_12">
+    <path d="M 70.58 189.167454 
+L 636.12 189.167454 
+" clip-path="url(#p56ebfc0510)" style="fill: none; stroke: #475569; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 70.58 294.392 
+L 70.58 27.96 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 70.58 294.392 
+L 636.12 294.392 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="139.130303" y="235.127566" transform="rotate(-0 139.130303 235.127566)">-$408.26</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="246.240152" y="62.827392" transform="rotate(-0 246.240152 62.827392)">$1,373.85</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="353.35" y="114.27313" transform="rotate(-0 353.35 114.27313)">$791.81</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="460.459848" y="264.491483" transform="rotate(-0 460.459848 264.491483)">-$740.47</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="567.569697" y="246.114355" transform="rotate(-0 567.569697 246.114355)">-$532.56</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="353.35" y="21.96" transform="rotate(-0 353.35 21.96)">Positive advantage favors rebate; negative favors low rate</text>
+   </g>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #475569" transform="translate(137.176875 346.72175)">USD 35,000 price, 5,000 down; rebate with 7% vs promotional 2.9%. Inputs are hypothetical.</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #475569" transform="translate(144.104375 355.68)">No live offers, eligibility, state tax determination or complete ownership-cost comparison.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p56ebfc0510">
+   <rect x="70.58" y="27.96" width="565.54" height="266.432"/>
+  </clipPath>
+ </defs>
+</svg>

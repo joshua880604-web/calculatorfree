@@ -272,3 +272,7 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## Auto and boat purchase financing
 - [How to Calculate Auto Loan Payments, Taxes and Trade Equity](https://www.calculatorfree.io/guides/how-to-calculate-auto-loan-payments/): Calculate auto loan payments from price, down payment, trade debt and entered taxes. Five reproducible cases compare term, upfront cash and interest.
 - [How to Calculate Boat Loan Payments and Purchase Budget](https://www.calculatorfree.io/guides/how-to-calculate-boat-loan-payments/): Calculate boat loan payments or solve price from a payment budget. Five reproducible cases compare term, tax financing, upfront cash and zero interest.
+
+## Auto lease and financing incentive comparisons
+- [How to Calculate Auto Lease Payments and Rent Charges](https://www.calculatorfree.io/guides/how-to-calculate-auto-lease-payments/): Calculate a simplified auto lease payment from capitalized cost, residual, rent charge and monthly tax. Five reproducible cases compare money factor, cash reduction and price solving.
+- [Cash Rebate vs. Low-Interest Financing: How to Compare](https://www.calculatorfree.io/guides/cash-rebate-vs-low-interest-financing/): Compare cash rebate versus promotional low-rate financing using five reproducible cases. Include installment totals, upfront cash and explicit manual tax assumptions.

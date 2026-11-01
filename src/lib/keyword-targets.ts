@@ -317,3 +317,9 @@ searchTasks['debt-consolidation'][0].description='Compare debt consolidation pay
 keywordTitles['boat-loan']='Boat Loan Calculator - Payments & Total Interest';
 searchTasks['auto-loan'][0].description='Calculate car loan payments with entered taxes, fees and trade equity. Compare terms, upfront cash and total interest using your purchase assumptions.';
 searchTasks['boat-loan'][0].description='Calculate boat loan payments or solve a purchase price from a monthly loan budget. Compare terms, tax financing and total interest; ownership expenses are separate.';
+
+// Lease components and rebate-versus-rate examples checked 2026-11-01.
+keywordTitles['auto-lease']='Auto Lease Calculator - Payment & Money Factor';
+keywordTitles['cash-back-or-low-interest']='Cash Back or Low Interest Calculator - Total Cost';
+searchTasks['auto-lease'][0].description='Calculate a simplified auto lease payment from price, residual, money factor and entered monthly tax. Compare components and cash outlay; buyout and end fees are separate.';
+searchTasks['cash-back-or-low-interest'][0].description='Compare cash rebate versus low-interest auto financing using total payments and upfront cash. Enter actual terms and tax assumptions; offer eligibility is not determined.';

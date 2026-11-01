@@ -2063,6 +2063,10 @@
       {
         "path": "/guides/how-to-calculate-business-loan-payments/",
         "title": "How to Calculate Business Loan Payments and Total Cost"
+      },
+      {
+        "path": "/guides/cash-rebate-vs-low-interest-financing/",
+        "title": "Cash Rebate vs. Low-Interest Financing: How to Compare"
       }
     ]
   },
@@ -3674,7 +3678,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/how-to-calculate-auto-lease-payments/",
+        "title": "How to Calculate Auto Lease Payments and Rent Charges"
+      }
+    ]
   },
   {
     "slug": "ecpm",

@@ -401,5 +401,31 @@
         "answer": "Under the complete stated assumptions, the model solves $65,222.85. That is a loan-payment estimate, not an appraisal or approval."
       }
     ]
+  },
+  "auto-lease": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Is the money-factor equivalent a true lease APR?",
+        "answer": "No. The percentage selector converts by dividing by 2400 as an illustration. It is not a regulatory lease APR disclosure or a loan-amortization rate."
+      },
+      {
+        "question": "Is the 7% monthly tax a state rule?",
+        "answer": "No. It is an entered example applied to the base monthly payment. Actual lease tax rules can differ."
+      }
+    ]
+  },
+  "cash-back-or-low-interest": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "What does a negative cash-back advantage mean?",
+        "answer": "It means the low-rate option has lower payments-plus-upfront-cash outflow under the entered assumptions."
+      },
+      {
+        "question": "Does the model check promotional eligibility?",
+        "answer": "No. Enter actual qualifying offer terms; credit requirements, vehicle eligibility and availability are not determined."
+      }
+    ]
   }
 }
