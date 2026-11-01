@@ -980,7 +980,17 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/how-to-calculate-future-value/",
+        "title": "How to Calculate Future Value with Periodic Deposits"
+      },
+      {
+        "path": "/guides/how-to-calculate-present-value/",
+        "title": "How to Calculate Present Value of a Lump Sum and Payments"
+      }
+    ]
   },
   {
     "slug": "return-on-investment",

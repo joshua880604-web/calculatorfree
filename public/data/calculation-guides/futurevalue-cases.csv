@@ -1,0 +1,7 @@
+Case,Complete inputs (JSON),Unrounded reference metrics (JSON)
+"Base: 5% per year, ten years","{""payment"": 1000, ""periods"": 10, ""principal"": 10000, ""rate"": 5, ""timing"": ""End of period""}","{""Future value"": 28866.83880332324, ""Interest earned"": 8866.838803323242, ""Total contributions"": 20000.0}"
+Beginning-year deposits,"{""payment"": 1000, ""periods"": 10, ""principal"": 10000, ""rate"": 5, ""timing"": ""Beginning of period""}","{""Future value"": 29495.733430100685, ""Interest earned"": 9495.733430100683, ""Total contributions"": 20000.0}"
+Zero periodic rate,"{""payment"": 1000, ""periods"": 10, ""principal"": 10000, ""rate"": 0, ""timing"": ""End of period""}","{""Future value"": 20000.0, ""Interest earned"": 0.0, ""Total contributions"": 20000.0}"
+No recurring deposits,"{""payment"": 0, ""periods"": 10, ""principal"": 10000, ""rate"": 5, ""timing"": ""End of period""}","{""Future value"": 16288.946267774414, ""Interest earned"": 6288.946267774414, ""Total contributions"": 10000.0}"
+"0.5% per month, sixty months","{""payment"": 100, ""periods"": 60, ""principal"": 10000, ""rate"": 0.5, ""timing"": ""End of period""}","{""Future value"": 20465.50457647948, ""Interest earned"": 4465.504576479482, ""Total contributions"": 16000.0}"
+Negative 2% periodic return,"{""payment"": 1000, ""periods"": 10, ""principal"": 10000, ""rate"": -2, ""timing"": ""End of period""}","{""Future value"": 17317.087724498124, ""Interest earned"": -2682.9122755018757, ""Total contributions"": 20000.0}"

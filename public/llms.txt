@@ -288,3 +288,7 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## Monthly budgeting and rent planning
 - [How to Calculate a Monthly Budget from Income and Expenses](https://www.calculatorfree.io/guides/how-to-calculate-monthly-budget/): Build a monthly budget with mixed pay frequencies, spending and saving allocations. Six checked examples explain tax assumptions, irregular bills and signed deficits.
 - [How to Calculate Rent Affordability from Income and Debt](https://www.calculatorfree.io/guides/how-to-calculate-rent-affordability/): Estimate rent from gross income and two adjustable ratio limits. Six checked cases explain debt headroom, pay frequencies and why a ratio is not a full living-cost budget.
+
+## Future and present value
+- [How to Calculate Future Value with Periodic Deposits](https://www.calculatorfree.io/guides/how-to-calculate-future-value/): Calculate future value from a starting amount and equal deposits. Six checked cases cover rate units, beginning/end timing, zero growth and negative returns.
+- [How to Calculate Present Value of a Lump Sum and Payments](https://www.calculatorfree.io/guides/how-to-calculate-present-value/): Discount a future amount and equal payments to present value. Six checked cases separate terminal cash, payment timing, discount assumptions and zero-rate arithmetic.

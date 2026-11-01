@@ -6228,5 +6228,303 @@
         "label": "Gross versus net pay"
       }
     ]
+  },
+  "futurevalue": {
+    "meta": {
+      "path": "/guides/how-to-calculate-future-value/",
+      "title": "How to Calculate Future Value with Periodic Deposits",
+      "heading": "How to Calculate Future Value with Periodic Deposits",
+      "description": "Calculate future value from a starting amount and equal deposits. Six checked cases cover rate units, beginning/end timing, zero growth and negative returns.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "future-value"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "How to Calculate Future Value with Periodic Deposits",
+      "cardIntro": "Calculate future value from a starting amount and equal deposits. Six checked cases cover rate units, beginning/end timing, zero growth and negative returns.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/future-value-calculator",
+    "calculatorLabel": "Future Value Calculator",
+    "intro": "Future value moves a starting amount and subsequent deposits to a chosen future date. The calculator uses one rate per period and equal deposits at the selected timing. Label the period first: ten annual periods and sixty monthly periods are different inputs, even when both are used in a long-term savings discussion.",
+    "answer": "Start with $10,000, add $1,000 at each year end and assume a constant hypothetical 5% annual return for ten years. Future value is $28,866.84, comprising $20,000 of contributions and $8,866.84 of modeled growth. Moving the same ten deposits to year beginnings raises the ending value to $29,495.73.",
+    "sections": [
+      {
+        "id": "inputs",
+        "title": "Define what one period means before entering the rate",
+        "paragraphs": [
+          "For the annual base, enter ten periods, a rate of 5 and a $1,000 periodic deposit. Every rate and cash-flow interval is one year. In the separate monthly case, enter sixty periods, a 0.5% rate and $100 per deposit; each interval is a month.",
+          "The monthly case gives $20,465.50 from $16,000 of total contributions. Its different horizon and deposit amounts prevent a fair performance comparison with the annual base. Do not enter an annual percentage unchanged as a monthly rate just because deposits are monthly."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "formula",
+        "title": "Grow the initial amount and each deposit to the same date",
+        "paragraphs": [
+          "The starting $10,000 compounds for all ten periods. End-period deposits have progressively fewer periods to grow; the last one arrives at the horizon and earns no additional period of return. Adding those separately grown cash flows produces the future value.",
+          "For a nonzero constant rate, the equal-deposit terms can be written as an annuity accumulation factor. At zero rate the shortcut has a zero denominator, so use the direct contribution sum instead. The checked zero-rate case ends at $20,000 with no modeled interest."
+        ],
+        "formula": "FV = P(1+r)^n + C[(1+r)^n − 1]/r for end-period deposits and r ≠ 0"
+      },
+      {
+        "id": "timing",
+        "title": "Keep deposit count unchanged when switching timing",
+        "paragraphs": [
+          "Beginning-period deposits occur at times zero through nine in the ten-year base. End-period deposits occur at times one through ten. Both cases still contain ten $1,000 deposits, in addition to the separate initial $10,000. Changing timing does not add an eleventh deposit.",
+          "At positive growth, each beginning deposit gets one extra period to accumulate. The checked increase is about $628.89. If the first periodic deposit is already included in your stated starting balance, adjust the inputs to avoid entering that same cash twice; the tool assumes they are separate amounts."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "contributions",
+        "title": "Separate ending value from money you supplied",
+        "paragraphs": [
+          "The no-recurring-deposit case grows $10,000 to $16,288.95 at 5% over ten years. Its $6,288.95 of modeled interest is distinct from the $8,866.84 in the base with recurring deposits. A bigger future value can reflect more contributed cash as well as growth.",
+          "The negative 2% case makes the distinction clearer. Contributions still total $20,000 but future value is $17,317.09, so Interest earned is negative $2,682.91. The model does not erase a loss or turn it into a positive return because the ending account balance remains positive."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Reproduce the base and check cash-flow signs",
+        "paragraphs": [
+          "In Excel, =FV(5%,10,-1000,-10000,0) reproduces the positive ending value for the annual base. Changing the final argument to 1 selects beginning timing. The negative payment and principal arguments represent money you put in; the website accepts positive deposit amounts for those same cash commitments.",
+          "When converting rates, distinguish nominal annual rates from effective annual yields. For a nominal rate with monthly compounding, divide by twelve; for an effective annual yield y, use (1+y)^(1/12) − 1. This tool expects the already converted periodic rate and does not fetch or identify a bank quote."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "limits",
+        "title": "Use the future value as a scenario rather than a forecast",
+        "paragraphs": [
+          "All twelve linked future/present-value cases use whole counts of equally spaced periods. They do not specify dates or irregular deposits. For a deposit increase, changing return sequence, tax haircut or purchasing-power view, use the more detailed Savings or Compound Interest tool and review its assumptions.",
+          "This simple future value has no automatic taxes, fees, inflation adjustment or investment risk model. The rate is a constant input, not a market forecast or a recommendation. Keep the horizon, contribution commitment and return convention visible when sharing a screenshot or comparing another plan."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Rate per period",
+      "Periods",
+      "Periodic deposit",
+      "Future value",
+      "Interest earned"
+    ],
+    "chart": "futurevalue-guide",
+    "chartAlt": "Future value under six explicit periodic-growth and contribution assumptions, including beginning deposits and a negative return.",
+    "chartCaption": "The monthly scenario uses different periods and deposits from the annual base. Compare complete inputs, not ending balances alone. The negative-return case preserves a loss relative to total contributions.",
+    "questions": [
+      {
+        "question": "What is the future-value formula with regular deposits?",
+        "answer": "For end-period deposits at a nonzero rate, FV = P(1+r)^n + C[(1+r)^n − 1]/r. At zero rate, add principal and all deposits directly."
+      },
+      {
+        "question": "Should the rate be annual or monthly?",
+        "answer": "It must match one period. Use an annual rate with annual periods, or a correctly converted monthly rate with monthly periods. The tool does not automatically convert an annual quote."
+      },
+      {
+        "question": "Do beginning deposits add an extra contribution?",
+        "answer": "No. There are still n deposits. Beginning timing shifts them one period earlier; the initial principal remains a separate amount."
+      },
+      {
+        "question": "Is future value the same as interest earned?",
+        "answer": "No. Future value includes the money contributed. In the checked annual base, $28,866.84 includes $20,000 of contributions and $8,866.84 of modeled growth."
+      },
+      {
+        "question": "Can Interest earned be negative?",
+        "answer": "Yes. A negative assumed return can leave future value below total contributions. The checked negative 2% case preserves that loss."
+      },
+      {
+        "question": "Does this include tax and inflation?",
+        "answer": "No automatic adjustments are made for them. Use the Savings or Compound Interest calculator for those additional assumptions, and review the input conventions."
+      }
+    ],
+    "limitations": [
+      "Constant hypothetical periodic rate; no live offer, tax, fees, inflation or investment-risk assessment.",
+      "Starting principal and recurring deposits are separate cash flows; avoid entering an initial deposit twice.",
+      "Worked cases use whole, equally spaced periods and do not validate irregular dated cash flows.",
+      "Ending values with different contributions and horizons are not directly comparable investment returns."
+    ],
+    "sources": [
+      {
+        "href": "https://www.boe.ca.gov/info/iav/lesson4.htm",
+        "label": "California BOE educational lesson: compound accumulation and time-value functions"
+      },
+      {
+        "href": "https://support.microsoft.com/en-us/excel/functions/fv-function",
+        "label": "Microsoft: FV inputs, payment timing and cash-flow signs"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-present-value/",
+        "label": "Present-value guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-savings-goal/",
+        "label": "Savings-goal guide"
+      },
+      {
+        "href": "/guides/compound-interest-with-monthly-contributions/",
+        "label": "Compound-interest guide"
+      },
+      {
+        "href": "/glossary/time-value-of-money/",
+        "label": "Time value of money"
+      }
+    ]
+  },
+  "presentvalue": {
+    "meta": {
+      "path": "/guides/how-to-calculate-present-value/",
+      "title": "How to Calculate Present Value of a Lump Sum and Payments",
+      "heading": "How to Calculate Present Value of a Lump Sum and Payments",
+      "description": "Discount a future amount and equal payments to present value. Six checked cases separate terminal cash, payment timing, discount assumptions and zero-rate arithmetic.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "present-value"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "How to Calculate Present Value of a Lump Sum and Payments",
+      "cardIntro": "Discount a future amount and equal payments to present value. Six checked cases separate terminal cash, payment timing, discount assumptions and zero-rate arithmetic.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/present-value-calculator",
+    "calculatorLabel": "Present Value Calculator",
+    "intro": "Present value expresses future cash flows at a common starting date using an entered discount rate. First identify the terminal lump sum, any separate periodic payments and when each arrives. This calculator does not decide what rate is appropriate for a security, determine its market price or certify that future payments will be received.",
+    "answer": "A $10,000 amount received ten years from now has a present value of $6,139.13 at a hypothetical 5% annual discount rate. A separate stream of ten $1,000 year-end payments has PV of $7,721.73. If both are genuinely received, their unrounded present values sum to a total that displays as $13,860.87.",
+    "sections": [
+      {
+        "id": "timeline",
+        "title": "Put the terminal amount and payment stream on a timeline",
+        "paragraphs": [
+          "Future Lump Sum mode discounts only the Future amount at the end of the entered periods. Periodic Payments mode adds the present value of the recurring Payment to that terminal amount. Selecting periodic mode does not replace or ignore the Future amount field.",
+          "For payments only, enter zero as Future amount. The checked payments-only case gives $7,721.73 at 5% over ten years. For a true terminal amount plus payments, enter each separately; do not enter the sum of the payments again as terminal cash merely because it is received over the same horizon."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "formula",
+        "title": "Discount every receipt back to time zero",
+        "paragraphs": [
+          "For the ten-year lump sum, divide $10,000 by 1.05 raised to the tenth power. Each year-end $1,000 payment is discounted for its own arrival time, one through ten years. The payment-stream present value is the sum of those discounted receipts.",
+          "The closed-form annuity expression gives the same result for equal payments at a constant rate. At zero rate there is no discounting: the $10,000 terminal amount plus ten $1,000 payments totals $20,000. These are cash-flow values under assumptions, not additional money created by the calculation."
+        ],
+        "formula": "PV = F/(1+r)^n + C[1 − (1+r)^(-n)]/r for end-period payments and r ≠ 0"
+      },
+      {
+        "id": "rate",
+        "title": "Keep the discount-rate convention consistent with periods",
+        "paragraphs": [
+          "The base uses an annual rate and ten annual periods. If the same $10,000 terminal receipt is discounted at 8% instead, its PV falls to $4,631.93. A larger positive discount rate reduces the present value of the same positive future cash flow.",
+          "For monthly cash flows, convert the annual rate consistently before entering a monthly period count. Discounting is not automatically an inflation adjustment: a required return and a consumer-price assumption answer different questions. The tool does not select a risk-adjusted rate, infer taxes or guarantee the future amount."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "timing",
+        "title": "Understand beginning-period payments without moving terminal cash",
+        "paragraphs": [
+          "Beginning timing shifts the ten recurring payments to times zero through nine. At 5%, their PV rises to $8,107.82 compared with $7,721.73 for end-year payments. The terminal $10,000 remains at time ten in both cases.",
+          "Combined PV therefore rises from $13,860.87 to $14,246.95. The payment made at time zero is not discounted, but it is not a new eleventh payment. Confirm whether a payment due immediately is already included in another amount being compared so that the cash-flow list stays consistent."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Reproduce the values and retain precision until the end",
+        "paragraphs": [
+          "Excel =PV(5%,10,0,-10000,0) produces the lump-sum value. =PV(5%,10,-1000,-10000,0) produces the positive combined value; change the final argument to 1 for beginning payments. The minus signs reflect the spreadsheet’s opposing cash-flow conventions.",
+          "The table keeps lump and payment components separate. Their displayed $6,139.13 and $7,721.73 add to $13,860.86, while the unrounded components sum to a total that displays $13,860.87. That one-cent difference is presentation rounding, not another charge or an inconsistency in the underlying cash flows."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "scope",
+        "title": "Distinguish present value from net profit and actual market value",
+        "paragraphs": [
+          "Present value is not net present value by itself. To evaluate a purchase cost, the relevant initial outflow must also be considered consistently; this calculator does not subtract a price automatically. Nor does an assumed discount rate measure default, liquidity or reinvestment risk.",
+          "The examples have fixed, positive, equally spaced receipts and whole period counts. For changing or dated cash flows, use a tool that supports that timeline rather than forcing them into one constant payment. A hypothetical PV can help explain the time-value calculation, but it is not a trading valuation or a personalized investment recommendation."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Discount per period",
+      "Terminal amount",
+      "Lump-sum PV",
+      "Payments PV",
+      "Total PV"
+    ],
+    "chart": "presentvalue-guide",
+    "chartAlt": "Present value under six terminal-amount, discount-rate and payment-timing scenarios.",
+    "chartCaption": "Terminal lump-sum and payment-stream present values are shown separately. Total PV is computed before rounding; displayed components may differ by a cent when added.",
+    "questions": [
+      {
+        "question": "What is the present value of $10,000 in ten years?",
+        "answer": "At the checked hypothetical 5% annual discount rate, it is $6,139.13. Changing the discount rate or horizon changes that result."
+      },
+      {
+        "question": "Does Periodic Payments mode include the Future amount?",
+        "answer": "Yes. It adds the discounted terminal amount to the payment-stream PV. Enter zero terminal amount when there is no separate lump sum."
+      },
+      {
+        "question": "Do beginning payments move the terminal lump sum too?",
+        "answer": "No. Only the recurring payments move one period earlier. The Future amount is still discounted from the end of the full period count."
+      },
+      {
+        "question": "Why does a higher discount rate lower PV?",
+        "answer": "For the same positive future receipts, a higher rate applies a larger discount factor. The checked $10,000 lump sum falls from $6,139.13 at 5% to $4,631.93 at 8%."
+      },
+      {
+        "question": "Why can rounded components differ from the displayed total by a cent?",
+        "answer": "The total uses unrounded values. Rounding the two components separately before adding them can produce a one-cent display difference."
+      },
+      {
+        "question": "Is present value the same as net present value or market price?",
+        "answer": "No. PV discounts the entered future receipts. An initial purchase cost, market conditions and risk assessment are separate; none is inferred automatically here."
+      }
+    ],
+    "limitations": [
+      "Hypothetical constant discount assumptions, not a security price, appropriate-rate determination or guarantee of cash flows.",
+      "Terminal amount and recurring payments are separate receipts; avoid counting the same cash twice.",
+      "No automatic initial purchase outflow, taxes, fees, inflation or credit/liquidity-risk modeling.",
+      "Cases use whole, equally spaced periods and do not validate irregular dated payments."
+    ],
+    "sources": [
+      {
+        "href": "https://www.boe.ca.gov/info/iav/lesson4.htm",
+        "label": "California BOE educational lesson: present-worth and annuity factors"
+      },
+      {
+        "href": "https://support.microsoft.com/en-us/excel/functions/pv-function",
+        "label": "Microsoft: PV arguments, timing and cash-flow signs"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-future-value/",
+        "label": "Future-value guide"
+      },
+      {
+        "href": "/guides/pension-lump-sum-vs-monthly-payments/",
+        "label": "Pension comparison guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-irr/",
+        "label": "IRR guide"
+      },
+      {
+        "href": "/glossary/time-value-of-money/",
+        "label": "Time value of money"
+      },
+      {
+        "href": "/glossary/net-present-value/",
+        "label": "Net present value"
+      }
+    ]
   }
 }

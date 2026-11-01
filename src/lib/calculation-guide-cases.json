@@ -6942,5 +6942,293 @@
         "$1,250.00"
       ]
     }
+  ],
+  "futurevalue": [
+    {
+      "label": "Base: 5% per year, ten years",
+      "calculatorId": "future-value",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "periods": 10,
+        "rate": 5,
+        "payment": 1000,
+        "timing": "End of period"
+      },
+      "metrics": {
+        "Future value": 28866.83880332324,
+        "Total contributions": 20000.0,
+        "Interest earned": 8866.838803323242
+      },
+      "display": [
+        "5%",
+        "10",
+        "$1,000.00",
+        "$28,866.84",
+        "$8,866.84"
+      ]
+    },
+    {
+      "label": "Beginning-year deposits",
+      "calculatorId": "future-value",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "periods": 10,
+        "rate": 5,
+        "payment": 1000,
+        "timing": "Beginning of period"
+      },
+      "metrics": {
+        "Future value": 29495.733430100685,
+        "Total contributions": 20000.0,
+        "Interest earned": 9495.733430100683
+      },
+      "display": [
+        "5%",
+        "10",
+        "$1,000.00",
+        "$29,495.73",
+        "$9,495.73"
+      ]
+    },
+    {
+      "label": "Zero periodic rate",
+      "calculatorId": "future-value",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "periods": 10,
+        "rate": 0,
+        "payment": 1000,
+        "timing": "End of period"
+      },
+      "metrics": {
+        "Future value": 20000.0,
+        "Total contributions": 20000.0,
+        "Interest earned": 0.0
+      },
+      "display": [
+        "0%",
+        "10",
+        "$1,000.00",
+        "$20,000.00",
+        "$0.00"
+      ]
+    },
+    {
+      "label": "No recurring deposits",
+      "calculatorId": "future-value",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "periods": 10,
+        "rate": 5,
+        "payment": 0,
+        "timing": "End of period"
+      },
+      "metrics": {
+        "Future value": 16288.946267774414,
+        "Total contributions": 10000.0,
+        "Interest earned": 6288.946267774414
+      },
+      "display": [
+        "5%",
+        "10",
+        "$0.00",
+        "$16,288.95",
+        "$6,288.95"
+      ]
+    },
+    {
+      "label": "0.5% per month, sixty months",
+      "calculatorId": "future-value",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "periods": 60,
+        "rate": 0.5,
+        "payment": 100,
+        "timing": "End of period"
+      },
+      "metrics": {
+        "Future value": 20465.50457647948,
+        "Total contributions": 16000.0,
+        "Interest earned": 4465.504576479482
+      },
+      "display": [
+        "0.5%",
+        "60",
+        "$100.00",
+        "$20,465.50",
+        "$4,465.50"
+      ]
+    },
+    {
+      "label": "Negative 2% periodic return",
+      "calculatorId": "future-value",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "periods": 10,
+        "rate": -2,
+        "payment": 1000,
+        "timing": "End of period"
+      },
+      "metrics": {
+        "Future value": 17317.087724498124,
+        "Total contributions": 20000.0,
+        "Interest earned": -2682.9122755018757
+      },
+      "display": [
+        "-2%",
+        "10",
+        "$1,000.00",
+        "$17,317.09",
+        "-$2,682.91"
+      ]
+    }
+  ],
+  "presentvalue": [
+    {
+      "label": "Lump sum: 5% discount, ten years",
+      "calculatorId": "present-value",
+      "mode": "lump",
+      "values": {
+        "future": 10000,
+        "periods": 10,
+        "rate": 5
+      },
+      "metrics": {
+        "Present value": 6139.132535407593,
+        "Lump-sum present value": 6139.132535407593,
+        "Payments present value": 0.0
+      },
+      "display": [
+        "5%",
+        "$10,000.00",
+        "$6,139.13",
+        "$0.00",
+        "$6,139.13"
+      ]
+    },
+    {
+      "label": "Lump sum: 8% discount, ten years",
+      "calculatorId": "present-value",
+      "mode": "lump",
+      "values": {
+        "future": 10000,
+        "periods": 10,
+        "rate": 8
+      },
+      "metrics": {
+        "Present value": 4631.934880846845,
+        "Lump-sum present value": 4631.934880846845,
+        "Payments present value": 0.0
+      },
+      "display": [
+        "8%",
+        "$10,000.00",
+        "$4,631.93",
+        "$0.00",
+        "$4,631.93"
+      ]
+    },
+    {
+      "label": "Lump sum plus end-year payments",
+      "calculatorId": "present-value",
+      "mode": "annuity",
+      "values": {
+        "future": 10000,
+        "periods": 10,
+        "rate": 5,
+        "payment": 1000,
+        "timing": "End of period"
+      },
+      "metrics": {
+        "Present value": 13860.867464592406,
+        "Lump-sum present value": 6139.132535407593,
+        "Payments present value": 7721.734929184812
+      },
+      "display": [
+        "5%",
+        "$10,000.00",
+        "$6,139.13",
+        "$7,721.73",
+        "$13,860.87"
+      ]
+    },
+    {
+      "label": "Lump sum plus beginning-year payments",
+      "calculatorId": "present-value",
+      "mode": "annuity",
+      "values": {
+        "future": 10000,
+        "periods": 10,
+        "rate": 5,
+        "timing": "Beginning of period",
+        "payment": 1000
+      },
+      "metrics": {
+        "Present value": 14246.954211051647,
+        "Lump-sum present value": 6139.132535407593,
+        "Payments present value": 8107.821675644053
+      },
+      "display": [
+        "5%",
+        "$10,000.00",
+        "$6,139.13",
+        "$8,107.82",
+        "$14,246.95"
+      ]
+    },
+    {
+      "label": "Lump sum and payments at zero rate",
+      "calculatorId": "present-value",
+      "mode": "annuity",
+      "values": {
+        "future": 10000,
+        "periods": 10,
+        "rate": 0,
+        "payment": 1000,
+        "timing": "End of period"
+      },
+      "metrics": {
+        "Present value": 20000.0,
+        "Lump-sum present value": 10000.0,
+        "Payments present value": 10000.0
+      },
+      "display": [
+        "0%",
+        "$10,000.00",
+        "$10,000.00",
+        "$10,000.00",
+        "$20,000.00"
+      ]
+    },
+    {
+      "label": "Payments only, no terminal lump sum",
+      "calculatorId": "present-value",
+      "mode": "annuity",
+      "values": {
+        "future": 0,
+        "periods": 10,
+        "rate": 5,
+        "payment": 1000,
+        "timing": "End of period"
+      },
+      "metrics": {
+        "Present value": 7721.734929184812,
+        "Lump-sum present value": 0.0,
+        "Payments present value": 7721.734929184812
+      },
+      "display": [
+        "5%",
+        "$0.00",
+        "$0.00",
+        "$7,721.73",
+        "$7,721.73"
+      ]
+    }
   ]
 }

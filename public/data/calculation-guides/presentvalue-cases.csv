@@ -1,0 +1,7 @@
+Case,Complete inputs (JSON),Unrounded reference metrics (JSON)
+"Lump sum: 5% discount, ten years","{""future"": 10000, ""periods"": 10, ""rate"": 5}","{""Lump-sum present value"": 6139.132535407593, ""Payments present value"": 0.0, ""Present value"": 6139.132535407593}"
+"Lump sum: 8% discount, ten years","{""future"": 10000, ""periods"": 10, ""rate"": 8}","{""Lump-sum present value"": 4631.934880846845, ""Payments present value"": 0.0, ""Present value"": 4631.934880846845}"
+Lump sum plus end-year payments,"{""future"": 10000, ""payment"": 1000, ""periods"": 10, ""rate"": 5, ""timing"": ""End of period""}","{""Lump-sum present value"": 6139.132535407593, ""Payments present value"": 7721.734929184812, ""Present value"": 13860.867464592406}"
+Lump sum plus beginning-year payments,"{""future"": 10000, ""payment"": 1000, ""periods"": 10, ""rate"": 5, ""timing"": ""Beginning of period""}","{""Lump-sum present value"": 6139.132535407593, ""Payments present value"": 8107.821675644053, ""Present value"": 14246.954211051647}"
+Lump sum and payments at zero rate,"{""future"": 10000, ""payment"": 1000, ""periods"": 10, ""rate"": 0, ""timing"": ""End of period""}","{""Lump-sum present value"": 10000.0, ""Payments present value"": 10000.0, ""Present value"": 20000.0}"
+"Payments only, no terminal lump sum","{""future"": 0, ""payment"": 1000, ""periods"": 10, ""rate"": 5, ""timing"": ""End of period""}","{""Lump-sum present value"": 0.0, ""Payments present value"": 7721.734929184812, ""Present value"": 7721.734929184812}"

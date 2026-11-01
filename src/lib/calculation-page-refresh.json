@@ -505,5 +505,31 @@
       }
     ],
     "checkedOn": "2026-11-01"
+  },
+  "future-value": {
+    "questions": [
+      {
+        "question": "Should the rate be annual or monthly?",
+        "answer": "It must match one period. Use an annual rate with annual periods, or a correctly converted monthly rate with monthly periods. The tool does not automatically convert an annual quote."
+      },
+      {
+        "question": "Can Interest earned be negative?",
+        "answer": "Yes. A negative assumed return can leave future value below total contributions. The checked negative 2% case preserves that loss."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "present-value": {
+    "questions": [
+      {
+        "question": "Does Periodic Payments mode include the Future amount?",
+        "answer": "Yes. It adds the discounted terminal amount to the payment-stream PV. Enter zero terminal amount when there is no separate lump sum."
+      },
+      {
+        "question": "Why can rounded components differ from the displayed total by a cent?",
+        "answer": "The total uses unrounded values. Rounding the two components separately before adding them can produce a one-cent display difference."
+      }
+    ],
+    "checkedOn": "2026-11-01"
   }
 }
