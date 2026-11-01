@@ -1,3 +1,4 @@
+import SourceReferences from './SourceReferences';
 import PmiRateReference from './PmiRateReference';
 import GuideGlossaryLinks from './GuideGlossaryLinks';
 import HouseIncomeReference from './HouseIncomeReference';
@@ -30,7 +31,7 @@ export default function CalculationGuideArticle({topic}:{topic:CalculationGuideT
    <p><a href={'/data/calculation-guides/'+topic+'-cases.csv'} download>Download all cases and assumptions as CSV</a>. Calculations retain precision before display rounding.</p>
   </section>
   <section aria-labelledby="questions"><h2 id="questions">Common questions</h2>{data.questions.map(q=><section key={q.question}><h3>{q.question}</h3><p>{q.answer}</p></section>)}</section>
-  <section aria-labelledby="sources"><h2 id="sources">Sources, checks and limitations</h2><ul>{data.limitations.map(p=><li key={p}>{p}</li>)}</ul><p>The {cases[topic].length} cases in this guide were independently calculated using Python Decimal at 60-digit precision and checked against the website models within 0.000001 in the stated units, before display rounding. This checks arithmetic under the stated inputs; it is not a professional review or a validation of real-world outcomes.</p><ul>{data.sources.map(s=><li key={s.href}><SiteLink href={s.href}>{s.label}</SiteLink></li>)}</ul><p>External sources explain concepts and do not endorse these calculators or hypothetical rates. Read our <SiteLink href="/methodology">methodology and model limitations</SiteLink>.</p></section>
+  <section aria-labelledby="sources"><h2 id="sources">Sources, checks and limitations</h2><ul>{data.limitations.map(p=><li key={p}>{p}</li>)}</ul><p>The {cases[topic].length} cases in this guide were independently calculated using Python Decimal at 60-digit precision and checked against the website models within 0.000001 in the stated units, before display rounding. This checks arithmetic under the stated inputs; it is not a professional review or a validation of real-world outcomes.</p><SourceReferences context={'guide:'+guide.path} sources={data.sources}/><p>External sources explain concepts and do not endorse these calculators or hypothetical rates. Read our <SiteLink href="/methodology">methodology and model limitations</SiteLink>.</p></section>
   <GuideGlossaryLinks path={guide.path}/>
   <section className="related"><h2>Related tools and reading</h2><ul>{data.related.map(s=><li key={s.href}><SiteLink href={s.href}>{s.label}</SiteLink></li>)}</ul><p><SiteLink href={data.calculatorPath}>{data.calculatorLabel}</SiteLink> · <SiteLink href="/guides/">All financial guides</SiteLink></p></section>
  </article></main></div>;

@@ -351,3 +351,8 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 - [Capital expenditure (CapEx)](https://www.calculatorfree.io/glossary/capital-expenditure/): Separate operating income, actual capital spending, reserves and tax treatment.
 - [Debt service coverage ratio (DSCR)](https://www.calculatorfree.io/glossary/debt-service-coverage-ratio/): Numerator and debt-service definitions matter; simple NOI/P&I coverage is not a lender approval result.
 - [Dividend yield](https://www.calculatorfree.io/glossary/dividend-yield/): Annual dividends divided by share price; distinguish income yield from growth and total return.
+
+
+## Interpreting references
+
+Selected tax, retirement, mortgage/PMI and Coast FIRE pages now state what each reference supports and where it stops. Rule/data sources, mathematical methods, background reading and the site’s own validation are distinct. Source-use annotation dates do not refresh historical data or calculation-check dates; editable returns and inflation are not forecasts endorsed by cited organizations. See [reference-use policy](https://www.calculatorfree.io/methodology#source-use-policy).

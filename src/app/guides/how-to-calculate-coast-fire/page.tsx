@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideGlossaryLinks from '@/components/GuideGlossaryLinks';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
@@ -99,13 +100,7 @@ export default function CoastFireGuide(){return <div className="page-wrap glossa
  <p>No. Here it divides spending into a target balance. The tool does not test historical withdrawal sequences, future market outcomes or a required success rate. A <SiteLink href="/glossary/withdrawal-rate/">withdrawal rate</SiteLink> must be considered with the actual investment mix, taxes, spending pattern and retirement horizon.</p>
  <h2 id="sources">Sources and calculation checks</h2>
  <p>The worked example and comparison figures were independently checked using 60-digit Decimal arithmetic. The monthly-investing example was checked against a separate future-value calculation and the first whole-month crossing; comparison tables change one input at a time. Figures are rounded for display while calculations retain precision.</p>
- <ul>
- <li><SiteLink href="https://openstax.org/books/principles-finance/pages/7-4-applications-of-tvm-in-finance">OpenStax: present value and the exact nominal, real and inflation relationship</SiteLink>.</li>
- <li><SiteLink href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator">SEC Investor.gov: compound-growth inputs and varying a return assumption</SiteLink>.</li>
- <li><SiteLink href="https://www.ssa.gov/prepare/get-benefits-estimate">SSA: benefits estimates and the effect of expected future income</SiteLink>. No benefit amount or eligibility is calculated in our worksheet.</li>
- <li><SiteLink href="https://walletburst.com/coast-fire/">WalletBurst: Coast FIRE as a future-retirement milestone</SiteLink>. Its inflation subtraction convention differs from the exact relationship used in our examples; no historical return or withdrawal guarantee is adopted here.</li>
- <li><SiteLink href="https://walletburst.com/barista-fire/">WalletBurst: Barista FIRE and combining work income with portfolio withdrawals</SiteLink>.</li>
- </ul>
+ <SourceReferences context={'guide:'+coastFireGuide.path} sources={[{"title": "OpenStax: present value and inflation context", "url": "https://openstax.org/books/principles-finance/pages/7-4-applications-of-tvm-in-finance"}, {"title": "SEC Investor.gov: compound growth inputs", "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"}, {"title": "SSA: official benefits estimates", "url": "https://www.ssa.gov/prepare/get-benefits-estimate"}, {"title": "WalletBurst: Coast FIRE concept", "url": "https://walletburst.com/coast-fire/"}, {"title": "WalletBurst: Barista FIRE concept", "url": "https://walletburst.com/barista-fire/"}]}/>
  <p>Sources support the concepts; they do not validate a personal plan or endorse the illustrative rates. See our <SiteLink href="/methodology">calculation methodology and review status</SiteLink>, <SiteLink href="/retirement-calculators">Retirement Calculators</SiteLink>, and <SiteLink href="/guides/">all financial guides</SiteLink>.</p>
 <GuideGlossaryLinks path={coastFireGuide.path}/>
 </article></main></div>;}

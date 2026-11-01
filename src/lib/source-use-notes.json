@@ -1,0 +1,539 @@
+{
+  "updatedOn": "2026-11-01",
+  "entries": {
+    "https://www.irs.gov/irb/2025-45_IRB": {
+      "role": "rule",
+      "usedFor": "Selected 2026 federal brackets, deductions and other inflation-adjusted parameters.",
+      "scope": "Use the selected tax year; this bulletin is not a complete tax-return algorithm or a state-tax source."
+    },
+    "https://www.irs.gov/pub/irs-pdf/f1040s1a.pdf": {
+      "role": "rule",
+      "usedFor": "The additional-deduction categories and reporting structure discussed in the federal model.",
+      "scope": "The linked Schedule 1-A is the 2025 form; its layout does not establish every later-year threshold or eligibility condition."
+    },
+    "https://www.irs.gov/newsroom/questions-and-answers-on-the-net-investment-income-tax": {
+      "role": "rule",
+      "usedFor": "The distinction between net investment income and other income for the NIIT explanation.",
+      "scope": "Only the model’s stated income and deduction treatment is implemented; this is not a complete Form 8960 determination."
+    },
+    "https://www.irs.gov/instructions/i6251": {
+      "role": "rule",
+      "usedFor": "Form 6251 background for AMT adjustments, including separate-return treatment.",
+      "scope": "The linked instructions are the 2025 edition; selected-year model parameters and exclusions must be checked separately."
+    },
+    "https://uscode.house.gov/us/usc/119-118/t26/s55/": {
+      "role": "rule",
+      "usedFor": "Statutory context for the alternative minimum tax discussion.",
+      "scope": "This legal text is not a claim that every adjustment or exception is reproduced in the calculator."
+    },
+    "https://uscode.house.gov/us/usc/119-120/t26/s199A/": {
+      "role": "rule",
+      "usedFor": "Statutory context for the selected qualified-business-income deduction provisions.",
+      "scope": "QBI eligibility and special cases require more than the simplified inputs; this is not a complete legal or filing determination."
+    },
+    "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes": {
+      "role": "rule",
+      "usedFor": "Regular self-employment Social Security and Medicare tax concepts.",
+      "scope": "Optional methods, special occupations and ordinary income tax are outside this tool’s stated regular-method scope."
+    },
+    "https://www.irs.gov/instructions/i1040sse": {
+      "role": "rule",
+      "usedFor": "Schedule SE mechanics behind the regular-method self-employment tax explanation.",
+      "scope": "Check the instruction edition; the displayed quarterly reserve is not a required estimated-payment installment."
+    },
+    "https://www.ssa.gov/oact/cola/cbb.html": {
+      "role": "rule",
+      "usedFor": "The annual Social Security wage base used for the selected year’s capped tax component.",
+      "scope": "The base is year-specific; it is not a cap on all Medicare tax or a benefit estimate."
+    },
+    "https://www.irs.gov/businesses/small-businesses-self-employed/questions-and-answers-for-the-additional-medicare-tax": {
+      "role": "rule",
+      "usedFor": "Additional Medicare Tax thresholds and the interaction of wages and self-employment income.",
+      "scope": "The calculator’s limited scenario does not replace complete filing, withholding or reconciliation rules."
+    },
+    "/methodology.html": {
+      "role": "site",
+      "usedFor": "Our model versions, assumptions, rounding and numerical-check methods.",
+      "scope": "This is documentation by the site publisher, not an external audit or professional certification."
+    },
+    "https://www.irs.gov/taxtopics/tc751": {
+      "role": "rule",
+      "usedFor": "The Social Security and Medicare components distinguished from federal income tax.",
+      "scope": "Account for the stated year and wage definitions; this overview is not a complete payroll withholding calculation."
+    },
+    "https://www.irs.gov/publications/p15t": {
+      "role": "background",
+      "usedFor": "The official federal payroll withholding methods that differ from an annual tax estimate.",
+      "scope": "Publication 15-T is the 2026 edition. Our paycheck tool does not implement a complete Form W-4/15-T payroll engine."
+    },
+    "https://www.irs.gov/publications/p590b": {
+      "role": "rule",
+      "usedFor": "IRA distribution rules, including owner RMD tables and Roth withdrawal treatment.",
+      "scope": "Publication 590-B is the 2025 edition and concerns distributions; it is not the source for IRA contribution limits."
+    },
+    "https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs": {
+      "role": "rule",
+      "usedFor": "RMD balance, account-type, aggregation and payment-timing context.",
+      "scope": "The model’s owner-account scope excludes inherited-account and other exceptions; review the page’s exclusions."
+    },
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-required-minimum-distributions-rmds": {
+      "role": "rule",
+      "usedFor": "Owner RMD start, deadline and account-rule explanations.",
+      "scope": "Not every deadline choice or employer-plan exception is modeled, and future projection returns are assumptions."
+    },
+    "https://www.irs.gov/irb/2024-33_IRB": {
+      "role": "background",
+      "usedFor": "The regulatory discussion of applicable ages and the 1959 birth-year issue.",
+      "scope": "This bulletin includes final and proposed material. Do not treat every proposal as a rule applied by this calculator."
+    },
+    "https://www.irs.gov/irb/2025-21_IRB#REV-PROC-2025-19": {
+      "role": "rule",
+      "usedFor": "Published 2026 HSA contribution and qualifying-plan limit data.",
+      "scope": "Revenue Procedure 2025-19 supplies 2026 limits, not investment returns or every person’s contribution eligibility."
+    },
+    "https://www.irs.gov/publications/p969": {
+      "role": "rule",
+      "usedFor": "Federal HSA eligibility, contribution and qualified-distribution concepts.",
+      "scope": "Publication 969 is the 2025 edition; the example does not establish individual eligibility, state treatment or every current-year exception."
+    },
+    "https://www.irs.gov/instructions/i8889": {
+      "role": "rule",
+      "usedFor": "HSA contribution, employer-deposit and deduction-reporting context.",
+      "scope": "The Form 8889 instructions are the 2025 edition; the calculator is not a completed form or full eligibility test."
+    },
+    "https://www.irs.gov/publications/p15b": {
+      "role": "rule",
+      "usedFor": "Employer and payroll HSA contribution treatment distinguished from a personal income-tax deduction.",
+      "scope": "Publication 15-B is the 2026 edition. Payroll effects depend on contribution method and the model’s selected assumptions."
+    },
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits": {
+      "role": "rule",
+      "usedFor": "401(k) employee-deferral, employer/employee total and catch-up limit distinctions.",
+      "scope": "Apply the stated year and plan rules; this does not provide the entered employer match, vesting schedule or market return."
+    },
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-catch-up-contributions": {
+      "role": "rule",
+      "usedFor": "Age-based catch-up and designated Roth catch-up requirements.",
+      "scope": "Plan terms, prior-year wages and applicable-year conditions matter; a projection does not establish eligibility."
+    },
+    "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500": {
+      "role": "rule",
+      "usedFor": "The published 2026 401(k) and IRA contribution-cap figures.",
+      "scope": "These are year-specific limits, not forecasts of future caps or a determination that a person may contribute."
+    },
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-exceptions-to-tax-on-early-distributions": {
+      "role": "rule",
+      "usedFor": "The additional early-distribution tax and the existence of qualifying exceptions.",
+      "scope": "A tax exception is not necessarily plan permission to withdraw; the tool does not evaluate every exception."
+    },
+    "https://www.irs.gov/retirement-plans/roth-comparison-chart": {
+      "role": "rule",
+      "usedFor": "Traditional versus designated Roth contribution and distribution tax-treatment distinctions.",
+      "scope": "An entered marginal rate is a scenario assumption; the comparison is not an individualized tax forecast."
+    },
+    "https://www.irs.gov/retirement-plans/roth-iras": {
+      "role": "rule",
+      "usedFor": "Roth IRA contribution and qualified-distribution concepts.",
+      "scope": "The projection assumes eligibility; it does not determine MAGI phaseouts, all withdrawal ordering or conversion suitability."
+    },
+    "https://www.irs.gov/taxtopics/tc557": {
+      "role": "rule",
+      "usedFor": "Early IRA distribution tax and exceptions discussed in the retirement material.",
+      "scope": "The linked overview does not replace all account-ordering, five-year or personal eligibility rules."
+    },
+    "https://www.irs.gov/publications/p590a": {
+      "role": "rule",
+      "usedFor": "The IRA contribution and conversion framework, distinct from distribution rules.",
+      "scope": "Publication 590-A is the 2025 edition. Use separate applicable-year notices for later contribution caps; this is not a full conversion tax calculation."
+    },
+    "https://www.irs.gov/retirement-plans/retirement-plans-faqs-on-designated-roth-accounts": {
+      "role": "rule",
+      "usedFor": "The distinction between designated Roth plan accounts and Roth IRA rollover/holding-period treatment.",
+      "scope": "The conversion-ladder model is scoped to its stated Roth IRA bridge; it does not implement every employer-plan rollover case."
+    },
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator": {
+      "role": "background",
+      "usedFor": "Principal, time, rate and contribution inputs used to explain compound growth.",
+      "scope": "Investor.gov does not supply or endorse our return presets, exact timing conventions or projected results."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/what-risk": {
+      "role": "background",
+      "usedFor": "Why uncertainty, volatility and inflation can change investment outcomes.",
+      "scope": "This is risk context, not a historical backtest, a safe withdrawal rate or validation of a deterministic forecast."
+    },
+    "https://walletburst.com/tools/coast-fire-calc/": {
+      "role": "background",
+      "usedFor": "The Coast FIRE concept and a comparative planning approach.",
+      "scope": "This third-party calculator is not our calculation engine; rate conventions and deposit timing can differ."
+    },
+    "https://www.nerdwallet.com/investing/calculators/coast-fire-calculator": {
+      "role": "background",
+      "usedFor": "General Coast FIRE planning context and the importance of assumptions.",
+      "scope": "A comparison tool does not validate our model, endorse its presets or establish retirement readiness."
+    },
+    "https://openstax.org/books/principles-finance/pages/7-4-applications-of-tvm-in-finance": {
+      "role": "method",
+      "usedFor": "Present-value discounting, compound growth and general inflation context.",
+      "scope": "The exact real-return conversion is explained and checked on this site; this chapter does not supply our chosen return or inflation rates.",
+      "title": "OpenStax: present value, compound growth and inflation context"
+    },
+    "https://walletburst.com/barista-fire/": {
+      "role": "background",
+      "usedFor": "How Barista FIRE combines work income with portfolio-funded spending.",
+      "scope": "This provides a conceptual comparison, not validation of our income-stop model or a personal retirement recommendation."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/when-can-i-remove-private-mortgage-insurance-pmi-from-my-loan-en-202/": {
+      "role": "rule",
+      "usedFor": "The distinct 80% request, scheduled 78% and midpoint PMI ending conditions.",
+      "scope": "Applies to eligible conventional borrower-paid PMI; approval, current payments and other conditions matter. FHA/VA and excluded cases differ."
+    },
+    "https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/compliance-management/lending-regulations/homeowners-protection-act-pmi-cancellation-act": {
+      "role": "rule",
+      "usedFor": "Homeowners Protection Act cancellation and termination conditions.",
+      "scope": "This is regulatory context for supported conventional loans, not a servicer decision or coverage of every exception."
+    },
+    "https://www.nationalmi.com/wp-content/uploads/2022/02/MA.MN_.BP_.2022-03.pdf": {
+      "role": "data",
+      "usedFor": "The dated Monthly Advantage base-rate inputs used for illustrative PMI estimates.",
+      "scope": "Effective March 1, 2022. This is a historical rate card, not a current insurer quote or a universal PMI rate."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/": {
+      "role": "background",
+      "usedFor": "What conventional PMI covers and how its payment structure differs from other housing costs.",
+      "scope": "Premium estimates are not homeowners insurance or FHA MIP, and this page does not provide a personal quote."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/how-does-paying-down-a-mortgage-work-en-1943/": {
+      "role": "background",
+      "usedFor": "How mortgage repayments allocate money to principal and interest.",
+      "scope": "This is consumer context, not a claimed CFPB formula specification or lender-by-lender cent-rounding standard."
+    },
+    "https://www.nationalmi.com/products-rates/": {
+      "role": "background",
+      "usedFor": "Insurer product plans and where published rate cards are listed.",
+      "scope": "This listing is not a live pricing feed; our illustrative base card remains the separately identified March 2022 version."
+    },
+    "https://selling-guide.fanniemae.com/sel/b7-1-02/mortgage-insurance-coverage-requirements": {
+      "role": "rule",
+      "usedFor": "The distinction between mortgage-insurance coverage requirements and premium pricing.",
+      "scope": "A coverage percentage is not an annual PMI premium rate; the calculator’s illustrative tier is not lender approval."
+    },
+    "https://www.irs.gov/pub/irs-drop/rp-25-19.pdf": {
+      "role": "rule",
+      "usedFor": "Revenue Procedure 2025-19: published 2026 HSA limits used in the contribution examples.",
+      "scope": "The 2026 limits are not investment-growth assumptions or a complete eligibility determination."
+    },
+    "https://www.irs.gov/forms-pubs/about-form-8889": {
+      "role": "background",
+      "usedFor": "What Form 8889 reports for HSA contributions and distributions.",
+      "scope": "The guide is educational and does not prepare or certify a completed tax form."
+    },
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/required-minimum-distribution-worksheets": {
+      "role": "rule",
+      "usedFor": "The owner-account balance/divisor method illustrated by IRS RMD worksheets.",
+      "scope": "A worksheet does not cover every account type or inherited-account exception; use the stated account scope."
+    },
+    "https://www.ecfr.gov/current/title-26/section-1.401(a)(9)-2": {
+      "role": "rule",
+      "usedFor": "The regulatory framework for required beginning dates and applicable ages.",
+      "scope": "Account-specific deferrals and exceptions need separate review; this does not turn projected balances into official required payments."
+    },
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/401k-resource-guide-plan-participants-401k-plan-overview": {
+      "role": "background",
+      "usedFor": "How employee deferrals and employer contributions fit within a 401(k) plan.",
+      "scope": "The employer match formula and vesting inputs come from the user or example, not a universal IRS match rate."
+    },
+    "https://www.irs.gov/retirement-plans/cola-increases-for-dollar-limitations-on-benefits-and-contributions": {
+      "role": "rule",
+      "usedFor": "Published annual retirement-plan dollar limits used to distinguish contribution categories.",
+      "scope": "Use the applicable year and contribution type; a changing official page is not a prediction of future annual limits."
+    },
+    "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/retirement-plans-and-erisa": {
+      "role": "background",
+      "usedFor": "Plan rights and vesting concepts underlying the employer-match explanation.",
+      "scope": "A plan document determines the actual schedule; this is not a match calculation or a claim that all plans use the same terms."
+    },
+    "https://www.schwab.com/learn/story/timing-matters-understanding-sequence-returns-risk": {
+      "role": "background",
+      "usedFor": "Why the order of returns and withdrawals can change retirement outcomes.",
+      "scope": "Our constant-return tools do not simulate historical return sequences or estimate a success probability."
+    },
+    "https://files.consumerfinance.gov/f/201508_cfpb_compliance-bulletin_private-mortgage-insurance-cancellation-and-termination.pdf": {
+      "role": "rule",
+      "usedFor": "HPA cancellation/termination mechanics supporting the PMI discussion.",
+      "scope": "CFPB Bulletin 2015-03 is 2015 background, not an insurer rate card or a statement that every exception is modeled."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/": {
+      "role": "background",
+      "usedFor": "The difference between a mortgage note rate and APR.",
+      "scope": "Our periodic principal-and-interest formula uses the note rate; this reference does not specify our complete amortization implementation."
+    },
+    "https://www.consumerfinance.gov/owning-a-home/mortgage-estimate/": {
+      "role": "background",
+      "usedFor": "Where borrowing charges and payment components appear on a Loan Estimate.",
+      "scope": "Our examples are not official lender disclosures, offers or a substitute for reviewing the actual document."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/on-a-mortgage-whats-the-difference-between-my-principal-and-interest-payment-and-my-total-monthly-payment-en-1941/": {
+      "role": "background",
+      "usedFor": "Why principal and interest differ from the total housing payment.",
+      "scope": "Entered taxes, insurance, HOA and premium assumptions need their own checks and are not supplied by this article."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/why-did-my-monthly-mortgage-payment-go-up-or-change-en-213/": {
+      "role": "background",
+      "usedFor": "Why taxes, insurance and other components can change a mortgage payment.",
+      "scope": "The example’s fixed cost entries are assumptions, not a forecast that the full payment remains unchanged."
+    },
+    "https://www.irs.gov/publications/p505": {
+      "role": "background",
+      "usedFor": "The difference between withholding, estimated payments and final tax.",
+      "scope": "Publication 505 is the 2025 edition; the tools are not a complete payroll system, payment safe-harbor test or filing service."
+    },
+    "https://www.irs.gov/retirement-plans/traditional-and-roth-iras": {
+      "role": "background",
+      "usedFor": "Traditional and Roth IRA contribution and withdrawal distinctions.",
+      "scope": "Eligibility, annual caps and distribution exceptions require the applicable-year rules; this overview is not personal tax advice."
+    },
+    "https://walletburst.com/coast-fire/": {
+      "role": "background",
+      "usedFor": "The Coast FIRE milestone and its role before full retirement.",
+      "scope": "This is a concept reference; our exact real-rate conversion and monthly crossing convention are documented on this site."
+    },
+    "https://www.schwab.com/learn/story/fire-movement": {
+      "role": "background",
+      "usedFor": "The FIRE spending-and-portfolio concept discussed in the definition.",
+      "scope": "It does not establish a universally safe withdrawal percentage or guarantee a retirement date."
+    },
+    "https://files.gao.gov/multimedia/gao-16-433/interactive_graphic_one/index.html": {
+      "role": "background",
+      "usedFor": "Retirement-income options and their tradeoffs.",
+      "scope": "This is a 2016 GAO educational resource, not a current return forecast, product quote or universal 4% rule validation."
+    },
+    "https://www.schwab.com/learn/story/beyond-4-rule-how-much-can-you-spend-retirement": {
+      "role": "background",
+      "usedFor": "The initial-balance 4% guideline and subsequent inflation adjustments.",
+      "scope": "A rule of thumb is not a guaranteed safe rate, a current-balance percentage rule or a longevity simulation."
+    },
+    "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets": {
+      "role": "background",
+      "usedFor": "Progressive marginal federal tax brackets versus an overall effective rate.",
+      "scope": "Use the relevant year and filing status; marginal rate alone does not determine the final tax bill."
+    },
+    "https://www.irs.gov/credits-and-deductions-for-individuals": {
+      "role": "background",
+      "usedFor": "How deductions and credits differ in reducing taxable income or tax.",
+      "scope": "A definition does not establish eligibility, refundability or the amount available to a particular taxpayer."
+    },
+    "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/teen-young-adult/explore-earning/": {
+      "role": "background",
+      "usedFor": "The distinction between earnings received and money available after deductions.",
+      "scope": "This is earning/pay-stub context, not the source of our federal tax tables or a complete payroll algorithm."
+    },
+    "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization": {
+      "role": "method",
+      "usedFor": "Fixed-rate periodic payment and the separation of interest from principal in an amortization schedule.",
+      "scope": "This supports the mathematical method, not the lender’s exact fee, day-count or statement-rounding conventions."
+    },
+    "https://www.ssa.gov/prepare/get-benefits-estimate": {
+      "role": "background",
+      "usedFor": "Where to obtain an official Social Security benefit estimate before entering a retirement-income assumption.",
+      "scope": "The worksheet does not calculate benefits or establish eligibility; entered benefits are user assumptions."
+    }
+  },
+  "pages": {
+    "calculator:income-tax": {
+      "note": "Official references support selected tax rules. Results remain this site’s limited calculations, not a complete tax return or payroll withholding service."
+    },
+    "calculator:self-employment-tax": {
+      "note": "Official references support selected tax rules. Results remain this site’s limited calculations, not a complete tax return or payroll withholding service."
+    },
+    "calculator:take-home-paycheck": {
+      "note": "Official references support selected tax rules. Results remain this site’s limited calculations, not a complete tax return or payroll withholding service."
+    },
+    "calculator:rmd": {
+      "note": "Separate account rules and contribution limits from editable planning assumptions. Returns, inflation and example results are not forecasts supplied or endorsed by the cited organizations.",
+      "overrides": {
+        "https://www.irs.gov/publications/p590b": {
+          "usedFor": "Appendix B owner-account life-expectancy factors and the RMD distribution framework used on this page.",
+          "scope": "The 2025 edition includes Tables II and III; this model does not calculate inherited-account distributions or every deadline exception."
+        }
+      },
+      "extras": [
+        {
+          "title": "26 CFR 1.401(a)(9)-2: applicable age and required beginning date",
+          "url": "https://www.ecfr.gov/current/title-26/section-1.401(a)(9)-2"
+        }
+      ]
+    },
+    "calculator:hsa": {
+      "note": "Separate account rules and contribution limits from editable planning assumptions. Returns, inflation and example results are not forecasts supplied or endorsed by the cited organizations."
+    },
+    "calculator:401k": {
+      "note": "Separate account rules and contribution limits from editable planning assumptions. Returns, inflation and example results are not forecasts supplied or endorsed by the cited organizations."
+    },
+    "calculator:roth-ira": {
+      "note": "Separate account rules and contribution limits from editable planning assumptions. Returns, inflation and example results are not forecasts supplied or endorsed by the cited organizations.",
+      "overrides": {
+        "https://www.irs.gov/publications/p590b": {
+          "usedFor": "Qualified-distribution context behind the illustration’s assumed Roth tax treatment.",
+          "scope": "Publication 590-B (2025) covers distributions. Early distributions, conversion ordering and five-year eligibility are not calculated by this projection."
+        }
+      },
+      "extras": [
+        {
+          "title": "IRS: published 2026 IRA contribution limits",
+          "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500"
+        },
+        {
+          "title": "IRS Publication 590-A (2025): contribution framework",
+          "url": "https://www.irs.gov/publications/p590a"
+        }
+      ]
+    },
+    "calculator:roth-conversion-ladder": {
+      "note": "Separate account rules and contribution limits from editable planning assumptions. Returns, inflation and example results are not forecasts supplied or endorsed by the cited organizations.",
+      "overrides": {
+        "https://www.irs.gov/publications/p590b": {
+          "usedFor": "Roth distribution ordering, qualified-distribution conditions and the separate conversion five-year rules discussed on this page.",
+          "scope": "Publication 590-B (2025) concerns distributions, not contribution caps; the model or example covers only the cases explicitly stated."
+        }
+      }
+    },
+    "calculator:retirement": {
+      "note": "These references explain growth methods, planning concepts and risk. Return, inflation and withdrawal presets remain editable assumptions, not forecasts or recommendations supplied by the sources."
+    },
+    "calculator:coast-fire": {
+      "note": "These references explain growth methods, planning concepts and risk. Return, inflation and withdrawal presets remain editable assumptions, not forecasts or recommendations supplied by the sources."
+    },
+    "calculator:pmi": {
+      "note": "Separate the payment method, PMI ending rules and dated premium illustration. No reference turns an entered or estimated rate into a current lender or insurer quote.",
+      "extras": [
+        {
+          "title": "OpenStax 8.3: loan amortization",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:mortgage": {
+      "note": "Separate the payment method, PMI ending rules and dated premium illustration. No reference turns an entered or estimated rate into a current lender or insurer quote.",
+      "extras": [
+        {
+          "title": "OpenStax 8.3: loan amortization",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "guide:/guides/how-does-an-hsa-work/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes."
+    },
+    "guide:/guides/how-to-calculate-rmd/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
+      "overrides": {
+        "https://www.irs.gov/publications/p590b": {
+          "usedFor": "Appendix B owner-account life-expectancy factors and the RMD distribution framework used on this page.",
+          "scope": "The 2025 edition includes Tables II and III; this model does not calculate inherited-account distributions or every deadline exception."
+        }
+      }
+    },
+    "guide:/guides/how-401k-matching-works/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes."
+    },
+    "guide:/guides/how-long-will-retirement-savings-last/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes."
+    },
+    "guide:/guides/how-to-calculate-pmi-and-cancellation/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
+      "extras": [
+        {
+          "title": "OpenStax 8.3: loan amortization",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "guide:/guides/how-to-calculate-monthly-mortgage-payment/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
+      "extras": [
+        {
+          "title": "OpenStax 8.3: loan amortization",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "guide:/guides/roth-conversion-ladder/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
+      "overrides": {
+        "https://www.irs.gov/publications/p590b": {
+          "usedFor": "Roth distribution ordering, qualified-distribution conditions and the separate conversion five-year rules discussed on this page.",
+          "scope": "Publication 590-B (2025) concerns distributions, not contribution caps; the model or example covers only the cases explicitly stated."
+        }
+      }
+    },
+    "guide:/guides/coast-fire-inflation-sensitivity/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes."
+    },
+    "guide:/guides/federal-income-tax-vs-paycheck-estimate/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes."
+    },
+    "guide:/guides/self-employment-tax-net-profit-and-wages/": {
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes."
+    },
+    "glossary:401k": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "glossary:traditional-vs-roth-ira": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "glossary:required-minimum-distribution": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast.",
+      "overrides": {
+        "https://www.irs.gov/publications/p590b": {
+          "usedFor": "Appendix B owner-account life-expectancy factors and the RMD distribution framework used on this page.",
+          "scope": "The 2025 edition includes Tables II and III; this model does not calculate inherited-account distributions or every deadline exception."
+        }
+      }
+    },
+    "glossary:health-savings-account": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "glossary:roth-conversion-ladder": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast.",
+      "overrides": {
+        "https://www.irs.gov/publications/p590b": {
+          "usedFor": "Roth distribution ordering, qualified-distribution conditions and the separate conversion five-year rules discussed on this page.",
+          "scope": "Publication 590-B (2025) concerns distributions, not contribution caps; the model or example covers only the cases explicitly stated."
+        }
+      }
+    },
+    "glossary:roth-ira-five-year-rules": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast.",
+      "overrides": {
+        "https://www.irs.gov/publications/p590b": {
+          "usedFor": "Roth distribution ordering, qualified-distribution conditions and the separate conversion five-year rules discussed on this page.",
+          "scope": "Publication 590-B (2025) concerns distributions, not contribution caps; the model or example covers only the cases explicitly stated."
+        }
+      }
+    },
+    "glossary:private-mortgage-insurance": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "glossary:coast-fire": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "glossary:fire-number": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "glossary:withdrawal-rate": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "glossary:marginal-vs-effective-tax-rate": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "glossary:deduction-vs-credit": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "glossary:gross-vs-net-pay": {
+      "note": "References support the definition and its stated scope. The numerical example is hypothetical; a cited organization does not endorse it or provide a personal forecast."
+    },
+    "guide:/guides/how-to-calculate-coast-fire/": {
+      "note": "The present-value and inflation relationships are mathematical context. This site states and checks its exact real-return conversion; return, spending, inflation and benefit examples remain assumptions."
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import PmiRateReference from './PmiRateReference';
+import SourceReferences from './SourceReferences';
 import RemainingFinanceReference from './RemainingFinanceReference';
 import LoanCostReference from './LoanCostReference';
 import HouseIncomeReference from './HouseIncomeReference';
@@ -86,13 +87,7 @@ export default function CalculatorGuide({
           <h2 id="scope-assumptions">Scope and assumptions</h2>
           <p>{guide.scope}</p>
           <h2 id="sources">Sources</h2>
-          <ul>
-            {guide.sources.map((source) => (
-              <li key={source.url}>
-                <SiteLink href={source.url}>{source.title}</SiteLink>
-              </li>
-            ))}
-          </ul>
+          <SourceReferences context={'calculator:'+calculator.id} sources={guide.sources}/>
           <p className="content-date">
             Calculation notes checked{" "}
             <time dateTime={checkedOn}>{new Date(checkedOn + "T12:00:00Z").toLocaleDateString("en-US", {year:"numeric",month:"long",day:"numeric",timeZone:"UTC"})}</time>. Examples

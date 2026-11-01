@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 
 import DecisionCaseTable from '@/components/DecisionCaseTable';
 import SiteLink from "@/components/SiteLink";
@@ -34,7 +35,7 @@ export default async function TermPage({params}:{params:Promise<{term:string}>})
   {entry.tools.length>0&&<section className="glossary-calculators" aria-labelledby="calculators"><h2 id="calculators">Explore with a calculator</h2><ul>{entry.tools.map(tool=><li key={tool.id}><SiteLink href={routeFor(tool.id)}>{calculators.find(calc=>calc.id===tool.id)!.title}</SiteLink><p>{tool.text}</p></li>)}</ul></section>}
   {entry.guides?.length&&<section><h2>Put the concept into practice</h2><ul>{entry.guides.map(guide=><li key={guide.path}><SiteLink href={guide.path}>{guide.title}</SiteLink></li>)}</ul></section>}
   {entry.related.length>0&&<nav className="glossary-related" aria-label="Related terms"><h2>Related terms</h2><ul>{entry.related.map(slug=><li key={slug}><SiteLink href={glossaryTermPath(slug)}>{glossaryTerm(slug)!.name}</SiteLink></li>)}</ul></nav>}
-  <section className="glossary-sources" aria-labelledby="sources"><h2 id="sources">Sources and checks</h2><ul>{entry.sources.map(source=><li key={source.url}><SiteLink href={source.url}>{source.title}</SiteLink></li>)}</ul>
+  <section className="glossary-sources" aria-labelledby="sources"><h2 id="sources">Sources and checks</h2><SourceReferences context={'glossary:'+entry.slug} sources={entry.sources}/>
    <p className="content-date">Definition and example arithmetic checked <time dateTime={entry.checkedOn}>{new Date(entry.checkedOn+'T12:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'})}</time>. Sources explain the concepts; numerical examples use the assumptions stated above.</p>
    <p><SiteLink href="/methodology.html">Calculation methodology and review status</SiteLink> · <SiteLink href={glossaryPath}>All glossary terms</SiteLink></p>
   </section>

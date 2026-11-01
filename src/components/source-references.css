@@ -1,0 +1,7 @@
+.source-reference-block{max-width:100%;overflow-wrap:anywhere;margin:16px 0;}
+.source-reference-block .source-model-note{font-size:14px;line-height:1.7;}
+.source-reference-block .annotated-sources{padding-left:20px;margin:16px 0;}
+.source-reference-block .annotated-sources>li{margin:0 0 18px;line-height:1.6;}
+.source-reference-block .source-use,.source-reference-block .source-scope{font-size:13px;line-height:1.7;margin:5px 0 0;color:var(--muted,#52627a);}
+.source-reference-block .source-note-date{font-size:12px;line-height:1.7;color:var(--muted,#52627a);}
+@media print{.source-reference-block .annotated-sources>li{break-inside:avoid;}}
