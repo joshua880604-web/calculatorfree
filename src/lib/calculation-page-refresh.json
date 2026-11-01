@@ -235,6 +235,14 @@
       {
         "question": "Does the modeled down payment cover all cash needed to buy?",
         "answer": "No. Closing costs, repairs, moving, reserves and other upfront needs require separate funding. This calculator solves price from a payment budget; it does not verify available cash or lender approval."
+      },
+      {
+        "question": "How much house can I afford on a $60,000 salary?",
+        "answer": "With $500 monthly other debt, entered 28% / 36% planning ratios, 20% down, a hypothetical 6% thirty-year loan, 1.2% annual property tax and $1,500 annual insurance, this model estimates $202,711.88. The monthly housing budget is $1,300 and the down payment is $40,542.38. HOA, maintenance, PMI and closing costs are excluded; actual budgets and lender criteria differ."
+      },
+      {
+        "question": "How much house can I afford with $20,000 down?",
+        "answer": "A down payment alone cannot determine an affordable home price. You also need an income or monthly budget, existing debts, loan terms and ownership costs. Select Dollars for the down-payment unit and enter 20000, then account separately for any applicable PMI, closing costs and reserves. This calculator does not automatically calculate PMI or assess loan eligibility."
       }
     ]
   }

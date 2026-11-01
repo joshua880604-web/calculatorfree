@@ -1,3 +1,4 @@
+import HouseIncomeReference from './HouseIncomeReference';
 import ContentReviewNotice from './ContentReviewNotice';
 import BlogSnippetLink from './BlogSnippetLink';
 import {hasBlogSnippetKit} from '@/lib/blog-snippet-access';
@@ -47,6 +48,7 @@ export default function CalculatorGuide({
           </>}
           {calculator.id === "roi" && <RoiReference />}
           {['barista-fire','coast-fire'].includes(calculator.id) && <p>Compare the income and withdrawal assumptions in our <SiteLink href="/guides/barista-fire-vs-coast-fire/">Barista FIRE vs. Coast FIRE guide</SiteLink>.</p>}
+          {calculator.id === "house-affordability" && <HouseIncomeReference/>}
           <h2 id="worked-examples">Worked examples</h2>
           {guide.examples.map((example) => {
             return (

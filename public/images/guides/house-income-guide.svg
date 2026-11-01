@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="648pt" height="360pt" viewBox="0 0 648 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 648 360 
+L 648 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 75.35 288.52 
+L 636.12 288.52 
+L 636.12 27.96 
+L 75.35 27.96 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 100.839545 288.52 
+L 185.804697 288.52 
+L 185.804697 233.265135 
+L 100.839545 233.265135 
+z
+" clip-path="url(#p5ccc1c0bf1)" style="fill: #6653cc"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 207.045985 288.52 
+L 292.011136 288.52 
+L 292.011136 206.617398 
+L 207.045985 206.617398 
+z
+" clip-path="url(#p5ccc1c0bf1)" style="fill: #6653cc"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 313.252424 288.52 
+L 398.217576 288.52 
+L 398.217576 184.672203 
+L 313.252424 184.672203 
+z
+" clip-path="url(#p5ccc1c0bf1)" style="fill: #6653cc"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 419.458864 288.52 
+L 504.424015 288.52 
+L 504.424015 129.809216 
+L 419.458864 129.809216 
+z
+" clip-path="url(#p5ccc1c0bf1)" style="fill: #6653cc"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 525.665303 288.52 
+L 610.630455 288.52 
+L 610.630455 74.94623 
+L 525.665303 74.94623 
+z
+" clip-path="url(#p5ccc1c0bf1)" style="fill: #6653cc"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m068bdffcd9" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m068bdffcd9" x="143.322121" y="288.52" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="143.322121" y="303.878281" transform="rotate(-0 143.322121 303.878281)">USD 60k</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m068bdffcd9" x="249.528561" y="288.52" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="249.528561" y="303.878281" transform="rotate(-0 249.528561 303.878281)">USD 80k</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m068bdffcd9" x="355.735" y="288.52" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="355.735" y="303.878281" transform="rotate(-0 355.735 303.878281)">USD 100k</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m068bdffcd9" x="461.941439" y="288.52" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="461.941439" y="303.878281" transform="rotate(-0 461.941439 303.878281)">USD 150k</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m068bdffcd9" x="568.147879" y="288.52" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="568.147879" y="303.878281" transform="rotate(-0 568.147879 303.878281)">USD 200k</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="355.735" y="318.524219" transform="rotate(-0 355.735 318.524219)">Gross annual household income</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="m532e5e35f3" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m532e5e35f3" x="75.35" y="288.52" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="68.35" y="292.699141" transform="rotate(-0 68.35 292.699141)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m532e5e35f3" x="75.35" y="234.004335" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="68.35" y="238.183475" transform="rotate(-0 68.35 238.183475)">200000</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m532e5e35f3" x="75.35" y="179.488669" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="68.35" y="183.66781" transform="rotate(-0 68.35 183.66781)">400000</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m532e5e35f3" x="75.35" y="124.973004" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="68.35" y="129.152145" transform="rotate(-0 68.35 129.152145)">600000</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m532e5e35f3" x="75.35" y="70.457339" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end" x="68.35" y="74.636479" transform="rotate(-0 68.35 74.636479)">800000</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="20.069844" y="158.24" transform="rotate(-90 20.069844 158.24)">Modeled home price (USD)</text>
+    </g>
+   </g>
+   <g id="patch_8">
+    <path d="M 75.35 288.52 
+L 75.35 27.96 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 75.35 288.52 
+L 636.12 288.52 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="143.322121" y="227.92579" transform="rotate(-0 143.322121 227.92579)">$202,712</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="249.528561" y="201.278054" transform="rotate(-0 249.528561 201.278054)">$300,474</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="355.735" y="179.332859" transform="rotate(-0 355.735 179.332859)">$380,983</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="461.941439" y="124.469872" transform="rotate(-0 461.941439 124.469872)">$582,258</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="568.147879" y="69.606885" transform="rotate(-0 568.147879 69.606885)">$783,532</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="355.735" y="21.96" transform="rotate(-0 355.735 21.96)">Different incomes; same debt, financing and property costs</text>
+   </g>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #475569" transform="translate(114.405 346.72175)">USD 500 monthly debt; 28%/36% limits; 20% down; 6% / 30 years; tax 1.2%; insurance USD 1,500/year.</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #475569" transform="translate(111.9075 355.68)">Hypothetical inputs, not rate quotes or lending limits. PMI, HOA, maintenance and closing costs excluded.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5ccc1c0bf1">
+   <rect x="75.35" y="27.96" width="560.77" height="260.56"/>
+  </clipPath>
+ </defs>
+</svg>

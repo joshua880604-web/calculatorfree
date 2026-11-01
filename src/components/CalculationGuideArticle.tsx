@@ -1,3 +1,4 @@
+import HouseIncomeReference from './HouseIncomeReference';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import content from '@/lib/calculation-guide-content.json';
 import cases from '@/lib/calculation-guide-cases.json';
@@ -18,6 +19,7 @@ export default function CalculationGuideArticle({topic}:{topic:CalculationGuideT
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(editorialSchema(guide))}}/>
   <p>{data.intro}</p><p>{data.answer}</p><p><SiteLink className="glossary-cta" href={data.calculatorPath}>Open the {data.calculatorLabel} →</SiteLink></p>
   <nav className="guide-nav" aria-label="Guide sections">{data.sections.map(s=><a key={s.id} href={'#'+s.id}>{s.title}</a>)}<a href="#checked-cases">Checked examples</a><a href="#questions">Questions</a><a href="#sources">Sources & limits</a></nav>
+  {topic==='afford' && <HouseIncomeReference/>}
   {data.sections.map(s=><section key={s.id} aria-labelledby={s.id}><h2 id={s.id}>{s.title}</h2>{s.formula&&<p className="formula">{s.formula}</p>}{s.paragraphs.map(p=><p key={p}>{p}</p>)}</section>)}
   <section aria-labelledby="checked-cases"><h2 id="checked-cases">Checked scenarios you can reproduce</h2><p>These are controlled hypothetical calculations, not market experiments or historical performance. Each case changes only the inputs stated in its label; complete assumptions are included in the CSV and calculator preset.</p>
    <figure className="decision-guide-figure"><div className="decision-guide-chart" role="region" aria-label="Comparison chart; scroll horizontally on small screens" tabIndex={0}><img src={'/images/guides/'+data.chart+'.svg'} width={1350} height={750} loading="lazy" alt={data.chartAlt}/></div><figcaption>{data.chartCaption} <a href={'/images/guides/'+data.chart+'.svg'}>Open the chart</a>.</figcaption></figure>

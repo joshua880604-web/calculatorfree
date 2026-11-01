@@ -3095,6 +3095,15 @@
     "answer": "Using $100,000 annual gross household income, $500 monthly other debt and entered 28% housing and 36% total-debt limits, the modeled housing budget is $2,333.33 monthly. With 20% down, a 6% thirty-year loan, 1.2% annual property tax and $1,500 annual insurance, the estimated home price is $380,983.32. These ratios and costs are scenario inputs, not underwriting guarantees.",
     "sections": [
       {
+        "id": "income-scenarios",
+        "title": "Compare income scenarios without using a salary multiplier",
+        "paragraphs": [
+          "The income comparison above keeps debt, financing and property costs constant. At $60,000 gross annual income, the 36% total-debt ceiling after $500 monthly debt limits housing to $1,300; the modeled home price is $202,711.88. At $80,000 income, the housing budget is $1,866.67 and modeled price is $300,473.64. These estimates also require the displayed down payments; they do not establish that you have enough cash to buy.",
+          "At $150,000 income, the same assumptions give a $582,257.53 estimate; at $200,000 they give $783,531.74. These are not recommended purchase prices. A simple income multiplier misses the switch between the housing-ratio and total-debt constraints. Compare actual take-home spending, maintenance, reserves and possible insurance or tax increases before deciding on a budget."
+        ],
+        "formula": ""
+      },
+      {
         "id": "ratios",
         "title": "Calculate both the housing and total-debt ceilings",
         "paragraphs": [
@@ -3183,6 +3192,14 @@
       {
         "question": "Is the estimated price a preapproval or recommended maximum?",
         "answer": "No. It is a mathematical result under entered assumptions, not a lending decision, appraisal or personal recommendation."
+      },
+      {
+        "question": "How much house can I afford with an $80,000 salary?",
+        "answer": "Under the income table’s stated assumptions, the estimate is $300,473.64 with $60,094.73 down and a $1,866.67 monthly housing budget. This assumes $500 monthly other debt, 20% down, a hypothetical 6% thirty-year loan, 1.2% annual property tax and $1,500 annual insurance; HOA, maintenance, PMI and closing costs are excluded."
+      },
+      {
+        "question": "How much house can I afford with $20,000 down?",
+        "answer": "A down payment alone cannot determine an affordable home price. You also need an income or monthly budget, existing debts, loan terms and ownership costs. Select Dollars for the down-payment unit and enter 20000, then account separately for any applicable PMI, closing costs and reserves. This calculator does not automatically calculate PMI or assess loan eligibility."
       }
     ],
     "limitations": [
