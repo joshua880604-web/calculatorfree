@@ -1,0 +1,262 @@
+{
+  "savings": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate interest on a savings account?",
+        "answer": "Without deposits or withdrawals, ending balance = starting balance × (1 + APY)^years when the rate is an effective annual yield. For $10,000 at a constant 4% APY over one year, the balance is $10,400 and interest is $400 before tax. Recurring deposits require growth from each deposit date rather than applying the full-year rate to every contribution. Actual bank rates, day counts and crediting can differ; this tool uses the rate and timing assumptions you enter.",
+        "queries": [
+          "how to calculate interest on savings",
+          "how to calculate interest on savings account"
+        ],
+        "anchor": "faq-savings-semrush-1"
+      },
+      {
+        "question": "How should I enter APY versus a nominal savings interest rate?",
+        "answer": "Choose APY in Rate type for a quoted effective annual yield. APY already includes compounding, so the separate compounding selector is ignored; monthly growth uses (1 + APY)^(1/12) − 1. Choose Nominal interest rate only for a stated annual rate with its matching compounding frequency. The selection applies to balance projections and both savings-goal modes. Rates are entered assumptions, not current bank offers.",
+        "queries": [
+          "how to calculate interest on savings account"
+        ],
+        "replacesQuestion": "How should I use a quoted APY in a savings projection?"
+      },
+      {
+        "question": "How do I calculate the monthly savings needed for a goal?",
+        "answer": "Use Monthly Deposit Needed with a target, deadline, current savings, rate type and deposit timing. With zero starting savings, zero growth and a $12,000 target in twelve months, twelve equal deposits are $1,000 each. Positive assumed growth can lower the required deposit; a changing account rate can change the outcome. The modeled contribution is zero when existing savings and their projected growth already cover the target.",
+        "queries": [
+          "how to calculate monthly savings goals"
+        ],
+        "replacesQuestion": "How much should I save each month to reach my savings goal?"
+      }
+    ],
+    "removeQuestions": [
+      "Can I use this as a high yield savings calculator?",
+      "Should I enter APY or a nominal interest rate?",
+      "Should I enter a bank APY as a nominal interest rate?"
+    ]
+  },
+  "interest-rate": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate a loan interest rate from its monthly payment?",
+        "answer": "Enter the financed principal, total loan term and fixed monthly principal-and-interest payment. The solver finds the monthly rate i satisfying P = M × [1 − (1 + i)^−N] / i, then reports i × 12 as a nominal annual percentage. For a $10,000 balance repaid by twelve $900 payments, the implied nominal annual rate is about 14.45%. Keep escrow, insurance and unrelated charges out of the payment unless intentionally treating them as cash flows; the result is not automatically regulatory APR.",
+        "queries": [
+          "how to calculate interest rate on a loan",
+          "how to calculate interest rate"
+        ],
+        "replacesQuestion": "Can I find a loan's interest rate from its monthly payment?"
+      },
+      {
+        "question": "How do I convert an annual interest rate to a monthly rate?",
+        "answer": "For a nominal annual rate compounded monthly, divide by twelve: 12% nominal means 1% per month. For a 12% effective annual yield, monthly rate is 1.12^(1/12) − 1, about 0.9489%. These are different quote conventions. This solver reports a nominal annual rate from fixed monthly loan payments; it does not identify the convention in a bank advertisement.",
+        "queries": [
+          "how to calculate interest rate per month"
+        ],
+        "anchor": "faq-interest-rate-semrush-2"
+      },
+      {
+        "question": "Why can the calculator reject my loan payment or interest rate?",
+        "answer": "Check principal, monthly payment and term units. For a nonnegative interest rate, total installments must at least repay principal. A $10,000 balance cannot be repaid by twelve $800 payments under that assumption because the payments total only $9,600. Variable rates, balloon balances, fees and irregular payment dates can also make this fixed-payment model unsuitable.",
+        "queries": [
+          "how do you calculate interest rate"
+        ],
+        "replacesQuestion": "Why might the rate solver reject my payment?"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "average-return": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate the average rate of return?",
+        "answer": "For equally spaced periodic percentage returns, the arithmetic mean is their sum divided by the number of periods. Returns of +10% and −10% average 0%, but compound growth is 1.10 × 0.90 − 1 = −1%. Their geometric average is sqrt(0.99) − 1, about −0.5013% per period. Enter each return, including zero and negative periods; the arithmetic mean is not the growth rate of invested wealth.",
+        "queries": [
+          "how to calculate average rate of return",
+          "how to calculate average annual return"
+        ],
+        "replacesQuestion": "Why can a zero average return still lose money?"
+      },
+      {
+        "question": "How do I annualize returns measured monthly?",
+        "answer": "Set Periods per year to 12 for monthly observations. The tool compounds the entered growth factors and raises their product to 12 divided by the number of observations, then subtracts one. Do not multiply a compounded monthly return by twelve and call it an effective annual return. All observations must represent comparable periods; the tool does not retrieve stock-market or account performance.",
+        "queries": [
+          "how to calculate average annualized return"
+        ],
+        "anchor": "faq-average-return-semrush-2"
+      },
+      {
+        "question": "When do deposits and withdrawals require a dated cash-flow return?",
+        "answer": "Use Dated Cash Flows when the amount and date of money added or removed matter. Supply outflows and receipts with consistent signs, including an ending account value as a final positive flow if that is the investment value being measured. A simple average of quoted fund returns does not measure your money-weighted experience. Multiple sign changes can create ambiguous IRR solutions, and this solver does not establish a unique economic answer for every series.",
+        "queries": [
+          "how to calculate average rate of return"
+        ],
+        "replacesQuestion": "When should I use a dated cash-flow return?"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "college-cost": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How much should I save each month for college?",
+        "answer": "Enter today’s annual college cost, years until enrollment, attendance duration, cost increase, coverage percentage, existing savings and assumed after-tax investment return. The tool values the covered school-year costs at enrollment, then solves the pre-enrollment monthly deposits. As a zero-growth example, four years at $30,000 each with ten years to save, 100% coverage and no current savings requires $1,000 monthly. Actual costs, aid and investment returns can differ.",
+        "queries": [
+          "how much should i be saving for college"
+        ],
+        "anchor": "faq-college-cost-semrush-1"
+      },
+      {
+        "question": "How do I calculate future college costs?",
+        "answer": "Grow today’s annual cost by the entered college-cost increase for the years until enrollment, then apply the increase again for each later school year. At $30,000 today, 5% annual cost growth and ten years until enrollment, the first school year costs about $48,866.84. A four-year total must include the four separate projected bills; do not enter that total as the current annual cost. Grants, scholarships and school-specific net prices are not inferred.",
+        "queries": [
+          "how to calculate college costs",
+          "how to calculate the future cost of college"
+        ],
+        "replacesQuestion": "How can I estimate future college costs and a savings gap?"
+      },
+      {
+        "question": "What if college starts now and there is no time left to save monthly?",
+        "answer": "With Years until college set to zero, the model has no pre-enrollment deposit periods and displays zero required monthly saving. That does not mean college is funded: inspect Savings required at enrollment and Additional lump sum needed today. The calculation does not model contributions during attendance, financial-aid eligibility or 529-specific tax treatment.",
+        "queries": [
+          "when to start saving for college"
+        ],
+        "anchor": "faq-college-cost-semrush-3"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "income-tax": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate federal income tax with this tool?",
+        "answer": "Choose the tax year and filing status, then enter income, eligible deductions, credits and payments without double counting. The model applies progressive rates to ordinary taxable income, handles supported investment-income rules separately and subtracts applicable credits. Withholding and estimated payments are compared with liability to estimate a balance due or refund. It is a 2025/2026 federal estimate, not a tax return, state-tax calculation or determination that every entered item qualifies.",
+        "queries": [
+          "how to calculate federal income tax",
+          "how to calculate income tax"
+        ],
+        "anchor": "faq-income-tax-semrush-1"
+      },
+      {
+        "question": "Is my marginal income tax rate applied to all my income?",
+        "answer": "No. Ordinary taxable income is taxed in layers, and the higher rate applies only to the portion in that bracket. For example, an extra $100 entirely inside a 22% ordinary bracket adds $22 of bracket tax before interacting deductions, credits or other taxes. Marginal rate is not the average tax rate on total income, and some investment income has different treatment. Use the selected tax year and filing status rather than applying one top rate to every dollar.",
+        "queries": [
+          "how is federal income tax calculator"
+        ],
+        "replacesQuestion": "Is my marginal rate applied to all income?"
+      },
+      {
+        "question": "Does the income tax calculator also calculate state income tax?",
+        "answer": "No. This tool estimates federal liability. Entered state and local taxes may affect the modeled federal itemized deduction where eligible, but they are not a calculated state tax bill. State withholding is also different from federal payments used in the refund comparison. Check state-specific rules separately rather than interpreting a federal refund as your total federal-and-state position.",
+        "queries": [
+          "what is the state income tax"
+        ],
+        "anchor": "faq-income-tax-semrush-3"
+      }
+    ],
+    "removeQuestions": [
+      "Will the paycheck result match my payslip exactly?"
+    ]
+  },
+  "finance": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "What is a financial calculator for time value of money?",
+        "answer": "It solves the relationship among present value PV, periodic payment PMT, future value FV, number of payment periods N and annual interest I/Y. Choose the unknown tab and enter the other cash-flow assumptions, payment frequency, compounding frequency and payment timing. For example, investing $1,000 at 5% annual compounding for ten annual periods with no deposits gives a future value of about $1,628.89. This online tool is not a simulation of a particular handheld calculator’s keys.",
+        "queries": [
+          "what is a financial calculator",
+          "what is time value of money"
+        ],
+        "anchor": "faq-finance-semrush-1"
+      },
+      {
+        "question": "How do I use PV, PMT and FV cash-flow signs?",
+        "answer": "Use one consistent perspective: money you pay out is negative and money you receive is positive. To reproduce the $1,000 example in Solve FV, enter PV = −1000, PMT = 0, N = 10, I/Y = 5, P/Y = 1 and C/Y = 1. The positive FV is about $1,628.89. Keeping every amount positive can describe an impossible cash-flow equation rather than a normal investment.",
+        "queries": [
+          "how do you use a financial calculator"
+        ],
+        "replacesQuestion": "Why are PV and PMT sometimes negative?"
+      },
+      {
+        "question": "How do payment and compounding frequencies affect the number of periods?",
+        "answer": "N counts payment periods, not automatically years. A ten-year monthly-payment plan has N = 120 and P/Y = 12. The tool converts the nominal annual rate using C/Y into the rate per payment interval; C/Y and P/Y need not match. Select beginning or end timing for payments. For irregular dated amounts, use a dated cash-flow tool rather than forcing them into equal-period TVM inputs.",
+        "queries": [
+          "how do you calculate the time value of money"
+        ],
+        "replacesQuestion": "Is N the number of years?"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "depreciation": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate straight-line depreciation?",
+        "answer": "Subtract salvage value from asset cost, then divide by useful life. A $50,000 asset with $5,000 salvage over five full accounting years has a $45,000 depreciable basis and $9,000 annual straight-line expense. After one full year, modeled book value is $41,000. Partial-year settings can change the first period. These are accounting-planning assumptions, not automatic IRS asset classification or tax elections.",
+        "queries": [
+          "how to calculate depreciation",
+          "how to calculate depreciation expense"
+        ],
+        "anchor": "faq-depreciation-semrush-1"
+      },
+      {
+        "question": "What is a depreciation schedule and accumulated depreciation?",
+        "answer": "A schedule lists each period’s expense, accumulated expense and remaining book value. Accumulated depreciation is the total depreciation recorded so far; book value equals cost minus that total. In the $50,000 straight-line example, two full $9,000 years give $18,000 accumulated depreciation and $32,000 book value. It is not an appraisal of what the asset could sell for.",
+        "queries": [
+          "what is a depreciation schedule",
+          "what is the accumulated depreciation"
+        ],
+        "replacesQuestion": "Is book value a sale-price forecast?"
+      },
+      {
+        "question": "Does this calculate MACRS, bonus depreciation or rental-property tax deductions?",
+        "answer": "No. The tool provides straight-line, declining-balance and sum-of-years’-digits accounting schedules under entered cost, salvage, life and proration. Tax depreciation can require different basis, asset class, recovery period, conventions and elections. Do not treat a modeled book expense as a completed tax deduction, or assume that this calculator identifies tax treatment from an asset description.",
+        "queries": [
+          "how to calculate rental property depreciation"
+        ],
+        "replacesQuestion": "Does the tool calculate MACRS automatically?"
+      }
+    ],
+    "removeQuestions": [
+      "Can accounting depreciation be used directly for tax?"
+    ]
+  },
+  "commission": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate sales commission?",
+        "answer": "For a flat percentage, commission = eligible sales × rate / 100. At $10,000 eligible sales and 5%, gross commission is $500. In the two-known-values mode, enter any two of sales, rate and commission and leave the third blank to solve it. Use the sales base defined by the actual compensation plan; the form does not decide whether returns, taxes or discounts are commissionable.",
+        "queries": [
+          "how to calculate commission",
+          "how is sales commission calculated"
+        ],
+        "anchor": "faq-commission-semrush-1"
+      },
+      {
+        "question": "How do I calculate a commission rate from sales and earnings?",
+        "answer": "Commission rate = commission / eligible sales × 100%. Earning $750 commission on $15,000 eligible sales implies 5%. Keep base salary separate: adding it to the commission numerator would overstate the rate. A zero sales amount cannot establish a percentage from a positive commission payment.",
+        "queries": [
+          "how to calculate commission rate",
+          "how to calculate sales commission rate"
+        ],
+        "anchor": "faq-commission-semrush-2"
+      },
+      {
+        "question": "How does progressive commission differ from one rate on all sales?",
+        "answer": "In progressive mode, each band rate applies only within its band. At 5% on the first $10,000 and 10% on the next $5,000, $15,000 sales earns $1,000 before base pay. Single rate on all sales applies the selected tier’s rate to the entire amount; 10% of $15,000 is $1,500. Select the plan’s actual method and use the same period for sales and base pay. Gross earnings are not take-home pay.",
+        "queries": [
+          "how is commission calculated"
+        ],
+        "replacesQuestion": "How does progressive sales commission work?"
+      }
+    ],
+    "removeQuestions": [
+      "Can I add two successive discount percentages?"
+    ]
+  }
+}
