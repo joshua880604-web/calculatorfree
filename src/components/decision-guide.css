@@ -2,3 +2,4 @@
 
 .decision-guide-chart{max-width:100%;overflow-x:auto;border:1px solid var(--control);border-radius:10px;background:#fff;}.decision-guide-chart img{min-width:760px;border:0;border-radius:0;}.decision-case-table td{white-space:nowrap;}.decision-case-table th[scope=row]{min-width:160px;}@media print{.decision-guide-chart{overflow:visible;}.decision-guide-chart img{min-width:0;}}
 .editorial-article .decision-case-table td,.glossary-comparison .decision-case-table td{white-space:nowrap;}
+.editorial-article p{overflow-wrap:anywhere;}

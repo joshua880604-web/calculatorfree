@@ -141,5 +141,53 @@
         "answer": "No. Each scenario holds one rate fixed and the full entered balance constant during draw. A higher-rate calculation is a sensitivity scenario, not a simulation of a dated rate reset or changing daily balances."
       }
     ]
+  },
+  "stock-profit": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Is the displayed stock return annualized?",
+        "answer": "No. This tool has no holding dates; its percentage is economic profit divided by purchase cost. Use a compatible annualized-return or cash-flow model to account for time."
+      },
+      {
+        "question": "Why can a zero sale price show a loss larger than purchase cost?",
+        "answer": "If you still enter a fixed sale fee at zero proceeds, the model requires additional cash to pay that fee. In the guide’s boundary case, $5,005 purchase cost plus a $5 sale fee gives a $5,010 loss. Actual broker treatment can differ."
+      }
+    ]
+  },
+  "stock-average": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Why can dollar loss stay the same after averaging down?",
+        "answer": "Buying additional shares at the unchanged comparison price adds cost and value together; it does not recover the original loss. In the guide, average cost falls from $50.05 to $45.05, but dollar loss changes from $1,005 to $1,010 because of a new $5 fee."
+      }
+    ]
+  },
+  "irr": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "How do I check an IRR with spreadsheet NPV?",
+        "answer": "For annual flows in A1:A3 with time zero in A1, use =A1+NPV(rate,A2:A3). The initial flow is added separately. A root should give approximately zero; that does not establish it is the only root."
+      },
+      {
+        "question": "What happens if I omit a zero cash-flow year?",
+        "answer": "Later cash flows move earlier. Investing $1,000 and receiving $1,210 after two years gives 10% annual IRR; deleting the year-one zero turns it into a one-year receipt with 21% IRR."
+      }
+    ]
+  },
+  "mirr": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Why can a higher financing assumption increase calculated MIRR?",
+        "answer": "When a negative outlay occurs after time zero, a higher discount rate reduces its present-value magnitude in this formula. That mathematical effect does not make expensive borrowing beneficial; the tool does not model an actual loan schedule."
+      },
+      {
+        "question": "Why do four cash-flow entries contain only three MIRR periods?",
+        "answer": "The first entry is at time zero. Entries at 0, 1, 2 and 3 span three intervals. Use entries minus one for the exponent and preserve explicit zeros for empty dates."
+      }
+    ]
   }
 }

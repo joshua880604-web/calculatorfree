@@ -2059,5 +2059,584 @@
         "label": "Monthly mortgage payment guide"
       }
     ]
+  },
+  "stockprofit": {
+    "meta": {
+      "path": "/guides/how-to-calculate-stock-profit/",
+      "title": "How to Calculate Stock Profit: Fees, Dividends and Break-Even",
+      "heading": "How to Calculate Stock Profit: Fees, Dividends and Break-Even",
+      "description": "Calculate stock profit and percentage return after trading fees and cash dividends. Includes six checked examples, fractional shares and the break-even sale-price formula.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "stock-profit"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "How to Calculate Stock Profit: Fees, Dividends and Break-Even",
+      "cardIntro": "Calculate stock profit and percentage return after trading fees and cash dividends. Includes six checked examples, fractional shares and the break-even sale-price formula.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/stock-profit-calculator",
+    "calculatorLabel": "Stock Profit Calculator",
+    "intro": "To calculate profit on a long stock position sold in full, subtract total purchase cost from net sale proceeds plus any unreinvested cash dividends. Include fees on both transactions. Then divide profit by the purchase cost to calculate the return on that cost. This is an economic cash reconciliation before income tax, not a prediction of a future stock price.",
+    "answer": "Buying 100 shares at $50 with a $5 purchase fee costs $5,005. Selling all 100 at $60 with a $5 sale fee receives $5,995. With no dividends, net profit is $990 and return on purchase cost is 19.7802%. Recovering the original cost requires a $50.10 sale price per share under those same fixed fees.",
+    "sections": [
+      {
+        "id": "cash-flows",
+        "title": "Separate gross trade values from cash actually paid and received",
+        "paragraphs": [
+          "Multiply shares by the purchase price to obtain gross purchase value, then add the buy fee once. Multiply shares by the sale price to obtain gross sale value, then subtract the sale fee once. In the base case, the $1,000 gross price-change gain becomes $990 after $10 total fees.",
+          "Fees expressed in USD are total amounts for each transaction in this model, not charges per share. Percentage fees instead apply to that side’s gross trade value. For example, a 0.5% buy fee on $5,000 is $25; a 1% sell fee on $6,000 is $60. Use the fee rule shown on your trade confirmation rather than entering a percentage as a dollar amount."
+        ],
+        "formula": "Profit = shares × sale price − sell fee + unreinvested cash dividends − (shares × buy price + buy fee)"
+      },
+      {
+        "id": "percentage",
+        "title": "Use purchase cost as the percentage-return denominator",
+        "paragraphs": [
+          "Divide the $990 net profit by $5,005 purchase cost, then multiply by 100. The result differs from the 20% price change because the percentage incorporates the specified trading fees. Profit in dollars and percentage return answer different questions; a bigger dollar gain can require much more capital.",
+          "The tool has no holding dates, so this percentage is not annualized. The same endpoint profit over one year and five years would have different annualized returns. For compatible endpoint comparisons, use the linked annualized-return guide; for multiple external cash flows, review a cash-flow return method rather than treating all money as invested at the start."
+        ],
+        "formula": "Return on purchase cost (%) = net profit / positive total purchase cost × 100"
+      },
+      {
+        "id": "dividends",
+        "title": "Include cash dividends once and keep reinvestment separate",
+        "paragraphs": [
+          "The percentage-fee case adds $200 cumulative unreinvested cash dividends. Its $5,025 purchase cost and $6,140 total receipts give $1,115 profit. Another case holds sale price at the $50 purchase price but adds $200 dividends; after the two $5 fees, profit is $190 despite no price appreciation.",
+          "Enter actual cumulative cash dividends for the position, not an annual yield percentage. Do not add dividends again if your prices or share quantities already reflect a dividend-reinvestment or total-return series. Reinvested dividends change the purchase history and share count; the DRIP Calculator is designed for a disclosed reinvestment projection."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "break-even",
+        "title": "Solve for the sale price needed to recover the modeled cost",
+        "paragraphs": [
+          "With a fixed sale fee, add that fee to purchase cost, subtract unreinvested cash dividends, and divide by shares. For the base case, ($5,005 + $5) / 100 gives $50.10. With $200 dividends already received, the same fixed-fee break-even threshold becomes $48.10.",
+          "With a percentage sale fee, divide by shares multiplied by one minus the fee fraction instead. The purchase fee is already part of total purchase cost and must not be added again. Special conditions need explicit handling: a 100% sale fee removes all gross sale receipts, and sufficient prior dividends can recover cost even at zero sale price."
+        ],
+        "formula": "Break-even sale price = (purchase cost + fixed sell fee − cash dividends) / [shares × (1 − percentage sell fee)]"
+      },
+      {
+        "id": "losses",
+        "title": "Retain losses and check fractional-share assumptions",
+        "paragraphs": [
+          "Selling the base 100-share position at $40 produces a $1,010 loss after fees. Fractional shares work through the same multiplication: 2.5 shares bought at $40 and sold at $45 with $1 fees on each side produce $10.50 profit on $101 cost.",
+          "The zero-sale-price case still charges the entered fixed $5 sale fee. That makes the modeled loss $5,010, slightly larger than purchase cost, because additional cash pays the sale fee. This is a boundary check of the entered fee rule, not a claim that all worthless holdings are liquidated that way. Actual broker treatment may differ."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Reproduce the reconciliation in a spreadsheet",
+        "paragraphs": [
+          "For the base case, =100*60-5-(100*50+5) returns $990. Divide that cell by =100*50+5 and format the result as a percentage. Keep the share count, each fee rule and dividend amount in separate cells so a price sensitivity does not accidentally change unrelated inputs.",
+          "The calculator assumes one unleveraged long position sold in full, one currency and manually entered prices. It does not handle short selling, options, margin interest, partial-sale tax lots, splits or wash-sale adjustments. Taxable gain can differ from this economic result; use broker records and applicable reporting rules for a tax return."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Purchase cost",
+      "Net profit / loss",
+      "Return on cost",
+      "Break-even price"
+    ],
+    "chart": "stockprofit-guide",
+    "chartAlt": "Profit or loss at hypothetical sale prices of forty, fifty and sixty dollars for one hundred shares bought at fifty dollars, with five-dollar fees on each side.",
+    "chartCaption": "The chart holds quantity, purchase price and fixed fees constant; only sale price changes. No dividends are included in the chart.",
+    "questions": [
+      {
+        "question": "How do I calculate stock profit percentage?",
+        "answer": "Subtract full purchase cost from net sale receipts plus eligible cash dividends, then divide by positive purchase cost. Format that ratio as a percentage; it is not annualized by this tool."
+      },
+      {
+        "question": "Are trading fees per share or per transaction?",
+        "answer": "USD fees are total transaction fees here. Percentage fees apply to each trade’s gross value. Convert a broker’s per-share charge to a total amount before entering it."
+      },
+      {
+        "question": "Can an unchanged stock price still produce a profit?",
+        "answer": "Yes, if unreinvested cash dividends exceed the included transaction costs. The checked unchanged-price example earns $190 before income tax."
+      },
+      {
+        "question": "Can I calculate profit on fractional shares?",
+        "answer": "Yes. The model accepts fractional positive quantities and uses the same cash reconciliation. Confirm actual broker execution and fee rules separately."
+      },
+      {
+        "question": "Does this show my taxable capital gain?",
+        "answer": "No. Tax basis adjustments, holding-period treatment, wash sales and partial-sale identification are outside this economic before-tax calculation."
+      },
+      {
+        "question": "Can I use the calculator to forecast a stock price?",
+        "answer": "No. Sale prices are manually entered scenarios, not market quotes, forecasts or recommendations."
+      }
+    ],
+    "limitations": [
+      "One long, unleveraged position sold in full in USD; no partial sales, tax-lot methods, corporate actions or live prices.",
+      "Cash dividends are unreinvested and entered once. Fees follow the specific fixed or percentage rules supplied.",
+      "Return requires positive purchase cost and is not annualized. Income taxes and borrowing are excluded."
+    ],
+    "sources": [
+      {
+        "href": "https://www.investor.gov/introduction-investing/getting-started/understanding-fees",
+        "label": "Investor.gov: understanding investment fees"
+      },
+      {
+        "href": "https://www.irs.gov/publications/p550",
+        "label": "IRS Publication 550: investment tax reporting differs from this economic scenario"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-average-stock-price/",
+        "label": "Weighted average stock cost guide"
+      },
+      {
+        "href": "/guides/annualized-return-vs-total-return/",
+        "label": "Annualized return vs. total return"
+      },
+      {
+        "href": "/drip-calculator",
+        "label": "DRIP Calculator"
+      },
+      {
+        "href": "/glossary/return-on-investment/",
+        "label": "Return on investment glossary"
+      }
+    ]
+  },
+  "stockaverage": {
+    "meta": {
+      "path": "/guides/how-to-calculate-average-stock-price/",
+      "title": "How to Calculate Average Stock Price: Weighted Cost and Adding Shares",
+      "heading": "How to Calculate Average Stock Price: Weighted Cost and Adding Shares",
+      "description": "Calculate quantity-weighted stock cost with fees. Compare averaging down, averaging up and fractional purchases without confusing lower unit cost with recovered losses.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "stock-average"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "How to Calculate Average Stock Price: Weighted Cost and Adding Shares",
+      "cardIntro": "Calculate quantity-weighted stock cost with fees. Compare averaging down, averaging up and fractional purchases without confusing lower unit cost with recovered losses.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/stock-average-calculator",
+    "calculatorLabel": "Stock Average Calculator",
+    "intro": "Average stock acquisition cost is total purchase spending, including entered purchase fees, divided by total shares. Weight each price by the quantity bought. This economic average describes an intact position built from purchases; it is not automatically the tax basis method for a later partial sale.",
+    "answer": "Buying 100 shares at $50 and 50 shares at $40 with $5 fees on each purchase costs $7,010 for 150 shares. Average cost including fees is $46.7333 per share. The simple midpoint of $45 is wrong because the two purchases contain different numbers of shares.",
+    "sections": [
+      {
+        "id": "formula",
+        "title": "Weight purchase prices by the shares acquired",
+        "paragraphs": [
+          "Calculate each lot’s gross purchase value by multiplying quantity by price. Sum those values and the fixed buy fees, then divide by total shares. For the unequal-purchase example, gross spending is $5,000 + $2,000, fees are $10 and total shares are 150.",
+          "Without fees, the quantity-weighted purchase price is $7,000 / 150, or $46.6667. Including fees raises it to $7,010 / 150, or $46.7333. The calculator reports both measures so you can distinguish price weighting from transaction costs. A simple average of prices works only under compatible equal quantities and does not automatically include fees."
+        ],
+        "formula": "Average cost per share = [Σ(quantity × purchase price) + Σ(total buy fees)] / Σ(quantity)"
+      },
+      {
+        "id": "averaging-down",
+        "title": "A lower average price does not erase the existing dollar loss",
+        "paragraphs": [
+          "Start with 100 shares bought at $50 plus a $5 fee. At a comparison price of $40, the position is worth $4,000 versus $5,005 purchase cost: a $1,005 unrealized loss. Buying another 100 shares at $40 plus a $5 fee brings total cost to $9,010 and quantity to 200.",
+          "Average cost falls from $50.05 to $45.05, but the position’s $8,000 comparison value is still $1,010 below cost. The original loss has not vanished; the new fee adds another $5 loss at the unchanged comparison price. A smaller percentage loss can coexist with the same or larger dollar loss and more capital committed."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "risk",
+        "title": "Compare cash committed as well as cost per share",
+        "paragraphs": [
+          "The chart shows both the unit cost and total invested cash for the original and added-share cases. Lower cost per share is only one consequence of adding a cheaper purchase. The additional $4,005 is new capital exposed to the same security, not a refund of the previous purchase.",
+          "This arithmetic does not determine whether adding shares is appropriate. A stock can keep falling, concentration can increase and future recovery is uncertain. Do not infer diversification or improved business prospects from a lower average. The tool performs the calculation without recommending a purchase."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "up-and-fractions",
+        "title": "Averaging up and fractional shares use the same formula",
+        "paragraphs": [
+          "Adding 100 shares at $60 instead of $40 produces $11,010 total cost and a $55.05 average, including two $5 fees. At the same $40 comparison price, the modeled unrealized loss is $3,010. The formula works regardless of whether a later price is higher or lower; the decision to buy is separate.",
+          "Fractional quantities also carry their actual weight. Buying 1.5 shares at $40 and 0.5 shares at $60 with $1 fees on each purchase costs $92 for two shares. Average cost is $46. A $45 comparison price gives a $2 unrealized loss before selling fees and tax."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "comparison",
+        "title": "An optional comparison price is a scenario, not a live quote",
+        "paragraphs": [
+          "Position value equals total shares multiplied by the manually entered comparison price. Unrealized gain or loss is that value less total purchase cost. A blank comparison-price field lets you calculate average cost without inventing a market valuation; entering zero intentionally represents zero comparison value.",
+          "The comparison excludes selling fees, dividends, interest and taxes. Use the Stock Profit Calculator for a full sale scenario with its disclosed fee and dividend assumptions. Do not combine different securities or currencies into one average, and do not mix split-adjusted prices with unadjusted share quantities."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Check the result without treating it as a tax-lot ledger",
+        "paragraphs": [
+          "In a spreadsheet, use =(100*50+50*40+5+5)/(100+50) for the unequal-purchase example. For a column of purchases, SUMPRODUCT(share_range,price_range) plus SUM(fee_range), divided by SUM(share_range), gives the same weighted method. Keep full precision internally and format the final cost per share.",
+          "The calculator records purchases only. It does not deplete sold lots, implement FIFO or specific identification, adjust for wash sales, or track reinvested dividends and corporate actions. IRS average-basis eligibility depends on the security and acquisition arrangement; this general economic average is not a tax-method election. Keep broker records and use the appropriate reporting guidance."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Shares held",
+      "Average cost with fees",
+      "Total invested cash",
+      "Unrealized gain / loss"
+    ],
+    "chart": "stockaverage-guide",
+    "chartAlt": "Two panels compare cost per share and total invested cash before and after adding one hundred shares at forty dollars.",
+    "chartCaption": "The added-share case lowers unit cost but increases committed cash. At the same $40 comparison price, dollar loss changes from $1,005 to $1,010 because of the new $5 fee.",
+    "questions": [
+      {
+        "question": "How do I calculate average stock price for unequal purchases?",
+        "answer": "Multiply each purchase price by its share quantity, add the resulting spending and purchase fees, then divide by total shares. Do not give different-sized purchases equal weight."
+      },
+      {
+        "question": "Does averaging down reduce my existing dollar loss?",
+        "answer": "Not by itself. Buying at the current comparison price adds value and cost together; the existing dollar loss remains, with any additional fee increasing it."
+      },
+      {
+        "question": "Can I average up instead of down?",
+        "answer": "Yes. The weighted calculation also handles later purchases at higher prices. It describes entered costs and does not recommend either strategy."
+      },
+      {
+        "question": "Does the average include commissions?",
+        "answer": "The headline cost includes the fixed total USD fee entered for each purchase. A separate weighted purchase-price metric excludes those fees."
+      },
+      {
+        "question": "Can I leave the comparison price blank?",
+        "answer": "Yes. Average cost can be calculated without a market-value estimate. A blank price and an explicit zero price represent different inputs."
+      },
+      {
+        "question": "Can I use this average for a partial stock-sale tax return?",
+        "answer": "Not automatically. This is a purchases-only economic average, with no tax-lot depletion or basis adjustments. Applicable tax methods and broker records require separate review."
+      }
+    ],
+    "limitations": [
+      "One security and one currency, purchases only; no sales, tax-lot depletion, splits or reinvested distributions.",
+      "Fees are total USD amounts per purchase. Optional valuation uses an entered comparison price, not a live quote.",
+      "Lower cost per share is not a risk reduction or recovery guarantee; additional purchases commit additional capital."
+    ],
+    "sources": [
+      {
+        "href": "https://www.irs.gov/publications/p550",
+        "label": "IRS Publication 550: basis and eligible average-basis arrangements"
+      },
+      {
+        "href": "https://www.investor.gov/introduction-investing/getting-started/understanding-fees",
+        "label": "Investor.gov: transaction and ongoing investment costs"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-stock-profit/",
+        "label": "Stock sale profit guide"
+      },
+      {
+        "href": "/stock-profit-calculator",
+        "label": "Stock Profit Calculator"
+      },
+      {
+        "href": "/drip-calculator",
+        "label": "Dividend Reinvestment Calculator"
+      },
+      {
+        "href": "/guides/should-you-reinvest-dividends/",
+        "label": "Reinvesting dividends versus taking cash"
+      }
+    ]
+  },
+  "irr": {
+    "meta": {
+      "path": "/guides/how-to-calculate-irr/",
+      "title": "How to Calculate IRR: Cash-Flow Timing, Excel and Multiple Roots",
+      "heading": "How to Calculate IRR: Cash-Flow Timing, Excel and Multiple Roots",
+      "description": "Calculate IRR from signed cash flows and correct timing. Includes six checked examples, Excel formulas, zero periods, negative returns and a two-IRR case.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "irr"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "How to Calculate IRR: Cash-Flow Timing, Excel and Multiple Roots",
+      "cardIntro": "Calculate IRR from signed cash flows and correct timing. Includes six checked examples, Excel formulas, zero periods, negative returns and a two-IRR case.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/irr-calculator",
+    "calculatorLabel": "IRR Calculator",
+    "intro": "Internal rate of return is a discount rate at which a specified cash-flow stream has zero net present value. The cash amounts, signs and payment dates all matter. For equally spaced annual flows, IRR is an annual rate. A percentage that solves the equation is not a measure of investment safety or a complete comparison of projects.",
+    "answer": "An initial $1,000 outflow followed by a $1,210 receipt one year later has 21% annual IRR. Receiving the same $1,210 after two years, with no year-one receipt, has 10% annual IRR. The total dollar gain is unchanged, but its timing changes the annualized cash-flow return.",
+    "sections": [
+      {
+        "id": "equation",
+        "title": "Set net present value to zero",
+        "paragraphs": [
+          "Write the initial investment as a time-zero outflow, then include each subsequent net receipt or payment at the correct time. The annual equation discounts year-one cash by 1 + r, year-two cash by (1 + r)^2 and so on. A candidate r is an IRR only if the resulting sum is zero.",
+          "For a single receipt, the equation can be solved directly: (ending receipt / initial outflow)^(1 / years) − 1. With several intervening flows, a numerical method is usually needed. The checked unequal-receipt case invests $10,000 initially and receives $3,000, $4,000 and $5,000 at successive year ends, producing about 8.8963% annual IRR."
+        ],
+        "formula": "NPV(r) = CF0 + CF1/(1+r) + CF2/(1+r)^2 + … + CFN/(1+r)^N; an IRR satisfies NPV(r) = 0"
+      },
+      {
+        "id": "inputs",
+        "title": "Enter initial investment once and retain zero periods",
+        "paragraphs": [
+          "In this tool, the Initial investment field takes a positive dollar amount and converts it to the negative time-zero outflow. In Unequal Annual Cash Flows mode, enter only later amounts starting at year one. For the two-year $1,210 example, enter initial 1000 and subsequent flows 0, 1210.",
+          "Omitting the zero moves the receipt to year one and changes the answer to 21%. Repeating the initial investment in the later-flow field also changes the actual investment being modeled. Commas separate cash-flow entries here; write 10000 rather than 10,000 for a single amount."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "periods",
+        "title": "Unequal amounts are not the same as irregular dates",
+        "paragraphs": [
+          "The Unequal Annual Cash Flows mode accepts varying amounts, but they are still one year apart. It is not date-based XIRR. For actual uneven calendar dates, use the dated mode in Average Return Calculator and follow its documented date convention.",
+          "The separate Fixed Cash Flow mode supports disclosed payment frequencies and beginning/end timing, and its headline rates are effective annual IRRs. A monthly spreadsheet IRR, by contrast, is per month unless you annualize it. Compare equivalent timing and units before deciding a spreadsheet disagrees with the website."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "multiple",
+        "title": "A cash-flow stream can have more than one IRR",
+        "paragraphs": [
+          "The hypothetical series −100, +230, −132 at times 0, 1 and 2 has two positive annual roots: 10% and 20%. Substituting either into the NPV equation gives zero. A later large outflow creates a nonconventional sign pattern, so a solver returning one rate does not establish a unique answer.",
+          "The site reports detected roots and warns when there is more than one. Its numerical search is bounded and does not guarantee every mathematically possible root was found. Repeated and nearly repeated roots are especially sensitive. Review the complete pattern and NPV at a justified required return rather than choosing whichever root looks more attractive."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Check IRR and NPV in Excel or Google Sheets",
+        "paragraphs": [
+          "For annual cash flows −1000, 0, 1210 in cells A1:A3, =IRR(A1:A3) returns 10%. Check the root using =A1+NPV(10%,A2:A3); the initial flow is added separately because the ordinary spreadsheet NPV function treats its listed flows as future periods.",
+          "For −100, 230, −132, try different IRR guesses and inspect both roots rather than assuming one default guess proves uniqueness. Spreadsheet iteration and site numerical search can find different members of a multiple-root set. For monthly flows, annualize a periodic rate p using (1+p)^12 − 1, not p multiplied by twelve."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "interpretation",
+        "title": "A high IRR is not the same as more profit or less risk",
+        "paragraphs": [
+          "The $900 receipt after a $1,000 one-year investment gives −10% IRR; the tool retains the negative result. A larger project can generate more dollar profit with a lower rate, and projects can differ in risk, duration, financing and required capital. IRR alone does not settle those choices.",
+          "MIRR makes separate financing and reinvestment assumptions explicit and can provide a different analytical view. It is still assumption-dependent, not a guaranteed achieved return. Use cash budgets, NPV with a considered discount rate and the actual project context alongside any single rate."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Cash flows from time zero",
+      "Effective annual IRR",
+      "Horizon"
+    ],
+    "chart": "irr-guide",
+    "chartAlt": "Annual IRR for one-thousand-dollar initial investments with a 1210-dollar receipt after one or two years, or a 900-dollar receipt after one year.",
+    "chartCaption": "The first two charted cases differ only in receipt timing. The table also includes unequal annual receipts and a series with two detected positive roots.",
+    "questions": [
+      {
+        "question": "How do I calculate IRR in Excel?",
+        "answer": "Put all signed, equally spaced flows in order, including time zero and explicit zero periods, then use IRR(range). The result is per cash-flow period; match that period before comparing annual rates."
+      },
+      {
+        "question": "Why can the same cash flows have two IRRs?",
+        "answer": "Nonconventional cash-flow patterns can make the NPV equation cross zero more than once. The checked −100, 230, −132 series has roots at 10% and 20%."
+      },
+      {
+        "question": "Is the Unequal Annual Cash Flows mode XIRR?",
+        "answer": "No. Amounts may differ, but the model places them at successive year ends. Actual irregular dates need a date-based model."
+      },
+      {
+        "question": "Why must I keep a zero-flow year?",
+        "answer": "Zero preserves the cash-flow date. Removing it moves all later amounts earlier and can materially increase the calculated annual rate."
+      },
+      {
+        "question": "Can IRR be negative?",
+        "answer": "Yes. Receiving $900 after investing $1,000 one year earlier gives −10% IRR in the checked example."
+      },
+      {
+        "question": "Does the highest IRR identify the best investment?",
+        "answer": "No. IRR does not establish dollar profitability, risk, scale or suitability, and multiple roots can make a single-rate comparison ambiguous."
+      }
+    ],
+    "limitations": [
+      "Annual unequal-amount cases have fixed year-end dates; no tax, fees or inflation are inferred from unspecified amounts.",
+      "Numerical root detection is bounded and can miss roots; the presence of a reported rate does not prove uniqueness or investment quality.",
+      "Cases use independent Decimal calculations, including explicit checks of both known polynomial roots; no market backtest is claimed."
+    ],
+    "sources": [
+      {
+        "href": "https://support.microsoft.com/en-us/excel/functions/irr-function",
+        "label": "Microsoft: periodic IRR syntax, timing and iteration"
+      },
+      {
+        "href": "https://support.microsoft.com/en-us/excel/go-with-the-cash-flow-calculate-npv-and-irr-in-excel",
+        "label": "Microsoft: NPV, IRR and cash-flow conventions"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-mirr/",
+        "label": "MIRR calculation guide"
+      },
+      {
+        "href": "/average-return-calculator",
+        "label": "Average Return Calculator with dated cash flows"
+      },
+      {
+        "href": "/glossary/internal-rate-of-return/",
+        "label": "Internal rate of return glossary"
+      },
+      {
+        "href": "/guides/annualized-return-vs-total-return/",
+        "label": "Annualized versus total return"
+      }
+    ]
+  },
+  "mirr": {
+    "meta": {
+      "path": "/guides/how-to-calculate-mirr/",
+      "title": "How to Calculate MIRR: Financing, Reinvestment and Periods",
+      "heading": "How to Calculate MIRR: Financing, Reinvestment and Periods",
+      "description": "Calculate modified internal rate of return from outflow present value and inflow terminal value. Includes seven checked cases, quarterly conversion and Excel formulas.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "mirr"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "How to Calculate MIRR: Financing, Reinvestment and Periods",
+      "cardIntro": "Calculate modified internal rate of return from outflow present value and inflow terminal value. Includes seven checked cases, quarterly conversion and Excel formulas.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/mirr-calculator",
+    "calculatorLabel": "MIRR Calculator",
+    "intro": "Modified internal rate of return separates the assumed cost of financing negative cash flows from the assumed reinvestment of positive cash flows. Discount payments to time zero, compound receipts to the final period and solve the rate connecting those two totals. Both assumptions must match the spacing of the entered flows.",
+    "answer": "For annual flows −$10,000, $3,000, $4,000 and $5,000 at years 0–3, an 8% financing assumption and 10% reinvestment assumption give $10,000 present-value outflows and $13,030 terminal-value receipts. MIRR is approximately 9.2232% annually. These are chosen rate assumptions, not returns the calculator can guarantee.",
+    "sections": [
+      {
+        "id": "timeline",
+        "title": "Count cash-flow intervals, not entries",
+        "paragraphs": [
+          "Enter the first signed amount at time zero and one amount at each equally spaced date thereafter. Four entries at years 0, 1, 2 and 3 contain three compounding intervals, not four. Keep explicit zero amounts for dates with no cash movement.",
+          "This tool requires one number per line, with no thousands separators or labels. It rejects an internal blank line rather than silently shifting later cash flows. At least one positive and one negative amount are required. Actual uneven dates cannot be represented merely by labeling a list quarterly or annually."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "present-future",
+        "title": "Calculate outflow present value and receipt terminal value",
+        "paragraphs": [
+          "Discount each negative cash flow at the financing rate from its own date back to time zero. Add the magnitudes to obtain the outflow present value. Compound each positive cash flow at the reinvestment rate from its own date forward to the final period.",
+          "In the base series, the only negative payment is at time zero, so its present value is $10,000 regardless of the financing rate. Terminal receipts are $3,000 × 1.10^2 + $4,000 × 1.10 + $5,000 = $13,030. The last receipt is already at the horizon and receives no extra reinvestment period."
+        ],
+        "formula": "MIRR per period = (terminal value of positive flows / absolute present value of negative flows)^(1 / number of intervals) − 1"
+      },
+      {
+        "id": "reinvestment",
+        "title": "Test the effect of a different reinvestment assumption",
+        "paragraphs": [
+          "With the same annual project cash flows, reducing reinvestment from 10% to 5% lowers terminal receipts to $12,507.50 and MIRR to about 7.7433%. At 0% reinvestment, receipts sum to $12,000 and MIRR is about 6.2659%. The chart isolates this single assumption.",
+          "The project’s entered receipts did not change. The different rates come from different treatment of cash available before the horizon. The assumed reinvestment return may not be achievable, and the modeled terminal pool is not an actual account balance observed in the market. A more favorable assumption is not evidence that a project improved."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "financing",
+        "title": "Later negative cash flows make the financing assumption matter",
+        "paragraphs": [
+          "A separate series invests $10,000 initially and another $2,000 at year one, then receives $6,000 at year two and $9,000 at year three. At 8% financing, present-value outflows are approximately $11,851.85; at 20%, they are $11,666.67. Both cases retain the same 10% reinvestment assumption and $15,600 terminal receipts.",
+          "Their MIRRs are about 9.5922% and 10.1690%, respectively. The higher financing assumption discounts the later outlay more strongly, lowering its present-value magnitude in this formula. Do not interpret the higher computed MIRR as evidence that more expensive borrowing is beneficial. No actual loan balance or payment schedule has been modeled."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "periods",
+        "title": "Convert annual assumptions for quarterly or monthly cash flows",
+        "paragraphs": [
+          "Both site rate fields are effective annual rates. For quarterly spacing, convert an annual decimal rate R to (1+R)^(1/4) − 1; for monthly spacing use the twelfth root. Dividing an effective annual rate by four or twelve is not the equivalent compound rate.",
+          "The two-quarter example has −$1,000 at time zero, $100 after one quarter and $1,100 after two quarters. With 8% annual financing and 10% annual reinvestment, periodic MIRR is about 9.6545%, while effective annual MIRR is about 44.5793%. The latter annualizes a six-month scenario; it is not a full year of observed earnings."
+        ],
+        "formula": "Effective annual MIRR = (1 + MIRR per period)^(periods per year) − 1"
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Match Excel MIRR and preserve the interpretation",
+        "paragraphs": [
+          "For the annual base series in A1:A4, use =MIRR(A1:A4,8%,10%). For quarterly flows, use =MIRR(range,(1+8%)^(1/4)-1,(1+10%)^(1/4)-1), then annualize that periodic result with the fourth power. The cash-flow order, zeros and number of intervals must also match.",
+          "Under this defined financing/reinvestment construction, a valid positive present-value magnitude and terminal-value pool produce one periodic MIRR greater than −100%. That does not make it the same as IRR or an NPV decision rule. A checked −1000, 900 annual series has −10% MIRR; losses are not floored at zero. Review assumptions, project scale and risk before using the rate in a decision."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "PV of outflows",
+      "Terminal inflow value",
+      "Periodic MIRR",
+      "Effective annual MIRR"
+    ],
+    "chart": "mirr-guide",
+    "chartAlt": "Effective annual MIRR for the same three-year cash-flow stream at zero, five and ten percent annual reinvestment assumptions.",
+    "chartCaption": "Only reinvestment changes in the chart. The table separately tests a later outlay, negative return and quarterly spacing.",
+    "questions": [
+      {
+        "question": "What is the difference between MIRR and IRR?",
+        "answer": "IRR solves the cash-flow NPV equation and can have multiple roots. This MIRR construction separately specifies financing and reinvestment rates, then links outflow present value to inflow terminal value."
+      },
+      {
+        "question": "How do I calculate MIRR in Excel?",
+        "answer": "Use MIRR(values,finance_rate,reinvest_rate) with rates per cash-flow period. For nonannual site inputs, convert the entered effective annual assumptions to equivalent period rates first."
+      },
+      {
+        "question": "Why does a financing-rate change sometimes have no effect?",
+        "answer": "If every negative cash flow is at time zero, there is no later negative payment to discount. The base guide case has exactly that structure."
+      },
+      {
+        "question": "Does a higher assumed reinvestment rate prove a better project?",
+        "answer": "No. It changes the modeled terminal value of interim receipts while the project cash flows stay fixed. Real reinvestment returns can differ."
+      },
+      {
+        "question": "Can MIRR be negative?",
+        "answer": "Yes. The checked $1,000 outlay followed by a $900 receipt one year later gives −10% with zero financing and reinvestment assumptions."
+      },
+      {
+        "question": "Are the displayed monthly or quarterly results annualized?",
+        "answer": "The tool reports both a per-period MIRR and a compounded effective annual MIRR. Use the correct output and horizon for your comparison."
+      }
+    ],
+    "limitations": [
+      "Equal annual, quarterly or monthly spacing, with annual effective rate inputs; no actual irregular dates or inferred loan schedules.",
+      "Financing and reinvestment rates are explicit assumptions. Taxes, fees and inflation are not automatically added.",
+      "One computed MIRR under this construction does not replace NPV, risk analysis or a check of real-world financing and reinvestment availability."
+    ],
+    "sources": [
+      {
+        "href": "https://support.microsoft.com/en-us/excel/functions/mirr-function",
+        "label": "Microsoft: MIRR values and period-rate arguments"
+      },
+      {
+        "href": "https://support.microsoft.com/en-us/excel/go-with-the-cash-flow-calculate-npv-and-irr-in-excel",
+        "label": "Microsoft: cash-flow analysis and related return measures"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-irr/",
+        "label": "IRR timing and multiple-root guide"
+      },
+      {
+        "href": "/glossary/modified-internal-rate-of-return/",
+        "label": "Modified internal rate of return glossary"
+      },
+      {
+        "href": "/glossary/internal-rate-of-return/",
+        "label": "Internal rate of return glossary"
+      },
+      {
+        "href": "/present-value-calculator",
+        "label": "Present Value Calculator"
+      }
+    ]
   }
 }

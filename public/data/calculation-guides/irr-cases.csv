@@ -1,0 +1,7 @@
+Case,Complete inputs (JSON),Unrounded reference metrics (JSON)
+"USD 1,100 received in year 1","{""flows"": ""1100"", ""initial"": 1000}","{""Annual IRR 1"": 10.0}"
+"USD 1,210 received in year 1","{""flows"": ""1210"", ""initial"": 1000}","{""Annual IRR 1"": 21.0}"
+"USD 1,210 received in year 2","{""flows"": ""0, 1210"", ""initial"": 1000}","{""Annual IRR 1"": 10.0}"
+USD 900 received in year 1,"{""flows"": ""900"", ""initial"": 1000}","{""Annual IRR 1"": -10.0}"
+Two positive annual roots,"{""flows"": ""230, -132"", ""initial"": 100}","{""Annual IRR 1"": 10.0, ""Annual IRR 2"": 20.0}"
+Unequal annual receipts,"{""flows"": ""3000, 4000, 5000"", ""initial"": 10000}","{""Annual IRR 1"": 8.896339469334993}"

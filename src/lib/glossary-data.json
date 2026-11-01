@@ -1037,6 +1037,10 @@
       {
         "path": "/guides/should-you-reinvest-dividends/",
         "title": "Dividends versus retained cash"
+      },
+      {
+        "title": "How to Calculate Stock Profit: Fees, Dividends and Break-Even",
+        "path": "/guides/how-to-calculate-stock-profit/"
       }
     ]
   },
@@ -1115,7 +1119,17 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "title": "How to Calculate IRR: Cash-Flow Timing, Excel and Multiple Roots",
+        "path": "/guides/how-to-calculate-irr/"
+      },
+      {
+        "title": "How to Calculate MIRR: Financing, Reinvestment and Periods",
+        "path": "/guides/how-to-calculate-mirr/"
+      }
+    ]
   },
   {
     "slug": "net-present-value",
@@ -4375,7 +4389,17 @@
         "url": "https://support.microsoft.com/en-us/excel/functions/mirr-function"
       }
     ],
-    "checkedOn": "2026-10-28"
+    "checkedOn": "2026-10-28",
+    "guides": [
+      {
+        "title": "How to Calculate MIRR: Financing, Reinvestment and Periods",
+        "path": "/guides/how-to-calculate-mirr/"
+      },
+      {
+        "title": "How to Calculate IRR: Cash-Flow Timing, Excel and Multiple Roots",
+        "path": "/guides/how-to-calculate-irr/"
+      }
+    ]
   },
   {
     "slug": "debt-snowball",

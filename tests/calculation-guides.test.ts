@@ -45,3 +45,14 @@ test('Property guide reference cases reconcile periods, financing, signed losses
  assert.equal(cases.heloc[5].metrics['Total interest'],0);
  assert.ok(cases.heloc[5].metrics['Monthly repayment']>0);
 });
+
+test('Investment guide cases preserve dollar losses, zeros, multiple roots and period conversion',()=>{
+ assert.ok(cases.stockprofit[1].metrics['Net profit / loss before income tax']<0);
+ assert.ok(cases.stockaverage[1].metrics['Average cost per share including buy fees']<cases.stockaverage[0].metrics['Average cost per share including buy fees']);
+ assert.ok(cases.stockaverage[1].metrics['Unrealized gain / loss before sale fees and tax']<cases.stockaverage[0].metrics['Unrealized gain / loss before sale fees and tax']);
+ assert.ok(cases.irr[1].metrics['Annual IRR 1']>cases.irr[2].metrics['Annual IRR 1']);
+ assert.equal(cases.irr[4].metrics['Annual IRR 1'],10);assert.equal(cases.irr[4].metrics['Annual IRR 2'],20);
+ assert.ok(cases.mirr[0].metrics['Effective annual MIRR']>cases.mirr[1].metrics['Effective annual MIRR']);
+ assert.ok(cases.mirr[5].metrics['Effective annual MIRR']<0);
+ const q=cases.mirr[6].metrics;assert.ok(Math.abs(((1+q['MIRR per cash-flow period']/100)**4-1)*100-q['Effective annual MIRR'])<1e-10);
+});

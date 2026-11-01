@@ -118,6 +118,10 @@ for(const slug of ['401k','employer-match-and-vesting','withdrawal-rate'])conten
 for(const id of ['noi','cap-rate','rental-property','heloc'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
 for(const slug of ['net-operating-income','cap-rate-vs-cash-on-cash-return','home-equity-and-heloc'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
 
+// Investment guide links and scoped model explanations, checked November 1.
+for(const id of ['stock-profit','stock-average','irr','mirr'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+for(const slug of ['return-on-investment','internal-rate-of-return','modified-internal-rate-of-return'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
+
 export function sitemapEntries(config: SiteConfig = siteConfig()) {
   if (!config.origin || !config.indexable) return [];
   return [

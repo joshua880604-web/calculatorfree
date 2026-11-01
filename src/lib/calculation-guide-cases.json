@@ -2063,5 +2063,580 @@
         "$50,000.00"
       ]
     }
+  ],
+  "stockprofit": [
+    {
+      "label": "Base: sell at USD 60",
+      "calculatorId": "stock-profit",
+      "mode": "trade",
+      "values": {
+        "shares": 100,
+        "buy": 50,
+        "sell": 60,
+        "buy_fee_unit": "USD",
+        "buy_fee": 5,
+        "sell_fee_unit": "USD",
+        "sell_fee": 5,
+        "dividends": 0
+      },
+      "metrics": {
+        "Net profit / loss before income tax": 990.0,
+        "Net return on purchase cost": 19.78021978021978,
+        "Break-even sale price per share": 50.1,
+        "Total purchase cost including fees": 5005.0,
+        "Net sale proceeds after fees": 5995.0,
+        "Total trading fees": 10.0
+      },
+      "display": [
+        "$5,005.00",
+        "$990.00",
+        "19.7802%",
+        "$50.10"
+      ]
+    },
+    {
+      "label": "Sell at USD 40",
+      "calculatorId": "stock-profit",
+      "mode": "trade",
+      "values": {
+        "shares": 100,
+        "buy": 50,
+        "sell": 40,
+        "buy_fee_unit": "USD",
+        "buy_fee": 5,
+        "sell_fee_unit": "USD",
+        "sell_fee": 5,
+        "dividends": 0
+      },
+      "metrics": {
+        "Net profit / loss before income tax": -1010.0,
+        "Net return on purchase cost": -20.17982017982018,
+        "Break-even sale price per share": 50.1,
+        "Total purchase cost including fees": 5005.0,
+        "Net sale proceeds after fees": 3995.0,
+        "Total trading fees": 10.0
+      },
+      "display": [
+        "$5,005.00",
+        "-$1,010.00",
+        "-20.1798%",
+        "$50.10"
+      ]
+    },
+    {
+      "label": "Percentage fees plus cash dividends",
+      "calculatorId": "stock-profit",
+      "mode": "trade",
+      "values": {
+        "shares": 100,
+        "buy": 50,
+        "sell": 60,
+        "buy_fee_unit": "Percent",
+        "buy_fee": 0.5,
+        "sell_fee_unit": "Percent",
+        "sell_fee": 1,
+        "dividends": 200
+      },
+      "metrics": {
+        "Net profit / loss before income tax": 1115.0,
+        "Net return on purchase cost": 22.18905472636816,
+        "Break-even sale price per share": 48.73737373737374,
+        "Total purchase cost including fees": 5025.0,
+        "Net sale proceeds after fees": 5940.0,
+        "Total trading fees": 85.0
+      },
+      "display": [
+        "$5,025.00",
+        "$1,115.00",
+        "22.1891%",
+        "$48.74"
+      ]
+    },
+    {
+      "label": "2.5 fractional shares",
+      "calculatorId": "stock-profit",
+      "mode": "trade",
+      "values": {
+        "shares": 2.5,
+        "buy": 40,
+        "sell": 45,
+        "buy_fee_unit": "USD",
+        "buy_fee": 1,
+        "sell_fee_unit": "USD",
+        "sell_fee": 1,
+        "dividends": 0
+      },
+      "metrics": {
+        "Net profit / loss before income tax": 10.5,
+        "Net return on purchase cost": 10.396039603960396,
+        "Break-even sale price per share": 40.8,
+        "Total purchase cost including fees": 101.0,
+        "Net sale proceeds after fees": 111.5,
+        "Total trading fees": 2.0
+      },
+      "display": [
+        "$101.00",
+        "$10.50",
+        "10.3960%",
+        "$40.80"
+      ]
+    },
+    {
+      "label": "Zero sale price",
+      "calculatorId": "stock-profit",
+      "mode": "trade",
+      "values": {
+        "shares": 100,
+        "buy": 50,
+        "sell": 0,
+        "buy_fee_unit": "USD",
+        "buy_fee": 5,
+        "sell_fee_unit": "USD",
+        "sell_fee": 5,
+        "dividends": 0
+      },
+      "metrics": {
+        "Net profit / loss before income tax": -5010.0,
+        "Net return on purchase cost": -100.0999000999001,
+        "Break-even sale price per share": 50.1,
+        "Total purchase cost including fees": 5005.0,
+        "Net sale proceeds after fees": -5.0,
+        "Total trading fees": 10.0
+      },
+      "display": [
+        "$5,005.00",
+        "-$5,010.00",
+        "-100.0999%",
+        "$50.10"
+      ]
+    },
+    {
+      "label": "Unchanged price plus USD 200 dividends",
+      "calculatorId": "stock-profit",
+      "mode": "trade",
+      "values": {
+        "shares": 100,
+        "buy": 50,
+        "sell": 50,
+        "buy_fee_unit": "USD",
+        "buy_fee": 5,
+        "sell_fee_unit": "USD",
+        "sell_fee": 5,
+        "dividends": 200
+      },
+      "metrics": {
+        "Net profit / loss before income tax": 190.0,
+        "Net return on purchase cost": 3.796203796203796,
+        "Break-even sale price per share": 48.1,
+        "Total purchase cost including fees": 5005.0,
+        "Net sale proceeds after fees": 4995.0,
+        "Total trading fees": 10.0
+      },
+      "display": [
+        "$5,005.00",
+        "$190.00",
+        "3.7962%",
+        "$48.10"
+      ]
+    }
+  ],
+  "stockaverage": [
+    {
+      "label": "100 shares at USD 50",
+      "calculatorId": "stock-average",
+      "mode": "purchases",
+      "values": {
+        "lots": "[{\"shares\":\"100\",\"price\":\"50\",\"fee\":\"5\"}]",
+        "market": 40
+      },
+      "metrics": {
+        "Average cost per share including buy fees": 50.05,
+        "Total shares held": 100.0,
+        "Total purchase cost including fees": 5005.0,
+        "Weighted purchase price excluding fees": 50.0,
+        "Total buy fees": 5.0,
+        "Unrealized gain / loss before sale fees and tax": -1005.0
+      },
+      "display": [
+        "100",
+        "$50.05",
+        "$5,005.00",
+        "-$1,005.00"
+      ]
+    },
+    {
+      "label": "Add 100 shares at USD 40",
+      "calculatorId": "stock-average",
+      "mode": "purchases",
+      "values": {
+        "lots": "[{\"shares\":\"100\",\"price\":\"50\",\"fee\":\"5\"},{\"shares\":\"100\",\"price\":\"40\",\"fee\":\"5\"}]",
+        "market": 40
+      },
+      "metrics": {
+        "Average cost per share including buy fees": 45.05,
+        "Total shares held": 200.0,
+        "Total purchase cost including fees": 9010.0,
+        "Weighted purchase price excluding fees": 45.0,
+        "Total buy fees": 10.0,
+        "Unrealized gain / loss before sale fees and tax": -1010.0
+      },
+      "display": [
+        "200",
+        "$45.05",
+        "$9,010.00",
+        "-$1,010.00"
+      ]
+    },
+    {
+      "label": "Unequal purchases; compare at USD 45",
+      "calculatorId": "stock-average",
+      "mode": "purchases",
+      "values": {
+        "lots": "[{\"shares\":\"100\",\"price\":\"50\",\"fee\":\"5\"},{\"shares\":\"50\",\"price\":\"40\",\"fee\":\"5\"}]",
+        "market": 45
+      },
+      "metrics": {
+        "Average cost per share including buy fees": 46.733333333333334,
+        "Total shares held": 150.0,
+        "Total purchase cost including fees": 7010.0,
+        "Weighted purchase price excluding fees": 46.666666666666664,
+        "Total buy fees": 10.0,
+        "Unrealized gain / loss before sale fees and tax": -260.0
+      },
+      "display": [
+        "150",
+        "$46.73",
+        "$7,010.00",
+        "-$260.00"
+      ]
+    },
+    {
+      "label": "Add 100 shares at USD 60",
+      "calculatorId": "stock-average",
+      "mode": "purchases",
+      "values": {
+        "lots": "[{\"shares\":\"100\",\"price\":\"50\",\"fee\":\"5\"},{\"shares\":\"100\",\"price\":\"60\",\"fee\":\"5\"}]",
+        "market": 40
+      },
+      "metrics": {
+        "Average cost per share including buy fees": 55.05,
+        "Total shares held": 200.0,
+        "Total purchase cost including fees": 11010.0,
+        "Weighted purchase price excluding fees": 55.0,
+        "Total buy fees": 10.0,
+        "Unrealized gain / loss before sale fees and tax": -3010.0
+      },
+      "display": [
+        "200",
+        "$55.05",
+        "$11,010.00",
+        "-$3,010.00"
+      ]
+    },
+    {
+      "label": "Fractional purchases; compare at USD 45",
+      "calculatorId": "stock-average",
+      "mode": "purchases",
+      "values": {
+        "lots": "[{\"shares\":\"1.5\",\"price\":\"40\",\"fee\":\"1\"},{\"shares\":\"0.5\",\"price\":\"60\",\"fee\":\"1\"}]",
+        "market": 45
+      },
+      "metrics": {
+        "Average cost per share including buy fees": 46.0,
+        "Total shares held": 2.0,
+        "Total purchase cost including fees": 92.0,
+        "Weighted purchase price excluding fees": 45.0,
+        "Total buy fees": 2.0,
+        "Unrealized gain / loss before sale fees and tax": -2.0
+      },
+      "display": [
+        "2.0",
+        "$46.00",
+        "$92.00",
+        "-$2.00"
+      ]
+    }
+  ],
+  "irr": [
+    {
+      "label": "USD 1,100 received in year 1",
+      "calculatorId": "irr",
+      "mode": "irregular",
+      "values": {
+        "initial": 1000,
+        "flows": "1100"
+      },
+      "metrics": {
+        "Annual IRR 1": 10.0
+      },
+      "display": [
+        "[-1000, 1100]",
+        "10.0000%",
+        "1 year"
+      ]
+    },
+    {
+      "label": "USD 1,210 received in year 1",
+      "calculatorId": "irr",
+      "mode": "irregular",
+      "values": {
+        "initial": 1000,
+        "flows": "1210"
+      },
+      "metrics": {
+        "Annual IRR 1": 21.0
+      },
+      "display": [
+        "[-1000, 1210]",
+        "21.0000%",
+        "1 year"
+      ]
+    },
+    {
+      "label": "USD 1,210 received in year 2",
+      "calculatorId": "irr",
+      "mode": "irregular",
+      "values": {
+        "initial": 1000,
+        "flows": "0, 1210"
+      },
+      "metrics": {
+        "Annual IRR 1": 10.0
+      },
+      "display": [
+        "[-1000, 0, 1210]",
+        "10.0000%",
+        "2 years"
+      ]
+    },
+    {
+      "label": "USD 900 received in year 1",
+      "calculatorId": "irr",
+      "mode": "irregular",
+      "values": {
+        "initial": 1000,
+        "flows": "900"
+      },
+      "metrics": {
+        "Annual IRR 1": -10.0
+      },
+      "display": [
+        "[-1000, 900]",
+        "-10.0000%",
+        "1 year"
+      ]
+    },
+    {
+      "label": "Two positive annual roots",
+      "calculatorId": "irr",
+      "mode": "irregular",
+      "values": {
+        "initial": 100,
+        "flows": "230, -132"
+      },
+      "metrics": {
+        "Annual IRR 1": 10.0,
+        "Annual IRR 2": 20.0
+      },
+      "display": [
+        "[-100, 230, -132]",
+        "10.0000% / 20.0000%",
+        "2 years"
+      ]
+    },
+    {
+      "label": "Unequal annual receipts",
+      "calculatorId": "irr",
+      "mode": "irregular",
+      "values": {
+        "initial": 10000,
+        "flows": "3000, 4000, 5000"
+      },
+      "metrics": {
+        "Annual IRR 1": 8.896339469334993
+      },
+      "display": [
+        "[-10000, 3000, 4000, 5000]",
+        "8.8963%",
+        "3 years"
+      ]
+    }
+  ],
+  "mirr": [
+    {
+      "label": "Base: 10% reinvestment",
+      "calculatorId": "mirr",
+      "mode": "cashflows",
+      "values": {
+        "flows": "-10000\n3000\n4000\n5000",
+        "period": "Annually",
+        "finance": 8,
+        "reinvest": 10
+      },
+      "metrics": {
+        "Effective annual MIRR": 9.223177108014076,
+        "MIRR per cash-flow period": 9.223177108014076,
+        "Present value of outflows": 10000.0,
+        "Terminal value of reinvested inflows": 13030.0,
+        "Number of cash-flow periods": 3.0,
+        "Horizon in years": 3.0
+      },
+      "display": [
+        "$10,000.00",
+        "$13,030.00",
+        "9.2232%",
+        "9.2232%"
+      ]
+    },
+    {
+      "label": "0% reinvestment",
+      "calculatorId": "mirr",
+      "mode": "cashflows",
+      "values": {
+        "flows": "-10000\n3000\n4000\n5000",
+        "period": "Annually",
+        "finance": 8,
+        "reinvest": 0
+      },
+      "metrics": {
+        "Effective annual MIRR": 6.265856918261107,
+        "MIRR per cash-flow period": 6.265856918261107,
+        "Present value of outflows": 10000.0,
+        "Terminal value of reinvested inflows": 12000.0,
+        "Number of cash-flow periods": 3.0,
+        "Horizon in years": 3.0
+      },
+      "display": [
+        "$10,000.00",
+        "$12,000.00",
+        "6.2659%",
+        "6.2659%"
+      ]
+    },
+    {
+      "label": "5% reinvestment",
+      "calculatorId": "mirr",
+      "mode": "cashflows",
+      "values": {
+        "flows": "-10000\n3000\n4000\n5000",
+        "period": "Annually",
+        "finance": 8,
+        "reinvest": 5
+      },
+      "metrics": {
+        "Effective annual MIRR": 7.74327454106084,
+        "MIRR per cash-flow period": 7.74327454106084,
+        "Present value of outflows": 10000.0,
+        "Terminal value of reinvested inflows": 12507.5,
+        "Number of cash-flow periods": 3.0,
+        "Horizon in years": 3.0
+      },
+      "display": [
+        "$10,000.00",
+        "$12,507.50",
+        "7.7433%",
+        "7.7433%"
+      ]
+    },
+    {
+      "label": "Later outlay, 8% financing",
+      "calculatorId": "mirr",
+      "mode": "cashflows",
+      "values": {
+        "flows": "-10000\n-2000\n6000\n9000",
+        "period": "Annually",
+        "finance": 8,
+        "reinvest": 10
+      },
+      "metrics": {
+        "Effective annual MIRR": 9.592153610942052,
+        "MIRR per cash-flow period": 9.592153610942052,
+        "Present value of outflows": 11851.851851851852,
+        "Terminal value of reinvested inflows": 15600.0,
+        "Number of cash-flow periods": 3.0,
+        "Horizon in years": 3.0
+      },
+      "display": [
+        "$11,851.85",
+        "$15,600.00",
+        "9.5922%",
+        "9.5922%"
+      ]
+    },
+    {
+      "label": "Later outlay, 20% financing",
+      "calculatorId": "mirr",
+      "mode": "cashflows",
+      "values": {
+        "flows": "-10000\n-2000\n6000\n9000",
+        "period": "Annually",
+        "finance": 20,
+        "reinvest": 10
+      },
+      "metrics": {
+        "Effective annual MIRR": 10.168965043737217,
+        "MIRR per cash-flow period": 10.168965043737217,
+        "Present value of outflows": 11666.666666666666,
+        "Terminal value of reinvested inflows": 15600.0,
+        "Number of cash-flow periods": 3.0,
+        "Horizon in years": 3.0
+      },
+      "display": [
+        "$11,666.67",
+        "$15,600.00",
+        "10.1690%",
+        "10.1690%"
+      ]
+    },
+    {
+      "label": "USD 900 received in year 1",
+      "calculatorId": "mirr",
+      "mode": "cashflows",
+      "values": {
+        "flows": "-1000\n900",
+        "period": "Annually",
+        "finance": 0,
+        "reinvest": 0
+      },
+      "metrics": {
+        "Effective annual MIRR": -10.0,
+        "MIRR per cash-flow period": -10.0,
+        "Present value of outflows": 1000.0,
+        "Terminal value of reinvested inflows": 900.0,
+        "Number of cash-flow periods": 1.0,
+        "Horizon in years": 1.0
+      },
+      "display": [
+        "$1,000.00",
+        "$900.00",
+        "-10.0000%",
+        "-10.0000%"
+      ]
+    },
+    {
+      "label": "Two quarterly periods",
+      "calculatorId": "mirr",
+      "mode": "cashflows",
+      "values": {
+        "flows": "-1000\n100\n1100",
+        "period": "Quarterly",
+        "finance": 8,
+        "reinvest": 10
+      },
+      "metrics": {
+        "Effective annual MIRR": 44.579310008027946,
+        "MIRR per cash-flow period": 9.65451969291756,
+        "Present value of outflows": 1000.0,
+        "Terminal value of reinvested inflows": 1202.4113689084445,
+        "Number of cash-flow periods": 2.0,
+        "Horizon in years": 0.5
+      },
+      "display": [
+        "$1,000.00",
+        "$1,202.41",
+        "9.6545%",
+        "44.5793%"
+      ]
+    }
   ]
 }
