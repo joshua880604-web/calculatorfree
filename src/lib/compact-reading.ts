@@ -10,6 +10,15 @@ export const compactReadingIds = [
  'annuity', 'annuity-payout', 'pension', 'social-security',
  'personal-loan', 'student-loan', 'auto-loan', 'credit-card',
  'home-equity-loan', 'mortgage-payoff', 'apr', 'debt-consolidation',
+ 'amortization', 'house-affordability', 'rent', 'va-mortgage',
+ 'cash-back-or-low-interest', 'auto-lease', 'irr', 'income-tax',
+ 'take-home-paycheck', 'debt-payoff', 'repayment', 'business-loan',
+ 'boat-loan', 'budget', 'emergency-fund', 'investment-fee',
+ 'break-even', 'pmi', 'discount-points', 'biweekly-mortgage',
+ 'mortgage-recast', 'treasury-bill', 'quick-ratio', 'noi',
+ 'self-employment-tax', 'mirr', 'drip', 'covered-call',
+ 'cap-rate', 'credit-card-minimum-payment', 'fix-and-flip', 'seller-financing',
+ 'stock-profit', 'stock-average',
 ];
 
 // Change presentation order only; all original mathematical examples remain available.
@@ -18,4 +27,8 @@ export const compactReadingLeadExamples: Record<string,number> = {
  annuity:1, 'annuity-payout':2, pension:2, 'social-security':2,
  'personal-loan':1, 'student-loan':2, 'auto-loan':1, 'credit-card':1,
  'home-equity-loan':2, apr:1, 'debt-consolidation':1,
+ 'amortization':1, 'house-affordability':2, 'va-mortgage':1,
+ 'cash-back-or-low-interest':1, 'auto-lease':1, 'take-home-paycheck':1,
+ 'debt-payoff':1, repayment:1, 'business-loan':2, 'boat-loan':2,
+ pmi:2, 'biweekly-mortgage':2,
 };
