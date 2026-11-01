@@ -13,14 +13,14 @@ test('HTML citations link the descriptive calculator title and keep publisher an
  assert.equal(citationText('coast-fire','Coast FIRE Calculator','/coast-fire-calculator.html','2026-10-30','html'),'<a href="https://www.calculatorfree.io/coast-fire-calculator">Coast FIRE Calculator</a> by CalculatorFree.io (accessed 2026-10-30).');
 });
 test('Embed resources lists exactly supported widgets and owns one canonical sitemap entry',()=>{
- assert.deepEqual(embedResources.map(t=>t.id),tools.map(t=>t.id));assert.equal(embedResources.length,39);assert.ok(embedResources.every(t=>t.description.length>30));
+ assert.deepEqual(embedResources.map(t=>t.id),tools.map(t=>t.id));assert.equal(embedResources.length,78);assert.ok(embedResources.every(t=>t.description.length>30));
  const config={origin:'https://www.calculatorfree.io',indexable:true},schema=embedResourcesSchema(config),list=schema['@graph'][1] as any;
- assert.equal(list.numberOfItems,39);assert.equal(new Set(list.itemListElement.map((t:any)=>t.url)).size,39);assert.ok(list.itemListElement.every((t:any)=>!t.url.includes('/embed/')&&!t.url.endsWith('.html')));
+ assert.equal(list.numberOfItems,78);assert.equal(new Set(list.itemListElement.map((t:any)=>t.url)).size,78);assert.ok(list.itemListElement.every((t:any)=>!t.url.includes('/embed/')&&!t.url.endsWith('.html')));
  assert.equal(sitemapEntries(config).filter(e=>e.url===config.origin+embedResourcesPath).length,1);assert.doesNotMatch(JSON.stringify(schema),/FAQPage|aggregateRating/);
 });
 
 test('Embed topic groups cover every supported calculator exactly once',()=>{
  const grouped=embedResourceGroups.flatMap(group=>group.tools.map(tool=>tool.id));
- assert.equal(embedResourceGroups.length,5);assert.ok(embedResourceGroups.every(group=>group.tools.length>0));
+ assert.equal(embedResourceGroups.length,7);assert.ok(embedResourceGroups.every(group=>group.tools.length>0));
  assert.equal(new Set(grouped).size,grouped.length);assert.deepEqual(grouped.sort(),tools.map(tool=>tool.id).sort());
 });

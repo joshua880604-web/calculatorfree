@@ -7,7 +7,7 @@ import {calculators} from '../src/lib/calculators';
 
 test('Approved embeds preserve every public calculator destination',()=>{
  for(const {id} of embedTools){const tool=embedTool(id)!;assert.ok(tool);assert.equal(calculators.find(c=>c.id===id)?.title,tool.title);assert.equal(new URL(embedURL(id)).pathname,'/embed/'+tool.slug+'/');}
- assert.equal(embedTool('mortgage'),undefined);assert.ok(embedTool('covered-call')); assert.throws(()=>embedURL('mortgage'));
+ assert.ok(embedTool('mortgage'));assert.ok(embedTool('covered-call'));assert.equal(embedTool('income-tax'),undefined);assert.throws(()=>embedURL('income-tax'));
 });
 test('Copied embed code has a lazy titled frame, no input payload, and qualified attribution',()=>{
  const code=embedCode('roi','dark',800);assert.match(code,/src="https:\/\/www\.calculatorfree\.io\/embed\/roi-calculator\/\?theme=dark"/);assert.match(code,/loading="lazy"/);assert.match(code,/title="ROI Calculator by CalculatorFree.io"/);assert.match(code,/referrerpolicy="no-referrer"/);assert.match(code,/rel="nofollow noopener"/);assert.ok(!/share_version|cost=|returned=|balance=|<script/.test(code));

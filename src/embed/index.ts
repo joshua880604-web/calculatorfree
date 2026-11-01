@@ -28,7 +28,7 @@ function renderResult(result: Result) {
   if(result.notes?.length){const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Assumptions and limitations';details.append(summary);for(const note of result.notes){const p=document.createElement('p');p.textContent=note;details.append(p);}output.append(details);}
   const report=embedReport(config.id,result);
   if(report){
-   const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Key comparison · '+report.title;details.className='embed-key-report';details.append(summary);let rendered=false;
+   const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=report.title==='Calculation details'?report.title:'Key comparison · '+report.title;details.className='embed-key-report';details.append(summary);let rendered=false;
    details.addEventListener('toggle',()=>{if(!details.open||rendered)return;rendered=true;
     const help=document.createElement('p');help.textContent='Scroll the table horizontally on smaller screens. Figures are model scenarios, not forecasts.';details.append(help);
     const region=document.createElement('div');region.className='embed-report-scroll';region.tabIndex=0;region.setAttribute('role','region');region.setAttribute('aria-label',report.title);

@@ -232,5 +232,239 @@
     "slug": "markup-calculator",
     "title": "Markup Calculator",
     "height": 650
+  },
+  {
+    "id": "mortgage",
+    "slug": "mortgage-calculator",
+    "title": "Mortgage Calculator",
+    "height": 1200
+  },
+  {
+    "id": "amortization",
+    "slug": "amortization-calculator",
+    "title": "Amortization Calculator",
+    "height": 1000
+  },
+  {
+    "id": "rent",
+    "slug": "rent-affordability-calculator",
+    "title": "Rent Affordability Calculator",
+    "height": 800
+  },
+  {
+    "id": "debt-to-income-ratio",
+    "slug": "debt-ratio-calculator",
+    "title": "Debt-to-Income Ratio Calculator",
+    "height": 1200
+  },
+  {
+    "id": "refinance",
+    "slug": "refinance-calculator",
+    "title": "Refinance Calculator",
+    "height": 1000
+  },
+  {
+    "id": "apr",
+    "slug": "apr-calculator",
+    "title": "APR Calculator",
+    "height": 1000
+  },
+  {
+    "id": "fha-loan",
+    "slug": "fha-loan-calculator",
+    "title": "FHA Loan Calculator",
+    "height": 1200
+  },
+  {
+    "id": "va-mortgage",
+    "slug": "va-mortgage-calculator",
+    "title": "VA Mortgage Calculator",
+    "height": 1200
+  },
+  {
+    "id": "home-equity-loan",
+    "slug": "home-equity-loan-calculator",
+    "title": "Home Equity Loan Calculator",
+    "height": 800
+  },
+  {
+    "id": "down-payment",
+    "slug": "down-payment-calculator",
+    "title": "Down Payment Calculator",
+    "height": 800
+  },
+  {
+    "id": "biweekly-mortgage",
+    "slug": "biweekly-mortgage-calculator",
+    "title": "Biweekly Mortgage Payment Calculator",
+    "height": 800
+  },
+  {
+    "id": "mortgage-recast",
+    "slug": "mortgage-recast-calculator",
+    "title": "Mortgage Recast Calculator",
+    "height": 1000
+  },
+  {
+    "id": "mirr",
+    "slug": "mirr-calculator",
+    "title": "MIRR Calculator",
+    "height": 800
+  },
+  {
+    "id": "interest",
+    "slug": "interest-calculator",
+    "title": "Interest Calculator",
+    "height": 1000
+  },
+  {
+    "id": "finance",
+    "slug": "finance-calculator",
+    "title": "Finance Calculator",
+    "height": 1000
+  },
+  {
+    "id": "interest-rate",
+    "slug": "interest-rate-calculator",
+    "title": "Interest Rate Calculator",
+    "height": 800
+  },
+  {
+    "id": "savings",
+    "slug": "savings-calculator",
+    "title": "Savings Calculator",
+    "height": 1000
+  },
+  {
+    "id": "simple-interest",
+    "slug": "simple-interest-calculator",
+    "title": "Simple Interest Calculator",
+    "height": 800
+  },
+  {
+    "id": "cd",
+    "slug": "cd-calculator",
+    "title": "CD Calculator",
+    "height": 1000
+  },
+  {
+    "id": "bond",
+    "slug": "bond-calculator",
+    "title": "Bond Calculator",
+    "height": 1000
+  },
+  {
+    "id": "mutual-fund",
+    "slug": "mutual-fund-calculator",
+    "title": "Mutual Fund Calculator",
+    "height": 1000
+  },
+  {
+    "id": "average-return",
+    "slug": "average-return-calculator",
+    "title": "Average Return Calculator",
+    "height": 800
+  },
+  {
+    "id": "irr",
+    "slug": "irr-calculator",
+    "title": "IRR Calculator",
+    "height": 1000
+  },
+  {
+    "id": "payback-period",
+    "slug": "payback-period-calculator",
+    "title": "Payback Period Calculator",
+    "height": 800
+  },
+  {
+    "id": "present-value",
+    "slug": "present-value-calculator",
+    "title": "Present Value Calculator",
+    "height": 800
+  },
+  {
+    "id": "future-value",
+    "slug": "future-value-calculator",
+    "title": "Future Value Calculator",
+    "height": 800
+  },
+  {
+    "id": "inflation",
+    "slug": "inflation-calculator",
+    "title": "Inflation Calculator",
+    "height": 800
+  },
+  {
+    "id": "cagr",
+    "slug": "cagr-calculator",
+    "title": "CAGR Calculator",
+    "height": 800
+  },
+  {
+    "id": "investment-fee",
+    "slug": "investment-fee-calculator",
+    "title": "Investment Fee Calculator",
+    "height": 1000
+  },
+  {
+    "id": "real-return",
+    "slug": "real-return-calculator",
+    "title": "Real Return Calculator",
+    "height": 800
+  },
+  {
+    "id": "tax-equivalent-yield",
+    "slug": "tax-equivalent-yield-calculator",
+    "title": "Tax Equivalent Yield Calculator",
+    "height": 1000
+  },
+  {
+    "id": "treasury-bill",
+    "slug": "treasury-bill-calculator",
+    "title": "Treasury Bill Calculator",
+    "height": 1000
+  },
+  {
+    "id": "business-loan",
+    "slug": "business-loan-calculator",
+    "title": "Business Loan Calculator",
+    "height": 1000
+  },
+  {
+    "id": "depreciation",
+    "slug": "depreciation-calculator",
+    "title": "Depreciation Calculator",
+    "height": 1000
+  },
+  {
+    "id": "quick-ratio",
+    "slug": "quick-ratio-calculator",
+    "title": "Quick Ratio Calculator",
+    "height": 800
+  },
+  {
+    "id": "current-ratio",
+    "slug": "current-ratio-calculator",
+    "title": "Current Ratio Calculator",
+    "height": 1000
+  },
+  {
+    "id": "discount",
+    "slug": "discount-calculator",
+    "title": "Discount Calculator",
+    "height": 800
+  },
+  {
+    "id": "sales-tax",
+    "slug": "sales-tax-calculator",
+    "title": "Sales Tax Calculator",
+    "height": 800
+  },
+  {
+    "id": "commission",
+    "slug": "commission-calculator",
+    "title": "Commission Calculator",
+    "height": 800
   }
 ]

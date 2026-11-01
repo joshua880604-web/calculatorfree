@@ -4,7 +4,7 @@ import {calculatorCategory} from './calculator-categories';
 import {hasBlogSnippetKit} from './blog-snippet-access';
 import {absoluteURL,siteConfig} from './site';
 export const embedResourcesPath='/embed-resources';
-export const embedResourcesReviewedOn='2026-10-31';
+export const embedResourcesReviewedOn='2026-11-02';
 export const embedResources=tools.map(tool=>({...tool,path:'/'+tool.slug,hasSnippetKit:hasBlogSnippetKit(tool.id),description:descriptions[tool.id as keyof typeof descriptions]}));
 export const embedResourceGroups=[
  {id:'fire-retirement',title:'FIRE & Retirement',category:'retirement'},
@@ -12,6 +12,8 @@ export const embedResourceGroups=[
  {id:'debt',title:'Debt',category:'loans-debt'},
  {id:'investing',title:'Investing',category:'saving-investing'},
  {id:'business',title:'Business',category:'business-finance'},
+ {id:'sales-income',title:'Sales Tax & Commission',category:'tax-salary'},
+ {id:'shopping',title:'Discounts',category:'everyday'},
 ].map(group=>({...group,tools:embedResources.filter(tool=>calculatorCategory(tool.id)?.id===group.category)}));
 export function embedResourcesSchema(config=siteConfig()){
  const url=absoluteURL(embedResourcesPath,config);
