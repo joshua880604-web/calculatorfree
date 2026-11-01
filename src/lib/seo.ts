@@ -257,3 +257,6 @@ for(const slug of ["amortization", "apr", "bond-yield", "cagr", "commission", "d
 
 // Six scoped glossary definitions and reciprocal concept links added November 1.
 for(const slug of ['health-savings-account','brrrr-method','sequence-of-returns-risk','return-on-ad-spend','landed-cost','cost-basis'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
+
+// Three property definitions and a withdrawal-rule clarification, checked November 1.
+for(const slug of ['house-hacking','loan-seasoning','cash-out-refinance','withdrawal-rate'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';

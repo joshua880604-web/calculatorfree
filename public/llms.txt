@@ -334,3 +334,11 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 - [Return on ad spend (ROAS)](https://www.calculatorfree.io/glossary/return-on-ad-spend/): Revenue attribution, advertising spend and the distinction from contribution and profit.
 - [Landed cost](https://www.calculatorfree.io/glossary/landed-cost/): Shipment cost boundaries, allocation and a per-unit example; no live tariff determination.
 - [Cost basis](https://www.calculatorfree.io/glossary/cost-basis/): Purchased shares, acquisition fees, reinvestment lots and the limits of planning averages for tax reporting.
+
+
+## Property cash flow and retirement withdrawal terms
+
+- [House hacking](https://www.calculatorfree.io/glossary/house-hacking/): Owner-occupied rent offsets and a whole-property housing budget; not a lender income determination.
+- [Loan seasoning](https://www.calculatorfree.io/glossary/loan-seasoning/): Existing-loan age and ownership waiting periods are separate, program-specific requirements; the calculators do not test eligibility.
+- [Cash-out refinance](https://www.calculatorfree.io/glossary/cash-out-refinance/): Reconcile the new mortgage, payoff, deducted costs and net cash; distinguish borrowing from profit.
+- [Withdrawal rate, SWR and the 4% rule](https://www.calculatorfree.io/glossary/withdrawal-rate/): Initial-balance inflation adjustments differ from a percentage of current balance, lifespan depletion and required minimum distributions.

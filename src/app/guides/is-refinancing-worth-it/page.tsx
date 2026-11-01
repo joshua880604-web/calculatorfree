@@ -1,4 +1,5 @@
 import ContentReviewNotice from '@/components/ContentReviewNotice';
+import GuideGlossaryLinks from '@/components/GuideGlossaryLinks';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
 import {pageMetadata} from '@/lib/seo';
@@ -63,4 +64,5 @@ export default function RefinanceGuide(){return <div className="page-wrap glossa
 <p>{"Four refinance presets were checked with independent 50-digit Decimal amortization calculations, including every new-loan schedule row, payments, interest totals and simple recovery periods. Matched-date balances were calculated with the fixed-rate closed-form balance formula. Amounts are rounded only for display."}</p>
 <p>{"The model does not determine legal fee classifications, lender approval, tax deductions, cash-out benefits, changing insurance premiums or opportunity cost. Use the "}<SiteLink href="/real-estate-calculator">{"Mortgage and Housing directory"}</SiteLink>{" for related tools and the "}<SiteLink href="/methodology">{"methodology"}</SiteLink>{" for review status."}</p>
 <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
+<GuideGlossaryLinks path={refinanceGuide.path}/>
 </article></main></div>;}
