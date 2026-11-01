@@ -1,0 +1,4 @@
+.loan-cost-reference .decision-case-table table{min-width:980px;table-layout:auto;}
+.loan-cost-reference .decision-case-table th[scope=col]{min-width:140px;word-break:normal;overflow-wrap:normal;}
+.loan-cost-reference .decision-case-table th[scope=row]{min-width:180px;word-break:normal;overflow-wrap:normal;}
+@media print{.loan-cost-reference .decision-case-table table{min-width:0;}.loan-cost-reference .decision-case-table th[scope=col],.loan-cost-reference .decision-case-table th[scope=row]{min-width:0;}}

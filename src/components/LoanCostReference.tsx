@@ -3,11 +3,12 @@ import cases from '@/lib/calculation-guide-cases.json';
 import {calculatorPresetHref} from '@/lib/preset-links';
 import SiteLink from './SiteLink';
 import './decision-guide.css';
+import './loan-cost-reference.css';
 export default function LoanCostReference({id}:{id:string}){
  const topic=id==='personal-loan'?'personal':id==='student-loan'?'student':id==='business-loan'?'business':null;
  if(!topic)return null;
  const data=content[topic];
- return <section aria-labelledby="loan-cost-scenarios">
+ return <section className="loan-cost-reference" aria-labelledby="loan-cost-scenarios">
   <h2 id="loan-cost-scenarios">Compare payments and total borrowing cost</h2>
   <p>{data.answer}</p>
   <p>These are hypothetical fixed monthly calculations, not current rates or loan offers. Each link restores all inputs for that example. On a small screen, scroll the table horizontally to see every column.</p>
