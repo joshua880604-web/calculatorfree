@@ -56,3 +56,17 @@ test('Investment guide cases preserve dollar losses, zeros, multiple roots and p
  assert.ok(cases.mirr[5].metrics['Effective annual MIRR']<0);
  const q=cases.mirr[6].metrics;assert.ok(Math.abs(((1+q['MIRR per cash-flow period']/100)**4-1)*100-q['Effective annual MIRR'])<1e-10);
 });
+
+test('Housing guide cases distinguish balloon totals, loss, PMI paths and budget constraints',()=>{
+ const base=cases.seller[0].metrics;assert.ok(base['Total due in final month']>base['Balloon principal after final installment']);
+ assert.equal(cases.seller[3].metrics['Balloon principal after final installment'],240000);
+ assert.equal(cases.seller[4].metrics['Total interest through maturity'],0);
+ assert.equal(cases.seller[5].metrics['Balloon principal after final installment'],0);
+ assert.ok(cases.flip[3].metrics['Net project profit before income tax']<0);
+ assert.ok(cases.flip[4].metrics['Total cash required before sale']>cases.flip[0].metrics['Total cash required before sale']);
+ const baseRequest=cases.pmi[0].metrics['80% request benchmark'],extraRequest=cases.pmi[3].metrics['80% request benchmark'];
+ assert.ok(baseRequest!==undefined);assert.ok(extraRequest!==undefined);assert.ok(extraRequest<baseRequest);
+ assert.equal(cases.pmi[0].metrics['Scheduled 78% benchmark'],cases.pmi[3].metrics['Scheduled 78% benchmark']);
+ assert.equal(cases.pmi[4].metrics['Initial monthly PMI'],0);
+ assert.ok(cases.afford[1].metrics['Estimated home price']<cases.afford[0].metrics['Estimated home price']);
+});

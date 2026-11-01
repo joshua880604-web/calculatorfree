@@ -2638,5 +2638,678 @@
         "44.5793%"
       ]
     }
+  ],
+  "seller": [
+    {
+      "label": "Base: 30-year amortization, month 60 due",
+      "calculatorId": "seller-financing",
+      "mode": "amortized",
+      "values": {
+        "price": 300000,
+        "down": 60000,
+        "rate": 6,
+        "due": 60,
+        "years": 30
+      },
+      "metrics": {
+        "Regular monthly payment": 1438.9212603666058,
+        "Balloon principal after final installment": 223330.45637476695,
+        "Total due in final month": 224769.37763513354,
+        "Seller-financed principal": 240000.0,
+        "Total interest through maturity": 69665.7319967633,
+        "Total loan payments including balloon": 309665.73199676326
+      },
+      "display": [
+        "$1,438.92",
+        "$223,330.46",
+        "$224,769.38",
+        "$69,665.73"
+      ]
+    },
+    {
+      "label": "Month 120 due",
+      "calculatorId": "seller-financing",
+      "mode": "amortized",
+      "values": {
+        "price": 300000,
+        "down": 60000,
+        "rate": 6,
+        "due": 120,
+        "years": 30
+      },
+      "metrics": {
+        "Regular monthly payment": 1438.9212603666058,
+        "Balloon principal after final installment": 200845.73991294386,
+        "Total due in final month": 202284.66117331045,
+        "Seller-financed principal": 240000.0,
+        "Total interest through maturity": 133516.29115693655,
+        "Total loan payments including balloon": 373516.29115693655
+      },
+      "display": [
+        "$1,438.92",
+        "$200,845.74",
+        "$202,284.66",
+        "$133,516.29"
+      ]
+    },
+    {
+      "label": "15-year amortization, month 60 due",
+      "calculatorId": "seller-financing",
+      "mode": "amortized",
+      "values": {
+        "price": 300000,
+        "down": 60000,
+        "rate": 6,
+        "due": 60,
+        "years": 15
+      },
+      "metrics": {
+        "Regular monthly payment": 2025.256387316283,
+        "Balloon principal after final installment": 182421.83667848344,
+        "Total due in final month": 184447.0930657997,
+        "Seller-financed principal": 240000.0,
+        "Total interest through maturity": 63937.21991746042,
+        "Total loan payments including balloon": 303937.2199174604
+      },
+      "display": [
+        "$2,025.26",
+        "$182,421.84",
+        "$184,447.09",
+        "$63,937.22"
+      ]
+    },
+    {
+      "label": "Interest-only, month 60 due",
+      "calculatorId": "seller-financing",
+      "mode": "interest-only",
+      "values": {
+        "price": 300000,
+        "down": 60000,
+        "rate": 6,
+        "due": 60
+      },
+      "metrics": {
+        "Regular monthly payment": 1200.0,
+        "Balloon principal after final installment": 240000.0,
+        "Total due in final month": 241200.0,
+        "Seller-financed principal": 240000.0,
+        "Total interest through maturity": 72000.0,
+        "Total loan payments including balloon": 312000.0
+      },
+      "display": [
+        "$1,200.00",
+        "$240,000.00",
+        "$241,200.00",
+        "$72,000.00"
+      ]
+    },
+    {
+      "label": "0% interest, month 60 due",
+      "calculatorId": "seller-financing",
+      "mode": "amortized",
+      "values": {
+        "price": 300000,
+        "down": 60000,
+        "rate": 0,
+        "due": 60,
+        "years": 30
+      },
+      "metrics": {
+        "Regular monthly payment": 666.6666666666666,
+        "Balloon principal after final installment": 200000.0,
+        "Total due in final month": 200666.66666666666,
+        "Seller-financed principal": 240000.0,
+        "Total interest through maturity": 0.0,
+        "Total loan payments including balloon": 240000.0
+      },
+      "display": [
+        "$666.67",
+        "$200,000.00",
+        "$200,666.67",
+        "$0.00"
+      ]
+    },
+    {
+      "label": "Full 30-year amortization",
+      "calculatorId": "seller-financing",
+      "mode": "amortized",
+      "values": {
+        "price": 300000,
+        "down": 60000,
+        "rate": 6,
+        "due": 360,
+        "years": 30
+      },
+      "metrics": {
+        "Regular monthly payment": 1438.9212603666058,
+        "Balloon principal after final installment": 0.0,
+        "Total due in final month": 1438.9212603666058,
+        "Seller-financed principal": 240000.0,
+        "Total interest through maturity": 278011.6537319781,
+        "Total loan payments including balloon": 518011.6537319781
+      },
+      "display": [
+        "$1,438.92",
+        "$0.00",
+        "$1,438.92",
+        "$278,011.65"
+      ]
+    }
+  ],
+  "flip": [
+    {
+      "label": "Base: six-month financed project",
+      "calculatorId": "fix-and-flip",
+      "mode": "project",
+      "values": {
+        "price": 150000,
+        "closing": 4500,
+        "rehab": 35000,
+        "contingency": 10,
+        "months": 6,
+        "holding": 600,
+        "sale": 250000,
+        "selling": 6,
+        "sale_fixed": 1500,
+        "financing": "Interest-only loan",
+        "loan": 120000,
+        "rate": 10,
+        "points": 2
+      },
+      "metrics": {
+        "Net project profit before income tax": 28500.0,
+        "Total cash required before sale": 85000.0,
+        "Net sale cash after loan payoff": 113500.0,
+        "Project cash-on-cash ROI": 33.529411764705884,
+        "Break-even sale price": 219680.8510638298,
+        "Loan interest and points": 8400.0,
+        "Budgeted renovation including contingency": 38500.0
+      },
+      "display": [
+        "$205,000.00",
+        "$28,500.00",
+        "$85,000.00",
+        "$219,680.85"
+      ]
+    },
+    {
+      "label": "Sale delayed to month nine",
+      "calculatorId": "fix-and-flip",
+      "mode": "project",
+      "values": {
+        "price": 150000,
+        "closing": 4500,
+        "rehab": 35000,
+        "contingency": 10,
+        "months": 9,
+        "holding": 600,
+        "sale": 250000,
+        "selling": 6,
+        "sale_fixed": 1500,
+        "financing": "Interest-only loan",
+        "loan": 120000,
+        "rate": 10,
+        "points": 2
+      },
+      "metrics": {
+        "Net project profit before income tax": 23700.0,
+        "Total cash required before sale": 89800.0,
+        "Net sale cash after loan payoff": 113500.0,
+        "Project cash-on-cash ROI": 26.391982182628063,
+        "Break-even sale price": 224787.2340425532,
+        "Loan interest and points": 11400.0,
+        "Budgeted renovation including contingency": 38500.0
+      },
+      "display": [
+        "$209,800.00",
+        "$23,700.00",
+        "$89,800.00",
+        "$224,787.23"
+      ]
+    },
+    {
+      "label": "USD 50,000 rehab before contingency",
+      "calculatorId": "fix-and-flip",
+      "mode": "project",
+      "values": {
+        "price": 150000,
+        "closing": 4500,
+        "rehab": 50000,
+        "contingency": 10,
+        "months": 6,
+        "holding": 600,
+        "sale": 250000,
+        "selling": 6,
+        "sale_fixed": 1500,
+        "financing": "Interest-only loan",
+        "loan": 120000,
+        "rate": 10,
+        "points": 2
+      },
+      "metrics": {
+        "Net project profit before income tax": 12000.0,
+        "Total cash required before sale": 101500.0,
+        "Net sale cash after loan payoff": 113500.0,
+        "Project cash-on-cash ROI": 11.822660098522167,
+        "Break-even sale price": 237234.04255319148,
+        "Loan interest and points": 8400.0,
+        "Budgeted renovation including contingency": 55000.0
+      },
+      "display": [
+        "$221,500.00",
+        "$12,000.00",
+        "$101,500.00",
+        "$237,234.04"
+      ]
+    },
+    {
+      "label": "USD 210,000 sale price",
+      "calculatorId": "fix-and-flip",
+      "mode": "project",
+      "values": {
+        "price": 150000,
+        "closing": 4500,
+        "rehab": 35000,
+        "contingency": 10,
+        "months": 6,
+        "holding": 600,
+        "sale": 210000,
+        "selling": 6,
+        "sale_fixed": 1500,
+        "financing": "Interest-only loan",
+        "loan": 120000,
+        "rate": 10,
+        "points": 2
+      },
+      "metrics": {
+        "Net project profit before income tax": -9100.0,
+        "Total cash required before sale": 85000.0,
+        "Net sale cash after loan payoff": 75900.0,
+        "Project cash-on-cash ROI": -10.705882352941176,
+        "Break-even sale price": 219680.8510638298,
+        "Loan interest and points": 8400.0,
+        "Budgeted renovation including contingency": 38500.0
+      },
+      "display": [
+        "$205,000.00",
+        "-$9,100.00",
+        "$85,000.00",
+        "$219,680.85"
+      ]
+    },
+    {
+      "label": "Cash purchase, no loan",
+      "calculatorId": "fix-and-flip",
+      "mode": "project",
+      "values": {
+        "price": 150000,
+        "closing": 4500,
+        "rehab": 35000,
+        "contingency": 10,
+        "months": 6,
+        "holding": 600,
+        "sale": 250000,
+        "selling": 6,
+        "sale_fixed": 1500,
+        "financing": "Cash",
+        "loan": 120000,
+        "rate": 10,
+        "points": 2
+      },
+      "metrics": {
+        "Net project profit before income tax": 36900.0,
+        "Total cash required before sale": 196600.0,
+        "Net sale cash after loan payoff": 233500.0,
+        "Project cash-on-cash ROI": 18.769074262461853,
+        "Break-even sale price": 210744.68085106384,
+        "Loan interest and points": 0.0,
+        "Budgeted renovation including contingency": 38500.0
+      },
+      "display": [
+        "$196,600.00",
+        "$36,900.00",
+        "$196,600.00",
+        "$210,744.68"
+      ]
+    }
+  ],
+  "pmi": [
+    {
+      "label": "0.50% quote, no extra principal",
+      "calculatorId": "pmi",
+      "mode": "quote",
+      "values": {
+        "price": 400000,
+        "down": 10,
+        "appraisal": "",
+        "rate": 6.5,
+        "years": 30,
+        "first_due": "2026-11-01",
+        "annual_pmi": 0.5,
+        "extra": 0
+      },
+      "metrics": {
+        "Initial monthly PMI": 150.0,
+        "Original loan amount": 360000.0,
+        "Original loan-to-value ratio": 90.0,
+        "Scheduled monthly P&I": 2275.4448845746692,
+        "PMI if 80% request is approved": 14250.0,
+        "PMI using automatic termination only": 16200.0,
+        "Payments with PMI if request approved": 95.0,
+        "Payments with PMI under automatic scenario": 108.0,
+        "80% request benchmark": 95.0,
+        "Scheduled 78% benchmark": 109.0
+      },
+      "display": [
+        "$150.00",
+        "95",
+        "108",
+        "$14,250.00"
+      ]
+    },
+    {
+      "label": "0.30% quote",
+      "calculatorId": "pmi",
+      "mode": "quote",
+      "values": {
+        "price": 400000,
+        "down": 10,
+        "appraisal": "",
+        "rate": 6.5,
+        "years": 30,
+        "first_due": "2026-11-01",
+        "annual_pmi": 0.3,
+        "extra": 0
+      },
+      "metrics": {
+        "Initial monthly PMI": 90.0,
+        "Original loan amount": 360000.0,
+        "Original loan-to-value ratio": 90.0,
+        "Scheduled monthly P&I": 2275.4448845746692,
+        "PMI if 80% request is approved": 8550.0,
+        "PMI using automatic termination only": 9720.0,
+        "Payments with PMI if request approved": 95.0,
+        "Payments with PMI under automatic scenario": 108.0,
+        "80% request benchmark": 95.0,
+        "Scheduled 78% benchmark": 109.0
+      },
+      "display": [
+        "$90.00",
+        "95",
+        "108",
+        "$8,550.00"
+      ]
+    },
+    {
+      "label": "0.80% quote",
+      "calculatorId": "pmi",
+      "mode": "quote",
+      "values": {
+        "price": 400000,
+        "down": 10,
+        "appraisal": "",
+        "rate": 6.5,
+        "years": 30,
+        "first_due": "2026-11-01",
+        "annual_pmi": 0.8,
+        "extra": 0
+      },
+      "metrics": {
+        "Initial monthly PMI": 240.0,
+        "Original loan amount": 360000.0,
+        "Original loan-to-value ratio": 90.0,
+        "Scheduled monthly P&I": 2275.4448845746692,
+        "PMI if 80% request is approved": 22800.0,
+        "PMI using automatic termination only": 25920.0,
+        "Payments with PMI if request approved": 95.0,
+        "Payments with PMI under automatic scenario": 108.0,
+        "80% request benchmark": 95.0,
+        "Scheduled 78% benchmark": 109.0
+      },
+      "display": [
+        "$240.00",
+        "95",
+        "108",
+        "$22,800.00"
+      ]
+    },
+    {
+      "label": "USD 500 extra principal",
+      "calculatorId": "pmi",
+      "mode": "quote",
+      "values": {
+        "price": 400000,
+        "down": 10,
+        "appraisal": "",
+        "rate": 6.5,
+        "years": 30,
+        "first_due": "2026-11-01",
+        "annual_pmi": 0.5,
+        "extra": 500
+      },
+      "metrics": {
+        "Initial monthly PMI": 150.0,
+        "Original loan amount": 360000.0,
+        "Original loan-to-value ratio": 90.0,
+        "Scheduled monthly P&I": 2275.4448845746692,
+        "PMI if 80% request is approved": 6600.0,
+        "PMI using automatic termination only": 16200.0,
+        "Payments with PMI if request approved": 44.0,
+        "Payments with PMI under automatic scenario": 108.0,
+        "80% request benchmark": 44.0,
+        "Scheduled 78% benchmark": 109.0
+      },
+      "display": [
+        "$150.00",
+        "44",
+        "108",
+        "$6,600.00"
+      ]
+    },
+    {
+      "label": "20% down payment",
+      "calculatorId": "pmi",
+      "mode": "quote",
+      "values": {
+        "price": 400000,
+        "down": 20,
+        "appraisal": "",
+        "rate": 6.5,
+        "years": 30,
+        "first_due": "2026-11-01",
+        "annual_pmi": 0.5,
+        "extra": 0
+      },
+      "metrics": {
+        "Initial monthly PMI": 0.0,
+        "Original loan amount": 320000.0,
+        "Original loan-to-value ratio": 80.0,
+        "Scheduled monthly P&I": 2022.617675177484,
+        "PMI if 80% request is approved": 0.0,
+        "PMI using automatic termination only": 0.0,
+        "Payments with PMI if request approved": 0.0,
+        "Payments with PMI under automatic scenario": 0.0
+      },
+      "display": [
+        "$0.00",
+        "0",
+        "0",
+        "$0.00"
+      ]
+    }
+  ],
+  "afford": [
+    {
+      "label": "Base: USD 500 monthly other debt",
+      "calculatorId": "house-affordability",
+      "mode": "income",
+      "values": {
+        "income": 100000,
+        "debt": 500,
+        "front": 28,
+        "back": 36,
+        "down": 20,
+        "down_unit": "Percent",
+        "rate": 6,
+        "years": 30,
+        "tax_rate": 1.2,
+        "tax_unit": "Percent of home value",
+        "insurance": 1500,
+        "insurance_unit": "Dollars per year",
+        "hoa": 0,
+        "hoa_unit": "Dollars per month",
+        "maintenance": 0,
+        "maintenance_unit": "Dollars per year"
+      },
+      "metrics": {
+        "Estimated home price": 380983.3228793403,
+        "Down payment": 76196.66457586807,
+        "Loan amount": 304786.6583034723,
+        "Monthly housing budget": 2333.3333333333335
+      },
+      "display": [
+        "$2,333.33",
+        "$380,983.32",
+        "$76,196.66",
+        "$304,786.66"
+      ]
+    },
+    {
+      "label": "USD 1,000 monthly other debt",
+      "calculatorId": "house-affordability",
+      "mode": "income",
+      "values": {
+        "income": 100000,
+        "debt": 1000,
+        "front": 28,
+        "back": 36,
+        "down": 20,
+        "down_unit": "Percent",
+        "rate": 6,
+        "years": 30,
+        "tax_rate": 1.2,
+        "tax_unit": "Percent of home value",
+        "insurance": 1500,
+        "insurance_unit": "Dollars per year",
+        "hoa": 0,
+        "hoa_unit": "Dollars per month",
+        "maintenance": 0,
+        "maintenance_unit": "Dollars per year"
+      },
+      "metrics": {
+        "Estimated home price": 323476.40621830785,
+        "Down payment": 64695.281243661564,
+        "Loan amount": 258781.12497464626,
+        "Monthly housing budget": 2000.0
+      },
+      "display": [
+        "$2,000.00",
+        "$323,476.41",
+        "$64,695.28",
+        "$258,781.12"
+      ]
+    },
+    {
+      "label": "2% annual property tax",
+      "calculatorId": "house-affordability",
+      "mode": "income",
+      "values": {
+        "income": 100000,
+        "debt": 500,
+        "front": 28,
+        "back": 36,
+        "down": 20,
+        "down_unit": "Percent",
+        "rate": 6,
+        "years": 30,
+        "tax_rate": 2,
+        "tax_unit": "Percent of home value",
+        "insurance": 1500,
+        "insurance_unit": "Dollars per year",
+        "hoa": 0,
+        "hoa_unit": "Dollars per month",
+        "maintenance": 0,
+        "maintenance_unit": "Dollars per year"
+      },
+      "metrics": {
+        "Estimated home price": 341684.8396797384,
+        "Down payment": 68336.96793594769,
+        "Loan amount": 273347.87174379075,
+        "Monthly housing budget": 2333.3333333333335
+      },
+      "display": [
+        "$2,333.33",
+        "$341,684.84",
+        "$68,336.97",
+        "$273,347.87"
+      ]
+    },
+    {
+      "label": "USD 300 monthly HOA",
+      "calculatorId": "house-affordability",
+      "mode": "income",
+      "values": {
+        "income": 100000,
+        "debt": 500,
+        "front": 28,
+        "back": 36,
+        "down": 20,
+        "down_unit": "Percent",
+        "rate": 6,
+        "years": 30,
+        "tax_rate": 1.2,
+        "tax_unit": "Percent of home value",
+        "insurance": 1500,
+        "insurance_unit": "Dollars per year",
+        "hoa": 300,
+        "hoa_unit": "Dollars per month",
+        "maintenance": 0,
+        "maintenance_unit": "Dollars per year"
+      },
+      "metrics": {
+        "Estimated home price": 329227.0978844111,
+        "Down payment": 65845.41957688221,
+        "Loan amount": 263381.67830752884,
+        "Monthly housing budget": 2333.3333333333335
+      },
+      "display": [
+        "$2,333.33",
+        "$329,227.10",
+        "$65,845.42",
+        "$263,381.68"
+      ]
+    },
+    {
+      "label": "USD 2,500 fixed housing budget",
+      "calculatorId": "house-affordability",
+      "mode": "budget",
+      "values": {
+        "down": 20,
+        "down_unit": "Percent",
+        "rate": 6,
+        "years": 30,
+        "tax_rate": 1.2,
+        "tax_unit": "Percent of home value",
+        "insurance": 1500,
+        "insurance_unit": "Dollars per year",
+        "hoa": 0,
+        "hoa_unit": "Dollars per month",
+        "maintenance": 0,
+        "maintenance_unit": "Dollars per year",
+        "budget": 2500
+      },
+      "metrics": {
+        "Estimated home price": 409736.78120985656,
+        "Down payment": 81947.35624197131,
+        "Loan amount": 327789.42496788525,
+        "Monthly housing budget": 2500.0
+      },
+      "display": [
+        "$2,500.00",
+        "$409,736.78",
+        "$81,947.36",
+        "$327,789.42"
+      ]
+    }
   ]
 }

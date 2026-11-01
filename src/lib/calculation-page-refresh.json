@@ -189,5 +189,53 @@
         "answer": "The first entry is at time zero. Entries at 0, 1, 2 and 3 span three intervals. Use entries minus one for the exponent and preserve explicit zeros for empty dates."
       }
     ]
+  },
+  "seller-financing": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Should I add the balloon to the final schedule payment again?",
+        "answer": "No. The final schedule row and Total due in final month already include the scheduled installment plus residual principal. Balloon principal after final installment is only the residual component; adding it again to that final total double-counts it."
+      }
+    ]
+  },
+  "fix-and-flip": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Is cash required before sale just my closing-day deposit?",
+        "answer": "No. It is cumulative pre-sale cash funding under the modeled budget. All renovation is cash-funded upfront; later holding costs and interest add to the total. It is not a staged draw or closing-day cash estimate."
+      },
+      {
+        "question": "Does increasing the renovation budget automatically increase the loan?",
+        "answer": "No. This is an acquisition-only loan capped at purchase price. Renovation and other costs are paid from cash, and the entered loan principal stays fixed until sale."
+      }
+    ]
+  },
+  "pmi": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "How do I calculate monthly PMI from an annual quote?",
+        "answer": "In Use My Quote mode, monthly PMI equals original loan principal × annual quoted percentage / 100 / 12. A $360,000 loan at 0.50% gives $150 monthly. The premium and cancellation paths use the disclosed model assumptions."
+      },
+      {
+        "question": "Which value is used if the purchase appraisal is below the price?",
+        "answer": "Original value is the lower purchase price or appraisal at purchase in this supported purchase-loan model. A lower appraisal can raise original LTV even at the same down payment; a current higher appraisal is a different input and does not replace that basis."
+      }
+    ]
+  },
+  "house-affordability": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Are the 28% and 36% ratios mandatory lender limits?",
+        "answer": "No. They are editable planning assumptions. Actual programs, lenders, verified income and underwriting conditions can differ. Check the modeled budget against take-home cash flow as well."
+      },
+      {
+        "question": "Does the modeled down payment cover all cash needed to buy?",
+        "answer": "No. Closing costs, repairs, moving, reserves and other upfront needs require separate funding. This calculator solves price from a payment budget; it does not verify available cash or lender approval."
+      }
+    ]
   }
 }

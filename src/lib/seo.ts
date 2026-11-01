@@ -122,6 +122,10 @@ for(const slug of ['net-operating-income','cap-rate-vs-cash-on-cash-return','hom
 for(const id of ['stock-profit','stock-average','irr','mirr'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
 for(const slug of ['return-on-investment','internal-rate-of-return','modified-internal-rate-of-return'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
 
+// Housing guide links and scoped explanations, checked November 1.
+for(const id of ['seller-financing','fix-and-flip','pmi','house-affordability'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+for(const slug of ['interest-only-and-balloon-loans','private-mortgage-insurance','debt-to-income-ratio','down-payment','return-on-investment'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
+
 export function sitemapEntries(config: SiteConfig = siteConfig()) {
   if (!config.origin || !config.indexable) return [];
   return [

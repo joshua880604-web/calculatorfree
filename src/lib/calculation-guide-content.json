@@ -2638,5 +2638,589 @@
         "label": "Present Value Calculator"
       }
     ]
+  },
+  "seller": {
+    "meta": {
+      "path": "/guides/how-to-calculate-seller-financing/",
+      "title": "How to Calculate Seller Financing: Payments, Balloon and Maturity",
+      "heading": "How to Calculate Seller Financing: Payments, Balloon and Maturity",
+      "description": "Calculate owner financing installments and the final balloon. Compare amortization, maturity, interest-only and zero-interest notes with six reproducible examples.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "seller-financing"
+      ],
+      "topic": "Mortgage & housing",
+      "breadcrumb": "How to Calculate Seller Financing: Payments, Balloon and Maturity",
+      "cardIntro": "Calculate owner financing installments and the final balloon. Compare amortization, maturity, interest-only and zero-interest notes with six reproducible examples.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/seller-financing-calculator",
+    "calculatorLabel": "Seller Financing Calculator",
+    "intro": "Seller financing, also called owner financing in this calculator, means the purchase financing is supplied through the seller’s note rather than modeled as a standard third-party mortgage. To calculate the payment schedule, separate the financed principal, interest rate, amortization length and contractual maturity. A manageable regular installment can still leave a large final obligation.",
+    "answer": "A $300,000 purchase with $60,000 down leaves a $240,000 note. At 6% nominal annual interest and thirty-year amortization, the regular monthly installment is $1,438.92. If the note matures after installment 60, residual principal is $223,330.46 and total due that final month is $224,769.38. The down payment is separate from the debt schedule.",
+    "sections": [
+      {
+        "id": "terms",
+        "title": "Amortization length and maturity answer different questions",
+        "paragraphs": [
+          "Amortization length sets the size of the regular installment. A thirty-year amortization schedule would extinguish the debt over 360 monthly payments if allowed to run to completion under these assumptions. Contractual maturity tells you when the note must actually be settled.",
+          "In the base example, maturity is month 60 even though installments are sized over 360 months. The first sixty installments therefore do not repay the whole principal. Do not enter a five-year maturity as a five-year amortization unless that is truly how the contract sizes the monthly payment."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "payment",
+        "title": "Calculate the installment from the financed amount",
+        "paragraphs": [
+          "Subtract down payment from price before applying the payment formula: $300,000 − $60,000 = $240,000. Convert the 6% nominal annual rate to 0.005 per month and use 360 amortization months. At zero interest, the amortizing installment is principal divided by the amortization-month count.",
+          "The model uses end-of-month payments, equal monthly periods and fixed interest. No points, closing costs, property tax, insurance, penalties or extra principal payments are included. The entered purchase-price cash total includes only down payment and loan payments, so it is not the full cost of acquiring and owning the home."
+        ],
+        "formula": "Monthly installment = P × i / [1 − (1 + i)^(−N)]; at i = 0 use P / N"
+      },
+      {
+        "id": "balloon",
+        "title": "Pay the final scheduled installment before measuring residual principal",
+        "paragraphs": [
+          "At maturity, the schedule first accrues interest and makes that month’s ordinary installment. It then settles the principal still outstanding. The output called Balloon principal after final installment is only that residual principal; Total due in final month adds the final scheduled installment to it.",
+          "For the base note, adding the two displayed components gives $224,769.38 due in month 60. Paying only the residual misses the installment; adding a full principal balance before and after the installment counts part of the debt twice. Internal precision is retained, so separately rounded components can sometimes sum a cent differently from an internally calculated total."
+        ],
+        "formula": "Final-month amount due = scheduled installment for that month + principal remaining after that installment"
+      },
+      {
+        "id": "comparison",
+        "title": "Compare the same note under different repayment structures",
+        "paragraphs": [
+          "Extending maturity to month 120 keeps the $1,438.92 regular payment when amortization remains thirty years. Residual principal falls to $200,845.74, but the note has accumulated $133,516.29 interest through maturity rather than $69,665.73 through month 60. More time is not a free reduction in cost.",
+          "A fifteen-year amortization at the original month-60 maturity raises the installment to $2,025.26 and reduces residual principal to $182,421.84. Interest-only at 6% needs $1,200 monthly but leaves all $240,000 principal due after the final interest installment. Its final-month total is $241,200. The chart compares both regular payments and residual balances."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "boundaries",
+        "title": "Zero interest and full amortization still require principal settlement",
+        "paragraphs": [
+          "At 0% with thirty-year amortization and month-60 maturity, regular principal installments are $666.67 before display rounding. Residual principal is $200,000, and the final month requires $200,666.67. Zero interest does not waive the unpaid purchase debt.",
+          "If the fixed-rate note instead runs through all 360 amortization months, no material balloon remains after the final installment. This is a different maturity setting, not the result of assuming that a short balloon note will automatically renew."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Reproduce the schedule and review what the calculation cannot decide",
+        "paragraphs": [
+          "For the base installment, use =-PMT(6%/12,30*12,240000). In a monthly ledger, interest is opening principal × 6%/12; principal reduction is installment minus interest. Carry the closing balance forward. After row 60, add remaining principal to that row’s scheduled payment.",
+          "CFPB warns that refinancing a balloon can become unavailable if finances or property values deteriorate. This tool does not determine legal eligibility, licensing, lien priority, title ownership, wraparound structures or installment-sale taxes. A schedule is not proof that a proposed contract is lawful, affordable or refinanceable."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Regular installment",
+      "Residual balloon principal",
+      "Final-month total",
+      "Interest through maturity"
+    ],
+    "chart": "seller-guide",
+    "chartAlt": "Two panels compare monthly installments and month-sixty residual principal for thirty-year amortization, fifteen-year amortization and an interest-only note.",
+    "chartCaption": "All charted cases finance $240,000 at 6% and settle after installment 60. Final-month total includes both that installment and residual principal.",
+    "questions": [
+      {
+        "question": "Are seller financing and owner financing the same here?",
+        "answer": "Yes. Both names refer to the fixed-rate seller-provided real-estate note modeled by this tool. Actual documentation and legal treatment require separate review."
+      },
+      {
+        "question": "Is the balloon equal to the original financed amount?",
+        "answer": "Only in the interest-only example. An amortizing note pays down some principal before maturity, so its residual balloon is smaller."
+      },
+      {
+        "question": "Does the final-month total include the regular payment?",
+        "answer": "Yes. It includes that month’s scheduled installment plus the residual principal calculated after the installment. Do not add the installment a second time."
+      },
+      {
+        "question": "Can I use a thirty-year amortization with a five-year maturity?",
+        "answer": "The model can calculate that schedule: the regular installment uses 360 months, while residual principal becomes due after month 60. It does not establish whether a contract with those terms is legally permitted."
+      },
+      {
+        "question": "What happens at zero interest?",
+        "answer": "Principal still must be repaid. In an amortizing note, divide principal by amortization months; in an interest-only note the regular interest payment is zero but principal remains due at maturity."
+      },
+      {
+        "question": "Can I assume I will refinance the balloon?",
+        "answer": "No. Future credit, property value, rates and lender availability can change. A possible refinancing is not a funded payment plan or a guarantee."
+      }
+    ],
+    "limitations": [
+      "One fixed-rate USD note, end-of-month payments; no taxes, fees, insurance, extra payments, daily accrual or changing rates.",
+      "Maturity and amortization are separate inputs. Final settlement pays residual principal exactly once.",
+      "No legal eligibility, title, tax or future-refinancing determination is provided."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-balloon-payment-when-is-one-allowed-en-104/",
+        "label": "CFPB: balloon payment structure and refinancing risk"
+      },
+      {
+        "href": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "label": "CFPB: home-payment budgets include more than debt installments"
+      }
+    ],
+    "related": [
+      {
+        "href": "/glossary/interest-only-and-balloon-loans/",
+        "label": "Interest-only and balloon loans"
+      },
+      {
+        "href": "/amortization-calculator",
+        "label": "Amortization Calculator"
+      },
+      {
+        "href": "/guides/how-to-calculate-house-flipping-profit/",
+        "label": "House-flipping profit and cash requirements"
+      },
+      {
+        "href": "/mortgage-calculator",
+        "label": "Mortgage Calculator"
+      }
+    ]
+  },
+  "flip": {
+    "meta": {
+      "path": "/guides/how-to-calculate-house-flipping-profit/",
+      "title": "How to Calculate House-Flipping Profit: Costs, Cash and Break-Even",
+      "heading": "How to Calculate House-Flipping Profit: Costs, Cash and Break-Even",
+      "description": "Estimate fix-and-flip profit after renovation, holding, financing and selling costs. Compare five checked projects, sale delays, losses and cash requirements.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "fix-and-flip"
+      ],
+      "topic": "Mortgage & housing",
+      "breadcrumb": "How to Calculate House-Flipping Profit: Costs, Cash and Break-Even",
+      "cardIntro": "Estimate fix-and-flip profit after renovation, holding, financing and selling costs. Compare five checked projects, sale delays, losses and cash requirements.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/fix-and-flip-calculator",
+    "calculatorLabel": "Fix and Flip Calculator",
+    "intro": "Calculate house-flipping profit by subtracting the full purchase, renovation, carrying, financing and selling budget from the assumed sale price. Then calculate cash funding separately: an acquisition loan supplies financing but must be repaid at sale. A project can show an attractive sale-price spread while having little profit after the omitted costs are restored.",
+    "answer": "The base hypothetical project buys for $150,000 and sells for $250,000. After purchase closing, renovation including contingency, six months of carrying costs, acquisition interest and points, and selling costs, profit is $28,500 before income tax. Pre-sale cash funding is $85,000 under the stated $120,000 acquisition-only loan, not the $100,000 purchase-to-sale price spread.",
+    "sections": [
+      {
+        "id": "budget",
+        "title": "Build a complete cost reconciliation before calculating ROI",
+        "paragraphs": [
+          "The base project pays $4,500 acquisition closing costs and budgets $35,000 renovation plus 10% contingency, giving $38,500 renovation funding. Six months of $600 non-debt holding costs adds $3,600. Those holding costs represent the entered taxes, insurance, utilities and other carrying budget.",
+          "The $120,000 interest-only acquisition loan costs $6,000 interest at 10% annually for six months, plus $2,400 in upfront points. Adding purchase price and all these amounts gives $205,000 project cost before selling costs. Interest is entered separately from holding costs so it is not counted twice."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "sale",
+        "title": "Subtract selling costs and repay loan principal only once",
+        "paragraphs": [
+          "At a $250,000 assumed sale price, 6% percentage selling costs plus $1,500 fixed selling costs total $16,500. Profit is $250,000 − $16,500 − $205,000 = $28,500. Net sale cash after repaying $120,000 principal is $113,500; subtracting the $85,000 pre-sale cash funding reconciles to the same profit.",
+          "Loan principal is not an extra expense on top of the purchase price. Borrowing reduces initial cash funding, and repayment reduces sale cash. Adding principal repayment again to project expenses understates profit. Interest and points, in contrast, are financing costs that really do reduce the modeled profit."
+        ],
+        "formula": "Project profit = sale price − selling costs − purchase − closing − renovation − holding costs − interest − points"
+      },
+      {
+        "id": "cash",
+        "title": "Cash required before sale is different from profit and closing-day cash",
+        "paragraphs": [
+          "The model’s cumulative pre-sale cash funding is project cost before selling costs minus the acquisition loan: $205,000 − $120,000 = $85,000. All renovation cash is budgeted upfront; holding costs and interest accrue in monthly cash funding. This is not a staged construction-draw or contractor-payment model.",
+          "Project cash-on-cash ROI is $28,500 / $85,000, about 33.5294%. It is an unannualized single-project ratio. It is not a cap rate, IRR or guaranteed six-month investment return. A different financing structure can change cash committed and profit; compare both outputs, not just the ratio."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "stress",
+        "title": "Test delays, renovation overruns and a lower sale price",
+        "paragraphs": [
+          "Delaying the sale from month six to month nine adds $1,800 non-debt carrying costs and $3,000 acquisition interest. Profit falls by $4,800 to $23,700, while cash funding rises to $89,800. The entered sale price stays at $250,000; no higher future sale price is assumed to rescue the delay.",
+          "Raising the renovation budget to $50,000 before the same 10% contingency makes renovation funding $55,000 and profit $12,000. A separate sale-price-only case uses $210,000 and produces a $9,100 loss. These are controlled stress scenarios, not forecasts of repair costs or local market values."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "break-even",
+        "title": "Solve a sale-price break-even that accounts for percentage selling costs",
+        "paragraphs": [
+          "With project cost C, fixed selling cost F and percentage selling fraction s, break-even sale price is (C + F) / (1 − s). The base figures give ($205,000 + $1,500) / 0.94 = $219,680.85. Dividing matters because the selling commission changes with the sale price.",
+          "Cash purchase removes the loan’s $8,400 interest and points, raising modeled profit to $36,900 but requiring $196,600 pre-sale cash. It does not make all that cash profit. The familiar 70% ARV heuristic does not itemize these actual assumptions and cannot substitute for a complete budget."
+        ],
+        "formula": "Break-even sale price = (project cost before selling costs + fixed selling costs) / (1 − percentage selling-cost fraction)"
+      },
+      {
+        "id": "worksheet",
+        "title": "Reproduce the project and identify excluded risks",
+        "paragraphs": [
+          "In a spreadsheet, base pre-selling cost is =150000+4500+35000*(1+10%)+6*600+120000*10%*6/12+120000*2%. Profit is =250000*(1-6%)-1500-project_cost. Cash funding is =project_cost-120000. Keep the sale-price assumption separate from a verified appraisal.",
+          "This model uses one fully advanced interest-only acquisition loan capped at purchase price. Renovation and other costs are cash-funded; no staged draws, loan extensions, amortization, contractor sequence, tax deductions or income tax are calculated. Unexpected repairs, legal requirements, sales timing and financing changes still require separate diligence."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Cost before selling",
+      "Profit before income tax",
+      "Pre-sale cash funding",
+      "Break-even sale price"
+    ],
+    "chart": "flip-guide",
+    "chartAlt": "Project profit for a base six-month flip, a longer hold, a larger renovation budget, a lower sale price and a cash purchase.",
+    "chartCaption": "Each scenario changes the stated item from the base. Financing supplies cash and creates interest costs; borrowed principal is not profit.",
+    "questions": [
+      {
+        "question": "How do I calculate profit on a house flip?",
+        "answer": "Subtract purchase, closing, renovation including contingency, carrying costs, interest, points and selling costs from the assumed sale price. Keep loan principal financing separate."
+      },
+      {
+        "question": "How much cash do I need before the sale?",
+        "answer": "In this model, cumulative pre-sale cash funding is project cost before selling costs minus the acquisition loan. It is not just the down payment or a closing-day cash estimate."
+      },
+      {
+        "question": "Does borrowing more create more profit?",
+        "answer": "No. Loan proceeds are financing and principal is repaid at sale. Interest and points can reduce profit even while borrowing reduces the cash needed before sale."
+      },
+      {
+        "question": "Is the displayed ROI annualized?",
+        "answer": "No. It is project profit divided by positive pre-sale cash funding. Holding months do not automatically convert that ratio into an annual rate."
+      },
+      {
+        "question": "Does the 70% rule guarantee a profitable purchase?",
+        "answer": "No. A purchase-price heuristic omits deal-specific costs and cannot verify ARV, repair scope, funding or exit feasibility."
+      },
+      {
+        "question": "Is expected sale price a verified ARV?",
+        "answer": "No. It is your entered assumption. The calculator does not fetch comparable sales, inspect the property or supply an appraisal."
+      }
+    ],
+    "limitations": [
+      "One buy-renovate-sell project, before income tax; no recurring rental period or staged construction financing.",
+      "All renovation funding is budgeted upfront, with fixed monthly carrying costs and unchanged acquisition principal until sale.",
+      "ARV and sale timing are assumptions. No verified profit, safe-offer threshold, market forecast or tax treatment is supplied."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "label": "CFPB: acquisition, maintenance and ownership costs require separate budgeting"
+      },
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-balloon-payment-when-is-one-allowed-en-104/",
+        "label": "CFPB: principal settlement and refinancing risk at maturity"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-seller-financing/",
+        "label": "Seller-financing installment and balloon guide"
+      },
+      {
+        "href": "/brrrr-calculator",
+        "label": "BRRRR Calculator"
+      },
+      {
+        "href": "/guides/brrrr-refinance-cash-flow-analysis/",
+        "label": "BRRRR refinance cash recovery analysis"
+      },
+      {
+        "href": "/cash-on-cash-return-calculator",
+        "label": "Rental Cash-on-Cash Return Calculator"
+      }
+    ]
+  },
+  "pmi": {
+    "meta": {
+      "path": "/guides/how-to-calculate-pmi-and-cancellation/",
+      "title": "How to Calculate PMI and Understand Cancellation Dates",
+      "heading": "How to Calculate PMI and Understand Cancellation Dates",
+      "description": "Calculate monthly conventional PMI from a quote and compare the 80% request, scheduled 78% termination and midpoint rules. Includes extra-payment scenarios and scope limits.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "pmi"
+      ],
+      "topic": "Mortgage & housing",
+      "breadcrumb": "How to Calculate PMI and Understand Cancellation Dates",
+      "cardIntro": "Calculate monthly conventional PMI from a quote and compare the 80% request, scheduled 78% termination and midpoint rules. Includes extra-payment scenarios and scope limits.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/pmi-calculator",
+    "calculatorLabel": "PMI Calculator",
+    "intro": "For a fixed annual borrower-paid PMI quote, monthly premium in this model is original principal multiplied by the annual percentage rate divided by twelve. Estimating the premium is separate from determining when it can stop. Requested cancellation, automatic termination and lender-specific current-value rules are not interchangeable.",
+    "answer": "A $400,000 purchase with 10% down has $360,000 original principal. At an entered 0.50% annual PMI quote, initial monthly PMI is $150. For the checked 6.5%, thirty-year fixed loan, the 80% request benchmark is after payment 95, while scheduled 78% is at payment 109. The model assumes an approved request stops premiums at the next payment; the automatic path stops on its scheduled due date if current.",
+    "sections": [
+      {
+        "id": "premium",
+        "title": "Calculate the premium using the quote’s stated basis",
+        "paragraphs": [
+          "The guide uses Use My Quote mode to avoid presenting an illustrative insurer estimate as a current quote. With $360,000 original principal, 0.30%, 0.50% and 0.80% annual quotes give $90, $150 and $240 monthly premiums. The quote model holds that premium basis constant until the selected stopping event or payoff.",
+          "PMI is different from homeowners insurance and property tax. The loan-payment figure in this tool excludes those ownership costs. A total mortgage budget needs them separately. The quoted rates are hypothetical inputs; actual insurer premiums and lender billing can vary."
+        ],
+        "formula": "Monthly quoted PMI = original loan principal × annual PMI rate / 100 / 12"
+      },
+      {
+        "id": "original-value",
+        "title": "Use original value for the modeled cancellation benchmarks",
+        "paragraphs": [
+          "For the supported purchase-loan example, original value is the lower of purchase price and appraisal at purchase. A blank purchase-appraisal field assumes it is at least the purchase price. With $400,000 original value, 80% is $320,000 and 78% is $312,000.",
+          "A higher current appraisal does not replace that original-value basis in this statutory benchmark model. Investor or servicer current-value cancellation programs can have separate conditions. The existing-loan mode can show current-value LTV for information without treating appreciation alone as an automatic cancellation instruction."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "request",
+        "title": "The 80% threshold supports a cancellation request, not automatic removal",
+        "paragraphs": [
+          "CFPB’s consumer guidance and its HPA compliance bulletin distinguish the right to request cancellation from automatic termination. The supported request route involves a written request, current payments, good payment history and specified lien and property-value conditions. Reaching the modeled balance threshold is not evidence that these conditions have been established for your actual loan.",
+          "Our no-extra-principal case first reaches the 80% benchmark after payment 95. Assuming approval after that payment, the model charges 95 monthly premiums: $14,250 at the 0.50% quote. That payment-count convention is explicit; processing, prepaid premiums, refunds and the insurer contract can change actual costs."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "automatic",
+        "title": "Scheduled 78% and final midpoint are separate termination benchmarks",
+        "paragraphs": [
+          "For the supported fixed-rate original schedule, automatic termination generally uses the date principal is scheduled to reach 78% of original value, assuming current payments. It does not substitute the accelerated balance caused by extra principal. The model also checks the month after the original term midpoint and uses the earlier applicable automatic benchmark.",
+          "Here scheduled 78% is payment 109, so the automatic-only path contains 108 premium payments, totaling $16,200 at $150 monthly. The thirty-year midpoint benchmark is month 181. The earlier scheduled 78% date controls this example; the guide does not suggest waiting until midpoint when a prior applicable event already ends premiums."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "extra",
+        "title": "Extra principal can advance the request path without moving the original schedule",
+        "paragraphs": [
+          "Adding $500 monthly principal to the same loan advances the modeled 80% request benchmark to payment 44. With request approval assumed, 44 premiums total $6,600. The original scheduled 78% date remains payment 109; the two paths are intentionally separate.",
+          "The premium reduction versus the base requested path is $7,650, but the borrower also commits extra principal earlier. Those payments reduce debt and liquidity; they are not a PMI fee or a free return. A full comparison should consider cash availability, interest savings and the servicer’s actual approval conditions."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "scope",
+        "title": "Check which loan and insurance rules actually apply",
+        "paragraphs": [
+          "The model is limited to the stated conventional, borrower-paid monthly PMI setting on an unmodified, fully amortizing fixed-rate principal-residence loan within its disclosed statutory scope. FHA mortgage insurance, VA arrangements, lender-paid insurance, high-risk exceptions and other specialized loan structures are outside it.",
+          "In the 20%-down case with original value equal to price, no PMI is modeled. A lower purchase appraisal can change original LTV, so do not turn this example into a blanket promise. For an existing loan, use original loan records, completed-payment count, current principal and the actual servicer premium. Confirm termination with the servicer rather than stopping required payments based on a calculator date."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Hypothetical quote scenario",
+      "Initial monthly PMI",
+      "Premiums if request approved",
+      "Premiums automatic only",
+      "PMI paid if request approved"
+    ],
+    "chart": "pmi-guide",
+    "chartAlt": "Total quoted PMI under assumed approved-request paths at three annual quotes and with extra principal on the same original loan.",
+    "chartCaption": "PMI savings are premium differences under the modeled approval convention. Extra principal has its own cash commitment and does not move the original scheduled 78% date.",
+    "questions": [
+      {
+        "question": "How do I calculate monthly PMI from an annual quote?",
+        "answer": "In this fixed quote model, monthly PMI = original principal × annual quoted percentage / 100 / 12. A $360,000 principal at 0.50% gives $150 monthly."
+      },
+      {
+        "question": "Does PMI stop automatically at 80% LTV?",
+        "answer": "No. The supported 80% route is a written cancellation request subject to applicable conditions. The model’s requested-cost path assumes approval; it does not supply it."
+      },
+      {
+        "question": "Do extra payments move the scheduled 78% termination date?",
+        "answer": "Not in this original fixed-schedule model. They can advance the actual-balance 80% request benchmark, while the original scheduled automatic date remains separate."
+      },
+      {
+        "question": "Can I use a higher current appraisal as original value?",
+        "answer": "No. Current value can inform a different servicer or investor program, but it does not replace the original-value basis used by these statutory benchmarks."
+      },
+      {
+        "question": "Does this calculate FHA MIP cancellation?",
+        "answer": "No. FHA and other excluded insurance or loan arrangements have different requirements. Use the relevant program and servicer guidance."
+      },
+      {
+        "question": "Are the quoted annual rates market rates?",
+        "answer": "No. They are chosen scenario inputs. Use an actual lender or insurer quote for a real comparison and confirm the premium basis and billing convention."
+      }
+    ],
+    "limitations": [
+      "Quoted-premium examples use original principal, constant entered annual rate and the disclosed stopping conventions.",
+      "Conventional borrower-paid monthly PMI within the stated fixed-rate principal-residence scope; high-risk, modified and program-specific exceptions require separate review.",
+      "Dates are benchmarks, not approval or billing instructions. Current status, payment history, liens and property value can affect actual cancellation."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/when-can-i-remove-private-mortgage-insurance-pmi-from-my-loan-en-202/",
+        "label": "CFPB: requested cancellation, automatic termination and original value"
+      },
+      {
+        "href": "https://files.consumerfinance.gov/f/201508_cfpb_compliance-bulletin_private-mortgage-insurance-cancellation-and-termination.pdf",
+        "label": "CFPB Bulletin 2015-03: HPA cancellation mechanics (2015 background)"
+      }
+    ],
+    "related": [
+      {
+        "href": "/glossary/private-mortgage-insurance/",
+        "label": "Private mortgage insurance glossary"
+      },
+      {
+        "href": "/guides/how-much-house-can-i-afford/",
+        "label": "House-affordability budget guide"
+      },
+      {
+        "href": "/mortgage-calculator",
+        "label": "Mortgage Calculator"
+      },
+      {
+        "href": "/fha-loan-calculator",
+        "label": "FHA Loan Calculator for its separate MIP model"
+      }
+    ]
+  },
+  "afford": {
+    "meta": {
+      "path": "/guides/how-much-house-can-i-afford/",
+      "title": "How Much House Can I Afford? Income, Debt and Ownership Costs",
+      "heading": "How Much House Can I Afford? Income, Debt and Ownership Costs",
+      "description": "Estimate a home price from gross-income ratios or a monthly budget. Compare debt, taxes and HOA costs with five reproducible cases, without treating the estimate as approval.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "house-affordability"
+      ],
+      "topic": "Mortgage & housing",
+      "breadcrumb": "How Much House Can I Afford? Income, Debt and Ownership Costs",
+      "cardIntro": "Estimate a home price from gross-income ratios or a monthly budget. Compare debt, taxes and HOA costs with five reproducible cases, without treating the estimate as approval.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/house-affordability-calculator",
+    "calculatorLabel": "House Affordability Calculator",
+    "intro": "Begin with a housing budget you can sustain, then calculate the loan and home price consistent with that budget and the entered ownership costs. Income ratios are one planning lens; they do not replace take-home cash budgeting or lender review. Existing debts, property tax, insurance, HOA and maintenance can materially reduce the amount left for mortgage principal and interest.",
+    "answer": "Using $100,000 annual gross household income, $500 monthly other debt and entered 28% housing and 36% total-debt limits, the modeled housing budget is $2,333.33 monthly. With 20% down, a 6% thirty-year loan, 1.2% annual property tax and $1,500 annual insurance, the estimated home price is $380,983.32. These ratios and costs are scenario inputs, not underwriting guarantees.",
+    "sections": [
+      {
+        "id": "ratios",
+        "title": "Calculate both the housing and total-debt ceilings",
+        "paragraphs": [
+          "Gross monthly income is $100,000 / 12, or $8,333.33 before rounding. At the entered 28% housing ratio, the housing ceiling is $2,333.33. At the entered 36% total-debt ratio, total monthly debt capacity is $3,000. Subtract $500 other monthly debt to leave $2,500 for housing under that second ceiling.",
+          "Use the smaller ceiling: $2,333.33. These 28% and 36% values are editable assumptions, not universal lender approval rules. CFPB defines DTI using monthly debt payments and gross monthly income; actual underwriting depends on the loan program, verified income, credit and other conditions."
+        ],
+        "formula": "Housing budget = min(gross monthly income × housing ratio, gross monthly income × total-debt ratio − other monthly debt)"
+      },
+      {
+        "id": "costs",
+        "title": "Leave room for property costs before sizing the loan",
+        "paragraphs": [
+          "The housing budget must cover more than the loan installment. In the base example, annual property tax is 1.2% of the solved home value and insurance is a fixed $1,500 per year, or $125 monthly. HOA and maintenance are set to zero only to isolate later sensitivities; zero entries are not a claim that a real home needs no maintenance.",
+          "The model supports dollar or percentage units. Percentage tax, insurance, HOA or maintenance entries are annual percentages of the solved home value, not percentages of the loan or monthly percentages. Use the selected units consistently. Mortgage insurance is not automatically calculated by this tool; allow for it separately if applicable."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "price",
+        "title": "Convert the payment budget into an estimated property price",
+        "paragraphs": [
+          "Let a be the monthly payment on one dollar of loan principal at the chosen rate and term. With down fraction d, annual price-linked cost fraction c and fixed monthly costs F, price is (budget − F) / [a × (1 − d) + c / 12]. The price-linked tax assumption means taxes rise as the solved price rises.",
+          "For the base inputs, the result is $380,983.32, down payment $76,196.66 and loan $304,786.66. That down payment must be available in cash, with separate funding for closing costs, moving, repairs and reserves. The model does not infer that your savings are sufficient merely because an income-based price can be calculated."
+        ],
+        "formula": "With percentage down payment: price = (housing budget − fixed monthly ownership costs) / [monthly loan-payment factor × (1 − down fraction) + annual price-linked cost fraction / 12]"
+      },
+      {
+        "id": "stress",
+        "title": "Compare other debt, property tax and HOA on the same income",
+        "paragraphs": [
+          "Increasing other monthly debt to $1,000 leaves only $2,000 under the total-debt ceiling, which now controls. Estimated price falls to $323,476.41 with the other base assumptions unchanged. A debt payment uses monthly capacity even if the borrowed amount itself seems modest.",
+          "At the original $500 other debt, raising annual property tax to 2% lowers estimated price to $341,684.84. A separate case adds $300 monthly HOA at the original tax rate and gives $329,227.10. These are controlled sensitivities, not estimated taxes or association charges for a specific home."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "budget-mode",
+        "title": "A fixed monthly budget can be more informative than income ratios",
+        "paragraphs": [
+          "The separate Based on Monthly Budget mode lets you enter a personal housing cap directly. At $2,500 monthly with the base 20% down, rate, term, tax and insurance assumptions, estimated price is $409,736.78. This is a different budget choice, not additional money produced by changing modes.",
+          "Compare that entered cap with take-home income after taxes, retirement savings, childcare, transport and other living costs. A lender ratio based on gross income may leave less spending room than a household actually wants. Property expenses can also change over time even when the mortgage note rate is fixed."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Reproduce the base estimate and keep its limitations visible",
+        "paragraphs": [
+          "In a spreadsheet, budget is =MIN(100000/12*28%,100000/12*36%-500). The monthly loan-payment factor is =-PMT(6%/12,30*12,1). With a 20% down payment and 1.2% annual property tax, price is =(budget-1500/12)/(payment_factor*(1-20%)+1.2%/12). Keep the unrounded intermediate values.",
+          "This estimate does not determine a preapproval, rate offer, property valuation, cash-to-close amount or stress-tested personal budget. Use actual tax and insurance information as it becomes available, account separately for mortgage insurance and reserves, and compare loan offers using their complete costs. An estimated maximum is not a recommended purchase target."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Monthly housing budget",
+      "Estimated home price",
+      "Down payment",
+      "Loan amount"
+    ],
+    "chart": "afford-guide",
+    "chartAlt": "Estimated home prices under the same hundred-thousand-dollar gross income with higher other debt, property tax or HOA costs.",
+    "chartCaption": "Income-ratio cases use entered 28%/36% limits. The table also includes a separate fixed-$2,500 budget case; none are lender approvals.",
+    "questions": [
+      {
+        "question": "How much house can I afford on a $100,000 salary?",
+        "answer": "There is no salary-only answer. Under the guide’s specified debt, ratio, rate, down-payment and ownership-cost assumptions, the estimate is $380,983.32. Changing any of those inputs can change the result."
+      },
+      {
+        "question": "Should I enter gross income or take-home pay?",
+        "answer": "Use gross income in the ratio-based mode, consistent with its DTI construction. Separately check whether the resulting payment fits actual take-home spending and savings needs."
+      },
+      {
+        "question": "Are 28% and 36% required lender limits?",
+        "answer": "No. They are editable planning assumptions here. Actual underwriting rules, income verification and program requirements can differ."
+      },
+      {
+        "question": "Does the estimate include PMI?",
+        "answer": "Mortgage insurance is not automatically calculated in this tool. Include an applicable allowance in the budget or other-expense planning and check the dedicated PMI Calculator."
+      },
+      {
+        "question": "Does the down payment cover all cash needed to buy?",
+        "answer": "No. Closing costs, moving, repairs, reserves and other upfront needs require separate cash planning. This tool does not verify available savings."
+      },
+      {
+        "question": "Is the estimated price a preapproval or recommended maximum?",
+        "answer": "No. It is a mathematical result under entered assumptions, not a lending decision, appraisal or personal recommendation."
+      }
+    ],
+    "limitations": [
+      "Ratios, interest and ownership costs are entered assumptions; no lender program, credit review or income verification is performed.",
+      "Mortgage insurance is excluded unless you reserve for it separately. Closing costs and cash reserves are not inferred from the down payment.",
+      "Percentage costs use annual fractions of solved home value; future tax, insurance and maintenance increases are not projected here."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/",
+        "label": "CFPB: gross-income debt-to-income ratio definition"
+      },
+      {
+        "href": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "label": "CFPB: complete housing budgets, down payment and upfront cash"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-pmi-and-cancellation/",
+        "label": "PMI premium and cancellation guide"
+      },
+      {
+        "href": "/glossary/debt-to-income-ratio/",
+        "label": "Debt-to-income ratio glossary"
+      },
+      {
+        "href": "/glossary/down-payment/",
+        "label": "Down payment glossary"
+      },
+      {
+        "href": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "label": "Mortgage payment formula guide"
+      },
+      {
+        "href": "/guides/rent-vs-buy-a-house/",
+        "label": "Rent versus buy comparison"
+      }
+    ]
   }
 }

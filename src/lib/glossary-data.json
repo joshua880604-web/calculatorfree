@@ -1041,6 +1041,10 @@
       {
         "title": "How to Calculate Stock Profit: Fees, Dividends and Break-Even",
         "path": "/guides/how-to-calculate-stock-profit/"
+      },
+      {
+        "title": "How to Calculate House-Flipping Profit: Costs, Cash and Break-Even",
+        "path": "/guides/how-to-calculate-house-flipping-profit/"
       }
     ]
   },
@@ -2193,7 +2197,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "title": "How Much House Can I Afford? Income, Debt and Ownership Costs",
+        "path": "/guides/how-much-house-can-i-afford/"
+      }
+    ]
   },
   {
     "slug": "debt-consolidation",
@@ -2419,7 +2429,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "title": "How to Calculate Seller Financing: Payments, Balloon and Maturity",
+        "path": "/guides/how-to-calculate-seller-financing/"
+      }
+    ]
   },
   {
     "slug": "loan-to-value-ratio",
@@ -2723,7 +2739,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "U.S. conventional mortgage insurance; no lender quote or cancellation eligibility is asserted."
+    "scope": "U.S. conventional mortgage insurance; no lender quote or cancellation eligibility is asserted.",
+    "guides": [
+      {
+        "title": "How to Calculate PMI and Understand Cancellation Dates",
+        "path": "/guides/how-to-calculate-pmi-and-cancellation/"
+      }
+    ]
   },
   {
     "slug": "refinance-break-even",
@@ -2934,7 +2956,13 @@
       }
     ],
     "checkedOn": "2026-10-29",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "title": "How Much House Can I Afford? Income, Debt and Ownership Costs",
+        "path": "/guides/how-much-house-can-i-afford/"
+      }
+    ]
   },
   {
     "slug": "marginal-vs-effective-tax-rate",
