@@ -12,7 +12,7 @@ export const embedResourceGroups=[
  {id:'debt',title:'Debt',category:'loans-debt'},
  {id:'investing',title:'Investing',category:'saving-investing'},
  {id:'business',title:'Business',category:'business-finance'},
- {id:'sales-income',title:'Sales Tax & Commission',category:'tax-salary'},
+ {id:'sales-income',title:'Tax & Income',category:'tax-salary'},
  {id:'shopping',title:'Discounts',category:'everyday'},
 ].map(group=>({...group,tools:embedResources.filter(tool=>calculatorCategory(tool.id)?.id===group.category)}));
 export function embedResourcesSchema(config=siteConfig()){

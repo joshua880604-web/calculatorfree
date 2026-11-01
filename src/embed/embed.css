@@ -5,3 +5,5 @@
 .stock-purchase-inputs{grid-template-columns:minmax(0,1fr)}@media(min-width:600px){.stock-purchase-inputs{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 .embed-key-report summary{min-height:44px;padding:10px 0;}.embed-report-scroll{max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:12px 0;}.embed-report-scroll table{border-collapse:collapse;min-width:600px;width:100%;font-size:13px;}.embed-report-scroll caption{text-align:left;font-weight:650;padding:10px;}.embed-report-scroll th,.embed-report-scroll td{padding:10px;border-top:1px solid var(--line);text-align:left;vertical-align:top;}.embed-report-scroll td{white-space:nowrap;}.embed-report-scroll th[scope=row]{font-weight:500;min-width:130px;}
+
+.embed-context{border-left:3px solid var(--accent);padding:10px 12px;margin:14px 0;background:var(--card);border-radius:0 8px 8px 0;overflow-wrap:anywhere}.embed-context p{font-size:13px;margin:6px 0}.embed-result-context{font-size:13px;font-weight:650;color:var(--muted)}

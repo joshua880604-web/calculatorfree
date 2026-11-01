@@ -7,7 +7,7 @@ import {resultExportData} from '../src/lib/result-export';
 test('Sharing covers every financial calculator alongside the everyday extension, excluding directories',()=>{
  const financial=calculators.filter(c=>!c.directory&&calculatorCategory(c.id)?.id!=='everyday');assert.equal(financial.length,108);assert.deepEqual(new Set(shareToolIds.filter(id=>calculatorCategory(id)?.id!=='everyday')),new Set(financial.map(c=>c.id)));assert.equal(remainingFinancialShareToolIds.length,64);
  for(const c of calculators){if(c.directory)assert.equal(hasShareTools(c.id),false);else{assert.equal(hasShareTools(c.id),true);assert.equal(shareToolPaths[routeFor(c.id).slice(0,-5)],c.id);assert.deepEqual(shareTabs(c.id),hasEmbed(c.id)?['Share','Embed','Cite','Export']:['Share','Cite','Export']);}}
- assert.equal(shareToolIds.filter(hasEmbed).length,78);assert.equal(shareToolIds.filter(hasPinterest).length,38);
+ assert.equal(shareToolIds.filter(hasEmbed).length,80);assert.equal(shareToolIds.filter(hasPinterest).length,38);
 });
 test('All 130 remaining financial modes preserve their complete input fragment round trips',()=>{
  let count=0;for(const id of remainingFinancialShareToolIds){const c=calculators.find(c=>c.id===id)!;for(const m of c.modes){const values=defaults(m),link=new URL(calculationLink('https://www.calculatorfree.io',routeFor(id),m,values,true)),restored=sharedInputs(c,link.search,link.hash)!;assert.equal(restored.mode.id,m.id);assert.deepEqual(restored.values,values);assert.deepEqual(runCalculation(id,m.id,restored.values),runCalculation(id,m.id,values));count++;}}assert.equal(count,130);

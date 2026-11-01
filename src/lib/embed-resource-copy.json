@@ -76,5 +76,7 @@
   "current-ratio": "Compare current assets with current liabilities using totals or an itemized working-capital worksheet.",
   "discount": "Calculate sale price, savings, reverse discounts or two stacked reductions; taxes and promotion rules are separate.",
   "sales-tax": "Add sales tax or recover a pre-tax amount from an entered rate; the tool does not determine local taxability.",
-  "commission": "Estimate a sales commission using entered rates and calculation bases rather than inferring an employment contract."
+  "commission": "Estimate a sales commission using entered rates and calculation bases rather than inferring an employment contract.",
+  "self-employment-tax": "Estimate 2025 or 2026 regular self-employment tax and the SE portion of Additional Medicare tax; excludes ordinary income and state taxes.",
+  "salary": "Convert gross salary across pay frequencies and work schedules before tax, payroll deductions and benefits."
 }

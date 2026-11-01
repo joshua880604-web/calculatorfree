@@ -466,5 +466,17 @@
     "slug": "commission-calculator",
     "title": "Commission Calculator",
     "height": 800
+  },
+  {
+    "id": "self-employment-tax",
+    "slug": "self-employment-tax-calculator",
+    "title": "Self-Employment Tax Calculator",
+    "height": 1200
+  },
+  {
+    "id": "salary",
+    "slug": "salary-calculator",
+    "title": "Salary Calculator",
+    "height": 800
   }
 ]

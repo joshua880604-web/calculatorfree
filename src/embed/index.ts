@@ -1,4 +1,5 @@
 import { type Calculator, type Field, type Metric, type Result, type Values } from '../lib/types';
+import {embedContext,embedFieldVisible} from '../lib/embed-context';
 import {embedReport} from '../lib/embed-reports';
 import { guardAttribution } from './attribution';
 import {stockLotDrafts,type StockLotDraft} from '../lib/stock-lots';
@@ -23,6 +24,7 @@ function metricText(metric: Metric) {
 function renderResult(result: Result) {
   output.replaceChildren();
   const heading=document.createElement('h2');heading.textContent='Result · CalculatorFree.io';output.append(heading);
+  const context=embedContext(config.id,Object.fromEntries(new FormData(form)) as Values);if(context){const scope=document.createElement('p');scope.className='embed-result-context';scope.textContent=context.label;output.append(scope);}
   const list=document.createElement('dl');list.className='metrics';
   for(const metric of result.metrics){const row=document.createElement('div'),term=document.createElement('dt'),value=document.createElement('dd');term.textContent=metric.label;value.textContent=metricText(metric);row.append(term,value);list.append(row);}output.append(list);
   if(result.notes?.length){const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Assumptions and limitations';details.append(summary);for(const note of result.notes){const p=document.createElement('p');p.textContent=note;details.append(p);}output.append(details);}
@@ -110,6 +112,11 @@ function renderFields(){
   syncHousehold();syncStockFees();
 }
 function syncHousehold(){
+  if(config.id==='self-employment-tax'){
+    const values=Object.fromEntries(new FormData(form)) as Values;
+    for(const wrap of fieldset.querySelectorAll<HTMLElement>('[data-field]'))wrap.hidden=!embedFieldVisible(config.id,values,wrap.dataset.field!);
+    const context=embedContext(config.id,values),label=document.querySelector('#embed-context strong');if(context&&label)label.textContent=context.label;return;
+  }
   if(config.id!=='coast-fire'&&config.id!=='fix-and-flip')return;
   const values=Object.fromEntries(new FormData(form)) as Values;
   for(const wrap of fieldset.querySelectorAll<HTMLElement>('[data-field]')){
