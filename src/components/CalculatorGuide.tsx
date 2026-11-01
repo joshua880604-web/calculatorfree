@@ -1,7 +1,7 @@
 import PmiRateReference from './PmiRateReference';
 import SourceReferences from './SourceReferences';
 import RemainingFinanceReference from './RemainingFinanceReference';
-import LoanCostReference from './LoanCostReference';
+import LoanCostReference,{loanCostComparisonTitle} from './LoanCostReference';
 import HouseIncomeReference from './HouseIncomeReference';
 import ContentReviewNotice from './ContentReviewNotice';
 import BlogSnippetLink from './BlogSnippetLink';
@@ -19,7 +19,7 @@ import GlossaryLinks from './GlossaryLinks';
 import RoiReference from './RoiReference';
 import { longTailHref } from '@/lib/long-tail-content';
 import GuideDisclosure from './GuideDisclosure';
-import {compactReadingIds} from '@/lib/compact-reading';
+import {compactReadingIds,compactReadingLeadExamples} from '@/lib/compact-reading';
 import './compact-reading.css';
 export default function CalculatorGuide({
   calculator,
@@ -30,9 +30,9 @@ export default function CalculatorGuide({
   const insight = guideInsights[calculator.id as keyof typeof guideInsights];
   const checkedOn = guide?.checkedOn ?? notesCheckedOn;
   const compact=compactReadingIds.includes(calculator.id);
-  // Lead with a realistic FHA purchase; keep the zero-rate arithmetic check available below.
-  const examples=compact&&calculator.id==='fha-loan'&&guide?.examples[1]
-    ? [guide.examples[1],...guide.examples.filter((_,index)=>index!==1)] : guide?.examples;
+  const leadIndex=compactReadingLeadExamples[calculator.id]??0;
+  const examples=compact&&leadIndex>0&&guide?.examples[leadIndex]
+    ? [guide.examples[leadIndex],...guide.examples.filter((_,index)=>index!==leadIndex)] : guide?.examples;
   const workedExamples=examples?.map((example)=><section className="worked-example" key={example.title}>
     <h3>{example.title}</h3><p>{example.inputs}</p>
     <ol>{example.steps.map(step=><li key={step}>{step}</li>)}</ol>
@@ -65,7 +65,7 @@ export default function CalculatorGuide({
           {calculator.id === "roi" && <RoiReference />}
           {['barista-fire','coast-fire'].includes(calculator.id) && <p>Compare the income and withdrawal assumptions in our <SiteLink href="/guides/barista-fire-vs-coast-fire/">Barista FIRE vs. Coast FIRE guide</SiteLink>.</p>}
           {calculator.id === "house-affordability" && <HouseIncomeReference/>}
-          {["personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && (compact?<GuideDisclosure title="Compare down payment, MIP and monthly costs"><LoanCostReference id={calculator.id}/></GuideDisclosure>:<LoanCostReference id={calculator.id}/>)}
+          {["personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && (compact?<GuideDisclosure title={loanCostComparisonTitle(calculator.id)}><LoanCostReference id={calculator.id}/></GuideDisclosure>:<LoanCostReference id={calculator.id}/>)}
           {calculator.id==='pmi' && <PmiRateReference/>}<RemainingFinanceReference id={calculator.id}/><h2 id="worked-examples">Worked examples</h2>
           {compact?<>{workedExamples?.[0]}{workedExamples&&workedExamples.length>1&&<GuideDisclosure title={'More worked examples ('+(workedExamples.length-1)+')'}>{workedExamples.slice(1)}</GuideDisclosure>}</>:workedExamples}
           {calculator.id === "rmd" && <RmdReference/>}
