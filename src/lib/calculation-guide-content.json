@@ -5347,5 +5347,297 @@
         "label": "APR glossary"
       }
     ]
+  },
+  "fha": {
+    "meta": {
+      "path": "/guides/how-to-calculate-fha-loan-payments/",
+      "title": "How to Calculate FHA Loan Payments and Mortgage Insurance",
+      "heading": "How to Calculate FHA Loan Payments and Mortgage Insurance",
+      "description": "Calculate FHA payments with financed upfront MIP, monthly premiums and entered property costs. Four reproducible cases compare down payment and term using documented premium assumptions.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "fha-loan"
+      ],
+      "topic": "Mortgage & housing",
+      "breadcrumb": "How to Calculate FHA Loan Payments and Mortgage Insurance",
+      "cardIntro": "Calculate FHA payments with financed upfront MIP, monthly premiums and entered property costs. Four reproducible cases compare down payment and term using documented premium assumptions.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/fha-loan-calculator",
+    "calculatorLabel": "FHA Loan Calculator",
+    "intro": "Start with purchase price and down payment, then distinguish the base mortgage from financed upfront mortgage insurance. Add monthly FHA MIP and the property costs you enter to principal and interest. The worked examples use ordinary forward-loan premium terms documented in HUD Mortgagee Letter 2023-05; they do not establish eligibility or apply every program and historical case rule.",
+    "answer": "For a $300,000 purchase with 3.5% down, base principal is $289,500. An entered-rule 1.75% upfront MIP is $5,066.25 and is financed in this model, giving $294,566.25 principal. At a hypothetical 6% rate for thirty years, monthly P&I is $1,766.07 and initial monthly FHA MIP is $131.95, for $1,898.02 before property costs.",
+    "sections": [
+      {
+        "id": "base",
+        "title": "Separate down payment, base loan and financed upfront MIP",
+        "paragraphs": [
+          "A 3.5% down payment in this example is $10,500. Subtract it from $300,000 to obtain the $289,500 base loan. Under the selected ordinary premium terms, upfront MIP is 1.75% of that base, rounded to cents. The repayment balance includes the $5,066.25 premium, so it is larger than the purchase price minus down payment.",
+          "The 3.5% example is an input scenario, not a statement that a particular borrower qualifies at that down payment. Appraisal, underwriting, loan limits and other requirements need separate review. This form finances upfront MIP; it does not produce a complete settlement statement."
+        ],
+        "formula": "Base loan = purchase price − down payment; financed principal = base loan + financed upfront MIP"
+      },
+      {
+        "id": "payment",
+        "title": "Calculate P&I on the balance that includes financed MIP",
+        "paragraphs": [
+          "The thirty-year example amortizes $294,566.25 at 6% / 12 over 360 monthly periods. Its regular P&I payment is $1,766.07 before display rounding. Calculating the installment on only the $289,500 base would omit the interest and repayment associated with the financed premium.",
+          "Keep internal precision when reproducing payments in a spreadsheet. The initial monthly total then adds monthly FHA MIP and any entered property costs. A P&I figure alone is not the full modeled mortgage payment or a complete household budget."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "premium",
+        "title": "Understand why monthly MIP is not a flat initial-balance shortcut",
+        "paragraphs": [
+          "The model uses HUD’s scheduled-balance premium method: average original scheduled opening balances for a mortgage year, apply the annual premium rate, remove the financed upfront-MIP factor and round to monthly cents. The first-year base case uses a 0.55% annual rate and gives $131.95 monthly premium.",
+          "Multiplying the original base loan by the annual rate and dividing by twelve is a rough shortcut, not this schedule calculation. HUD’s calculation page explains the method using historical example rates; these cases use separately documented ordinary premium terms. The premium is included once in the monthly total, not added again outside it."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "down",
+        "title": "Compare a 10% down-payment scenario",
+        "paragraphs": [
+          "At 10% down, cash down rises to $30,000 and base principal falls to $270,000. The upfront premium is $4,725 and financed principal $274,725. With the same rate and thirty-year term, P&I is $1,647.12 and initial MIP is $111.87, giving $1,758.99 before property costs.",
+          "For the ordinary terms selected here, the annual rate is 0.50% and modeled premium duration is eleven years, rather than the base case’s loan-term duration. This difference depends on the applicable original LTV and premium rules; it is not conventional PMI cancellation based on a new market valuation."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "term",
+        "title": "Shorter term and property costs answer different budget questions",
+        "paragraphs": [
+          "The fifteen-year 3.5%-down case keeps the same financed principal but raises P&I to $2,485.72. Its selected annual MIP rate is 0.40% and initial monthly MIP $94.64, for a $2,580.36 initial total before property costs. A smaller insurance premium does not necessarily mean a smaller overall monthly payment.",
+          "A separate thirty-year case adds annual property tax of $3,600, homeowners insurance $1,200 and HOA $600. These entered costs add $450 monthly, bringing initial total to $2,348.02. The property-cost amounts are hypothetical and are not determined from the home’s location."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "limits",
+        "title": "Reproduce the example and keep its boundaries visible",
+        "paragraphs": [
+          "For base P&I, a spreadsheet can use =-PMT(6%/12,360,294566.25). Reproduce monthly MIP with the documented scheduled-balance and rounding steps rather than assuming one fixed premium for every year. Extra principal does not directly alter the original premium baseline, though payoff can end the payment stream.",
+          "MIP protects the mortgage program and is separate from homeowners insurance. Premium LTV uses the lower of price and entered appraisal; a blank appraisal assumes the purchase price in these cases. County limits, case endorsement details, special programs, taxes, closing charges and underwriting are not certified by the calculator."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Down payment",
+      "Monthly P&I",
+      "Initial monthly FHA MIP",
+      "Initial monthly total"
+    ],
+    "chart": "fha-guide",
+    "chartAlt": "Initial FHA monthly payments under different down payments, terms and entered property costs.",
+    "chartCaption": "FHA MIP is included once in initial monthly total. Base examples set property costs to zero; the final case adds $450 monthly entered tax, homeowners insurance and HOA.",
+    "questions": [
+      {
+        "question": "Does FHA MIP equal homeowners insurance?",
+        "answer": "No. They cover different purposes. The calculator models FHA MIP separately and adds any entered homeowners insurance to property costs."
+      },
+      {
+        "question": "Is upfront MIP included in the loan amount?",
+        "answer": "Yes in this model. The $5,066.25 example premium is added to base principal before calculating P&I."
+      },
+      {
+        "question": "Why is initial monthly MIP not base principal times rate divided by twelve?",
+        "answer": "The model applies the original scheduled-balance annual-average method and premium rounding, rather than that rough shortcut."
+      },
+      {
+        "question": "Does 10% down always remove MIP immediately?",
+        "answer": "No. In the selected ordinary example it changes the premium rate and duration, but does not eliminate initial MIP."
+      },
+      {
+        "question": "Does the payment include taxes and home insurance?",
+        "answer": "Only the amounts you enter. Zero property costs in a case isolate financing; they are not a realistic claim that ownership has no such expenses."
+      },
+      {
+        "question": "Does the result confirm FHA approval?",
+        "answer": "No. It is a payment illustration, not an eligibility decision, appraisal review, loan-limit check or official closing disclosure."
+      }
+    ],
+    "limitations": [
+      "Fixed-rate hypothetical purchase examples, not live offers, appraisal eligibility or lender approval.",
+      "Monthly estimates do not determine full cash to close, prepaid escrow, reserves or every closing charge.",
+      "Ordinary FHA premium terms documented in HUD ML2023-05; special programs and historical terms require separate verification.",
+      "MIP is separate from homeowners insurance and is recalculated on the model’s original scheduled-balance premium method."
+    ],
+    "sources": [
+      {
+        "href": "https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf",
+        "label": "HUD Mortgagee Letter 2023-05: ordinary upfront and annual premium terms"
+      },
+      {
+        "href": "https://www.hud.gov/hud-partners/housing-premium-calculation",
+        "label": "HUD: monthly premium calculation method; historical example rates"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-much-house-can-i-afford/",
+        "label": "Home affordability guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-pmi-and-cancellation/",
+        "label": "Conventional PMI guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-va-loan-payments/",
+        "label": "VA purchase-payment guide"
+      },
+      {
+        "href": "/glossary/down-payment/",
+        "label": "Down payment glossary"
+      }
+    ]
+  },
+  "va": {
+    "meta": {
+      "path": "/guides/how-to-calculate-va-loan-payments/",
+      "title": "How to Calculate VA Loan Payments and the Funding Fee",
+      "heading": "How to Calculate VA Loan Payments and the Funding Fee",
+      "description": "Calculate VA purchase-loan payments and funding-fee effects. Six reproducible cases compare financing, down payments, prior use and an assumed established exemption.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "va-mortgage"
+      ],
+      "topic": "Mortgage & housing",
+      "breadcrumb": "How to Calculate VA Loan Payments and the Funding Fee",
+      "cardIntro": "Calculate VA purchase-loan payments and funding-fee effects. Six reproducible cases compare financing, down payments, prior use and an assumed established exemption.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/va-mortgage-calculator",
+    "calculatorLabel": "VA Mortgage Calculator",
+    "intro": "For an entered VA purchase scenario, separate the price, down payment, base loan and funding fee before calculating principal and interest. Use the appropriate verified fee treatment and review exemption status separately. The examples do not determine a Certificate of Eligibility, entitlement, appraisal result or lender approval.",
+    "answer": "For a $400,000 purchase with no down payment and a first-use, nonexempt funding-fee scenario, the fee is $8,600 at 2.15% of the $400,000 base loan. Financing it gives $408,600 principal and a $2,449.76 monthly P&I payment at a hypothetical 6% over thirty years. Paying the fee upfront instead keeps principal at $400,000 and P&I at $2,398.20.",
+    "sections": [
+      {
+        "id": "base",
+        "title": "Apply the purchase-loan fee to the base loan",
+        "paragraphs": [
+          "In the no-down example, purchase price and base loan both equal $400,000. The 2.15% funding-fee amount is $8,600. The example follows VA’s published ordinary purchase-loan fee chart effective April 7, 2023; other loan types have different rules and are not represented by this case.",
+          "A zero entered down payment does not establish zero cash needed at closing or a right to borrow the full price. Appraisal conditions, lender requirements, eligibility and entitlement must be reviewed separately. The tool does not retrieve a COE or verify a borrower’s service record."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "finance",
+        "title": "Financing the fee raises principal and the installment",
+        "paragraphs": [
+          "Financing the $8,600 fee raises the repayment balance to $408,600. With a 6% nominal rate and 360 monthly payments, P&I is $2,449.76. Paying it upfront leaves a $400,000 balance and $2,398.20 P&I, with that $8,600 still due separately in the modeled cash comparison.",
+          "The payment difference is caused by borrowing the fee, not by a different note rate. The lower upfront-fee installment does not erase the fee or tell you which cash allocation suits the household. Other actual closing charges and reserves need a separate cash-to-close review."
+        ],
+        "formula": "Financed principal = purchase price − down payment + financed funding fee"
+      },
+      {
+        "id": "down",
+        "title": "Down payment can change both the base and fee tier",
+        "paragraphs": [
+          "At 5% down, cash down is $20,000 and base principal is $380,000. The selected ordinary 1.5% fee is $5,700. Financing it gives $385,700 principal and $2,312.47 monthly P&I under the same rate and term. The fee is applied to the base loan, not to the full purchase price.",
+          "At 10% down, the base is $360,000 and the selected 1.25% fee is $4,500. Financed principal becomes $364,500 and P&I $2,185.36, with $40,000 down. These are different cash commitments as well as different financing balances; do not compare installments alone."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "prior-exempt",
+        "title": "Prior use and exemption are separate inputs",
+        "paragraphs": [
+          "A subsequent-use, no-down, nonexempt case uses a 3.3% funding fee, or $13,200 on $400,000. Financing that fee gives $413,200 principal and $2,477.34 P&I. VA separately notes an exception for prior use only to purchase a manufactured home; the calculator has a distinct selection for that situation.",
+          "The exemption example assumes exemption has already been established and therefore uses no funding fee. Its principal is $400,000 and P&I $2,398.20. Selecting the flag does not determine exemption eligibility or documentation. Consult VA and the actual loan process rather than treating a calculator setting as verification."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "costs",
+        "title": "No monthly mortgage insurance does not mean no property costs",
+        "paragraphs": [
+          "VA’s purchase-loan guidance states that PMI or FHA MIP is not required for these VA-backed loans. That does not remove property tax, homeowners insurance, HOA or other ownership expenses. The checked VA cases set those entries to zero only to isolate the financing effect.",
+          "The funding fee is a separate one-time charge, while ownership costs can continue and change over time. An Initial monthly total with zero property-cost inputs equals P&I in these examples; it is not a realistic complete cost estimate for every property."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "reproduce",
+        "title": "Reproduce the calculation without inferring approval",
+        "paragraphs": [
+          "A spreadsheet can use =-PMT(6%/12,360,408600) for the first financed-fee example, or replace principal with 400000 when the fee is paid upfront. Keep fee, down payment and other cash charges separate when reconciling loan totals and closing needs.",
+          "These cases cover ordinary purchase scenarios, not IRRRL, cash-out refinance, NADL or every manufactured-home arrangement. A lower modeled payment is not an appraisal or underwriting conclusion. If comparing FHA and VA, align purchase price, rate, term and property costs first; the two guides use different prices and cannot be ranked by their payments as presented."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Down payment",
+      "Funding fee",
+      "Financed loan amount",
+      "Monthly P&I"
+    ],
+    "chart": "va-guide",
+    "chartAlt": "VA principal-and-interest payments under different funding-fee and down-payment scenarios.",
+    "chartCaption": "All VA cases use the same $400,000 price, hypothetical 6% rate and thirty-year term. Property costs are zero only to isolate funding-fee and down-payment effects; no exemption or approval is determined.",
+    "questions": [
+      {
+        "question": "Is the VA funding fee based on home price or base loan?",
+        "answer": "In these purchase cases it applies to the base loan after down payment. At 5% down on $400,000, the selected 1.5% fee is applied to $380,000."
+      },
+      {
+        "question": "Can the funding fee be financed?",
+        "answer": "The model supports financing it or paying it upfront. Financing increases principal and its interest cost; other closing charges are not automatically added to the loan."
+      },
+      {
+        "question": "Does no down payment mean no closing cash?",
+        "answer": "No. Other charges, prepaid amounts and lender or appraisal conditions need separate review. These cases are not full cash-to-close estimates."
+      },
+      {
+        "question": "Does selecting exemption prove I qualify?",
+        "answer": "No. The setting assumes exemption has already been established. VA and the loan process determine eligibility and documentation."
+      },
+      {
+        "question": "Does a VA purchase loan have monthly FHA MIP?",
+        "answer": "VA guidance states these loans do not require PMI or FHA MIP. Enter property taxes, homeowners insurance and other costs separately."
+      },
+      {
+        "question": "Are the example rates and fees an actual loan offer?",
+        "answer": "No. The 6% interest rate is hypothetical; the selected fee examples follow the cited ordinary purchase chart, with eligibility and other loan types outside the calculation."
+      }
+    ],
+    "limitations": [
+      "Fixed-rate hypothetical purchase examples, not live offers, appraisal eligibility or lender approval.",
+      "Monthly estimates do not determine full cash to close, prepaid escrow, reserves or every closing charge.",
+      "Ordinary purchase-loan funding-fee examples; not IRRRL, cash-out, NADL or other VA loan types.",
+      "Eligibility, entitlement, funding-fee exemption, lender requirements and appraisal conditions are not inferred."
+    ],
+    "sources": [
+      {
+        "href": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+        "label": "VA: funding-fee chart, payment choices and exemption context"
+      },
+      {
+        "href": "https://www.va.gov/housing-assistance/home-loans/loan-types/purchase-loan/",
+        "label": "VA: purchase eligibility and no monthly mortgage insurance"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-much-house-can-i-afford/",
+        "label": "Home affordability guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-fha-loan-payments/",
+        "label": "FHA payment and MIP guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "label": "Mortgage payment formula guide"
+      },
+      {
+        "href": "/glossary/down-payment/",
+        "label": "Down payment glossary"
+      }
+    ]
   }
 }

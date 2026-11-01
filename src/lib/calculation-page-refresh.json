@@ -427,5 +427,31 @@
         "answer": "No. Enter actual qualifying offer terms; credit requirements, vehicle eligibility and availability are not determined."
       }
     ]
+  },
+  "fha-loan": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Is upfront MIP included in the loan amount?",
+        "answer": "Yes in this model. The $5,066.25 example premium is added to base principal before calculating P&I."
+      },
+      {
+        "question": "Does 10% down always remove MIP immediately?",
+        "answer": "No. In the selected ordinary example it changes the premium rate and duration, but does not eliminate initial MIP."
+      }
+    ]
+  },
+  "va-mortgage": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Can the funding fee be financed?",
+        "answer": "The model supports financing it or paying it upfront. Financing increases principal and its interest cost; other closing charges are not automatically added to the loan."
+      },
+      {
+        "question": "Does selecting exemption prove I qualify?",
+        "answer": "No. The setting assumes exemption has already been established. VA and the loan process determine eligibility and documentation."
+      }
+    ]
   }
 }

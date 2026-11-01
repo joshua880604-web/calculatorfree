@@ -276,3 +276,7 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## Auto lease and financing incentive comparisons
 - [How to Calculate Auto Lease Payments and Rent Charges](https://www.calculatorfree.io/guides/how-to-calculate-auto-lease-payments/): Calculate a simplified auto lease payment from capitalized cost, residual, rent charge and monthly tax. Five reproducible cases compare money factor, cash reduction and price solving.
 - [Cash Rebate vs. Low-Interest Financing: How to Compare](https://www.calculatorfree.io/guides/cash-rebate-vs-low-interest-financing/): Compare cash rebate versus promotional low-rate financing using five reproducible cases. Include installment totals, upfront cash and explicit manual tax assumptions.
+
+## FHA and VA purchase-payment examples
+- [How to Calculate FHA Loan Payments and Mortgage Insurance](https://www.calculatorfree.io/guides/how-to-calculate-fha-loan-payments/): Calculate FHA payments with financed upfront MIP, monthly premiums and entered property costs. Four reproducible cases compare down payment and term using documented premium assumptions.
+- [How to Calculate VA Loan Payments and the Funding Fee](https://www.calculatorfree.io/guides/how-to-calculate-va-loan-payments/): Calculate VA purchase-loan payments and funding-fee effects. Six reproducible cases compare financing, down payments, prior use and an assumed established exemption.
