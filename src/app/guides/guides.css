@@ -13,3 +13,39 @@
 .editorial-article code{white-space:normal;overflow-wrap:anywhere;}
 @media(max-width:700px){.guides-page .guide-card{padding:16px;}.editorial-article h1{font-size:28px;}.editorial-article .guide-table{font-size:13px;}}
 @media print{.editorial-article .guide-table{overflow:visible;}.editorial-article table{min-width:0;font-size:10px;}.editorial-article .guide-nav{display:none;}}
+
+/* Compact directory only; article layouts remain independent. */
+.guides-directory-page .guide-directory [hidden]{display:none!important;}
+.guide-directory-search{margin:24px 0 12px;}
+.guide-directory-search label{display:block;font-weight:650;margin-bottom:8px;}
+.guide-search-field{display:flex;gap:8px;align-items:center;}
+.guide-search-field input{width:100%;min-width:0;flex:1;min-height:46px;border:1px solid var(--control,#dce4f1);border-radius:10px;padding:10px 12px;background:var(--paper,#fff);color:var(--ink,#101828);font:inherit;}
+.guide-search-field button{min-height:44px;padding:8px 12px;border:1px solid var(--control,#dce4f1);border-radius:10px;background:transparent;color:var(--ink,#101828);font:inherit;cursor:pointer;}
+.guide-directory-status{font-size:13px;color:var(--muted,#52627a);margin:8px 0;}
+.guide-topic-nav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 28px;}
+.guide-topic-nav a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 12px;border:1px solid var(--control,#dce4f1);border-radius:10px;text-decoration:none;font-size:14px;}
+.guide-topic-nav span,.guide-topic-group h2 span{font-size:12px;color:var(--muted,#52627a);font-weight:500;}
+.featured-guides{margin:24px 0 32px;}
+.featured-guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.featured-guide-grid article{border:1px solid var(--control,#dce4f1);border-radius:12px;padding:16px;min-width:0;}
+.guides-directory-page .featured-guide-grid h3{font-size:17px;line-height:1.45;margin:0 0 8px;}
+.featured-guide-grid p{font-size:14px;line-height:1.6;margin:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;}
+.guide-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:24px;}
+.guide-topic-group{min-width:0;border:1px solid var(--control,#dce4f1);border-radius:12px;padding:18px;}
+.guides-directory-page .guide-topic-group h2{display:flex;align-items:baseline;gap:10px;font-size:21px;line-height:1.4;margin:0;scroll-margin-top:20px;}
+.guide-topic-description{color:var(--muted,#52627a);font-size:13px;line-height:1.6;margin:8px 0 12px;}
+.guides-directory-page .guide-directory-list{list-style:none;margin:0;padding:0;}
+.guide-directory-row{border-top:1px solid var(--rule,#dce5eb);padding:12px 0;}
+.guides-directory-page .guide-directory-row h3{font-size:16px;line-height:1.5;margin:0 0 4px;}
+.guide-directory-row a{display:block;padding:2px 0;text-decoration:none;overflow-wrap:anywhere;}
+.guide-directory-row a:hover{text-decoration:underline;}
+.guide-directory-row p{font-size:13px;line-height:1.6;color:var(--muted,#52627a);margin:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;}
+.guide-topic-group details{border-top:1px solid var(--rule,#dce5eb);margin-top:0;}
+.guide-topic-group summary{min-height:44px;padding:12px 0;cursor:pointer;font-size:14px;font-weight:600;color:var(--ink,#101828);}
+.guide-topic-group summary span{font-weight:400;}
+.guide-directory-footer{margin-top:28px;font-size:14px;}
+.guide-directory a:focus-visible,.guide-directory input:focus-visible,.guide-directory button:focus-visible,.guide-directory summary:focus-visible{outline:3px solid #a390ff;outline-offset:3px;}
+@media(max-width:850px){.guide-topic-grid{grid-template-columns:minmax(0,1fr);gap:18px;}}
+@media(max-width:500px){.featured-guide-grid{grid-template-columns:minmax(0,1fr);}.featured-guide-grid article{padding:14px;}.guide-topic-group{padding:15px;}.guide-topic-nav{gap:6px;}.guide-topic-nav a{font-size:13px;padding:7px 9px;}}
+@media print{.guide-directory-search,.guide-topic-nav,.featured-guides{display:none;}.guide-topic-grid{display:block;}.guide-topic-group{break-inside:auto;margin:16px 0;}.guide-topic-group details>ul{display:block!important;}.guide-directory-row p{display:block;}}
+@media screen{.dark .guide-search-field input{background:var(--surface,#151e2d);color:var(--ink,#e7eef9);}.dark .guide-search-field input::placeholder{color:var(--muted,#b5c2d5);}}
