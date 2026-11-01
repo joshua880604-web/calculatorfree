@@ -1,0 +1,9 @@
+.pmi-rate-reference{margin-block:1.5rem}
+.pmi-rate-reference table{width:100%;border-collapse:collapse;margin-block:1rem}
+.pmi-rate-reference caption{text-align:left;padding-block:.5rem;color:var(--muted,#52627a)}
+.pmi-rate-reference th,.pmi-rate-reference td{padding:.65rem .5rem;text-align:left;border-bottom:1px solid var(--border,#dce3ee)}
+.pmi-rate-reference td:nth-child(2){white-space:nowrap;font-variant-numeric:tabular-nums}
+section.pmi-rate-reference > table{min-width:0;max-width:100%;table-layout:fixed}
+section.pmi-rate-reference > table caption{white-space:normal;overflow-wrap:anywhere}
+section.pmi-rate-reference > table th,section.pmi-rate-reference > table td{white-space:normal;overflow-wrap:anywhere;padding:.65rem .5rem}
+section.pmi-rate-reference > table td:nth-child(2){white-space:nowrap}

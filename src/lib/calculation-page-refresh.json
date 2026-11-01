@@ -222,6 +222,14 @@
       {
         "question": "Which value is used if the purchase appraisal is below the price?",
         "answer": "Original value is the lower purchase price or appraisal at purchase in this supported purchase-loan model. A lower appraisal can raise original LTV even at the same down payment; a current higher appraisal is a different input and does not replace that basis."
+      },
+      {
+        "question": "Why do PMI calculator results differ between websites?",
+        "answer": "Websites may use different insurer rate assumptions, credit-score bands, LTV, loan terms, coverage requirements or premium bases. They may also model the 80% cancellation request and scheduled 78% termination differently. With the same $360,000 original principal, a hypothetical 0.38% annual rate gives $114 monthly PMI, while 0.40% gives $120. Neither rate is a current offer. Align the loan inputs and use your actual annual quote in Use My Quote; confirm cancellation and billing with your servicer."
+      },
+      {
+        "question": "Is the 0.38% PMI rate a current lender quote?",
+        "answer": "No. A displayed 0.38% is a particular illustrative assumption or rate-card tier, not a market-wide rate. Estimate mode uses a National MI base-rate card effective March 1, 2022 with stated LTV, credit, term and coverage conditions. Actual insurer and lender pricing can differ materially; enter your actual annual rate in Use My Quote."
       }
     ]
   },

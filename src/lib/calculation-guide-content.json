@@ -2949,14 +2949,14 @@
       "path": "/guides/how-to-calculate-pmi-and-cancellation/",
       "title": "How to Calculate PMI and Understand Cancellation Dates",
       "heading": "How to Calculate PMI and Understand Cancellation Dates",
-      "description": "Calculate monthly conventional PMI from a quote and compare the 80% request, scheduled 78% termination and midpoint rules. Includes extra-payment scenarios and scope limits.",
+      "description": "Calculate monthly PMI from an actual quote, understand why website estimates differ, and compare the 80% request, scheduled 78% and midpoint termination benchmarks.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "pmi"
       ],
       "topic": "Mortgage & housing",
       "breadcrumb": "How to Calculate PMI and Understand Cancellation Dates",
-      "cardIntro": "Calculate monthly conventional PMI from a quote and compare the 80% request, scheduled 78% termination and midpoint rules. Includes extra-payment scenarios and scope limits.",
+      "cardIntro": "Calculate monthly PMI from an actual quote, understand why website estimates differ, and compare the 80% request, scheduled 78% and midpoint termination benchmarks.",
       "format": "Calculation guide & model check"
     },
     "calculatorPath": "/pmi-calculator",
@@ -2969,7 +2969,8 @@
         "title": "Calculate the premium using the quote’s stated basis",
         "paragraphs": [
           "The guide uses Use My Quote mode to avoid presenting an illustrative insurer estimate as a current quote. With $360,000 original principal, 0.30%, 0.50% and 0.80% annual quotes give $90, $150 and $240 monthly premiums. The quote model holds that premium basis constant until the selected stopping event or payoff.",
-          "PMI is different from homeowners insurance and property tax. The loan-payment figure in this tool excludes those ownership costs. A total mortgage budget needs them separately. The quoted rates are hypothetical inputs; actual insurer premiums and lender billing can vary."
+          "PMI is different from homeowners insurance and property tax. The loan-payment figure in this tool excludes those ownership costs. A total mortgage budget needs them separately. The quoted rates are hypothetical inputs; actual insurer premiums and lender billing can vary.",
+          "PMI rates vary by insurer, LTV, credit score, loan characteristics and coverage requirements. Estimate mode uses a National MI base-rate card effective March 1, 2022, not a live pricing feed. A rate such as 0.38% belongs to a particular assumption or tier; it is not a market-wide standard. Use an actual annual quote for a real comparison and align the premium basis before comparing websites."
         ],
         "formula": "Monthly quoted PMI = original loan principal × annual PMI rate / 100 / 12"
       },
@@ -3053,6 +3054,14 @@
       {
         "question": "Are the quoted annual rates market rates?",
         "answer": "No. They are chosen scenario inputs. Use an actual lender or insurer quote for a real comparison and confirm the premium basis and billing convention."
+      },
+      {
+        "question": "Why do PMI calculator results differ between websites?",
+        "answer": "Websites may use different insurer rate assumptions, credit-score bands, LTV, loan terms, coverage requirements or premium bases. They may also model the 80% cancellation request and scheduled 78% termination differently. With the same $360,000 original principal, a hypothetical 0.38% annual rate gives $114 monthly PMI, while 0.40% gives $120. Neither rate is a current offer. Align the loan inputs and use your actual annual quote in Use My Quote; confirm cancellation and billing with your servicer."
+      },
+      {
+        "question": "Is 0.38% or 0.40% a standard PMI rate?",
+        "answer": "No. These are illustrative annual inputs for a controlled comparison, not typical-rate claims or current insurer offers. Premium pricing depends on insurer, LTV, credit score, loan characteristics and coverage. The dated estimate card is separate from an actual lender quote."
       }
     ],
     "limitations": [
@@ -3068,6 +3077,10 @@
       {
         "href": "https://files.consumerfinance.gov/f/201508_cfpb_compliance-bulletin_private-mortgage-insurance-cancellation-and-termination.pdf",
         "label": "CFPB Bulletin 2015-03: HPA cancellation mechanics (2015 background)"
+      },
+      {
+        "href": "https://www.nationalmi.com/products-rates/",
+        "label": "National MI: products, premium plans and pricing context"
       }
     ],
     "related": [

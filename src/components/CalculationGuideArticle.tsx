@@ -1,3 +1,4 @@
+import PmiRateReference from './PmiRateReference';
 import HouseIncomeReference from './HouseIncomeReference';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import content from '@/lib/calculation-guide-content.json';
@@ -21,6 +22,7 @@ export default function CalculationGuideArticle({topic}:{topic:CalculationGuideT
   <nav className="guide-nav" aria-label="Guide sections">{data.sections.map(s=><a key={s.id} href={'#'+s.id}>{s.title}</a>)}<a href="#checked-cases">Checked examples</a><a href="#questions">Questions</a><a href="#sources">Sources & limits</a></nav>
   {topic==='afford' && <HouseIncomeReference/>}
   {data.sections.map(s=><section key={s.id} aria-labelledby={s.id}><h2 id={s.id}>{s.title}</h2>{s.formula&&<p className="formula">{s.formula}</p>}{s.paragraphs.map(p=><p key={p}>{p}</p>)}</section>)}
+  {topic==='pmi' && <PmiRateReference/>}
   <section aria-labelledby="checked-cases"><h2 id="checked-cases">Checked scenarios you can reproduce</h2><p>These are controlled hypothetical calculations, not market experiments or historical performance. Each case changes only the inputs stated in its label; complete assumptions are included in the CSV and calculator preset.</p>
    <figure className="decision-guide-figure"><div className="decision-guide-chart" role="region" aria-label="Comparison chart; scroll horizontally on small screens" tabIndex={0}><img src={'/images/guides/'+data.chart+'.svg'} width={1350} height={750} loading="lazy" alt={data.chartAlt}/></div><figcaption>{data.chartCaption} <a href={'/images/guides/'+data.chart+'.svg'}>Open the chart</a>.</figcaption></figure>
    <div className="decision-case-table" role="region" aria-label="Checked results and example inputs" tabIndex={0}><table><caption>Rounded results under the stated assumptions</caption><thead><tr>{data.columns.map(c=><th key={c} scope="col">{c}</th>)}<th scope="col">Reproduce</th></tr></thead><tbody>{cases[topic].map(row=><tr key={row.label}><th scope="row">{row.label}</th>{row.display.map((v,i)=><td key={i}>{v}</td>)}<td><SiteLink href={calculatorPresetHref(data.calculatorPath,row.mode,row.values)}>Try these inputs</SiteLink></td></tr>)}</tbody></table></div>
