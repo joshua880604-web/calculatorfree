@@ -1,3 +1,4 @@
+import RemainingFinanceReference from './RemainingFinanceReference';
 import LoanCostReference from './LoanCostReference';
 import HouseIncomeReference from './HouseIncomeReference';
 import ContentReviewNotice from './ContentReviewNotice';
@@ -51,7 +52,7 @@ export default function CalculatorGuide({
           {['barista-fire','coast-fire'].includes(calculator.id) && <p>Compare the income and withdrawal assumptions in our <SiteLink href="/guides/barista-fire-vs-coast-fire/">Barista FIRE vs. Coast FIRE guide</SiteLink>.</p>}
           {calculator.id === "house-affordability" && <HouseIncomeReference/>}
           {["personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && <LoanCostReference id={calculator.id}/>}
-          <h2 id="worked-examples">Worked examples</h2>
+          <RemainingFinanceReference id={calculator.id}/><h2 id="worked-examples">Worked examples</h2>
           {guide.examples.map((example) => {
             return (
               <section className="worked-example" key={example.title}>

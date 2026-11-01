@@ -247,3 +247,9 @@ for(const slug of ['budget-and-savings-rate','debt-to-income-ratio'])contentUpda
 
 for(const id of ['future-value','present-value'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
 contentUpdatedOn['/glossary/time-value-of-money/']='2026-11-01';
+
+// Remaining financial-tool source/context review, 2026-11-01.
+for(const id of ["amortization", "debt-to-income-ratio", "down-payment", "interest", "finance", "interest-rate", "bond", "mutual-fund", "payback-period", "income-tax", "salary", "marriage-tax", "estate-tax", "take-home-paycheck", "payment", "currency", "inflation", "college-cost", "sales-tax", "vat", "depreciation", "discount", "lease", "commission", "cagr", "investment-fee", "real-return", "tax-equivalent-yield", "treasury-bill", "quick-ratio", "current-ratio", "self-employment-tax", "covered-call", "credit-card-minimum-payment"])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+contentUpdatedOn['/guides/compound-interest-with-monthly-contributions/']='2026-11-01';
+
+for(const slug of ["amortization", "apr", "bond-yield", "cagr", "commission", "debt-to-income-ratio", "depreciation", "estate-vs-inheritance-tax", "exchange-rate", "expense-ratio", "gross-vs-net-pay", "inflation", "lease-residual-value", "loan-to-value-ratio", "marginal-vs-effective-tax-rate", "net-present-value", "quick-ratio", "real-rate-of-return", "return-on-investment", "sales-tax-vs-vat", "simple-interest"])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';

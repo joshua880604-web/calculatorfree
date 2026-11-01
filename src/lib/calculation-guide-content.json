@@ -164,12 +164,14 @@
       "publishedOn": "2026-10-31",
       "calculatorIds": [
         "compound-interest",
-        "investment"
+        "investment",
+        "interest"
       ],
       "topic": "Savings & investing",
       "breadcrumb": "Compound growth with monthly deposits",
       "cardIntro": "Four matched scenarios separate money you contribute from earnings and show the effect of deposit timing.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-01"
     },
     "calculatorPath": "/compound-interest-calculator",
     "calculatorLabel": "Compound Interest Calculator",
@@ -228,6 +230,15 @@
           "Keeping the contributions fixed but assuming 8% nominal growth produces $58,785.61 after ten years, compared with $47,526.55 at 5%. The $11,259.06 difference shows sensitivity to the chosen rate. It is not evidence that a particular portfolio will earn either return or that the higher-return case is equally attainable.",
           "The actual calculator can also apply annual deposits, contribution increases in supported tools, tax on positive interest and inflation. Those settings are outside these four matched cases. Its monthly-equivalent growth convention does not reproduce every bank’s daily balance, deposit processing or interest-crediting method.",
           "The tax input applies the model’s simplified charge to positive accrued interest at year end; it is not a capital-gains or retirement-account tax engine. Inflation-adjusted balances measure purchasing power rather than extra nominal earnings. Investment fees, losses and irregular withdrawals need explicit treatment instead of being hidden in an optimistic rate."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "interest-tool",
+        "title": "Use the same method in the Interest Calculator",
+        "paragraphs": [
+          "The Interest Calculator shares this monthly growth and contribution method. Its nominal rate and compounding selection determine the equivalent monthly rate; the entered interest-tax haircut and inflation view remain separate. The tool does not retrieve a live account quote.",
+          "The linked calculator contains baseline and changed-rate reproduction presets. Those additional outputs come from the website model and are labeled accordingly; they are separate from this guide’s independently calculated reference cases."
         ],
         "formula": ""
       }
@@ -297,6 +308,10 @@
       {
         "href": "/guides/how-to-calculate-coast-fire/",
         "label": "Apply real growth to a Coast FIRE threshold"
+      },
+      {
+        "href": "/interest-calculator",
+        "label": "Interest Calculator"
       }
     ]
   },

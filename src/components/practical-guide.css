@@ -1,0 +1,7 @@
+.practical-guide-page .decision-case-table table{min-width:860px;table-layout:fixed}
+.practical-guide-page .decision-case-table thead th:first-child{width:230px}
+.practical-guide-page .decision-case-table thead th:nth-child(2){width:270px}
+.practical-guide-page .decision-case-table thead th:nth-child(3){width:160px}
+.practical-guide-page .decision-case-table thead th:nth-child(4){width:180px}
+.practical-guide-page .decision-case-table td:nth-child(2){white-space:normal;overflow-wrap:anywhere}
+@media print{.practical-guide-page .decision-case-table table{min-width:0;table-layout:auto}}

@@ -1,0 +1,3 @@
+Tool,Mode,Scenario,Complete inputs JSON,Model-generated metrics JSON,Verification type
+Bond Calculator,price,Baseline,"{""coupon"": ""5"", ""coupon_unit"": ""Percent"", ""face"": ""1000"", ""frequency"": ""Semiannually"", ""years"": ""10"", ""yield"": ""6""}","[{""label"": ""price"", ""value"": 925.6126256977223, ""format"": ""money""}]","Website-engine reproduction, not independent validation"
+Bond Calculator,price,Change Annual yield to 8,"{""coupon"": ""5"", ""coupon_unit"": ""Percent"", ""face"": ""1000"", ""frequency"": ""Semiannually"", ""years"": ""10"", ""yield"": ""8""}","[{""label"": ""price"", ""value"": 796.1451048254844, ""format"": ""money""}]","Website-engine reproduction, not independent validation"

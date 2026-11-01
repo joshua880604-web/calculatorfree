@@ -67,7 +67,7 @@ test('Covered call bounded extremes keep every number finite and a positive debi
  const r=run({...basic,stock:1e6,strike:1e6,premium:0,contracts:10000,stock_fee:1e6,option_fee:1e6,exit_fee:1e6,expiry:1e6,days:1});assert.ok(r.metrics.every(m=>Number.isFinite(m.value)));assert.ok(r.rows!.every(row=>row.every(x=>Number.isFinite(x))));assert.throws(()=>run({...basic,premium:50.01}));
 });
 test('Covered call client engine and original fee-aware worked examples match',async()=>{
- assert.deepEqual(await runClientCalculation(calc.id,calc.category,mode.id,input()),run());for(const e of guides[calc.id].examples)close(n(run(e.values),e.expected.label),e.expected.value);assert.equal(guides[calc.id].questions.length,11);
+ assert.deepEqual(await runClientCalculation(calc.id,calc.category,mode.id,input()),run());for(const e of guides[calc.id].examples)close(n(run(e.values),e.expected.label),e.expected.value);assert.equal(guides[calc.id].questions.length,13);
 });
 test('Covered call has one canonical investment page, relevant links and no invented rating',()=>{
  const config={origin:'https://www.calculatorfree.io',indexable:true};assert.equal(sitemapEntries(config).filter(e=>e.url===config.origin+'/covered-call-calculator').length,1);assert.equal(calculatorCategory(calc.id)!.id,'saving-investing');for(const id of ['roi','investment','average-return'])assert.ok(relatedCalculatorIds[id].includes(calc.id));const s=JSON.stringify(calculatorSchema(calc,config));assert.match(s,/WebApplication/);assert.doesNotMatch(s,/aggregateRating/);

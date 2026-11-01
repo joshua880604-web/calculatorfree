@@ -531,5 +531,438 @@
       }
     ],
     "checkedOn": "2026-11-01"
+  },
+  "amortization": {
+    "questions": [
+      {
+        "question": "Is the installment all principal?",
+        "answer": "No. Interest is charged on the opening balance; the remainder of the payment reduces principal."
+      },
+      {
+        "question": "Does an implied loan rate include fees?",
+        "answer": "Only cash flows entered in the model affect the result. It is not a regulatory APR disclosure."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "payment": {
+    "questions": [
+      {
+        "question": "Is the installment all principal?",
+        "answer": "No. Interest is charged on the opening balance; the remainder of the payment reduces principal."
+      },
+      {
+        "question": "Does an implied loan rate include fees?",
+        "answer": "Only cash flows entered in the model affect the result. It is not a regulatory APR disclosure."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "interest-rate": {
+    "questions": [
+      {
+        "question": "Is the installment all principal?",
+        "answer": "No. Interest is charged on the opening balance; the remainder of the payment reduces principal."
+      },
+      {
+        "question": "Does an implied loan rate include fees?",
+        "answer": "Only cash flows entered in the model affect the result. It is not a regulatory APR disclosure."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "finance": {
+    "questions": [
+      {
+        "question": "Is the installment all principal?",
+        "answer": "No. Interest is charged on the opening balance; the remainder of the payment reduces principal."
+      },
+      {
+        "question": "Does an implied loan rate include fees?",
+        "answer": "Only cash flows entered in the model affect the result. It is not a regulatory APR disclosure."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "debt-to-income-ratio": {
+    "questions": [
+      {
+        "question": "Should I enter gross or net income?",
+        "answer": "Gross income with its matching frequency. Use a separate budget to examine take-home cash."
+      },
+      {
+        "question": "Does a lower DTI guarantee approval?",
+        "answer": "No. Credit, documentation, program definitions and lender criteria remain separate."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "down-payment": {
+    "questions": [
+      {
+        "question": "Are closing costs part of down payment?",
+        "answer": "No. They are a separate entered cash requirement."
+      },
+      {
+        "question": "Does the solved price mean I qualify?",
+        "answer": "No. It is a cash-allocation calculation, not an appraisal or underwriting decision."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "bond": {
+    "questions": [
+      {
+        "question": "Is coupon rate the same as yield?",
+        "answer": "No. Coupon determines scheduled interest; yield relates cash flows to price."
+      },
+      {
+        "question": "Does this calculate a guaranteed realized return?",
+        "answer": "No. Payment risk, reinvestment, sale timing and transaction costs remain separate."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "mutual-fund": {
+    "questions": [
+      {
+        "question": "Is lost growth the same as a fee billed to me?",
+        "answer": "No. The ending-value gap can include charges and the foregone growth on those charges."
+      },
+      {
+        "question": "Should I subtract an expense ratio from a net return?",
+        "answer": "Check the return definition first; subtracting an already included fund expense counts it twice."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "investment-fee": {
+    "questions": [
+      {
+        "question": "Is lost growth the same as a fee billed to me?",
+        "answer": "No. The ending-value gap can include charges and the foregone growth on those charges."
+      },
+      {
+        "question": "Should I subtract an expense ratio from a net return?",
+        "answer": "Check the return definition first; subtracting an already included fund expense counts it twice."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "payback-period": {
+    "questions": [
+      {
+        "question": "Does discounted payback use inflation automatically?",
+        "answer": "No. It uses the entered discount rate, whose meaning you must define."
+      },
+      {
+        "question": "Is first recovery the same as profit?",
+        "answer": "No. Later cash flows, total NPV and risks still matter."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "income-tax": {
+    "questions": [
+      {
+        "question": "Does withholding reduce my tax liability?",
+        "answer": "It is generally a payment against liability; changing withholding can change the estimated refund or balance due."
+      },
+      {
+        "question": "Will the paycheck result match my payslip exactly?",
+        "answer": "Not necessarily. This model allocates annual tax and entered deductions rather than reproducing every payroll withholding rule."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "take-home-paycheck": {
+    "questions": [
+      {
+        "question": "Does withholding reduce my tax liability?",
+        "answer": "It is generally a payment against liability; changing withholding can change the estimated refund or balance due."
+      },
+      {
+        "question": "Will the paycheck result match my payslip exactly?",
+        "answer": "Not necessarily. This model allocates annual tax and entered deductions rather than reproducing every payroll withholding rule."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "salary": {
+    "questions": [
+      {
+        "question": "Is annual salary here take-home pay?",
+        "answer": "No. It is a gross-pay conversion; taxes and benefits are separate."
+      },
+      {
+        "question": "Does vacation always reduce actual salary?",
+        "answer": "No. The calculator’s adjustment is a modeling convention, not an employer paid-leave determination."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "marriage-tax": {
+    "questions": [
+      {
+        "question": "Is a negative penalty an error?",
+        "answer": "No. It means the joint estimate is lower than the combined unmarried estimate."
+      },
+      {
+        "question": "Does this compare all married filing choices?",
+        "answer": "No. It compares the stated unmarried situations with married filing jointly and does not optimize separate returns."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "estate-tax": {
+    "questions": [
+      {
+        "question": "Is the 2026 exclusion $15 million?",
+        "answer": "The cited 2026 Form 706 instructions state that basic exclusion amount. The tool is not a general calculator for every year."
+      },
+      {
+        "question": "Does zero federal tax mean no filing is needed?",
+        "answer": "No. Filing and portability elections need separate review of the estate’s facts and applicable rules."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "currency": {
+    "questions": [
+      {
+        "question": "Can I use the inverse rate in the same direction?",
+        "answer": "No. The inverse reverses the source and target units."
+      },
+      {
+        "question": "Is the stored snapshot live?",
+        "answer": "No. Read its displayed provider and date; obtain an actual quote for a transaction."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "inflation": {
+    "questions": [
+      {
+        "question": "Is real return nominal return minus inflation?",
+        "answer": "That is an approximation. The exact growth-factor calculation is (1+nominal)/(1+inflation)−1."
+      },
+      {
+        "question": "Does CPI show my personal inflation exactly?",
+        "answer": "No. It is an index measure with a defined population and basket, not your individual spending record."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "real-return": {
+    "questions": [
+      {
+        "question": "Is real return nominal return minus inflation?",
+        "answer": "That is an approximation. The exact growth-factor calculation is (1+nominal)/(1+inflation)−1."
+      },
+      {
+        "question": "Does CPI show my personal inflation exactly?",
+        "answer": "No. It is an index measure with a defined population and basket, not your individual spending record."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "college-cost": {
+    "questions": [
+      {
+        "question": "Is the result a net-price estimate after aid?",
+        "answer": "No. The model does not determine grants, scholarships or aid eligibility."
+      },
+      {
+        "question": "Why is the enrollment target different from total projected bills?",
+        "answer": "The bills occur across school years, while the enrollment target values their funding at a common earlier date."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "sales-tax": {
+    "questions": [
+      {
+        "question": "Is included tax just gross times the rate?",
+        "answer": "No. Recover net as gross/(1+rate), then subtract it from gross."
+      },
+      {
+        "question": "Does entering zero tax establish an exemption?",
+        "answer": "No. It only changes the arithmetic input and does not determine taxability."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "vat": {
+    "questions": [
+      {
+        "question": "Is included tax just gross times the rate?",
+        "answer": "No. Recover net as gross/(1+rate), then subtract it from gross."
+      },
+      {
+        "question": "Does entering zero tax establish an exemption?",
+        "answer": "No. It only changes the arithmetic input and does not determine taxability."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "depreciation": {
+    "questions": [
+      {
+        "question": "Is book value a sale-price forecast?",
+        "answer": "No. It is cost less modeled depreciation."
+      },
+      {
+        "question": "Does the tool calculate MACRS automatically?",
+        "answer": "No. Its planning methods do not determine tax classifications or elections."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "discount": {
+    "questions": [
+      {
+        "question": "Can I add two successive discount percentages?",
+        "answer": "Generally no. Apply each discount to the remaining price."
+      },
+      {
+        "question": "Is a commission percentage a profit margin?",
+        "answer": "No. Commission is compensation on a stated base; profit margin also depends on costs."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "commission": {
+    "questions": [
+      {
+        "question": "Can I add two successive discount percentages?",
+        "answer": "Generally no. Apply each discount to the remaining price."
+      },
+      {
+        "question": "Is a commission percentage a profit margin?",
+        "answer": "No. Commission is compensation on a stated base; profit margin also depends on costs."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "lease": {
+    "questions": [
+      {
+        "question": "Is residual included in every monthly payment?",
+        "answer": "Its discounted value affects the solved installment, but a purchase at the end is a separate cash event."
+      },
+      {
+        "question": "Is this the same model as Auto Lease?",
+        "answer": "No. The generic tool uses a payment-stream present-value equation; Auto Lease has its own rent-factor convention."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "cagr": {
+    "questions": [
+      {
+        "question": "Is CAGR the average of annual returns?",
+        "answer": "No. It is an endpoint compound-growth equivalent."
+      },
+      {
+        "question": "Can I ignore deposits when computing investment performance?",
+        "answer": "No. Material interim cash flows need an appropriate cash-flow-aware return method."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "tax-equivalent-yield": {
+    "questions": [
+      {
+        "question": "Does tax-equivalent yield guarantee an investment return?",
+        "answer": "No. It is a break-even calculation under entered tax assumptions."
+      },
+      {
+        "question": "Does the tool establish tax exemption?",
+        "answer": "No. Security-specific and residence-specific qualification must be checked separately."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "treasury-bill": {
+    "questions": [
+      {
+        "question": "Is the discount rate my return on cash invested?",
+        "answer": "No. It uses face value; your purchase-cost return has a different denominator."
+      },
+      {
+        "question": "Are these current auction rates?",
+        "answer": "No. All example rates are entered assumptions; obtain an actual quote for a transaction."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "quick-ratio": {
+    "questions": [
+      {
+        "question": "Is quick ratio the SaaS growth ratio?",
+        "answer": "No. This is the accounting acid-test ratio."
+      },
+      {
+        "question": "Does a ratio above one guarantee bills can be paid?",
+        "answer": "No. Timing and the liquidity or collectibility of the assets still matter."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "current-ratio": {
+    "questions": [
+      {
+        "question": "Is quick ratio the SaaS growth ratio?",
+        "answer": "No. This is the accounting acid-test ratio."
+      },
+      {
+        "question": "Does a ratio above one guarantee bills can be paid?",
+        "answer": "No. Timing and the liquidity or collectibility of the assets still matter."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "self-employment-tax": {
+    "questions": [
+      {
+        "question": "Is this all my business tax?",
+        "answer": "No. It estimates self-employment taxes, not the entire income-tax return."
+      },
+      {
+        "question": "Do wages above the Social Security base eliminate Medicare?",
+        "answer": "No. The Social Security wage cap does not impose an equivalent cap on regular Medicare earnings."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "covered-call": {
+    "questions": [
+      {
+        "question": "Does the premium protect all my stock cost?",
+        "answer": "No. It offsets only part of a loss; substantial stock downside remains."
+      },
+      {
+        "question": "Is an expiry payoff a quote to close today?",
+        "answer": "No. Pre-expiry option value and execution are separate."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "credit-card-minimum-payment": {
+    "questions": [
+      {
+        "question": "Is this my actual minimum payment?",
+        "answer": "No. It is a user-defined rule; the issuer’s statement controls the actual amount due."
+      },
+      {
+        "question": "Does the calculation include new purchases?",
+        "answer": "No. The cases assume no additional charges, balance transfers or changing APRs."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "interest": {
+    "questions": [],
+    "checkedOn": "2026-11-01"
   }
 }

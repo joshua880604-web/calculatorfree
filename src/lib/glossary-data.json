@@ -156,7 +156,13 @@
         "url": "https://syndication.finra.org/content/how-are-your-investments-doing-returns-explained"
       }
     ],
-    "checkedOn": "2026-10-22"
+    "checkedOn": "2026-11-01",
+    "guides": [
+      {
+        "path": "/guides/cagr-and-annualized-growth/",
+        "title": "How to Calculate CAGR from Starting and Ending Values"
+      }
+    ]
   },
   {
     "slug": "real-rate-of-return",
@@ -239,7 +245,13 @@
         "url": "https://openstax.org/books/principles-finance/pages/7-4-applications-of-tvm-in-finance"
       }
     ],
-    "checkedOn": "2026-10-22"
+    "checkedOn": "2026-11-01",
+    "guides": [
+      {
+        "path": "/guides/inflation-and-real-investment-return/",
+        "title": "Inflation and Real Return: Separate Prices from Account Growth"
+      }
+    ]
   },
   {
     "slug": "expense-ratio",
@@ -317,7 +329,13 @@
         "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated"
       }
     ],
-    "checkedOn": "2026-10-22"
+    "checkedOn": "2026-11-01",
+    "guides": [
+      {
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "title": "How Fund Fees and Advisory Costs Affect Investment Growth"
+      }
+    ]
   },
   {
     "slug": "dollar-cost-averaging",
@@ -576,7 +594,7 @@
         "url": "https://www.consumerfinance.gov/ask-cfpb/on-a-mortgage-whats-the-difference-between-my-principal-and-interest-payment-and-my-total-monthly-payment-en-1941/"
       }
     ],
-    "checkedOn": "2026-10-29",
+    "checkedOn": "2026-11-01",
     "guides": [
       {
         "path": "/guides/how-to-calculate-personal-loan-payments/",
@@ -597,6 +615,10 @@
       {
         "path": "/guides/how-to-calculate-boat-loan-payments/",
         "title": "How to Calculate Boat Loan Payments and Purchase Budget"
+      },
+      {
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "title": "How to Read Amortization, Loan Payments and Implied Rates"
       }
     ]
   },
@@ -751,12 +773,16 @@
         "url": "https://openstax.org/books/prealgebra-2e/pages/6-4-solve-simple-interest-applications"
       }
     ],
-    "checkedOn": "2026-10-23",
+    "checkedOn": "2026-11-01",
     "scope": "General financial concept; examples are hypothetical.",
     "guides": [
       {
         "path": "/guides/how-to-calculate-simple-interest/",
         "title": "How to Calculate Simple Interest: Formula, Days and Rate Units"
+      },
+      {
+        "path": "/guides/treasury-bill-discount-vs-investment-yield/",
+        "title": "Treasury Bill Discount Rate vs. Return on Purchase Cost"
       }
     ]
   },
@@ -900,8 +926,14 @@
         "url": "https://www.bls.gov/cpi/questions-and-answers.htm"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "checkedOn": "2026-11-01",
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/college-costs-and-saving-before-enrollment/",
+        "title": "College Cost Planning: Future Tuition and Savings at Enrollment"
+      }
+    ]
   },
   {
     "slug": "time-value-of-money",
@@ -1071,7 +1103,7 @@
         "url": "https://syndication.finra.org/content/key-concepts-return-and-rate-return"
       }
     ],
-    "checkedOn": "2026-10-29",
+    "checkedOn": "2026-11-01",
     "scope": "General financial concept; examples are hypothetical.",
     "guides": [
       {
@@ -1093,6 +1125,10 @@
       {
         "path": "/guides/how-to-calculate-roi/",
         "title": "How to Calculate ROI: Profit, Costs and Losses"
+      },
+      {
+        "path": "/guides/covered-call-expiry-profit-and-downside/",
+        "title": "Covered Call at Expiry: Premium, Capped Upside and Stock Risk"
       }
     ]
   },
@@ -1250,8 +1286,14 @@
         "url": "https://openstax.org/books/principles-finance/pages/16-2-net-present-value-npv-method"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "checkedOn": "2026-11-01",
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/simple-and-discounted-payback/",
+        "title": "Simple vs. Discounted Payback: Reading Recovery Time and NPV"
+      }
+    ]
   },
   {
     "slug": "payback-period",
@@ -1372,8 +1414,18 @@
         "url": "https://openstax.org/books/principles-finance/pages/10-2-bond-valuation"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "checkedOn": "2026-11-01",
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/bond-price-coupon-and-yield/",
+        "title": "Bond Price, Coupon and Yield: How the Calculation Works"
+      },
+      {
+        "path": "/guides/tax-equivalent-yield-and-after-tax-income/",
+        "title": "Tax-Equivalent Yield: Break-Even Rate vs. After-Tax Dollars"
+      }
+    ]
   },
   {
     "slug": "certificate-of-deposit",
@@ -2075,7 +2127,7 @@
         "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/"
       }
     ],
-    "checkedOn": "2026-10-23",
+    "checkedOn": "2026-11-01",
     "scope": "General borrowing concept with U.S. disclosure context; exact statutory APR depends on product and jurisdiction.",
     "guides": [
       {
@@ -2089,6 +2141,10 @@
       {
         "path": "/guides/cash-rebate-vs-low-interest-financing/",
         "title": "Cash Rebate vs. Low-Interest Financing: How to Compare"
+      },
+      {
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "title": "Credit Card Minimum Payments: Why the Payment Can Fall While Debt Persists"
       }
     ]
   },
@@ -2280,7 +2336,7 @@
         "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/"
       }
     ],
-    "checkedOn": "2026-10-23",
+    "checkedOn": "2026-11-01",
     "scope": "General financial concept; examples are hypothetical.",
     "guides": [
       {
@@ -2290,6 +2346,10 @@
       {
         "path": "/guides/how-to-calculate-rent-affordability/",
         "title": "How to Calculate Rent Affordability from Income and Debt"
+      },
+      {
+        "path": "/guides/how-to-calculate-debt-to-income-ratio/",
+        "title": "How to Calculate Debt-to-Income Ratio Without Mixing Income Units"
       }
     ]
   },
@@ -2590,8 +2650,14 @@
         "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-to-value-ratio-and-how-does-it-relate-to-my-costs-en-121/"
       }
     ],
-    "checkedOn": "2026-10-29",
-    "scope": "General financial concept; examples are hypothetical."
+    "checkedOn": "2026-11-01",
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/down-payment-and-closing-cost-cash/",
+        "title": "Down Payment and Closing Costs: Calculate the Cash Separately"
+      }
+    ]
   },
   {
     "slug": "home-equity-and-heloc",
@@ -3129,8 +3195,22 @@
         "url": "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "Progressive income-tax concept with U.S. explanatory sources. The worked brackets are fictional and not a filing calculation."
+    "checkedOn": "2026-11-01",
+    "scope": "Progressive income-tax concept with U.S. explanatory sources. The worked brackets are fictional and not a filing calculation.",
+    "guides": [
+      {
+        "path": "/guides/federal-income-tax-vs-paycheck-estimate/",
+        "title": "Federal Income Tax vs. Paycheck Estimates: What Each Number Means"
+      },
+      {
+        "path": "/guides/marriage-tax-penalty-or-bonus/",
+        "title": "Marriage Tax Penalty or Bonus: Compare the Same Two People"
+      },
+      {
+        "path": "/guides/self-employment-tax-net-profit-and-wages/",
+        "title": "Self-Employment Tax: Net Profit, Wages and the 2026 Wage Base"
+      }
+    ]
   },
   {
     "slug": "deduction-vs-credit",
@@ -3238,8 +3318,14 @@
         "url": "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/teen-young-adult/explore-earning/"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "Paycheck concept; linked tax tools use their explicitly labeled U.S. tax years and assumptions."
+    "checkedOn": "2026-11-01",
+    "scope": "Paycheck concept; linked tax tools use their explicitly labeled U.S. tax years and assumptions.",
+    "guides": [
+      {
+        "path": "/guides/hourly-to-salary-and-paid-time-off/",
+        "title": "Hourly to Salary: Work Hours, Paid Time Off and Annual Pay"
+      }
+    ]
   },
   {
     "slug": "sales-tax-vs-vat",
@@ -3314,8 +3400,14 @@
         "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "Generic price arithmetic; VAT context is the EU system and retail sales-tax rules vary by jurisdiction."
+    "checkedOn": "2026-11-01",
+    "scope": "Generic price arithmetic; VAT context is the EU system and retail sales-tax rules vary by jurisdiction.",
+    "guides": [
+      {
+        "path": "/guides/tax-inclusive-prices-sales-tax-and-vat/",
+        "title": "Tax-Inclusive Prices: Sales Tax and VAT Arithmetic Explained"
+      }
+    ]
   },
   {
     "slug": "estate-vs-inheritance-tax",
@@ -3366,8 +3458,14 @@
         "url": "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/inheritance-tax.html"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "U.S. distinction; example is fictional and does not use current state or federal exemption amounts."
+    "checkedOn": "2026-11-01",
+    "scope": "U.S. distinction; example is fictional and does not use current state or federal exemption amounts.",
+    "guides": [
+      {
+        "path": "/guides/federal-estate-tax-exclusion-and-gifts/",
+        "title": "Federal Estate Tax: Exclusion, Gifts and Deductions in the Estimate"
+      }
+    ]
   },
   {
     "slug": "break-even-point",
@@ -3587,8 +3685,14 @@
         "url": "https://openstax.org/books/principles-financial-accounting/pages/11-3-explain-and-apply-depreciation-methods-to-allocate-capitalized-costs"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "checkedOn": "2026-11-01",
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/book-depreciation-methods-and-salvage/",
+        "title": "Book Depreciation: Straight Line, Declining Balance and Salvage"
+      }
+    ]
   },
   {
     "slug": "commission",
@@ -3653,8 +3757,14 @@
         "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "checkedOn": "2026-11-01",
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/discounts-and-sales-commission-bases/",
+        "title": "Discounts and Sales Commissions: Choose the Right Price Base"
+      }
+    ]
   },
   {
     "slug": "lease-residual-value",
@@ -3711,12 +3821,16 @@
         "url": "https://openstax.org/books/contemporary-mathematics/pages/6-11-buying-or-leasing-a-car"
       }
     ],
-    "checkedOn": "2026-10-23",
+    "checkedOn": "2026-11-01",
     "scope": "General financial concept; examples are hypothetical.",
     "guides": [
       {
         "path": "/guides/how-to-calculate-auto-lease-payments/",
         "title": "How to Calculate Auto Lease Payments and Rent Charges"
+      },
+      {
+        "path": "/guides/lease-payment-and-residual-value/",
+        "title": "Lease Payment and Residual Value: A Financing-Equation Guide"
       }
     ]
   },
@@ -3967,8 +4081,14 @@
         "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
       }
     ],
-    "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "checkedOn": "2026-11-01",
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/currency-conversion-rate-direction-and-spread/",
+        "title": "Currency Conversion: Rate Direction, Stored Quotes and Spreads"
+      }
+    ]
   },
   {
     "slug": "percentage-vs-percentage-points",
@@ -4139,8 +4259,14 @@
         "url": "https://openstax.org/books/principles-finance/pages/6-3-liquidity-ratios"
       }
     ],
-    "checkedOn": "2026-10-28",
-    "scope": "General accounting concept with hypothetical balances, not an audited financial opinion or credit decision."
+    "checkedOn": "2026-11-01",
+    "scope": "General accounting concept with hypothetical balances, not an audited financial opinion or credit decision.",
+    "guides": [
+      {
+        "path": "/guides/current-ratio-vs-quick-ratio/",
+        "title": "Current Ratio vs. Quick Ratio: Assets, Liabilities and Working Capital"
+      }
+    ]
   },
   {
     "slug": "current-ratio",
