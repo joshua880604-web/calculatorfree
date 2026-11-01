@@ -10,6 +10,8 @@ Reviewed: October 30, 2026. This is a selected navigation file, not the full sit
 
 ## Start here
 
+- [Financial disclaimer](https://www.calculatorfree.io/disclaimer): Educational use, no personalized financial, investment, tax or legal advice; model limitations, illustrative assumptions, and independent verification.
+
 - [Guides](https://www.calculatorfree.io/guides/): Decision guides, worked examples and reproducible hypothetical model analyses linked to the relevant calculators.
 - [Retirement calculator directory](https://www.calculatorfree.io/retirement-calculators): Retirement income, account rules and financial-independence planning tools.
 - [Business finance calculator directory](https://www.calculatorfree.io/business-calculators): Advertising, shipment costs, profitability, liquidity and business financing tools.

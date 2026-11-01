@@ -4,6 +4,7 @@ import {hasShareTools} from "@/lib/share-tools";
 import EmbedCitationHelp from '@/components/EmbedCitationHelp';
 import BlogSnippetKit from '@/components/BlogSnippetKit';
 import About from '@/components/About';
+import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 import SiteLink from "@/components/SiteLink";
 import {categoryPages,categoryPageBySlug} from '@/lib/category-pages';
@@ -35,6 +36,7 @@ export function generateStaticParams() {
     { slug: "financial-calculator.html" },
     { slug: "about.html" },
     { slug: "privacy.html" },
+    { slug: "disclaimer.html" },
     { slug: "methodology.html" },
   ];
 }
@@ -54,6 +56,8 @@ export async function generateMetadata({
       `About ${siteName}`,
       "Learn how CalculatorFree supports U.S. financial planning with free tools, explicit assumptions, sourced data and clear privacy and calculation limits.",
     );
+  if (slug === "disclaimer.html")
+    return pageMetadata("/disclaimer.html", "Financial Disclaimer", "Educational financial estimates, model assumptions, market and tax limitations, and how to use CalculatorFree.io tools and guides responsibly.");
   if (slug === "privacy.html")
     return pageMetadata(
       "/privacy.html",
@@ -86,6 +90,7 @@ export default async function Page({
       "financial-calculator.html",
       "about.html",
       "privacy.html",
+      "disclaimer.html",
       "methodology.html",
     ].includes(slug)
   )
@@ -99,7 +104,9 @@ export default async function Page({
     c?.title ??
     (slug === "about.html"
       ? "About our financial calculators"
-      : slug === "privacy.html"
+      : slug === "disclaimer.html"
+        ? "Financial disclaimer"
+        : slug === "privacy.html"
         ? "Privacy"
         : slug === "methodology.html"
           ? "Calculation methodology and sources"
@@ -122,7 +129,9 @@ export default async function Page({
             }}
           />
         )}
-        {slug === "methodology.html" ? (
+        {slug === "disclaimer.html" ? (
+          <FinancialDisclaimer />
+        ) : slug === "methodology.html" ? (
           <Methodology />
         ) : slug === "about.html" ? (
           <About />

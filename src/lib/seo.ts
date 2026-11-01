@@ -134,6 +134,7 @@ export function sitemapEntries(config: SiteConfig = siteConfig()) {
     directoryPath,
     "/about.html",
     "/privacy.html",
+    "/disclaimer.html",
     "/methodology.html",
     glossaryPath,
     guidesPath,

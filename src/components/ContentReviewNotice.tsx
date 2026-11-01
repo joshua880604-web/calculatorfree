@@ -4,6 +4,7 @@ import './content-review.css';
 export default function ContentReviewNotice({kind='calculator'}:{kind?:'calculator'|'guide'}){
  return <aside className="content-review" aria-label="Publisher and checking information">
   {kind==='calculator'&&<p className="content-review-byline">Published by <SiteLink href="/about#publisher">{publisherName}</SiteLink></p>}
+  {kind==='guide'&&<p className="guide-disclaimer">Educational information only, not personalized financial, investment, tax or legal advice. Estimates depend on assumptions and do not guarantee outcomes. Read our <SiteLink href="/disclaimer">disclaimer</SiteLink>.</p>}
   <details className="content-review-details">
    <summary>How this {kind} is prepared and checked</summary>
    <p>Published by <SiteLink href="/about#publisher">{publisherName}</SiteLink>. AI tools assist implementation and drafting. Calculator outputs come from formula-based code running in your browser; there is no runtime AI calculation service.</p>

@@ -5,3 +5,5 @@
 .content-review-details>p{margin:12px;font-size:14px;line-height:1.7;}
 .content-review-details>summary:focus-visible{outline:3px solid #d89b20;outline-offset:2px;}
 @media print{.content-review-details>p{display:block;}}
+
+.content-review .guide-disclaimer{margin:0 0 10px;font-size:13px;line-height:1.65;}

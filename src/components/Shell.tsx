@@ -100,6 +100,8 @@ export function Footer() {
         <span> · </span>
         <SiteLink href="/privacy.html">Privacy</SiteLink>
         <span> · </span>
+        <SiteLink href="/disclaimer">Disclaimer</SiteLink>
+        <span> · </span>
         <SiteLink href="/methodology.html">Methodology &amp; sources</SiteLink>
         <span> · </span>
         <SiteLink href="/methodology#editorial-policy">Authorship &amp; review</SiteLink>
