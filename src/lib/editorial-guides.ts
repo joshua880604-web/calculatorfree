@@ -51,7 +51,7 @@ export const biweeklyGuide:EditorialGuide={
  title:'Biweekly vs. Monthly Mortgage Payments: A Fair Comparison',
  heading:'Biweekly vs. Monthly Mortgage Payments: A Same-Budget Comparison',
  description:'Compare biweekly mortgage payments with standard monthly and equal-budget monthly plans. See interest, payoff time, partial-payment rules and worked examples.',
- publishedOn:'2026-10-27',updatedOn:'2026-10-30',calculatorIds:['biweekly-mortgage','mortgage-payoff','mortgage'],
+ publishedOn:'2026-10-27',updatedOn:'2026-11-01',calculatorIds:['biweekly-mortgage','mortgage-payoff','mortgage'],
  topic:'Mortgages',breadcrumb:'Biweekly vs. monthly mortgage payments',
  format:'Comparison & model check',
  cardIntro:'Separate the extra annual payment from the schedule: compare standard monthly, accelerated biweekly and monthly payments with the same annual budget.',

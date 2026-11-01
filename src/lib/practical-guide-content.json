@@ -665,6 +665,10 @@
       {
         "title": "Interpret the ratio with its omissions",
         "text": "The total and housing ratios answer different questions. Food, childcare, transport and emergency saving can still consume take-home cash even if the ratio appears modest. Different programs and lenders apply different definitions and limits, so no single entered percentage proves eligibility. Reconcile the result with the Budget Calculator and actual lender requirements."
+      },
+      {
+        "title": "Reconcile housing DTI with total DTI",
+        "text": "The baseline contains $6,000 gross monthly income and $1,500 of entered housing obligations, so housing and total DTI are both 25%. Add the comparison’s $600 monthly credit card payment: housing DTI stays 25%, while total DTI becomes ($1,500 + $600) / $6,000 = 35%. This is a change in counted obligations, not a change in income. Check whether an entered mortgage amount already contains property tax and insurance before entering them again as separate fields. Do not count rent and a replacement mortgage together unless both genuinely belong in the scenario."
       }
     ],
     "questions": [
@@ -700,6 +704,14 @@
             "label": "Estimate an income-based home budget"
           }
         ]
+      },
+      {
+        "question": "What is included in debt-to-income ratio for this calculation?",
+        "answer": "Enter the recurring housing costs and non-housing payments requested by the form, using their actual frequencies. Outstanding loan balances do not substitute for payments. The housing ratio uses the entered housing costs; total DTI adds entered card, student loan, auto loan and other liabilities. Lender definitions and qualifying-income rules may differ from this input-based calculation."
+      },
+      {
+        "question": "What is a good debt-to-income ratio when budgeting for a house?",
+        "answer": "A ratio is a screening measure, not a universal approval cutoff or a complete household budget. Even the guide’s 25% housing ratio does not deduct groceries, childcare, transport or emergency saving from take-home cash. Compare the required payments with an actual budget and confirm product-specific lender rules instead of treating a single percentage as permission to borrow."
       }
     ],
     "sources": [
@@ -1106,7 +1118,7 @@
     "ids": [
       "down-payment"
     ],
-    "title": "Down Payment and Closing Costs: Calculate the Cash Separately",
+    "title": "How to Calculate a House Down Payment and Closing Costs",
     "answer": "Cash available for a purchase must cover both the entered down payment and entered closing costs. A down-payment percentage is not the percentage of your cash that goes to the seller.",
     "sections": [
       {
@@ -1120,6 +1132,10 @@
       {
         "title": "Keep a reserve outside the calculation",
         "text": "The tool does not certify funds needed at settlement. Reserves, moving costs, repairs, prepaid escrow and lender credits can change cash needs. Mortgage insurance and actual loan eligibility are separate. If some of your available cash must remain liquid, enter only the amount allocated to the transaction and compare it with the lender’s actual disclosures."
+      },
+      {
+        "title": "Calculate the down payment before interpreting the price budget",
+        "text": "At the baseline $100,000 allocated cash, 20% down and 3% closing costs, price = $100,000 / 0.23 = about $434,782.61. The implied down payment is about $86,956.52 and closing costs about $13,043.48. Raising closing costs to 5% keeps allocated cash unchanged but reduces the solved price to $400,000, split into $80,000 down and $20,000 closing costs. A fixed $12,000 closing-cost estimate would instead use price = ($100,000 − $12,000) / 0.20 = $440,000. These are different expense assumptions, not different lender approvals."
       }
     ],
     "questions": [
@@ -1151,6 +1167,14 @@
       {
         "question": "How much cash is needed for 20% down plus 3% closing costs?",
         "answer": "Under those percentage assumptions the cash requirement is 23% of the purchase price, before any other reserves or expenses."
+      },
+      {
+        "question": "How do I calculate a house down payment as a percentage?",
+        "answer": "Divide down payment dollars by home price and multiply by 100. A $60,000 down payment on a $400,000 home is 15%. If $60,000 is the entire available cash budget, subtract closing costs first; using all of it as down payment overstates what remains to cover the transaction."
+      },
+      {
+        "question": "Does buying a house always require 20% down?",
+        "answer": "No. Required down payment depends on the program, property, borrower and lender. This guide’s 20% is an illustrative input. A smaller down payment leaves a larger loan and may involve mortgage insurance or different program costs; this cash-allocation tool does not establish eligibility or determine those charges automatically."
       }
     ],
     "sources": [
@@ -1970,7 +1994,7 @@
     "ids": [
       "payback-period"
     ],
-    "title": "Simple vs. Discounted Payback: Reading Recovery Time and NPV",
+    "title": "How to Calculate Simple and Discounted Payback Period",
     "answer": "Payback identifies the first recovery of the initial investment within the supplied cash flows. Discounted payback uses discounted cash flows; neither measures all investment risk.",
     "sections": [
       {
@@ -1984,6 +2008,10 @@
       {
         "title": "Do not turn no recovery into zero years",
         "text": "Reducing the receipts to $1,000 can leave discounted recovery outside the ten-year supplied horizon. Missing recovery is not an immediate payback. The tool also reports cumulative net cash and NPV so that receipts after the first crossing remain visible. Compare complete cash flows, including any later losses, and do not rank projects on recovery time alone."
+      },
+      {
+        "title": "Reproduce simple and discounted recovery in a worksheet",
+        "text": "Start the cumulative column at negative $10,000 and add $3,000 for each year. After three years the unrecovered amount is $1,000, so simple payback is 3 + $1,000 / $3,000 = 3.3333 years. For discounted payback at 5%, year-one present value is $3,000 / 1.05 = about $2,857.14; year two uses $3,000 / 1.05^2. Sum discounted values until the first recovery, then interpolate using the discounted flow in that recovery year. The interpolation is a reporting convention within the annual model, not evidence that payments actually arrive steadily through the year."
       }
     ],
     "questions": [
@@ -2015,6 +2043,14 @@
       {
         "question": "Does the shortest payback always identify the best project?",
         "answer": "No. Consider later cash flows, total NPV and uncertainty rather than relying only on recovery speed."
+      },
+      {
+        "question": "How do I calculate payback period in Excel for uneven cash flows?",
+        "answer": "Use a year-zero outflow and one subsequent net cash flow per year, preserving zero and negative amounts. Build a cumulative column and locate its first nonnegative entry. Payback equals completed years before recovery plus the unrecovered amount divided by the positive net flow in the recovery year. Initial investment is entered once, not again in the first operating year."
+      },
+      {
+        "question": "How is discounted payback period calculated?",
+        "answer": "Discount each annual net cash flow to time zero at the entered rate before accumulating it against the initial outlay. If discounted flows never recover the investment within the supplied horizon, report no recovery within that horizon rather than zero years. Zero discount makes ordinary and discounted accumulation identical for the same flows."
       }
     ],
     "sources": [
@@ -5186,7 +5222,7 @@
       "inflation",
       "real-return"
     ],
-    "title": "Inflation and Real Return: Separate Prices from Account Growth",
+    "title": "How to Calculate Inflation and Real Rate of Return",
     "answer": "Inflation changes purchasing power. A real investment return divides the nominal growth factor by the inflation factor; subtracting the percentages is only an approximation.",
     "sections": [
       {
@@ -5200,6 +5236,10 @@
       {
         "title": "Calculate real return with growth factors",
         "text": "An 8% nominal return and 3% inflation gives (1.08 / 1.03) − 1, about 4.8544%, rather than exactly 5%. If inflation rises to 9%, the same nominal return becomes negative in purchasing-power terms. Keep holding periods aligned and account for taxes and fees separately; the formula does not automatically make a quoted return after-tax or risk-adjusted."
+      },
+      {
+        "title": "Calculate a CPI change without confusing it with investment growth",
+        "text": "For a hypothetical same-series CPI change from 100 to 125, cumulative inflation is (125 / 100 − 1) × 100 = 25%. The starting $1,000 purchasing-power amount corresponds to $1,250 at the end; this is a cost-equivalence comparison, not a $250 investment profit. For a multiyear interval, do not call the full 25% an annual rate. A constant annual equivalent over n years would be (125 / 100)^(1/n) − 1. Custom CPI mode reports the cumulative change; it does not infer a dated annualization from two index values alone."
       }
     ],
     "questions": [
@@ -5235,6 +5275,14 @@
             "label": "Project inflation-adjusted value"
           }
         ]
+      },
+      {
+        "question": "How do I calculate inflation rate from CPI?",
+        "answer": "Divide end CPI by start CPI, subtract one, then multiply by 100. Compare compatible periods from the same series: a year-over-year monthly comparison uses the same month in consecutive years. Annual-average comparisons answer a different question. This website’s bundled monthly dataset runs through September 2026 and does not supply a live current inflation feed or an unpublished 2026 annual average."
+      },
+      {
+        "question": "How do I calculate real rate of return when inflation exceeds growth?",
+        "answer": "Divide the nominal growth factor by the inflation factor and subtract one. In this guide’s 8% nominal, 9% inflation comparison, 1.08 / 1.09 − 1 is about −0.9174%. The nominal account grows while purchasing power falls. This constant-period example does not select an investment, predict inflation or apply unentered taxes."
       }
     ],
     "sources": [
@@ -6681,6 +6729,10 @@
       {
         "title": "Check for money added or removed",
         "text": "If contributions explain part of the larger ending balance, endpoint CAGR treats that cash as though it were growth. Use a cash-flow-aware return tool for dated deposits or withdrawals. Taxes, fees and purchasing power are not inferred. A positive historical or hypothetical CAGR is not a forecast or a measure of how much loss a household could tolerate."
+      },
+      {
+        "title": "Reproduce endpoint CAGR in Excel and verify elapsed years",
+        "text": "For this guide’s $10,000 beginning value, $20,000 ending value and ten years, Excel =(20000/10000)^(1/10)-1 gives about 7.1773%. Use five rather than ten in the exponent denominator to reproduce the comparison’s 14.8698%. Format the result as a percentage; multiplying the spreadsheet cell by 100 and also applying percent formatting would overstate the display. For Dates mode, this website uses actual UTC elapsed days divided by 365.2425, so an alternative day-count assumption can yield a slightly different annualized rate."
       }
     ],
     "questions": [
@@ -6703,6 +6755,14 @@
       {
         "question": "Can I use CAGR for revenue or sales?",
         "answer": "Yes, for positive beginning revenue and nonnegative ending revenue over the same reporting basis. Revenue CAGR measures growth, not profitability."
+      },
+      {
+        "question": "What does CAGR mean if annual returns vary?",
+        "answer": "CAGR is the constant compound rate that connects the two endpoints. It does not assert that each year earned the displayed rate. A gain of 50% followed by a loss of 50% leaves 75% of the original value: arithmetic mean return is 0%, while two-year CAGR is about −13.3975%. Neither endpoint calculation describes the full risk of the path."
+      },
+      {
+        "question": "Can I calculate CAGR for monthly data?",
+        "answer": "Yes, if the endpoints represent a consistent series and there are no unaccounted intermediate contributions. Convert elapsed months to years for an annualized result: 18 months is 1.5 years, so annual CAGR uses an exponent of 1 / 1.5. The compound rate per month uses a different exponent, 1 / 18. State which rate you report and do not label a monthly rate as annual CAGR."
       }
     ],
     "sources": [
