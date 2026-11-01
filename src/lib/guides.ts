@@ -1,3 +1,4 @@
+import semrushNextEightFaq from './semrush-next-eight-faq-content.json';
 import semrushEightFaq from './semrush-eight-faq-content.json';
 import calculationPageRefresh from './calculation-page-refresh.json';
 import stockContent from './stock-tool-content.json';
@@ -889,7 +890,7 @@ for(const [id,refresh] of Object.entries(calculationPageRefresh)){
 }
 
 // Export-backed FAQ review: merge in place to retain published anchors and links.
-for (const [id, review] of Object.entries(semrushEightFaq)) {
+for (const [id, review] of Object.entries({...semrushEightFaq, ...semrushNextEightFaq})) {
   const guide = guides[id];
   for (const item of review.items) {
     const { queries: _queries, ...patch } = item;

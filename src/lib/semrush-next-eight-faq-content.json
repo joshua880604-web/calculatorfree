@@ -1,0 +1,263 @@
+{
+  "real-return": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate the real rate of return?",
+        "answer": "Use real return = (1 + nominal return) / (1 + inflation) − 1, with both rates covering the same period. At 8% nominal return and 3% inflation, 1.08 / 1.03 − 1 gives about 4.8544% real return. Subtracting 3% from 8% gives a 5% approximation. Real Return compares rates; Purchasing Power also projects a starting amount under entered time and tax assumptions. It does not retrieve investment history.",
+        "queries": [
+          "how to calculate real rate of return"
+        ],
+        "replacesQuestion": "How do nominal return and inflation combine?"
+      },
+      {
+        "question": "Can the real rate of return be negative when my investment grows?",
+        "answer": "Yes. If nominal growth is 2% while inflation is 3%, real return is 1.02 / 1.03 − 1, about −0.9709%. A $10,000 balance grows to $10,200 nominally but buys the equivalent of about $9,902.91 at starting-period prices. A positive dollar gain can therefore accompany a loss of purchasing power.",
+        "queries": [
+          "what is real rate of return"
+        ],
+        "anchor": "faq-real-return-semrush-2"
+      },
+      {
+        "question": "How do I calculate an after-tax real rate of return?",
+        "answer": "In Purchasing Power mode, the tool reduces positive nominal annual gains by the assumed tax rate before adjusting for inflation. With 8% nominal return, 25% assumed annual tax on gains and 3% inflation, the after-tax nominal rate is 6% and the real rate is 1.06 / 1.03 − 1, about 2.9126%. Losses receive no tax credit. This simplified annual tax assumption does not model deferred realization, account rules or actual tax law.",
+        "queries": [
+          "how to calculate real rate of return"
+        ],
+        "replacesQuestion": "Can I calculate after-tax real return?"
+      }
+    ],
+    "removeQuestions": [
+      "Is real return nominal return minus inflation?"
+    ]
+  },
+  "cagr": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "What is CAGR, and how do you calculate it?",
+        "answer": "CAGR means compound annual growth rate: the constant annual rate that links a beginning value to an ending value. Calculate (ending / beginning)^(1 / years) − 1. Growing from $10,000 to $20,000 over five years implies about 14.8698% per year. It does not mean the investment earned that rate every year. Use positive starting value and a consistent time horizon; intermediate deposits and withdrawals need a cash-flow-aware method.",
+        "queries": [
+          "what is cagr",
+          "how to calculate cagr",
+          "what does cagr stand for"
+        ],
+        "anchor": "faq-cagr-semrush-1"
+      },
+      {
+        "question": "How do I calculate CAGR in Excel?",
+        "answer": "With beginning value in A2, ending value in B2 and elapsed years in C2, use =(B2/A2)^(1/C2)-1 and format as a percentage. For 10000, 20000 and 5, the result is about 14.87%. If endpoints are exact dates, this website’s Dates mode uses actual UTC elapsed days / 365.2425; another spreadsheet day basis can produce a different annualized rate. No workbook or automatic cash-flow adjustment is supplied.",
+        "queries": [
+          "how to calculate cagr in excel"
+        ],
+        "replacesQuestion": "How do I calculate CAGR in Excel?"
+      },
+      {
+        "question": "Is CAGR the same as average annual growth rate?",
+        "answer": "No. An arithmetic average adds annual percentage changes and divides by their count; CAGR compounds the endpoint ratio. A gain of 50% followed by a loss of 50% has a 0% arithmetic average, but $100 ends at $75, giving a two-year CAGR of about −13.3975%. CAGR summarizes endpoint growth without showing volatility. Deposits and withdrawals require a cash-flow-aware method such as IRR or XIRR.",
+        "queries": [
+          "what is cagr growth rate"
+        ],
+        "replacesQuestion": "Is CAGR the same as average annual growth rate?"
+      }
+    ],
+    "removeQuestions": [
+      "Is CAGR the average of annual returns?",
+      "Can I ignore deposits when computing investment performance?"
+    ]
+  },
+  "inflation": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate inflation from CPI?",
+        "answer": "Cumulative inflation = (end CPI / start CPI − 1) × 100%. Use two index values from the same series and compatible periods. If CPI rises from 100 to 125, cumulative inflation is 25%; $100 at the start requires $125 at the end to match that indexed purchasing power. This is the total change between endpoints, not automatically an annual rate.",
+        "queries": [
+          "how to calculate inflation rate from cpi",
+          "how to calculate inflation rate"
+        ],
+        "anchor": "faq-inflation-semrush-1"
+      },
+      {
+        "question": "How do I adjust money for inflation over time?",
+        "answer": "Multiply the original amount by end CPI / start CPI for a historical index comparison. For a constant assumed annual inflation rate, Future Value multiplies by (1 + rate)^years and Past Value divides by that factor. At an assumed 3% annually for ten years, $1,000 requires about $1,343.92 at the end to match starting purchasing power. A constant future assumption is not a forecast or a historical CPI observation.",
+        "queries": [
+          "how to calculate inflation"
+        ],
+        "replacesQuestion": "How do I convert old money into today's purchasing power?"
+      },
+      {
+        "question": "Does this calculator show the current inflation rate?",
+        "answer": "Historical CPI uses a bundled BLS CPI-U US city average, all-items, not-seasonally-adjusted dataset, with monthly records through September 2026. It is not a live feed of today’s inflation rate. Select an available month or published annual average; the 2026 annual average is not available. Custom CPI Indexes accepts two values you supply. Compare the same month a year apart for a year-over-year index change rather than treating a partial year as a full annual average.",
+        "queries": [
+          "what is the current inflation rate"
+        ],
+        "anchor": "faq-inflation-semrush-3"
+      }
+    ],
+    "removeQuestions": [
+      "Does CPI show my personal inflation exactly?"
+    ]
+  },
+  "down-payment": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate the down payment on a house?",
+        "answer": "Down payment dollars = home price × down payment percentage / 100. For a $400,000 home at 20%, the down payment is $80,000 and the financed principal is $320,000 before any separately financed charges. Cash Needed also adds the closing costs you enter. Those costs do not become part of the down payment merely because both are due near closing.",
+        "queries": [
+          "how to calculate down payment",
+          "how do you calculate down payment for a house"
+        ],
+        "anchor": "faq-down-payment-semrush-1"
+      },
+      {
+        "question": "How much cash do I need for 20% down plus closing costs?",
+        "answer": "At 20% down and 3% closing costs, cash required is 23% of the entered home price. On $400,000, that is $80,000 down plus $12,000 closing costs, totaling $92,000. Moving costs, emergency reserves, assistance, credits and other unentered expenses are separate. Select Dollars for closing costs when you have a dollar estimate instead of a percentage.",
+        "queries": [
+          "how much is a down payment on a house"
+        ],
+        "replacesQuestion": "How much cash is needed for 20% down plus 3% closing costs?"
+      },
+      {
+        "question": "Do I have to put 20% down on a house?",
+        "answer": "Not universally. Required down payments depend on the loan program, property, borrower and lender. Twenty percent is a scenario you can enter, not a minimum this tool certifies. A smaller down payment leaves a larger loan and may involve mortgage insurance or other program costs. Use FHA, VA or PMI tools for the relevant assumptions and confirm eligibility with a lender.",
+        "queries": [
+          "how much down payment for a house"
+        ],
+        "anchor": "faq-down-payment-semrush-3"
+      }
+    ],
+    "removeQuestions": [
+      "Are closing costs part of down payment?"
+    ]
+  },
+  "simple-interest": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "What is the simple interest formula?",
+        "answer": "Simple interest is I = P × r × t, and ending balance is A = P × (1 + r × t). P is the original principal, r is the rate as a decimal for the chosen period, and t is the matching period count. At $10,000, 6% annually and two years, interest is $1,200 and the ending balance is $11,200. Balance mode displays that ending balance, not interest alone.",
+        "queries": [
+          "what is the formula for simple interest",
+          "how to calculate simple interest"
+        ],
+        "anchor": "faq-simple-interest-semrush-1"
+      },
+      {
+        "question": "How do I calculate the simple interest rate?",
+        "answer": "Rearrange A = P × (1 + r × t) to r = (A / P − 1) / t, then multiply by 100 for a percentage. With $10,000 principal, $11,200 ending balance and two years, the annual simple rate is 6%. Select Rate mode and keep the term and rate units explicit. This is not an APR including fees or an amortizing-loan interest rate inferred from monthly payments.",
+        "queries": [
+          "how to calculate simple interest rate"
+        ],
+        "anchor": "faq-simple-interest-semrush-2"
+      },
+      {
+        "question": "What is the difference between simple and compound interest?",
+        "answer": "Simple interest applies the rate only to original principal; compound interest also applies growth to accumulated interest. At $10,000 and 6% annually for two years, simple interest gives an $11,200 balance, while annual compounding gives $11,236. The $36 difference is interest on first-year interest. The comparison assumes no deposits, withdrawals, taxes or fees.",
+        "queries": [
+          "what is the difference between simple and compound interest"
+        ],
+        "replacesQuestion": "How is simple interest different from compound interest?"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "payback-period": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate the payback period?",
+        "answer": "For constant positive annual net cash flow and no additional investment, simple payback = initial investment / annual net cash flow. A $10,000 investment receiving $3,000 per year has payback of about 3.3333 years: after three years, $1,000 remains to recover, which is one-third of the next $3,000. The fraction interpolates within the recovery year; it is not an exact receipt date. Irregular flows require cumulative recovery rather than this division.",
+        "queries": [
+          "how to calculate payback period",
+          "what is payback period"
+        ],
+        "anchor": "faq-payback-period-semrush-1"
+      },
+      {
+        "question": "How do you calculate discounted payback with uneven cash flows?",
+        "answer": "Discount each year’s net flow by (1 + discount rate)^year, then find the first year cumulative discounted receipts recover the initial investment. Ordinary payback uses undiscounted flows. Irregular Cash Flows accepts one net amount per year, including zero flows or further investments. If recovery never occurs within the supplied horizon, the corresponding payback metric is not shown and the result notes explain that. The fractional recovery year uses linear interpolation within that year.",
+        "queries": [
+          "how to calculate discounted payback period"
+        ],
+        "replacesQuestion": "How do unequal cash flows and a discount rate affect payback?"
+      },
+      {
+        "question": "How can I calculate payback period in Excel?",
+        "answer": "Put the initial investment as a negative cash flow at year zero, then cumulatively add each annual net cash flow. Find the first nonnegative cumulative total. Fractional payback = complete years before recovery + unrecovered amount at the start of the recovery year / that year’s positive net flow. For discounted payback, first discount each flow consistently. A project’s first recovery does not establish lasting profitability when later outflows occur.",
+        "queries": [
+          "how to calculate payback period in excel"
+        ],
+        "anchor": "faq-payback-period-semrush-3"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "debt-to-income-ratio": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate debt-to-income ratio?",
+        "answer": "DTI = required monthly debt payments / gross monthly income × 100%. With $6,000 gross monthly income and $2,000 of counted monthly obligations, DTI is about 33.33%. Enter payment amounts rather than total loan balances, and select each entry’s actual frequency so the tool can normalize it to monthly. Gross income is before taxes and deductions.",
+        "queries": [
+          "how to calculate debt to income ratio",
+          "what is debt to income ratio"
+        ],
+        "replacesQuestion": "Do I enter loan balances or monthly payments for DTI?"
+      },
+      {
+        "question": "What is included in a debt-to-income ratio?",
+        "answer": "This tool sums entered housing costs and non-housing liabilities. Housing fields include rent, mortgage, real estate tax, HOA and home insurance; other fields include credit card payments, student loans, auto loans and other liabilities. Enter only the obligations for the scenario, avoiding rent plus a replacement mortgage or tax and insurance counted twice inside an all-in payment. Lenders decide which documented obligations and income qualify. Living costs such as groceries belong in a separate affordability budget.",
+        "queries": [
+          "what is included in a debt to income ratio"
+        ],
+        "anchor": "faq-debt-to-income-ratio-semrush-2"
+      },
+      {
+        "question": "What is a good debt-to-income ratio?",
+        "answer": "There is no single cutoff that guarantees approval or an affordable budget. Front-end housing ratio counts the entered housing costs; back-end DTI also counts the other entered debts. Lender limits vary by product, credit, reserves and documented income. This calculator reports ratios from your inputs and does not apply a lender’s underwriting decision. Check take-home cash and ongoing living costs separately.",
+        "queries": [
+          "what is a good debt to income ratio"
+        ],
+        "anchor": "faq-debt-to-income-ratio-semrush-3"
+      }
+    ],
+    "removeQuestions": [
+      "Does a lower DTI guarantee approval?",
+      "Should I enter gross or net income?"
+    ]
+  },
+  "mortgage-payoff": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate a mortgage payoff amount?",
+        "answer": "For repayment planning, enter current principal, interest rate and the monthly principal-and-interest payment, or use original-loan information to estimate the remaining balance. The resulting schedule is not a lender’s dated payoff statement. An actual settlement amount can include daily accrued interest, fees or other adjustments this tool excludes. Request a formal payoff quote for the intended date before sending funds.",
+        "queries": [
+          "how to calculate mortgage payoff amount",
+          "how to calculate payoff balance of a mortgage"
+        ],
+        "anchor": "faq-mortgage-payoff-semrush-1"
+      },
+      {
+        "question": "How can I pay off a mortgage faster with extra payments?",
+        "answer": "Extra money applied to principal lowers the balance used for later interest. Compare a recurring extra amount, a one-time lump sum or the modeled biweekly strategy against the same starting loan. Earlier payoff and interest savings depend on the amount and when it reaches principal; they are not proportional to the extra dollars alone. Confirm your servicer’s posting rules and any prepayment terms before acting.",
+        "queries": [
+          "how to payoff mortgage faster",
+          "how to calculate early mortgage payoff"
+        ],
+        "replacesQuestion": "What does a mortgage calculator with extra payments compare?"
+      },
+      {
+        "question": "What happens after I pay off my mortgage?",
+        "answer": "The loan’s principal-and-interest payments end once the lender confirms full repayment, but property taxes, homeowners insurance, HOA charges and maintenance can continue. If escrow ends, arrange those ongoing payments separately and verify any refund and lien-release process with your servicer. The calculator models repayment, not the lender’s account closure or local recording process.",
+        "queries": [
+          "what happens after you payoff your mortgage"
+        ],
+        "anchor": "faq-mortgage-payoff-semrush-3"
+      }
+    ],
+    "removeQuestions": []
+  }
+}

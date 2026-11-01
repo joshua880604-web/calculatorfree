@@ -42,6 +42,10 @@ export const compactReadingSections: Record<string,CompactReadingSections> = {
     "comparisons": true
   },
   "bond": { "questions": true },
+  "inflation": { "questions": true },
+  "down-payment": { "questions": true },
+  "debt-to-income-ratio": { "questions": true },
+  "payback-period": { "questions": true },
   "mutual-fund": {
     "questions": true
   },
