@@ -41,6 +41,7 @@ export const compactReadingSections: Record<string,CompactReadingSections> = {
     "questions": true,
     "comparisons": true
   },
+  "bond": { "questions": true },
   "mutual-fund": {
     "questions": true
   },

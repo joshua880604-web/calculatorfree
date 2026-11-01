@@ -1,0 +1,213 @@
+{
+  "amortization": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate a loan amortization schedule?",
+        "answer": "For a fixed-rate loan with equal monthly payments, payment = P \u00d7 i / (1 \u2212 (1 + i)^\u2212N), where P is principal, i is the annual rate divided by 12, and N is the number of monthly payments. Each row starts with interest = opening balance \u00d7 i; the rest of the payment reduces principal. At 0% interest, payment is P / N. For example, $12,000 over 12 months at 0% requires $1,000 of principal per month. This describes loan repayment, not accounting amortization of an intangible asset.",
+        "queries": [
+          "how to calculate amortization",
+          "how to calculate amortization schedule",
+          "how to calculate amortization table"
+        ],
+        "anchor": "faq-amortization-1"
+      },
+      {
+        "question": "How do extra principal payments change an amortization schedule?",
+        "answer": "Extra principal lowers the balance used for later interest, generally shortening payoff and reducing total interest when the regular payment stays the same. Enter optional monthly, yearly or one-time extra principal in the matching field, and check its timing in the schedule. A $100 extra payment reduces principal by $100; it does not mean exactly $100 of interest saved. The last payment is capped at the remaining amount due.",
+        "queries": [
+          "amortization calculator with extra payments"
+        ],
+        "replacesQuestion": "How do extra payments affect an amortization schedule?"
+      }
+    ],
+    "removeQuestions": [
+      "How do I use an amortization calculator with extra payments?"
+    ]
+  },
+  "bond": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate the price of a fixed-coupon bond?",
+        "answer": "Bond price is the present value of the remaining coupons plus the present value of principal repaid at maturity. For m coupons per year, coupon per period = face value \u00d7 annual coupon rate / m, periodic yield = annual yield / m, and periods = years \u00d7 m. A $1,000 bond paying a 5% annual coupon with one year left is worth $1,000 when its required yield is also 5%, assuming the next $50 coupon and $1,000 principal arrive in one year. Use Settlement-Date Pricing for dated cash flows and accrued interest.",
+        "queries": [
+          "how to calculate bond price",
+          "how to calculate bond value"
+        ],
+        "anchor": "faq-bond-1"
+      },
+      {
+        "question": "What is the difference between coupon rate, current yield and yield to maturity?",
+        "answer": "Coupon rate is annual coupon interest divided by face value. Current yield is annual coupon interest divided by market price. Yield to maturity is the discount rate that equates price with all remaining coupons and principal. For a $50 annual coupon and $950 price, current yield is about 5.26%; that is not necessarily yield to maturity. Use Solve Yield for the modeled yield to maturity. Realized return still depends on payment, reinvestment and any early sale.",
+        "queries": [
+          "how to calculate current yield of a bond",
+          "what is yield to maturity of a bond"
+        ],
+        "replacesQuestion": "Is coupon rate the same as yield?"
+      },
+      {
+        "question": "Can this calculator value I bonds or EE savings bonds?",
+        "answer": "No. This tool values fixed-coupon cash flows using entered terms. US savings bonds use different accrual and redemption rules. Use the appropriate TreasuryDirect savings-bond tool or account record for I or EE bonds; do not treat their advertised rate as a fixed-coupon yield to maturity.",
+        "queries": [
+          "how to calculate value of savings bonds"
+        ],
+        "anchor": "faq-bond-3"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "present-value": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate present value?",
+        "answer": "For a single future amount, PV = FV / (1 + r)^N, with rate r and number of periods N measured consistently. For example, $10,000 due in 10 annual periods discounted at 5% per year has a present value of about $6,139.13. A positive discount rate makes future money worth less today; a negative rate can reverse that relationship. The discount rate is an assumption, not a promised investment return.",
+        "queries": [
+          "how to calculate present value",
+          "what is present value"
+        ],
+        "replacesQuestion": "Why is present value lower than future value?"
+      },
+      {
+        "question": "How do you calculate the present value of an annuity?",
+        "answer": "Use Periodic Payments for equal recurring cash flows. For end-of-period payments, payment-stream PV = PMT \u00d7 [1 \u2212 (1 + r)^\u2212N] / r. Beginning-of-period payments multiply that component by (1 + r). At 0%, the payment-stream value is PMT \u00d7 N. Add any discounted terminal lump sum only once; enter Future amount = 0 if there is none. The form uses a rate per payment period, so monthly payments need a monthly discount rate and months.",
+        "queries": [
+          "how to calculate present value of annuity"
+        ],
+        "replacesQuestion": "Can I value an annuity plus a final lump sum?"
+      },
+      {
+        "question": "Is present value the same as net present value?",
+        "answer": "No. Present value discounts future cash flows. Net present value also includes the initial investment and other signed cash flows: for example, $6,139.13 of future benefits in present dollars minus a $6,000 outlay gives $139.13 NPV. Use the Net Present Value calculator for an uneven series rather than forcing it into this equal-payment form.",
+        "queries": [
+          "how to calculate net present value"
+        ],
+        "anchor": "faq-present-value-3"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "future-value": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate future value with regular deposits?",
+        "answer": "For end-of-period deposits, FV = PV \u00d7 (1 + r)^N + PMT \u00d7 [(1 + r)^N \u2212 1] / r. With no deposits, $10,000 growing at 5% per annual period for 10 periods becomes about $16,288.95. At 0%, add starting principal and all deposits without an interest factor. The result assumes the same entered rate each period and does not predict market returns.",
+        "queries": [
+          "how to calculate future value",
+          "what is the future value formula"
+        ],
+        "anchor": "faq-future-value-1"
+      },
+      {
+        "question": "What is the future value of an ordinary annuity versus an annuity due?",
+        "answer": "An ordinary annuity deposits at the end of each period; an annuity due deposits at the beginning. Beginning deposits have one extra period to grow. With zero starting principal, ten $1,000 annual deposits and a 5% annual rate, end-of-period value is about $12,577.89; beginning-of-period value is about $13,206.79. Select payment timing accordingly. With negative returns, the extra exposure can reduce value instead.",
+        "queries": [
+          "how to calculate future value of annuity"
+        ],
+        "replacesQuestion": "Why does beginning-of-period timing give a different result?"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "mutual-fund": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate mutual fund returns after fees?",
+        "answer": "Enter starting principal, recurring contributions, time and an assumed annual return. This projection deducts the front-end charge from each contribution, adjusts annual growth by (1 + return) \u00d7 (1 \u2212 operating expense ratio) \u2212 1, and applies the deferred sales charge to the final balance. For example, a $10,000 lump sum with a 3% front load, 7% gross return and 1% annual expenses grows to $10,275.21 after one year with no deposits or exit charge. It does not look up actual fund performance.",
+        "queries": [
+          "how are fees calculated on mutual funds",
+          "how to calculate growth of mutual fund"
+        ],
+        "anchor": "faq-mutual-fund-1"
+      },
+      {
+        "question": "Does a mutual fund pay interest like a savings account?",
+        "answer": "Usually a fund produces a total return from changes in its holdings plus distributions, rather than a fixed savings-account interest rate. This calculator uses one assumed growth rate; it does not separately forecast dividends, capital-gain distributions or cash income paid out. Reinvested distributions must be consistent with the return assumption, so do not add them twice.",
+        "queries": [
+          "how to calculate interest on mutual funds",
+          "how to calculate income from mutual fund"
+        ],
+        "anchor": "faq-mutual-fund-2"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "investment-fee": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "What is an expense ratio, and how much does it cost in dollars?",
+        "answer": "An expense ratio expresses annual fund operating expenses as a percentage of fund assets. A 0.20% ratio on a constant $10,000 balance is roughly $20 per year, but actual costs change with daily assets and the fund\u2019s accounting. This tool approximates annual deductions from post-growth assets; it does not reproduce daily fund accrual. Enter 0.20 for 0.20%, not 20.",
+        "queries": [
+          "what is expense ratio",
+          "what is an expense ratio for etf"
+        ],
+        "anchor": "faq-investment-fee-1"
+      },
+      {
+        "question": "How are investment management and advisor fees calculated here?",
+        "answer": "For Before fund fees, the model grows assets, deducts the fund percentage, then deducts the advisor percentage from the remaining assets; contributions are added at year-end. With $10,000, 0% growth, a 1% fund fee and 1% advisor fee, modeled first-year charges total $199 ($100 plus $99). After fund fees skips the additional fund deduction. This is a constant-percentage comparison, not a provider\u2019s monthly or tiered billing schedule.",
+        "queries": [
+          "how are investment management fees calculated",
+          "how to calculate investment fees"
+        ],
+        "replacesQuestion": "Can I use this as a financial advisor fee calculator?"
+      }
+    ],
+    "removeQuestions": [
+      "Is lost growth the same as a fee billed to me?",
+      "Should I subtract an expense ratio from a net return?"
+    ]
+  },
+  "treasury-bill": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate Treasury bill interest from a purchase price?",
+        "answer": "For a bill held to maturity, gross discount interest is face value minus purchase price. Buying $10,000 face value for $9,900 produces $100 gross interest at maturity, before fees and federal taxes. Holding-period return is $100 / $9,900, about 1.0101%; it differs from the discount as a percentage of face value. Use Yield from Purchase Price when your quote is a dollar price rather than a bank discount rate.",
+        "queries": [
+          "how to calculate interest on treasury bills",
+          "how do you calculate yield on treasury bills"
+        ],
+        "anchor": "faq-treasury-bill-1"
+      },
+      {
+        "question": "Do Treasury bills pay interest monthly?",
+        "answer": "No. Treasury bills are generally bought at a discount or at par and repay face value at maturity; they do not pay monthly coupons. A quoted annual yield is not a monthly payment. The effective annual yield shown here assumes repeated reinvestment at the same rate, which future auctions do not guarantee. A ladder needs separate purchase dates and maturities and is not modeled by this single-bill form.",
+        "queries": [
+          "do treasury bills pay interest monthly"
+        ],
+        "anchor": "faq-treasury-bill-2"
+      }
+    ],
+    "removeQuestions": []
+  },
+  "tax-equivalent-yield": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do you calculate tax-equivalent yield?",
+        "answer": "For fully tax-exempt interest, tax-equivalent yield = tax-free yield / (1 \u2212 applicable marginal tax rate). A 4% exempt yield at a 24% rate equals about 5.26% taxable yield. If the exempt option still incurs some tax, this tool uses exempt yield \u00d7 (1 \u2212 exempt-option tax rate) / (1 \u2212 taxable-option tax rate). Enter percentages consistently and check state, local and surtax treatment rather than assuming every municipal bond is fully exempt.",
+        "queries": [
+          "how to calculate tax equivalent yield",
+          "how do i calculate tax equivalent yield",
+          "what is the tax equivalent yield formula"
+        ],
+        "anchor": "faq-tax-equivalent-yield-1"
+      },
+      {
+        "question": "What does tax-equivalent yield tell me about municipal bonds?",
+        "answer": "It is the taxable yield needed to match an exempt investment\u2019s after-tax yield under the entered tax assumptions. It helps compare income in a taxable account; it does not establish that a municipal bond is tax-exempt or make its credit risk, maturity, liquidity and call features equal to a CD or Treasury bill. It is generally not the same comparison inside a tax-deferred or tax-free retirement account.",
+        "queries": [
+          "what is tax equivalent yield",
+          "how to calculate tax equivalent yield on municipal bonds"
+        ],
+        "replacesQuestion": "Does tax-equivalent yield guarantee an investment return?"
+      }
+    ],
+    "removeQuestions": []
+  }
+}

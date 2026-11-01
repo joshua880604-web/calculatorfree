@@ -1,3 +1,4 @@
+import semrushEightFaq from './semrush-eight-faq-content.json';
 import calculationPageRefresh from './calculation-page-refresh.json';
 import stockContent from './stock-tool-content.json';
 import propertyDealContent from './property-deal-content.json';
@@ -885,4 +886,20 @@ for(const [id,refresh] of Object.entries(calculationPageRefresh)){
  const existing=new Set(guide.questions.map(q=>q.question.toLowerCase()));
  guide.questions.push(...refresh.questions.filter(q=>!existing.has(q.question.toLowerCase())));
  guide.checkedOn=refresh.checkedOn;
+}
+
+// Export-backed FAQ review: merge in place to retain published anchors and links.
+for (const [id, review] of Object.entries(semrushEightFaq)) {
+  const guide = guides[id];
+  for (const item of review.items) {
+    const { queries: _queries, ...patch } = item;
+    const replacement = 'replacesQuestion' in patch ? patch.replacesQuestion : undefined;
+    const index = replacement ? guide.questions.findIndex(q => q.question === replacement) : -1;
+    if (replacement && index < 0) throw new Error(`Missing reviewed FAQ: ${id} / ${replacement}`);
+    const { replacesQuestion: _replacement, ...question } = patch as typeof patch & { replacesQuestion?: string };
+    if (index >= 0) guide.questions[index] = { ...guide.questions[index], ...question };
+    else guide.questions.push(question);
+  }
+  guide.questions = guide.questions.filter(q => !(review.removeQuestions as string[]).includes(q.question));
+  guide.checkedOn = review.checkedOn;
 }
