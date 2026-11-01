@@ -323,3 +323,7 @@ keywordTitles['auto-lease']='Auto Lease Calculator - Payment & Money Factor';
 keywordTitles['cash-back-or-low-interest']='Cash Back or Low Interest Calculator - Total Cost';
 searchTasks['auto-lease'][0].description='Calculate a simplified auto lease payment from price, residual, money factor and entered monthly tax. Compare components and cash outlay; buyout and end fees are separate.';
 searchTasks['cash-back-or-low-interest'][0].description='Compare cash rebate versus low-interest auto financing using total payments and upfront cash. Enter actual terms and tax assumptions; offer eligibility is not determined.';
+
+// Reviewed US SERP intent: keep the payment-implied loan-rate task on this canonical URL.
+keywordTitles['interest-rate'] = 'Interest Rate Calculator - Find Your Loan Rate (Free)';
+searchTasks['interest-rate'][0].description = 'Use this free interest rate calculator to find a loan rate from amount, term and monthly payment. See total interest, monthly rate and effective annual rate.';

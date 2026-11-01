@@ -1,3 +1,4 @@
+import InterestRateReference from './InterestRateReference';
 import PmiRateReference from './PmiRateReference';
 import SourceReferences from './SourceReferences';
 import RemainingFinanceReference from './RemainingFinanceReference';
@@ -67,6 +68,7 @@ export default function CalculatorGuide({
             <p className="content-date">Result explanations checked <time dateTime={insight.checkedOn}>{insight.checkedOn}</time> against this calculator’s local model. Model scope and sources appear below.</p>
           </>}
           {calculator.id === "roi" && <RoiReference />}
+          {calculator.id === "interest-rate" && <InterestRateReference/>}
           {['barista-fire','coast-fire'].includes(calculator.id) && <p>Compare the income and withdrawal assumptions in our <SiteLink href="/guides/barista-fire-vs-coast-fire/">Barista FIRE vs. Coast FIRE guide</SiteLink>.</p>}
           {calculator.id === "house-affordability" && <HouseIncomeReference/>}
           {["personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && (compact||sections.comparisons?<GuideDisclosure title={loanCostComparisonTitle(calculator.id)}><LoanCostReference id={calculator.id}/></GuideDisclosure>:<LoanCostReference id={calculator.id}/>)}

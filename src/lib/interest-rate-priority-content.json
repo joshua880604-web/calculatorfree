@@ -1,0 +1,124 @@
+{
+  "summary": "An interest rate calculator works backward from a financed balance, term and fixed monthly principal-and-interest payment. It solves the monthly discount rate and reports its nominal annual equivalent, total scheduled payments, total interest and effective annual rate. These are contract-style cash-flow estimates, not current market quotes.",
+  "scope": "Equal end-of-month payments fully repay the entered principal with no balloon. Enter whole monthly payment periods and exclude escrow or separately paid charges from principal-and-interest payments. Annual rate means monthly rate × 12; effective annual rate compounds that monthly rate twelve times. Fees, changing rates, daily accrual and irregular payments are excluded. Supported negative mathematical rates remain visible with a warning. This calculation does not establish APR, lender eligibility or an available loan offer.",
+  "questions": [
+    {
+      "question": "How do I calculate a loan interest rate from its monthly payment?",
+      "answer": "Enter the financed principal, total loan term and fixed monthly principal-and-interest payment. The solver finds the monthly rate i satisfying P = M × [1 − (1 + i)^−N] / i, then reports i × 12 as a nominal annual percentage. For a $10,000 balance repaid by twelve $900 payments, the implied nominal annual rate is about 14.45%. Keep escrow, insurance and unrelated charges out of the payment unless intentionally treating them as cash flows; the result is not automatically regulatory APR."
+    },
+    {
+      "question": "Why is my calculated loan rate negative or unavailable?",
+      "answer": "When scheduled payments total less than the principal, the equation can imply a negative rate; for example, twelve $800 payments cannot repay $10,000 at a nonnegative rate. Recheck the financed balance, monthly payment and term. The tool preserves mathematically supported negative-rate results and flags them. A fractional monthly payment count, unsupported numeric range or no solution can cause an error. Balloon balances and irregular or changing payments need a different model."
+    },
+    {
+      "question": "Is the installment all principal?",
+      "answer": "No. Interest is charged on the opening balance; the remainder of the payment reduces principal."
+    },
+    {
+      "question": "Is the calculated interest rate the same as APR?",
+      "answer": "Not necessarily. This tool solves the nominal annual rate implied by equal monthly payments and entered principal. A lender’s APR can include origination and other applicable finance charges under disclosure rules. The effective annual rate shown here reflects monthly compounding only; it does not add fees. Use the APR Calculator for its stated fee assumptions and compare actual lender disclosures separately."
+    },
+    {
+      "question": "How do I convert an annual interest rate to a monthly rate?",
+      "answer": "For a nominal annual rate compounded monthly, divide by twelve: 12% nominal means 1% per month. For a 12% effective annual yield, monthly rate is 1.12^(1/12) − 1, about 0.9489%. These are different quote conventions. This solver reports a nominal annual rate from fixed monthly loan payments; it does not identify the convention in a bank advertisement.",
+      "anchor": "faq-interest-rate-semrush-2"
+    },
+    {
+      "anchor": "interest-rate-excel",
+      "question": "How do I calculate a loan interest rate in Excel?",
+      "answer": "For a $10,000 loan repaid by twelve $900 month-end payments, =RATE(12,-900,10000)*12 gives about 14.4521% nominal annual interest when formatted as a percentage. RATE returns a rate per payment period; multiplying by twelve annualizes it nominally. Use (1+RATE(12,-900,10000))^12-1 for the effective annual rate. The website accepts a positive payment amount, while Excel needs opposing cash-flow signs."
+    },
+    {
+      "anchor": "interest-rate-zero",
+      "question": "What if the total payments equal the original loan amount?",
+      "answer": "With no fees, no balloon and equal end-of-month payments, total payments equal to principal imply a zero rate. A $12,000 balance repaid in twelve $1,000 installments has $12,000 total payments and $0 modeled interest. Fees paid separately could still make the real borrowing cost positive."
+    },
+    {
+      "anchor": "interest-rate-savings",
+      "question": "Can this calculator find a savings account interest rate?",
+      "answer": "This form solves a fully repaid installment loan, rather than growth in a savings account. For starting and ending savings balances without interim cash flows, CAGR can solve the annualized endpoint growth rate. Savings projects balances or solves contribution and time goals from a rate you enter; Compound Interest converts rate conventions. None retrieves current bank offers."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Find a loan rate from twelve monthly payments",
+      "mode": "rate",
+      "values": {
+        "principal": "10000",
+        "years": "1",
+        "months": "0",
+        "payment": "900"
+      },
+      "inputs": "Borrow $10,000 and make twelve $900 month-end payments. No fees, balloon balance, escrow or other cash flows.",
+      "steps": [
+        "Scheduled payments total 12 × $900 = $10,800, leaving $800 above principal.",
+        "Solve 10000 = 900 × [1 − (1+i)^−12] / i for the monthly rate.",
+        "Monthly rate is approximately 1.20435%; nominal annual rate is twelve times that, about 14.45215%."
+      ],
+      "answer": "Nominal annual interest: about 14.4521%; total scheduled payments: $10,800; interest: $800.",
+      "expected": {
+        "label": "Annual interest rate",
+        "value": 14.45214813770271,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Reconstruct a five-year auto-loan rate",
+      "mode": "rate",
+      "values": {
+        "principal": "20000",
+        "years": "5",
+        "months": "0",
+        "payment": "386.6560305885654"
+      },
+      "inputs": "A hypothetical $20,000 financed balance, sixty end-of-month payments of $386.6560305885654, with no separate fees or balloon. The full-precision payment isolates a nominal 6% rate.",
+      "steps": [
+        "The fixed-payment equation gives monthly rate 0.5%.",
+        "Multiply by twelve for a 6% nominal annual rate.",
+        "Total payments are about $23,199.36 and interest is about $3,199.36. Rounding actual installments to cents can slightly change the implied rate."
+      ],
+      "answer": "Nominal annual rate: 6%; effective annual rate: about 6.1678%.",
+      "expected": {
+        "label": "Annual interest rate",
+        "value": 6,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Find the rate when payments equal principal",
+      "mode": "rate",
+      "values": {
+        "principal": "12000",
+        "years": "1",
+        "months": "0",
+        "payment": "1000"
+      },
+      "inputs": "A $12,000 loan and twelve $1,000 end-of-month payments; no other charges or balances.",
+      "steps": [
+        "Twelve payments total $12,000, exactly the original principal.",
+        "With no additional cash flows, the implied interest rate and modeled interest are zero."
+      ],
+      "answer": "Annual interest rate: 0%; total interest: $0.",
+      "expected": {
+        "label": "Annual interest rate",
+        "value": 0,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "CFPB: loan interest rate versus fee-inclusive APR",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/"
+    },
+    {
+      "title": "Microsoft: RATE function and payment-period cash-flow conventions",
+      "url": "https://support.microsoft.com/en-us/office/rate-function-9f665657-4a7e-4bb7-a030-83fc59e748ce"
+    },
+    {
+      "title": "Calculation methodology, rule versions and testing limitations",
+      "url": "/methodology.html"
+    }
+  ],
+  "checkedOn": "2026-11-01"
+}

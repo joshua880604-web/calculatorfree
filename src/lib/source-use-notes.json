@@ -1317,6 +1317,11 @@
       "role": "site",
       "usedFor": "This publisher’s cash-flow model scope and numerical-check documentation.",
       "scope": "This is our own methodology, not external certification or a professional financial review."
+    },
+    "https://support.microsoft.com/en-us/office/rate-function-9f665657-4a7e-4bb7-a030-83fc59e748ce": {
+      "role": "method",
+      "usedFor": "RATE function inputs, equal payment periods, end-of-period timing and spreadsheet cash-flow signs for the loan-rate reproduction.",
+      "scope": "Documents Excel conventions; not a validation of lender APR disclosures, fees, market rates or this site’s numerical implementation."
     }
   },
   "pages": {
@@ -2330,7 +2335,7 @@
       ]
     },
     "calculator:interest-rate": {
-      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "note": "The references support the equal-period loan equation, spreadsheet reproduction and the distinction between a nominal rate and fee-inclusive APR. The calculator assumes complete repayment by equal month-end installments, not a daily-interest or lender-disclosure calculation.",
       "extras": [
         {
           "title": "OpenStax: periodic loan payment and amortization method",

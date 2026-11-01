@@ -1,3 +1,4 @@
+import interestRatePriorityContent from './interest-rate-priority-content.json';
 import semrushThirdEightFaq from './semrush-third-eight-faq-content.json';
 import semrushNextEightFaq from './semrush-next-eight-faq-content.json';
 import semrushEightFaq from './semrush-eight-faq-content.json';
@@ -905,3 +906,9 @@ for (const [id, review] of Object.entries({...semrushEightFaq, ...semrushNextEig
   guide.questions = guide.questions.filter(q => !(review.removeQuestions as string[]).includes(q.question));
   guide.checkedOn = review.checkedOn;
 }
+
+// Payment-implied loan rate: one canonical tool with explicit adjacent-task links.
+Object.assign(guides['interest-rate'], interestRatePriorityContent);
+relatedCalculatorIds['interest-rate'] = ['apr','auto-loan','personal-loan','loan','savings','compound-interest','cagr'];
+for (const id of ['apr','auto-loan','personal-loan','loan'])
+  relatedCalculatorIds[id] = [...new Set(['interest-rate', ...(relatedCalculatorIds[id] ?? [])])].slice(0,8);

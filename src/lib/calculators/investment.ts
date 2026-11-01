@@ -398,22 +398,32 @@ const rateTool = tool(
       description:
         "Find the nominal annual rate implied by a fixed monthly payment.",
       formula: "Numerically solve P = A × (1 − (1+i)^−N) / i.",
-      calculate: (v) => ({
-        metrics: [
-          metric(
-            "Annual interest rate",
-            solveRate(
-              n(v, "principal"),
-              n(v, "payment"),
-              n(v, "years") * 12 + n(v, "months"),
-            ) * 1200,
-            "percent",
-          ),
-        ],
-      }),
+      calculate: (v) => {
+        const principal = positive(n(v, "principal"), "Loan amount"),
+          installment = positive(n(v, "payment"), "Monthly payment"),
+          months = n(v, "years") * 12 + n(v, "months");
+        if (!Number.isInteger(months) || months < 1)
+          throw new Error("Use a whole number of monthly payments. Check years and additional months.");
+        const total = installment * months;
+        const monthlyRate = total === principal ? 0 : solveRate(principal, installment, months);
+        return {
+          metrics: [
+            metric("Annual interest rate", monthlyRate * 1200, "percent"),
+            money("Total scheduled payments", total),
+            money("Total interest", total - principal),
+            metric("Monthly interest rate", monthlyRate * 100, "percent"),
+            metric("Effective annual rate", Math.expm1(12 * Math.log1p(monthlyRate)) * 100, "percent"),
+          ],
+          notes: [
+            "Equal end-of-month principal-and-interest payments over the entered whole monthly periods. No fees, escrow, balloon balance, skipped payments or daily-interest convention are modeled.",
+            "Annual interest rate is the nominal monthly rate times twelve. Effective annual rate reflects monthly compounding; neither is a lender's fee-inclusive APR disclosure.",
+            ...(monthlyRate < 0 ? ["Scheduled payments total less than principal, so these inputs imply a negative mathematical rate. Recheck principal, term and payment; this is not a typical loan offer or proof of a subsidy."] : []),
+          ],
+        };
+      },
     },
   ],
-  "Find the interest rate from a loan balance, term, and monthly payment.",
+  "Find your loan interest rate from the amount borrowed, term and monthly payment. Review total payments and interest before fees.",
 );
 const simpleFields = () => [
   num("principal", "Principal", 10000, "$"),
