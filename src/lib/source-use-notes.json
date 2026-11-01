@@ -632,6 +632,301 @@
       "role": "background",
       "usedFor": "Where to research business expense and tax-reporting topics.",
       "scope": "A pricing-cost example does not determine deductibility, cost capitalization or actual tax treatment."
+    },
+    "https://www.irs.gov/taxtopics/tc404": {
+      "role": "rule",
+      "usedFor": "Dividend distributions, reinvestment and taxable-account reporting context.",
+      "scope": "Reinvestment does not itself remove dividend tax. The model does not classify qualified dividends or determine an investor’s actual tax."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks": {
+      "role": "background",
+      "usedFor": "Stock ownership, dividends and the possibility of capital gains or losses.",
+      "scope": "No live prices, company forecasts or dividend guarantees are supplied by this reference."
+    },
+    "https://www.finra.org/investors/insights/dollar-cost-averaging": {
+      "role": "background",
+      "usedFor": "Regular fixed-dollar purchases and the benefits and limitations of dollar-cost averaging.",
+      "scope": "A weighted purchase price is descriptive arithmetic, not proof that averaging lowers risk or guarantees a profit."
+    },
+    "https://www.irs.gov/publications/p550": {
+      "role": "rule",
+      "usedFor": "Investment distributions, security basis and identification of shares sold.",
+      "scope": "Publication 550 is the 2025 edition. A portfolio average is not automatically an eligible tax-basis election; actual lots, adjustments and holding periods matter."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/annuities": {
+      "role": "background",
+      "usedFor": "Annuity product types, charges, surrender terms and investment risks.",
+      "scope": "Our fixed-input cash-flow arithmetic is not an insurer quote, a mortality-based lifetime guarantee or a simulation of every contract rider."
+    },
+    "https://www.fidelity.com/learning-center/personal-finance/what-is-fat-fire": {
+      "role": "background",
+      "usedFor": "Lean and Fat FIRE as different lifestyle and spending approaches.",
+      "scope": "The labels have no universal dollar threshold. The source does not establish a safe withdrawal rate, future return or personal retirement date."
+    },
+    "https://www.optionseducation.org/strategies/all-strategies/covered-call-buy-write": {
+      "role": "method",
+      "usedFor": "Covered-call expiration payoff, capped upside, substantial stock downside and assignment risk.",
+      "scope": "Our stated expiry scenarios are not an options price, probability forecast or simulation of every early assignment, dividend or tax event."
+    },
+    "https://www.opm.gov/retirement-center/fers-information/computation/": {
+      "role": "background",
+      "usedFor": "How a particular federal defined-benefit plan uses service and salary rules.",
+      "scope": "FERS is plan-specific. Our pension comparison uses entered benefits and does not determine FERS eligibility, credited service or an official benefit amount."
+    },
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/": {
+      "role": "background",
+      "usedFor": "Emergency savings as a reserve for unexpected expenses and interrupted income.",
+      "scope": "A suitable reserve depends on the household. The reference does not prescribe our selected months, returns or a universally sufficient balance."
+    },
+    "https://www.investor.gov/financial-tools-calculators/calculators/savings-goal-calculator": {
+      "role": "background",
+      "usedFor": "The roles of starting savings, a target, time, contributions and interest in a savings plan.",
+      "scope": "This related educational tool does not supply our exact contribution timing or bank account terms, and does not endorse the projected balance."
+    },
+    "https://www.consumerfinance.gov/rules-policy/regulations/1030/a/": {
+      "role": "rule",
+      "usedFor": "Regulation DD’s annual percentage yield definition, annualization and account-term assumptions.",
+      "scope": "A simplified periodic growth illustration is not a compliant deposit disclosure for every day-count, tier, variable rate or withdrawal condition."
+    },
+    "https://walletburst.com/tools/barista-fire-calc/": {
+      "role": "background",
+      "usedFor": "Barista FIRE as combining investments with continuing part-time earnings.",
+      "scope": "This third-party tool supplies concept context, not our calculation service, independent validation or a guarantee of jobs, benefits or sustainable withdrawals."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs/mutual-funds": {
+      "role": "background",
+      "usedFor": "Mutual-fund diversification, expenses, distributions and investment risk.",
+      "scope": "The source does not support a guaranteed growth preset or show that a constant-return retirement projection can withstand market losses."
+    },
+    "https://www.ssa.gov/policy/docs/statcomps/supplement/2025/apnc.html": {
+      "role": "rule",
+      "usedFor": "The sequence of earnings indexing, PIA computation, COLAs and claiming adjustments in retired-worker benefits.",
+      "scope": "This is the 2025 Appendix C with its stated cohorts and assumptions. Our planner starts with an entered benefit; it does not reconstruct an earnings record or determine an official award."
+    },
+    "https://www.ssa.gov/retirement/plan-for-retirement": {
+      "role": "background",
+      "usedFor": "Where to obtain personal Social Security estimates and review work, tax and healthcare considerations.",
+      "scope": "Our comparison is not a my Social Security record, an official benefit determination or a complete family-benefit and earnings-test analysis."
+    },
+    "https://www.ssa.gov/benefits/retirement/planner/agereduction.html": {
+      "role": "rule",
+      "usedFor": "Full retirement age and reductions for claiming retired-worker benefits early.",
+      "scope": "Use the applicable birth cohort and monthly timing. Modeled longevity, discount rates and future COLAs are assumptions, not SSA forecasts."
+    },
+    "https://www.ssa.gov/benefits/retirement/planner/delayret.html": {
+      "role": "rule",
+      "usedFor": "Delayed retirement credits and the limit on earning credits after age 70.",
+      "scope": "Retired-worker credits do not apply identically to spouse or survivor benefits; the planner is not a complete household claiming optimizer."
+    },
+    "https://treasurydirect.gov/marketable-securities/understanding-pricing/": {
+      "role": "method",
+      "usedFor": "Treasury-bill discount price from face value, discount rate and a 360-day convention.",
+      "scope": "The discount rate uses face value; investment yield uses purchase price and a stated day count. These are different measures, not live auction quotations."
+    },
+    "https://treasurydirect.gov/marketable-securities/treasury-bills/": {
+      "role": "rule",
+      "usedFor": "Treasury-bill maturity proceeds and the distinction between federal and state/local income tax treatment.",
+      "scope": "Hold-to-maturity examples do not price an early sale, predict auction rates or calculate a complete personal tax return."
+    },
+    "https://www.eatonvance.com/taxes-and-tools/tax-tools/tax-equivalent-yield-calculator.html": {
+      "role": "background",
+      "usedFor": "Tax-equivalent yield comparisons and the importance of the investor’s tax situation.",
+      "scope": "Use consistent yield and tax assumptions. This commercial reference is not a recommendation, current product quote or assurance that AMT, state tax and credit risk are equivalent."
+    },
+    "https://support.microsoft.com/en-us/excel/functions/mirr-function": {
+      "role": "method",
+      "usedFor": "Periodic MIRR cash-flow signs, finance and reinvestment rates, and Excel’s sample.",
+      "scope": "Periods must be consistent; MIRR is not XIRR, does not prove reinvestment is available and does not replace NPV when comparing project scale."
+    },
+    "https://files.consumerfinance.gov/f/documents/cfpb_well-being_monthly-budget.pdf": {
+      "role": "method",
+      "usedFor": "A monthly budget organized as income less spending and saving allocations.",
+      "scope": "The worksheet supplies categories, not this household’s actual costs, an affordability approval or a mandatory allocation rule."
+    },
+    "https://consumer.gov/content/make-budget-worksheet": {
+      "role": "background",
+      "usedFor": "Recording this month’s spending and using it to plan a later budget.",
+      "scope": "This worksheet introduction does not supply default expenses or certify that a proposed savings target is feasible."
+    },
+    "https://www.bls.gov/cpi/questions-and-answers.htm": {
+      "role": "background",
+      "usedFor": "What the Consumer Price Index measures and how index changes describe consumer-price inflation.",
+      "scope": "A CPI concept reference is not a live series in a constant-inflation projection; personal expenses can change differently from the index."
+    },
+    "https://openstax.org/books/prealgebra-2e/pages/6-4-solve-simple-interest-applications": {
+      "role": "method",
+      "usedFor": "Simple interest on a fixed principal for a consistently stated rate and time period.",
+      "scope": "This classroom fixed-principal method is distinct from daily interest on a changing loan balance and does not model every contract charge."
+    },
+    "https://openstax.org/books/principles-finance/pages/10-2-bond-valuation": {
+      "role": "method",
+      "usedFor": "Bond value as discounted coupon payments and principal at a stated yield.",
+      "scope": "Periodic rate, coupon timing and face value must match. A textbook example is not a live bond price or an assessment of credit, liquidity or call risk."
+    },
+    "https://syndication.finra.org/content/how-are-your-investments-doing-returns-explained": {
+      "role": "method",
+      "usedFor": "Total return, income and price changes, and the difference between cumulative and annualized returns.",
+      "scope": "Endpoint growth alone does not account for interim external cash flows or describe the risk and path of returns."
+    },
+    "https://consumer.gov/your-money/making-budget": {
+      "role": "background",
+      "usedFor": "Building a budget from income, bills, less frequent expenses and saving.",
+      "scope": "These are planning categories, not a required savings percentage or validation of the entered household budget."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/dollar-cost-averaging": {
+      "role": "background",
+      "usedFor": "Investing a fixed dollar amount at regular intervals.",
+      "scope": "This is a purchase strategy definition, not a guarantee of lower cost, protection from losses or superiority to an immediate lump sum."
+    },
+    "https://syndication.finra.org/content/benefits-and-limitations-dollar-cost-averaging": {
+      "role": "background",
+      "usedFor": "Practical benefits and limitations of dollar-cost averaging.",
+      "scope": "Comparisons depend on market paths, cash availability and timing; the source does not guarantee our illustrative outcome."
+    },
+    "https://www.stlouisfed.org/publications/page-one-economics/2023/01/03/adjusting-for-inflation": {
+      "role": "method",
+      "usedFor": "Converting nominal dollar amounts to purchasing-power amounts using a price index.",
+      "scope": "The article supports inflation adjustment; our exact real-return conversion and any simplified tax treatment are separately stated model assumptions."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio": {
+      "role": "background",
+      "usedFor": "Expense ratio as annual fund operating expenses relative to fund assets.",
+      "scope": "It excludes some investor costs. Published net returns may already reflect fund expenses, so subtracting the ratio again can double count."
+    },
+    "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated": {
+      "role": "background",
+      "usedFor": "Why fees reduce portfolio balances and the growth available on those balances.",
+      "scope": "The site’s annual fee timing is a simplification; this bulletin does not supply a fund’s fee schedule or validate our exact deduction sequence."
+    },
+    "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/characteristics-mutual-funds-exchange-traded-funds": {
+      "role": "background",
+      "usedFor": "Structural similarities and differences between mutual funds and ETFs.",
+      "scope": "Product structure alone does not determine liquidity, total fees, tax outcomes or the suitability of a particular fund."
+    },
+    "https://syndication.finra.org/content/defining-value-investment": {
+      "role": "method",
+      "usedFor": "Dividend yield and related ways to describe an investment’s value.",
+      "scope": "Dividend yield is not total return or a promised future distribution. Use a consistent annual dividend and share-price basis."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/compound-interest": {
+      "role": "method",
+      "usedFor": "Interest earned on principal and on previously accumulated interest.",
+      "scope": "The definition does not set a future return, deposit frequency or tax treatment; the calculator states those conventions separately."
+    },
+    "https://www.dol.gov/general/topic/retirement/typesofplans": {
+      "role": "background",
+      "usedFor": "The distinction between defined-benefit and defined-contribution retirement plans.",
+      "scope": "Actual benefits, survivor options and vesting follow the plan documents; a generic pension projection is not a benefit award or insurance determination."
+    },
+    "https://openstax.org/books/principles-finance/pages/16-2-net-present-value-npv-method": {
+      "role": "method",
+      "usedFor": "Discounting cash inflows and outflows to a common valuation date to obtain NPV.",
+      "scope": "The selected discount rate and projected cash flows remain assumptions; positive modeled NPV does not establish funding availability or forecast accuracy."
+    },
+    "https://openstax.org/books/principles-finance/pages/7-1-now-versus-later-concepts": {
+      "role": "method",
+      "usedFor": "Why the time at which a cash flow occurs changes its present value.",
+      "scope": "Time-value arithmetic does not choose a suitable discount rate, establish a market quotation or remove investment risk."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/certificates-deposit-cds": {
+      "role": "background",
+      "usedFor": "CD maturity, early-withdrawal conditions and deposit-product risks.",
+      "scope": "A generic CD projection does not establish an institution’s insurance coverage, current APY or actual penalty terms."
+    },
+    "https://www.irs.gov/publications/p551": {
+      "role": "rule",
+      "usedFor": "Purchased-asset basis and adjustments, including acquisition-cost context.",
+      "scope": "Publication 551 is revised December 2025. Portfolio averages do not determine tax-lot eligibility, wash-sale adjustments or tax due."
+    },
+    "https://openstax.org/books/principles-finance/pages/16-3-internal-rate-of-return-irr-method": {
+      "role": "method",
+      "usedFor": "Periodic IRR as a discount rate that makes modeled NPV zero.",
+      "scope": "Nonconventional cash flows can have multiple or no suitable roots. IRR does not measure project scale or guarantee realized returns."
+    },
+    "https://www.ssa.gov/benefits/retirement/planner/1960.html": {
+      "role": "rule",
+      "usedFor": "Retired-worker claiming reductions for the 1960-or-later birth cohort.",
+      "scope": "This cohort’s full retirement age is not universal; spousal benefits, work limits and official award calculations require separate treatment."
+    },
+    "https://syndication.finra.org/content/key-concepts-return-and-rate-return": {
+      "role": "method",
+      "usedFor": "Net gain relative to the stated starting investment in a rate-of-return calculation.",
+      "scope": "Specify fees, income and the cash basis. Simple ROI is not automatically annualized, time-weighted or money-weighted return."
+    },
+    "https://openstax.org/books/principles-finance/pages/13-1-measures-of-center": {
+      "role": "method",
+      "usedFor": "Arithmetic and geometric means and their different interpretations for investment growth.",
+      "scope": "Use positive gross growth factors for the stated geometric calculation. An arithmetic average is not a compound growth rate or a forecast."
+    },
+    "https://support.microsoft.com/en-us/excel/go-with-the-cash-flow-calculate-npv-and-irr-in-excel": {
+      "role": "method",
+      "usedFor": "Spreadsheet NPV and IRR timing, cash-flow signs and related return measures.",
+      "scope": "Excel’s periodic functions are not interchangeable with dated XNPV/XIRR, and a spreadsheet result does not validate future cash-flow estimates."
+    },
+    "https://www.investor.gov/introduction-investing/getting-started/understanding-fees": {
+      "role": "background",
+      "usedFor": "Transaction charges, ongoing account costs and questions to ask when comparing investments.",
+      "scope": "The calculator uses entered fees rather than a live broker schedule; simplified fee deductions do not identify every tax or product charge."
+    },
+    "https://www.boe.ca.gov/info/iav/lesson4.htm": {
+      "role": "method",
+      "usedFor": "Present-worth, compound-growth and level-annuity factors in time-value calculations.",
+      "scope": "The California appraisal lesson is used for general financial arithmetic, not a property appraisal, tax assessment or an investment recommendation."
+    },
+    "https://support.microsoft.com/en-us/excel/functions/pv-function": {
+      "role": "method",
+      "usedFor": "PV function arguments, periodic rates, payment timing and opposite cash-flow signs.",
+      "scope": "Equal-period constant-rate cash-flow valuation is not a mortality-based insurance quote or a guarantee of future pension payments."
+    },
+    "https://www.consumerfinance.gov/rules-policy/regulations/1030/2/": {
+      "role": "rule",
+      "usedFor": "Regulation DD definitions that distinguish an interest rate from annual percentage yield.",
+      "scope": "Terminology does not establish that a simplified savings projection implements every required deposit disclosure or supplies a current account rate."
+    },
+    "https://www.consumerfinance.gov/owning-a-home/prepare/assess-your-spending/": {
+      "role": "background",
+      "usedFor": "Reviewing spending, less frequent bills and saving before committing to a budget.",
+      "scope": "The planning checklist does not determine a lender’s approval, actual household expenses or a universally affordable payment."
+    },
+    "https://www.treasurydirect.gov/marketable-securities/treasury-bills/": {
+      "role": "rule",
+      "usedFor": "Treasury-bill terms, face-value maturity payment and general tax treatment.",
+      "scope": "This is product context, not a current auction rate, an early-sale price or a determination of an investor’s full tax liability."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds": {
+      "role": "background",
+      "usedFor": "Bond coupon, principal, maturity and interest-rate and credit risks.",
+      "scope": "A fixed-coupon example does not price every callable, floating-rate or default-risk security or promise repayment by a particular issuer."
+    },
+    "https://support.microsoft.com/en-us/excel/functions/fv-function": {
+      "role": "method",
+      "usedFor": "FV function arguments, periodic contributions, payment timing and cash-flow signs.",
+      "scope": "The rate is a constant assumption, not a predicted investment return; verify whether payments occur at the beginning or end of each period."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/whats-the-difference-between-a-simple-interest-rate-and-precomputed-interest-on-an-auto-loan-en-841/": {
+      "role": "background",
+      "usedFor": "How simple-interest auto loans differ from precomputed-interest contracts.",
+      "scope": "A fixed-principal I = P × r × t example does not reproduce a declining-balance daily-accrual loan or its payoff quote."
+    },
+    "https://support.microsoft.com/en-us/excel/functions/irr-function": {
+      "role": "method",
+      "usedFor": "Excel’s equal-period IRR function, cash-flow signs, initial guess and iterative solution.",
+      "scope": "Root convergence does not prove uniqueness; irregularly dated cash flows require a different timing model."
+    },
+    "https://www.pbgc.gov/workers-retirees/learn/annuity-lump-sum": {
+      "role": "background",
+      "usedFor": "Trade-offs between plan-dependent monthly annuity payments and a lump sum.",
+      "scope": "Choices, benefit protections and insurance depend on the actual plan; a present-value comparison is not a recommendation or PBGC eligibility ruling."
+    },
+    "https://www.ssa.gov/benefits/calculators/": {
+      "role": "background",
+      "usedFor": "Official Social Security calculators and the distinction between present-dollar and future-dollar estimates.",
+      "scope": "Use a consistent dollar basis and avoid applying COLA twice. This site does not retrieve a personal SSA earnings record or issue an official estimate."
+    },
+    "https://www.consumerfinance.gov/consumer-tools/retirement/before-you-claim/": {
+      "role": "background",
+      "usedFor": "Factors to consider before choosing a Social Security claiming age.",
+      "scope": "Health, work, family benefits and financial needs matter; the highest modeled present value is not a universally best claiming decision."
     }
   },
   "pages": {
@@ -1075,6 +1370,334 @@
     },
     "glossary:apr": {
       "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "calculator:drip": {
+      "note": "References support the investment mechanics, tax context and risks described below. Prices, dividends and tax inputs remain assumptions; portfolio arithmetic is not a live quote, tax-lot determination or prediction of a trade’s outcome."
+    },
+    "calculator:stock-average": {
+      "note": "References support the investment mechanics, tax context and risks described below. Prices, dividends and tax inputs remain assumptions; portfolio arithmetic is not a live quote, tax-lot determination or prediction of a trade’s outcome.",
+      "overrides": {
+        "https://www.irs.gov/publications/p550": {
+          "usedFor": "The difference between investment purchase records, share identification and eligible average-basis methods.",
+          "scope": "Publication 550 is the 2025 edition. A weighted average of purchases is not automatically a permitted tax basis for ordinary stock sales; lots, elections and adjustments matter."
+        }
+      }
+    },
+    "calculator:roi": {
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation.",
+      "extras": [
+        {
+          "title": "FINRA: return and rate-of-return definitions",
+          "url": "https://syndication.finra.org/content/key-concepts-return-and-rate-return"
+        }
+      ]
+    },
+    "calculator:stock-profit": {
+      "note": "References support the investment mechanics, tax context and risks described below. Prices, dividends and tax inputs remain assumptions; portfolio arithmetic is not a live quote, tax-lot determination or prediction of a trade’s outcome.",
+      "overrides": {
+        "https://www.irs.gov/publications/p550": {
+          "usedFor": "Investment sale gains, share basis and tax-lot reporting context.",
+          "scope": "Publication 550 is the 2025 edition. A user-entered tax percentage is not a calculation of holding-period rates, wash sales, NIIT or a filed return."
+        }
+      }
+    },
+    "calculator:real-return": {
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation.",
+      "extras": [
+        {
+          "title": "St. Louis Fed: adjusting nominal amounts for inflation",
+          "url": "https://www.stlouisfed.org/publications/page-one-economics/2023/01/03/adjusting-for-inflation"
+        }
+      ]
+    },
+    "calculator:annuity": {
+      "note": "The sources distinguish cash-flow arithmetic from pension or insurance product terms. Entered benefits, discount rates and lifespans remain assumptions; a calculated stream is not an insurer quote or an official plan benefit.",
+      "extras": [
+        {
+          "title": "Microsoft: periodic future value and contribution timing",
+          "url": "https://support.microsoft.com/en-us/excel/functions/fv-function"
+        }
+      ]
+    },
+    "calculator:investment": {
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation."
+    },
+    "calculator:fat-fire": {
+      "note": "References explain FIRE concepts, growth methods and access risks. Returns, spending, earnings and withdrawal rates are editable assumptions; these deterministic scenarios do not estimate a probability of retirement success."
+    },
+    "calculator:interest": {
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation."
+    },
+    "calculator:covered-call": {
+      "note": "References support the investment mechanics, tax context and risks described below. Prices, dividends and tax inputs remain assumptions; portfolio arithmetic is not a live quote, tax-lot determination or prediction of a trade’s outcome."
+    },
+    "calculator:pension": {
+      "note": "The sources distinguish cash-flow arithmetic from pension or insurance product terms. Entered benefits, discount rates and lifespans remain assumptions; a calculated stream is not an insurer quote or an official plan benefit.",
+      "extras": [
+        {
+          "title": "PBGC: annuity and lump-sum trade-offs depend on the plan",
+          "url": "https://www.pbgc.gov/workers-retirees/learn/annuity-lump-sum"
+        },
+        {
+          "title": "Microsoft: present value and payment timing",
+          "url": "https://support.microsoft.com/en-us/excel/functions/pv-function"
+        }
+      ]
+    },
+    "calculator:emergency-fund": {
+      "note": "Sources explain reserve planning and budget categories. Entered income, costs, saving targets and interest are assumptions; the result does not establish that a household’s plan is affordable or sufficient."
+    },
+    "calculator:investment-fee": {
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation.",
+      "extras": [
+        {
+          "title": "SEC Investor.gov: fee impact on an investment portfolio",
+          "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated"
+        }
+      ]
+    },
+    "calculator:savings": {
+      "note": "Distinguish the interest, yield, day-count and tax conventions of each comparison. Entered rates are examples, not current product offers; a simplified projection is not an account disclosure or complete tax calculation."
+    },
+    "calculator:barista-fire": {
+      "note": "References explain FIRE concepts, growth methods and access risks. Returns, spending, earnings and withdrawal rates are editable assumptions; these deterministic scenarios do not estimate a probability of retirement success."
+    },
+    "calculator:cagr": {
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation.",
+      "extras": [
+        {
+          "title": "OpenStax: arithmetic versus geometric investment growth",
+          "url": "https://openstax.org/books/principles-finance/pages/13-1-measures-of-center"
+        }
+      ]
+    },
+    "calculator:social-security": {
+      "note": "Separate official claiming rules from this planner’s entered benefit, assumed COLA and longevity. We compare illustrative payment streams; we do not calculate an official award from your earnings record."
+    },
+    "calculator:treasury-bill": {
+      "note": "Distinguish the interest, yield, day-count and tax conventions of each comparison. Entered rates are examples, not current product offers; a simplified projection is not an account disclosure or complete tax calculation."
+    },
+    "calculator:tax-equivalent-yield": {
+      "note": "Distinguish the interest, yield, day-count and tax conventions of each comparison. Entered rates are examples, not current product offers; a simplified projection is not an account disclosure or complete tax calculation.",
+      "overrides": {
+        "https://www.irs.gov/publications/p550": {
+          "usedFor": "Taxable and tax-exempt investment income and exceptions to simple tax treatment.",
+          "scope": "Publication 550 is the 2025 edition. Tax-equivalent yield uses the entered marginal rate; it does not determine AMT, state exemptions, credit risk or an actual tax bill."
+        }
+      }
+    },
+    "calculator:cd": {
+      "note": "Distinguish the interest, yield, day-count and tax conventions of each comparison. Entered rates are examples, not current product offers; a simplified projection is not an account disclosure or complete tax calculation."
+    },
+    "calculator:mirr": {
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation."
+    },
+    "calculator:annuity-payout": {
+      "note": "The sources distinguish cash-flow arithmetic from pension or insurance product terms. Entered benefits, discount rates and lifespans remain assumptions; a calculated stream is not an insurer quote or an official plan benefit.",
+      "extras": [
+        {
+          "title": "Microsoft: periodic present value and payment timing",
+          "url": "https://support.microsoft.com/en-us/excel/functions/pv-function"
+        }
+      ]
+    },
+    "calculator:fire": {
+      "note": "References explain FIRE concepts, growth methods and access risks. Returns, spending, earnings and withdrawal rates are editable assumptions; these deterministic scenarios do not estimate a probability of retirement success."
+    },
+    "calculator:lean-fire": {
+      "note": "References explain FIRE concepts, growth methods and access risks. Returns, spending, earnings and withdrawal rates are editable assumptions; these deterministic scenarios do not estimate a probability of retirement success."
+    },
+    "calculator:compound-interest": {
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation."
+    },
+    "calculator:budget": {
+      "note": "Sources explain reserve planning and budget categories. Entered income, costs, saving targets and interest are assumptions; the result does not establish that a household’s plan is affordable or sufficient."
+    },
+    "glossary:inflation": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:simple-interest": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:bond-yield": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:barista-fire": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:dividend-reinvestment-plan": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:cagr": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:fat-fire": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:budget-and-savings-rate": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:dollar-cost-averaging": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:real-rate-of-return": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:expense-ratio": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:sequence-of-returns-risk": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:mutual-funds-and-etfs": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:dividend-yield": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:compound-interest": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:defined-benefit-pension": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome.",
+      "extras": [
+        {
+          "title": "PBGC: plan-dependent annuity and lump-sum choices",
+          "url": "https://www.pbgc.gov/workers-retirees/learn/annuity-lump-sum"
+        }
+      ],
+      "overrides": {
+        "https://www.pbgc.gov/workers-retirees/learn/annuity-lump-sum": {
+          "usedFor": "The distinction between a plan-provided lifetime stream and a lump-sum election.",
+          "scope": "PBGC guidance is plan-dependent. It does not establish that an individual plan is covered, offers every option or guarantees the modeled payment."
+        }
+      }
+    },
+    "glossary:net-present-value": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:time-value-of-money": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:lean-fire": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:certificate-of-deposit": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:cost-basis": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:modified-internal-rate-of-return": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:internal-rate-of-return": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:covered-call": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:social-security-benefits": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:annuity": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:return-on-investment": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:apy": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:emergency-fund": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "glossary:arithmetic-vs-geometric-return": {
+      "note": "These references explain the term and its boundaries. The worked example is hypothetical; definitions do not establish a current quote, personal eligibility or a guaranteed financial outcome."
+    },
+    "guide:/guides/how-to-calculate-mirr/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-roi/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review.",
+      "extras": [
+        {
+          "title": "FINRA: return and rate-of-return definitions",
+          "url": "https://syndication.finra.org/content/key-concepts-return-and-rate-return"
+        }
+      ]
+    },
+    "guide:/guides/how-to-calculate-present-value/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/tax-equivalent-yield-and-after-tax-income/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/inflation-and-real-investment-return/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-savings-goal/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/compound-interest-with-monthly-contributions/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/cagr-and-annualized-growth/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/mutual-fund-fees-and-investment-costs/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-monthly-budget/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/treasury-bill-discount-vs-investment-yield/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/bond-price-coupon-and-yield/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-annuity-future-value/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-annuity-payouts/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-future-value/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-simple-interest/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-irr/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/covered-call-expiry-profit-and-downside/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/should-you-reinvest-dividends/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review.",
+      "overrides": {
+        "https://www.irs.gov/publications/p550": {
+          "usedFor": "Dividend taxation, reinvestment and the basis of acquired shares.",
+          "scope": "Publication 550 is the 2025 edition. Reinvested dividends can still be taxable; the model’s flat annual tax input does not classify qualified dividends or implement every account rule."
+        }
+      }
+    },
+    "guide:/guides/pension-lump-sum-vs-monthly-payments/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/annualized-return-vs-total-return/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-compare-social-security-claiming-ages/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-stock-profit/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-average-stock-price/": {
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
     }
   }
 }

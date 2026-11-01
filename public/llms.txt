@@ -361,3 +361,9 @@ Selected tax, retirement, mortgage/PMI and Coast FIRE pages now state what each 
 ## Additional reference-use annotations
 
 The property-investing, debt-strategy, installment-loan and business-finance pages in the second reference pass distinguish mathematical definitions from regulatory context, third-party examples and the publisher’s own source code. Monthly debt projections are not issuer daily-interest statements; rental coverage is not automatically qualifying DSCR; advertising attribution and landed-cost examples do not supply live campaign outcomes or tariff quotes. Source-use dates remain separate from data editions and calculation checks.
+
+## Investment and retirement reference-use annotations
+- Selected investment, savings, FIRE, pension and Social Security pages now identify the purpose and scope of each reference, separately from calculation-check and source-edition dates.
+- Purchase averages are not automatically eligible tax-lot basis; dividend reinvestment can remain taxable. Annual fee timing, constant returns and flat tax inputs are model assumptions.
+- Social Security comparisons start with an entered benefit; they do not retrieve an earnings record or issue an official SSA award. Annuity/pension cash-flow estimates are not insurer quotes or plan eligibility decisions.
+- Treasury bill discount yield, purchase-price yield and deposit APY use different conventions. References do not supply live product rates or guarantee retirement outcomes.
