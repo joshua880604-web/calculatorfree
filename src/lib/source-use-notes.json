@@ -1322,6 +1322,11 @@
       "role": "method",
       "usedFor": "RATE function inputs, equal payment periods, end-of-period timing and spreadsheet cash-flow signs for the loan-rate reproduction.",
       "scope": "Documents Excel conventions; not a validation of lender APR disclosures, fees, market rates or this site’s numerical implementation."
+    },
+    "https://www.irs.gov/filing/filing-status": {
+      "role": "rule",
+      "usedFor": "Filing-status eligibility context and its effects on federal tax, deductions and credits.",
+      "scope": "Does not endorse a tax-planning strategy or make the marriage comparison an optimization of married filing separately."
     }
   },
   "pages": {
@@ -2287,7 +2292,7 @@
       ]
     },
     "calculator:estate-tax": {
-      "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction.",
+      "note": "IRS references explain federal estate-tax concepts and the dated threshold. This page applies a simplified 2026 estimate from the assets, eligible deductions, gifts and exclusion information entered; it is not the complete Form 706 calculation or a state-tax calculation.",
       "extras": [
         {
           "title": "IRS Form 706 instructions (July 2026): federal estate-tax framework",

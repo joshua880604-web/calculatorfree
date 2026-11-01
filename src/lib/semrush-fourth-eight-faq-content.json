@@ -1,0 +1,279 @@
+{
+  "interest": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate interest earned on an investment?",
+        "answer": "With no deposits, taxes or inflation adjustment, compound balance is P × (1 + r/m)^(m×t), where r is the nominal annual rate, m is compounds per year and t is years. Interest is ending balance minus principal. At $10,000 and 6% nominal with monthly compounding for one year, the balance is about $10,616.78 and interest is $616.78. Recurring deposits require accounting for each deposit’s timing; this tool projects the entered contribution streams and assumptions rather than looking up account rates.",
+        "queries": [
+          "how to calculate interest earned",
+          "how to calculate interest"
+        ],
+        "anchor": "faq-interest-semrush-1"
+      },
+      {
+        "question": "What is the difference between simple and compound interest?",
+        "answer": "Simple interest applies the rate only to original principal; compound interest also accumulates growth on prior interest. On $10,000 at 6% over one year, simple interest is $600, while nominal 6% compounded monthly earns about $616.78 before tax. Use Simple Interest for original-principal arithmetic and this Interest calculator for its compounding and contribution assumptions. Neither automatically reproduces a lender’s daily outstanding-balance loan contract.",
+        "queries": [
+          "how to calculate compound interest"
+        ],
+        "anchor": "faq-interest-semrush-2"
+      },
+      {
+        "question": "Are a nominal interest rate and APY the same?",
+        "answer": "Only under matching conventions. Nominal 6% compounded monthly has an effective annual yield of (1 + 0.06/12)^12 − 1, about 6.1678%. The Interest calculator takes a nominal annual rate plus compounding frequency. If starting with an APY, use an equivalent annual-compounding rate or convert it first; Savings has a dedicated APY Rate type option. Do not enter APY as though it were a nominal monthly-compounding quote.",
+        "queries": [
+          "how to calculate interest"
+        ],
+        "replacesQuestion": "Are nominal and effective annual rates the same?"
+      }
+    ],
+    "removeQuestions": [],
+    "sources": []
+  },
+  "payment": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate a monthly loan payment?",
+        "answer": "For equal end-of-month installments, M = P × i / [1 − (1 + i)^−N], where P is principal, i is nominal annual interest divided by twelve and N is months. At $12,000, 0% and twelve months, the payment is $1,000. For positive interest, part of each installment pays interest rather than principal. Enter the financed balance and exclude escrow or unrelated expenses from the principal-and-interest comparison.",
+        "queries": [
+          "how to calculate loan payment",
+          "how to calculate loan payments with interest"
+        ],
+        "anchor": "faq-payment-semrush-1"
+      },
+      {
+        "question": "Can I calculate how long a loan will take to repay from its monthly payment?",
+        "answer": "Yes. Select Fixed Payment, enter balance, annual rate and monthly payment, then inspect the resulting schedule and payment count. The installment must reduce the balance; at a positive rate, a payment no larger than the period’s interest cannot amortize the loan. The final payment is capped to the remaining amount due, so a fractional theoretical duration is not an additional full installment.",
+        "queries": [
+          "how to calculate loan payments"
+        ],
+        "replacesQuestion": "Can I calculate the loan term from a monthly payment?"
+      },
+      {
+        "question": "Does a longer loan term mean a cheaper loan?",
+        "answer": "A longer term can lower the required installment while raising total interest when balance and rate stay fixed. For example, a $10,000 balance at 0% needs $833.33 per month over twelve months or $416.67 over twenty-four months before rounding, but both repay the same principal. At a positive rate, the longer repayment generally incurs more interest. Compare total payments and interest, not the installment alone; unentered fees remain separate.",
+        "queries": [
+          "how to calculate loan payments and interest"
+        ],
+        "replacesQuestion": "Does a longer loan term lower total cost?"
+      }
+    ],
+    "removeQuestions": [
+      "Does an implied loan rate include fees?"
+    ],
+    "sources": []
+  },
+  "marriage-tax": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "What is a marriage tax penalty or marriage bonus?",
+        "answer": "Here, marriage penalty = estimated married-joint federal liability minus the combined liabilities of the two entered unmarried situations. A hypothetical $23,000 joint estimate versus $20,000 combined unmarried estimates gives a $3,000 penalty; $18,000 joint would give a $2,000 bonus instead. These are definitions illustrated with chosen amounts, not tax outcomes calculated for a particular income. State tax, benefits and actual eligibility can change the real comparison.",
+        "queries": [
+          "what is the marriage tax penalty",
+          "what is marriage penalty tax"
+        ],
+        "replacesQuestion": "Is a negative penalty an error?"
+      },
+      {
+        "question": "Does this compare married filing jointly with married filing separately?",
+        "answer": "No. It compares two specified unmarried federal returns with a combined married-joint scenario for the selected tax year. Single and Head of household require their own eligibility; they are not freely interchangeable tax-saving settings. Married filing separately is a distinct filing choice with additional rules and is not optimized by this comparison. Use the federal Income Tax calculator for separate entered scenarios and confirm filing-status eligibility.",
+        "queries": [
+          "can you file taxes separately to avoid the marriage penalty"
+        ],
+        "replacesQuestion": "Is the comparison married filing jointly versus separately?"
+      },
+      {
+        "question": "Can this calculator tell me how to avoid a marriage tax penalty?",
+        "answer": "It can show sensitivity to documented income, deductions and dependent assumptions, but it does not choose a legal filing status, optimize tax planning or determine the best time to marry. Filing status generally depends on year-end marital circumstances, subject to specific rules. Enter a dependent only once in the eligible unmarried baseline. Use accurate facts for each scenario rather than changing eligibility settings merely to obtain a lower estimate.",
+        "queries": [
+          "how to avoid marriage tax penalty",
+          "how to avoid the marriage penalty tax"
+        ],
+        "anchor": "faq-marriage-tax-semrush-3"
+      }
+    ],
+    "removeQuestions": [
+      "Does this compare all married filing choices?"
+    ],
+    "sources": [
+      {
+        "title": "IRS: filing status and its effects on federal income tax",
+        "url": "https://www.irs.gov/filing/filing-status"
+      }
+    ]
+  },
+  "estate-tax": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "What is federal estate tax?",
+        "answer": "Federal estate tax concerns the transfer of includible property at death. The gross estate can include cash, investments, real estate, business interests and other includible assets; eligible deductions and lifetime-transfer history can affect the calculation. This tool is a simplified 2026 federal estimate. It does not determine which property legally belongs in an estate, establish valuations or prepare Form 706.",
+        "queries": [
+          "what is estate tax"
+        ],
+        "anchor": "faq-estate-tax-semrush-1"
+      },
+      {
+        "question": "How does this calculator estimate estate tax?",
+        "answer": "It totals entered includible assets, subtracts the entered eligible deductions, adds adjusted taxable lifetime gifts and compares that adjusted amount with the 2026 exclusion plus any valid deceased-spouse unused exclusion entered. Its simplified estimate applies 40% to a positive excess, subtracts entered prior gift tax and floors the result at zero. This is not the full Form 706 computation, a determination of deduction eligibility or a substitute for estate-specific review.",
+        "queries": [
+          "how to calculate estate tax",
+          "how do you calculate estate tax"
+        ],
+        "replacesQuestion": "Is every estate asset automatically taxable at the top rate?"
+      },
+      {
+        "question": "Does this also calculate state estate tax or inheritance tax?",
+        "answer": "No. The output is a federal estate-tax estimate. The State estate tax deduction field is an entered amount used in the federal calculation, not a calculation of state liability. Inheritance taxes and state estate taxes may use different rules and thresholds. A zero federal estimate does not establish that no state tax, filing obligation or portability election needs attention.",
+        "queries": [
+          "what are estate taxes"
+        ],
+        "anchor": "faq-estate-tax-semrush-3"
+      }
+    ],
+    "removeQuestions": [],
+    "sources": [
+      {
+        "title": "IRS: estate tax, gross estate and year-of-death filing thresholds",
+        "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax"
+      }
+    ]
+  },
+  "lease": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate a lease payment from asset value and residual?",
+        "answer": "This generic financial model treats asset value as the present value of month-end payments plus an end-of-term residual. With monthly rate i and N months, payment = [asset value − residual/(1+i)^N] / annuity present-value factor. At 0%, $30,000 asset value, $10,000 residual and thirty-six months gives about $555.56 monthly before rounding. Residual purchase is separate; fees, taxes and down payments are not automatically supplied.",
+        "queries": [
+          "how to calculate lease payment",
+          "how to calculate lease payments"
+        ],
+        "anchor": "faq-lease-semrush-1"
+      },
+      {
+        "question": "How does residual value affect monthly lease payments and total cost?",
+        "answer": "Holding asset value, rate and term fixed, a larger terminal residual generally lowers the periodic installment because more value remains at the end. Total lease payments sums the installments. Total cost with residual purchase adds the entered residual once, assuming purchase for that amount; it is not a prediction of a market resale value or proof that the contract guarantees a purchase option.",
+        "queries": [
+          "how to determine lease payment"
+        ],
+        "replacesQuestion": "How does residual value affect a lease calculation?"
+      },
+      {
+        "question": "Is this the same as a car lease calculator using a money factor?",
+        "answer": "No. This tool uses a present-value equation and a nominal annual financing rate. Auto Lease uses its own depreciation/rent-factor convention and entered transaction assumptions. If a dealer quotes a money factor, taxes, acquisition charges or a capitalized-cost reduction, use Auto Lease and the actual agreement rather than expecting identical results from this generic model. Fixed Monthly Payment here solves a rate from an entered installment; it does not fetch dealer offers.",
+        "queries": [
+          "how do you figure out a car lease payment"
+        ],
+        "replacesQuestion": "Is this identical to the auto lease calculator?"
+      }
+    ],
+    "removeQuestions": [
+      "Is this the same model as Auto Lease?"
+    ],
+    "sources": []
+  },
+  "sales-tax": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate sales tax and the after-tax price?",
+        "answer": "Tax = taxable before-tax price × entered rate / 100, and total = price + tax. At $100 and an assumed 7% rate, tax is $7 and total is $107. The calculator performs that arithmetic; it does not decide which items, shipping or services are taxable, determine sourcing rules or look up a current address-specific rate. Enter the applicable taxable amount and rate yourself.",
+        "queries": [
+          "how to calculate sales tax",
+          "how do you calculate sales tax"
+        ],
+        "anchor": "faq-sales-tax-semrush-1"
+      },
+      {
+        "question": "How do I remove sales tax from a tax-inclusive total?",
+        "answer": "Before-tax price = total / (1 + rate/100), then tax = total − before-tax price. At $107 including an assumed 7% tax, before-tax price is $100 and included tax is $7. Subtracting 7% of $107 gives the wrong result because the rate applies to the before-tax base. Use Before-Tax Price mode when you know total and rate.",
+        "queries": [
+          "how to calculate sales tax"
+        ],
+        "replacesQuestion": "How do I remove sales tax from a total?"
+      },
+      {
+        "question": "How do I find the sales tax rate from a receipt total?",
+        "answer": "When the entire entered before-tax amount uses one rate and there are no other charges, rate = (after-tax total / before-tax price − 1) × 100%. A $53.50 total on a $50 taxable base implies 7%. Mixed taxability, multiple rates, tips, delivery charges or item-level rounding can make that ratio differ from a statutory rate. It is a relationship between entered amounts, not an official rate lookup.",
+        "queries": [
+          "what is sales tax rate"
+        ],
+        "anchor": "faq-sales-tax-semrush-3"
+      }
+    ],
+    "removeQuestions": [
+      "Is included tax just gross times the rate?"
+    ],
+    "sources": []
+  },
+  "discount": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I calculate the discount percentage and sale price?",
+        "answer": "Discount percentage = (original price − sale price) / original price × 100%. A reduction from $100 to $80 is 20% off and saves $20. If instead the percentage is known, sale price = original × (1 − discount/100). Choose Discount Rate for two prices or Percent Off for a price plus percentage. Sales tax, shipping and other unentered charges are separate.",
+        "queries": [
+          "how to calculate discount percentage",
+          "how do i calculate discount percentage"
+        ],
+        "anchor": "faq-discount-semrush-1"
+      },
+      {
+        "question": "How do I find the original price before a percentage discount?",
+        "answer": "Original price = sale price / (1 − discount/100), provided the discount is below 100%. An $80 sale price after 20% off implies $80 / 0.80 = $100 originally. Multiplying $80 by 1.20 gives $96 and does not reverse the reduction. A 100% reduction leaves zero sale price and does not uniquely reveal the original price.",
+        "queries": [
+          "how to find original price before percentage discount"
+        ],
+        "replacesQuestion": "How do I find the original price from a discounted price?"
+      },
+      {
+        "question": "Can I add two successive discount percentages?",
+        "answer": "No. Apply each reduction to the remaining price. Two successive 20% discounts turn $100 into $80 and then $64: the combined saving is $36, or 36%, not 40%. This tool’s individual modes solve one discount relationship. To check successive reductions, apply them in order or enter the final combined original/sale prices in Discount Rate mode.",
+        "queries": [
+          "how to calculate discount percentage between two numbers"
+        ],
+        "replacesQuestion": "Are two 20% discounts equivalent to 40% off?"
+      }
+    ],
+    "removeQuestions": [
+      "Can I add two successive discount percentages?",
+      "Is a commission percentage a profit margin?"
+    ],
+    "sources": []
+  },
+  "vat": {
+    "checkedOn": "2026-11-01",
+    "items": [
+      {
+        "question": "How do I add VAT to a net price?",
+        "answer": "Gross price = net price × (1 + VAT rate/100). At an illustrative 20% rate and $100 net, VAT is $20 and gross price is $120. Enter Net price and VAT rate, leaving Gross price and Tax amount blank. The rate is an assumption you provide; this tool does not determine registration, jurisdiction or which goods qualify for a particular treatment.",
+        "queries": [
+          "how to calculate vat"
+        ],
+        "anchor": "faq-vat-semrush-1"
+      },
+      {
+        "question": "How do I remove VAT from a VAT-inclusive price?",
+        "answer": "Net price = gross price / (1 + rate/100), and VAT = gross − net. A $120 gross amount at an illustrative 20% rate contains $20 VAT and $100 net. VAT is not 20% of the gross amount. Enter gross plus rate and leave the other two fields blank so the tool can solve them.",
+        "queries": [
+          "how to calculate vat from total invoice"
+        ],
+        "replacesQuestion": "Is included tax just gross times the rate?"
+      },
+      {
+        "question": "Can I calculate a VAT rate from net and gross prices?",
+        "answer": "Yes, when both amounts describe one consistent tax relationship: rate = (gross / net − 1) × 100%. At $100 net and $120 gross, the implied rate is 20%. Enter exactly two known fields and leave the other two blank. Mixed rates, rounding or extra charges can prevent a receipt’s totals from matching a single statutory rate; this is not a tax-rate or VAT-number lookup.",
+        "queries": [
+          "what is vat tax"
+        ],
+        "anchor": "faq-vat-semrush-3"
+      }
+    ],
+    "removeQuestions": [],
+    "sources": []
+  }
+}

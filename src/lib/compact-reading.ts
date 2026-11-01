@@ -42,6 +42,13 @@ export const compactReadingSections: Record<string,CompactReadingSections> = {
     "comparisons": true
   },
   "bond": { "questions": true },
+  "interest": { "questions": true },
+  "payment": { "questions": true },
+  "estate-tax": { "questions": true },
+  "lease": { "questions": true },
+  "sales-tax": { "questions": true },
+  "discount": { "questions": true },
+  "vat": { "questions": true },
   "interest-rate": { "questions": true, "examples": true, "sources": true },
   "average-return": { "questions": true },
   "college-cost": { "questions": true },
@@ -66,6 +73,7 @@ export const compactReadingSections: Record<string,CompactReadingSections> = {
     "questions": true
   },
   "marriage-tax": {
+    "questions": true,
     "examples": true
   },
   "loan": {

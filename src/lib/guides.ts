@@ -1,3 +1,4 @@
+import semrushFourthEightFaq from './semrush-fourth-eight-faq-content.json';
 import interestRatePriorityContent from './interest-rate-priority-content.json';
 import semrushThirdEightFaq from './semrush-third-eight-faq-content.json';
 import semrushNextEightFaq from './semrush-next-eight-faq-content.json';
@@ -892,8 +893,9 @@ for(const [id,refresh] of Object.entries(calculationPageRefresh)){
 }
 
 // Export-backed FAQ review: merge in place to retain published anchors and links.
-for (const [id, review] of Object.entries({...semrushEightFaq, ...semrushNextEightFaq, ...semrushThirdEightFaq})) {
+for (const [id, review] of Object.entries({...semrushEightFaq, ...semrushNextEightFaq, ...semrushThirdEightFaq, ...semrushFourthEightFaq})) {
   const guide = guides[id];
+  guide.questions = guide.questions.filter(q => !(review.removeQuestions as string[]).includes(q.question));
   for (const item of review.items) {
     const { queries: _queries, ...patch } = item;
     const replacement = 'replacesQuestion' in patch ? patch.replacesQuestion : undefined;
@@ -903,7 +905,8 @@ for (const [id, review] of Object.entries({...semrushEightFaq, ...semrushNextEig
     if (index >= 0) guide.questions[index] = { ...guide.questions[index], ...question };
     else guide.questions.push(question);
   }
-  guide.questions = guide.questions.filter(q => !(review.removeQuestions as string[]).includes(q.question));
+  if ('sources' in review) for (const source of review.sources)
+    if (!guide.sources.some(existing => existing.url === source.url)) guide.sources.push(source);
   guide.checkedOn = review.checkedOn;
 }
 
