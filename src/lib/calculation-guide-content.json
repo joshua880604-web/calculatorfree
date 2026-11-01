@@ -3660,5 +3660,287 @@
         "label": "Loan amortization glossary"
       }
     ]
+  },
+  "roi": {
+    "meta": {
+      "path": "/guides/how-to-calculate-roi/",
+      "title": "How to Calculate ROI: Profit, Costs and Losses",
+      "heading": "How to Calculate ROI: Profit, Costs and Losses",
+      "description": "Calculate investment ROI from profit, initial cost and terminal proceeds. Compare fees, losses, zero recovery and holding periods with six reproducible cases.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "roi"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "How to Calculate ROI: Profit, Costs and Losses",
+      "cardIntro": "Calculate investment ROI from profit, initial cost and terminal proceeds. Compare fees, losses, zero recovery and holding periods with six reproducible cases.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/roi-calculator",
+    "calculatorLabel": "ROI Calculator",
+    "intro": "Define what went into the investment and what came back before calculating a percentage. ROI measures gain or loss relative to a stated initial cost; it is not the same as revenue, ending value or a compound annual return. Use the same fee and tax basis across comparisons, and keep actual transaction timing visible.",
+    "answer": "If an investment costs $10,000 and returns $12,000 after one year, its gain is $2,000 and total ROI is 20%. Including a separate $100 entry fee and $100 exit fee changes the modeled initial cost to $10,100 and terminal proceeds to $11,900: gain is $1,800 and ROI is 17.8218%. Fees are included once, rather than ignored or deducted twice.",
+    "sections": [
+      {
+        "id": "formula",
+        "title": "Calculate profit first, then divide by the invested cost",
+        "paragraphs": [
+          "Amount returned is the full terminal value, including any original principal recovered. In the $10,000-to-$12,000 example, the returned amount is $12,000, not just the $2,000 profit. Entering profit in the returned field would instead describe a large loss.",
+          "Subtract initial cost from terminal proceeds to obtain the signed dollar gain. Divide that gain by the positive initial cost and multiply by 100. A $2,000 gain on $10,000 is 20%; the same dollar gain on $20,000 is 10%. Neither percentage determines whether the result compensated for risk."
+        ],
+        "formula": "ROI (%) = (terminal proceeds − initial cost) / initial cost × 100"
+      },
+      {
+        "id": "costs",
+        "title": "Include purchase and sale costs once",
+        "paragraphs": [
+          "The fee-adjusted example adds the purchase fee to initial cash invested and subtracts the sale fee from terminal cash returned. Its gain is $11,900 − $10,100 = $1,800. Dividing by $10,100 gives 17.8218%, rather than the gross example’s 20%. These are explicit hypothetical transaction costs, not a live broker fee schedule.",
+          "If a reported ending value or return is already net of a fee, subtracting it again understates the result. Ongoing fees deducted along the way can already be reflected in the ending balance. Investor.gov explains that fees matter; the examples here independently illustrate a single-entry/single-exit convention rather than reconstructing an actual account."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "losses",
+        "title": "Keep negative returns and zero recovery visible",
+        "paragraphs": [
+          "For $10,000 invested and $8,000 returned, the loss is $2,000 and total ROI is −20%. Over two entered years, the compound annual equivalent is approximately −10.5573%. Do not discard the negative sign or describe the remaining $8,000 as a profit.",
+          "Zero terminal recovery gives a $10,000 loss and −100% total ROI in the stated unlevered endpoint model. It does not model additional debts or obligations beyond the invested amount. A zero initial cost is different: division by zero has no defined ROI percentage, so the calculator requires positive cost."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "annual",
+        "title": "Separate total ROI from the annualized equivalent",
+        "paragraphs": [
+          "A $10,000 investment returning $15,000 over five years earns 50% total ROI, with an annualized equivalent of approximately 8.4472%. Returning $14,000 over two years earns only 40% total ROI but about 18.3216% annualized. More total dollars and a faster annualized pace answer different questions.",
+          "Dividing 50% by five gives an arithmetic 10% per year, not the compound endpoint equivalent. Annualization is a normalization, not evidence that the same outcome can be repeated. The linked annualized-return guide examines period conventions and intermediate cash flows in more detail."
+        ],
+        "formula": "Annualized return (%) = [(terminal proceeds / initial cost)^(1 / years) − 1] × 100"
+      },
+      {
+        "id": "timing",
+        "title": "Use a different model when money moves during the holding period",
+        "paragraphs": [
+          "This ROI form represents one initial cost and one terminal amount. Contributions, withdrawals, reinvested distributions and operating cash flows at other dates cannot be faithfully summarized by adding every receipt to the ending value and pretending it all arrived at the end.",
+          "Use the dated cash-flow tool for actual transaction timing, IRR for appropriately spaced cash flows or Rental Property for a modeled operating and sale sequence. Advertising ROAS compares attributed revenue with ad spend and is not automatically net-profit ROI. This endpoint tool does not fetch market data or choose a good-return threshold."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "sheet",
+        "title": "Reproduce the calculation and check its scope",
+        "paragraphs": [
+          "In a spreadsheet, =(11900-10100)/10100 produces the fee-adjusted return as a decimal; format the cell as a percentage. For the five-year case, =(15000/10000)^(1/5)-1 gives the compound annual equivalent. Preserve intermediate precision and round only the displayed results.",
+          "Use Investment Length for an entered year count. Dates mode uses actual elapsed days divided by 365, so a leap-year interval can differ from one model year. Taxes, inflation, leverage and liquidity need separate consideration; this calculator does not estimate them from the return percentage."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Gain / loss",
+      "Total ROI",
+      "Annualized return",
+      "Years"
+    ],
+    "chart": "roi-guide",
+    "chartAlt": "Total ROI and compound annualized return for gross and fee-adjusted gains, a loss, zero recovery and different holding periods.",
+    "chartCaption": "Single initial cost and terminal proceeds, without intermediate cash flows. Different ending values and holding periods do not compare investment risk.",
+    "questions": [
+      {
+        "question": "Does amount returned mean profit?",
+        "answer": "No. It means the full terminal proceeds including any principal recovered. Profit or loss is calculated by subtracting initial cost."
+      },
+      {
+        "question": "How do fees change ROI?",
+        "answer": "Include entry fees in initial cash invested and reduce terminal proceeds by exit fees, if they are not already included. The stated $100 entry and exit fees reduce the example’s ROI from 20% to 17.8218%."
+      },
+      {
+        "question": "Can ROI be negative?",
+        "answer": "Yes. Returning $8,000 from a $10,000 initial cost gives −20% total ROI, not a positive 80% return."
+      },
+      {
+        "question": "Is total ROI divided by years the annualized return?",
+        "answer": "Usually not. The compound annual equivalent uses an exponent, and requires a meaningful holding period and endpoint comparison."
+      },
+      {
+        "question": "Does ROI account for risk or inflation?",
+        "answer": "No automatic adjustment is made. A return percentage alone does not measure uncertainty, purchasing power or liquidity."
+      },
+      {
+        "question": "What if there are deposits or withdrawals?",
+        "answer": "Use a cash-flow model that includes their timing. A single-cost/terminal-value comparison can be misleading for transactions during the holding period."
+      }
+    ],
+    "limitations": [
+      "Hypothetical controlled examples, not forecasts or observed business performance.",
+      "No automatic tax, financing, transaction data or personalized recommendation is supplied.",
+      "Initial cost must be positive; dates use actual elapsed days divided by 365. Interim transactions require a cash-flow model."
+    ],
+    "sources": [
+      {
+        "href": "https://www.investor.gov/introduction-investing/getting-started/understanding-fees",
+        "label": "Investor.gov: understanding investment fees"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/annualized-return-vs-total-return/",
+        "label": "Annualized return versus total return"
+      },
+      {
+        "href": "/guides/how-to-calculate-irr/",
+        "label": "Periodic IRR guide"
+      },
+      {
+        "href": "/glossary/return-on-investment/",
+        "label": "ROI glossary"
+      },
+      {
+        "href": "/average-return-calculator",
+        "label": "Dated cash-flow return calculator"
+      }
+    ]
+  },
+  "breakeven": {
+    "meta": {
+      "path": "/guides/how-to-calculate-break-even-point/",
+      "title": "How to Calculate Break-Even Point and Target Profit",
+      "heading": "How to Calculate Break-Even Point and Target Profit",
+      "description": "Calculate break-even units, sales revenue and target-profit volume. Four reproducible cases show contribution margin, rounding and cost sensitivity.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "break-even"
+      ],
+      "topic": "Business finance",
+      "breadcrumb": "How to Calculate Break-Even Point and Target Profit",
+      "cardIntro": "Calculate break-even units, sales revenue and target-profit volume. Four reproducible cases show contribution margin, rounding and cost sensitivity.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/break-even-calculator",
+    "calculatorLabel": "Break-Even Calculator",
+    "intro": "Separate fixed costs for one planning period from the variable cost of each unit sold. The difference between unit price and unit variable cost is contribution: the amount available to cover fixed costs before the chosen operating-profit target. This is a volume model, not a prediction of demand or cash availability.",
+    "answer": "With $10,000 fixed costs, a $50 selling price and $30 variable cost per unit, contribution is $20 per unit. Break-even requires 500 units and $25,000 sales revenue. A $5,000 target operating profit raises the required volume to 750 units. If fixed cost instead rises to $10,001, the theoretical requirement is 500.05 units, so whole-unit sales must round up to 501.",
+    "sections": [
+      {
+        "id": "period",
+        "title": "Match the fixed-cost period to the sales plan",
+        "paragraphs": [
+          "Choose a month, quarter or other consistent period. Fixed costs in this model are the entered costs for that whole period, while variable cost is entered per unit. Combining annual rent with only one month’s sales volume changes the meaning of the result.",
+          "Classify costs according to the activity and planning range you are modeling. A cost that looks fixed at one volume can change when capacity expands. This calculator holds its inputs constant; it does not infer whether a particular expense belongs in a fixed or variable category."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "contribution",
+        "title": "Calculate the amount each unit contributes",
+        "paragraphs": [
+          "At a $50 price and $30 unit variable cost, contribution is $20. Dividing $20 by $50 gives a 40% contribution margin ratio. It is not net operating margin because fixed costs have not yet been subtracted. Selling price and unit cost must use the same unit definition.",
+          "For these quantity modes, price must exceed variable cost. If the contribution is zero or negative, more volume cannot cover positive fixed costs under unchanged assumptions. The calculator rejects such a quantity solution rather than reporting a fabricated break-even sales count."
+        ],
+        "formula": "Unit contribution = unit price − unit variable cost"
+      },
+      {
+        "id": "rounding",
+        "title": "Distinguish theoretical units from whole units sold",
+        "paragraphs": [
+          "The base requirement is $10,000 / $20 = 500 units. Revenue is 500 × $50 = $25,000; variable cost is 500 × $30 = $15,000. Subtracting variable cost and $10,000 fixed cost leaves zero modeled operating profit.",
+          "At $10,001 fixed cost, theoretical units are 500.05. Rounding down to 500 leaves a $1 shortfall. Rounding up to 501 produces $25,050 revenue and $19 modeled operating profit. Small positive profit at the displayed whole-unit break-even is therefore expected."
+        ],
+        "formula": "Whole units = ceiling(fixed costs / unit contribution)"
+      },
+      {
+        "id": "target",
+        "title": "Add the target profit before solving volume",
+        "paragraphs": [
+          "For a $5,000 target profit, contribution must cover $10,000 fixed costs plus the $5,000 target. At $20 contribution per unit, 750 units are required. Revenue is $37,500; subtract $22,500 variable costs and $10,000 fixed costs to reconcile the $5,000 result.",
+          "The target is operating profit under the costs entered. It does not automatically mean after-tax income or cash available for distribution. Interest, tax, financing obligations and any omitted operating costs must be considered separately before interpreting the business result."
+        ],
+        "formula": "Units for target profit = ceiling[(fixed costs + target profit) / unit contribution]"
+      },
+      {
+        "id": "sensitivity",
+        "title": "Test a higher variable cost and a required selling price",
+        "paragraphs": [
+          "If unit variable cost rises to $35 at the same $50 price, contribution falls to $15. Covering $10,000 fixed costs now needs 666.6667 theoretical units, or 667 whole units. Revenue is $33,350 and the rounded-volume operating profit is $5.",
+          "Price mode asks a different question: at 500 entered units, $30 unit variable cost, $10,000 fixed costs and a $5,000 profit target, required price is $30 + $15,000 / 500 = $60. It does not verify that customers will accept this price. Internally calculated prices are not automatically rounded upward to a market quote."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "sheet",
+        "title": "Reproduce the result and examine what volume does not prove",
+        "paragraphs": [
+          "In a spreadsheet, =ROUNDUP(10001/(50-30),0) gives the 501-unit case. Profit can be checked with =501*(50-30)-10001. For a target, add it to the fixed-cost numerator before rounding. Keep units and period definitions identical in every comparison.",
+          "A break-even count is not a demand forecast, capacity plan or cash-flow schedule. Inventory may require payment before sales arrive, customers may pay later, and multiple products may have different contributions. Use a dedicated sales-mix or working-capital analysis when those details materially affect the decision."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Whole units required",
+      "Sales revenue",
+      "Unit contribution",
+      "Operating profit"
+    ],
+    "chart": "breakeven-guide",
+    "chartAlt": "Required whole-unit sales volume increases from 500 to 501, 750 or 667 as fixed cost, target profit or variable cost changes.",
+    "chartCaption": "Each case uses a $50 unit price and changes only the stated assumption from the $10,000 fixed-cost / $30 variable-cost base. All costs and targets use the same period.",
+    "questions": [
+      {
+        "question": "How do I calculate break-even units?",
+        "answer": "Divide fixed costs by positive unit contribution, then round up if only whole units can be sold. The $10,000 / ($50 − $30) example gives 500 units."
+      },
+      {
+        "question": "Why is profit slightly positive at break-even?",
+        "answer": "Whole-unit rounding can overshoot the exact fractional requirement. At $10,001 fixed cost, selling 501 units produces $19 modeled profit."
+      },
+      {
+        "question": "How do I calculate sales for a profit target?",
+        "answer": "Add the target operating profit to fixed costs before dividing by unit contribution. A $5,000 target in the base example requires 750 units."
+      },
+      {
+        "question": "Is contribution margin the same as net margin?",
+        "answer": "No. Unit contribution is price less variable cost; it must still cover fixed costs before producing operating profit."
+      },
+      {
+        "question": "What if price is no higher than variable cost?",
+        "answer": "The unchanged model cannot cover positive fixed costs by selling additional units. Quantity modes require positive unit contribution."
+      },
+      {
+        "question": "Does reaching break-even guarantee enough cash?",
+        "answer": "No. Payment timing, inventory funding, financing and omitted expenses can create cash needs even at the calculated sales volume."
+      }
+    ],
+    "limitations": [
+      "Hypothetical controlled examples, not forecasts or observed business performance.",
+      "No automatic tax, financing, transaction data or personalized recommendation is supplied.",
+      "Single-product constant-price model; no sales mix, capacity constraint, working-capital timing or changing variable-cost schedule."
+    ],
+    "sources": [
+      {
+        "href": "https://legacy.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs/break-even-point",
+        "label": "SBA: break-even analysis and the fixed-cost / contribution formula"
+      }
+    ],
+    "related": [
+      {
+        "href": "/margin-calculator",
+        "label": "Profit margin calculator"
+      },
+      {
+        "href": "/markup-calculator",
+        "label": "Markup calculator"
+      },
+      {
+        "href": "/business-loan-calculator",
+        "label": "Business loan payments and financing costs"
+      },
+      {
+        "href": "/glossary/break-even-point/",
+        "label": "Break-even point glossary"
+      }
+    ]
   }
 }

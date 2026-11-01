@@ -26,17 +26,17 @@
     "checkedOn": "2026-10-31"
   },
   "roi": {
+    "checkedOn": "2026-11-01",
     "questions": [
       {
-        "question": "Is annualized return the same as total return?",
-        "answer": "No. Total or cumulative return describes the whole stated period. Annualized return converts a compatible multi-year result into an equivalent compound yearly rate. They coincide for a one-year endpoint example with the same cash-flow definition."
+        "question": "How do fees change ROI?",
+        "answer": "Include entry fees in initial cash invested and reduce terminal proceeds by exit fees, if they are not already included. The stated $100 entry and exit fees reduce the example’s ROI from 20% to 17.8218%."
       },
       {
-        "question": "How do I convert cumulative return to annualized return?",
-        "answer": "Use (1 + cumulative_decimal)^(1 / years) − 1. For 50% cumulative over three years, use 1.5^(1/3) − 1, approximately 14.4714%. This assumes a compatible return definition and no omitted external cash flows."
+        "question": "What if there are deposits or withdrawals?",
+        "answer": "Use a cash-flow model that includes their timing. A single-cost/terminal-value comparison can be misleading for transactions during the holding period."
       }
-    ],
-    "checkedOn": "2026-10-31"
+    ]
   },
   "coast-fire": {
     "questions": [
@@ -282,6 +282,19 @@
       {
         "question": "Does Total payments include separate insurance?",
         "answer": "No. Here it covers loan principal and interest. Add insurance per payment times the payment count to reconcile full installment cash outflow."
+      }
+    ]
+  },
+  "break-even": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Why is profit slightly positive at break-even?",
+        "answer": "Whole-unit rounding can overshoot the exact fractional requirement. At $10,001 fixed cost, selling 501 units produces $19 modeled profit."
+      },
+      {
+        "question": "Does reaching break-even guarantee enough cash?",
+        "answer": "No. Payment timing, inventory funding, financing and omitted expenses can create cash needs even at the calculated sales volume."
       }
     ]
   }

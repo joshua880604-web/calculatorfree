@@ -216,3 +216,6 @@ export function categoryPageSchema(page:CategoryPage,config=siteConfig()) {
 
 for(const id of ['personal-loan','student-loan','business-loan'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
 for(const slug of ['amortization','apr'])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';
+
+for(const id of ['roi','break-even'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+for(const slug of ['return-on-investment','break-even-point'])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';

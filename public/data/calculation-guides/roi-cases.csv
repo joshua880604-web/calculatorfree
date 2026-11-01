@@ -1,0 +1,7 @@
+Case,Complete inputs (JSON),Unrounded reference metrics (JSON)
+Gross endpoint example,"{""cost"": 10000, ""returned"": 12000, ""years"": 1}","{""Annualized return"": 20.0, ""Investment gain"": 2000.0, ""Return on investment"": 20.0}"
+Entry and exit fees included once,"{""cost"": 10100, ""returned"": 11900, ""years"": 1}","{""Annualized return"": 17.821782178217823, ""Investment gain"": 1800.0, ""Return on investment"": 17.821782178217823}"
+Loss over two years,"{""cost"": 10000, ""returned"": 8000, ""years"": 2}","{""Annualized return"": -10.557280900008411, ""Investment gain"": -2000.0, ""Return on investment"": -20.0}"
+Zero terminal recovery,"{""cost"": 10000, ""returned"": 0, ""years"": 1}","{""Annualized return"": -100.0, ""Investment gain"": -10000.0, ""Return on investment"": -100.0}"
+50% total gain over five years,"{""cost"": 10000, ""returned"": 15000, ""years"": 5}","{""Annualized return"": 8.447177119769862, ""Investment gain"": 5000.0, ""Return on investment"": 50.0}"
+40% total gain over two years,"{""cost"": 10000, ""returned"": 14000, ""years"": 2}","{""Annualized return"": 18.321595661992323, ""Investment gain"": 4000.0, ""Return on investment"": 40.0}"

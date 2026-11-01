@@ -1059,6 +1059,10 @@
       {
         "title": "How to Calculate House-Flipping Profit: Costs, Cash and Break-Even",
         "path": "/guides/how-to-calculate-house-flipping-profit/"
+      },
+      {
+        "path": "/guides/how-to-calculate-roi/",
+        "title": "How to Calculate ROI: Profit, Costs and Losses"
       }
     ]
   },
@@ -3353,7 +3357,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/how-to-calculate-break-even-point/",
+        "title": "How to Calculate Break-Even Point and Target Profit"
+      }
+    ]
   },
   {
     "slug": "contribution-margin",
