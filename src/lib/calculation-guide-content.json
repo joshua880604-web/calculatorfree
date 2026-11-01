@@ -3239,5 +3239,426 @@
         "label": "Rent versus buy comparison"
       }
     ]
+  },
+  "personal": {
+    "meta": {
+      "path": "/guides/how-to-calculate-personal-loan-payments/",
+      "title": "How to Calculate Personal Loan Payments, Fees and Total Cost",
+      "heading": "How to Calculate Personal Loan Payments, Fees and Total Cost",
+      "description": "Calculate personal loan installments, net proceeds and borrowing cost. Compare deducted or financed fees and a longer term using four reproducible examples.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "personal-loan"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "How to Calculate Personal Loan Payments, Fees and Total Cost",
+      "cardIntro": "Calculate personal loan installments, net proceeds and borrowing cost. Compare deducted or financed fees and a longer term using four reproducible examples.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/personal-loan-calculator",
+    "calculatorLabel": "Personal Loan Calculator",
+    "intro": "Start with the repayment balance, interest rate and number of installments. Then reconcile the cash you actually receive with every payment and upfront charge. A payment estimate answers a cash-flow question; it does not establish approval or tell you whether a loan suits your circumstances.",
+    "answer": "A hypothetical $20,000 personal loan at 12% over 36 monthly payments has a regular installment of $664.29 before insurance. Deducting a 3% origination fee leaves $19,400 net cash while the same installment repays $20,000. Extending that deducted-fee loan to 60 months lowers the installment to $444.89 but increases modeled outflow minus net cash from $4,514.30 to $7,293.34.",
+    "sections": [
+      {
+        "id": "installment",
+        "title": "Calculate the installment from the repayment balance",
+        "paragraphs": [
+          "For the three-year example, the monthly rate is 12% / 12 = 1%, and the number of payments is 36. Apply the amortizing-payment equation to the repayment balance, not automatically to the net cash deposited in your account. The first month’s interest is $200 and the remaining $464.29 of the rounded payment reduces principal.",
+          "With no fees or insurance, the unrounded payment stream totals $23,914.30 after final display rounding. Subtract the original $20,000 principal to obtain $3,914.30 modeled interest. The model retains precision internally, so multiplying a displayed payment by 36 can differ from the displayed total."
+        ],
+        "formula": "Payment = balance × monthly rate / [1 − (1 + monthly rate)^(−months)]; at zero rate, payment = balance / months"
+      },
+      {
+        "id": "fees",
+        "title": "Separate the loan amount, fee and money available",
+        "paragraphs": [
+          "The 3% fee is $20,000 × 3% = $600. With Deducted from proceeds, the repayment balance remains $20,000 and modeled net initial cash is $19,400. Fees do not disappear because they are withheld before the money reaches you. Add documentation and other entered charges before comparing the total.",
+          "Paid upfront represents a separate fee payment but uses the same net economic starting cash in this comparison. A bank deposit of $20,000 followed by a separate $600 fee has the same $19,400 net starting position here. Keep the transaction description distinct from the model’s combined net-cash figure."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "financed",
+        "title": "Financing a fee changes what you repay",
+        "paragraphs": [
+          "Choosing Financed adds the $600 fee to the repayment balance, producing a $20,600 balance and $20,000 net initial cash. The installment becomes $684.21. Total installment outflow is $24,631.73, giving $4,631.73 outflow above the cash received under the entered assumptions.",
+          "This is not a matched-cash comparison with the deducted-fee example: that case advances only $19,400 net. Decide how much cash the borrowing purpose actually requires, then compare offers that provide that amount. A slightly smaller modeled APR does not by itself identify the better offer when the cash amounts differ."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "term",
+        "title": "Compare a smaller payment with the full term cost",
+        "paragraphs": [
+          "Keeping the $20,000 balance, 12% rate and deducted fee but extending repayment to 60 months lowers the installment to $444.89. Total installments become $26,693.34. The difference between those payments and $19,400 net cash is $7,293.34, compared with $4,514.30 over 36 months.",
+          "The five-year case eases the monthly commitment while keeping the debt outstanding longer. Compare that trade-off with your monthly spending, cash reserve and repayment flexibility. This calculation assumes payments continue as modeled; it does not simulate job loss, missed payments, collections or refinancing."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "apr",
+        "title": "Understand the modeled APR without replacing the disclosure",
+        "paragraphs": [
+          "The model solves a monthly discount rate that equates net cash received with the installment stream including entered insurance, then multiplies that rate by 12. The deducted-fee three-year case gives about 14.1315% nominal cash-flow APR, compared with the entered 12% interest rate. This nominal measure differs from an effective annual compounded yield.",
+          "This tool includes all entered insurance in its cash-flow comparison and does not decide which charges belong in a legally disclosed APR. Optional insurance, fee classifications and dated payment rules can change an actual disclosure. Read the lender documents and compare the same measures across offers."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Reproduce the payment and choose the right payoff tool",
+        "paragraphs": [
+          "In a spreadsheet, =-PMT(12%/12,36,20000) reproduces the base installment. Net proceeds are =20000*(1-3%). For the financed-fee case, replace the repayment balance with 20600 and retain 20000 as net starting cash. Sum the unrounded payment stream before calculating the total cost.",
+          "For extra principal on an existing balance, use the linked Loan Repayment Calculator with the actual balance and contractual payment. The Personal Loan form models the contracted schedule and fee-adjusted cash flows; it does not simulate a new extra-payment plan or apply a prepayment penalty. Check contract terms separately."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Net initial cash",
+      "Payment including insurance",
+      "Total installment outflow",
+      "Outflow minus net cash"
+    ],
+    "chart": "personal-guide",
+    "chartAlt": "Modeled personal loan borrowing costs with no fee, deducted fees, financed fees and a longer repayment term.",
+    "chartCaption": "Fixed monthly hypothetical inputs. Net cash and repayment balances differ between fee treatments; these are not matched-net-proceeds offers.",
+    "questions": [
+      {
+        "question": "What is the payment on a $20,000 personal loan?",
+        "answer": "At the stated hypothetical 12% rate over 36 months, it is $664.29 before insurance. The amount changes with the rate, term and financed fees; this is not a current loan offer."
+      },
+      {
+        "question": "Does a longer term save money?",
+        "answer": "It can reduce the installment while increasing total interest. Compare both the payment and full modeled outflow, keeping cash received and charges visible."
+      },
+      {
+        "question": "Does an origination fee reduce the money I receive?",
+        "answer": "When deducted, yes. A 3% fee on $20,000 leaves $19,400 net cash in this example; financing instead increases the repayment balance."
+      },
+      {
+        "question": "Is modeled APR the lender’s disclosed APR?",
+        "answer": "No. This is a cash-flow illustration including entered insurance and fees. It does not classify charges under disclosure rules."
+      },
+      {
+        "question": "Does this check credit or eligibility?",
+        "answer": "No. Principal, rate and charges are supplied by you. No lender offer or approval is generated."
+      },
+      {
+        "question": "Where can I calculate extra payments?",
+        "answer": "Use Loan Repayment Calculator for an existing fixed-rate balance. Check prepayment penalties and any excluded charges before interpreting a modeled saving."
+      }
+    ],
+    "limitations": [
+      "Fixed monthly periods and hypothetical rates; no approval, rate lookup or personalized recommendation.",
+      "Keep unrounded calculations until display. Actual contracts may use dated accrual, different fee treatment or payment rounding.",
+      "The modeled nominal cash-flow APR includes entered insurance; it does not classify regulatory finance charges or replace a lender disclosure.",
+      "No prepayment penalty, variable-rate reset or tax benefit is calculated."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/do-personal-installment-loans-have-fees-en-2120/",
+        "label": "CFPB: personal installment loan fees and disclosure documents"
+      },
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/",
+        "label": "CFPB: conceptual difference between interest rate and APR"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/apr-vs-interest-rate/",
+        "label": "APR versus interest rate guide"
+      },
+      {
+        "href": "/loan-repayment-calculator",
+        "label": "Extra-payment calculator"
+      },
+      {
+        "href": "/glossary/amortization/",
+        "label": "Loan amortization glossary"
+      }
+    ]
+  },
+  "student": {
+    "meta": {
+      "path": "/guides/how-to-calculate-student-loan-payments/",
+      "title": "How to Calculate Student Loan Payments and Early Payoff",
+      "heading": "How to Calculate Student Loan Payments and Early Payoff",
+      "description": "Calculate fixed monthly student loan payments and compare extra principal with a longer term. Four reproducible cases distinguish modeled interest from servicer payoff quotes.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "student-loan"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "How to Calculate Student Loan Payments and Early Payoff",
+      "cardIntro": "Calculate fixed monthly student loan payments and compare extra principal with a longer term. Four reproducible cases distinguish modeled interest from servicer payoff quotes.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/student-loan-calculator",
+    "calculatorLabel": "Student Loan Calculator",
+    "intro": "Use the balance entering repayment, an entered fixed rate and the chosen repayment term to estimate a monthly schedule. Then compare extra principal separately from a different contractual term. This guide checks a monthly-period mathematical model, not a federal repayment-plan eligibility calculation or a servicer’s dated payoff quote.",
+    "answer": "For a hypothetical $30,000 balance at 6% over ten years, the modeled payment is $333.06 and total interest is $9,967.38. Adding $100 each month to that contracted payment reduces the modeled payoff to 86 payments and interest to $6,921.10. A twenty-year term instead lowers the payment to $214.93 but increases interest to $21,583.04.",
+    "sections": [
+      {
+        "id": "inputs",
+        "title": "Use the repayment balance and distinguish it from original borrowing",
+        "paragraphs": [
+          "The $30,000 case starts with a repayment balance supplied by the user. That amount may differ from the sum of historical disbursements. Check the current statement and separate principal from unpaid accrued interest before applying a model; a single entered balance cannot reproduce the history of multiple loan groups.",
+          "This example uses 6% purely as a hypothetical fixed rate. It does not select a federal disbursement-year rate, automatically apply a discount or determine whether interest should be subsidized. For multiple balances with different rates and payment instructions, evaluate the accounts separately rather than treating a simple average rate as an exact replacement."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "payment",
+        "title": "Calculate the fixed monthly payment",
+        "paragraphs": [
+          "Divide the entered annual rate by 12 to obtain 0.5% per month and use 120 monthly periods. The resulting unrounded installment is approximately $333.0615. First-month interest is $150, leaving about $183.06 to reduce principal before display rounding. Later interest falls as the balance decreases.",
+          "The model adds each month’s interest to the payment calculation and caps the final installment at the remaining amount due. It retains internal precision instead of rounding every monthly posting to cents. Actual payment dates and servicer rounding can therefore produce a different final figure."
+        ],
+        "formula": "Payment = balance × monthly rate / [1 − (1 + monthly rate)^(−months)]"
+      },
+      {
+        "id": "longer-term",
+        "title": "A twenty-year term changes the contract, not just the last payment",
+        "paragraphs": [
+          "At the same $30,000 and 6% but over 240 periods, the modeled installment is $214.93. Total paid is $51,583.04, including $21,583.04 interest. The ten-year case totals $39,967.38, so the smaller twenty-year payment does not imply less total cost.",
+          "This is a controlled term comparison, not a claim that a particular federal or private repayment option is available to you. A program may impose additional conditions or use a different payment method. Use current official program resources and the actual lender terms to identify applicable choices."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "extra",
+        "title": "Keep the contractual payment when adding extra principal",
+        "paragraphs": [
+          "In Extra Repayment mode, retain the ten-year term and add $100 monthly. The first payment becomes $433.06 and the schedule ends after 86 payments, with $6,921.10 total interest. The last payment is smaller than the regular combined amount because the model stops at payoff.",
+          "With $200 extra monthly, the first payment is $533.06, the schedule takes 67 payments and interest totals $5,317.35. These results assume the extra amount reduces principal after the period’s interest. They do not model a servicer holding cash for a later due date or distributing it among separate loan groups."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "servicer",
+        "title": "Monthly model results are different from a dated payoff quote",
+        "paragraphs": [
+          "Daily interest depends on the outstanding balance and elapsed days; this calculator’s examples use equal monthly periods. Edfinancial documents a daily accrual calculation, while CFPB explains payment application and the importance of communicating extra-payment instructions. Neither source endorses these hypothetical rates or example outcomes.",
+          "Confirm how your servicer applies extra money and whether it advances the due date. A reduced future bill is not the same modeled action as consistently paying the contractual amount plus extra principal. Obtain an actual payoff amount for a specific date instead of sending the calculator’s remaining principal as a final settlement."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Reproduce the example and review excluded decisions",
+        "paragraphs": [
+          "Use =-PMT(6%/12,120,30000) to reproduce the original installment. For each month, calculate interest as opening balance*6%/12 and payment as the smaller of scheduled payment plus extra, or balance plus interest. Subtract principal paid and repeat until the balance is zero.",
+          "A decision to prepay can also affect emergency cash, other debt and potential program benefits. This tool does not calculate income-driven payments, forgiveness, tax deductions or the value of federal protections. Do not use the interest difference alone as a recommendation to refinance or abandon a program."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "First monthly payment",
+      "Total interest",
+      "Payments until payoff",
+      "Total paid"
+    ],
+    "chart": "student-guide",
+    "chartAlt": "Total modeled student loan interest falls with extra monthly principal and rises with a longer contractual term.",
+    "chartCaption": "Same $30,000 balance and 6% entered rate. Extra-payment cases retain the ten-year contractual payment and reduce principal monthly; the final installment is capped.",
+    "questions": [
+      {
+        "question": "How much is a $30,000 student loan payment?",
+        "answer": "Under the guide’s hypothetical 6% fixed rate and ten-year monthly schedule, $333.06. A different rate, balance or term changes the result."
+      },
+      {
+        "question": "What does an extra $100 a month do?",
+        "answer": "In this specific ten-year example, it reduces payoff from 120 to 86 modeled payments and total interest from $9,967.38 to $6,921.10."
+      },
+      {
+        "question": "Does a lower payment mean lower interest?",
+        "answer": "No. The twenty-year illustration lowers the payment while increasing total interest. Compare both figures under the same balance and rate."
+      },
+      {
+        "question": "Does this calculate income-driven repayment or forgiveness?",
+        "answer": "No. The examples use fixed monthly amortization. Consult current official resources for program-specific payments and eligibility."
+      },
+      {
+        "question": "Why can my servicer show a different payoff?",
+        "answer": "Daily accrual, payment dates, unpaid interest, fees, account allocation and rounding can differ from equal monthly periods."
+      },
+      {
+        "question": "Should extra money advance my next due date?",
+        "answer": "This model assumes principal reduction after monthly interest. Confirm allocation and due-date instructions with the servicer rather than assuming a credit toward future bills has the same effect."
+      }
+    ],
+    "limitations": [
+      "Fixed monthly periods and hypothetical rates; no approval, rate lookup or personalized recommendation.",
+      "Keep unrounded calculations until display. Actual contracts may use dated accrual, different fee treatment or payment rounding.",
+      "No income-driven repayment, forgiveness, loan-group allocation or daily payoff quote is calculated."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/how-is-my-student-loan-payment-applied-to-my-account-en-605/",
+        "label": "CFPB: payment application and extra principal instructions"
+      },
+      {
+        "href": "https://edfinancial.studentaid.gov/Payments-Interest-and-Fees",
+        "label": "Edfinancial: daily interest and payment instructions"
+      }
+    ],
+    "related": [
+      {
+        "href": "/loan-repayment-calculator",
+        "label": "Compare repayment on a current balance"
+      },
+      {
+        "href": "/guides/should-i-pay-off-debt-or-save/",
+        "label": "Debt versus savings comparison"
+      },
+      {
+        "href": "/glossary/amortization/",
+        "label": "Loan amortization glossary"
+      }
+    ]
+  },
+  "business": {
+    "meta": {
+      "path": "/guides/how-to-calculate-business-loan-payments/",
+      "title": "How to Calculate Business Loan Payments and Total Cost",
+      "heading": "How to Calculate Business Loan Payments and Total Cost",
+      "description": "Calculate fixed-rate business loan payments, fees and insurance. Compare cash received with full repayment using four reproducible monthly examples.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "business-loan"
+      ],
+      "topic": "Business finance",
+      "breadcrumb": "How to Calculate Business Loan Payments and Total Cost",
+      "cardIntro": "Calculate fixed-rate business loan payments, fees and insurance. Compare cash received with full repayment using four reproducible monthly examples.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/business-loan-calculator",
+    "calculatorLabel": "Business Loan Calculator",
+    "intro": "Compare the cash a business receives with the full repayment commitment, not just the advertised installment. Fees may reduce working capital at the start, financing fees increases the balance, and separate insurance can add cash outflow outside the principal-and-interest total. The examples below isolate those differences in a fixed monthly model.",
+    "answer": "For a hypothetical $12,000 base loan at 12% over 12 monthly payments, a 3% origination fee plus $120 documentation and $20 other fees totals $500. Deducting those fees leaves $11,500 net cash, with a $1,066.19 monthly installment. Modeled total installment outflow is $12,794.23, or $1,294.23 more than the net initial cash.",
+    "sections": [
+      {
+        "id": "cash",
+        "title": "Begin with net usable cash, not only the headline amount",
+        "paragraphs": [
+          "The base example’s fees are $12,000*3%+$120+$20=$500. Deducted from proceeds leaves $11,500. That difference matters when planning an inventory purchase or project that requires the full $12,000 in cash; the stated principal and usable funding are different quantities.",
+          "The modeled starting net cash combines a separate upfront fee with the initial advance when Paid upfront is selected. This common comparison basis does not describe every bank transaction. Review when fees are actually due and whether other charges, deposits or collateral obligations affect available working capital."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "installment",
+        "title": "Match the compounding and payment periods",
+        "paragraphs": [
+          "The checked examples all use monthly compounding and monthly repayments. An entered 12% nominal annual rate becomes 1% per monthly period. Amortizing $12,000 over 12 installments produces $1,066.19 before insurance. Total loan interest is $794.23 and total principal plus interest is $12,794.23.",
+          "The calculator also supports other frequency choices, but a nominal rate cannot be compared fairly without its compounding convention. These cases do not demonstrate weekly, daily or revenue-based advances. A factor multiple is not an annual percentage rate and must not be entered as though it were one."
+        ],
+        "formula": "Monthly payment = repayment balance × monthly rate / [1 − (1 + monthly rate)^(−payment count)]"
+      },
+      {
+        "id": "term",
+        "title": "Test a longer term against total cash cost",
+        "paragraphs": [
+          "Extending the deducted-fee example to 24 months lowers the modeled payment to $564.88. Total installment outflow rises to $13,557.16, giving $2,057.16 outflow above the $11,500 net initial cash. The same project therefore has a smaller periodic commitment but a larger modeled borrowing cost.",
+          "A term comparison is only one part of a cash-flow plan. Revenue can be seasonal and expenses can occur before receivables are collected. The calculator does not assess whether the business can meet each due date, whether collateral is sufficient or whether an entered loan size is appropriate."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "finance",
+        "title": "Financed fees increase the repayment balance",
+        "paragraphs": [
+          "Financing the $500 fees creates a $12,500 repayment balance and $12,000 net starting cash. Payment becomes $1,110.61 over 12 months. Total installments are $13,327.32, or $1,327.32 above cash received. Some of the interest now accrues on financed charges rather than on additional usable cash.",
+          "The deducted and financed examples do not advance the same net amount. Compare the funding actually needed before ranking their payments or modeled APRs. Financing may change the timing of a cash burden; it does not erase the charge or establish that an offer is better."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "insurance",
+        "title": "Reconcile separate insurance with loan totals",
+        "paragraphs": [
+          "Adding $10 insurance per payment to the original 12-month deducted-fee case increases each full payment to $1,076.19. The engine’s Total payments metric and schedule still report loan principal and interest. Add the separate $120 insurance stream to obtain $12,914.23 overall installment outflow.",
+          "The difference between that outflow and $11,500 initial net cash is $1,414.23. The modeled nominal cash-flow APR rises to about 21.9729% because its discount-rate calculation includes that entered insurance. This does not classify regulatory finance charges or guarantee the lender will disclose the same APR."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "scope",
+        "title": "Keep an amortizing term loan separate from SBA or advance pricing",
+        "paragraphs": [
+          "SBA explains that repayment terms vary and distinguishes fixed from variable rates. This generic calculator does not select an SBA program, insert a guarantee fee, apply a program limit or determine eligibility. An applicable fixed-rate quote can be entered manually, but that does not turn the result into an SBA approval estimate.",
+          "For the base payment, a spreadsheet can use =-PMT(12%/12,12,12000). For full cash cost, add separate installment charges to loan payments, then subtract net initial cash. Check variable-rate resets, prepayment clauses and other contract charges separately; revenue-based advances require a different model."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Net initial cash",
+      "Payment including insurance",
+      "Total installment outflow",
+      "Outflow minus net cash"
+    ],
+    "chart": "business-guide",
+    "chartAlt": "Modeled business borrowing costs under a longer term, financed fees and per-payment insurance.",
+    "chartCaption": "Fixed monthly hypothetical inputs. Net cash and repayment balances differ between fee treatments; these are not matched-net-proceeds offers.",
+    "questions": [
+      {
+        "question": "What is the monthly payment on a $12,000 business loan?",
+        "answer": "At the hypothetical 12% rate over 12 monthly payments, $1,066.19 before insurance. Fees may change net cash or the financed balance."
+      },
+      {
+        "question": "Why do I receive less than the loan amount?",
+        "answer": "Deducted fees reduce the initial advance. The example’s $500 fees leave $11,500 net from a $12,000 base amount."
+      },
+      {
+        "question": "Does a two-year term cost less than one year?",
+        "answer": "It lowers the installment in the checked example but increases full modeled outflow above net cash from $1,294.23 to $2,057.16."
+      },
+      {
+        "question": "Does Total payments include separate insurance?",
+        "answer": "No. Here it covers loan principal and interest. Add insurance per payment times the payment count to reconcile full installment cash outflow."
+      },
+      {
+        "question": "Does this automatically calculate SBA terms?",
+        "answer": "No. Program fees, eligibility and variable-rate changes are not automatically selected. Use the actual quote and current program information."
+      },
+      {
+        "question": "Can I enter a factor rate as the interest rate?",
+        "answer": "No. A factor multiple and a nominal annual interest percentage have different meanings. This tool models amortizing borrowing, not percentage-of-sales repayments."
+      }
+    ],
+    "limitations": [
+      "Fixed monthly periods and hypothetical rates; no approval, rate lookup or personalized recommendation.",
+      "Keep unrounded calculations until display. Actual contracts may use dated accrual, different fee treatment or payment rounding.",
+      "The modeled nominal cash-flow APR includes entered insurance; it does not classify regulatory finance charges or replace a lender disclosure.",
+      "No prepayment penalty, variable-rate reset or tax benefit is calculated."
+    ],
+    "sources": [
+      {
+        "href": "https://www.sba.gov/loans/7a-loans/",
+        "label": "SBA: 7(a) repayment terms, fixed and variable rates"
+      }
+    ],
+    "related": [
+      {
+        "href": "/break-even-calculator",
+        "label": "Business break-even calculator"
+      },
+      {
+        "href": "/guides/apr-vs-interest-rate/",
+        "label": "APR versus interest rate concepts"
+      },
+      {
+        "href": "/glossary/amortization/",
+        "label": "Loan amortization glossary"
+      }
+    ]
   }
 }

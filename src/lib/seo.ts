@@ -213,3 +213,6 @@ export function categoryPageSchema(page:CategoryPage,config=siteConfig()) {
   ...(url?[{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Financial calculators',item:absoluteURL(directoryPath,config)},{'@type':'ListItem',position:2,name:page.heading,item:url}]}]:[])
  ]};
 }
+
+for(const id of ['personal-loan','student-loan','business-loan'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+for(const slug of ['amortization','apr'])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';

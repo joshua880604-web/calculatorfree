@@ -3311,5 +3311,375 @@
         "$327,789.42"
       ]
     }
+  ],
+  "personal": [
+    {
+      "label": "36 months, no origination fee",
+      "calculatorId": "personal-loan",
+      "mode": "repayment",
+      "values": {
+        "principal": 20000,
+        "years": 3,
+        "months": 0,
+        "rate": 12,
+        "origination": 0,
+        "documentation": 0,
+        "other_fee": 0,
+        "treatment": "Deducted from proceeds",
+        "insurance": 0
+      },
+      "metrics": {
+        "Payment per period": 664.2861962570239,
+        "Payment including insurance": 664.2861962570239,
+        "Total interest": 3914.30306525286,
+        "Total payments": 23914.30306525286,
+        "Number of payments": 36.0,
+        "Loan fees": 0.0,
+        "Net proceeds after fees": 20000.0,
+        "Nominal APR including insurance": 12.0
+      },
+      "display": [
+        "$20,000.00",
+        "$664.29",
+        "$23,914.30",
+        "$3,914.30"
+      ]
+    },
+    {
+      "label": "36 months, fee deducted",
+      "calculatorId": "personal-loan",
+      "mode": "repayment",
+      "values": {
+        "principal": 20000,
+        "years": 3,
+        "months": 0,
+        "rate": 12,
+        "origination": 3,
+        "documentation": 0,
+        "other_fee": 0,
+        "treatment": "Deducted from proceeds",
+        "insurance": 0
+      },
+      "metrics": {
+        "Payment per period": 664.2861962570239,
+        "Payment including insurance": 664.2861962570239,
+        "Total interest": 3914.30306525286,
+        "Total payments": 23914.30306525286,
+        "Number of payments": 36.0,
+        "Loan fees": 600.0,
+        "Net proceeds after fees": 19400.0,
+        "Nominal APR including insurance": 14.131548656978715
+      },
+      "display": [
+        "$19,400.00",
+        "$664.29",
+        "$23,914.30",
+        "$4,514.30"
+      ]
+    },
+    {
+      "label": "36 months, fee financed",
+      "calculatorId": "personal-loan",
+      "mode": "repayment",
+      "values": {
+        "principal": 20000,
+        "years": 3,
+        "months": 0,
+        "rate": 12,
+        "origination": 3,
+        "documentation": 0,
+        "other_fee": 0,
+        "treatment": "Financed",
+        "insurance": 0
+      },
+      "metrics": {
+        "Payment per period": 684.2147821447346,
+        "Payment including insurance": 684.2147821447346,
+        "Total interest": 4031.732157210446,
+        "Total payments": 24631.732157210445,
+        "Number of payments": 36.0,
+        "Loan fees": 600.0,
+        "Net proceeds after fees": 20000.0,
+        "Nominal APR including insurance": 14.06815038866208
+      },
+      "display": [
+        "$20,000.00",
+        "$684.21",
+        "$24,631.73",
+        "$4,631.73"
+      ]
+    },
+    {
+      "label": "60 months, fee deducted",
+      "calculatorId": "personal-loan",
+      "mode": "repayment",
+      "values": {
+        "principal": 20000,
+        "years": 5,
+        "months": 0,
+        "rate": 12,
+        "origination": 3,
+        "documentation": 0,
+        "other_fee": 0,
+        "treatment": "Deducted from proceeds",
+        "insurance": 0
+      },
+      "metrics": {
+        "Payment per period": 444.88895369803555,
+        "Payment including insurance": 444.88895369803555,
+        "Total interest": 6693.337221882133,
+        "Total payments": 26693.33722188213,
+        "Number of payments": 60.0,
+        "Loan fees": 600.0,
+        "Net proceeds after fees": 19400.0,
+        "Nominal APR including insurance": 13.349567878311678
+      },
+      "display": [
+        "$19,400.00",
+        "$444.89",
+        "$26,693.34",
+        "$7,293.34"
+      ]
+    }
+  ],
+  "student": [
+    {
+      "label": "10-year fixed monthly schedule",
+      "calculatorId": "student-loan",
+      "mode": "normal",
+      "values": {
+        "principal": 30000,
+        "years": 10,
+        "months": 0,
+        "rate": 6
+      },
+      "metrics": {
+        "Payment per period": 333.06150582494837,
+        "Total interest": 9967.380698993808,
+        "Total payments": 39967.38069899381,
+        "Number of payments": 120.0
+      },
+      "display": [
+        "$333.06",
+        "$9,967.38",
+        "120",
+        "$39,967.38"
+      ]
+    },
+    {
+      "label": "20-year term, same balance and rate",
+      "calculatorId": "student-loan",
+      "mode": "normal",
+      "values": {
+        "principal": 30000,
+        "years": 20,
+        "months": 0,
+        "rate": 6
+      },
+      "metrics": {
+        "Payment per period": 214.92931754344946,
+        "Total interest": 21583.036210427872,
+        "Total payments": 51583.03621042787,
+        "Number of payments": 240.0
+      },
+      "display": [
+        "$214.93",
+        "$21,583.04",
+        "240",
+        "$51,583.04"
+      ]
+    },
+    {
+      "label": "10-year contract + USD 100 monthly",
+      "calculatorId": "student-loan",
+      "mode": "extra",
+      "values": {
+        "principal": 30000,
+        "years": 10,
+        "months": 0,
+        "rate": 6,
+        "extra_monthly": 100,
+        "extra_yearly": 0,
+        "extra_once": 0,
+        "extra_once_month": 1
+      },
+      "metrics": {
+        "Payment per period": 433.06150582494837,
+        "Total interest": 6921.098918157032,
+        "Total payments": 36921.09891815703,
+        "Number of payments": 86.0
+      },
+      "display": [
+        "$433.06",
+        "$6,921.10",
+        "86",
+        "$36,921.10"
+      ]
+    },
+    {
+      "label": "10-year contract + USD 200 monthly",
+      "calculatorId": "student-loan",
+      "mode": "extra",
+      "values": {
+        "principal": 30000,
+        "years": 10,
+        "months": 0,
+        "rate": 6,
+        "extra_monthly": 200,
+        "extra_yearly": 0,
+        "extra_once": 0,
+        "extra_once_month": 1
+      },
+      "metrics": {
+        "Payment per period": 533.0615058249484,
+        "Total interest": 5317.352854504724,
+        "Total payments": 35317.35285450472,
+        "Number of payments": 67.0
+      },
+      "display": [
+        "$533.06",
+        "$5,317.35",
+        "67",
+        "$35,317.35"
+      ]
+    }
+  ],
+  "business": [
+    {
+      "label": "12 months, USD 500 fees deducted",
+      "calculatorId": "business-loan",
+      "mode": "repayment",
+      "values": {
+        "principal": 12000,
+        "years": 1,
+        "months": 0,
+        "rate": 12,
+        "origination": 3,
+        "documentation": 120,
+        "other_fee": 20,
+        "treatment": "Deducted from proceeds",
+        "insurance": 0,
+        "compound": "Monthly",
+        "pay": "Monthly"
+      },
+      "metrics": {
+        "Payment per period": 1066.1854641401005,
+        "Payment including insurance": 1066.1854641401005,
+        "Total interest": 794.2255696812059,
+        "Total payments": 12794.225569681206,
+        "Number of payments": 12.0,
+        "Loan fees": 500.0,
+        "Net proceeds after fees": 11500.0,
+        "Nominal APR including insurance": 20.161421721668077
+      },
+      "display": [
+        "$11,500.00",
+        "$1,066.19",
+        "$12,794.23",
+        "$1,294.23"
+      ]
+    },
+    {
+      "label": "24 months, same fees deducted",
+      "calculatorId": "business-loan",
+      "mode": "repayment",
+      "values": {
+        "principal": 12000,
+        "years": 2,
+        "months": 0,
+        "rate": 12,
+        "origination": 3,
+        "documentation": 120,
+        "other_fee": 20,
+        "treatment": "Deducted from proceeds",
+        "insurance": 0,
+        "compound": "Monthly",
+        "pay": "Monthly"
+      },
+      "metrics": {
+        "Payment per period": 564.8816666791765,
+        "Payment including insurance": 564.8816666791765,
+        "Total interest": 1557.160000300236,
+        "Total payments": 13557.160000300237,
+        "Number of payments": 24.0,
+        "Loan fees": 500.0,
+        "Net proceeds after fees": 11500.0,
+        "Nominal APR including insurance": 16.328351570892124
+      },
+      "display": [
+        "$11,500.00",
+        "$564.88",
+        "$13,557.16",
+        "$2,057.16"
+      ]
+    },
+    {
+      "label": "12 months, USD 500 fees financed",
+      "calculatorId": "business-loan",
+      "mode": "repayment",
+      "values": {
+        "principal": 12000,
+        "years": 1,
+        "months": 0,
+        "rate": 12,
+        "origination": 3,
+        "documentation": 120,
+        "other_fee": 20,
+        "treatment": "Financed",
+        "insurance": 0,
+        "compound": "Monthly",
+        "pay": "Monthly"
+      },
+      "metrics": {
+        "Payment per period": 1110.6098584792715,
+        "Payment including insurance": 1110.6098584792715,
+        "Total interest": 827.3183017512561,
+        "Total payments": 13327.318301751257,
+        "Number of payments": 12.0,
+        "Loan fees": 500.0,
+        "Net proceeds after fees": 12000.0,
+        "Nominal APR including insurance": 19.825104088116795
+      },
+      "display": [
+        "$12,000.00",
+        "$1,110.61",
+        "$13,327.32",
+        "$1,327.32"
+      ]
+    },
+    {
+      "label": "12 months + USD 10 insurance per payment",
+      "calculatorId": "business-loan",
+      "mode": "repayment",
+      "values": {
+        "principal": 12000,
+        "years": 1,
+        "months": 0,
+        "rate": 12,
+        "origination": 3,
+        "documentation": 120,
+        "other_fee": 20,
+        "treatment": "Deducted from proceeds",
+        "insurance": 10,
+        "compound": "Monthly",
+        "pay": "Monthly"
+      },
+      "metrics": {
+        "Payment per period": 1066.1854641401005,
+        "Payment including insurance": 1076.1854641401005,
+        "Total interest": 794.2255696812059,
+        "Total payments": 12794.225569681206,
+        "Number of payments": 12.0,
+        "Loan fees": 500.0,
+        "Net proceeds after fees": 11500.0,
+        "Nominal APR including insurance": 21.97291476363303
+      },
+      "display": [
+        "$11,500.00",
+        "$1,076.19",
+        "$12,914.23",
+        "$1,414.23"
+      ]
+    }
   ]
 }

@@ -576,7 +576,21 @@
         "url": "https://www.consumerfinance.gov/ask-cfpb/on-a-mortgage-whats-the-difference-between-my-principal-and-interest-payment-and-my-total-monthly-payment-en-1941/"
       }
     ],
-    "checkedOn": "2026-10-29"
+    "checkedOn": "2026-10-29",
+    "guides": [
+      {
+        "path": "/guides/how-to-calculate-personal-loan-payments/",
+        "title": "How to Calculate Personal Loan Payments, Fees and Total Cost"
+      },
+      {
+        "path": "/guides/how-to-calculate-student-loan-payments/",
+        "title": "How to Calculate Student Loan Payments and Early Payoff"
+      },
+      {
+        "path": "/guides/how-to-calculate-business-loan-payments/",
+        "title": "How to Calculate Business Loan Payments and Total Cost"
+      }
+    ]
   },
   {
     "slug": "markup-vs-margin",
@@ -2006,7 +2020,17 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General borrowing concept with U.S. disclosure context; exact statutory APR depends on product and jurisdiction."
+    "scope": "General borrowing concept with U.S. disclosure context; exact statutory APR depends on product and jurisdiction.",
+    "guides": [
+      {
+        "path": "/guides/how-to-calculate-personal-loan-payments/",
+        "title": "How to Calculate Personal Loan Payments, Fees and Total Cost"
+      },
+      {
+        "path": "/guides/how-to-calculate-business-loan-payments/",
+        "title": "How to Calculate Business Loan Payments and Total Cost"
+      }
+    ]
   },
   {
     "slug": "principal-and-interest",

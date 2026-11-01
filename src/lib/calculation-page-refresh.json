@@ -245,5 +245,44 @@
         "answer": "A down payment alone cannot determine an affordable home price. You also need an income or monthly budget, existing debts, loan terms and ownership costs. Select Dollars for the down-payment unit and enter 20000, then account separately for any applicable PMI, closing costs and reserves. This calculator does not automatically calculate PMI or assess loan eligibility."
       }
     ]
+  },
+  "personal-loan": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Does a longer term save money?",
+        "answer": "It can reduce the installment while increasing total interest. Compare both the payment and full modeled outflow, keeping cash received and charges visible."
+      },
+      {
+        "question": "Is modeled APR the lender’s disclosed APR?",
+        "answer": "No. This is a cash-flow illustration including entered insurance and fees. It does not classify charges under disclosure rules."
+      }
+    ]
+  },
+  "student-loan": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "What does an extra $100 a month do?",
+        "answer": "In this specific ten-year example, it reduces payoff from 120 to 86 modeled payments and total interest from $9,967.38 to $6,921.10."
+      },
+      {
+        "question": "Why can my servicer show a different payoff?",
+        "answer": "Daily accrual, payment dates, unpaid interest, fees, account allocation and rounding can differ from equal monthly periods."
+      }
+    ]
+  },
+  "business-loan": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Does a two-year term cost less than one year?",
+        "answer": "It lowers the installment in the checked example but increases full modeled outflow above net cash from $1,294.23 to $2,057.16."
+      },
+      {
+        "question": "Does Total payments include separate insurance?",
+        "answer": "No. Here it covers loan principal and interest. Add insurance per payment times the payment count to reconcile full installment cash outflow."
+      }
+    ]
   }
 }

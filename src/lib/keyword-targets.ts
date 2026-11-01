@@ -288,3 +288,9 @@ keywordTitles['stock-profit']='Stock Profit Calculator - Profit, Loss, Fees & Br
 searchTasks['stock-profit']=[{keyword:'Stock profit calculator',mode:'trade',description:'Estimate stock profit or loss after trading fees and optional cash dividends. Find the break-even sale price using your own prices.',aliases:['Stock calculator','Stock gain calculator','Stock profit and loss calculator','Stock calculator profit']}];
 keywordTitles['stock-average']='Stock Average Calculator - Weighted Cost & Purchases';
 searchTasks['stock-average']=[{keyword:'Stock average calculator',mode:'purchases',description:'Add purchase quantities, prices and fees to calculate weighted stock cost. Compare averaging down without assuming a future recovery.',aliases:['Stock average cost calculator','Stock average down calculator','Average stock price calculator','Average down stock calculator']}];
+
+// Loan payment and total-cost examples checked 2026-11-01.
+keywordTitles['student-loan']='Student Loan Calculator - Payments & Extra Repayment';
+keywordTitles['business-loan']='Business Loan Calculator - Payments, Fees & Total Cost';
+searchTasks['personal-loan'][0].description='Calculate personal loan payments, fees and net proceeds. Compare repayment terms and modeled cash-flow APR using your own loan inputs.';
+searchTasks['business-loan'][0].description='Calculate business loan payments and total cost with entered fees, insurance and repayment terms. Compare net proceeds; no automatic SBA terms or approval.';
