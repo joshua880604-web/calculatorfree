@@ -5238,16 +5238,11 @@
         "rate": "20"
       },
       "focus": {
-        "label": "Original price",
-        "value": 100,
+        "label": "Sale price",
+        "value": 80,
         "format": "money"
       },
       "metrics": [
-        {
-          "label": "Original price",
-          "value": 100,
-          "format": "money"
-        },
         {
           "label": "Sale price",
           "value": 80,
@@ -5262,9 +5257,16 @@
           "label": "Discount rate",
           "value": 20,
           "format": "percent"
+        },
+        {
+          "label": "Original price",
+          "value": 100,
+          "format": "money"
         }
       ],
-      "notes": [],
+      "notes": [
+        "Price reductions only. Sales tax, shipping, fees and promotion eligibility are separate. Calculations retain precision before currency display rounding."
+      ],
       "inputs": [
         {
           "key": "before",
@@ -5289,16 +5291,11 @@
         "rate": "30"
       },
       "focus": {
-        "label": "Original price",
-        "value": 100,
+        "label": "Sale price",
+        "value": 70,
         "format": "money"
       },
       "metrics": [
-        {
-          "label": "Original price",
-          "value": 100,
-          "format": "money"
-        },
         {
           "label": "Sale price",
           "value": 70,
@@ -5313,9 +5310,16 @@
           "label": "Discount rate",
           "value": 30,
           "format": "percent"
+        },
+        {
+          "label": "Original price",
+          "value": 100,
+          "format": "money"
         }
       ],
-      "notes": [],
+      "notes": [
+        "Price reductions only. Sales tax, shipping, fees and promotion eligibility are separate. Calculations retain precision before currency display rounding."
+      ],
       "inputs": [
         {
           "key": "before",

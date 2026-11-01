@@ -1,3 +1,4 @@
+import discountPriorityContent from './discount-priority-content.json';
 import semrushFourthEightFaq from './semrush-fourth-eight-faq-content.json';
 import interestRatePriorityContent from './interest-rate-priority-content.json';
 import semrushThirdEightFaq from './semrush-third-eight-faq-content.json';
@@ -915,3 +916,8 @@ Object.assign(guides['interest-rate'], interestRatePriorityContent);
 relatedCalculatorIds['interest-rate'] = ['apr','auto-loan','personal-loan','loan','savings','compound-interest','cagr'];
 for (const id of ['apr','auto-loan','personal-loan','loan'])
   relatedCalculatorIds[id] = [...new Set(['interest-rate', ...(relatedCalculatorIds[id] ?? [])])].slice(0,8);
+
+Object.assign(guides.discount, discountPriorityContent);
+relatedCalculatorIds.discount=['sales-tax','margin','markup','commission','percentage'];
+for(const id of ['sales-tax','margin','markup','commission'])
+  relatedCalculatorIds[id]=[...new Set(['discount',...(relatedCalculatorIds[id]??[])])].slice(0,8);

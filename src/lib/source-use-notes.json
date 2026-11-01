@@ -1070,8 +1070,8 @@
     },
     "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications": {
       "role": "method",
-      "usedFor": "Percentage calculations for sales tax, commission and discounts.",
-      "scope": "The chosen base and rate determine the result; arithmetic does not identify the applicable tax, employment or commission-contract rules."
+      "usedFor": "Percentage base, price reduction, amount saved and separate sales-tax arithmetic.",
+      "scope": "Educational arithmetic only; does not establish promotion stacking, retailer eligibility, taxability or a statutory rate. Stacked examples are independently calculated hypothetical scenarios."
     },
     "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-rate-and-adjustable-rate-mortgage-arm-loan-en-100/": {
       "role": "background",
@@ -2238,7 +2238,7 @@
       ]
     },
     "calculator:discount": {
-      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "note": "References explain percentage arithmetic. The calculator models single and two-stage price reductions under entered assumptions, not merchant promotion eligibility, tax rules or checkout-specific rounding.",
       "extras": [
         {
           "title": "OpenStax: percentage bases for tax, commission and discount",

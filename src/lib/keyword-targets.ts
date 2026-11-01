@@ -327,3 +327,7 @@ searchTasks['cash-back-or-low-interest'][0].description='Compare cash rebate ver
 // Reviewed US SERP intent: keep the payment-implied loan-rate task on this canonical URL.
 keywordTitles['interest-rate'] = 'Interest Rate Calculator - Find Your Loan Rate (Free)';
 searchTasks['interest-rate'][0].description = 'Use this free interest rate calculator to find a loan rate from amount, term and monthly payment. See total interest, monthly rate and effective annual rate.';
+
+// Discount intent: sale-price arithmetic first, without creating another canonical URL.
+keywordTitles.discount = 'Discount Calculator - Percent Off & Sale Price (Free)';
+searchTasks.discount.unshift({keyword:'Percent off calculator',mode:'percent',description:'Use this free discount calculator to find sale price, savings and percent off. Recover the original price or calculate two stacked discounts.'});

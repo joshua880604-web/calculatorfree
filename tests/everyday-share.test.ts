@@ -6,7 +6,7 @@ import {calculationLink,sharedInputs,summaryText} from '../src/lib/sharing';
 import {everydayShareToolIds,hasShareTools,hasEmbed,hasPinterest,shareTabs,shareToolPaths,shareScenarioHelp} from '../src/lib/share-tools';
 import {resultTables} from '../src/lib/share-formats';
 import {imageMetrics} from '../src/lib/result-image-data';
-test('Everyday links restore all 18 calculation modes without adding unsupported actions',async()=>{
+test('Everyday links restore all 19 calculation modes without adding unsupported actions',async()=>{
  let count=0;
  for(const id of everydayShareToolIds){
   const c=calculators.find(c=>c.id===id)!;
@@ -20,7 +20,7 @@ test('Everyday links restore all 18 calculation modes without adding unsupported
    const result=runCalculation(id,m.id,v);assert.deepEqual(await runClientCalculation(id,c.category,m.id,restored.values),result);assert.deepEqual(imageMetrics(id,m.id,result),result.metrics);count++;
   }
  }
- assert.equal(count,18);
+ assert.equal(count,19);
 });
 test('Scientific links preserve encoded expressions, angle modes and independent expected results',()=>{
  const c=calculators.find(c=>c.id==='scientific')!,m=c.modes[0];

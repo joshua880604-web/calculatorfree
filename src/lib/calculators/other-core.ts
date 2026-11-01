@@ -875,22 +875,38 @@ const discount = tool(
               : n(v, "after");
       if (after < 0 || after > before)
         throw new Error("Sale price must be between zero and original price.");
+      const values = {
+        original: money("Original price", before),
+        sale: money("Sale price", after),
+        saved: money("Amount saved", before - after),
+        rate: metric("Discount rate", ((before - after) / positive(before, "Original price")) * 100, "percent"),
+      };
+      const primary = id === "original" ? "original" : id === "rate" ? "rate" : "sale";
       return {
-        metrics: [
-          money("Original price", before),
-          money("Sale price", after),
-          money("Amount saved", before - after),
-          metric(
-            "Discount rate",
-            ((before - after) / positive(before, "Original price")) * 100,
-            "percent",
-          ),
-        ],
+        metrics: [values[primary], ...(["sale", "saved", "rate", "original"] as const).filter(key => key !== primary).map(key => values[key])],
+        notes: ["Price reductions only. Sales tax, shipping, fees and promotion eligibility are separate. Calculations retain precision before currency display rounding."],
       };
     },
   })),
-  "Calculate sale prices and savings for percentage and fixed discounts.",
+  "Find the sale price and savings from a percent or dollar discount, recover an original price, or compare two stacked percentage discounts.",
 );
+discount.modes.push({
+  id: "stacked",
+  title: "Stacked Discounts",
+  fields: [num("before", "Original price", 100, "$"), {...num("first", "First discount", 20, "%"), max:100}, {...num("second", "Additional discount", 10, "%"), max:100}],
+  description: "Apply a second percentage reduction to the already discounted price.",
+  formula: "Sale price = original × (1 − first/100) × (1 − additional/100).",
+  calculate: v => {
+    const original = positive(n(v,"before"), "Original price"),
+      first = n(v,"first"), second = n(v,"second");
+    if(first<0 || first>100 || second<0 || second>100) throw new Error("Each discount must be between 0% and 100%.");
+    const intermediate = original * (1-first/100), sale = intermediate * (1-second/100);
+    return {metrics:[money("Sale price",sale),money("Amount saved",original-sale),metric("Discount rate",(1-sale/original)*100,"percent"),money("Original price",original),money("Price after first discount",intermediate)],
+      columns:["Discount stage","Rate (%)","Stage savings","Price after stage"],
+      rows:[["First discount",first,original-intermediate,intermediate],["Additional discount",second,intermediate-sale,sale]],
+      notes:["The additional percentage applies to the remaining price, not the original. Enter only promotions that can actually be combined; eligibility is not determined.","No sales tax, shipping or fees are added. Intermediate amounts retain full precision; a merchant's per-stage rounding can differ."]};
+  },
+});
 function feeLoan(id: string, business = false) {
   return tool(
     id,

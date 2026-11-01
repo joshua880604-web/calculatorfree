@@ -1,0 +1,101 @@
+{
+  "summary": "A discount calculator converts a percentage or fixed-dollar reduction into the sale price and amount saved. Reverse modes recover the original price or discount percentage from two prices. Stacked Discounts applies two successive percentage reductions to the remaining price, not their sum.",
+  "scope": "All amounts are entered price assumptions in USD display. Price reductions exclude tax, shipping, fees and promotion eligibility. The stacked mode applies exactly two percentage discounts in order with full intermediate precision; merchant rounding and contract terms can differ. Original-price recovery requires a discount below 100%. Discount Rate here is a retail price reduction, not a financial present-value rate.",
+  "examples": [
+    {
+      "title": "Take 20 percent off a price of 100",
+      "mode": "percent",
+      "values": {
+        "before": "100",
+        "rate": "20"
+      },
+      "inputs": "Original price $100 and an illustrative 20% reduction. No tax, shipping or other charges.",
+      "steps": [
+        "Amount saved = $100 × 20% = $20.",
+        "Sale price = $100 − $20 = $80."
+      ],
+      "answer": "Sale price: $80; amount saved: $20.",
+      "expected": {
+        "label": "Sale price",
+        "value": 80,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Apply 20% off, then an additional 10% off",
+      "mode": "stacked",
+      "values": {
+        "before": "100",
+        "first": "20",
+        "second": "10"
+      },
+      "inputs": "Original price $100, a first 20% discount and an additional 10% discount on the remainder. Assume the promotions may be combined.",
+      "steps": [
+        "After the first reduction: $100 × 0.80 = $80.",
+        "Additional savings: $80 × 0.10 = $8.",
+        "Final price: $72, with $28 total savings and a combined 28% reduction."
+      ],
+      "answer": "Sale price: $72; combined discount: 28%, not 30%.",
+      "expected": {
+        "label": "Sale price",
+        "value": 72,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Recover the price before 20% off",
+      "mode": "original",
+      "values": {
+        "after": "80",
+        "rate": "20"
+      },
+      "inputs": "Sale price $80 after a known 20% reduction; no other adjustments.",
+      "steps": [
+        "The sale price is 80% of the original.",
+        "Original price = $80 / 0.80 = $100."
+      ],
+      "answer": "Original price: $100.",
+      "expected": {
+        "label": "Original price",
+        "value": 100,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "questions": [
+    {
+      "question": "How do I find the original price before a percentage discount?",
+      "answer": "Original price = sale price / (1 − discount/100), provided the discount is below 100%. An $80 sale price after 20% off implies $80 / 0.80 = $100 originally. Multiplying $80 by 1.20 gives $96 and does not reverse the reduction. A 100% reduction leaves zero sale price and does not uniquely reveal the original price."
+    },
+    {
+      "question": "Can I add two successive discount percentages?",
+      "answer": "No. Apply each percentage to the remaining price. Two successive 20% reductions turn $100 into $80 and then $64: total savings are $36, or 36%, not 40%. Choose Stacked Discounts to enter an original price and two percentage reductions. The second reduction is calculated from the price left after the first; the tool does not decide whether a merchant allows both promotions."
+    },
+    {
+      "question": "How do I calculate the discount percentage and sale price?",
+      "answer": "Discount percentage = (original price − sale price) / original price × 100%. A reduction from $100 to $80 is 20% off and saves $20. If instead the percentage is known, sale price = original × (1 − discount/100). Choose Discount Rate for two prices or Percent Off for a price plus percentage. Sales tax, shipping and other unentered charges are separate.",
+      "anchor": "faq-discount-semrush-1"
+    },
+    {
+      "anchor": "discount-tax",
+      "question": "Does the sale price include sales tax and shipping?",
+      "answer": "No. The Discount calculator shows price reductions before tax, shipping and other charges. If a $72 discounted item is entirely taxable at an illustrative 7%, tax is $5.04 and total is $77.04. Use Sales Tax with the appropriate taxable base and rate. Coupon treatment, taxability and merchant terms can differ; this example is arithmetic, not a tax-rule lookup."
+    },
+    {
+      "anchor": "discount-rate-meaning",
+      "question": "Is discount percentage the same as a financial discount rate?",
+      "answer": "No. Discount Rate on this page means the price reduction divided by the original price. It does not calculate a present-value discount rate, bond yield or cost of capital. Use Present Value or the relevant investment tool for financial discounting."
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenStax: sales tax, commission and discount percentage arithmetic",
+      "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications"
+    },
+    {
+      "title": "Calculation methodology, rule versions and testing limitations",
+      "url": "/methodology.html"
+    }
+  ],
+  "checkedOn": "2026-11-01"
+}

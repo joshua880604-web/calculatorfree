@@ -47,7 +47,7 @@ export const compactReadingSections: Record<string,CompactReadingSections> = {
   "estate-tax": { "questions": true },
   "lease": { "questions": true },
   "sales-tax": { "questions": true },
-  "discount": { "questions": true },
+  "discount": { "questions": true, "examples": true, "sources": true },
   "vat": { "questions": true },
   "interest-rate": { "questions": true, "examples": true, "sources": true },
   "average-return": { "questions": true },

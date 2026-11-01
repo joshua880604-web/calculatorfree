@@ -6285,6 +6285,10 @@
       {
         "title": "Keep tiers and profitability distinct",
         "text": "A tiered calculation needs the exact threshold and marginal-versus-whole-base convention in the form. A quoted commission amount is neither product gross profit nor company net profit. These separate examples do not automatically feed the discounted price into the commission tool. Write down the actual base and use the Margin or Markup tool for the different pricing-denominator question."
+      },
+      {
+        "title": "Check the price reduction before estimating checkout costs",
+        "text": "In the linked $100 scenarios, a 20% reduction gives an $80 sale price, while 30% off gives $70. The revised chart compares those sale prices rather than the unchanged original price. Separately, a 20% reduction followed by 10% off the remainder gives $72: the combined reduction is 28%, not 30%. Sales Tax can apply an entered rate to the relevant discounted base; neither tool establishes taxability or promotion eligibility."
       }
     ],
     "questions": [
@@ -6313,6 +6317,10 @@
       {
         "href": "https://www.consumerfinance.gov/owning-a-home/prepare/assess-your-spending/",
         "label": "CFPB: distinguish income and expenses; arithmetic here uses entered terms"
+      },
+      {
+        "href": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications",
+        "label": "OpenStax: sales tax, commission and discount percentage arithmetic"
       }
     ],
     "cases": [
@@ -6327,16 +6335,11 @@
           "rate": "20"
         },
         "focus": {
-          "label": "Original price",
-          "value": 100,
+          "label": "Sale price",
+          "value": 80,
           "format": "money"
         },
         "metrics": [
-          {
-            "label": "Original price",
-            "value": 100,
-            "format": "money"
-          },
           {
             "label": "Sale price",
             "value": 80,
@@ -6351,9 +6354,16 @@
             "label": "Discount rate",
             "value": 20,
             "format": "percent"
+          },
+          {
+            "label": "Original price",
+            "value": 100,
+            "format": "money"
           }
         ],
-        "notes": [],
+        "notes": [
+          "Price reductions only. Sales tax, shipping, fees and promotion eligibility are separate. Calculations retain precision before currency display rounding."
+        ],
         "inputs": [
           {
             "key": "before",
@@ -6378,16 +6388,11 @@
           "rate": "30"
         },
         "focus": {
-          "label": "Original price",
-          "value": 100,
+          "label": "Sale price",
+          "value": 70,
           "format": "money"
         },
         "metrics": [
-          {
-            "label": "Original price",
-            "value": 100,
-            "format": "money"
-          },
           {
             "label": "Sale price",
             "value": 70,
@@ -6402,9 +6407,16 @@
             "label": "Discount rate",
             "value": 30,
             "format": "percent"
+          },
+          {
+            "label": "Original price",
+            "value": 100,
+            "format": "money"
           }
         ],
-        "notes": [],
+        "notes": [
+          "Price reductions only. Sales tax, shipping, fees and promotion eligibility are separate. Calculations retain precision before currency display rounding."
+        ],
         "inputs": [
           {
             "key": "before",
