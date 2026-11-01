@@ -256,3 +256,7 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## ROI and operating break-even guides
 - [How to Calculate ROI: Profit, Costs and Losses](https://www.calculatorfree.io/guides/how-to-calculate-roi/): Calculate investment ROI from profit, initial cost and terminal proceeds. Compare fees, losses, zero recovery and holding periods with six reproducible cases.
 - [How to Calculate Break-Even Point and Target Profit](https://www.calculatorfree.io/guides/how-to-calculate-break-even-point/): Calculate break-even units, sales revenue and target-profit volume. Four reproducible cases show contribution margin, rounding and cost sensitivity.
+
+## Annuity accumulation and finite payouts
+- [How to Calculate Annuity Future Value and Contributions](https://www.calculatorfree.io/guides/how-to-calculate-annuity-future-value/): Calculate accumulation with initial principal, monthly and annual additions. Compare deposit timing, zero growth and a negative return in four reproducible cases.
+- [How to Calculate Annuity Payouts and a Final Payment](https://www.calculatorfree.io/guides/how-to-calculate-annuity-payouts/): Calculate finite annuity payouts from a balance and entered return. Compare term, frequency, partial periods and a capped final payment in six reproducible cases.

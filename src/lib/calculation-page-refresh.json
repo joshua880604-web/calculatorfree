@@ -297,5 +297,31 @@
         "answer": "No. Payment timing, inventory funding, financing and omitted expenses can create cash needs even at the calculated sales volume."
       }
     ]
+  },
+  "annuity": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Does the annual addition include monthly deposits?",
+        "answer": "No. They are separate additions. Avoid entering one intended contribution in both fields."
+      },
+      {
+        "question": "Why not divide the annual rate by twelve?",
+        "answer": "The model takes an effective annual return and uses the equivalent compounded monthly rate. A nominal annual rate divided by twelve is a different convention."
+      }
+    ]
+  },
+  "annuity-payout": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Why is the last payment smaller?",
+        "answer": "In Fix Payment mode, the final payout cannot exceed the remaining balance plus that period’s modeled return. The $1,200 zero-return case ends with $200 after two $500 payouts."
+      },
+      {
+        "question": "What happens with a partial final period?",
+        "answer": "Fix Length credits only the fractional-period return and drains the balance at the final date, so the last payout can differ from the regular formula amount."
+      }
+    ]
   }
 }

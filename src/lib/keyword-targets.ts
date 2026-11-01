@@ -294,3 +294,9 @@ keywordTitles['student-loan']='Student Loan Calculator - Payments & Extra Repaym
 keywordTitles['business-loan']='Business Loan Calculator - Payments, Fees & Total Cost';
 searchTasks['personal-loan'][0].description='Calculate personal loan payments, fees and net proceeds. Compare repayment terms and modeled cash-flow APR using your own loan inputs.';
 searchTasks['business-loan'][0].description='Calculate business loan payments and total cost with entered fees, insurance and repayment terms. Compare net proceeds; no automatic SBA terms or approval.';
+
+// Accumulation and finite-payout examples checked 2026-11-01.
+keywordTitles['annuity']='Annuity Calculator - Future Value & Contributions';
+keywordTitles['annuity-payout']='Annuity Payout Calculator - Amount & Duration';
+searchTasks['annuity'][0].description='Calculate annuity future value with starting principal, monthly and annual additions. Compare deposit timing using an entered effective annual return.';
+searchTasks['annuity-payout'][0].description='Calculate a finite annuity payout or how long a chosen payment lasts. Compare terms and frequencies; this model does not price an insurance contract.';

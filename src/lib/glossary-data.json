@@ -1583,7 +1583,17 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/how-to-calculate-annuity-future-value/",
+        "title": "How to Calculate Annuity Future Value and Contributions"
+      },
+      {
+        "path": "/guides/how-to-calculate-annuity-payouts/",
+        "title": "How to Calculate Annuity Payouts and a Final Payment"
+      }
+    ]
   },
   {
     "slug": "traditional-vs-roth-ira",

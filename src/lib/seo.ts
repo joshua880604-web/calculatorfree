@@ -219,3 +219,6 @@ for(const slug of ['amortization','apr'])contentUpdatedOn['/glossary/'+slug+'/']
 
 for(const id of ['roi','break-even'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
 for(const slug of ['return-on-investment','break-even-point'])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';
+
+for(const id of ['annuity','annuity-payout'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+contentUpdatedOn['/glossary/annuity/']='2026-11-01';

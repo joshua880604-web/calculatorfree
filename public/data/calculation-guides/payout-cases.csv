@@ -1,0 +1,7 @@
+Case,Complete inputs (JSON),Unrounded reference metrics (JSON)
+Monthly payouts over 20 years,"{""frequency"": ""Monthly"", ""principal"": 300000, ""rate"": 5, ""years"": 20}","{""Payment each period"": 1961.5093976104085, ""Total investment earnings"": 170762.255426498, ""Total payments"": 470762.255426498}"
+Monthly payouts over 30 years,"{""frequency"": ""Monthly"", ""principal"": 300000, ""rate"": 5, ""years"": 30}","{""Payment each period"": 1590.1655929260498, ""Total investment earnings"": 272459.61345337797, ""Total payments"": 572459.613453378}"
+Quarterly payouts over 20 years,"{""frequency"": ""Quarterly"", ""principal"": 300000, ""rate"": 5, ""years"": 20}","{""Payment each period"": 5908.535047180726, ""Total investment earnings"": 172682.80377445807, ""Total payments"": 472682.80377445807}"
+"USD 1,200, zero return, one year","{""frequency"": ""Monthly"", ""principal"": 1200, ""rate"": 0, ""years"": 1}","{""Payment each period"": 100.0, ""Total investment earnings"": 0.0, ""Total payments"": 1200.0}"
+"USD 1,200, 12%, 1.5 annual periods","{""frequency"": ""Annually"", ""principal"": 1200, ""rate"": 12, ""years"": 1.5}","{""Payment each period"": 921.1324990600771, ""Total investment earnings"": 168.6533970674403, ""Total payments"": 1368.6533970674402}"
+"USD 500 chosen payment, zero return","{""frequency"": ""Monthly"", ""payment"": 500, ""principal"": 1200, ""rate"": 0}","{""Number of payments"": 3.0, ""Payout duration in years"": 0.25, ""Total investment earnings"": 0.0, ""Total payouts"": 1200.0}"

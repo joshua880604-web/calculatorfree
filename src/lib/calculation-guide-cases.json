@@ -3908,5 +3908,246 @@
         "$5.00"
       ]
     }
+  ],
+  "annuity": [
+    {
+      "label": "5% effective return, end deposits",
+      "calculatorId": "annuity",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "annual": 1000,
+        "monthly": 200,
+        "timing": "End of period",
+        "rate": 5,
+        "years": 5
+      },
+      "metrics": {
+        "Annuity future value": 31851.19445811811,
+        "Starting principal": 10000.0,
+        "Total additions": 17000.0,
+        "Total contributions": 27000.0,
+        "Growth": 4851.194458118107
+      },
+      "display": [
+        "$27,000.00",
+        "$31,851.19",
+        "$4,851.19",
+        "End"
+      ]
+    },
+    {
+      "label": "5% effective return, beginning deposits",
+      "calculatorId": "annuity",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "annual": 1000,
+        "monthly": 200,
+        "timing": "Beginning of period",
+        "rate": 5,
+        "years": 5
+      },
+      "metrics": {
+        "Annuity future value": 32182.732333118107,
+        "Starting principal": 10000.0,
+        "Total additions": 17000.0,
+        "Total contributions": 27000.0,
+        "Growth": 5182.732333118107
+      },
+      "display": [
+        "$27,000.00",
+        "$32,182.73",
+        "$5,182.73",
+        "Beginning"
+      ]
+    },
+    {
+      "label": "0% return, end deposits",
+      "calculatorId": "annuity",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "annual": 1000,
+        "monthly": 200,
+        "timing": "End of period",
+        "rate": 0,
+        "years": 5
+      },
+      "metrics": {
+        "Annuity future value": 27000.0,
+        "Starting principal": 10000.0,
+        "Total additions": 17000.0,
+        "Total contributions": 27000.0,
+        "Growth": 0.0
+      },
+      "display": [
+        "$27,000.00",
+        "$27,000.00",
+        "$0.00",
+        "End"
+      ]
+    },
+    {
+      "label": "-2% return, end deposits",
+      "calculatorId": "annuity",
+      "mode": "growth",
+      "values": {
+        "principal": 10000,
+        "annual": 1000,
+        "monthly": 200,
+        "timing": "End of period",
+        "rate": -2,
+        "years": 5
+      },
+      "metrics": {
+        "Annuity future value": 25266.59987503304,
+        "Starting principal": 10000.0,
+        "Total additions": 17000.0,
+        "Total contributions": 27000.0,
+        "Growth": -1733.4001249669582
+      },
+      "display": [
+        "$27,000.00",
+        "$25,266.60",
+        "-$1,733.40",
+        "End"
+      ]
+    }
+  ],
+  "payout": [
+    {
+      "label": "Monthly payouts over 20 years",
+      "calculatorId": "annuity-payout",
+      "mode": "length",
+      "values": {
+        "principal": 300000,
+        "rate": 5,
+        "frequency": "Monthly",
+        "years": 20
+      },
+      "metrics": {
+        "Payment each period": 1961.5093976104085,
+        "Total payments": 470762.255426498,
+        "Total investment earnings": 170762.255426498
+      },
+      "display": [
+        "$1,961.51",
+        "240",
+        "$1,961.51",
+        "$470,762.26"
+      ]
+    },
+    {
+      "label": "Monthly payouts over 30 years",
+      "calculatorId": "annuity-payout",
+      "mode": "length",
+      "values": {
+        "principal": 300000,
+        "rate": 5,
+        "frequency": "Monthly",
+        "years": 30
+      },
+      "metrics": {
+        "Payment each period": 1590.1655929260498,
+        "Total payments": 572459.613453378,
+        "Total investment earnings": 272459.61345337797
+      },
+      "display": [
+        "$1,590.17",
+        "360",
+        "$1,590.17",
+        "$572,459.61"
+      ]
+    },
+    {
+      "label": "Quarterly payouts over 20 years",
+      "calculatorId": "annuity-payout",
+      "mode": "length",
+      "values": {
+        "principal": 300000,
+        "rate": 5,
+        "frequency": "Quarterly",
+        "years": 20
+      },
+      "metrics": {
+        "Payment each period": 5908.535047180726,
+        "Total payments": 472682.80377445807,
+        "Total investment earnings": 172682.80377445807
+      },
+      "display": [
+        "$5,908.54",
+        "80",
+        "$5,908.54",
+        "$472,682.80"
+      ]
+    },
+    {
+      "label": "USD 1,200, zero return, one year",
+      "calculatorId": "annuity-payout",
+      "mode": "length",
+      "values": {
+        "principal": 1200,
+        "rate": 0,
+        "frequency": "Monthly",
+        "years": 1
+      },
+      "metrics": {
+        "Payment each period": 100.0,
+        "Total payments": 1200.0,
+        "Total investment earnings": 0.0
+      },
+      "display": [
+        "$100.00",
+        "12",
+        "$100.00",
+        "$1,200.00"
+      ]
+    },
+    {
+      "label": "USD 1,200, 12%, 1.5 annual periods",
+      "calculatorId": "annuity-payout",
+      "mode": "length",
+      "values": {
+        "principal": 1200,
+        "rate": 12,
+        "frequency": "Annually",
+        "years": 1.5
+      },
+      "metrics": {
+        "Payment each period": 921.1324990600771,
+        "Total payments": 1368.6533970674402,
+        "Total investment earnings": 168.6533970674403
+      },
+      "display": [
+        "$921.13",
+        "2",
+        "$447.52",
+        "$1,368.65"
+      ]
+    },
+    {
+      "label": "USD 500 chosen payment, zero return",
+      "calculatorId": "annuity-payout",
+      "mode": "payment",
+      "values": {
+        "principal": 1200,
+        "rate": 0,
+        "frequency": "Monthly",
+        "payment": 500
+      },
+      "metrics": {
+        "Payout duration in years": 0.25,
+        "Number of payments": 3.0,
+        "Total payouts": 1200.0,
+        "Total investment earnings": 0.0
+      },
+      "display": [
+        "$500.00",
+        "3",
+        "$200.00",
+        "$1,200.00"
+      ]
+    }
   ]
 }

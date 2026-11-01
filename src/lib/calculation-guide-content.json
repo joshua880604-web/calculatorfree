@@ -3942,5 +3942,279 @@
         "label": "Break-even point glossary"
       }
     ]
+  },
+  "annuity": {
+    "meta": {
+      "path": "/guides/how-to-calculate-annuity-future-value/",
+      "title": "How to Calculate Annuity Future Value and Contributions",
+      "heading": "How to Calculate Annuity Future Value and Contributions",
+      "description": "Calculate accumulation with initial principal, monthly and annual additions. Compare deposit timing, zero growth and a negative return in four reproducible cases.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "annuity"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "How to Calculate Annuity Future Value and Contributions",
+      "cardIntro": "Calculate accumulation with initial principal, monthly and annual additions. Compare deposit timing, zero growth and a negative return in four reproducible cases.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/annuity-calculator",
+    "calculatorLabel": "Annuity Calculator",
+    "intro": "Use the accumulation calculator to project a starting balance plus scheduled additions before withdrawals begin. Separate money contributed from modeled investment growth, and specify whether additions arrive before or after each period’s return. This is a constant-return mathematical illustration; it does not price an insurance contract.",
+    "answer": "With $10,000 starting principal, $200 monthly additions and $1,000 annual additions over five years, total contributed is $27,000. At a hypothetical 5% effective annual return with end-of-period additions, ending value is $31,851.19 and modeled growth is $4,851.19. Beginning-of-period additions produce $32,182.73 because those additions participate in growth earlier.",
+    "sections": [
+      {
+        "id": "inputs",
+        "title": "Separate principal, new additions and growth",
+        "paragraphs": [
+          "Starting principal is the money already present at the beginning. Monthly and annual additions are separate recurring contributions in this model: $200 per month contributes $12,000 over sixty months, and five $1,000 annual deposits contribute another $5,000. Together with $10,000 principal, total contributed is $27,000.",
+          "Do not enter the same contribution twice in the annual and monthly fields. The annual field represents an additional deposit, not an annualized description of the monthly amount. Modeled growth is ending value minus all contributed cash; an ending balance is not itself investment profit."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "rate",
+        "title": "Convert an effective annual return to a monthly rate",
+        "paragraphs": [
+          "The entered 5% rate is effective annually. The equivalent monthly rate is (1.05)^(1/12) − 1, approximately 0.4074%. Applying that rate twelve times compounds to 5% over a complete year. Dividing 5% by 12 instead would describe a different nominal-rate convention.",
+          "The same monthly factor is used for principal and deposits already present in the account. Returns are held constant across periods; no market sequence, interest-crediting cap or changing return path is inferred. A 5% example is a chosen scenario, not a current product rate."
+        ],
+        "formula": "Monthly rate = (1 + effective annual rate)^(1/12) − 1"
+      },
+      {
+        "id": "timing",
+        "title": "Compare beginning and end deposits without changing the cash total",
+        "paragraphs": [
+          "End of period puts monthly additions in after that month’s return and annual additions at months 12, 24, 36, 48 and 60. Under the stated inputs, future value is $31,851.19. The initial principal is present from the start and is not delayed until the first deposit date.",
+          "Beginning of period puts monthly additions in before growth and annual additions at months 1, 13, 25, 37 and 49. Total cash contributed remains $27,000, but ending value rises to $32,182.73. This difference comes from timing, not additional deposits or a higher entered return."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "zero-loss",
+        "title": "Check zero growth and a negative-return scenario",
+        "paragraphs": [
+          "At a 0% return, the ending balance is exactly $27,000: initial principal plus additions. This is a useful reconciliation check. Selecting a different deposit timing at zero return does not manufacture growth; the timing advantage depends on the modeled returns.",
+          "With −2% effective annual return and end deposits, the same contribution plan finishes at $25,266.60. Modeled growth is −$1,733.40. A positive ending balance can therefore coexist with an investment loss when the contributed amount is larger. This negative-rate illustration is not a prediction or a description of any specific contract guarantee."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "schedule",
+        "title": "Read the schedule without counting starting principal twice",
+        "paragraphs": [
+          "The first schedule row’s addition includes starting principal plus any contribution due in that month. That display reconciles the schedule to total contributions; it does not mean the initial balance was contributed again. Check growth and additions separately when reviewing monthly or annual rows.",
+          "Accumulation length must contain a whole number of months. For a partial final saving year, an annual deposit occurs only if its selected deposit date is reached. A beginning annual deposit and an end annual deposit can therefore produce different addition totals for a partial year; the five-year comparison deliberately avoids that extra difference."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "reproduce",
+        "title": "Reproduce the recurrence and connect accumulation to payouts",
+        "paragraphs": [
+          "For end deposits, each month’s closing balance is opening balance*(1+monthly_rate)+deposit. For beginning deposits, use (opening balance+deposit)*(1+monthly_rate). Add the annual contribution only on its selected saving-year date, then repeat for the entered month count. Keep intermediate precision.",
+          "For withdrawal planning, transfer an appropriate balance to Annuity Payout Calculator and enter a payout term or amount. A projected accumulated balance does not automatically buy any particular lifetime benefit. Investor.gov explains contract-specific annuity features; this model omits insurance pricing, fees, taxes and guarantees."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Total contributed",
+      "Ending balance",
+      "Modeled growth",
+      "Deposit timing"
+    ],
+    "chart": "annuity-guide",
+    "chartAlt": "Ending balances under the same $27,000 contributions with end or beginning deposits, zero return or a negative return.",
+    "chartCaption": "Same initial principal and scheduled additions; only the stated timing or hypothetical effective annual return changes.",
+    "questions": [
+      {
+        "question": "What is the future value with these contributions?",
+        "answer": "Under the guide’s end-deposit 5% scenario, $31,851.19 from $27,000 total contributed. Change rate or timing and the result changes."
+      },
+      {
+        "question": "Do beginning deposits always increase the result?",
+        "answer": "With the positive return in this example, earlier deposits have more time to grow. At zero return there is no growth advantage; negative returns can reverse the timing effect."
+      },
+      {
+        "question": "Does the annual addition include monthly deposits?",
+        "answer": "No. They are separate additions. Avoid entering one intended contribution in both fields."
+      },
+      {
+        "question": "Is growth the same as ending balance?",
+        "answer": "No. Growth is ending balance minus total contributions including starting principal. It can be negative even with a positive ending balance."
+      },
+      {
+        "question": "Why not divide the annual rate by twelve?",
+        "answer": "The model takes an effective annual return and uses the equivalent compounded monthly rate. A nominal annual rate divided by twelve is a different convention."
+      },
+      {
+        "question": "Is this an insurance annuity quote?",
+        "answer": "No. It is an accumulation illustration under entered assumptions, without contract pricing, tax, fees or insurer guarantees."
+      }
+    ],
+    "limitations": [
+      "Constant entered effective annual return, not an insurer quote or forecast.",
+      "No mortality credits, tax calculation, surrender charges, riders, index caps or automatic contract fees are priced.",
+      "Nominal USD results are not inflation-adjusted. Actual contract payment terms and guarantees require separate review."
+    ],
+    "sources": [
+      {
+        "href": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/annuities",
+        "label": "Investor.gov: annuity contracts, costs and product considerations"
+      }
+    ],
+    "related": [
+      {
+        "href": "/annuity-payout-calculator",
+        "label": "Plan a finite payout phase"
+      },
+      {
+        "href": "/guides/compound-interest-with-monthly-contributions/",
+        "label": "Compound interest and contributions guide"
+      },
+      {
+        "href": "/glossary/annuity/",
+        "label": "Annuity glossary"
+      }
+    ]
+  },
+  "payout": {
+    "meta": {
+      "path": "/guides/how-to-calculate-annuity-payouts/",
+      "title": "How to Calculate Annuity Payouts and a Final Payment",
+      "heading": "How to Calculate Annuity Payouts and a Final Payment",
+      "description": "Calculate finite annuity payouts from a balance and entered return. Compare term, frequency, partial periods and a capped final payment in six reproducible cases.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "annuity-payout"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "How to Calculate Annuity Payouts and a Final Payment",
+      "cardIntro": "Calculate finite annuity payouts from a balance and entered return. Compare term, frequency, partial periods and a capped final payment in six reproducible cases.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/annuity-payout-calculator",
+    "calculatorLabel": "Annuity Payout Calculator",
+    "intro": "Start with the balance available for withdrawals, an entered effective annual return and a payment frequency. Choose Fix Length to solve a regular payout, or Fix Payment to estimate when a chosen amount depletes the balance. These finite-balance calculations do not determine an insurer’s lifetime-income quote.",
+    "answer": "With a $300,000 starting balance, hypothetical 5% effective annual return and twenty-year term, the model pays $1,961.51 monthly. Extending the term to thirty years lowers the regular payout to $1,590.17. With only $1,200, zero return and a chosen $500 monthly payout, the actual payments are $500, $500 and $200—not three full $500 withdrawals.",
+    "sections": [
+      {
+        "id": "period",
+        "title": "Match effective return to the payout frequency",
+        "paragraphs": [
+          "For monthly payouts, convert the effective annual return with (1+annual_return)^(1/12) − 1. Quarterly payouts use a fourth root and annual payouts use the entered effective rate. A period is the time between payouts; it is not always a month.",
+          "All checked payouts occur at period end. Return first applies to the opening balance, then the payout reduces what remains. No real-market return path is simulated. Holding a constant annual input does not imply that future payments are guaranteed or that a lifetime income product would pay the same amount."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "length",
+        "title": "Solve the regular payment for a fixed length",
+        "paragraphs": [
+          "The twenty-year monthly example has 240 payout dates and a regular payment of $1,961.51 before display rounding. Total paid is $470,762.26, including $170,762.26 modeled investment earnings over the original $300,000. Those nominal totals combine return and principal withdrawals; they are not all investment profit.",
+          "For thirty years at the same balance and rate, the regular monthly payout falls to $1,590.17 and total paid is $572,459.61. More total nominal dollars can arise over a longer timeline even with a smaller recurring amount. Compare the timing of receipts, not only the sum of amounts."
+        ],
+        "formula": "Payout = principal × periodic rate / [1 − (1 + periodic rate)^(−period count)]"
+      },
+      {
+        "id": "frequency",
+        "title": "Compare monthly and quarterly amounts on consistent units",
+        "paragraphs": [
+          "For twenty years at 5%, quarterly payments are $5,908.54 across 80 payout dates. A quarterly amount cannot be directly compared with a monthly amount as though both covered one month. The chart multiplies regular monthly payments by 12 and quarterly payments by 4 to place the scheduled amounts on one display basis.",
+          "The normalized chart is not an actual insurance-income guarantee or a forecast of purchasing power. Frequency changes when cash leaves the balance and therefore how long it remains invested. Totals can differ even at an equivalent annual return; intermediate rounding can also cause small displayed multiplication differences."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "zero",
+        "title": "Use the zero-return case as a check",
+        "paragraphs": [
+          "At zero return, the fixed-length payout is principal divided by the number of periods. A $1,200 balance paid monthly for one year produces twelve $100 withdrawals and $1,200 total paid. No investment earnings are created in that case.",
+          "In Fix Payment mode, the same $1,200 and a chosen $500 monthly amount deplete on the third monthly payout date. The final amount is capped at $200. Duration is three months, or 0.25 model years, rather than a fractional 2.4 full payments or three impossible $500 withdrawals."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "partial",
+        "title": "A partial final period has a different final payout",
+        "paragraphs": [
+          "For $1,200, 12% effective annual return and a 1.5-year length with annual frequency, the regular payment formula gives $921.13. The schedule pays that amount after year one, then credits only the final half-year return before draining the remaining balance. The second payout is $447.52, giving $1,368.65 total.",
+          "Fix Length’s partial final date is different from Fix Payment’s full payout dates with a capped last amount. Read the schedule and selected mode when using a non-whole period length. A single regular-payment figure does not describe every final transaction in these edge cases."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "limits",
+        "title": "Check a non-depleting balance and excluded contract details",
+        "paragraphs": [
+          "In Fix Payment mode, a positive constant periodic return can cover a chosen payout without exhausting the balance. When the chosen amount is no greater than opening-period return, the calculator reports non-exhaustion under that assumption. This is a deterministic model statement, not evidence of safe permanent spending.",
+          "To reproduce a full-period case, use the equivalent periodic rate in a spreadsheet PMT formula. For schedules, grow opening balance and deduct each payout, capping the last amount at available funds. Taxes, fees, inflation, mortality pooling and insurance contract guarantees require separate analysis; they are not inferred from the selected term."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Scheduled / chosen payout",
+      "Payment count",
+      "Final actual payout",
+      "Total paid"
+    ],
+    "chart": "payout-guide",
+    "chartAlt": "Scheduled payouts normalized per year for monthly payments over twenty or thirty years and quarterly payments over twenty years.",
+    "chartCaption": "Chart shows only the three full-period $300,000 / 5% cases. Monthly payouts are multiplied by 12 and quarterly payouts by 4 for comparison, not presented as guaranteed annual income.",
+    "questions": [
+      {
+        "question": "How much does $300,000 pay monthly?",
+        "answer": "Under this hypothetical 5% effective annual return and twenty-year finite term, $1,961.51 monthly. An actual contract quote or different assumptions can give a different amount."
+      },
+      {
+        "question": "Does a longer payout term increase the regular payment?",
+        "answer": "At the same balance and return, the thirty-year case lowers the monthly payout from $1,961.51 to $1,590.17."
+      },
+      {
+        "question": "Why is the last payment smaller?",
+        "answer": "In Fix Payment mode, the final payout cannot exceed the remaining balance plus that period’s modeled return. The $1,200 zero-return case ends with $200 after two $500 payouts."
+      },
+      {
+        "question": "Is a quarterly payout three monthly payments?",
+        "answer": "Not necessarily. Different payment timing affects growth. Convert the annual return consistently and use the selected schedule."
+      },
+      {
+        "question": "What happens with a partial final period?",
+        "answer": "Fix Length credits only the fractional-period return and drains the balance at the final date, so the last payout can differ from the regular formula amount."
+      },
+      {
+        "question": "Does this calculate lifetime guaranteed annuity income?",
+        "answer": "No. It models a finite balance and entered constant return, without mortality credits, insurer pricing or contract guarantees."
+      }
+    ],
+    "limitations": [
+      "Constant entered effective annual return, not an insurer quote or forecast.",
+      "No mortality credits, tax calculation, surrender charges, riders, index caps or automatic contract fees are priced.",
+      "Nominal USD results are not inflation-adjusted. Actual contract payment terms and guarantees require separate review."
+    ],
+    "sources": [
+      {
+        "href": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/annuities",
+        "label": "Investor.gov: annuity contracts, costs and product considerations"
+      }
+    ],
+    "related": [
+      {
+        "href": "/annuity-calculator",
+        "label": "Project the accumulation phase"
+      },
+      {
+        "href": "/guides/how-long-will-retirement-savings-last/",
+        "label": "Retirement savings duration guide"
+      },
+      {
+        "href": "/glossary/annuity/",
+        "label": "Annuity glossary"
+      }
+    ]
   }
 }

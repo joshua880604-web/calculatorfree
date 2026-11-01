@@ -5,14 +5,14 @@ import SiteLink from './SiteLink';
 import './decision-guide.css';
 import './loan-cost-reference.css';
 export default function LoanCostReference({id}:{id:string}){
- const topic=id==='personal-loan'?'personal':id==='student-loan'?'student':id==='business-loan'?'business':id==='break-even'?'breakeven':null;
+ const topic=id==='personal-loan'?'personal':id==='student-loan'?'student':id==='business-loan'?'business':id==='break-even'?'breakeven':id==='annuity'?'annuity':id==='annuity-payout'?'payout':null;
  if(!topic)return null;
  const data=content[topic];
  return <section className="loan-cost-reference" aria-labelledby="loan-cost-scenarios">
-  <h2 id="loan-cost-scenarios">{topic==='breakeven'?'Compare break-even volume and target profit':'Compare payments and total borrowing cost'}</h2>
+  <h2 id="loan-cost-scenarios">{topic==='breakeven'?'Compare break-even volume and target profit':topic==='annuity'?'Compare contributions, timing and growth':topic==='payout'?'Compare payout terms and final payments':'Compare payments and total borrowing cost'}</h2>
   <p>{data.answer}</p>
-  <p>{topic==='breakeven'?'These are hypothetical single-product calculations using one consistent cost period, not sales forecasts.':'These are hypothetical fixed monthly calculations, not current rates or loan offers.'} Each link restores all inputs for that example. On a small screen, scroll the table horizontally to see every column.</p>
-  <div className="decision-case-table" role="region" aria-label="Loan cost scenarios; scroll for all columns" tabIndex={0}><table><caption>Controlled examples under the assumptions in the linked guide</caption><thead><tr>{data.columns.map(c=><th scope="col" key={c}>{c}</th>)}<th scope="col">Reproduce</th></tr></thead><tbody>{cases[topic].map(r=><tr key={r.label}><th scope="row">{r.label}</th>{r.display.map((v,i)=><td key={i}>{v}</td>)}<td><SiteLink href={calculatorPresetHref(data.calculatorPath,r.mode,r.values)}>Try these inputs</SiteLink></td></tr>)}</tbody></table></div>
-  <p>{data.chartCaption} <SiteLink href={data.meta.path}>{topic==='breakeven'?'Read the full break-even and target-profit guide':'Read the full payment and cost guide'}, with chart, formulas, assumptions and CSV examples →</SiteLink></p>
+  <p>{topic==='breakeven'?'These are hypothetical single-product calculations using one consistent cost period, not sales forecasts.':['annuity','payout'].includes(topic)?'These are hypothetical constant-return calculations, not insurance contract quotes or guaranteed income.':'These are hypothetical fixed monthly calculations, not current rates or loan offers.'} Each link restores all inputs for that example. On a small screen, scroll the table horizontally to see every column.</p>
+  <div className="decision-case-table" role="region" aria-label="Calculation scenarios; scroll for all columns" tabIndex={0}><table><caption>Controlled examples under the assumptions in the linked guide</caption><thead><tr>{data.columns.map(c=><th scope="col" key={c}>{c}</th>)}<th scope="col">Reproduce</th></tr></thead><tbody>{cases[topic].map(r=><tr key={r.label}><th scope="row">{r.label}</th>{r.display.map((v,i)=><td key={i}>{v}</td>)}<td><SiteLink href={calculatorPresetHref(data.calculatorPath,r.mode,r.values)}>Try these inputs</SiteLink></td></tr>)}</tbody></table></div>
+  <p>{data.chartCaption} <SiteLink href={data.meta.path}>{topic==='breakeven'?'Read the full break-even and target-profit guide':['annuity','payout'].includes(topic)?'Read the full accumulation or payout guide':'Read the full payment and cost guide'}, with chart, formulas, assumptions and CSV examples →</SiteLink></p>
  </section>;
 }
