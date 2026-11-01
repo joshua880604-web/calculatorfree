@@ -1,5 +1,6 @@
 "use client";
 import SiteLink from "@/components/SiteLink";
+import {compactReadingIds} from "@/lib/compact-reading";
 import CreditCardFields from "./CreditCardFields";
 import FavoriteButton from "./FavoriteButton";
 import { calculatorPresetHref } from "@/lib/preset-links";
@@ -820,10 +821,10 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
         </p>
         <h3>Calculation formula</h3>
         <p className="formula">{mode.formula}</p>
-        <h3>Assumptions and accuracy</h3>
+        {!compactReadingIds.includes(id)&&<><h3>Assumptions and accuracy</h3>
         <p>
           {calc.category === "Everyday Tools" ? "Check the selected mode, units, date endpoints and result notes. Currency selection controls display and rounding, not exchange rates. Calendar calculations do not include holidays or local time-of-day." : "Review timing, rates, fees and result notes when comparing scenarios. Future returns and rates are assumptions rather than guaranteed outcomes. Monetary display follows the currency’s precision; intermediate calculations retain additional digits."}
-        </p>
+        </p></>}
         {[
           "income-tax",
           "marriage-tax",

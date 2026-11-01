@@ -4,6 +4,7 @@ import './loan-cost-reference.css';
 import SiteLink from './SiteLink';
 import { calculatorPresetHref } from '@/lib/preset-links';
 import { routeFor } from '@/lib/catalog';
+import GuideDisclosure from './GuideDisclosure';
 
 
 // Static worked comparisons: no client bundle, requests or calculation dependency.
@@ -27,7 +28,7 @@ export default function RoiReference() {
         For a positive starting and ending value with no intermediate cash flows, this is the same
         endpoint calculation used for <SiteLink href="/glossary/cagr/">CAGR</SiteLink>.
       </p>
-      <h3 id="roi-holding-period-comparison">Compare costs, losses and holding periods</h3>
+      <GuideDisclosure id="roi-holding-period-comparison" title="Compare costs, losses and holding periods">
       <p>These hypothetical examples have no intermediate cash flows. The fee-adjusted case includes $100 at entry and $100 at exit; do not deduct fees again if already included. Scroll horizontally on small screens to see every column.</p>
       <div className="decision-case-table" role="region" aria-label="ROI comparison by holding period" tabIndex={0}>
         <table>
@@ -52,6 +53,7 @@ export default function RoiReference() {
         operating income, financing and sale proceeds. Advertising ROAS measures revenue against ad spend;
         it does not automatically measure net-profit ROI.
       </p>
+      </GuideDisclosure>
     </section>
   );
 }
