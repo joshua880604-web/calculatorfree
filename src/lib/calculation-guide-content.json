@@ -5931,5 +5931,302 @@
         "label": "Compound interest glossary"
       }
     ]
+  },
+  "budgetplan": {
+    "meta": {
+      "path": "/guides/how-to-calculate-monthly-budget/",
+      "title": "How to Calculate a Monthly Budget from Income and Expenses",
+      "heading": "How to Calculate a Monthly Budget from Income and Expenses",
+      "description": "Build a monthly budget with mixed pay frequencies, spending and saving allocations. Six checked examples explain tax assumptions, irregular bills and signed deficits.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "budget"
+      ],
+      "topic": "Budgeting & housing",
+      "breadcrumb": "How to Calculate a Monthly Budget from Income and Expenses",
+      "cardIntro": "Build a monthly budget with mixed pay frequencies, spending and saving allocations. Six checked examples explain tax assumptions, irregular bills and signed deficits.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/budget-calculator",
+    "calculatorLabel": "Budget Calculator",
+    "intro": "A useful monthly budget puts income and every outflow on the same time basis. Separate taxes from take-home pay, include less frequent bills and reserve room for the savings you plan to make. This guide checks six hypothetical cases using the existing Budget Calculator; it is a worksheet model, not an account connection or a tax return.",
+    "answer": "In the base case, $6,000 monthly gross income with a hypothetical 20% income-tax allowance leaves $4,800. Entered spending and savings allocations total $3,000 monthly, leaving $1,800 unallocated. The $300 emergency-saving transfer is already included in outflows; subtracting that transfer from the displayed surplus a second time would count its cash allocation twice.",
+    "sections": [
+      {
+        "id": "income",
+        "title": "Choose a consistent income basis before deducting tax",
+        "paragraphs": [
+          "The calculator groups salary, pension, investment income and other income, converts their frequencies to monthly averages and applies the one entered tax percentage to their total. The base 20% is only a hypothetical allowance. It does not calculate federal, state, payroll or account-specific tax rules.",
+          "If you use take-home amounts already received after deductions, set the tax input to zero to avoid deducting tax again. The checked $4,800 take-home case then matches the $6,000 gross case at 20%. Check how payroll retirement and insurance deductions are treated too; a cost already removed from your entered net income should not be subtracted again."
+        ],
+        "formula": "Monthly take-home = normalized monthly income × (1 − entered tax percentage)"
+      },
+      {
+        "id": "frequency",
+        "title": "Convert biweekly pay and annual bills to monthly averages",
+        "paragraphs": [
+          "A $2,500 paycheck every two weeks represents 26 checks in the model year: $65,000 annually, or $5,416.67 average gross income per month. It is not the same as two $2,500 checks per month. With the same 20% allowance, average take-home is $4,333.33.",
+          "Annual bills work in the other direction. The base $1,200 health premium is selected as Annually, so it contributes $100 per month. Selecting Monthly for the same number changes that line to $1,200 per month. The comparison illustrates a unit-entry difference, not two ways of paying the same annual bill with no cost change."
+        ],
+        "formula": "Biweekly monthly average = paycheck × 26 / 12; annual bill monthly provision = annual bill / 12"
+      },
+      {
+        "id": "categories",
+        "title": "Include savings allocations without confusing them with consumption",
+        "paragraphs": [
+          "Base outflows are $1,500 rent, $200 utilities, $600 groceries, $300 credit-card debt payment, $300 emergency saving and the $100 health-premium provision. These total $3,000. Other categories are explicitly zero in the preset, rather than silently relying on current form values.",
+          "The $300 debt payment is treated here as a separate cash commitment for prior borrowing. If you instead enter current purchases in spending categories and pay those same purchases on a card, subtracting the full card bill again can double-count cash needs. Choose one consistent treatment and reconcile it with actual transfers and balances."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "surplus",
+        "title": "Preserve a deficit instead of making it look like zero",
+        "paragraphs": [
+          "At $3,500 rent with other base inputs unchanged, monthly outflows rise to $5,000 against $4,800 take-home, leaving a $200 deficit. The signed result identifies the arithmetic gap. It does not assume a loan will finance it, decide which bill to cut or create a workable plan automatically.",
+          "Raising the emergency-saving allocation from $300 to $900 instead reduces the base surplus from $1,800 to $1,200. That change is an allocation of cash, not a decline in net worth caused by consumption. A zero surplus can still include successful planned saving when the saving transfer was entered as an outflow."
+        ],
+        "formula": "Unallocated monthly surplus / deficit = take-home − spending − saving allocations"
+      },
+      {
+        "id": "annual",
+        "title": "Read annualized results and cash timing separately",
+        "paragraphs": [
+          "The base $1,800 monthly result becomes $21,600 annually because the calculator multiplies by twelve. In the biweekly-pay case, the same $3,000 outflow budget leaves an average $1,333.33 monthly, or $16,000 annually. These are steady-average calculations under the stated inputs.",
+          "A monthly average is not a bill calendar. A two-paycheck month can feel tighter than the annualized average, and an annual insurance bill can be due before enough monthly provisions have accumulated. Keep actual due dates, opening cash and income variability in a separate cash-flow check."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "review",
+        "title": "Reconcile the worksheet with actual spending and your next goal",
+        "paragraphs": [
+          "CFPB encourages reviewing spending records, less frequent costs and regular savings when assessing a budget. Use that approach to test whether your entered totals reflect actual behavior. The hypothetical cases here demonstrate the math; they are not recommended expense amounts or a universal percentage allocation.",
+          "The calculator does not fetch bank transactions, infer omitted expenses or grow future prices. Revisit healthcare, transport, childcare, irregular repairs and debt payments before assigning all remaining cash to a housing or investment goal. Use the linked savings-goal tool for the separate question of how a monthly transfer could build a target balance."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Monthly take-home",
+      "Spending + saving",
+      "Monthly surplus / deficit",
+      "Annualized surplus / deficit"
+    ],
+    "chart": "budgetplan-guide",
+    "chartAlt": "Monthly surplus or deficit in six hypothetical personal budgets, including frequency, housing cost and saving allocation changes.",
+    "chartCaption": "All cases explicitly set every income and spending category. Savings allocations are included in outflows. A negative surplus is preserved; the annual figure is twelve times the modeled monthly result.",
+    "questions": [
+      {
+        "question": "Should I enter gross income or take-home pay?",
+        "answer": "The tool applies the entered tax percentage to all entered income. Use a consistent basis: when entering take-home pay already after deductions, set tax to zero and avoid re-entering costs already deducted."
+      },
+      {
+        "question": "How do I convert biweekly pay to a monthly budget?",
+        "answer": "This model uses 26 payments per year, then divides by twelve. A $2,500 biweekly paycheck averages $5,416.67 gross monthly; actual cash receipt dates can differ."
+      },
+      {
+        "question": "Why are savings counted in spending and saving?",
+        "answer": "A planned transfer reserves cash for a goal. It reduces the unallocated surplus but is not necessarily consumption or a reduction in net worth."
+      },
+      {
+        "question": "What does a negative monthly surplus mean?",
+        "answer": "Entered outflows exceed modeled take-home income. The calculator preserves the deficit; it does not decide how to fund it or which obligation to change."
+      },
+      {
+        "question": "Should annual insurance be entered as a monthly bill?",
+        "answer": "Either enter the annual amount with Annually selected, or its monthly provision with Monthly selected. Do not enter the full annual number as a monthly amount unless that is the actual recurring cost."
+      },
+      {
+        "question": "Is annual surplus a twelve-month forecast?",
+        "answer": "No. It is twelve times the normalized monthly result. It does not include changing prices, variable income, bill dates or an opening cash balance."
+      }
+    ],
+    "limitations": [
+      "Hypothetical budgets; no transaction import, tax calculation or individualized spending recommendation.",
+      "One entered tax rate applies to all income; gross/net basis and existing deductions must be reconciled by the user.",
+      "Annual, weekly and biweekly conversions are averages, not a cash receipt calendar.",
+      "Savings allocations and debt payments need consistent treatment to avoid counting the same amount twice."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/owning-a-home/prepare/assess-your-spending/",
+        "label": "CFPB: assess actual spending, less frequent bills and saving allocations"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-rent-affordability/",
+        "label": "Rent-affordability guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-savings-goal/",
+        "label": "Savings-goal guide"
+      },
+      {
+        "href": "/guides/how-much-emergency-fund-should-i-have/",
+        "label": "Emergency-fund guide"
+      },
+      {
+        "href": "/glossary/gross-vs-net-pay/",
+        "label": "Gross versus net pay"
+      },
+      {
+        "href": "/glossary/budget-and-savings-rate/",
+        "label": "Budget and savings rate"
+      }
+    ]
+  },
+  "rentbudget": {
+    "meta": {
+      "path": "/guides/how-to-calculate-rent-affordability/",
+      "title": "How to Calculate Rent Affordability from Income and Debt",
+      "heading": "How to Calculate Rent Affordability from Income and Debt",
+      "description": "Estimate rent from gross income and two adjustable ratio limits. Six checked cases explain debt headroom, pay frequencies and why a ratio is not a full living-cost budget.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "rent"
+      ],
+      "topic": "Budgeting & housing",
+      "breadcrumb": "How to Calculate Rent Affordability from Income and Debt",
+      "cardIntro": "Estimate rent from gross income and two adjustable ratio limits. Six checked cases explain debt headroom, pay frequencies and why a ratio is not a full living-cost budget.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/rent-affordability-calculator",
+    "calculatorLabel": "Rent Affordability Calculator",
+    "intro": "A rent-to-income ratio is a quick planning screen, not a complete answer to what a household can afford. This calculator combines an entered rent ratio with an entered total-debt ratio, subtracts other monthly debt from the latter and takes the tighter amount. Check the resulting rent against take-home income and actual non-rent expenses before using it as a personal budget.",
+    "answer": "For $60,000 annual gross income, monthly gross income is $5,000. At selected 30% rent and 36% total-debt ratios, the rent limit is $1,500 while $500 of other monthly debt leaves $1,300 under the debt constraint. The modeled rent budget is the smaller amount, $1,300, before any separate review of utilities, tax and living costs.",
+    "sections": [
+      {
+        "id": "income",
+        "title": "Normalize gross income before applying a rent ratio",
+        "paragraphs": [
+          "Annual income is divided by twelve. Monthly income is used directly, weekly pay is multiplied by 52 / 12 and biweekly pay by 26 / 12. The base $60,000 annual input therefore gives $5,000 monthly gross. This tool has no income-tax calculation or take-home-pay conversion.",
+          "For a $2,500 biweekly gross paycheck, the monthly average is $5,416.67. At the same selected ratios and $500 debt, the modeled rent budget is $1,450. This is a different annual income from $60,000, not an alternative frequency for that same annual amount."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "constraints",
+        "title": "Calculate both limits and use the tighter one",
+        "paragraphs": [
+          "The rent-ratio limit is gross monthly income times the selected housing percentage. The total-debt headroom is gross income times the selected debt percentage, minus the other monthly debt payments entered. Taking the minimum prevents the model from using room that one of those inputs has already ruled out.",
+          "At $5,000 gross monthly, a 30% rent assumption gives $1,500. The 36% total-debt assumption allows $1,800 before other debt; subtracting $500 leaves $1,300. The binding constraint in this example is debt headroom. Neither percentage is a promise of approval or a universally safe household limit."
+        ],
+        "formula": "Rent budget = max(0, min[gross monthly income × rent ratio, gross monthly income × total-debt ratio − other monthly debt])"
+      },
+      {
+        "id": "debt",
+        "title": "See why the same income can produce different rent budgets",
+        "paragraphs": [
+          "With no other monthly debt, the debt headroom rises to $1,800 and the $1,500 rent-ratio limit becomes the tighter constraint. Increasing other debt to $1,000 instead leaves $800 headroom. These cases keep income and both ratios unchanged to isolate the debt effect.",
+          "At $1,900 of other debt, headroom is negative $100 and the displayed rent budget is floored at zero. That does not mean housing is free, that income is zero or that a tenancy is impossible under every real-world rule. It means no positive rent fits these particular entered ratio constraints."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "ratios",
+        "title": "Treat 30% as context, not a mandatory target",
+        "paragraphs": [
+          "Census uses housing-cost burden measures that include rent and utilities. That statistical context is broader than this calculator’s rent-only output and is not a personalized spending recommendation. The model’s 30% rent and 36% total-debt examples are user-adjustable planning assumptions, not official landlord or public-housing program determinations.",
+          "Lowering only the rent ratio to 25% gives a $1,250 rent limit at $5,000 gross income. With $500 debt, that is below the $1,300 debt headroom, so the result becomes $1,250. Review the dollar amount left after all needs; changing a ratio cannot establish that those needs will be covered."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "cash",
+        "title": "Compare the ratio screen with a take-home cash budget",
+        "paragraphs": [
+          "The ratio tool does not subtract income tax, food, utilities, transport, healthcare, childcare or planned savings. Those missing amounts can make an apparently acceptable rent unaffordable in practice. Use the Budget Calculator to enter the actual proposed rent and recurring expenses once each.",
+          "Upfront cash is separate too. Deposits, moving, utility setup, fees and overlap between leases are not included in this monthly output. Nor does the calculator determine how a landlord treats household income, co-applicants, guarantors, credit history or allowable debts."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "scope",
+        "title": "Reproduce the scenario without inferring eligibility",
+        "paragraphs": [
+          "Enter other debt as monthly payments, not outstanding loan balances. The $500 input in the base example is a recurring payment commitment; entering a $10,000 balance instead would answer the wrong question. Likewise, use gross income with its matching selected frequency rather than mixing monthly net pay with annual gross assumptions.",
+          "Each case link restores all five inputs and the table shows both constraints. Use those details to understand why the amount changed. This is neither a housing-assistance rent calculation nor a landlord decision; it does not retrieve local rents, program rules, credit reports or lease terms."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Gross monthly income",
+      "Other monthly debt",
+      "Rent-ratio limit",
+      "Debt-ratio headroom",
+      "Rent budget"
+    ],
+    "chart": "rentbudget-guide",
+    "chartAlt": "Six rent-budget scenarios showing how gross income, debt and selected planning ratios constrain the result.",
+    "chartCaption": "The model takes the smaller ratio allowance and floors a negative result at zero. Debt headroom in the table can be negative; zero rent budget does not mean housing is free or that a landlord will approve an application.",
+    "questions": [
+      {
+        "question": "How much rent can I afford on $60,000 a year?",
+        "answer": "Under the checked 30% rent / 36% total-debt assumptions with $500 other monthly debt, the model gives $1,300 monthly. Different debts, ratios and household expenses can change what is workable."
+      },
+      {
+        "question": "Does the rent calculator use gross or net income?",
+        "answer": "Gross income. It normalizes the selected pay frequency but does not deduct taxes. Compare its output with a separate take-home cash budget."
+      },
+      {
+        "question": "Is the 30% rent rule mandatory?",
+        "answer": "No. It is an adjustable planning input here. Housing-burden statistics and landlord or assistance-program rules have different scopes; the tool does not determine any of them."
+      },
+      {
+        "question": "Should I enter debt balance or monthly payment?",
+        "answer": "Enter other monthly debt payments. A remaining loan balance is not the recurring payment required by this formula."
+      },
+      {
+        "question": "Why can rent budget be zero?",
+        "answer": "If other debt uses all of the entered total-debt allowance, the remaining ratio headroom is zero or negative. The result is floored at zero and is not a real-world eligibility decision."
+      },
+      {
+        "question": "Does the result include utilities and moving costs?",
+        "answer": "No. It is a ratio-based rent amount. Review utilities, living costs and savings in a monthly budget, and account for deposits and moving costs separately."
+      }
+    ],
+    "limitations": [
+      "Gross-income ratio screen only; not a full take-home living-cost or cash-to-move budget.",
+      "Selected ratios are planning assumptions, not landlord approval, underwriting or public-housing rules.",
+      "Debt is entered as recurring monthly payments; credit reports and local rent data are not retrieved.",
+      "Annualized pay is an average and may not match cash available before a rent due date."
+    ],
+    "sources": [
+      {
+        "href": "https://www.census.gov/library/stories/2022/12/housing-costs-burden.html",
+        "label": "U.S. Census Bureau: housing-cost burden includes rent and utilities"
+      },
+      {
+        "href": "https://www.consumerfinance.gov/owning-a-home/prepare/assess-your-spending/",
+        "label": "CFPB: compare spending and savings against take-home income"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-monthly-budget/",
+        "label": "Monthly-budget guide"
+      },
+      {
+        "href": "/guides/rent-vs-buy-a-house/",
+        "label": "Rent versus buy guide"
+      },
+      {
+        "href": "/guides/how-much-house-can-i-afford/",
+        "label": "Home-affordability guide"
+      },
+      {
+        "href": "/glossary/debt-to-income-ratio/",
+        "label": "Debt-to-income ratio"
+      },
+      {
+        "href": "/glossary/gross-vs-net-pay/",
+        "label": "Gross versus net pay"
+      }
+    ]
   }
 }

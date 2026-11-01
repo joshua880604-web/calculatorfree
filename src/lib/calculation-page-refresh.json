@@ -479,5 +479,31 @@
       }
     ],
     "checkedOn": "2026-11-01"
+  },
+  "budget": {
+    "questions": [
+      {
+        "question": "How do I convert biweekly pay to a monthly budget?",
+        "answer": "This model uses 26 payments per year, then divides by twelve. A $2,500 biweekly paycheck averages $5,416.67 gross monthly; actual cash receipt dates can differ."
+      },
+      {
+        "question": "Should annual insurance be entered as a monthly bill?",
+        "answer": "Either enter the annual amount with Annually selected, or its monthly provision with Monthly selected. Do not enter the full annual number as a monthly amount unless that is the actual recurring cost."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "rent": {
+    "questions": [
+      {
+        "question": "Does the rent calculator use gross or net income?",
+        "answer": "Gross income. It normalizes the selected pay frequency but does not deduct taxes. Compare its output with a separate take-home cash budget."
+      },
+      {
+        "question": "Why can rent budget be zero?",
+        "answer": "If other debt uses all of the entered total-debt allowance, the remaining ratio headroom is zero or negative. The result is floored at zero and is not a real-world eligibility decision."
+      }
+    ],
+    "checkedOn": "2026-11-01"
   }
 }

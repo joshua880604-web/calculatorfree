@@ -2276,6 +2276,10 @@
       {
         "title": "How Much House Can I Afford? Income, Debt and Ownership Costs",
         "path": "/guides/how-much-house-can-i-afford/"
+      },
+      {
+        "path": "/guides/how-to-calculate-rent-affordability/",
+        "title": "How to Calculate Rent Affordability from Income and Debt"
       }
     ]
   },
@@ -3884,7 +3888,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/how-to-calculate-monthly-budget/",
+        "title": "How to Calculate a Monthly Budget from Income and Expenses"
+      }
+    ]
   },
   {
     "slug": "exchange-rate",

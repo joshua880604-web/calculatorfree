@@ -1,0 +1,7 @@
+Case,Complete inputs (JSON),Unrounded reference metrics (JSON)
+Base: USD 500 monthly debt,"{""debt_ratio"": 36, ""debts"": 500, ""frequency"": ""Annually"", ""housing_ratio"": 30, ""income"": 60000}","{""Gross monthly income"": 5000.0, ""Monthly rent budget"": 1300.0}"
+No monthly debt,"{""debt_ratio"": 36, ""debts"": 0, ""frequency"": ""Annually"", ""housing_ratio"": 30, ""income"": 60000}","{""Gross monthly income"": 5000.0, ""Monthly rent budget"": 1500.0}"
+"USD 1,000 monthly debt","{""debt_ratio"": 36, ""debts"": 1000, ""frequency"": ""Annually"", ""housing_ratio"": 30, ""income"": 60000}","{""Gross monthly income"": 5000.0, ""Monthly rent budget"": 800.0}"
+Debt exceeds selected ratio allowance,"{""debt_ratio"": 36, ""debts"": 1900, ""frequency"": ""Annually"", ""housing_ratio"": 30, ""income"": 60000}","{""Gross monthly income"": 5000.0, ""Monthly rent budget"": 0.0}"
+"USD 2,500 biweekly gross pay","{""debt_ratio"": 36, ""debts"": 500, ""frequency"": ""Biweekly"", ""housing_ratio"": 30, ""income"": 2500}","{""Gross monthly income"": 5416.666666666667, ""Monthly rent budget"": 1450.0}"
+25% rent ratio selected,"{""debt_ratio"": 36, ""debts"": 500, ""frequency"": ""Annually"", ""housing_ratio"": 25, ""income"": 60000}","{""Gross monthly income"": 5000.0, ""Monthly rent budget"": 1250.0}"

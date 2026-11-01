@@ -284,3 +284,7 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## Savings goals and simple-interest units
 - [How to Calculate a Savings Goal: Monthly Deposits and Time Needed](https://www.calculatorfree.io/guides/how-to-calculate-savings-goal/): Calculate monthly savings needed for a target or the time to reach it. Six checked examples separate APY, deposit timing, interest tax and existing savings.
 - [How to Calculate Simple Interest: Formula, Days and Rate Units](https://www.calculatorfree.io/guides/how-to-calculate-simple-interest/): Calculate simple interest, principal, time or rate with six reproducible examples. Match rate and time units and distinguish unchanged-principal math from loan amortization.
+
+## Monthly budgeting and rent planning
+- [How to Calculate a Monthly Budget from Income and Expenses](https://www.calculatorfree.io/guides/how-to-calculate-monthly-budget/): Build a monthly budget with mixed pay frequencies, spending and saving allocations. Six checked examples explain tax assumptions, irregular bills and signed deficits.
+- [How to Calculate Rent Affordability from Income and Debt](https://www.calculatorfree.io/guides/how-to-calculate-rent-affordability/): Estimate rent from gross income and two adjustable ratio limits. Six checked cases explain debt headroom, pay frequencies and why a ratio is not a full living-cost budget.

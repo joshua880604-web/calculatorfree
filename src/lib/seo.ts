@@ -241,3 +241,6 @@ contentUpdatedOn['/glossary/down-payment/']='2026-11-01';
 
 for(const id of ['savings','simple-interest'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
 for(const slug of ['apy','simple-interest'])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';
+
+for(const id of ['budget','rent'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+for(const slug of ['budget-and-savings-rate','debt-to-income-ratio'])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';
