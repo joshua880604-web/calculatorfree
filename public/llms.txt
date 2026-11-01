@@ -268,3 +268,7 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## Home equity and debt consolidation costs
 - [How to Calculate Home Equity Loan Payments and Costs](https://www.calculatorfree.io/guides/how-to-calculate-home-equity-loan-payments/): Calculate fixed home equity loan payments and closing-cost effects. Five reproducible cases compare term, net proceeds and upfront versus financed charges.
 - [How to Compare Debt Consolidation Loan Costs](https://www.calculatorfree.io/guides/how-to-compare-debt-consolidation-loans/): Compare a consolidation loan with continued repayment using four reproducible cases. Separate lower monthly payments from interest-plus-fee savings and a longer term.
+
+## Auto and boat purchase financing
+- [How to Calculate Auto Loan Payments, Taxes and Trade Equity](https://www.calculatorfree.io/guides/how-to-calculate-auto-loan-payments/): Calculate auto loan payments from price, down payment, trade debt and entered taxes. Five reproducible cases compare term, upfront cash and interest.
+- [How to Calculate Boat Loan Payments and Purchase Budget](https://www.calculatorfree.io/guides/how-to-calculate-boat-loan-payments/): Calculate boat loan payments or solve price from a payment budget. Five reproducible cases compare term, tax financing, upfront cash and zero interest.

@@ -312,3 +312,8 @@ keywordTitles['home-equity-loan']='Home Equity Loan Calculator - Payments & Clos
 keywordTitles['debt-consolidation']='Debt Consolidation Calculator - Payments, Fees & Savings';
 searchTasks['home-equity-loan'][0].description='Calculate fixed home equity loan payments and closing-cost effects. Compare terms and upfront or financed fees; existing mortgage and property costs are separate.';
 searchTasks['debt-consolidation'][0].description='Compare debt consolidation payments, interest and origination fees with continued repayment. A smaller payment can cost more over a longer term.';
+
+// Manual-tax auto and boat purchase examples checked 2026-11-01.
+keywordTitles['boat-loan']='Boat Loan Calculator - Payments & Total Interest';
+searchTasks['auto-loan'][0].description='Calculate car loan payments with entered taxes, fees and trade equity. Compare terms, upfront cash and total interest using your purchase assumptions.';
+searchTasks['boat-loan'][0].description='Calculate boat loan payments or solve a purchase price from a monthly loan budget. Compare terms, tax financing and total interest; ownership expenses are separate.';

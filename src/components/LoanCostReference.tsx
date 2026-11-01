@@ -5,7 +5,7 @@ import SiteLink from './SiteLink';
 import './decision-guide.css';
 import './loan-cost-reference.css';
 export default function LoanCostReference({id}:{id:string}){
- const topics={'personal-loan':'personal','student-loan':'student','business-loan':'business','break-even':'breakeven',annuity:'annuity','annuity-payout':'payout',pension:'pension','social-security':'social','home-equity-loan':'equity','debt-consolidation':'consolidation'} as const;
+ const topics={'personal-loan':'personal','student-loan':'student','business-loan':'business','break-even':'breakeven',annuity:'annuity','annuity-payout':'payout',pension:'pension','social-security':'social','home-equity-loan':'equity','debt-consolidation':'consolidation','auto-loan':'auto','boat-loan':'boat'} as const;
  const topic=topics[id as keyof typeof topics];
  if(!topic)return null;
  const data=content[topic];

@@ -375,5 +375,31 @@
         "answer": "No. They are fixed entered dollar payments with a fixed combined budget and avalanche rollover, assuming no new charges."
       }
     ]
+  },
+  "auto-loan": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Does a longer car loan always save money?",
+        "answer": "No. The checked 72-month case lowers payment but increases total interest relative to 60 months at the same rate and balance."
+      },
+      {
+        "question": "How does negative trade equity affect the loan?",
+        "answer": "When the amount owed exceeds trade value, the difference can increase the modeled balance. Any tax credit is a separate selected assumption."
+      }
+    ]
+  },
+  "boat-loan": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Is a twenty-year term cheaper than ten years?",
+        "answer": "It lowers the monthly installment in this example but more than doubles total loan interest. Availability and actual terms require lender review."
+      },
+      {
+        "question": "What boat price fits a $700 payment?",
+        "answer": "Under the complete stated assumptions, the model solves $65,222.85. That is a loan-payment estimate, not an appraisal or approval."
+      }
+    ]
   }
 }

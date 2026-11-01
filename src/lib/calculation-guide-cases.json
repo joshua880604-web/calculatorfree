@@ -4625,5 +4625,334 @@
         "48"
       ]
     }
+  ],
+  "auto": [
+    {
+      "label": "60 months, financed tax and fees",
+      "calculatorId": "auto-loan",
+      "mode": "payment",
+      "values": {
+        "tax_state": "Manual",
+        "price": 35000,
+        "months": 60,
+        "rate": 6,
+        "rebate": 0,
+        "down": 5000,
+        "trade": 0,
+        "owed": 0,
+        "tax": 7,
+        "fees": 500,
+        "trade_credit": "Yes",
+        "rebate_tax": "No",
+        "finance_fees": "Yes"
+      },
+      "metrics": {
+        "Vehicle price": 35000.0,
+        "Sales tax": 2450.0,
+        "Upfront cash": 5000.0,
+        "Payment per period": 637.0158103946499,
+        "Total interest": 5270.948623678994,
+        "Total payments": 38220.948623678996,
+        "Number of payments": 60.0
+      },
+      "display": [
+        "$637.02",
+        "$5,000.00",
+        "$32,950.00",
+        "$5,270.95"
+      ]
+    },
+    {
+      "label": "72 months, financed tax and fees",
+      "calculatorId": "auto-loan",
+      "mode": "payment",
+      "values": {
+        "tax_state": "Manual",
+        "price": 35000,
+        "months": 72,
+        "rate": 6,
+        "rebate": 0,
+        "down": 5000,
+        "trade": 0,
+        "owed": 0,
+        "tax": 7,
+        "fees": 500,
+        "trade_credit": "Yes",
+        "rebate_tax": "No",
+        "finance_fees": "Yes"
+      },
+      "metrics": {
+        "Vehicle price": 35000.0,
+        "Sales tax": 2450.0,
+        "Upfront cash": 5000.0,
+        "Payment per period": 546.0766560899092,
+        "Total interest": 6367.519238473458,
+        "Total payments": 39317.51923847346,
+        "Number of payments": 72.0
+      },
+      "display": [
+        "$546.08",
+        "$5,000.00",
+        "$32,950.00",
+        "$6,367.52"
+      ]
+    },
+    {
+      "label": "60 months, tax and fees upfront",
+      "calculatorId": "auto-loan",
+      "mode": "payment",
+      "values": {
+        "tax_state": "Manual",
+        "price": 35000,
+        "months": 60,
+        "rate": 6,
+        "rebate": 0,
+        "down": 5000,
+        "trade": 0,
+        "owed": 0,
+        "tax": 7,
+        "fees": 500,
+        "trade_credit": "Yes",
+        "rebate_tax": "No",
+        "finance_fees": "No"
+      },
+      "metrics": {
+        "Vehicle price": 35000.0,
+        "Sales tax": 2450.0,
+        "Upfront cash": 7950.0,
+        "Payment per period": 579.9840458828376,
+        "Total interest": 4799.042752970253,
+        "Total payments": 34799.04275297025,
+        "Number of payments": 60.0
+      },
+      "display": [
+        "$579.98",
+        "$7,950.00",
+        "$30,000.00",
+        "$4,799.04"
+      ]
+    },
+    {
+      "label": "USD 8,000 trade, USD 11,000 owed",
+      "calculatorId": "auto-loan",
+      "mode": "payment",
+      "values": {
+        "tax_state": "Manual",
+        "price": 35000,
+        "months": 60,
+        "rate": 6,
+        "rebate": 0,
+        "down": 5000,
+        "trade": 8000,
+        "owed": 11000,
+        "tax": 7,
+        "fees": 500,
+        "trade_credit": "Yes",
+        "rebate_tax": "No",
+        "finance_fees": "Yes"
+      },
+      "metrics": {
+        "Vehicle price": 35000.0,
+        "Sales tax": 1890.0,
+        "Upfront cash": 5000.0,
+        "Payment per period": 684.187846126454,
+        "Total interest": 5661.270767587242,
+        "Total payments": 41051.270767587244,
+        "Number of payments": 60.0
+      },
+      "display": [
+        "$684.19",
+        "$5,000.00",
+        "$35,390.00",
+        "$5,661.27"
+      ]
+    },
+    {
+      "label": "USD 8,000 down payment",
+      "calculatorId": "auto-loan",
+      "mode": "payment",
+      "values": {
+        "tax_state": "Manual",
+        "price": 35000,
+        "months": 60,
+        "rate": 6,
+        "rebate": 0,
+        "down": 8000,
+        "trade": 0,
+        "owed": 0,
+        "tax": 7,
+        "fees": 500,
+        "trade_credit": "Yes",
+        "rebate_tax": "No",
+        "finance_fees": "Yes"
+      },
+      "metrics": {
+        "Vehicle price": 35000.0,
+        "Sales tax": 2450.0,
+        "Upfront cash": 8000.0,
+        "Payment per period": 579.0174058063661,
+        "Total interest": 4791.044348381969,
+        "Total payments": 34741.04434838197,
+        "Number of payments": 60.0
+      },
+      "display": [
+        "$579.02",
+        "$8,000.00",
+        "$29,950.00",
+        "$4,791.04"
+      ]
+    }
+  ],
+  "boat": [
+    {
+      "label": "10 years, financed tax and fees",
+      "calculatorId": "boat-loan",
+      "mode": "payment",
+      "values": {
+        "price": 50000,
+        "down": 10000,
+        "trade": 0,
+        "tax": 7,
+        "fees": 500,
+        "finance": "Yes",
+        "rate": 7,
+        "years": 10
+      },
+      "metrics": {
+        "Boat price": 50000.0,
+        "Sales tax": 3500.0,
+        "Upfront cash": 10000.0,
+        "Payment per period": 510.8773085619458,
+        "Total interest": 17305.2770274335,
+        "Total payments": 61305.2770274335,
+        "Number of payments": 120.0
+      },
+      "display": [
+        "$50,000.00",
+        "$510.88",
+        "$10,000.00",
+        "$17,305.28"
+      ]
+    },
+    {
+      "label": "20 years, financed tax and fees",
+      "calculatorId": "boat-loan",
+      "mode": "payment",
+      "values": {
+        "price": 50000,
+        "down": 10000,
+        "trade": 0,
+        "tax": 7,
+        "fees": 500,
+        "finance": "Yes",
+        "rate": 7,
+        "years": 20
+      },
+      "metrics": {
+        "Boat price": 50000.0,
+        "Sales tax": 3500.0,
+        "Upfront cash": 10000.0,
+        "Payment per period": 341.1315316723048,
+        "Total interest": 37871.56760135315,
+        "Total payments": 81871.56760135315,
+        "Number of payments": 240.0
+      },
+      "display": [
+        "$50,000.00",
+        "$341.13",
+        "$10,000.00",
+        "$37,871.57"
+      ]
+    },
+    {
+      "label": "10 years, tax and fees upfront",
+      "calculatorId": "boat-loan",
+      "mode": "payment",
+      "values": {
+        "price": 50000,
+        "down": 10000,
+        "trade": 0,
+        "tax": 7,
+        "fees": 500,
+        "finance": "No",
+        "rate": 7,
+        "years": 10
+      },
+      "metrics": {
+        "Boat price": 50000.0,
+        "Sales tax": 3500.0,
+        "Upfront cash": 14000.0,
+        "Payment per period": 464.4339168744962,
+        "Total interest": 15732.070024939547,
+        "Total payments": 55732.070024939545,
+        "Number of payments": 120.0
+      },
+      "display": [
+        "$50,000.00",
+        "$464.43",
+        "$14,000.00",
+        "$15,732.07"
+      ]
+    },
+    {
+      "label": "Solve price from USD 700 monthly",
+      "calculatorId": "boat-loan",
+      "mode": "price",
+      "values": {
+        "down": 10000,
+        "trade": 0,
+        "tax": 7,
+        "fees": 500,
+        "finance": "Yes",
+        "rate": 7,
+        "years": 10,
+        "payment": 700
+      },
+      "metrics": {
+        "Boat price": 65222.84850370499,
+        "Sales tax": 4565.599395259349,
+        "Upfront cash": 10000.0,
+        "Payment per period": 700.0,
+        "Total interest": 23711.55210103566,
+        "Total payments": 84000.0,
+        "Number of payments": 120.0
+      },
+      "display": [
+        "$65,222.85",
+        "$700.00",
+        "$10,000.00",
+        "$23,711.55"
+      ]
+    },
+    {
+      "label": "10 years, 0% entered interest",
+      "calculatorId": "boat-loan",
+      "mode": "payment",
+      "values": {
+        "price": 50000,
+        "down": 10000,
+        "trade": 0,
+        "tax": 7,
+        "fees": 500,
+        "finance": "Yes",
+        "rate": 0,
+        "years": 10
+      },
+      "metrics": {
+        "Boat price": 50000.0,
+        "Sales tax": 3500.0,
+        "Upfront cash": 10000.0,
+        "Payment per period": 366.6666666666667,
+        "Total interest": 0.0,
+        "Total payments": 44000.0,
+        "Number of payments": 120.0
+      },
+      "display": [
+        "$50,000.00",
+        "$366.67",
+        "$10,000.00",
+        "$0.00"
+      ]
+    }
   ]
 }

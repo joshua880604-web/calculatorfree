@@ -4778,5 +4778,291 @@
         "label": "Debt consolidation glossary"
       }
     ]
+  },
+  "auto": {
+    "meta": {
+      "path": "/guides/how-to-calculate-auto-loan-payments/",
+      "title": "How to Calculate Auto Loan Payments, Taxes and Trade Equity",
+      "heading": "How to Calculate Auto Loan Payments, Taxes and Trade Equity",
+      "description": "Calculate auto loan payments from price, down payment, trade debt and entered taxes. Five reproducible cases compare term, upfront cash and interest.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "auto-loan"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "How to Calculate Auto Loan Payments, Taxes and Trade Equity",
+      "cardIntro": "Calculate auto loan payments from price, down payment, trade debt and entered taxes. Five reproducible cases compare term, upfront cash and interest.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/auto-loan-calculator",
+    "calculatorLabel": "Auto Loan Calculator",
+    "intro": "Start with the amount financed, not only the vehicle’s advertised price. Down payment, rebate, trade value, existing trade debt and financed charges can all change that balance. Then compare both the monthly commitment and total loan interest. This guide uses explicit Manual tax assumptions rather than claiming to apply every jurisdiction’s rules.",
+    "answer": "For a hypothetical $35,000 car, $5,000 down, 7% tax on the full price and $500 fees financed, the loan balance is $32,950. At 6% nominal annual interest over 60 months, payment is $637.02 and total interest is $5,270.95. Extending the same balance to 72 months lowers payment to $546.08 but increases interest to $6,367.52.",
+    "sections": [
+      {
+        "id": "balance",
+        "title": "Build the amount financed before calculating payments",
+        "paragraphs": [
+          "The base case has no rebate, trade value or trade debt. Manual tax is $35,000 × 7% = $2,450. Add that tax and $500 fees to the $35,000 price, then subtract $5,000 down: the financed amount is $32,950. Upfront cash in this case is $5,000.",
+          "Entered fees are treated as a separate modeled amount; they are not automatically classified as taxable dealer charges. A real purchase contract can have additional items or different tax treatment. Match the estimate to the actual transaction instead of treating the displayed loan balance as a dealer quote."
+        ],
+        "formula": "Financed amount = price − rebate − down − trade value + trade debt + financed tax and fees"
+      },
+      {
+        "id": "payment",
+        "title": "Apply the fixed monthly payment equation",
+        "paragraphs": [
+          "The base case uses a 6% / 12 monthly rate and 60 payments. The regular installment is $637.02, with $5,270.95 total interest under the model’s precision convention. Principal-and-interest payments exclude separately budgeted insurance, fuel, maintenance and other ownership costs.",
+          "The calculator retains intermediate precision and caps the final payment. Multiplying a displayed rounded installment by the term can differ slightly from the displayed total. Enter the applicable nominal interest rate; the model does not derive a lender’s regulatory APR from these purchase charges."
+        ],
+        "formula": "Monthly payment = financed amount × monthly rate / [1 − (1 + monthly rate)^(−months)]"
+      },
+      {
+        "id": "term",
+        "title": "Compare 60 and 72 months at the same rate",
+        "paragraphs": [
+          "At the same $32,950 balance and 6% input, 72 months gives a $546.08 payment instead of $637.02. Total interest rises from $5,270.95 to $6,367.52. The smaller installment is therefore a different cash-flow commitment with a longer repayment horizon.",
+          "This comparison holds the rate constant to isolate term. Actual offers may change rates or fees with the term, so enter those differences before comparing real alternatives. The model does not infer whether either term is available or how vehicle depreciation affects the remaining balance."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "cash",
+        "title": "Distinguish prepaid charges from a larger down payment",
+        "paragraphs": [
+          "Paying the $2,450 tax and $500 fees upfront leaves a $30,000 loan balance. Upfront cash rises to $7,950, payment falls to $579.98 and interest is $4,799.04. Those charges still exist; they are paid now rather than through the loan.",
+          "A separate case keeps charges financed but increases the down payment to $8,000. Its balance is $29,950, payment $579.02 and interest $4,791.04. The similar payments do not mean identical upfront cash or identical financing. Keep the cash amount and purpose of each payment visible."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "trade",
+        "title": "Separate negative trade equity from the tax assumption",
+        "paragraphs": [
+          "With an $8,000 trade and $11,000 still owed, the trade position has $3,000 negative equity. Under the case’s explicit Manual setting, the trade also reduces taxable price to $27,000, so tax is $1,890. This selected credit is a hypothetical input, not a statement that every purchase qualifies.",
+          "Financed amount is $35,000 − $5,000 − $8,000 + $11,000 + $1,890 + $500 = $35,390. The 60-month payment becomes $684.19 and interest $5,661.27. Trade debt affects financing, while the selected trade-value credit affects taxable price; combining them into one net figure would obscure the calculation."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "scope",
+        "title": "Use actual contract terms and a separate early-payoff model",
+        "paragraphs": [
+          "Use =-PMT(6%/12,60,32950) in a spreadsheet to reproduce the base monthly payment. For another case, change financed balance or term to match the full assumptions. The CSV preserves every entered setting so you can identify exactly what changed.",
+          "This purchase calculator also has a price solver, but it does not evaluate a complete household affordability budget. For extra principal on an existing balance, use Loan Repayment Calculator and review the separate early-payoff guide. Prepayment penalties, daily interest and contract-specific charges require separate checks."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Monthly loan payment",
+      "Upfront cash",
+      "Financed amount",
+      "Total loan interest"
+    ],
+    "chart": "auto-guide",
+    "chartAlt": "Total auto loan interest under different terms, tax financing, trade debt and down payments.",
+    "chartCaption": "All cases use explicit Manual tax assumptions, not a jurisdiction tax ruling. Trade-debt financing and any selected trade-in tax credit are separate calculations.",
+    "questions": [
+      {
+        "question": "Should I enter car price or loan amount?",
+        "answer": "Enter the vehicle price in this purchase model. The amount financed is derived from down payment, trade, owed balance and selected charges."
+      },
+      {
+        "question": "Does a longer car loan always save money?",
+        "answer": "No. The checked 72-month case lowers payment but increases total interest relative to 60 months at the same rate and balance."
+      },
+      {
+        "question": "Do financed taxes and fees disappear from the cost?",
+        "answer": "No. They increase the repayment balance and can incur interest. Paying them upfront changes cash timing instead."
+      },
+      {
+        "question": "How does negative trade equity affect the loan?",
+        "answer": "When the amount owed exceeds trade value, the difference can increase the modeled balance. Any tax credit is a separate selected assumption."
+      },
+      {
+        "question": "Is the 7% tax example a state rule?",
+        "answer": "No. These cases explicitly use Manual tax settings. Confirm the applicable rate, eligible credits and fee treatment for the actual purchase."
+      },
+      {
+        "question": "Can this purchase form model extra payments?",
+        "answer": "Use the separate Loan Repayment Calculator for extra principal on an existing balance. The purchase form models the regular loan schedule."
+      }
+    ],
+    "limitations": [
+      "Hypothetical fixed monthly rates and constant amortization, not live offers or approval.",
+      "No insurance, maintenance, depreciation, operating costs or actual dated daily-interest payoff quote is inferred.",
+      "Tax examples use Manual settings; no state eligibility, local surtax cap or taxable-fee rule is established by these cases."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/consumer-tools/auto-loans/",
+        "label": "CFPB: comparing auto loan terms and purchase documents"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/pay-off-car-loan-early/",
+        "label": "Paying off a car loan early"
+      },
+      {
+        "href": "/loan-repayment-calculator",
+        "label": "Extra-payment calculator"
+      },
+      {
+        "href": "/cash-back-or-low-interest-calculator",
+        "label": "Cash rebate versus lower interest"
+      },
+      {
+        "href": "/glossary/amortization/",
+        "label": "Amortization glossary"
+      }
+    ]
+  },
+  "boat": {
+    "meta": {
+      "path": "/guides/how-to-calculate-boat-loan-payments/",
+      "title": "How to Calculate Boat Loan Payments and Purchase Budget",
+      "heading": "How to Calculate Boat Loan Payments and Purchase Budget",
+      "description": "Calculate boat loan payments or solve price from a payment budget. Five reproducible cases compare term, tax financing, upfront cash and zero interest.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "boat-loan"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "How to Calculate Boat Loan Payments and Purchase Budget",
+      "cardIntro": "Calculate boat loan payments or solve price from a payment budget. Five reproducible cases compare term, tax financing, upfront cash and zero interest.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/boat-loan-calculator",
+    "calculatorLabel": "Boat Loan Calculator",
+    "intro": "Separate boat price, upfront cash, loan balance and ongoing ownership expenses. The payment model amortizes entered financing; it does not value a boat, determine underwriting or choose a lender term. Use the full-price tax assumption consistently and budget insurance, storage, dockage, maintenance and operating costs separately.",
+    "answer": "For a hypothetical $50,000 boat, $10,000 down, 7% tax on the full price and $500 fees financed, the loan balance is $44,000. At 7% nominal annual interest over ten years, payment is $510.88 and total interest is $17,305.28. Extending the same loan to twenty years lowers payment to $341.13 but raises interest to $37,871.57.",
+    "sections": [
+      {
+        "id": "principal",
+        "title": "Reconcile purchase price and financing",
+        "paragraphs": [
+          "Tax in the base case is $50,000 × 7% = $3,500. Add $500 fees, subtract $10,000 down and finance the charges: principal is $44,000. The model treats the entered tax as a percentage of full boat price; it does not automatically apply jurisdiction-specific caps or credits.",
+          "Trade value can reduce the financed amount, but outstanding trade debt is not a field in this boat model. Do not assume automobile trade-in tax rules apply. Obtain the actual applicable purchase charges and separate any obligations that this simplified financing form does not represent."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "payment",
+        "title": "Calculate monthly payments from the entered fixed rate",
+        "paragraphs": [
+          "At a 7% nominal rate, the monthly rate is 7% / 12. Over 120 periods, amortizing $44,000 gives a $510.88 installment and $17,305.28 interest. The interest figure is not the purchase price or full cash needed for boat ownership.",
+          "Internal precision is retained before display rounding, and the last payment is capped at the amount remaining. The hypothetical rate is not fetched from a lender. BoatUS describes underwriting considerations; a mathematical payment does not establish that a lender will approve the boat, borrower or term."
+        ],
+        "formula": "Monthly payment = financed balance × monthly rate / [1 − (1 + monthly rate)^(−months)]"
+      },
+      {
+        "id": "term",
+        "title": "A twenty-year term lowers the payment but extends interest",
+        "paragraphs": [
+          "With the same $44,000 principal and 7% rate, 240 payments give a $341.13 installment. Total interest becomes $37,871.57, compared with $17,305.28 over ten years. This is a controlled term sensitivity rather than a claim that a twenty-year offer is available.",
+          "Keep actual quoted rates and fees aligned when comparing offers. Boat age, condition and lender criteria may affect available terms, while depreciation and repairs can affect ownership economics. None of those details is inferred from the payment equation."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "upfront",
+        "title": "Prepaying tax and fees changes the cash requirement",
+        "paragraphs": [
+          "Paying $3,500 tax and $500 fees upfront produces $14,000 upfront cash including the $10,000 down payment. Loan principal drops to $40,000, payment to $464.43 and interest to $15,732.07. The purchase charges remain part of cash needed even though they no longer accrue loan interest.",
+          "These are not equal-upfront-cash scenarios. A lower installment here is partly achieved by committing another $4,000 at purchase. Compare reserves and the amounts actually needed for other boat expenses rather than treating lower financed principal as an erased cost."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "budget",
+        "title": "Work backward from a loan-payment budget",
+        "paragraphs": [
+          "Boat Price mode can solve a price from the entered payment. At $700 monthly, 7%, ten years, $10,000 down, 7% full-price tax and $500 fees financed, modeled boat price is $65,222.85. That is a different purchase from the $50,000 payment examples; its interest is $23,711.55.",
+          "The model first finds the principal supported by the payment stream, then reverses down payment, financed tax and fees to solve price. The $700 budget covers the loan payment only. It does not prove that this price fits a complete ownership or household budget, or that the boat is worth that amount."
+        ],
+        "formula": "With financed charges: price = (loan present value + down + trade − fees) / (1 + tax rate)"
+      },
+      {
+        "id": "zero",
+        "title": "Check zero interest and distinguish payment from ownership cost",
+        "paragraphs": [
+          "With zero entered interest and the base $44,000 balance over 120 months, payment is $366.67 before display rounding and total interest is zero. This checks the principal/period relationship; it is not an advertised zero-rate financing offer. Taxes and fees are still present in that balance.",
+          "For the base positive-rate payment, a spreadsheet can use =-PMT(7%/12,120,44000). Keep insurance, fuel, storage, marina costs, surveys and maintenance outside this loan calculation and budget them separately. No tax deduction, balloon payment or extra-principal schedule is automatically supplied."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Boat price",
+      "Monthly loan payment",
+      "Upfront cash",
+      "Total loan interest"
+    ],
+    "chart": "boat-guide",
+    "chartAlt": "Total boat loan interest under different terms, upfront charges, a solved price and zero interest.",
+    "chartCaption": "The price-solver case purchases a different modeled boat price at a $700 loan payment budget. Boat ownership costs are separate; an entered twenty-year term or zero rate is not a lender offer.",
+    "questions": [
+      {
+        "question": "What is the payment on a $50,000 boat?",
+        "answer": "With the guide’s $10,000 down, financed 7% tax and $500 fees, and hypothetical 7% interest over ten years, payment is $510.88. Price alone cannot determine a payment."
+      },
+      {
+        "question": "Is a twenty-year term cheaper than ten years?",
+        "answer": "It lowers the monthly installment in this example but more than doubles total loan interest. Availability and actual terms require lender review."
+      },
+      {
+        "question": "Are tax and fees included in upfront cash?",
+        "answer": "When paid upfront, yes: the example needs $14,000 including down payment. When financed, they increase the loan balance instead."
+      },
+      {
+        "question": "What boat price fits a $700 payment?",
+        "answer": "Under the complete stated assumptions, the model solves $65,222.85. That is a loan-payment estimate, not an appraisal or approval."
+      },
+      {
+        "question": "Does the calculator include boat ownership expenses?",
+        "answer": "No. Budget insurance, fuel, dockage, storage, maintenance, surveys and other expenses separately."
+      },
+      {
+        "question": "Does trade-in value reduce sales tax here?",
+        "answer": "No automatic trade tax credit is modeled. Tax applies to the full entered or solved boat price; confirm actual jurisdiction treatment separately."
+      }
+    ],
+    "limitations": [
+      "Hypothetical fixed monthly rates and constant amortization, not live offers or approval.",
+      "No insurance, maintenance, depreciation, operating costs or actual dated daily-interest payoff quote is inferred.",
+      "Boat sales tax applies to full entered price in this model; no trade-in tax credit or outstanding trade debt is inferred."
+    ],
+    "sources": [
+      {
+        "href": "https://www.boatus.com/products-and-services/boat-loans",
+        "label": "BoatUS: financing payments and separate ownership expenses"
+      },
+      {
+        "href": "https://www.boatus.com/faq/boat-loans",
+        "label": "BoatUS: underwriting and boat-dependent terms"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-auto-loan-payments/",
+        "label": "Auto purchase financing comparison"
+      },
+      {
+        "href": "/budget-calculator",
+        "label": "Plan a complete spending budget"
+      },
+      {
+        "href": "/loan-repayment-calculator",
+        "label": "Extra-payment calculator"
+      },
+      {
+        "href": "/glossary/amortization/",
+        "label": "Amortization glossary"
+      }
+    ]
   }
 }
