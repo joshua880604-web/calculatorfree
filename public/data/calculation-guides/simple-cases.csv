@@ -1,0 +1,7 @@
+Case,Complete inputs (JSON),Unrounded reference metrics (JSON)
+"Annual rate, four years","{""principal"": 10000, ""rate"": 5, ""rate_unit"": ""Annual"", ""term_unit"": ""Years"", ""years"": 4}","{""Balance"": 12000.0}"
+"Monthly rate, twelve months","{""principal"": 10000, ""rate"": 1, ""rate_unit"": ""Monthly"", ""term_unit"": ""Months"", ""years"": 12}","{""Balance"": 11200.0}"
+"Annual rate, ninety days","{""principal"": 10000, ""rate"": 6, ""rate_unit"": ""Annual"", ""term_unit"": ""Days"", ""years"": 90}","{""Balance"": 10147.945205479453}"
+Solve starting principal,"{""balance"": 12000, ""rate"": 5, ""rate_unit"": ""Annual"", ""term_unit"": ""Years"", ""years"": 4}","{""Principal"": 10000.0}"
+Solve term in months,"{""balance"": 12000, ""principal"": 10000, ""rate"": 5, ""rate_unit"": ""Annual"", ""term_unit"": ""Months""}","{""Term"": 48.0}"
+Solve annual rate,"{""balance"": 12000, ""principal"": 10000, ""rate_unit"": ""Annual"", ""term_unit"": ""Years"", ""years"": 4}","{""Rate"": 5.0}"

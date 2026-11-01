@@ -238,3 +238,6 @@ contentUpdatedOn['/glossary/lease-residual-value/']='2026-11-01';
 
 for(const id of ['fha-loan','va-mortgage'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
 contentUpdatedOn['/glossary/down-payment/']='2026-11-01';
+
+for(const id of ['savings','simple-interest'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+for(const slug of ['apy','simple-interest'])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';

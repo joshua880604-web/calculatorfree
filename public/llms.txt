@@ -280,3 +280,7 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## FHA and VA purchase-payment examples
 - [How to Calculate FHA Loan Payments and Mortgage Insurance](https://www.calculatorfree.io/guides/how-to-calculate-fha-loan-payments/): Calculate FHA payments with financed upfront MIP, monthly premiums and entered property costs. Four reproducible cases compare down payment and term using documented premium assumptions.
 - [How to Calculate VA Loan Payments and the Funding Fee](https://www.calculatorfree.io/guides/how-to-calculate-va-loan-payments/): Calculate VA purchase-loan payments and funding-fee effects. Six reproducible cases compare financing, down payments, prior use and an assumed established exemption.
+
+## Savings goals and simple-interest units
+- [How to Calculate a Savings Goal: Monthly Deposits and Time Needed](https://www.calculatorfree.io/guides/how-to-calculate-savings-goal/): Calculate monthly savings needed for a target or the time to reach it. Six checked examples separate APY, deposit timing, interest tax and existing savings.
+- [How to Calculate Simple Interest: Formula, Days and Rate Units](https://www.calculatorfree.io/guides/how-to-calculate-simple-interest/): Calculate simple interest, principal, time or rate with six reproducible examples. Match rate and time units and distinguish unchanged-principal math from loan amortization.

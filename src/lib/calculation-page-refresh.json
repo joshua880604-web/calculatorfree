@@ -453,5 +453,31 @@
         "answer": "No. The setting assumes exemption has already been established. VA and the loan process determine eligibility and documentation."
       }
     ]
+  },
+  "savings": {
+    "questions": [
+      {
+        "question": "Should I enter a bank APY as a nominal interest rate?",
+        "answer": "Use the APY rate type for an APY quote. APY already includes compounding; the savings calculator ignores the separate compounding selector for that selection."
+      },
+      {
+        "question": "Does the interest-tax input calculate my actual taxes?",
+        "answer": "No. It applies the model’s entered haircut to positive interest at year ends or the final partial year. It does not determine tax eligibility, filing rules or actual withholding."
+      }
+    ],
+    "checkedOn": "2026-11-01"
+  },
+  "simple-interest": {
+    "questions": [
+      {
+        "question": "How do I calculate simple interest for ninety days?",
+        "answer": "With an annual rate, this tool uses ninety divided by 365 as the time in years. The checked $10,000 at 6% annual example earns about $147.95; a contract may use another basis."
+      },
+      {
+        "question": "Can this calculate a car loan’s total interest?",
+        "answer": "Not when principal is repaid over time. A simple-interest installment loan can charge interest on the changing outstanding balance; use a repayment schedule and the actual contract terms."
+      }
+    ],
+    "checkedOn": "2026-11-01"
   }
 }

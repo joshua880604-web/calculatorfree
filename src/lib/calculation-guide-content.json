@@ -5639,5 +5639,297 @@
         "label": "Down payment glossary"
       }
     ]
+  },
+  "savinggoal": {
+    "meta": {
+      "path": "/guides/how-to-calculate-savings-goal/",
+      "title": "How to Calculate a Savings Goal: Monthly Deposits and Time Needed",
+      "heading": "How to Calculate a Savings Goal: Monthly Deposits and Time Needed",
+      "description": "Calculate monthly savings needed for a target or the time to reach it. Six checked examples separate APY, deposit timing, interest tax and existing savings.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "savings"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "How to Calculate a Savings Goal: Monthly Deposits and Time Needed",
+      "cardIntro": "Calculate monthly savings needed for a target or the time to reach it. Six checked examples separate APY, deposit timing, interest tax and existing savings.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/savings-calculator",
+    "calculatorLabel": "Savings Calculator",
+    "intro": "A savings goal has two different questions: how much to deposit each month before a deadline, or how long a chosen monthly deposit takes. Start with the target and existing savings, then specify rate type, timing and any modeled interest tax. The examples below use hypothetical constant rates, not bank offers or guaranteed account balances.",
+    "answer": "With $2,000 already saved and a $20,000 target five years away, zero interest requires $300 per month. A hypothetical constant 4% APY reduces the calculated end-month deposit to $265.44 before rounding the actual payment. Depositing $300 at each month end instead reaches the target in the first qualifying whole month, month 54, at $20,074.66.",
+    "sections": [
+      {
+        "id": "goal",
+        "title": "Separate a deadline from a monthly budget",
+        "paragraphs": [
+          "The no-interest baseline is easy to check: subtract $2,000 from $20,000 and divide the $18,000 gap by sixty deposits. This gives $300 monthly. It is a useful reference when deciding how much of the target depends on your own contributions rather than an assumed return.",
+          "Choose Monthly Deposit to solve for the recurring amount with a fixed deadline. Choose Time Needed when the affordable deposit is already known. The time solver evaluates whole months; it is not a prediction of the exact calendar day a bank balance will cross the target."
+        ],
+        "formula": "At zero yield: monthly deposit = (target − starting savings) / number of deposits"
+      },
+      {
+        "id": "apy",
+        "title": "Choose APY or nominal interest before entering a rate",
+        "paragraphs": [
+          "APY includes compounding. In the savings calculator, a constant 4% APY becomes a monthly growth equivalent of (1.04)^(1/12) − 1, about 0.3274%. The separate compounding selector is ignored for APY, so selecting daily there does not compound an already effective annual yield a second time.",
+          "A nominal annual rate with monthly compounding instead uses nominal rate / 12. For that selection, the compounding frequency matters. The examples use APY consistently; the cited deposit definitions explain the distinction, while the monthly equivalent here is a planning convention rather than an account-statement calculation."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "formula",
+        "title": "Solve for the deposit rather than counting interest as contributions",
+        "paragraphs": [
+          "For equal end-month deposits and no tax, let P be current savings, G the target, r the monthly rate and n the number of months. Grow P for n periods and divide the remaining target by the annuity accumulation factor. Under the base assumptions, the solved deposit is about $265.44.",
+          "The table displays cents, but its restored inputs recompute the unrounded deposit. If you actually transfer only the rounded-down number, a small residual shortfall is possible. Round a real transfer upward or review progress periodically; do not treat the two-decimal display as a guarantee of reaching an exact target."
+        ],
+        "formula": "C = [G − P(1+r)^n] / [((1+r)^n − 1) / r], for end-month deposits, r ≠ 0 and no tax"
+      },
+      {
+        "id": "timing-tax",
+        "title": "Deposit timing and interest tax change the target funding",
+        "paragraphs": [
+          "Moving the base deposits to each month’s beginning gives each one an extra month of growth. Required monthly saving falls to $264.58 under the same 4% APY. That is a timing comparison with equal target and deadline, not an additional investment return promised by the tool.",
+          "A separate case keeps end-month deposits but applies a hypothetical 20% tax haircut to positive accrued interest at each modeled year end. It needs $272.11 monthly and records $418.37 of modeled interest tax over five years. This setting is not a jurisdictional tax estimate, withholding calculation or a rule for every savings account."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "time",
+        "title": "Read the first whole month and the already-covered case correctly",
+        "paragraphs": [
+          "With $300 end-month deposits and 4% APY, the model first meets the $20,000 goal at month 54. Its ending value is $20,074.66 because the search stops at a whole monthly period. There is no need to force the displayed balance down to exactly $20,000 or assume that the extra $74.66 is a separate bonus.",
+          "When starting savings are $21,000, the target is already covered even before growth. The monthly-deposit mode returns zero and projects $25,549.71 after five years under 4% APY. Zero required new deposits says nothing about future withdrawals, rate changes or whether those existing savings are freely available."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "boundaries",
+        "title": "Use the goal model alongside liquidity and purchasing power",
+        "paragraphs": [
+          "The six cases set annual deposits, deposit increases and inflation to zero, making the monthly comparisons reproducible. The calculator also has inputs for those effects. An inflation-adjusted balance is a purchasing-power view; it does not automatically raise the nominal target you entered.",
+          "The model does not fetch bank rates or account fees. Actual day counts, crediting, minimum-balance conditions, taxes and variable yields can change results. Keep emergency liquidity and the purpose of the money in view; the required deposit is arithmetic under assumptions, not a recommendation to choose a particular account."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Monthly deposit",
+      "Horizon",
+      "Ending balance",
+      "Modeled interest tax"
+    ],
+    "chart": "savinggoal-guide",
+    "chartAlt": "Monthly deposits required for a fixed savings target under zero yield, APY, deposit timing and modeled tax scenarios.",
+    "chartCaption": "The chart compares only the first four cases: the same $2,000 starting savings, $20,000 target and sixty-month deadline. The time-needed and already-covered cases appear in the table.",
+    "questions": [
+      {
+        "question": "How much should I save monthly for a $20,000 goal?",
+        "answer": "It depends on existing savings, deadline and assumed yield. In the checked $2,000-start, five-year example, zero interest requires $300 monthly; constant 4% APY with end-month deposits requires about $265.44 before payment rounding."
+      },
+      {
+        "question": "Should I enter a bank APY as a nominal interest rate?",
+        "answer": "Use the APY rate type for an APY quote. APY already includes compounding; the savings calculator ignores the separate compounding selector for that selection."
+      },
+      {
+        "question": "Why does Time Needed show more than my target balance?",
+        "answer": "It stops at the first qualifying whole month. A monthly deposit and interest can take the result above the target during that final period."
+      },
+      {
+        "question": "Do beginning-month deposits make a difference?",
+        "answer": "Yes under positive growth: deposits have an extra period to earn interest. The checked monthly requirement falls from $265.44 to $264.58 under the same stated goal and yield."
+      },
+      {
+        "question": "Does the interest-tax input calculate my actual taxes?",
+        "answer": "No. It applies the model’s entered haircut to positive interest at year ends or the final partial year. It does not determine tax eligibility, filing rules or actual withholding."
+      },
+      {
+        "question": "Can a zero required deposit mean I already reached the goal?",
+        "answer": "Yes. Existing savings and entered annual deposits can already cover the projected target. Check liquidity and assumptions rather than interpreting zero as a recommendation to stop saving."
+      }
+    ],
+    "limitations": [
+      "Constant hypothetical rates; no live bank offer, fees, eligibility or deposit protection determination.",
+      "Monthly growth uses an equivalent rate; actual account day counts and crediting can differ.",
+      "The examples exclude annual deposits, contribution increases and inflation; tax is a simplified entered haircut.",
+      "Time Needed searches whole months up to the tool’s 200-year horizon."
+    ],
+    "sources": [
+      {
+        "href": "https://www.investor.gov/financial-tools-calculators/calculators/savings-goal-calculator",
+        "label": "SEC Investor.gov: savings-goal inputs and monthly contribution planning"
+      },
+      {
+        "href": "https://www.consumerfinance.gov/rules-policy/regulations/1030/2/",
+        "label": "CFPB Regulation DD definitions: APY and interest rate"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/cd-vs-savings-account/",
+        "label": "CD versus savings account guide"
+      },
+      {
+        "href": "/guides/compound-interest-with-monthly-contributions/",
+        "label": "Compound-interest guide"
+      },
+      {
+        "href": "/glossary/apy/",
+        "label": "APY glossary"
+      },
+      {
+        "href": "/glossary/budget-and-savings-rate/",
+        "label": "Budget and savings rate glossary"
+      }
+    ]
+  },
+  "simple": {
+    "meta": {
+      "path": "/guides/how-to-calculate-simple-interest/",
+      "title": "How to Calculate Simple Interest: Formula, Days and Rate Units",
+      "heading": "How to Calculate Simple Interest: Formula, Days and Rate Units",
+      "description": "Calculate simple interest, principal, time or rate with six reproducible examples. Match rate and time units and distinguish unchanged-principal math from loan amortization.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "simple-interest"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "How to Calculate Simple Interest: Formula, Days and Rate Units",
+      "cardIntro": "Calculate simple interest, principal, time or rate with six reproducible examples. Match rate and time units and distinguish unchanged-principal math from loan amortization.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/simple-interest-calculator",
+    "calculatorLabel": "Simple Interest Calculator",
+    "intro": "Simple-interest arithmetic starts with principal, a rate and a matching period of time. This guide uses a fixed principal with no payments or added deposits. That scope matters: an actual installment loan described as simple interest can accrue on a declining outstanding balance, which needs a repayment schedule rather than one unchanged-principal multiplication.",
+    "answer": "With $10,000 of unchanged principal, a 5% annual simple rate and four years, interest is $2,000 and ending balance is $12,000. The same formula can solve starting principal, time or rate. For days, the calculator converts an annual rate using 365 days per year; a real contract may specify a different day-count basis.",
+    "sections": [
+      {
+        "id": "formula",
+        "title": "Start with interest and ending balance as separate amounts",
+        "paragraphs": [
+          "Multiply original principal by the rate in decimal form and the matching number of periods. In the base case, $10,000 × 0.05 × 4 gives $2,000 of interest. Add principal to get the $12,000 balance; the balance is not all earnings.",
+          "The Balance mode displays that ending amount. To obtain interest alone, subtract the principal you entered. This formula excludes fees, payments and reinvested interest. It is useful for a stated flat-principal example, but does not by itself calculate an APR or a lender payoff amount."
+        ],
+        "formula": "Interest = P × r × t; ending balance A = P × (1 + r × t)"
+      },
+      {
+        "id": "units",
+        "title": "Match a monthly rate with months, not years by accident",
+        "paragraphs": [
+          "At 1% per month for twelve months on $10,000, simple interest is $1,200 and balance is $11,200. A monthly quote is not the same as 1% per year. Select Monthly for the rate period and Months for the time unit when reproducing that case.",
+          "Multiplying a monthly simple rate by twelve gives its annual simple-rate equivalent for this unchanged-principal formula. That is not an effective compounded yield: compounding 1% monthly would be a different calculation. The three balance cases intentionally use different rates and durations, so their bar heights do not rank comparable offers."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "days",
+        "title": "Check the 365-day convention for a short term",
+        "paragraphs": [
+          "For a 6% annual simple rate over ninety days, this model uses t = 90 / 365. Interest on $10,000 is about $147.95 and ending balance $10,147.95. Neither the principal nor accumulated interest is capitalized during those ninety days.",
+          "The Days selection uses 365 for conversion regardless of a calendar year’s leap day. It does not count dates, choose business days, or implement actual/360 and every other contract convention. Verify the agreed basis before comparing a calculated figure with a statement or settlement quote."
+        ],
+        "formula": "A = 10,000 × [1 + 0.06 × (90 / 365)]"
+      },
+      {
+        "id": "reverse",
+        "title": "Solve principal, time or rate with the same assumptions",
+        "paragraphs": [
+          "If $12,000 is the ending amount after four years at 5% annual simple interest, principal is $12,000 / 1.20 = $10,000. If the starting $10,000 and ending $12,000 are known instead, solving time gives four years, or 48 months when Months is selected.",
+          "Solving the annual rate with those balances and four years gives 5%. The Rate output is expressed for the selected rate period, and the Term output for the selected time unit. Changing a unit changes how to interpret the number; it is not an unexplained change in the underlying amount of interest."
+        ],
+        "formula": "P = A / (1 + rt); t = (A/P − 1) / r; r = (A/P − 1) / t"
+      },
+      {
+        "id": "loans",
+        "title": "Distinguish unchanged principal from a simple-interest loan",
+        "paragraphs": [
+          "CFPB explains that simple-interest auto loans calculate interest on the outstanding balance on a daily or monthly basis. As principal is repaid, later interest can change. The fixed-principal formula in this tool has no payment dates, balance reductions or delinquency assumptions.",
+          "For a loan with monthly installments, use the relevant repayment or auto-loan calculator and check its contract assumptions. Do not multiply the original loan by rate and full term and call that the interest owed on an amortizing loan. This guide does not model precomputed-interest rebates or determine an early-payoff quote."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "checks",
+        "title": "Use a small worksheet to catch unit mistakes",
+        "paragraphs": [
+          "Record five items before calculating: principal, whether the result sought is interest or total balance, rate percentage, rate period and time unit. Reproduce the three forward cases first, then the three reverse cases. Each table link restores the full entered unit selections.",
+          "Avoid applying this model to recurring savings deposits or compound growth. For those cash flows, use the savings or compound-interest tool. Zero or negative rates can also create no-solution or special cases when solving time; a finite displayed result is still only a result under the chosen fixed-principal assumptions."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Solve for",
+      "Rate period",
+      "Time",
+      "Result"
+    ],
+    "chart": "simple-guide",
+    "chartAlt": "Simple interest on unchanged principal under three explicitly different rate and time assumptions.",
+    "chartCaption": "These are three different rate and time scenarios, not a comparison of equivalent offers. The principal remains $10,000 throughout each calculation; no repayment schedule is modeled.",
+    "questions": [
+      {
+        "question": "What is the simple-interest formula?",
+        "answer": "Interest equals principal × rate × time, with rate and time in matching units. Ending balance adds that interest to principal."
+      },
+      {
+        "question": "How do I calculate simple interest for ninety days?",
+        "answer": "With an annual rate, this tool uses ninety divided by 365 as the time in years. The checked $10,000 at 6% annual example earns about $147.95; a contract may use another basis."
+      },
+      {
+        "question": "Is 1% monthly the same as 1% annually?",
+        "answer": "No. Twelve months at 1% monthly is twelve rate periods. On unchanged $10,000 principal it gives $1,200 simple interest, not $100."
+      },
+      {
+        "question": "Does Balance mean interest earned?",
+        "answer": "No. Balance includes original principal. Subtract principal from the calculated ending balance to isolate simple interest."
+      },
+      {
+        "question": "Can this calculate a car loan’s total interest?",
+        "answer": "Not when principal is repaid over time. A simple-interest installment loan can charge interest on the changing outstanding balance; use a repayment schedule and the actual contract terms."
+      },
+      {
+        "question": "What unit does the solved Term or Rate use?",
+        "answer": "Term uses the chosen time unit, while Rate uses the selected rate period. For the checked base assumptions, the term is four years or 48 months and the annual rate is 5%."
+      }
+    ],
+    "limitations": [
+      "Unchanged principal only: no deposits, installments, capitalized interest, fees or taxes.",
+      "The 365-day conversion is a model convention, not a determination of any contract’s day count.",
+      "Simple rate is not an APR disclosure, compounded yield or official lender payoff quote.",
+      "Reverse solutions require compatible values; some zero-rate or negative-growth combinations have no unique valid term."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/whats-the-difference-between-a-simple-interest-rate-and-precomputed-interest-on-an-auto-loan-en-841/",
+        "label": "CFPB: outstanding-balance simple-interest loans versus precomputed interest"
+      }
+    ],
+    "related": [
+      {
+        "href": "/simple-interest-calculator",
+        "label": "Simple Interest Calculator"
+      },
+      {
+        "href": "/loan-repayment-calculator",
+        "label": "Loan Repayment Calculator"
+      },
+      {
+        "href": "/guides/how-to-calculate-savings-goal/",
+        "label": "Savings goal guide"
+      },
+      {
+        "href": "/glossary/simple-interest/",
+        "label": "Simple interest glossary"
+      },
+      {
+        "href": "/glossary/compound-interest/",
+        "label": "Compound interest glossary"
+      }
+    ]
   }
 }

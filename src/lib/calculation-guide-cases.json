@@ -5854,5 +5854,339 @@
         "$2,398.20"
       ]
     }
+  ],
+  "savinggoal": [
+    {
+      "label": "No interest, end-month deposits",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "principal": 2000,
+        "end": 20000,
+        "years": 5,
+        "months": 0,
+        "rate": 0,
+        "rate_type": "APY",
+        "compound": "Monthly",
+        "annual": 0,
+        "timing": "End of period",
+        "tax": 0,
+        "inflation": 0
+      },
+      "metrics": {
+        "Ending balance": 20000.0,
+        "Total contributions": 20000.0,
+        "Starting amount": 2000.0,
+        "Additional contributions": 18000.0,
+        "Net investment earnings": 0.0,
+        "Tax on interest": 0.0,
+        "Inflation-adjusted balance": 20000.0,
+        "Required monthly deposit": 300.0
+      },
+      "display": [
+        "$300.00",
+        "60 months",
+        "$20,000.00",
+        "$0.00"
+      ]
+    },
+    {
+      "label": "4% APY, end-month deposits",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "principal": 2000,
+        "end": 20000,
+        "years": 5,
+        "months": 0,
+        "rate": 4,
+        "rate_type": "APY",
+        "compound": "Monthly",
+        "annual": 0,
+        "timing": "End of period",
+        "tax": 0,
+        "inflation": 0
+      },
+      "metrics": {
+        "Ending balance": 20000.0,
+        "Total contributions": 17926.52163663276,
+        "Starting amount": 2000.0,
+        "Additional contributions": 15926.52163663276,
+        "Net investment earnings": 2073.47836336724,
+        "Tax on interest": 0.0,
+        "Inflation-adjusted balance": 20000.0,
+        "Required monthly deposit": 265.4420272772127
+      },
+      "display": [
+        "$265.44",
+        "60 months",
+        "$20,000.00",
+        "$0.00"
+      ]
+    },
+    {
+      "label": "4% APY, beginning-month deposits",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "principal": 2000,
+        "end": 20000,
+        "years": 5,
+        "months": 0,
+        "rate": 4,
+        "rate_type": "APY",
+        "compound": "Monthly",
+        "annual": 0,
+        "timing": "Beginning of period",
+        "tax": 0,
+        "inflation": 0
+      },
+      "metrics": {
+        "Ending balance": 20000.0,
+        "Total contributions": 17874.55248264572,
+        "Starting amount": 2000.0,
+        "Additional contributions": 15874.552482645719,
+        "Net investment earnings": 2125.447517354281,
+        "Tax on interest": 0.0,
+        "Inflation-adjusted balance": 20000.0,
+        "Required monthly deposit": 264.575874710762
+      },
+      "display": [
+        "$264.58",
+        "60 months",
+        "$20,000.00",
+        "$0.00"
+      ]
+    },
+    {
+      "label": "4% APY, 20% modeled interest tax",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "principal": 2000,
+        "end": 20000,
+        "years": 5,
+        "months": 0,
+        "rate": 4,
+        "rate_type": "APY",
+        "compound": "Monthly",
+        "annual": 0,
+        "timing": "End of period",
+        "tax": 20,
+        "inflation": 0
+      },
+      "metrics": {
+        "Ending balance": 20000.0,
+        "Total contributions": 18326.511041982278,
+        "Starting amount": 2000.0,
+        "Additional contributions": 16326.51104198228,
+        "Net investment earnings": 1673.4889580177207,
+        "Tax on interest": 418.3722395044302,
+        "Inflation-adjusted balance": 20000.0,
+        "Required monthly deposit": 272.1085173663713
+      },
+      "display": [
+        "$272.11",
+        "60 months",
+        "$20,000.00",
+        "$418.37"
+      ]
+    },
+    {
+      "label": "Time needed with USD 300 monthly",
+      "calculatorId": "savings",
+      "mode": "goal-time",
+      "values": {
+        "principal": 2000,
+        "end": 20000,
+        "rate": 4,
+        "rate_type": "APY",
+        "compound": "Monthly",
+        "annual": 0,
+        "timing": "End of period",
+        "tax": 0,
+        "inflation": 0,
+        "monthly": 300
+      },
+      "metrics": {
+        "Ending balance": 20074.65998851078,
+        "Total contributions": 18200.0,
+        "Starting amount": 2000.0,
+        "Additional contributions": 16200.0,
+        "Net investment earnings": 1874.6599885107798,
+        "Tax on interest": 0.0,
+        "Inflation-adjusted balance": 20074.65998851078,
+        "Years to savings goal": 4.5,
+        "Months to savings goal": 54.0
+      },
+      "display": [
+        "$300.00",
+        "54 months",
+        "$20,074.66",
+        "$0.00"
+      ]
+    },
+    {
+      "label": "Existing savings already exceed target",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "principal": 21000,
+        "end": 20000,
+        "years": 5,
+        "months": 0,
+        "rate": 4,
+        "rate_type": "APY",
+        "compound": "Monthly",
+        "annual": 0,
+        "timing": "End of period",
+        "tax": 0,
+        "inflation": 0
+      },
+      "metrics": {
+        "Ending balance": 25549.7109504,
+        "Total contributions": 21000.0,
+        "Starting amount": 21000.0,
+        "Additional contributions": 0.0,
+        "Net investment earnings": 4549.7109504,
+        "Tax on interest": 0.0,
+        "Inflation-adjusted balance": 25549.7109504,
+        "Required monthly deposit": 0.0
+      },
+      "display": [
+        "$0.00",
+        "60 months",
+        "$25,549.71",
+        "$0.00"
+      ]
+    }
+  ],
+  "simple": [
+    {
+      "label": "Annual rate, four years",
+      "calculatorId": "simple-interest",
+      "mode": "balance",
+      "values": {
+        "principal": 10000,
+        "rate": 5,
+        "rate_unit": "Annual",
+        "years": 4,
+        "term_unit": "Years"
+      },
+      "metrics": {
+        "Balance": 12000.0
+      },
+      "display": [
+        "Balance",
+        "5% annual",
+        "4 years",
+        "$12,000.00"
+      ]
+    },
+    {
+      "label": "Monthly rate, twelve months",
+      "calculatorId": "simple-interest",
+      "mode": "balance",
+      "values": {
+        "principal": 10000,
+        "rate": 1,
+        "rate_unit": "Monthly",
+        "years": 12,
+        "term_unit": "Months"
+      },
+      "metrics": {
+        "Balance": 11200.0
+      },
+      "display": [
+        "Balance",
+        "1% monthly",
+        "12 months",
+        "$11,200.00"
+      ]
+    },
+    {
+      "label": "Annual rate, ninety days",
+      "calculatorId": "simple-interest",
+      "mode": "balance",
+      "values": {
+        "principal": 10000,
+        "rate": 6,
+        "rate_unit": "Annual",
+        "years": 90,
+        "term_unit": "Days"
+      },
+      "metrics": {
+        "Balance": 10147.945205479453
+      },
+      "display": [
+        "Balance",
+        "6% annual",
+        "90 days",
+        "$10,147.95"
+      ]
+    },
+    {
+      "label": "Solve starting principal",
+      "calculatorId": "simple-interest",
+      "mode": "principal",
+      "values": {
+        "balance": 12000,
+        "rate": 5,
+        "rate_unit": "Annual",
+        "years": 4,
+        "term_unit": "Years"
+      },
+      "metrics": {
+        "Principal": 10000.0
+      },
+      "display": [
+        "Principal",
+        "5% annual",
+        "4 years",
+        "$10,000.00"
+      ]
+    },
+    {
+      "label": "Solve term in months",
+      "calculatorId": "simple-interest",
+      "mode": "years",
+      "values": {
+        "principal": 10000,
+        "balance": 12000,
+        "rate": 5,
+        "rate_unit": "Annual",
+        "term_unit": "Months"
+      },
+      "metrics": {
+        "Term": 48.0
+      },
+      "display": [
+        "Term",
+        "5% annual",
+        "Solved",
+        "48.0000 months"
+      ]
+    },
+    {
+      "label": "Solve annual rate",
+      "calculatorId": "simple-interest",
+      "mode": "rate",
+      "values": {
+        "principal": 10000,
+        "balance": 12000,
+        "rate_unit": "Annual",
+        "years": 4,
+        "term_unit": "Years"
+      },
+      "metrics": {
+        "Rate": 5.0
+      },
+      "display": [
+        "Rate",
+        "Solved",
+        "4 years",
+        "5.0000%"
+      ]
+    }
   ]
 }
