@@ -30,3 +30,18 @@ test('Each article table has the right columns and calculator inputs for every c
   for(const row of rows){assert.equal(row.display.length,data.columns.length-1);assert.ok(data.meta.calculatorIds.includes(row.calculatorId));}
  }
 });
+
+test('Property guide reference cases reconcile periods, financing, signed losses and fee treatment',()=>{
+ assert.equal(cases.noi[0].metrics['Annual net operating income'],cases.noi[3].metrics['Annual net operating income']);
+ assert.ok(cases.noi[2].metrics['Annual net operating income']<0);
+ assert.equal(cases.cap[0].metrics['Annual net operating income'],cases.cap[1].metrics['Annual net operating income']);
+ assert.ok(cases.cap[0].metrics['Capitalization rate']>cases.cap[1].metrics['Capitalization rate']);
+ assert.ok(cases.rental[0].metrics['First-year cash flow']>0);
+ assert.ok(cases.rental[0].metrics['Total investment profit']<0);
+ assert.ok(cases.rental[1].metrics['First-year cash flow']<0);
+ assert.equal(cases.rental[0].metrics['Capitalization rate'],cases.rental[4].metrics['Capitalization rate']);
+ assert.equal(cases.heloc[0].metrics['Monthly repayment'],cases.heloc[4].metrics['Monthly repayment']);
+ assert.equal(cases.heloc[0].metrics['Total interest'],cases.heloc[4].metrics['Total interest']);
+ assert.equal(cases.heloc[5].metrics['Total interest'],0);
+ assert.ok(cases.heloc[5].metrics['Monthly repayment']>0);
+});

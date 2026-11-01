@@ -114,6 +114,10 @@ for(const id of ['retirement','hsa','rmd','401k'])contentUpdatedOn[catalog.find(
 contentUpdatedOn['/guides/']='2026-11-01';
 for(const slug of ['401k','employer-match-and-vesting','withdrawal-rate'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
 
+// New property guides and scoped explanatory additions, checked November 1.
+for(const id of ['noi','cap-rate','rental-property','heloc'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+for(const slug of ['net-operating-income','cap-rate-vs-cash-on-cash-return','home-equity-and-heloc'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
+
 export function sitemapEntries(config: SiteConfig = siteConfig()) {
   if (!config.origin || !config.indexable) return [];
   return [

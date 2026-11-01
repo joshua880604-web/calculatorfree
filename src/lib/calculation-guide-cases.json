@@ -999,7 +999,7 @@
       },
       "metrics": {
         "Projected HSA balance": 95931.3737829431,
-        "Ending balance in today\u2019s dollars": 58544.129928259514,
+        "Ending balance in today’s dollars": 58544.129928259514,
         "Total new contributions": 70000.0,
         "Investment earnings before fees": 40931.373782943105,
         "Total medical withdrawals": 20000.0,
@@ -1009,7 +1009,7 @@
       "display": [
         "20-year growth",
         "$95,931.37",
-        "$58,544.13 in today\u2019s dollars"
+        "$58,544.13 in today’s dollars"
       ]
     },
     {
@@ -1032,7 +1032,7 @@
       },
       "metrics": {
         "Projected HSA balance": 51908.74990852221,
-        "Ending balance in today\u2019s dollars": 31678.40174929704,
+        "Ending balance in today’s dollars": 31678.40174929704,
         "Total new contributions": 35000.0,
         "Investment earnings before fees": 31908.749908522208,
         "Total medical withdrawals": 20000.0,
@@ -1042,7 +1042,7 @@
       "display": [
         "20-year growth",
         "$51,908.75",
-        "$31,678.40 in today\u2019s dollars"
+        "$31,678.40 in today’s dollars"
       ]
     },
     {
@@ -1065,7 +1065,7 @@
       },
       "metrics": {
         "Projected HSA balance": 92624.77837265427,
-        "Ending balance in today\u2019s dollars": 56526.21082956986,
+        "Ending balance in today’s dollars": 56526.21082956986,
         "Total new contributions": 70000.0,
         "Investment earnings before fees": 39624.77837265427,
         "Total medical withdrawals": 20000.0,
@@ -1075,7 +1075,7 @@
       "display": [
         "20-year growth",
         "$92,624.78",
-        "$56,526.21 in today\u2019s dollars"
+        "$56,526.21 in today’s dollars"
       ]
     },
     {
@@ -1098,7 +1098,7 @@
       },
       "metrics": {
         "Projected HSA balance": 0.0,
-        "Ending balance in today\u2019s dollars": 0.0,
+        "Ending balance in today’s dollars": 0.0,
         "Total new contributions": 70000.0,
         "Investment earnings before fees": 612.34375,
         "Total medical withdrawals": 75612.34375,
@@ -1108,7 +1108,7 @@
       "display": [
         "20-year growth",
         "$0.00",
-        "$0.00 in today\u2019s dollars"
+        "$0.00 in today’s dollars"
       ]
     }
   ],
@@ -1321,6 +1321,746 @@
         "$24,500.00",
         "$24,500.00",
         "Employee limit prevents full match"
+      ]
+    }
+  ],
+  "noi": [
+    {
+      "label": "Base: 5% rent loss",
+      "calculatorId": "noi",
+      "mode": "operating-income",
+      "values": {
+        "period": "Monthly",
+        "rent": 4000,
+        "other_income": 100,
+        "vacancy": 5,
+        "taxes": 400,
+        "insurance": 150,
+        "repairs": 250,
+        "management": 300,
+        "utilities": 100,
+        "hoa": 0,
+        "other_expenses": 50
+      },
+      "metrics": {
+        "Annual net operating income": 31800.0,
+        "Monthly net operating income": 2650.0,
+        "Effective annual operating income": 46800.0,
+        "Annual operating expenses": 15000.0,
+        "Annual vacancy and collection loss": 2400.0
+      },
+      "display": [
+        "$46,800.00",
+        "$15,000.00",
+        "$31,800.00"
+      ]
+    },
+    {
+      "label": "20% rent loss",
+      "calculatorId": "noi",
+      "mode": "operating-income",
+      "values": {
+        "period": "Monthly",
+        "rent": 4000,
+        "other_income": 100,
+        "vacancy": 20,
+        "taxes": 400,
+        "insurance": 150,
+        "repairs": 250,
+        "management": 300,
+        "utilities": 100,
+        "hoa": 0,
+        "other_expenses": 50
+      },
+      "metrics": {
+        "Annual net operating income": 24600.0,
+        "Monthly net operating income": 2050.0,
+        "Effective annual operating income": 39600.0,
+        "Annual operating expenses": 15000.0,
+        "Annual vacancy and collection loss": 9600.0
+      },
+      "display": [
+        "$39,600.00",
+        "$15,000.00",
+        "$24,600.00"
+      ]
+    },
+    {
+      "label": "100% rent loss",
+      "calculatorId": "noi",
+      "mode": "operating-income",
+      "values": {
+        "period": "Monthly",
+        "rent": 4000,
+        "other_income": 100,
+        "vacancy": 100,
+        "taxes": 400,
+        "insurance": 150,
+        "repairs": 250,
+        "management": 300,
+        "utilities": 100,
+        "hoa": 0,
+        "other_expenses": 50
+      },
+      "metrics": {
+        "Annual net operating income": -13800.0,
+        "Monthly net operating income": -1150.0,
+        "Effective annual operating income": 1200.0,
+        "Annual operating expenses": 15000.0,
+        "Annual vacancy and collection loss": 48000.0
+      },
+      "display": [
+        "$1,200.00",
+        "$15,000.00",
+        "-$13,800.00"
+      ]
+    },
+    {
+      "label": "Same base amounts entered annually",
+      "calculatorId": "noi",
+      "mode": "operating-income",
+      "values": {
+        "period": "Annually",
+        "rent": 48000,
+        "other_income": 1200,
+        "vacancy": 5,
+        "taxes": 4800,
+        "insurance": 1800,
+        "repairs": 3000,
+        "management": 3600,
+        "utilities": 1200,
+        "hoa": 0,
+        "other_expenses": 600
+      },
+      "metrics": {
+        "Annual net operating income": 31800.0,
+        "Monthly net operating income": 2650.0,
+        "Effective annual operating income": 46800.0,
+        "Annual operating expenses": 15000.0,
+        "Annual vacancy and collection loss": 2400.0
+      },
+      "display": [
+        "$46,800.00",
+        "$15,000.00",
+        "$31,800.00"
+      ]
+    },
+    {
+      "label": "USD 1,000 monthly routine repairs",
+      "calculatorId": "noi",
+      "mode": "operating-income",
+      "values": {
+        "period": "Monthly",
+        "rent": 4000,
+        "other_income": 100,
+        "vacancy": 5,
+        "taxes": 400,
+        "insurance": 150,
+        "repairs": 1000,
+        "management": 300,
+        "utilities": 100,
+        "hoa": 0,
+        "other_expenses": 50
+      },
+      "metrics": {
+        "Annual net operating income": 22800.0,
+        "Monthly net operating income": 1900.0,
+        "Effective annual operating income": 46800.0,
+        "Annual operating expenses": 24000.0,
+        "Annual vacancy and collection loss": 2400.0
+      },
+      "display": [
+        "$46,800.00",
+        "$24,000.00",
+        "$22,800.00"
+      ]
+    }
+  ],
+  "cap": [
+    {
+      "label": "Base: USD 300,000 value",
+      "calculatorId": "cap-rate",
+      "mode": "noi",
+      "values": {
+        "value": 300000,
+        "noi": 18000,
+        "target": 6
+      },
+      "metrics": {
+        "Capitalization rate": 6.0,
+        "Annual net operating income": 18000.0,
+        "Annual NOI needed at target cap rate": 18000.0,
+        "NOI surplus / shortfall versus target": 0.0,
+        "Indicated value at target cap rate": 300000.0
+      },
+      "display": [
+        "$300,000.00",
+        "$18,000.00",
+        "6.0000%",
+        "$300,000.00"
+      ]
+    },
+    {
+      "label": "USD 360,000 value",
+      "calculatorId": "cap-rate",
+      "mode": "noi",
+      "values": {
+        "value": 360000,
+        "noi": 18000,
+        "target": 6
+      },
+      "metrics": {
+        "Capitalization rate": 5.0,
+        "Annual net operating income": 18000.0,
+        "Annual NOI needed at target cap rate": 21600.0,
+        "NOI surplus / shortfall versus target": -3600.0,
+        "Indicated value at target cap rate": 300000.0
+      },
+      "display": [
+        "$360,000.00",
+        "$18,000.00",
+        "5.0000%",
+        "$300,000.00"
+      ]
+    },
+    {
+      "label": "USD 240,000 value",
+      "calculatorId": "cap-rate",
+      "mode": "noi",
+      "values": {
+        "value": 240000,
+        "noi": 18000,
+        "target": 6
+      },
+      "metrics": {
+        "Capitalization rate": 7.5,
+        "Annual net operating income": 18000.0,
+        "Annual NOI needed at target cap rate": 14400.0,
+        "NOI surplus / shortfall versus target": 3600.0,
+        "Indicated value at target cap rate": 300000.0
+      },
+      "display": [
+        "$240,000.00",
+        "$18,000.00",
+        "7.5000%",
+        "$300,000.00"
+      ]
+    },
+    {
+      "label": "Zero annual NOI",
+      "calculatorId": "cap-rate",
+      "mode": "noi",
+      "values": {
+        "value": 300000,
+        "noi": 0,
+        "target": 6
+      },
+      "metrics": {
+        "Capitalization rate": 0.0,
+        "Annual net operating income": 0.0,
+        "Annual NOI needed at target cap rate": 18000.0,
+        "NOI surplus / shortfall versus target": -18000.0
+      },
+      "display": [
+        "$300,000.00",
+        "$0.00",
+        "0.0000%",
+        "Not meaningful: nonpositive NOI"
+      ]
+    },
+    {
+      "label": "USD 6,000 annual operating loss",
+      "calculatorId": "cap-rate",
+      "mode": "noi",
+      "values": {
+        "value": 300000,
+        "noi": -6000,
+        "target": 6
+      },
+      "metrics": {
+        "Capitalization rate": -2.0,
+        "Annual net operating income": -6000.0,
+        "Annual NOI needed at target cap rate": 18000.0,
+        "NOI surplus / shortfall versus target": -24000.0
+      },
+      "display": [
+        "$300,000.00",
+        "-$6,000.00",
+        "-2.0000%",
+        "Not meaningful: nonpositive NOI"
+      ]
+    },
+    {
+      "label": "Rental worksheet: USD 500,000 value",
+      "calculatorId": "cap-rate",
+      "mode": "rental",
+      "values": {
+        "period": "Monthly",
+        "rent": 4000,
+        "other_income": 100,
+        "vacancy": 5,
+        "taxes": 400,
+        "insurance": 150,
+        "repairs": 250,
+        "management": 300,
+        "utilities": 100,
+        "hoa": 0,
+        "other_expenses": 50,
+        "value": 500000,
+        "target": 6
+      },
+      "metrics": {
+        "Capitalization rate": 6.36,
+        "Annual net operating income": 31800.0,
+        "Annual NOI needed at target cap rate": 30000.0,
+        "NOI surplus / shortfall versus target": 1800.0,
+        "Indicated value at target cap rate": 530000.0
+      },
+      "display": [
+        "$500,000.00",
+        "$31,800.00",
+        "6.3600%",
+        "$530,000.00"
+      ]
+    }
+  ],
+  "rental": [
+    {
+      "label": "Base: 6% loan, 5% rent loss",
+      "calculatorId": "rental-property",
+      "mode": "projection",
+      "values": {
+        "price": 300000,
+        "financed": "Yes",
+        "down": 25,
+        "rate": 6,
+        "years": 30,
+        "closing": 6000,
+        "repairs": 10000,
+        "repaired_value": 0,
+        "rent": 2500,
+        "other_income": 0,
+        "vacancy": 5,
+        "management": 8,
+        "tax": 3600,
+        "insurance": 1500,
+        "hoa": 0,
+        "maintenance": 3000,
+        "other": 0,
+        "rent_growth": 0,
+        "other_income_growth": 0,
+        "tax_growth": 0,
+        "insurance_growth": 0,
+        "hoa_growth": 0,
+        "maintenance_growth": 0,
+        "other_growth": 0,
+        "appreciation": 0,
+        "hold": 1,
+        "sale_known": "No",
+        "sale_price": 300000,
+        "selling": 6
+      },
+      "metrics": {
+        "Initial cash investment": 91000.0,
+        "First-year cash flow": 1932.1358208756853,
+        "Capitalization rate": 6.04,
+        "First-year cash-on-cash": 2.1232261767864675,
+        "Net sale proceeds": 59763.02635262262,
+        "Total investment profit": -29304.837826501698
+      },
+      "display": [
+        "$18,120.00",
+        "$16,187.86",
+        "$1,932.14",
+        "$161.01"
+      ]
+    },
+    {
+      "label": "15% rent loss",
+      "calculatorId": "rental-property",
+      "mode": "projection",
+      "values": {
+        "price": 300000,
+        "financed": "Yes",
+        "down": 25,
+        "rate": 6,
+        "years": 30,
+        "closing": 6000,
+        "repairs": 10000,
+        "repaired_value": 0,
+        "rent": 2500,
+        "other_income": 0,
+        "vacancy": 15,
+        "management": 8,
+        "tax": 3600,
+        "insurance": 1500,
+        "hoa": 0,
+        "maintenance": 3000,
+        "other": 0,
+        "rent_growth": 0,
+        "other_income_growth": 0,
+        "tax_growth": 0,
+        "insurance_growth": 0,
+        "hoa_growth": 0,
+        "maintenance_growth": 0,
+        "other_growth": 0,
+        "appreciation": 0,
+        "hold": 1,
+        "sale_known": "No",
+        "sale_price": 300000,
+        "selling": 6
+      },
+      "metrics": {
+        "Initial cash investment": 91000.0,
+        "First-year cash flow": -827.8641791243147,
+        "Capitalization rate": 5.12,
+        "First-year cash-on-cash": -0.9097408561805655,
+        "Net sale proceeds": 59763.02635262262,
+        "Total investment profit": -32064.837826501698
+      },
+      "display": [
+        "$15,360.00",
+        "$16,187.86",
+        "-$827.86",
+        "-$68.99"
+      ]
+    },
+    {
+      "label": "8% loan rate",
+      "calculatorId": "rental-property",
+      "mode": "projection",
+      "values": {
+        "price": 300000,
+        "financed": "Yes",
+        "down": 25,
+        "rate": 8,
+        "years": 30,
+        "closing": 6000,
+        "repairs": 10000,
+        "repaired_value": 0,
+        "rent": 2500,
+        "other_income": 0,
+        "vacancy": 5,
+        "management": 8,
+        "tax": 3600,
+        "insurance": 1500,
+        "hoa": 0,
+        "maintenance": 3000,
+        "other": 0,
+        "rent_growth": 0,
+        "other_income_growth": 0,
+        "tax_growth": 0,
+        "insurance_growth": 0,
+        "hoa_growth": 0,
+        "maintenance_growth": 0,
+        "other_growth": 0,
+        "appreciation": 0,
+        "hold": 1,
+        "sale_known": "No",
+        "sale_price": 300000,
+        "selling": 6
+      },
+      "metrics": {
+        "Initial cash investment": 91000.0,
+        "First-year cash flow": -1691.643494743155,
+        "Capitalization rate": 6.04,
+        "First-year cash-on-cash": -1.8589488953221482,
+        "Net sale proceeds": 58879.56895718396,
+        "Total investment profit": -33812.074537559194
+      },
+      "display": [
+        "$18,120.00",
+        "$19,811.64",
+        "-$1,691.64",
+        "-$140.97"
+      ]
+    },
+    {
+      "label": "USD 2,000 monthly rent",
+      "calculatorId": "rental-property",
+      "mode": "projection",
+      "values": {
+        "price": 300000,
+        "financed": "Yes",
+        "down": 25,
+        "rate": 6,
+        "years": 30,
+        "closing": 6000,
+        "repairs": 10000,
+        "repaired_value": 0,
+        "rent": 2000,
+        "other_income": 0,
+        "vacancy": 5,
+        "management": 8,
+        "tax": 3600,
+        "insurance": 1500,
+        "hoa": 0,
+        "maintenance": 3000,
+        "other": 0,
+        "rent_growth": 0,
+        "other_income_growth": 0,
+        "tax_growth": 0,
+        "insurance_growth": 0,
+        "hoa_growth": 0,
+        "maintenance_growth": 0,
+        "other_growth": 0,
+        "appreciation": 0,
+        "hold": 1,
+        "sale_known": "No",
+        "sale_price": 300000,
+        "selling": 6
+      },
+      "metrics": {
+        "Initial cash investment": 91000.0,
+        "First-year cash flow": -3311.8641791243144,
+        "Capitalization rate": 4.292,
+        "First-year cash-on-cash": -3.639411185850895,
+        "Net sale proceeds": 59763.02635262262,
+        "Total investment profit": -34548.837826501695
+      },
+      "display": [
+        "$12,876.00",
+        "$16,187.86",
+        "-$3,311.86",
+        "-$275.99"
+      ]
+    },
+    {
+      "label": "Cash purchase: no financing",
+      "calculatorId": "rental-property",
+      "mode": "projection",
+      "values": {
+        "price": 300000,
+        "financed": "No",
+        "down": 25,
+        "rate": 6,
+        "years": 30,
+        "closing": 6000,
+        "repairs": 10000,
+        "repaired_value": 0,
+        "rent": 2500,
+        "other_income": 0,
+        "vacancy": 5,
+        "management": 8,
+        "tax": 3600,
+        "insurance": 1500,
+        "hoa": 0,
+        "maintenance": 3000,
+        "other": 0,
+        "rent_growth": 0,
+        "other_income_growth": 0,
+        "tax_growth": 0,
+        "insurance_growth": 0,
+        "hoa_growth": 0,
+        "maintenance_growth": 0,
+        "other_growth": 0,
+        "appreciation": 0,
+        "hold": 1,
+        "sale_known": "No",
+        "sale_price": 300000,
+        "selling": 6
+      },
+      "metrics": {
+        "Initial cash investment": 316000.0,
+        "First-year cash flow": 18120.0,
+        "Capitalization rate": 6.04,
+        "First-year cash-on-cash": 5.734177215189874,
+        "Net sale proceeds": 282000.0,
+        "Total investment profit": -15880.0
+      },
+      "display": [
+        "$18,120.00",
+        "$0.00",
+        "$18,120.00",
+        "$1,510.00"
+      ]
+    }
+  ],
+  "heloc": [
+    {
+      "label": "Base: 8%, 20-year repayment",
+      "calculatorId": "heloc",
+      "mode": "draw-repay",
+      "values": {
+        "principal": 50000,
+        "rate": 8,
+        "draw": 10,
+        "years": 20,
+        "closing": 0,
+        "closing_unit": "Dollars",
+        "closing_treatment": "Upfront",
+        "charge": 0
+      },
+      "metrics": {
+        "Monthly draw payment": 333.3333333333333,
+        "Monthly repayment": 418.22003449673144,
+        "Total interest": 90372.80827921555,
+        "Fees and annual charges": 0.0,
+        "Annual fees during draw": 0.0,
+        "Net initial proceeds after closing costs": 50000.0,
+        "Cash disbursed at closing": 50000.0,
+        "Closing costs paid upfront": 0.0
+      },
+      "display": [
+        "$333.33",
+        "$418.22",
+        "$90,372.81",
+        "$50,000.00"
+      ]
+    },
+    {
+      "label": "10% throughout",
+      "calculatorId": "heloc",
+      "mode": "draw-repay",
+      "values": {
+        "principal": 50000,
+        "rate": 10,
+        "draw": 10,
+        "years": 20,
+        "closing": 0,
+        "closing_unit": "Dollars",
+        "closing_treatment": "Upfront",
+        "charge": 0
+      },
+      "metrics": {
+        "Monthly draw payment": 416.6666666666667,
+        "Monthly repayment": 482.51082253700395,
+        "Total interest": 115802.59740888095,
+        "Fees and annual charges": 0.0,
+        "Annual fees during draw": 0.0,
+        "Net initial proceeds after closing costs": 50000.0,
+        "Cash disbursed at closing": 50000.0,
+        "Closing costs paid upfront": 0.0
+      },
+      "display": [
+        "$416.67",
+        "$482.51",
+        "$115,802.60",
+        "$50,000.00"
+      ]
+    },
+    {
+      "label": "10-year repayment",
+      "calculatorId": "heloc",
+      "mode": "draw-repay",
+      "values": {
+        "principal": 50000,
+        "rate": 8,
+        "draw": 10,
+        "years": 10,
+        "closing": 0,
+        "closing_unit": "Dollars",
+        "closing_treatment": "Upfront",
+        "charge": 0
+      },
+      "metrics": {
+        "Monthly draw payment": 333.3333333333333,
+        "Monthly repayment": 606.6379717767846,
+        "Total interest": 62796.55661321416,
+        "Fees and annual charges": 0.0,
+        "Annual fees during draw": 0.0,
+        "Net initial proceeds after closing costs": 50000.0,
+        "Cash disbursed at closing": 50000.0,
+        "Closing costs paid upfront": 0.0
+      },
+      "display": [
+        "$333.33",
+        "$606.64",
+        "$62,796.56",
+        "$50,000.00"
+      ]
+    },
+    {
+      "label": "USD 120 annual draw fee",
+      "calculatorId": "heloc",
+      "mode": "draw-repay",
+      "values": {
+        "principal": 50000,
+        "rate": 8,
+        "draw": 10,
+        "years": 20,
+        "closing": 0,
+        "closing_unit": "Dollars",
+        "closing_treatment": "Upfront",
+        "charge": 120
+      },
+      "metrics": {
+        "Monthly draw payment": 343.3333333333333,
+        "Monthly repayment": 418.22003449673144,
+        "Total interest": 90372.80827921555,
+        "Fees and annual charges": 1200.0,
+        "Annual fees during draw": 1200.0,
+        "Net initial proceeds after closing costs": 50000.0,
+        "Cash disbursed at closing": 50000.0,
+        "Closing costs paid upfront": 0.0
+      },
+      "display": [
+        "$343.33",
+        "$418.22",
+        "$90,372.81",
+        "$50,000.00"
+      ]
+    },
+    {
+      "label": "USD 1,000 deducted closing cost",
+      "calculatorId": "heloc",
+      "mode": "draw-repay",
+      "values": {
+        "principal": 50000,
+        "rate": 8,
+        "draw": 10,
+        "years": 20,
+        "closing": 1000,
+        "closing_unit": "Dollars",
+        "closing_treatment": "Deducted from loan",
+        "charge": 0
+      },
+      "metrics": {
+        "Monthly draw payment": 333.3333333333333,
+        "Monthly repayment": 418.22003449673144,
+        "Total interest": 90372.80827921555,
+        "Fees and annual charges": 1000.0,
+        "Annual fees during draw": 0.0,
+        "Net initial proceeds after closing costs": 49000.0,
+        "Cash disbursed at closing": 49000.0,
+        "Closing costs paid upfront": 0.0
+      },
+      "display": [
+        "$333.33",
+        "$418.22",
+        "$90,372.81",
+        "$49,000.00"
+      ]
+    },
+    {
+      "label": "0% rate throughout",
+      "calculatorId": "heloc",
+      "mode": "draw-repay",
+      "values": {
+        "principal": 50000,
+        "rate": 0,
+        "draw": 10,
+        "years": 20,
+        "closing": 0,
+        "closing_unit": "Dollars",
+        "closing_treatment": "Upfront",
+        "charge": 0
+      },
+      "metrics": {
+        "Monthly draw payment": 0.0,
+        "Monthly repayment": 208.33333333333334,
+        "Total interest": 0.0,
+        "Fees and annual charges": 0.0,
+        "Annual fees during draw": 0.0,
+        "Net initial proceeds after closing costs": 50000.0,
+        "Cash disbursed at closing": 50000.0,
+        "Closing costs paid upfront": 0.0
+      },
+      "display": [
+        "$0.00",
+        "$208.33",
+        "$0.00",
+        "$50,000.00"
       ]
     }
   ]

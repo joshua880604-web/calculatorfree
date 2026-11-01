@@ -33,15 +33,15 @@
         "title": "The monthly mortgage payment formula",
         "paragraphs": [
           "Let P be principal, i the monthly interest rate as a decimal, and N the number of monthly payments. Divide a nominal annual percentage rate by 100 and by 12. Multiply a term in years by 12. Here P = 300,000, i = 0.06 / 12 = 0.005, and N = 360.",
-          "Substituting those values gives an unrounded installment of 1,798.651575458257. Displaying $1,798.65 does not mean the model rounds every internal calculation to cents. A lender\u2019s cent-rounded installment, first-period day count and final payment can produce small differences. At 0% interest use P / N; the ordinary fraction otherwise divides by zero."
+          "Substituting those values gives an unrounded installment of 1,798.651575458257. Displaying $1,798.65 does not mean the model rounds every internal calculation to cents. A lender’s cent-rounded installment, first-period day count and final payment can produce small differences. At 0% interest use P / N; the ordinary fraction otherwise divides by zero."
         ],
-        "formula": "M = P \u00d7 i / [1 \u2212 (1 + i)^(\u2212N)]; when i = 0, M = P / N"
+        "formula": "M = P × i / [1 − (1 + i)^(−N)]; when i = 0, M = P / N"
       },
       {
         "id": "first-payment",
         "title": "What happens inside the first payment?",
         "paragraphs": [
-          "The first month\u2019s interest in this equal-period example is $300,000 \u00d7 0.005 = $1,500. Subtract that from $1,798.65 to get approximately $298.65 of principal reduction. Next month, interest applies to the smaller outstanding balance. The payment remains level while the principal and interest shares change.",
+          "The first month’s interest in this equal-period example is $300,000 × 0.005 = $1,500. Subtract that from $1,798.65 to get approximately $298.65 of principal reduction. Next month, interest applies to the smaller outstanding balance. The payment remains level while the principal and interest shares change.",
           "With no extras, the 30-year example pays approximately $347,514.57 interest across the term, before tax, insurance and other ownership costs. A shorter 15-year loan at the same illustrative rate needs $2,531.57 principal and interest monthly, but the modeled total interest falls to $155,682.69. Real 15- and 30-year quotes need not have identical rates."
         ],
         "formula": ""
@@ -50,8 +50,8 @@
         "id": "full-budget",
         "title": "Add property tax, insurance, PMI and HOA separately",
         "paragraphs": [
-          "Convert each annual dollar cost to a monthly amount before adding it. In our worksheet, $4,800 annual tax / 12 = $400; $1,800 insurance / 12 = $150; and $1,200 HOA / 12 = $100. Their $650 sum raises the initial outlay without changing the loan\u2019s principal-and-interest installment. HOA may be paid separately from the mortgage bill.",
-          "PMI is separate from homeowners insurance. The examples explicitly select Manual PMI and zero PMI because the illustrated down payment is 20%; they are not an estimate of every borrower\u2019s insurance requirement. For a lower down payment, use the tool\u2019s disclosed automatic estimate or enter an actual quote manually. Cancellation depends on the selected model and lender conditions.",
+          "Convert each annual dollar cost to a monthly amount before adding it. In our worksheet, $4,800 annual tax / 12 = $400; $1,800 insurance / 12 = $150; and $1,200 HOA / 12 = $100. Their $650 sum raises the initial outlay without changing the loan’s principal-and-interest installment. HOA may be paid separately from the mortgage bill.",
+          "PMI is separate from homeowners insurance. The examples explicitly select Manual PMI and zero PMI because the illustrated down payment is 20%; they are not an estimate of every borrower’s insurance requirement. For a lower down payment, use the tool’s disclosed automatic estimate or enter an actual quote manually. Cancellation depends on the selected model and lender conditions.",
           "Escrow is a way to collect certain bills, not an extra cost to add a second time. If a quoted total already includes escrowed tax and insurance, reconcile the components instead of adding those bills again. A fixed loan rate does not freeze taxes, insurance or escrow adjustments. Maintenance, utilities and reserves may still sit outside the payment estimate."
         ],
         "formula": "Initial housing outlay = principal and interest + annual tax/12 + annual insurance/12 + monthly PMI + annual HOA/12 + other entered costs/12"
@@ -60,7 +60,7 @@
         "id": "excel",
         "title": "Calculate the payment in Excel or Google Sheets",
         "paragraphs": [
-          "For this example, enter =-PMT(6%/12,30*12,300000). The minus sign converts the spreadsheet\u2019s payment-outflow sign convention to a positive displayed payment. If your spreadsheet uses semicolons as argument separators, adjust the separators without changing the rates or periods.",
+          "For this example, enter =-PMT(6%/12,30*12,300000). The minus sign converts the spreadsheet’s payment-outflow sign convention to a positive displayed payment. If your spreadsheet uses semicolons as argument separators, adjust the separators without changing the rates or periods.",
           "PMT returns loan principal and interest, not a complete escrow or ownership budget. Add =4800/12+1800/12+1200/12 separately for the $650 monthly costs. Keep the unrounded PMT value for intermediate calculations; format the cell to two decimals for display. A zero-rate check is =300000/(30*12)."
         ],
         "formula": ""
@@ -69,8 +69,8 @@
         "id": "comparison",
         "title": "How to compare offers without mixing assumptions",
         "paragraphs": [
-          "First hold the financed amount, term, payment frequency and cost definitions constant. Change one input, such as the rate, and compare both the payment and total interest. Then test a different down payment or term as a separate scenario. Include upfront cash and closing charges when making a broader decision; this payment example does not calculate an offer\u2019s overall economic value.",
-          "Extra principal can shorten payoff while leaving the scheduled installment unchanged. Recasting and refinancing are different transactions. If you want to evaluate extras, open the payoff tools rather than subtracting the extra cash from interest manually. Check the loan\u2019s prepayment terms and how the servicer applies an extra payment before acting."
+          "First hold the financed amount, term, payment frequency and cost definitions constant. Change one input, such as the rate, and compare both the payment and total interest. Then test a different down payment or term as a separate scenario. Include upfront cash and closing charges when making a broader decision; this payment example does not calculate an offer’s overall economic value.",
+          "Extra principal can shorten payoff while leaving the scheduled installment unchanged. Recasting and refinancing are different transactions. If you want to evaluate extras, open the payoff tools rather than subtracting the extra cash from interest manually. Check the loan’s prepayment terms and how the servicer applies an extra payment before acting."
         ],
         "formula": ""
       }
@@ -95,7 +95,7 @@
       },
       {
         "question": "Why can a fixed-rate mortgage payment increase?",
-        "answer": "The contractual principal-and-interest amount may remain level while tax, insurance, mortgage insurance or an escrow adjustment changes the total bill. Review your statement\u2019s components. Adjustable-rate, interest-only and other contracts need their own repayment assumptions."
+        "answer": "The contractual principal-and-interest amount may remain level while tax, insurance, mortgage insurance or an escrow adjustment changes the total bill. Review your statement’s components. Adjustable-rate, interest-only and other contracts need their own repayment assumptions."
       },
       {
         "question": "How much does each extra $10,000 borrowed add per month?",
@@ -103,10 +103,10 @@
       },
       {
         "question": "Is APR the rate to enter into PMT?",
-        "answer": "Use the loan\u2019s contractual interest rate for its scheduled installment. APR includes specified financing charges; replacing the note rate with APR generally does not reproduce the contract payment."
+        "answer": "Use the loan’s contractual interest rate for its scheduled installment. APR includes specified financing charges; replacing the note rate with APR generally does not reproduce the contract payment."
       },
       {
-        "question": "Why is my lender\u2019s payment different from the calculator?",
+        "question": "Why is my lender’s payment different from the calculator?",
         "answer": "Check principal, rate, term, financed charges, PMI, taxes, insurance, escrow adjustments and rounding. Irregular first periods, lender conventions and a different loan product can also change the result. A model is not a binding Loan Estimate."
       }
     ],
@@ -181,7 +181,7 @@
         "title": "State the rate, contribution schedule and time horizon",
         "paragraphs": [
           "Our four cases use 120 months, $10,000 starting money and $200 each month. Annual deposits, tax and inflation inputs are all zero. Selecting monthly compounding makes a 5% nominal annual rate equal to 0.05 / 12 per month. That convention is essential to reproducing the figures.",
-          "A nominal annual rate and APY are not interchangeable. If your quoted yield is a 5% effective APY, the equivalent monthly growth factor is 1.05^(1/12), not 1 + 0.05/12. The tool\u2019s rate-conversion mode can translate an effective annual rate, entered as an annual-compounding rate, into a monthly-compounding nominal rate. Do not add a second compounding benefit to an APY."
+          "A nominal annual rate and APY are not interchangeable. If your quoted yield is a 5% effective APY, the equivalent monthly growth factor is 1.05^(1/12), not 1 + 0.05/12. The tool’s rate-conversion mode can translate an effective annual rate, entered as an annual-compounding rate, into a monthly-compounding nominal rate. Do not add a second compounding benefit to an APY."
         ],
         "formula": ""
       },
@@ -190,9 +190,9 @@
         "title": "The formula for monthly deposits at month end",
         "paragraphs": [
           "Let P be starting principal, C the monthly deposit, i the monthly rate and N the number of months. The first term compounds the initial balance. The second is the future value of the deposit series. It assumes one deposit at the end of every month and no missed deposits or withdrawals.",
-          "For the worked example, i = 0.05/12, N = 120, P = 10,000 and C = 200. Applying the formula gives $47,526.55. If i is zero, use P + C \u00d7 N: $10,000 + $200 \u00d7 120 = $34,000. This zero-rate check helps detect accidentally counting your own deposits as investment profit."
+          "For the worked example, i = 0.05/12, N = 120, P = 10,000 and C = 200. Applying the formula gives $47,526.55. If i is zero, use P + C × N: $10,000 + $200 × 120 = $34,000. This zero-rate check helps detect accidentally counting your own deposits as investment profit."
         ],
-        "formula": "FV = P \u00d7 (1 + i)^N + C \u00d7 [(1 + i)^N \u2212 1] / i; at i = 0, FV = P + C \u00d7 N"
+        "formula": "FV = P × (1 + i)^N + C × [(1 + i)^N − 1] / i; at i = 0, FV = P + C × N"
       },
       {
         "id": "deposits",
@@ -207,10 +207,10 @@
         "id": "timing",
         "title": "Month-start deposits earn one extra monthly period",
         "paragraphs": [
-          "A beginning-of-month contribution arrives before that month\u2019s growth. Multiply only the deposit-series term by (1 + i). The initial principal is already invested at time zero, so do not multiply the entire ending balance by an extra month.",
+          "A beginning-of-month contribution arrives before that month’s growth. Multiply only the deposit-series term by (1 + i). The initial principal is already invested at time zero, so do not multiply the entire ending balance by an extra month.",
           "At 5%, switching the same 120 deposits to month start raises the ending balance to $47,655.95, a $129.40 difference after rounding. That is a timing effect, not a higher assumed return. A real payroll or brokerage schedule can have more varied dates; this worksheet uses regular monthly intervals."
         ],
-        "formula": "Beginning-of-month deposit value = C \u00d7 [(1 + i)^N \u2212 1] / i \u00d7 (1 + i)"
+        "formula": "Beginning-of-month deposit value = C × [(1 + i)^N − 1] / i × (1 + i)"
       },
       {
         "id": "excel",
@@ -226,8 +226,8 @@
         "title": "Test uncertainty without presenting a forecast",
         "paragraphs": [
           "Keeping the contributions fixed but assuming 8% nominal growth produces $58,785.61 after ten years, compared with $47,526.55 at 5%. The $11,259.06 difference shows sensitivity to the chosen rate. It is not evidence that a particular portfolio will earn either return or that the higher-return case is equally attainable.",
-          "The actual calculator can also apply annual deposits, contribution increases in supported tools, tax on positive interest and inflation. Those settings are outside these four matched cases. Its monthly-equivalent growth convention does not reproduce every bank\u2019s daily balance, deposit processing or interest-crediting method.",
-          "The tax input applies the model\u2019s simplified charge to positive accrued interest at year end; it is not a capital-gains or retirement-account tax engine. Inflation-adjusted balances measure purchasing power rather than extra nominal earnings. Investment fees, losses and irregular withdrawals need explicit treatment instead of being hidden in an optimistic rate."
+          "The actual calculator can also apply annual deposits, contribution increases in supported tools, tax on positive interest and inflation. Those settings are outside these four matched cases. Its monthly-equivalent growth convention does not reproduce every bank’s daily balance, deposit processing or interest-crediting method.",
+          "The tax input applies the model’s simplified charge to positive accrued interest at year end; it is not a capital-gains or retirement-account tax engine. Inflation-adjusted balances measure purchasing power rather than extra nominal earnings. Investment fees, losses and irregular withdrawals need explicit treatment instead of being hidden in an optimistic rate."
         ],
         "formula": ""
       }
@@ -248,7 +248,7 @@
       },
       {
         "question": "Can I use an annual APY divided by 12?",
-        "answer": "That is an approximation, not the exact monthly equivalent. For APY use i = (1 + APY)^(1/12) \u2212 1, with APY in decimal form. Divide by 12 when the stated rate is nominal with monthly compounding."
+        "answer": "That is an approximation, not the exact monthly equivalent. For APY use i = (1 + APY)^(1/12) − 1, with APY in decimal form. Divide by 12 when the stated rate is nominal with monthly compounding."
       },
       {
         "question": "Does depositing at the beginning of the month make a difference?",
@@ -334,11 +334,11 @@
         "id": "formula",
         "title": "Calculate the cumulative gain and the compound yearly rate",
         "paragraphs": [
-          "Let B be the positive beginning value, E the nonnegative ending value, and T the holding period in years. Cumulative return is E / B \u2212 1. Compound annualized return is (E / B)^(1 / T) \u2212 1. Multiply each decimal result by 100 to display a percentage. A meaningful annualization needs a positive holding period.",
-          "For $10,000 becoming $15,000 over three years: E / B = 1.5, so 1.5^(1/3) \u2212 1 = approximately 0.14471424. This is 14.4714% annually. Recompounding (1.14471424)^3 approximately reproduces 1.5; ordinary 50% / 3 = 16.6667% does not.",
+          "Let B be the positive beginning value, E the nonnegative ending value, and T the holding period in years. Cumulative return is E / B − 1. Compound annualized return is (E / B)^(1 / T) − 1. Multiply each decimal result by 100 to display a percentage. A meaningful annualization needs a positive holding period.",
+          "For $10,000 becoming $15,000 over three years: E / B = 1.5, so 1.5^(1/3) − 1 = approximately 0.14471424. This is 14.4714% annually. Recompounding (1.14471424)^3 approximately reproduces 1.5; ordinary 50% / 3 = 16.6667% does not.",
           "This endpoint calculation is often called CAGR. Its constant rate is a mathematical equivalent, not a claim that each year earned the same amount. Volatility, drawdowns, liquidity and the risk taken are absent from the ratio."
         ],
-        "formula": "Cumulative return = (E / B \u2212 1) \u00d7 100%; annualized return = [(E / B)^(1 / T) \u2212 1] \u00d7 100%"
+        "formula": "Cumulative return = (E / B − 1) × 100%; annualized return = [(E / B)^(1 / T) − 1] × 100%"
       },
       {
         "id": "holding-period",
@@ -353,8 +353,8 @@
         "id": "losses",
         "title": "Annualization also applies to a loss",
         "paragraphs": [
-          "If $10,000 becomes $8,000 over two years with no cash flows, cumulative return is \u221220% and compound annualized return is approximately \u221210.5573%. Two years of a constant \u221210% would instead leave $8,100. That is why simply dividing a cumulative loss by years gives the wrong compound equivalent.",
-          "At a zero terminal value, the mathematical compound rate is \u2212100% for a positive holding period; it does not reveal when the loss occurred. Negative terminal equity, leverage, debt and cash-flow liabilities require a model that represents those obligations. Do not force them into a standard positive-capital CAGR example."
+          "If $10,000 becomes $8,000 over two years with no cash flows, cumulative return is −20% and compound annualized return is approximately −10.5573%. Two years of a constant −10% would instead leave $8,100. That is why simply dividing a cumulative loss by years gives the wrong compound equivalent.",
+          "At a zero terminal value, the mathematical compound rate is −100% for a positive holding period; it does not reveal when the loss occurred. Negative terminal equity, leverage, debt and cash-flow liabilities require a model that represents those obligations. Do not force them into a standard positive-capital CAGR example."
         ],
         "formula": ""
       },
@@ -373,7 +373,7 @@
         "title": "Excel formulas and a useful reverse check",
         "paragraphs": [
           "For the three-year example, =15000/10000-1 returns 0.5, which a percentage-formatted cell displays as 50%. =(15000/10000)^(1/3)-1 returns about 14.4714% when formatted as a percentage. Do not multiply by 100 and also apply percentage formatting, or the displayed result will be 100 times too large.",
-          "Check your calculation by reversing it: =10000*(1+annualized_rate)^3 should reproduce $15,000, using the unrounded decimal annualized rate. For actual dates, the tool\u2019s Use Dates mode uses actual elapsed days divided by 365 as its year convention. A spreadsheet YEARFRAC basis may produce a slightly different answer, so document the convention instead of calling either a universal standard."
+          "Check your calculation by reversing it: =10000*(1+annualized_rate)^3 should reproduce $15,000, using the unrounded decimal annualized rate. For actual dates, the tool’s Use Dates mode uses actual elapsed days divided by 365 as its year convention. A spreadsheet YEARFRAC basis may produce a slightly different answer, so document the convention instead of calling either a universal standard."
         ],
         "formula": ""
       },
@@ -381,8 +381,8 @@
         "id": "average",
         "title": "Annualized return is different from an arithmetic average",
         "paragraphs": [
-          "Consider +20% in year one and \u221220% in year two. The arithmetic average is 0%, but $10,000 becomes $9,600 because 1.2 \u00d7 0.8 = 0.96. The two-year geometric annual rate is sqrt(0.96) \u2212 1, approximately \u22122.0204%. Equal positive and negative percentages do not cancel when they compound.",
-          "Use the Average Return Calculator to distinguish the arithmetic mean of periodic percentages from their compounded geometric mean. Use ROI for compatible beginning and terminal amounts, and IRR for supported periodic cash flows. None of these calculations forecasts next year\u2019s performance or measures every dimension of investment risk."
+          "Consider +20% in year one and −20% in year two. The arithmetic average is 0%, but $10,000 becomes $9,600 because 1.2 × 0.8 = 0.96. The two-year geometric annual rate is sqrt(0.96) − 1, approximately −2.0204%. Equal positive and negative percentages do not cancel when they compound.",
+          "Use the Average Return Calculator to distinguish the arithmetic mean of periodic percentages from their compounded geometric mean. Use ROI for compatible beginning and terminal amounts, and IRR for supported periodic cash flows. None of these calculations forecasts next year’s performance or measures every dimension of investment risk."
         ],
         "formula": ""
       }
@@ -402,7 +402,7 @@
       },
       {
         "question": "How do I convert cumulative return to annualized return?",
-        "answer": "Use (1 + cumulative_decimal)^(1 / years) \u2212 1. For 50% cumulative over three years, use 1.5^(1/3) \u2212 1, approximately 14.4714%. This assumes a compatible return definition and no omitted external cash flows."
+        "answer": "Use (1 + cumulative_decimal)^(1 / years) − 1. For 50% cumulative over three years, use 1.5^(1/3) − 1, approximately 14.4714%. This assumes a compatible return definition and no omitted external cash flows."
       },
       {
         "question": "Can I divide my total gain by the number of years?",
@@ -490,17 +490,17 @@
           "The example purchases a $400,000 property using a $320,000 loan. Cash toward the price is $80,000. Add $8,000 cash-paid closing costs and loan fees, $5,000 initial repairs and $5,000 initial reserve cash to reach $98,000 required at acquisition. Those are chosen inputs, not a claim about a minimum down payment or lender reserve requirement.",
           "Borrowing is not tenant income. Keep refundable tenant deposits separate as well: cash held for a tenant is not freely available recurring revenue. Count an initial repair once in acquisition cash; do not also call the same payment a new recurring monthly maintenance bill. A future maintenance allowance represents a different period and purpose."
         ],
-        "formula": "Initial cash = purchase price \u2212 purchase loan + cash-paid closing costs + initial repairs + initial reserve"
+        "formula": "Initial cash = purchase price − purchase loan + cash-paid closing costs + initial repairs + initial reserve"
       },
       {
         "id": "monthly",
         "title": "Calculate the whole-property cash cost, then offset tenant rent",
         "paragraphs": [
           "At an illustrative 6% nominal annual loan rate over 30 years, monthly principal and interest on $320,000 is $1,918.56. Our entered monthly costs add $400 property tax, $150 property insurance, $200 owner-paid utilities, $200 routine maintenance and $150 capital replacement reserve. Mortgage insurance, HOA, management and other costs are explicitly zero in these cases. Total cost before rent is $3,018.56 monthly.",
-          "Two tenant rooms at $750 produce $1,500 scheduled monthly rent. Apply a 5% vacancy and collection-loss allowance to get $1,425 effective rent. Subtract that from $3,018.56 to get $1,593.56 of net housing cash cost. The owner\u2019s own space contributes no imaginary rent, and no other income is entered.",
+          "Two tenant rooms at $750 produce $1,500 scheduled monthly rent. Apply a 5% vacancy and collection-loss allowance to get $1,425 effective rent. Subtract that from $3,018.56 to get $1,593.56 of net housing cash cost. The owner’s own space contributes no imaginary rent, and no other income is entered.",
           "Principal repayment is included in the cash you must pay even though it reduces debt and can build equity. It is not spendable income to add back to this budget. Also avoid entering an escrow-inclusive loan bill and then adding its taxes and insurance again. The model calculates principal and interest separately from those ownership costs."
         ],
-        "formula": "Net monthly housing cash cost = mortgage P&I + entered owner costs + capital reserve \u2212 rent after losses \u2212 other net housing income"
+        "formula": "Net monthly housing cash cost = mortgage P&I + entered owner costs + capital reserve − rent after losses − other net housing income"
       },
       {
         "id": "rent-loss",
@@ -526,7 +526,7 @@
         "id": "checks",
         "title": "Check financing, local permission and tax treatment separately",
         "paragraphs": [
-          "Before using a listing\u2019s advertised rent, verify that the relevant spaces can be rented as intended and check local requirements, HOA restrictions, lease obligations and the insurance policy. These depend on the property and location; the calculator does not issue a legal or lender approval. An owner-occupied loan may also come with occupancy conditions.",
+          "Before using a listing’s advertised rent, verify that the relevant spaces can be rented as intended and check local requirements, HOA restrictions, lease obligations and the insurance policy. These depend on the property and location; the calculator does not issue a legal or lender approval. An owner-occupied loan may also come with occupancy conditions.",
           "Renting part of a home can involve allocating expenses between personal and rental use. IRS Publication 527 discusses rental property and mixed-use situations, but this worksheet does not compute deductible shares, depreciation or your tax return. Its housing cost is a cash-budget figure before owner income tax.",
           "Use the result as a checklist for missing inputs and an invitation to test weaker rents or higher costs. A promising default result is not evidence that a particular property, tenant or financing arrangement will work. Review the actual costs and cash available before committing to a purchase."
         ],
@@ -628,7 +628,7 @@
           "Use cash flow for a defined period, normally a full year, and a cash-investment amount consistent with the question. A $6,000 annual cash flow on $60,000 invested is a 10% annual cash yield. If you enter a recurring monthly cash flow in simple mode, the tool multiplies it by 12; it does not convert an irregular distribution into a growth rate.",
           "The numerator in our rental worksheet is before owner income tax and after the stated capital allowance. Other sources may quote a yield before reserves or use a different cash basis. A percentage is comparable only after reconciling those definitions. The tool separately shows a before-reserve figure to make the deduction visible."
         ],
-        "formula": "Cash-on-cash return (%) = annual cash flow after stated costs and financing / positive cash invested \u00d7 100"
+        "formula": "Cash-on-cash return (%) = annual cash flow after stated costs and financing / positive cash invested × 100"
       },
       {
         "id": "cash-basis",
@@ -644,17 +644,17 @@
         "id": "cash-flow",
         "title": "Calculate NOI, then deduct financing and the capital provision",
         "paragraphs": [
-          "Scheduled rent is $2,500 per month. A 5% vacancy and collection-loss allowance reduces effective rent to $2,375. With no other net income and $850 monthly operating expenses, annual NOI is ($2,375 \u2212 $850) \u00d7 12 = $18,300. Operating costs should already include the applicable property tax, insurance, routine maintenance, management, HOA and owner-paid utilities.",
+          "Scheduled rent is $2,500 per month. A 5% vacancy and collection-loss allowance reduces effective rent to $2,375. With no other net income and $850 monthly operating expenses, annual NOI is ($2,375 − $850) × 12 = $18,300. Operating costs should already include the applicable property tax, insurance, routine maintenance, management, HOA and owner-paid utilities.",
           "The $200,000 mortgage at 6% nominal interest over 30 years requires about $1,199.10 monthly principal and interest. Its first 12 unrounded scheduled payments total $14,389.21. Deduct that and a $1,200 annual capital replacement allowance from $18,300 to get $2,710.79 cash flow. No additional financing payments are entered.",
           "NOI excludes loan payments and the separate capital provision in this worksheet. Cash-on-cash includes their cash effect. Using NOI as the numerator would overstate cash available to this owner. Initial repairs are already in acquisition cash and are not deducted again as if they occurred every year."
         ],
-        "formula": "Annual cash flow = effective operating income \u2212 operating expenses \u2212 actual first-year P&I \u2212 other financing payments \u2212 capital allowance"
+        "formula": "Annual cash flow = effective operating income − operating expenses − actual first-year P&I − other financing payments − capital allowance"
       },
       {
         "id": "principal",
         "title": "Why principal repayment is not added back to cash income",
         "paragraphs": [
-          "A mortgage installment pays both interest and principal. Principal reduces the outstanding debt and may increase equity, but the cash has still left the owner\u2019s account. It cannot simultaneously be treated as spendable annual income. Equity growth belongs in a broader return analysis rather than this cash-yield numerator.",
+          "A mortgage installment pays both interest and principal. Principal reduces the outstanding debt and may increase equity, but the cash has still left the owner’s account. It cannot simultaneously be treated as spendable annual income. Equity growth belongs in a broader return analysis rather than this cash-yield numerator.",
           "Similarly, appreciation is not rental cash received. A sale or refinance can generate cash but also involves fees, debt repayment and timing that a one-year stabilized operating yield does not describe. Use a holding-period or refinance model for those events rather than combining a one-time receipt with recurring rent."
         ],
         "formula": ""
@@ -664,7 +664,7 @@
         "title": "Five cases show how a positive yield can become a loss",
         "paragraphs": [
           "The base case returns 2.2590%. Paying cash for the same property requires $320,000 including the same acquisition extras, produces $17,100 annual cash flow after reserve and yields 5.3438%. In this selected example, debt does not increase the cash yield. That result is conditional, not a general argument for or against borrowing.",
-          "Changing only the base loan rate from 6% to 8% turns annual cash flow into a $510.35 loss and the yield into \u22120.4253%. Raising only the monthly reserve from $100 to $300 leaves $310.79 annual cash flow, or 0.2590%. Reducing only the scheduled rent to $2,250 leaves a $139.21 annual loss, or \u22120.1160%.",
+          "Changing only the base loan rate from 6% to 8% turns annual cash flow into a $510.35 loss and the yield into −0.4253%. Raising only the monthly reserve from $100 to $300 leaves $310.79 annual cash flow, or 0.2590%. Reducing only the scheduled rent to $2,250 leaves a $139.21 annual loss, or −0.1160%.",
           "Every non-base row makes one change from the base; they are separate scenarios, not a sequence of cumulative changes. The rent scenario keeps dollar operating expenses fixed. If management charges or other costs actually scale with rent, update those inputs separately. Neither the rates nor the rent figures are current market quotes."
         ],
         "formula": ""
@@ -868,7 +868,7 @@
       },
       {
         "question": "Are duties calculated as a percentage of the goods invoice?",
-        "answer": "The calculator does not choose a duty base or rate. It accepts a manually checked amount. Actual classification, origin, valuation and applicable trade rules need separate verification; the guide\u2019s amounts are hypothetical."
+        "answer": "The calculator does not choose a duty base or rate. It accepts a manually checked amount. Actual classification, origin, valuation and applicable trade rules need separate verification; the guide’s amounts are hypothetical."
       },
       {
         "question": "Should I include VAT or other import taxes?",
@@ -953,16 +953,16 @@
         "id": "formula",
         "title": "How the savings longevity formula works",
         "paragraphs": [
-          "Let B be the starting balance, W the fixed month-end withdrawal and i the monthly effective return. Convert an effective annual decimal return R using i = (1 + R)^(1/12) \u2212 1. Do not divide an effective annual return by 12 and describe the result as equivalent compounding.",
+          "Let B be the starting balance, W the fixed month-end withdrawal and i the monthly effective return. Convert an effective annual decimal return R using i = (1 + R)^(1/12) − 1. Do not divide an effective annual return by 12 and describe the result as equivalent compounding.",
           "The logarithmic formula estimates fractional periods to depletion. The calculator then counts actual monthly payment dates and limits the final payment to available funds. Its result therefore includes the last partial withdrawal; it does not imply every month receives the full planned amount. At zero return, use B / W before rounding up to a final payment date."
         ],
-        "formula": "N = \u2212ln(1 \u2212 B \u00d7 i / W) / ln(1 + i); actual final payment month = ceil(N), with a capped final withdrawal"
+        "formula": "N = −ln(1 − B × i / W) / ln(1 + i); actual final payment month = ceil(N), with a capped final withdrawal"
       },
       {
         "id": "controlled-check",
         "title": "What our controlled comparison tests",
         "paragraphs": [
-          "The chart holds the opening balance at $500,000 and withdrawals at $3,000 monthly, then substitutes constant \u22122%, 0% and 5% effective annual returns. This isolates return sensitivity. A separate case raises withdrawals to $4,000 at the same 5% return to isolate spending sensitivity. These rates are chosen inputs, not forecasts or historical backtests.",
+          "The chart holds the opening balance at $500,000 and withdrawals at $3,000 monthly, then substitutes constant −2%, 0% and 5% effective annual returns. This isolates return sensitivity. A separate case raises withdrawals to $4,000 at the same 5% return to isolate spending sensitivity. These rates are chosen inputs, not forecasts or historical backtests.",
           "Another case uses $1,500 monthly withdrawals at 5%. Initial modeled monthly growth exceeds that withdrawal, so the constant-return model does not deplete the account. The website reports initial monthly interest rather than an invented number of years. Real markets can fall, and a flat nominal withdrawal can lose purchasing power; this result is not a lifetime-income guarantee."
         ],
         "formula": ""
@@ -972,7 +972,7 @@
         "title": "Fixed dollar withdrawals are different from inflation-adjusted spending",
         "paragraphs": [
           "The Savings Longevity mode keeps the dollar withdrawal unchanged. At 2.5% annual inflation, $3,000 spent 20 years from now buys approximately what $1,831 buys today. An apparently longer duration can therefore reflect a falling standard of living rather than a better-funded retirement.",
-          "To explore a growing income stream over a chosen horizon, use the Retirement Calculator\u2019s Monthly Withdrawal mode and its disclosed inflation assumptions. Do not subtract inflation from return and also increase withdrawals for inflation without checking the units: that can count the same adjustment twice. Compare nominal cash flows with nominal returns, or consistently express both in purchasing-power terms."
+          "To explore a growing income stream over a chosen horizon, use the Retirement Calculator’s Monthly Withdrawal mode and its disclosed inflation assumptions. Do not subtract inflation from return and also increase withdrawals for inflation without checking the units: that can count the same adjustment twice. Compare nominal cash flows with nominal returns, or consistently express both in purchasing-power terms."
         ],
         "formula": ""
       },
@@ -1010,14 +1010,14 @@
       },
       {
         "question": "Does the longevity mode increase withdrawals with inflation?",
-        "answer": "No. It uses fixed nominal monthly withdrawals. The calculator\u2019s separate Monthly Withdrawal mode can examine an inflation-increasing stream over an entered horizon."
+        "answer": "No. It uses fixed nominal monthly withdrawals. The calculator’s separate Monthly Withdrawal mode can examine an inflation-increasing stream over an entered horizon."
       },
       {
         "question": "Why is the final monthly withdrawal smaller?",
-        "answer": "The last payment is capped at the balance available after that month\u2019s return. It marks depletion, not a promise to fund the full planned payment in the final month."
+        "answer": "The last payment is capped at the balance available after that month’s return. It marks depletion, not a promise to fund the full planned payment in the final month."
       },
       {
-        "question": "Does \u201cnot exhausted\u201d mean I can never run out of money?",
+        "question": "Does “not exhausted” mean I can never run out of money?",
         "answer": "No. It means withdrawals do not deplete the balance under the entered constant-return and fixed-spending assumptions. Changing returns, costs or purchasing-power needs can invalidate that result."
       }
     ],
@@ -1074,7 +1074,7 @@
         "id": "eligibility",
         "title": "Confirm eligibility before calculating contribution room",
         "paragraphs": [
-          "Generally, contributing requires HSA-eligible coverage, no disqualifying other coverage, no Medicare enrollment and no eligibility to be claimed as someone else\u2019s dependent. Coverage and enrollment details can change eligibility. A large deductible alone does not establish that a plan qualifies; confirm the plan\u2019s HSA status and current IRS guidance.",
+          "Generally, contributing requires HSA-eligible coverage, no disqualifying other coverage, no Medicare enrollment and no eligibility to be claimed as someone else’s dependent. Coverage and enrollment details can change eligibility. A large deductible alone does not establish that a plan qualifies; confirm the plan’s HSA status and current IRS guidance.",
           "The calculator does not decide eligibility. It prorates a constant coverage category over entered eligible months, using first-day-of-month eligibility. Changing coverage, Medicare enrollment and use of the IRS last-month rule need separate review. The last-month rule has a testing period; it is deliberately not modeled as a simple extra checkbox."
         ],
         "formula": ""
@@ -1083,10 +1083,10 @@
         "id": "room",
         "title": "Calculate the combined contribution limit, then subtract other deposits",
         "paragraphs": [
-          "For a full eligible 2026 year, self-only base room is $4,400 and family base room is $8,750. An eligible owner age 55 or older by year-end may have a $1,000 catch-up allowance. Family base room is shared between spouses; a spouse\u2019s catch-up must go into that spouse\u2019s own HSA. Do not give both spouses a separate full family base allowance.",
+          "For a full eligible 2026 year, self-only base room is $4,400 and family base room is $8,750. An eligible owner age 55 or older by year-end may have a $1,000 catch-up allowance. Family base room is shared between spouses; a spouse’s catch-up must go into that spouse’s own HSA. Do not give both spouses a separate full family base allowance.",
           "In the six-month self-only example, the modeled combined allowance is $2,200. After $500 from an employer, personal room is $1,700. Planning a $3,000 personal deposit would exceed this simplified allowance by $1,300. That is a warning to review contributions, not an automatic excess-contribution correction or tax-return calculation."
         ],
-        "formula": "Prorated modeled limit = (annual base + eligible owner catch-up) \u00d7 eligible months / 12; personal room = max(0, limit \u2212 employer and other shared-limit contributions)"
+        "formula": "Prorated modeled limit = (annual base + eligible owner catch-up) × eligible months / 12; personal room = max(0, limit − employer and other shared-limit contributions)"
       },
       {
         "id": "tax",
@@ -1104,7 +1104,7 @@
           "The base growth example starts with $5,000, earns a constant 5% effective annual return on each opening balance, then adds $3,000 personal plus $500 employer contributions at year-end. It next pays entered fees and $1,000 qualified medical expenses. Contributions earn no return during the year in which they arrive under this convention.",
           "The four growth cases change one assumption at a time: stop contributions after year 10, charge $100 annually, or raise the medical budget to $5,000. If funds cannot cover the medical budget, withdrawals are capped and the unfunded amount is reported separately. A zero balance does not mean the medical bill disappeared."
         ],
-        "formula": "Closing balance = opening balance \u00d7 (1 + return) + eligible year-end contributions \u2212 paid fees \u2212 funded medical withdrawals"
+        "formula": "Closing balance = opening balance × (1 + return) + eligible year-end contributions − paid fees − funded medical withdrawals"
       },
       {
         "id": "future-rules",
@@ -1128,7 +1128,7 @@
     "questions": [
       {
         "question": "Do employer contributions count toward my HSA limit?",
-        "answer": "Yes. They use the combined contribution allowance. For family coverage, coordinate shared base-limit deposits across spouses; each spouse\u2019s eligible catch-up belongs in their own HSA."
+        "answer": "Yes. They use the combined contribution allowance. For family coverage, coordinate shared base-limit deposits across spouses; each spouse’s eligible catch-up belongs in their own HSA."
       },
       {
         "question": "Can I invest my HSA balance?",
@@ -1148,7 +1148,7 @@
       },
       {
         "question": "Does the projection increase future HSA limits?",
-        "answer": "No. It freezes the selected year\u2019s limit and catch-up status. This avoids presenting unknown future allowances as established rules."
+        "answer": "No. It freezes the selected year’s limit and catch-up status. This avoids presenting unknown future allowances as established rules."
       }
     ],
     "limitations": [
@@ -1202,14 +1202,14 @@
     },
     "calculatorPath": "/rmd-calculator",
     "calculatorLabel": "RMD Calculator",
-    "intro": "Calculate an owner-account required minimum distribution by dividing the prior December 31 balance by the applicable IRS distribution period for your age in the distribution year. Confirm that an RMD applies and that you selected the right table before doing the division. Inherited accounts have different rules and are outside this calculator\u2019s owner-account model.",
+    "intro": "Calculate an owner-account required minimum distribution by dividing the prior December 31 balance by the applicable IRS distribution period for your age in the distribution year. Confirm that an RMD applies and that you selected the right table before doing the division. Inherited accounts have different rules and are outside this calculator’s owner-account model.",
     "answer": "For an owner turning 75 in 2026 using the Uniform Lifetime Table, the factor is 24.6. A $500,000 balance on December 31, 2025 produces a gross 2026 RMD of $20,325.20 rounded to cents. If $10,000 of eligible gross distributions is already credited to that 2026 RMD, the remaining modeled requirement is $10,325.20.",
     "sections": [
       {
         "id": "inputs",
         "title": "Use the correct year-end balance and birthday age",
         "paragraphs": [
-          "A 2026 RMD uses the December 31, 2025 balance, not today\u2019s value after this year\u2019s market changes. Use the age you reach by the end of 2026, even if the birthday has not yet occurred when you calculate. The factor and the balance refer to different dates for a reason: the previous year-end establishes the calculation base.",
+          "A 2026 RMD uses the December 31, 2025 balance, not today’s value after this year’s market changes. Use the age you reach by the end of 2026, even if the birthday has not yet occurred when you calculate. The factor and the balance refer to different dates for a reason: the previous year-end establishes the calculation base.",
           "Confirm account type and any necessary adjustments with the custodian. Do not put a Roth IRA owner balance into this model; Roth IRA owners have no lifetime RMD. Designated Roth plan accounts also have no owner lifetime RMD for 2024 onward. Inherited-account requirements and still-working employer-plan exceptions need separate review."
         ],
         "formula": ""
@@ -1219,7 +1219,7 @@
         "title": "Choose the applicable IRS distribution table",
         "paragraphs": [
           "The examples use Table III, the Uniform Lifetime Table in IRS Publication 590-B: 26.5 at age 73, 24.6 at age 75 and 20.2 at age 80. They are three separate owners in 2026 with identical prior year-end balances. They are not a projection claiming that one account remains at $500,000 while its owner ages.",
-          "The calculator can use Table II when the sole beneficiary is a spouse more than ten years younger, using both spouses\u2019 ages. That condition is more specific than simply being married. If the spouse is not the sole beneficiary or the age difference does not meet the rule, do not select the younger-spouse option merely to reduce a result."
+          "The calculator can use Table II when the sole beneficiary is a spouse more than ten years younger, using both spouses’ ages. That condition is more specific than simply being married. If the spouse is not the sole beneficiary or the age difference does not meet the rule, do not select the younger-spouse option merely to reduce a result."
         ],
         "formula": "Gross annual RMD = eligible previous December 31 balance / applicable IRS distribution period"
       },
@@ -1227,17 +1227,17 @@
         "id": "credited",
         "title": "Subtract eligible gross distributions only once",
         "paragraphs": [
-          "The annual requirement and remaining requirement are separate outputs. Enter gross distributions credited to the selected year\u2019s RMD before withholding. A net bank deposit can be smaller than the gross amount already distributed from the retirement account. Reconcile the number with custodian records rather than comparing only what arrived in checking.",
-          "Do not include a delayed prior-year first RMD as credit toward the current year\u2019s requirement. Excess distributions do not become a future-year RMD credit. In our age-75 case, the $10,000 credited amount reduces the remaining requirement but does not change the original $20,325.20 annual calculation."
+          "The annual requirement and remaining requirement are separate outputs. Enter gross distributions credited to the selected year’s RMD before withholding. A net bank deposit can be smaller than the gross amount already distributed from the retirement account. Reconcile the number with custodian records rather than comparing only what arrived in checking.",
+          "Do not include a delayed prior-year first RMD as credit toward the current year’s requirement. Excess distributions do not become a future-year RMD credit. In our age-75 case, the $10,000 credited amount reduces the remaining requirement but does not change the original $20,325.20 annual calculation."
         ],
-        "formula": "Remaining selected-year RMD = max(0, annual RMD \u2212 eligible gross distributions credited to that year)"
+        "formula": "Remaining selected-year RMD = max(0, annual RMD − eligible gross distributions credited to that year)"
       },
       {
         "id": "deadlines",
         "title": "A first-year deadline can create two distributions in one calendar year",
         "paragraphs": [
           "For an IRA owner reaching 73 in 2026 under the applicable rule, the first distribution year is 2026. The first RMD can generally be delayed until April 1, 2027; the 2027 RMD still has its own December 31, 2027 deadline. Delaying therefore can place two RMDs in 2027. Their calculation balances and distribution years remain separate.",
-          "Under the birth-year rules used here, owners born from 1951 through 1959 start at 73, while those born in 1960 or later start at 75. Earlier cohorts and employer-plan exceptions require context. The calculator\u2019s selected year does not automatically decide the tax consequence of a delay or establish that a workplace-plan exception applies. The current regulation leaves the paragraph for the 1959 cohort reserved; confirm applicable guidance with the plan or custodian rather than treating this model\u2019s birth-year setting as a legal determination."
+          "Under the birth-year rules used here, owners born from 1951 through 1959 start at 73, while those born in 1960 or later start at 75. Earlier cohorts and employer-plan exceptions require context. The calculator’s selected year does not automatically decide the tax consequence of a delay or establish that a workplace-plan exception applies. The current regulation leaves the paragraph for the 1959 cohort reserved; confirm applicable guidance with the plan or custodian rather than treating this model’s birth-year setting as a legal determination."
         ],
         "formula": ""
       },
@@ -1267,7 +1267,7 @@
       },
       {
         "question": "Which age determines the RMD factor?",
-        "answer": "Use the age you reach by the end of the distribution year. Table II requires both spouses\u2019 ages when its younger sole-beneficiary spouse conditions apply."
+        "answer": "Use the age you reach by the end of the distribution year. Table II requires both spouses’ ages when its younger sole-beneficiary spouse conditions apply."
       },
       {
         "question": "Does withholding count toward the amount withdrawn?",
@@ -1275,7 +1275,7 @@
       },
       {
         "question": "Can I carry an excess withdrawal forward to next year?",
-        "answer": "No. Taking more than one year\u2019s RMD does not create credit against a later year\u2019s requirement. The next calculation uses its own balance, age and rules."
+        "answer": "No. Taking more than one year’s RMD does not create credit against a later year’s requirement. The next calculation uses its own balance, age and rules."
       },
       {
         "question": "Can I calculate an inherited IRA RMD with this tool?",
@@ -1283,7 +1283,7 @@
       },
       {
         "question": "Does dividing the RMD by twelve create a monthly deadline?",
-        "answer": "No. It is a budgeting equivalent. Confirm the annual deadline and your custodian\u2019s processing schedule; the tool does not mandate monthly distributions."
+        "answer": "No. It is a budgeting equivalent. Confirm the annual deadline and your custodian’s processing schedule; the tool does not mandate monthly distributions."
       }
     ],
     "limitations": [
@@ -1341,7 +1341,7 @@
     },
     "calculatorPath": "/401k-calculator",
     "calculatorLabel": "401(k) Calculator",
-    "intro": "A 401(k) employer match adds money under your employer\u2019s plan formula when you make qualifying contributions. The match rate tells you how much the employer adds per eligible dollar. The contribution band tells you how much of your pay is eligible for that rate. Read both numbers together; a 50% match does not usually mean the employer deposits half of your annual salary.",
+    "intro": "A 401(k) employer match adds money under your employer’s plan formula when you make qualifying contributions. The match rate tells you how much the employer adds per eligible dollar. The contribution band tells you how much of your pay is eligible for that rate. Read both numbers together; a 50% match does not usually mean the employer deposits half of your annual salary.",
     "answer": "At $80,000 annual salary, a plan matching 100% of the first 3% contributed plus 50% of the next 2% requires a $4,000 employee contribution to capture the full modeled match. The employer contributes $3,200, or 4% of salary. The combined $7,200 contribution is not the same as contributing only 4% yourself.",
     "sections": [
       {
@@ -1349,9 +1349,9 @@
         "title": "Translate the match sentence into contribution bands",
         "paragraphs": [
           "Break the formula into separate slices. The first 3% of $80,000 is $2,400, matched dollar for dollar. The next 2% is $1,600, matched at 50% for another $800. Adding the two employer amounts gives $3,200. Employee contributions across both bands total $4,000, or 5% of salary.",
-          "In the calculator\u2019s second tier, enter the additional band, not the cumulative threshold. For \u201c100% on the first 3%, then 50% through 5%,\u201d the additional second band is 2%, not 5%. A wrong interpretation would model an 8% combined band and overstate the employee contribution needed."
+          "In the calculator’s second tier, enter the additional band, not the cumulative threshold. For “100% on the first 3%, then 50% through 5%,” the additional second band is 2%, not 5%. A wrong interpretation would model an 8% combined band and overstate the employee contribution needed."
         ],
-        "formula": "Employer match = eligible first-band employee dollars \u00d7 first rate + eligible additional-band dollars \u00d7 second rate"
+        "formula": "Employer match = eligible first-band employee dollars × first rate + eligible additional-band dollars × second rate"
       },
       {
         "id": "compare",
@@ -1368,7 +1368,7 @@
         "paragraphs": [
           "For 2026, the basic employee elective-deferral limit is $24,500. Eligible participants age 50 or older may have an $8,000 catch-up, with the higher $11,250 catch-up applying at ages 60 through 63 if permitted. These are limits, not automatic entitlements to employer matching. Use calendar-year-end age and check plan eligibility.",
           "The model uses the 2026 $360,000 eligible-compensation cap and $72,000 annual-additions cap excluding employee catch-up. Employer matching does not consume the employee elective-deferral limit, but combined additions have their own constraints. Other plans, prior contributions and plan restrictions can require adjustments outside this simplified full-year model.",
-          "In the high-salary case, $400,000 salary does not make all pay match-eligible: compensation is capped at $360,000. A 100% match on the first 10% would require $36,000 employee contributions. A 35-year-old\u2019s $24,500 deferral limit prevents that under our assumptions, so the tool reports a partial match and explicitly labels full matching unattainable."
+          "In the high-salary case, $400,000 salary does not make all pay match-eligible: compensation is capped at $360,000. A 100% match on the first 10% would require $36,000 employee contributions. A 35-year-old’s $24,500 deferral limit prevents that under our assumptions, so the tool reports a partial match and explicitly labels full matching unattainable."
         ],
         "formula": ""
       },
@@ -1377,7 +1377,7 @@
         "title": "Why reaching the limit early can change the match",
         "paragraphs": [
           "The Maximize Employer Match mode assumes equal pay, a constant contribution percentage, per-pay-period matching and no annual true-up. The upper steady rate spreads the age-based employee limit over annual salary. If contributions stop before year-end, later pay periods may have no employee deferral to match.",
-          "Some plans reconcile matching annually through a true-up; others do not, and conditions can vary. Bonuses, pay changes, midyear enrollment and prior year-to-date contributions also change the payroll problem. Ask the administrator how your actual plan treats them. The calculator\u2019s steady-rate window is not a personalized payroll election."
+          "Some plans reconcile matching annually through a true-up; others do not, and conditions can vary. Bonuses, pay changes, midyear enrollment and prior year-to-date contributions also change the payroll problem. Ask the administrator how your actual plan treats them. The calculator’s steady-rate window is not a personalized payroll election."
         ],
         "formula": ""
       },
@@ -1386,7 +1386,7 @@
         "title": "A credited match is different from money you are entitled to keep",
         "paragraphs": [
           "Employee contributions and their earnings are fully vested, while employer contributions may be subject to a vesting schedule depending on plan design. The calculator reports modeled employer deposits without applying a vesting haircut. A $3,200 match is therefore not a guarantee that a departing employee keeps all $3,200.",
-          "Read the summary plan description for match formula, eligible pay, vesting, timing and true-up provisions. For a long-term projection, use the tool\u2019s separate projection mode and review its contribution timing and fixed-year limits. A yearly matching calculation alone says nothing about future investment returns, tax treatment at withdrawal or how long savings will last."
+          "Read the summary plan description for match formula, eligible pay, vesting, timing and true-up provisions. For a long-term projection, use the tool’s separate projection mode and review its contribution timing and fixed-year limits. A yearly matching calculation alone says nothing about future investment returns, tax treatment at withdrawal or how long savings will last."
         ],
         "formula": ""
       }
@@ -1415,11 +1415,11 @@
       },
       {
         "question": "Should I contribute the annual maximum as early as possible?",
-        "answer": "That depends on the plan\u2019s matching timing and true-up provisions. With per-pay-period matching and no true-up, stopping deferrals early may lose later matching opportunities. This mode illustrates a steady full-year rate rather than optimizing every payroll."
+        "answer": "That depends on the plan’s matching timing and true-up provisions. With per-pay-period matching and no true-up, stopping deferrals early may lose later matching opportunities. This mode illustrates a steady full-year rate rather than optimizing every payroll."
       },
       {
         "question": "Is the employer match immediately vested?",
-        "answer": "Not necessarily. The plan\u2019s vesting rules govern ownership of employer contributions. This calculator reports the modeled deposit and does not calculate a forfeiture at departure."
+        "answer": "Not necessarily. The plan’s vesting rules govern ownership of employer contributions. This calculator reports the modeled deposit and does not calculate a forfeiture at departure."
       },
       {
         "question": "Can this mode calculate a midyear payroll change?",
@@ -1461,6 +1461,602 @@
       {
         "href": "/retirement-calculator",
         "label": "Retirement Calculator"
+      }
+    ]
+  },
+  "noi": {
+    "meta": {
+      "path": "/guides/how-to-calculate-net-operating-income/",
+      "title": "How to Calculate Net Operating Income for a Rental Property",
+      "heading": "How to Calculate Net Operating Income for a Rental Property",
+      "description": "Calculate property NOI from rent, vacancy and operating expenses. Includes monthly and annual examples, spreadsheet formulas and the difference from financed cash flow.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "noi"
+      ],
+      "topic": "Property investing",
+      "breadcrumb": "How to Calculate Net Operating Income for a Rental Property",
+      "cardIntro": "Calculate property NOI from rent, vacancy and operating expenses. Includes monthly and annual examples, spreadsheet formulas and the difference from financed cash flow.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/noi-calculator",
+    "calculatorLabel": "NOI Calculator",
+    "intro": "Property net operating income, or NOI, is effective operating income less ordinary property operating expenses. It measures the property before its financing structure, capital replacements and the owner’s income tax. Start with a consistent reporting period, reconcile the income actually expected, and then subtract the appropriate costs. Do not substitute a tax-return net-income figure without checking what it includes.",
+    "answer": "In our hypothetical example, $4,000 scheduled monthly rent loses 5% to vacancy and collection loss. Add $100 other monthly income to get $3,900 effective income. Subtract $1,250 operating expenses: monthly NOI is $2,650 and annual NOI is $31,800. Mortgage payments, capital reserves and owner income tax are excluded.",
+    "sections": [
+      {
+        "id": "income",
+        "title": "Start with effective income, not the advertised rent",
+        "paragraphs": [
+          "Scheduled rent is the potential rent before the entered vacancy and collection allowance. At $4,000 per month and 5% loss, the allowance is $200. Adding $100 from an illustrative ancillary income source produces $3,900 effective operating income. The allowance applies only to scheduled rent in this model; other income should already reflect its own expected losses.",
+          "If your records already show collected rent after vacancy, subtracting another allowance can double-count the same loss. Reconstruct potential rent or choose inputs that consistently describe actual collected income. Keep refundable deposits, loan proceeds and an anticipated sale out of recurring property operating income. These are different cash movements, not additional rent."
+        ],
+        "formula": "Effective income = scheduled rent × (1 − vacancy and collection-loss rate) + other operating income"
+      },
+      {
+        "id": "expenses",
+        "title": "Choose operating expenses and keep financing separate",
+        "paragraphs": [
+          "The base monthly operating costs are $400 property tax, $150 insurance, $250 routine repairs, $300 management, $100 owner-paid utilities and $50 other operating expenses. HOA is zero here. Their $1,250 sum includes ordinary costs of running this hypothetical property. The management entry is a dollar amount in the NOI Calculator, not a percentage.",
+          "This model excludes debt principal and interest, depreciation, major capital improvements, replacement reserves and the owner’s income tax. Property tax is an operating cost; the owner’s income tax is a separate concept. Lenders or appraisers may use adjusted NOI conventions, including different reserve treatments, so reconcile definitions before comparing their figure with this worksheet."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "formula",
+        "title": "Calculate NOI in one consistent period",
+        "paragraphs": [
+          "For monthly entries, subtract monthly operating expenses from monthly effective income, then multiply by twelve. For annual entries, do the subtraction once with annual amounts. The annualized result is not a forecast of seasonal rent collections; it simply puts all entered amounts on the same reporting basis.",
+          "Switching the reporting-period selector reinterprets the values already entered. It does not multiply the form fields by twelve. Our annual-entry case therefore supplies $48,000 rent, $1,200 other income and $15,000 total expenses explicitly. It reconciles to the same $31,800 annual NOI as the monthly case."
+        ],
+        "formula": "NOI = effective operating income − operating expenses; annual NOI = monthly NOI × 12 when monthly inputs are used"
+      },
+      {
+        "id": "sensitivity",
+        "title": "What changing vacancy and maintenance does to NOI",
+        "paragraphs": [
+          "The chart holds scheduled rent, other income and operating expenses constant while changing rent loss from 5% to 20% and 100%. Annual NOI moves from $31,800 to $24,600 and then −$13,800. At 100% rent loss, the separately entered $100 monthly other income remains; this is not an assumption that all income disappears.",
+          "A separate case raises routine repair spending from $250 to $1,000 per month. Annual NOI falls by $9,000 to $22,800. These are controlled illustrations, not estimated vacancy rates or repair budgets for a real address. Some actual operating costs respond to occupancy, while these scenarios deliberately hold their entered dollar amounts fixed."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Build a small NOI spreadsheet and reconcile the result",
+        "paragraphs": [
+          "With the base monthly amounts, a spreadsheet check is =4000*(1-5%)+100-SUM(400,150,250,300,100,0,50). It returns $2,650 monthly NOI; multiply that cell by twelve for $31,800 annually. Keep scheduled rent, loss allowance and each expense on separate rows so you can audit changes.",
+          "NOI is an input to other decisions, not their final answer. Divide annual NOI by a consistently chosen price or value for cap rate. Subtract debt service to move toward cash flow after financing, then consider separate capital spending, reserves and taxes. IRS rental tax reporting may treat interest and depreciation differently from this operating-income analysis; the two worksheets serve different purposes."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Effective annual income",
+      "Annual operating expenses",
+      "Annual NOI"
+    ],
+    "chart": "noi-guide",
+    "chartAlt": "Annual NOI at five, twenty and one hundred percent rent loss with other income and operating expenses held fixed.",
+    "chartCaption": "Each charted case starts with $4,000 scheduled monthly rent, $100 other income and $1,250 monthly operating costs. Other income is not reduced by the rent-loss input.",
+    "questions": [
+      {
+        "question": "What is net operating income in real estate?",
+        "answer": "It is a property operating measure: effective operating income less ordinary operating expenses under a defined convention. This worksheet calculates it before debt service, capital costs and owner income tax."
+      },
+      {
+        "question": "Does NOI include mortgage payments?",
+        "answer": "No. Mortgage principal and interest are financing cash flows in this model. Subtract debt service separately when estimating the owner’s cash flow."
+      },
+      {
+        "question": "Does NOI include property tax and insurance?",
+        "answer": "Yes, ordinary property tax and property insurance are included as operating costs here. That does not mean the owner’s personal income tax is included."
+      },
+      {
+        "question": "Is NOI the same as net income?",
+        "answer": "No. Accounting or taxable net income can include financing, depreciation and other adjustments excluded from this property NOI convention. Reconcile the components rather than assuming the labels are interchangeable."
+      },
+      {
+        "question": "Can net operating income be negative?",
+        "answer": "Yes. When effective income is below operating costs, this tool retains the operating loss. It does not replace negative NOI with zero."
+      },
+      {
+        "question": "How do I calculate annual NOI from monthly rent?",
+        "answer": "Use monthly rent, other income and operating expenses consistently, calculate monthly NOI and multiply by twelve. Do not annualize rent while leaving expenses monthly."
+      },
+      {
+        "question": "Does changing the period selector convert my inputs?",
+        "answer": "No. It changes how the same entered amounts are interpreted. Enter converted annual dollar amounts yourself when changing from monthly to annual reporting."
+      }
+    ],
+    "limitations": [
+      "This is a before-financing, before-capital-cost NOI convention; lender and appraisal adjustments can differ.",
+      "Vacancy applies only to scheduled rent; management is a dollar entry. Fixed operating costs do not automatically fall when rent is lost.",
+      "Examples are hypothetical operating scenarios, not market data, tax advice or appraisals."
+    ],
+    "sources": [
+      {
+        "href": "https://corporatefinanceinstitute.com/resources/accounting/net-operating-income-noi/",
+        "label": "CFI: property NOI and normalized operating expenses"
+      },
+      {
+        "href": "https://www.irs.gov/publications/p527",
+        "label": "IRS Publication 527: rental tax reporting is a separate calculation"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-cap-rate/",
+        "label": "How to calculate cap rate"
+      },
+      {
+        "href": "/guides/how-to-calculate-rental-property-cash-flow/",
+        "label": "How to calculate rental property cash flow"
+      },
+      {
+        "href": "/glossary/net-operating-income/",
+        "label": "Net operating income glossary"
+      },
+      {
+        "href": "/cash-on-cash-return-calculator",
+        "label": "Cash-on-Cash Return Calculator"
+      }
+    ]
+  },
+  "cap": {
+    "meta": {
+      "path": "/guides/how-to-calculate-cap-rate/",
+      "title": "How to Calculate Cap Rate: Formula, NOI and Property Value",
+      "heading": "How to Calculate Cap Rate: Formula, NOI and Property Value",
+      "description": "Calculate cap rate from annual NOI and property value. Compare prices, estimate value at a target rate, and understand good cap rates, mortgage exclusions and ROI differences.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "cap-rate"
+      ],
+      "topic": "Property investing",
+      "breadcrumb": "How to Calculate Cap Rate: Formula, NOI and Property Value",
+      "cardIntro": "Calculate cap rate from annual NOI and property value. Compare prices, estimate value at a target rate, and understand good cap rates, mortgage exclusions and ROI differences.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/cap-rate-calculator",
+    "calculatorLabel": "Cap Rate Calculator",
+    "intro": "Calculate capitalization rate by dividing annual property NOI by the relevant property price or market value, then multiply by 100. It is an unlevered operating-income ratio, so mortgage payments are excluded. The usefulness of the result depends on consistent income assumptions and a denominator that answers the question you actually want to ask.",
+    "answer": "A property with $18,000 annual NOI and a $300,000 price has a 6% cap rate: 18,000 / 300,000 × 100. With the same NOI, a $360,000 value produces 5%, while a $240,000 value produces 7.5%. These are controlled price scenarios, not market valuations or recommended target rates.",
+    "sections": [
+      {
+        "id": "formula",
+        "title": "Use annual NOI in the cap rate formula",
+        "paragraphs": [
+          "NOI starts with effective rental and other operating income, then subtracts ordinary property operating expenses. In this calculator it excludes mortgage payments, depreciation, capital improvements, replacement reserves and owner income tax. Use the separate NOI worksheet if the amount has not yet been reconciled.",
+          "Enter annual NOI, not monthly rent or the owner’s cash flow after loan payments. A monthly $1,500 NOI is $18,000 annually; putting $1,500 into the annual field understates the numerator by a factor of twelve. Gross rent is also the wrong substitute because it omits operating costs and vacancy."
+        ],
+        "formula": "Cap rate (%) = annual NOI / property price or market value × 100"
+      },
+      {
+        "id": "denominator",
+        "title": "Choose purchase price or current market value deliberately",
+        "paragraphs": [
+          "A purchase-price calculation uses the proposed or historical price to describe income relative to that amount. A current-value calculation uses the chosen valuation date’s market value. Those can produce different ratios for the same property. Your down payment is neither denominator; using it turns the ratio into a different and incomplete leverage calculation.",
+          "In the chart, $18,000 annual NOI stays unchanged while entered value moves from $300,000 to $360,000 and $240,000. The cap rate changes even though operating income does not. A higher quoted cap rate can therefore come from a lower price, a more optimistic NOI or both. Investigate the assumptions rather than comparing percentages alone."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "worksheet",
+        "title": "Calculate cap rate from a rental worksheet",
+        "paragraphs": [
+          "Our worksheet case uses $4,000 scheduled monthly rent, 5% rent loss, $100 other monthly income and $1,250 monthly operating costs. Annual NOI is $31,800. At an entered $500,000 value, cap rate is 6.36%. This is a separate worksheet example, not another price-only variation of the $18,000 NOI cases.",
+          "The worksheet’s management cost is an entered dollar amount. Other tools on this site use a percentage of effective income, so translating a scenario between tools requires translating that field too. Select monthly or annual reporting consistently; the period selector reinterprets the entries instead of converting dollar amounts automatically."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "value",
+        "title": "Estimate a value at a target rate without treating it as an appraisal",
+        "paragraphs": [
+          "Rearranging the formula gives an indicated value equal to positive annual NOI divided by the target cap rate as a decimal. At $18,000 NOI and a chosen 6% target, the indicated value is $300,000. Changing the current entered property price does not change that indicated value when NOI and the target stay fixed.",
+          "For the worksheet’s $31,800 NOI, a 6% target indicates $530,000. That is a mathematical scenario, not a recommendation to offer $530,000. The target rate must be justified with compatible local comparables and an appropriate income basis. Zero or negative NOI cannot imply a meaningful positive value through this simple positive-rate capitalization method."
+        ],
+        "formula": "Indicated value at target rate = positive annual NOI / (target cap rate / 100)"
+      },
+      {
+        "id": "interpretation",
+        "title": "What is a good cap rate, and is a higher one better?",
+        "paragraphs": [
+          "There is no universal good cap rate. Property type, location, lease quality, vacancy, repair needs, growth expectations and the income convention affect comparisons. A higher number is not automatic evidence of a safer or better deal; it can accompany risks or costs not captured by a headline NOI figure.",
+          "Cap rate is not total ROI, a mortgage-adjusted return or a guarantee of annual distributions. It omits appreciation, sale costs, financing and other cash flows. For cash remaining after debt service relative to invested cash, use cash-on-cash return and a complete cash budget. Our existing comparison glossary explains that distinction without creating another competing calculator page."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Check the calculation in Excel or Google Sheets",
+        "paragraphs": [
+          "For the base case, =18000/300000 gives 0.06; format the cell as a percentage to display 6%. Alternatively multiply by 100 and keep the cell numeric. Do not multiply by 100 and also apply percentage formatting, which would display 600%.",
+          "For indicated value, use =18000/6%. Keep income basis visible alongside the calculation: trailing actual results and forward stabilized assumptions can answer different questions. A scenario with −$6,000 annual NOI and $300,000 value has a signed −2% cap rate here, while the indicated positive value is intentionally reported as not meaningful."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Property value",
+      "Annual NOI",
+      "Cap rate",
+      "Value at 6% target"
+    ],
+    "chart": "cap-guide",
+    "chartAlt": "Cap rates of six, five and seven point five percent at three property values with the same $18,000 annual NOI.",
+    "chartCaption": "Only property value changes in the three charted cases. The table separately checks a rental worksheet, zero NOI and an operating loss.",
+    "questions": [
+      {
+        "question": "How do you calculate cap rate?",
+        "answer": "Divide annual property NOI by the relevant price or market value, then multiply by 100. For $18,000 annual NOI and $300,000 value, the result is 6%."
+      },
+      {
+        "question": "Does cap rate include mortgage payments?",
+        "answer": "No. This is a before-financing ratio. Financing changes owner cash flow and invested cash, which should be examined separately."
+      },
+      {
+        "question": "Is a higher cap rate always better?",
+        "answer": "No. A higher figure may reflect a lower price, higher risk or different income assumptions. Compare property condition, leases, vacancy, market evidence and a consistent NOI definition."
+      },
+      {
+        "question": "Can I use monthly NOI to calculate cap rate?",
+        "answer": "Annualize it first. A $1,500 monthly NOI becomes $18,000 annually before dividing by value. This tool’s known-NOI mode expects annual dollars."
+      },
+      {
+        "question": "Can cap rate be zero or negative?",
+        "answer": "Yes. The calculator displays zero or a signed negative ratio. It does not show a meaningful positive indicated value at a positive target rate when NOI is nonpositive."
+      },
+      {
+        "question": "Is cap rate the same as cash-on-cash return?",
+        "answer": "No. Cap rate divides before-financing NOI by property value. Cash-on-cash uses a defined cash flow after financing divided by actual cash invested. Read the linked comparison for the full distinction."
+      },
+      {
+        "question": "Can I estimate property value using cap rate?",
+        "answer": "For positive NOI, divide annual NOI by a justified target rate in decimal form. The result is an income-capitalization scenario, not a verified appraisal."
+      }
+    ],
+    "limitations": [
+      "No current comparable-sales data, location-specific cap-rate recommendation or appraisal is supplied.",
+      "Income and value must use compatible dates, reporting periods and operating-cost conventions.",
+      "Signed operating losses are retained; positive-value capitalization is withheld for nonpositive NOI."
+    ],
+    "sources": [
+      {
+        "href": "https://corporatefinanceinstitute.com/resources/valuation/capitalization-cap-rate/",
+        "label": "CFI: capitalization rate formula and interpretation"
+      },
+      {
+        "href": "https://corporatefinanceinstitute.com/resources/accounting/net-operating-income-noi/",
+        "label": "CFI: understanding the NOI numerator"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-net-operating-income/",
+        "label": "How to calculate net operating income"
+      },
+      {
+        "href": "/guides/how-to-calculate-rental-property-cash-flow/",
+        "label": "Rental property cash flow guide"
+      },
+      {
+        "href": "/glossary/cap-rate-vs-cash-on-cash-return/",
+        "label": "Cap rate vs. cash-on-cash return"
+      },
+      {
+        "href": "/guides/how-to-calculate-cash-on-cash-return/",
+        "label": "How to calculate cash-on-cash return"
+      }
+    ]
+  },
+  "rental": {
+    "meta": {
+      "path": "/guides/how-to-calculate-rental-property-cash-flow/",
+      "title": "How to Estimate Rental Property Cash Flow: A Worked Budget",
+      "heading": "How to Estimate Rental Property Cash Flow: A Worked Budget",
+      "description": "Estimate rental cash flow after vacancy, operating costs and debt service. Compare five scenarios, negative cash flow and reserve adjustments with a reproducible worksheet.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "rental-property"
+      ],
+      "topic": "Property investing",
+      "breadcrumb": "How to Estimate Rental Property Cash Flow: A Worked Budget",
+      "cardIntro": "Estimate rental cash flow after vacancy, operating costs and debt service. Compare five scenarios, negative cash flow and reserve adjustments with a reproducible worksheet.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/rental-property-calculator",
+    "calculatorLabel": "Rental Property Calculator",
+    "intro": "Estimate rental property cash flow by moving from potential rent to effective income, subtracting ordinary operating costs, and then subtracting loan principal and interest. That produces a before-tax, before-separate-capital-reserve cash figure under this model. Include the remaining capital spending and tax obligations in your own liquidity budget before treating it as spendable income.",
+    "answer": "Our illustrative $300,000 rental earns $18,120 first-year NOI. A $225,000, 30-year loan at 6% requires $16,187.86 of first-year principal and interest, leaving $1,932.14 modeled annual cash flow, or a $161.01 monthly average. A separate $200 monthly capital reserve would turn that average budget into approximately −$38.99 before income tax.",
+    "sections": [
+      {
+        "id": "budget",
+        "title": "Build the income and operating-expense budget first",
+        "paragraphs": [
+          "Start with $2,500 scheduled monthly rent and a 5% vacancy and collection allowance. With no other income in this example, effective annual income is $28,500. Management at 8% of effective income costs $2,280. Annual property tax of $3,600, insurance of $1,500 and routine maintenance of $3,000 add another $8,100.",
+          "Total first-year operating expenses are therefore $10,380, leaving $18,120 NOI. Management in the Rental Property Calculator is a percentage of collected rent plus other income. This differs from the separate NOI Calculator’s management-dollar field; translate the amount when moving the same property between tools."
+        ],
+        "formula": "Effective annual income = monthly rent × 12 × (1 − vacancy rate) + other monthly income × 12"
+      },
+      {
+        "id": "debt",
+        "title": "Subtract full debt service, not interest alone",
+        "paragraphs": [
+          "A 25% down payment on $300,000 leaves a $225,000 loan. At a 6% nominal annual rate, monthly rate is 0.06 / 12 and term is 360 months. The resulting scheduled principal-and-interest payment is approximately $1,348.99 monthly. Keeping internal precision gives $16,187.86 of payments in the first year.",
+          "Subtract the entire payment for cash-flow purposes. Principal reduction builds equity, but the cash still leaves your account. Subtracting only interest overstates cash available for expenses. The initial cash investment here is $75,000 down payment plus $6,000 purchase closing costs and $10,000 initial repairs: $91,000 before any separately budgeted reserve."
+        ],
+        "formula": "First-year modeled cash flow = effective annual income − operating expenses − actual first-year principal and interest payments"
+      },
+      {
+        "id": "stress",
+        "title": "Stress-test vacancy, borrowing cost and rent",
+        "paragraphs": [
+          "The chart changes one input from the base financed property in each stress case. Raising rent loss from 5% to 15% reduces annual cash flow to −$827.86. Raising the loan rate to 8%, with base rent loss retained, produces −$1,691.64. Reducing monthly scheduled rent to $2,000 produces −$3,311.86 at the original 6% loan rate.",
+          "These are hypothetical sensitivities, not market forecasts. The cash-purchase comparison removes debt service and raises initial invested cash from $91,000 to $316,000. Its $18,120 annual cash flow is larger, but comparing dollar cash flow alone ignores that extra capital. Cap rate remains tied to the property’s operating income and value rather than the financing choice."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "reserves",
+        "title": "Add capital reserves and distinguish the monthly average",
+        "paragraphs": [
+          "Routine maintenance is already included in the model’s operating expenses. A separately planned capital replacement reserve for a future roof or HVAC replacement is different. In the base case, annual flow of $1,932.14 minus $2,400 of planned annual capital reserve leaves about −$467.86, or −$38.99 monthly on average, before income tax.",
+          "That reserve adjustment is explained outside the Rental Property Calculator because it does not have a dedicated reserve cash-flow field. Putting the reserve into ordinary operating expenses changes the tool’s NOI and cap rate as well. Use the Cash-on-Cash Return Calculator’s disclosed reserve treatment when you need a separate reserve-aware comparison.",
+          "Annual cash flow divided by twelve is an average, not a promise that every month is positive. A vacancy month, insurance bill or repair can create a cash shortfall even when the annual total is positive. Maintain a separate timing budget for lumpy bills and access to cash; the first-year average does not solve liquidity risk."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "returns",
+        "title": "Positive operating cash flow does not guarantee a profitable investment",
+        "paragraphs": [
+          "All checked scenarios use a one-year holding period, zero growth and zero appreciation to isolate first-year mechanics. The full tool can project annual rent and expense growth, loan balances and an eventual sale. Those future values are assumptions. A sale at the end of year one is included in the full investment-return model but is not included in the recurring first-year cash-flow figure.",
+          "For example, the base case has $1,932.14 positive recurring annual cash flow, yet a hypothetical sale at the unchanged $300,000 price with 6% selling costs produces an overall investment loss after initial outlays. Sale proceeds, equity, recurring cash and total profit must remain separate. Depreciation deductions, income taxes and capital-gains tax are outside this projection."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Reproduce the first-year estimate in a spreadsheet",
+        "paragraphs": [
+          "First calculate effective income with =2500*12*(1-5%). Then calculate operating costs with =3600+1500+3000+28500*8%. For scheduled debt service, =-PMT(6%/12,30*12,225000)*12 returns the first-year payment total for this full-year loan example. Subtract costs and debt service from income.",
+          "Keep vacancy, management, loan rate and reserve budget in separate cells. Test one change at a time before combining several adverse assumptions. The CSV below provides complete calculator inputs and reference metrics, while each preset link restores the same case in the existing tool."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "First-year NOI",
+      "First-year debt service",
+      "Annual cash flow",
+      "Monthly average"
+    ],
+    "chart": "rental-guide",
+    "chartAlt": "Monthly average cash flow under base financing, higher vacancy, higher loan rate, lower rent and a cash purchase.",
+    "chartCaption": "Cash flow is first-year income less operating costs and debt service, divided by twelve. Separate capital reserves and owner taxes are excluded from the chart.",
+    "questions": [
+      {
+        "question": "How do I estimate rental property cash flow?",
+        "answer": "Estimate effective income after rent loss, subtract operating costs, then subtract loan principal and interest. Review separate capital spending, reserves and taxes before deciding how much is available to spend."
+      },
+      {
+        "question": "What is good cash flow for a rental property?",
+        "answer": "There is no universal monthly target. Evaluate cash invested, reserve needs, financing, vacancy risk and your required return. A small positive annual average can still leave months with cash shortfalls."
+      },
+      {
+        "question": "Can a rental have positive NOI but negative cash flow?",
+        "answer": "Yes. In the higher-rate and higher-vacancy examples, operating income remains positive but full debt service exceeds NOI, creating negative cash flow."
+      },
+      {
+        "question": "Does mortgage principal count as a cash expense?",
+        "answer": "It counts in debt service when estimating owner cash flow. It is not a property operating expense in the NOI calculation, and its tax treatment is a separate question."
+      },
+      {
+        "question": "Does this cash-flow figure include a roof replacement reserve?",
+        "answer": "No dedicated capital reserve is subtracted by this tool. Add a separate reserve budget outside its first-year cash-flow figure or use the reserve-aware Cash-on-Cash Return Calculator."
+      },
+      {
+        "question": "Is annual cash flow divided by twelve my actual monthly cash flow?",
+        "answer": "No. It is an average. Actual collection dates, vacancies and large bills can make individual months materially different."
+      },
+      {
+        "question": "Can positive rental cash flow still produce an investment loss?",
+        "answer": "Yes. Acquisition costs, initial repairs, sale costs, declining value and taxes can outweigh operating cash receipts. The tool reports recurring cash flow separately from total investment profit."
+      }
+    ],
+    "limitations": [
+      "One-year cases use zero growth and appreciation to isolate operating and financing changes; no market performance is asserted.",
+      "Before income tax, depreciation deductions, capital-gains tax and a separate capital replacement reserve.",
+      "Management applies to effective rent plus other income. Loan terms are fixed; rent and expense assumptions are not verified property records."
+    ],
+    "sources": [
+      {
+        "href": "https://corporatefinanceinstitute.com/resources/accounting/net-operating-income-noi/",
+        "label": "CFI: operating income versus financing effects"
+      },
+      {
+        "href": "https://www.irs.gov/publications/p527",
+        "label": "IRS Publication 527: rental income, expenses and depreciation for tax reporting"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-net-operating-income/",
+        "label": "Property NOI guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-cap-rate/",
+        "label": "Cap rate calculation guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-cash-on-cash-return/",
+        "label": "Cash-on-cash return guide"
+      },
+      {
+        "href": "/cash-on-cash-return-calculator",
+        "label": "Reserve-aware Cash-on-Cash Return Calculator"
+      },
+      {
+        "href": "/brrrr-calculator",
+        "label": "BRRRR Calculator"
+      }
+    ]
+  },
+  "heloc": {
+    "meta": {
+      "path": "/guides/how-are-heloc-payments-calculated/",
+      "title": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
+      "heading": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
+      "description": "Calculate interest-only HELOC draw payments and amortizing repayment. Compare rates, terms, annual fees and closing costs using six reproducible scenarios.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "heloc"
+      ],
+      "topic": "Home equity",
+      "breadcrumb": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
+      "cardIntro": "Calculate interest-only HELOC draw payments and amortizing repayment. Compare rates, terms, annual fees and closing costs using six reproducible scenarios.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/heloc-calculator",
+    "calculatorLabel": "HELOC Calculator",
+    "intro": "HELOC payments depend on the outstanding balance, the applicable rate and the lender’s payment rules. An interest-only draw-period estimate differs from an amortizing repayment-period payment because the latter also pays down principal. Read your agreement for the actual minimum-payment formula, day count, fees, rate resets and any balloon requirement.",
+    "answer": "Under our fixed-rate illustration, a $50,000 balance at 8% costs $333.33 monthly during a ten-year interest-only draw period, with no fees. Amortizing that unchanged balance over the following twenty years requires $418.22 monthly. The increase is about $84.89 after retaining precision, even though the interest rate has not changed.",
+    "sections": [
+      {
+        "id": "draw",
+        "title": "Calculate an interest-only draw payment from the amount borrowed",
+        "paragraphs": [
+          "Use the outstanding borrowed balance rather than the entire approved credit limit. The simplified monthly interest is balance multiplied by the nominal annual rate divided by twelve. For $50,000 at 8%, this is 50,000 × 0.08 / 12, or $333.33 rounded to cents. Paying only that interest leaves the principal unchanged.",
+          "Our model assumes the full entered balance exists at the start and stays constant throughout draw. Actual HELOC users can borrow and repay at different dates, changing daily balances and interest charges. The calculator does not construct a schedule of new advances or replace your lender’s statement calculation."
+        ],
+        "formula": "Modeled monthly draw payment = outstanding balance × annual rate / 12 + allocated annual draw-period fee / 12"
+      },
+      {
+        "id": "repayment",
+        "title": "Add principal amortization when repayment begins",
+        "paragraphs": [
+          "At the end of the modeled draw period, new borrowing stops and the same balance is amortized. Let P be outstanding principal, i the annual rate divided by twelve and N the number of repayment months. Use the standard amortizing-payment formula, or P / N when the rate is zero.",
+          "The base twenty-year repayment term has 240 months and a $418.22 scheduled payment. Shortening repayment to ten years at the same 8% raises payment to $606.64, while reducing total interest. The ten-year draw period is separate from either repayment term; entering twenty repayment years does not include the draw years."
+        ],
+        "formula": "Repayment payment = P × i / [1 − (1 + i)^(−N)]; at 0% use P / N"
+      },
+      {
+        "id": "rates",
+        "title": "Separate repayment shock from a variable-rate reset",
+        "paragraphs": [
+          "The base comparison shows a higher payment solely because principal amortization begins. A separate case holds the rate at 10% throughout: draw payment is $416.67 and twenty-year repayment is $482.51. That is a different constant-rate scenario, not a simulation of an actual 8%-to-10% reset on a chosen date.",
+          "CFPB guidance explains that HELOC rates are usually variable and some agreements can require a large payment at the end of draw. Our fully amortizing repayment assumption is only one structure. A real contract may use a different minimum-payment formula, rate cap, floor, conversion option or balloon. Stress-test rates as scenarios and confirm the actual contractual schedule."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "fees",
+        "title": "Keep annual fees, closing costs and borrowed principal distinct",
+        "paragraphs": [
+          "With a $120 annual draw-period fee, this model allocates $10 to each draw month: the base average monthly outlay becomes $343.33. The annual fee stops in repayment under this model. Actual lender billing may collect the charge once a year, and actual fee rules can differ; a monthly allocation is a budgeting convention.",
+          "A separate case deducts a $1,000 closing cost from the $50,000 contractual balance. Cash disbursed is $49,000, while payments still amortize $50,000. Paying the same fee upfront instead would use outside cash. Neither treatment finances an extra fee on top of principal. Total interest remains unchanged by the fee treatment in these fixed-balance scenarios.",
+          "The tool also provides an estimated cash-flow annualized cost including its modeled fees. Do not treat that internal figure as your lender’s legally disclosed HELOC APR or a live quote. Compare disclosed rates, fee schedules and cash costs using the agreement and appropriate disclosure rules."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Check both periods in a spreadsheet",
+        "paragraphs": [
+          "For the no-fee base case, =50000*8%/12 gives monthly draw interest. Use =-PMT(8%/12,20*12,50000) for the positive monthly repayment amount. Keep the unrounded values when calculating differences; rounding each displayed payment first can change a difference by a cent.",
+          "At zero interest, the draw interest is zero and twenty-year repayment is $50,000 / 240, or $208.33 monthly. Zero interest does not eliminate principal repayment. Across the base thirty-year combined schedule, the model calculates $90,372.81 total interest before fees. That total assumes the full balance remains outstanding throughout draw and excludes further advances."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "decision",
+        "title": "Use the estimate to ask better questions before borrowing",
+        "paragraphs": [
+          "Ask how the lender calculates minimum payments, when rates reset, whether fees persist after draw, whether principal is required during draw and whether a balloon can become due. Compare a HELOC with a home equity loan using the same borrowed amount and relevant repayment horizon rather than comparing an interest-only payment with a principal-and-interest payment.",
+          "A calculated payment is not borrowing approval or evidence of affordability. Your home secures the obligation. CFPB warns that failing to repay can put it at risk, and access to further draws may be restricted under specified conditions. The model does not assess your income, credit, collateral value or ability to meet a higher future payment."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Monthly draw payment",
+      "Monthly repayment",
+      "Total interest",
+      "Net initial proceeds"
+    ],
+    "chart": "heloc-guide",
+    "chartAlt": "Interest-only draw and amortizing repayment payments for the same $50,000 balance under three rate and repayment-term scenarios.",
+    "chartCaption": "Each scenario uses a constant rate, the full balance at the start, no new advances and no fees in the chart. The table separately tests fees, deducted closing costs and zero interest.",
+    "questions": [
+      {
+        "question": "How are interest-only HELOC payments calculated?",
+        "answer": "A simplified equal-month estimate is outstanding balance × nominal annual rate / 12. Actual statements can use daily balances, lender-specific day counts and additional minimum-payment requirements."
+      },
+      {
+        "question": "Why does the payment rise after the draw period?",
+        "answer": "Repayment can require principal as well as interest. In the base example, the rate stays at 8% while monthly payment rises from $333.33 interest only to $418.22 amortizing over twenty years."
+      },
+      {
+        "question": "Are payments based on the credit limit or the borrowed balance?",
+        "answer": "This calculation uses the outstanding borrowed balance. It does not charge interest on an unused credit limit, although actual accounts may have separate fees or minimum-draw conditions."
+      },
+      {
+        "question": "Does the calculator simulate future variable rates?",
+        "answer": "No. Each scenario holds one entered rate constant throughout draw and repayment. Repeating the calculation at a higher rate is sensitivity testing, not a forecast or dated reset simulation."
+      },
+      {
+        "question": "Does paying a deducted closing cost reduce the contractual principal?",
+        "answer": "No. In the $1,000 deducted-fee example, you receive $49,000 but still owe the entered $50,000 balance. Financing a fee on top would be a different transaction."
+      },
+      {
+        "question": "What happens if the HELOC has no interest?",
+        "answer": "With a 0% rate and no fees, modeled draw interest is zero, but the $50,000 principal still requires $208.33 monthly over a twenty-year repayment period."
+      },
+      {
+        "question": "Does every HELOC have a fully amortizing repayment period?",
+        "answer": "No. Actual agreements can have different minimum-payment rules, terms or balloon requirements. Review the lender’s disclosures; this model assumes fully amortizing repayment."
+      }
+    ],
+    "limitations": [
+      "Constant borrowed balance during draw, one fixed rate per scenario, equal monthly periods and fully amortizing repayment; no daily-balance history or new advances.",
+      "Annual fees apply only during draw and are allocated monthly; closing fees reduce net proceeds without increasing contractual principal.",
+      "Payments, cash-flow annualized cost and fee assumptions are estimates, not lender disclosures, approval or affordability assessments."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-home-equity-line-of-credit-heloc-en-107/",
+        "label": "CFPB: draw, repayment and variable-rate HELOC features"
+      },
+      {
+        "href": "https://files.consumerfinance.gov/f/documents/cfpb_heloc-brochure_print.pdf",
+        "label": "CFPB: shopping for a HELOC, costs and risks"
+      },
+      {
+        "href": "https://www.consumerfinance.gov/rules-policy/regulations/1026/40/",
+        "label": "CFPB Regulation Z: home equity plan disclosures"
+      }
+    ],
+    "related": [
+      {
+        "href": "/home-equity-loan-calculator",
+        "label": "Home Equity Loan Calculator"
+      },
+      {
+        "href": "/glossary/home-equity-and-heloc/",
+        "label": "Home equity and HELOC glossary"
+      },
+      {
+        "href": "/mortgage-calculator",
+        "label": "Mortgage Calculator"
+      },
+      {
+        "href": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "label": "Monthly mortgage payment guide"
       }
     ]
   }

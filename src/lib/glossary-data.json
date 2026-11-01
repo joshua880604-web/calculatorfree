@@ -9,16 +9,16 @@
       "Compounding"
     ],
     "definition": "Compound interest is interest calculated on both the original principal and interest already added to the balance.",
-    "explanation": "When earnings stay invested, they become part of the amount earning the next period\u2019s return. At a fixed positive rate, the interest earned each period grows even when you add no new money. The compounding frequency tells you how often interest is added; monthly and annual nominal rates need equivalent-rate conversion before comparison.",
-    "formula": "Future value = principal \u00d7 (1 + annual nominal rate / periods per year)^(periods per year \u00d7 years)",
+    "explanation": "When earnings stay invested, they become part of the amount earning the next period’s return. At a fixed positive rate, the interest earned each period grows even when you add no new money. The compounding frequency tells you how often interest is added; monthly and annual nominal rates need equivalent-rate conversion before comparison.",
+    "formula": "Future value = principal × (1 + annual nominal rate / periods per year)^(periods per year × years)",
     "formulaNote": "Use rates as decimals: 4% is 0.04. This formula assumes a constant rate, no extra deposits or withdrawals, and no taxes or fees.",
     "example": {
       "title": "$1,500 growing at 4% for three years",
       "intro": "Start with $1,500 and compound once each year at a hypothetical 4% annual rate.",
       "steps": [
-        "Year 1: $1,500 \u00d7 1.04 = $1,560; interest is $60.",
-        "Year 2: $1,560 \u00d7 1.04 = $1,622.40; interest is $62.40.",
-        "Year 3: $1,622.40 \u00d7 1.04 = $1,687.296, displayed as $1,687.30."
+        "Year 1: $1,500 × 1.04 = $1,560; interest is $60.",
+        "Year 2: $1,560 × 1.04 = $1,622.40; interest is $62.40.",
+        "Year 3: $1,622.40 × 1.04 = $1,687.296, displayed as $1,687.30."
       ],
       "answer": "Total interest is $187.30, versus $180 with simple interest on the original $1,500.",
       "assumptions": "Annual compounding; no contributions, withdrawals, taxes or fees. Carry full precision until the displayed result.",
@@ -103,15 +103,15 @@
     ],
     "definition": "CAGR, or compound annual growth rate, is the constant yearly growth rate that would turn a beginning value into an ending value over a specified number of years.",
     "explanation": "It summarizes the endpoints as an annual compounded rate. CAGR can describe an investment balance, revenue or sales, but its interpretation depends on what the values represent. For investment performance, the simple endpoint formula assumes no intervening external deposits or withdrawals. Reinvested income must already be included in the ending value to measure total return.",
-    "formula": "CAGR = (ending value / beginning value)^(1 / years) \u2212 1",
+    "formula": "CAGR = (ending value / beginning value)^(1 / years) − 1",
     "formulaNote": "Multiply the decimal result by 100 for a percentage. Use a positive beginning value, a nonnegative ending value and a positive elapsed period.",
     "example": {
       "title": "$8,000 becoming $10,648 in three years",
       "intro": "Suppose an investment grows from $8,000 to $10,648 with no external cash flows.",
       "steps": [
-        "Total growth: $10,648 / $8,000 \u2212 1 = 33.1%.",
-        "Annualize by compounding: (10,648 / 8,000)^(1/3) \u2212 1 = 10%.",
-        "Check: $8,000 \u00d7 1.10 \u00d7 1.10 \u00d7 1.10 = $10,648."
+        "Total growth: $10,648 / $8,000 − 1 = 33.1%.",
+        "Annualize by compounding: (10,648 / 8,000)^(1/3) − 1 = 10%.",
+        "Check: $8,000 × 1.10 × 1.10 × 1.10 = $10,648."
       ],
       "answer": "CAGR is 10% per year. Dividing 33.1% by three gives about 11.03%, which does not reproduce the ending value when compounded.",
       "assumptions": "Three full years; no external deposits or withdrawals. Values and any reinvested income are measured consistently.",
@@ -168,17 +168,17 @@
       "Inflation-adjusted return",
       "Real return"
     ],
-    "definition": "Real rate of return measures how much an investment\u2019s purchasing power changes after adjusting its nominal return for inflation over the same period.",
+    "definition": "Real rate of return measures how much an investment’s purchasing power changes after adjusting its nominal return for inflation over the same period.",
     "explanation": "Nominal return describes the change in money value. Real return asks how much more or less that money can buy. A positive nominal return can still mean a loss of purchasing power when prices rise faster. An expected real return uses assumed inflation; a realized real return uses inflation measured over the investment period.",
-    "formula": "Real return = (1 + nominal return) / (1 + inflation rate) \u2212 1",
+    "formula": "Real return = (1 + nominal return) / (1 + inflation rate) − 1",
     "formulaNote": "Use decimal rates covering the same period. Subtracting inflation from nominal return is a convenient approximation, not the exact calculation.",
     "example": {
       "title": "An 8% return with 3% inflation",
       "intro": "An investment of $1,000 earns a hypothetical 8% over one year, while the price level rises 3%.",
       "steps": [
-        "Nominal ending value: $1,000 \u00d7 1.08 = $1,080.",
-        "In starting-year purchasing power: $1,080 / 1.03 \u2248 $1,048.54.",
-        "Real return: 1.08 / 1.03 \u2212 1 \u2248 4.8544%."
+        "Nominal ending value: $1,000 × 1.08 = $1,080.",
+        "In starting-year purchasing power: $1,080 / 1.03 ≈ $1,048.54.",
+        "Real return: 1.08 / 1.03 − 1 ≈ 4.8544%."
       ],
       "answer": "Purchasing power rises about 4.85%, rather than the 5% given by simple subtraction.",
       "assumptions": "One year; the return and inflation rate cover the same dates. This example excludes taxes and fees.",
@@ -208,7 +208,7 @@
       },
       {
         "id": "inflation",
-        "text": "Explore price-level changes and review the tool\u2019s historical-data coverage."
+        "text": "Explore price-level changes and review the tool’s historical-data coverage."
       },
       {
         "id": "coast-fire",
@@ -245,25 +245,25 @@
     "slug": "expense-ratio",
     "name": "Expense ratio",
     "title": "What Is an Expense Ratio? Fund Fees Explained",
-    "description": "An expense ratio expresses a fund\u2019s annual operating costs as a percentage of average net assets. See a cost example and avoid counting fees twice.",
+    "description": "An expense ratio expresses a fund’s annual operating costs as a percentage of average net assets. See a cost example and avoid counting fees twice.",
     "category": "Saving & investing",
     "aliases": [
       "Fund expense ratio"
     ],
-    "definition": "An expense ratio is a fund\u2019s annual operating expenses expressed as a percentage of its average net assets.",
+    "definition": "An expense ratio is a fund’s annual operating expenses expressed as a percentage of its average net assets.",
     "explanation": "Mutual funds and ETFs pay operating expenses from fund assets, which reduces the return available to investors. The ratio is annual, even when expenses accrue throughout the year. It is not a fee charged on each purchase, and it does not include every possible cost of investing, such as all trading costs or a separately billed adviser fee. Check the prospectus for the applicable figure and any fee-waiver terms.",
-    "formula": "Approximate annual cost = average invested balance \u00d7 expense ratio",
-    "formulaNote": "Use a decimal ratio: 0.25% is 0.0025. The dollar estimate assumes a constant average balance; actual accrual follows the fund\u2019s practices.",
+    "formula": "Approximate annual cost = average invested balance × expense ratio",
+    "formulaNote": "Use a decimal ratio: 0.25% is 0.0025. The dollar estimate assumes a constant average balance; actual accrual follows the fund’s practices.",
     "example": {
       "title": "A 0.25% expense ratio on $20,000",
       "intro": "Keep the balance at $20,000 for one year to isolate the fee arithmetic.",
       "steps": [
         "Convert the rate: 0.25 / 100 = 0.0025.",
-        "Estimated annual operating cost: $20,000 \u00d7 0.0025 = $50.",
+        "Estimated annual operating cost: $20,000 × 0.0025 = $50.",
         "With no return or new deposits, the simplified annual model ends at $19,950."
       ],
       "answer": "The illustration costs $50 for the year. A 0.25% annual expense ratio is not a 25% charge.",
-      "assumptions": "Zero gross return and no contributions or adviser fees. The calculator uses a simplified annual deduction, not the fund\u2019s daily expense accrual.",
+      "assumptions": "Zero gross return and no contributions or adviser fees. The calculator uses a simplified annual deduction, not the fund’s daily expense accrual.",
       "calculator": {
         "id": "investment-fee",
         "mode": "impact",
@@ -290,7 +290,7 @@
     },
     "pitfall": {
       "title": "Check whether your return already includes the fee",
-      "text": "A fund\u2019s published performance commonly already reflects operating expenses. Deducting the expense ratio again would count the same cost twice. The fee calculator\u2019s After fund fees setting skips that second deduction; separately modeled adviser fees can still apply. Lower fees alone do not establish which investment is suitable."
+      "text": "A fund’s published performance commonly already reflects operating expenses. Deducting the expense ratio again would count the same cost twice. The fee calculator’s After fund fees setting skips that second deduction; separately modeled adviser fees can still apply. Lower fees alone do not establish which investment is suitable."
     },
     "tools": [
       {
@@ -391,19 +391,19 @@
       "401(k) retirement plan"
     ],
     "definition": "A 401(k) is a U.S. employer-sponsored retirement plan that lets eligible employees contribute part of their pay to a tax-advantaged retirement account.",
-    "explanation": "Traditional pre-tax employee contributions generally defer federal income tax until withdrawal. A plan may also offer designated Roth contributions, made with after-tax pay; qualified Roth withdrawals are generally tax-free. Employers may add matching contributions under the plan\u2019s formula. Your own elective deferrals are fully vested, while some employer contributions become yours over a vesting schedule.",
-    "formula": "Illustrative employer match = salary \u00d7 min(employee contribution rate, matched salary percentage) \u00d7 match rate",
+    "explanation": "Traditional pre-tax employee contributions generally defer federal income tax until withdrawal. A plan may also offer designated Roth contributions, made with after-tax pay; qualified Roth withdrawals are generally tax-free. Employers may add matching contributions under the plan’s formula. Your own elective deferrals are fully vested, while some employer contributions become yours over a vesting schedule.",
+    "formula": "Illustrative employer match = salary × min(employee contribution rate, matched salary percentage) × match rate",
     "formulaNote": "This describes a simple single-tier match before legal and plan limits. Actual plans may use different tiers, eligibility, payroll timing and vesting rules.",
     "example": {
       "title": "A 50% match on the first 6% of salary",
       "intro": "Suppose the plan matches half of your contributions up to 6% of an eligible $50,000 annual salary, and you contribute 6%.",
       "steps": [
-        "Your annual contribution: $50,000 \u00d7 6% = $3,000.",
-        "Employer contribution: $50,000 \u00d7 6% \u00d7 50% = $1,500.",
+        "Your annual contribution: $50,000 × 6% = $3,000.",
+        "Employer contribution: $50,000 × 6% × 50% = $1,500.",
         "Together, the deposits total $4,500 before any investment return."
       ],
       "answer": "The 50% match adds $1,500. It does not mean the employer contributes 50% of your salary.",
-      "assumptions": "A one-year arithmetic illustration using projection ages 30\u201331, a zero opening balance and zero return. It assumes eligibility, full vesting and no applicable cap reduction; the projection is before tax and fees.",
+      "assumptions": "A one-year arithmetic illustration using projection ages 30–31, a zero opening balance and zero return. It assumes eligibility, full vesting and no applicable cap reduction; the projection is before tax and fees.",
       "calculator": {
         "id": "401k",
         "mode": "projection",
@@ -437,7 +437,7 @@
       }
     },
     "pitfall": {
-      "title": "The account\u2019s tax treatment is not its investment return",
+      "title": "The account’s tax treatment is not its investment return",
       "text": "Investment performance depends on the assets selected. Contribution limits change by year, and early withdrawals may face taxes and additional charges. Check the current IRS guidance and your plan document. Our projection states its modeled limit year and assumes full vesting; it does not determine your personal eligibility or traditional-versus-Roth tax outcome."
     },
     "tools": [
@@ -487,9 +487,9 @@
     "aliases": [
       "Loan amortization"
     ],
-    "definition": "Loan amortization is the repayment of a loan\u2019s principal through scheduled payments over time, with interest calculated under the loan\u2019s terms.",
-    "explanation": "For a fully amortizing fixed-rate loan with equal payments, each payment first covers the period\u2019s interest and the remainder reduces principal. As the outstanding balance falls, the interest portion generally falls and the principal portion rises. An amortization schedule shows that split and the remaining balance after each payment. Here the term refers to loans, rather than the accounting treatment of intangible assets.",
-    "formula": "Period interest = opening balance \u00d7 period rate; principal repaid = payment \u2212 interest",
+    "definition": "Loan amortization is the repayment of a loan’s principal through scheduled payments over time, with interest calculated under the loan’s terms.",
+    "explanation": "For a fully amortizing fixed-rate loan with equal payments, each payment first covers the period’s interest and the remainder reduces principal. As the outstanding balance falls, the interest portion generally falls and the principal portion rises. An amortization schedule shows that split and the remaining balance after each payment. Here the term refers to loans, rather than the accounting treatment of intangible assets.",
+    "formula": "Period interest = opening balance × period rate; principal repaid = payment − interest",
     "formulaNote": "A fully amortizing payment is chosen to clear the balance over the term. At a zero rate, the payment is simply principal divided by the number of payments.",
     "example": {
       "title": "The first payment on a $12,000, two-year loan",
@@ -497,7 +497,7 @@
       "steps": [
         "Monthly rate: 6% / 12 = 0.5%.",
         "The level monthly payment is approximately $531.85.",
-        "First month\u2019s interest: $12,000 \u00d7 0.5% = $60; about $471.85 goes to principal."
+        "First month’s interest: $12,000 × 0.5% = $60; about $471.85 goes to principal."
       ],
       "answer": "The balance after the first payment is about $11,528.15. Later payments have a smaller interest portion as the balance declines.",
       "assumptions": "Monthly end-of-period payments; no fees, insurance, extra payments or rate changes. The calculator carries full precision, so lender schedules using payment-by-payment cent rounding can differ slightly.",
@@ -590,17 +590,17 @@
     ],
     "definition": "Markup expresses gross profit as a percentage of cost, while gross profit margin expresses the same profit as a percentage of selling price.",
     "explanation": "Both start with selling price minus cost, but their denominators answer different questions. Markup describes the amount added to cost to set a price. Margin describes how much of each sales dollar remains after that cost. For a product calculation, specify what the cost includes and keep sales tax treatment consistent. Gross profit is not net profit after all business expenses.",
-    "formula": "Markup = (price \u2212 cost) / cost; margin = (price \u2212 cost) / price",
-    "formulaNote": "Multiply decimal ratios by 100 for percentages. With positive cost and price: margin = markup / (1 + markup), and markup = margin / (1 \u2212 margin).",
+    "formula": "Markup = (price − cost) / cost; margin = (price − cost) / price",
+    "formulaNote": "Multiply decimal ratios by 100 for percentages. With positive cost and price: margin = markup / (1 + markup), and markup = margin / (1 − margin).",
     "example": {
       "title": "A product costing $80 and selling for $100",
       "intro": "Use a cost of $80 and a selling price of $100, both excluding sales tax.",
       "steps": [
-        "Gross profit per item: $100 \u2212 $80 = $20.",
+        "Gross profit per item: $100 − $80 = $20.",
         "Markup on cost: $20 / $80 = 25%.",
         "Gross profit margin on price: $20 / $100 = 20%."
       ],
-      "answer": "The same $20 profit is a 25% markup and a 20% margin. A 25% margin would instead require a price of $80 / 0.75 \u2248 $106.67.",
+      "answer": "The same $20 profit is a 25% markup and a 20% margin. A 25% margin would instead require a price of $80 / 0.75 ≈ $106.67.",
       "assumptions": "Positive unit cost and selling price; no sales tax. This compares product-level gross profit before other operating expenses.",
       "calculator": {
         "id": "markup",
@@ -623,7 +623,7 @@
     },
     "pitfall": {
       "title": "Do not enter a target margin as a markup",
-      "text": "Adding 20% to cost produces a 16.67% margin, not 20%. At positive cost, a 100% gross margin is unattainable at a finite price. A product\u2019s positive gross margin also does not show whether sales cover rent, staff and other operating costs."
+      "text": "Adding 20% to cost produces a 16.67% margin, not 20%. At positive cost, a 100% gross margin is unattainable at a finite price. A product’s positive gross margin also does not show whether sales cover rent, staff and other operating costs."
     },
     "tools": [
       {
@@ -671,13 +671,13 @@
     ],
     "definition": "Simple interest is interest calculated on principal without adding prior interest to the interest-bearing amount.",
     "explanation": "For an unchanged principal and rate, interest grows in proportion to elapsed time. If loan principal changes after payments, simple interest may instead accrue daily on the remaining principal. A one-deposit illustration is not a full repayment schedule.",
-    "formula": "Interest = principal \u00d7 annual rate \u00d7 years; ending amount = principal + interest",
-    "formulaNote": "Use a decimal rate and matching time units. Daily loan calculations also need the contract\u2019s day-count convention.",
+    "formula": "Interest = principal × annual rate × years; ending amount = principal + interest",
+    "formulaNote": "Use a decimal rate and matching time units. Daily loan calculations also need the contract’s day-count convention.",
     "example": {
       "title": "$2,000 at 5% for three years",
       "intro": "Hold the principal unchanged and use an annual simple rate of 5%.",
       "steps": [
-        "Interest: $2,000 \u00d7 0.05 \u00d7 3 = $300.",
+        "Interest: $2,000 × 0.05 × 3 = $300.",
         "Ending amount: $2,000 + $300 = $2,300."
       ],
       "answer": "Simple interest is $300; the ending amount is $2,300.",
@@ -702,7 +702,7 @@
     },
     "pitfall": {
       "title": "Simple interest is not the same as a flat-rate loan quote",
-      "text": "An amortizing loan\u2019s outstanding balance falls with principal repayments. Applying the original principal for the entire loan term can overstate its interest. Check whether a quoted rate is on a declining balance, a flat balance or an APR."
+      "text": "An amortizing loan’s outstanding balance falls with principal repayments. Applying the original principal for the entire loan term can overstate its interest. Check whether a quoted rate is on a declining balance, a flat balance or an APR."
     },
     "tools": [
       {
@@ -736,22 +736,22 @@
     "slug": "apy",
     "name": "APY",
     "title": "APY: Definition, Formula and Example",
-    "description": "APY is a deposit\u2019s annual percentage yield, expressing one year of interest growth with compounding under stated assumptions.",
+    "description": "APY is a deposit’s annual percentage yield, expressing one year of interest growth with compounding under stated assumptions.",
     "category": "Saving & investing",
     "aliases": [
       "Annual percentage yield",
       "Effective annual yield"
     ],
-    "definition": "APY is a deposit\u2019s annual percentage yield, expressing one year of interest growth with compounding under stated assumptions.",
+    "definition": "APY is a deposit’s annual percentage yield, expressing one year of interest growth with compounding under stated assumptions.",
     "explanation": "A nominal rate alone does not specify the effect of compounding. Reinvesting interest more frequently raises the effective annual yield at the same positive nominal rate. U.S. disclosed APY follows Truth in Savings conventions, including timing assumptions; it is not an after-tax or inflation-adjusted return.",
-    "formula": "Effective annual yield = (1 + nominal annual rate / compounding periods per year)^periods per year \u2212 1",
+    "formula": "Effective annual yield = (1 + nominal annual rate / compounding periods per year)^periods per year − 1",
     "formulaNote": "This regular-period formula assumes a constant rate and reinvested interest. Actual disclosures may use exact days; fees and withdrawals can change what you earn.",
     "example": {
       "title": "5% nominal interest compounded monthly",
       "intro": "Keep interest on deposit for one year.",
       "steps": [
         "Monthly rate: 0.05 / 12.",
-        "Effective annual yield: (1 + 0.05/12)^12 \u2212 1 \u2248 0.0511619."
+        "Effective annual yield: (1 + 0.05/12)^12 − 1 ≈ 0.0511619."
       ],
       "answer": "The effective annual yield is about 5.1162%, before tax and fees.",
       "assumptions": "A fixed nominal annual rate; 12 equal compounding periods.",
@@ -810,15 +810,15 @@
       "Consumer price inflation"
     ],
     "definition": "Inflation is an increase in the general price level over a period, reducing how much a unit of money can buy.",
-    "explanation": "A consumer price index tracks a specified basket and population, rather than every household\u2019s exact costs. A falling inflation rate still means prices are rising if the rate remains positive; a falling price level is deflation. Forecast inflation and observed index changes are different inputs.",
-    "formula": "Inflation = ending price index / starting price index \u2212 1; future equivalent cost = current cost \u00d7 (1 + annual inflation)^years",
+    "explanation": "A consumer price index tracks a specified basket and population, rather than every household’s exact costs. A falling inflation rate still means prices are rising if the rate remains positive; a falling price level is deflation. Forecast inflation and observed index changes are different inputs.",
+    "formula": "Inflation = ending price index / starting price index − 1; future equivalent cost = current cost × (1 + annual inflation)^years",
     "formulaNote": "Compare the same index and compatible periods. A constant annual rate is a projection, not a forecast of particular goods.",
     "example": {
       "title": "$1,000 of spending after two years at 3% inflation",
       "intro": "Assume prices rise 3% in each of two years.",
       "steps": [
-        "Year 1 equivalent: $1,000 \u00d7 1.03 = $1,030.",
-        "Year 2 equivalent: $1,030 \u00d7 1.03 = $1,060.90."
+        "Year 1 equivalent: $1,000 × 1.03 = $1,030.",
+        "Year 2 equivalent: $1,030 × 1.03 = $1,060.90."
       ],
       "answer": "The same basket would cost $1,060.90; cumulative inflation is 6.09%.",
       "assumptions": "A fixed basket and constant assumed rate; no claim about future CPI.",
@@ -881,14 +881,14 @@
     ],
     "definition": "The time value of money compares cash at different dates by accumulating or discounting it at a specified rate.",
     "explanation": "Present value translates future money into an equivalent amount at an earlier date. Future value compounds a current amount forward. The chosen rate reflects the comparison you are making; inflation, investment return and a risk-adjusted discount rate are not automatically interchangeable.",
-    "formula": "Future value = present value \u00d7 (1 + rate)^periods; present value = future value / (1 + rate)^periods",
+    "formula": "Future value = present value × (1 + rate)^periods; present value = future value / (1 + rate)^periods",
     "formulaNote": "Rates and periods must match. These are lump-sum formulas; separate deposits and withdrawals require separate timing.",
     "example": {
       "title": "$1,210 due in two years",
       "intro": "Use a hypothetical 10% annual discount rate.",
       "steps": [
-        "Present value: $1,210 / 1.10\u00b2 = $1,000.",
-        "Reverse check: $1,000 \u00d7 1.10\u00b2 = $1,210."
+        "Present value: $1,210 / 1.10² = $1,000.",
+        "Reverse check: $1,000 × 1.10² = $1,210."
       ],
       "answer": "At the stated rate, $1,210 in two years has a present value of $1,000.",
       "assumptions": "Two full annual periods; one payment; no fees or uncertainty in the stated cash flow.",
@@ -931,7 +931,7 @@
       },
       {
         "id": "rent-vs-buy",
-        "text": "Compare dated housing cash flows under the tool\u2019s assumptions."
+        "text": "Compare dated housing cash flows under the tool’s assumptions."
       }
     ],
     "related": [
@@ -952,23 +952,23 @@
     "slug": "return-on-investment",
     "name": "Return on investment (ROI)",
     "title": "Return on investment (ROI): Definition, Formula and Example",
-    "description": "ROI expresses an investment\u2019s gain or loss relative to its cost over a stated holding period.",
+    "description": "ROI expresses an investment’s gain or loss relative to its cost over a stated holding period.",
     "category": "Saving & investing",
     "aliases": [
       "ROI",
       "Total investment return"
     ],
-    "definition": "ROI expresses an investment\u2019s gain or loss relative to its cost over a stated holding period.",
+    "definition": "ROI expresses an investment’s gain or loss relative to its cost over a stated holding period.",
     "explanation": "Define proceeds, income and costs consistently. A total ROI does not adjust for how long the investment was held. Annualizing a single initial outlay and final receipt is different from measuring a portfolio with intervening deposits or withdrawals. For advertising, eCPM summarizes cost or revenue per 1,000 ad impressions. It does not include all the costs and receipts needed to establish ROI.",
-    "formula": "ROI = (total amount received \u2212 investment cost) / investment cost",
+    "formula": "ROI = (total amount received − investment cost) / investment cost",
     "formulaNote": "A positive cost is required. Include relevant income and fees consistently; multiply the ratio by 100 to show a percentage.",
     "example": {
       "title": "$2,500 returned from a $2,000 investment",
       "intro": "Assume all receipts arrive at the end of a two-year holding period.",
       "steps": [
-        "Gain: $2,500 \u2212 $2,000 = $500.",
+        "Gain: $2,500 − $2,000 = $500.",
         "Total ROI: $500 / $2,000 = 25%.",
-        "Annualized endpoint return: (2,500/2,000)^(1/2) \u2212 1 \u2248 11.8034%."
+        "Annualized endpoint return: (2,500/2,000)^(1/2) − 1 ≈ 11.8034%."
       ],
       "answer": "Total ROI is 25% over two years, not 25% per year.",
       "assumptions": "One initial outlay and one final total receipt; no other cash flows, fees or taxes.",
@@ -1023,7 +1023,7 @@
     ],
     "sources": [
       {
-        "title": "FINRA: Key Concepts \u2014 Return and Rate of Return",
+        "title": "FINRA: Key Concepts — Return and Rate of Return",
         "url": "https://syndication.finra.org/content/key-concepts-return-and-rate-return"
       }
     ],
@@ -1052,14 +1052,14 @@
     ],
     "definition": "IRR is a discount rate that makes the net present value of a specified series of cash flows equal to zero.",
     "explanation": "IRR incorporates the size and timing of contributions and distributions. Periodic IRR assumes equally spaced cash flows; a dated calculation needs an explicit day-count convention. The root may be absent or nonunique when cash flows change sign more than once.",
-    "formula": "0 = \u03a3[cash flow at period t / (1 + IRR)^t], including the initial cash flow at t = 0",
+    "formula": "0 = Σ[cash flow at period t / (1 + IRR)^t], including the initial cash flow at t = 0",
     "formulaNote": "Use signed cash flows from one consistent viewpoint. A periodic IRR is a rate per cash-flow period unless explicitly annualized.",
     "example": {
       "title": "$1,000 invested and $1,100 received a year later",
       "intro": "Treat the investment as an outflow and the receipt as an inflow.",
       "steps": [
-        "At 10%: \u2212$1,000 + $1,100 / 1.10 = $0.",
-        "The single-period rate is $1,100/$1,000 \u2212 1 = 10%."
+        "At 10%: −$1,000 + $1,100 / 1.10 = $0.",
+        "The single-period rate is $1,100/$1,000 − 1 = 10%."
       ],
       "answer": "The annual IRR is 10% for these two cash flows.",
       "assumptions": "Exactly one year; no intermediate payments or extra fees.",
@@ -1086,7 +1086,7 @@
     },
     "pitfall": {
       "title": "A higher IRR is not always the better project",
-      "text": "Projects of different scale or timing may rank differently by NPV. For cash flows \u2212100, +230 and \u2212132 at annual intervals, both 10% and 20% are IRRs. A single displayed root is not necessarily an unambiguous investment return."
+      "text": "Projects of different scale or timing may rank differently by NPV. For cash flows −100, +230 and −132 at annual intervals, both 10% and 20% are IRRs. A single displayed root is not necessarily an unambiguous investment return."
     },
     "tools": [
       {
@@ -1129,14 +1129,14 @@
     ],
     "definition": "NPV is the sum of cash inflows and outflows discounted to one valuation date using a stated discount rate.",
     "explanation": "A positive NPV means the modeled cash flows exceed the return represented by the discount rate. It depends on the amounts, timing and chosen rate; it is not a guaranteed profit. Include the initial outlay and any terminal value once, with consistent signs.",
-    "formula": "NPV = \u03a3[cash flow at period t / (1 + discount rate)^t]",
+    "formula": "NPV = Σ[cash flow at period t / (1 + discount rate)^t]",
     "formulaNote": "Use a rate per cash-flow period and consistent nominal or real amounts. The t = 0 cash flow is not discounted.",
     "example": {
       "title": "$1,000 paid now for $1,100 in one year",
       "intro": "Use a hypothetical 5% annual discount rate.",
       "steps": [
-        "Present value of receipt: $1,100 / 1.05 \u2248 $1,047.619.",
-        "Subtract initial cost: $1,047.619 \u2212 $1,000 \u2248 $47.619."
+        "Present value of receipt: $1,100 / 1.05 ≈ $1,047.619.",
+        "Subtract initial cost: $1,047.619 − $1,000 ≈ $47.619."
       ],
       "answer": "NPV is about $47.62 at a 5% discount rate.",
       "assumptions": "One certain modeled receipt at year end; the rate is an input, not an investment recommendation.",
@@ -1241,7 +1241,7 @@
       },
       {
         "id": "business-loan",
-        "text": "Inspect financing costs separately from a project\u2019s operating cash flows."
+        "text": "Inspect financing costs separately from a project’s operating cash flows."
       }
     ],
     "related": [
@@ -1261,14 +1261,14 @@
     "slug": "bond-yield",
     "name": "Bond yield",
     "title": "Bond yield: Definition, Formula and Example",
-    "description": "Bond yield relates a bond\u2019s income or promised cash flows to its price; current yield and yield to maturity measure different things.",
+    "description": "Bond yield relates a bond’s income or promised cash flows to its price; current yield and yield to maturity measure different things.",
     "category": "Saving & investing",
     "aliases": [
       "Current yield",
       "Yield to maturity (YTM)"
     ],
-    "definition": "Bond yield relates a bond\u2019s income or promised cash flows to its price; current yield and yield to maturity measure different things.",
-    "explanation": "The coupon rate uses face value as its denominator. Current yield divides the annual coupon by today\u2019s price. Yield to maturity is the discount rate matching the price to the scheduled coupons and principal repayment, assuming those payments occur.",
+    "definition": "Bond yield relates a bond’s income or promised cash flows to its price; current yield and yield to maturity measure different things.",
+    "explanation": "The coupon rate uses face value as its denominator. Current yield divides the annual coupon by today’s price. Yield to maturity is the discount rate matching the price to the scheduled coupons and principal repayment, assuming those payments occur.",
     "formula": "Current yield = annual coupon / current price; price = present value of scheduled coupons and redemption",
     "formulaNote": "A yield-to-maturity quote needs a coupon frequency and annualization convention. It is not a forecast of the realized holding-period return.",
     "example": {
@@ -1276,9 +1276,9 @@
       "intro": "Assume $1,000 face value and a fixed $50 annual coupon.",
       "steps": [
         "Coupon rate: $50 / $1,000 = 5%.",
-        "Current yield: $50 / $950 \u2248 5.2632%."
+        "Current yield: $50 / $950 ≈ 5.2632%."
       ],
-      "answer": "Current yield is about 5.2632%; it is not the bond\u2019s yield to maturity.",
+      "answer": "Current yield is about 5.2632%; it is not the bond’s yield to maturity.",
       "assumptions": "The issuer pays as scheduled; fees and taxes excluded. Maturity and redemption also affect YTM.",
       "calculationNote": "The worked example uses the assumptions above. Related tools may model a different scope; check their descriptions before comparing results."
     },
@@ -1321,14 +1321,14 @@
     ],
     "definition": "A certificate of deposit is a time deposit that generally holds money for a specified term under stated interest and withdrawal conditions.",
     "explanation": "Traditional bank CDs often offer a fixed rate, while other structures may have variable or callable features. Withdrawing early can reduce earnings or principal through a penalty. A brokered CD sold before maturity may receive a market price rather than its original deposit amount.",
-    "formula": "For a fixed rate with reinvested interest: maturity value = principal \u00d7 (1 + rate per period)^periods",
+    "formula": "For a fixed rate with reinvested interest: maturity value = principal × (1 + rate per period)^periods",
     "formulaNote": "Check APY, interest-crediting frequency, maturity, renewal terms and withdrawal rules. Deposit-insurance eligibility and limits depend on the institution and ownership category.",
     "example": {
       "title": "$5,000 for two years at 4%, compounded annually",
       "intro": "Assume interest remains in the CD until maturity.",
       "steps": [
-        "Year 1: $5,000 \u00d7 1.04 = $5,200.",
-        "Year 2: $5,200 \u00d7 1.04 = $5,408."
+        "Year 1: $5,000 × 1.04 = $5,200.",
+        "Year 2: $5,200 × 1.04 = $5,408."
       ],
       "answer": "Maturity value is $5,408, including $408 of interest before tax.",
       "assumptions": "Fixed rate, no early withdrawal, no fees, no automatic-renewal period.",
@@ -1378,30 +1378,30 @@
     "slug": "mutual-funds-and-etfs",
     "name": "Mutual funds and ETFs",
     "title": "Mutual funds and ETFs: Definition, Formula and Example",
-    "description": "Mutual funds and ETFs pool investors\u2019 money into portfolios; their trading and pricing arrangements differ.",
+    "description": "Mutual funds and ETFs pool investors’ money into portfolios; their trading and pricing arrangements differ.",
     "category": "Saving & investing",
     "aliases": [
       "Exchange-traded funds",
       "Pooled investment funds"
     ],
-    "definition": "Mutual funds and ETFs pool investors\u2019 money into portfolios; their trading and pricing arrangements differ.",
+    "definition": "Mutual funds and ETFs pool investors’ money into portfolios; their trading and pricing arrangements differ.",
     "explanation": "Traditional open-end mutual fund shares are bought or redeemed at the next calculated net asset value, subject to applicable charges. Retail ETF shares trade on an exchange during the day at market prices that can differ from NAV. Either wrapper may use active or index-based management.",
-    "formula": "NAV per share = (fund assets \u2212 fund liabilities) / shares outstanding",
+    "formula": "NAV per share = (fund assets − fund liabilities) / shares outstanding",
     "formulaNote": "NAV is a portfolio accounting value. It does not remove transaction costs, fund expenses or the risk of investment loss.",
     "example": {
       "title": "A fund with $10.2 million of assets",
       "intro": "Assume $200,000 of liabilities and one million shares.",
       "steps": [
-        "Net assets: $10,200,000 \u2212 $200,000 = $10,000,000.",
+        "Net assets: $10,200,000 − $200,000 = $10,000,000.",
         "NAV per share: $10,000,000 / 1,000,000 = $10."
       ],
-      "answer": "NAV is $10 per share; an ETF\u2019s exchange price need not be exactly $10.",
+      "answer": "NAV is $10 per share; an ETF’s exchange price need not be exactly $10.",
       "assumptions": "All assets and liabilities valued consistently at the same time.",
       "calculationNote": "The worked example uses the assumptions above. Related tools may model a different scope; check their descriptions before comparing results."
     },
     "pitfall": {
       "title": "The wrapper does not establish diversification or return",
-      "text": "A narrowly focused ETF or mutual fund can be concentrated. Expense ratios, trading spreads, sales charges and tax treatment differ. A growth calculator does not reproduce an actual fund\u2019s holdings, NAV or trading history."
+      "text": "A narrowly focused ETF or mutual fund can be concentrated. Expense ratios, trading spreads, sales charges and tax treatment differ. A growth calculator does not reproduce an actual fund’s holdings, NAV or trading history."
     },
     "tools": [
       {
@@ -1439,17 +1439,17 @@
     ],
     "definition": "Arithmetic average return is the simple mean of periodic returns; geometric average return is the constant compounded rate matching their cumulative growth.",
     "explanation": "An arithmetic mean describes an average single-period outcome. The geometric mean describes linked growth over the full sequence, before external cash-flow effects. Volatility can leave the arithmetic mean positive while compounded wealth is unchanged or lower.",
-    "formula": "Arithmetic mean = \u03a3 returns / number of periods; geometric mean = [\u03a0(1 + return)]^(1 / number of periods) \u2212 1",
-    "formulaNote": "Use equally long periods. Standard investment growth factors must be nonnegative; a \u2212100% period wipes out the invested amount.",
+    "formula": "Arithmetic mean = Σ returns / number of periods; geometric mean = [Π(1 + return)]^(1 / number of periods) − 1",
+    "formulaNote": "Use equally long periods. Standard investment growth factors must be nonnegative; a −100% period wipes out the invested amount.",
     "example": {
       "title": "A gain of 20% followed by a loss of 20%",
       "intro": "Begin with $1,000 and add no money.",
       "steps": [
-        "After the gain: $1,000 \u00d7 1.20 = $1,200.",
-        "After the loss: $1,200 \u00d7 0.80 = $960.",
-        "Arithmetic mean: (20% \u2212 20%)/2 = 0%; geometric mean: \u221a0.96 \u2212 1 \u2248 \u22122.0204%."
+        "After the gain: $1,000 × 1.20 = $1,200.",
+        "After the loss: $1,200 × 0.80 = $960.",
+        "Arithmetic mean: (20% − 20%)/2 = 0%; geometric mean: √0.96 − 1 ≈ −2.0204%."
       ],
-      "answer": "The arithmetic mean is 0%, but wealth falls 4% and the geometric annual mean is about \u22122.0204%.",
+      "answer": "The arithmetic mean is 0%, but wealth falls 4% and the geometric annual mean is about −2.0204%.",
       "assumptions": "Two consecutive annual returns; no external deposits, taxes or fees.",
       "calculationNote": "The worked example uses the assumptions above. Related tools may model a different scope; check their descriptions before comparing results."
     },
@@ -1469,7 +1469,7 @@
     ],
     "sources": [
       {
-        "title": "OpenStax: Measures of Center \u2014 Arithmetic and Geometric Means",
+        "title": "OpenStax: Measures of Center — Arithmetic and Geometric Means",
         "url": "https://openstax.org/books/principles-finance/pages/13-1-measures-of-center"
       }
     ],
@@ -1487,14 +1487,14 @@
       "Insurance annuity"
     ],
     "definition": "In finance mathematics, an annuity is a series of equally spaced payments; an insurance annuity is a contract that may provide income under specified terms.",
-    "explanation": "An ordinary annuity pays at period end; an annuity due pays at period beginning. A mathematical payment stream can last for a fixed term. Lifetime insurance income also depends on mortality assumptions, contract options, charges and the insurer\u2019s ability to pay.",
-    "formula": "Ordinary-annuity present value = payment \u00d7 [1 \u2212 (1 + rate)^\u2212periods] / rate",
-    "formulaNote": "Use the rate per payment period. At zero interest, present value equals payment \u00d7 number of payments. This formula alone is not a lifetime insurance quote.",
+    "explanation": "An ordinary annuity pays at period end; an annuity due pays at period beginning. A mathematical payment stream can last for a fixed term. Lifetime insurance income also depends on mortality assumptions, contract options, charges and the insurer’s ability to pay.",
+    "formula": "Ordinary-annuity present value = payment × [1 − (1 + rate)^−periods] / rate",
+    "formulaNote": "Use the rate per payment period. At zero interest, present value equals payment × number of payments. This formula alone is not a lifetime insurance quote.",
     "example": {
       "title": "Three year-end payments of $1,000",
       "intro": "Discount each payment at 5% per year.",
       "steps": [
-        "Present value = $1,000/1.05 + $1,000/1.05\u00b2 + $1,000/1.05\u00b3.",
+        "Present value = $1,000/1.05 + $1,000/1.05² + $1,000/1.05³.",
         "The three present values sum to about $2,723.248."
       ],
       "answer": "The payment stream has a present value of $2,723.25 at the stated rate.",
@@ -1524,7 +1524,7 @@
     "tools": [
       {
         "id": "annuity",
-        "text": "Project a hypothetical accumulation balance, not an insurer\u2019s quote."
+        "text": "Project a hypothetical accumulation balance, not an insurer’s quote."
       },
       {
         "id": "annuity-payout",
@@ -1561,13 +1561,13 @@
     ],
     "definition": "Traditional and Roth IRAs are U.S. retirement arrangements with different contribution and withdrawal tax treatment.",
     "explanation": "An eligible traditional IRA contribution may be deductible; distributions attributable to deductible contributions and earnings are generally taxable. Roth contributions are not deductible, while qualified distributions are tax-free. Deductibility, contribution eligibility and withdrawal rules depend on income, coverage, age and tax-year rules.",
-    "formula": "Simplified comparison: traditional after-tax value = pretax contribution \u00d7 growth factor \u00d7 (1 \u2212 withdrawal tax rate)",
+    "formula": "Simplified comparison: traditional after-tax value = pretax contribution × growth factor × (1 − withdrawal tax rate)",
     "formulaNote": "Compare equal pretax cost or equal current take-home cost. Nondeductible basis, conversions, annual limits and early-distribution rules need separate treatment.",
     "example": {
       "title": "The same $1,000 of pretax income",
       "intro": "Assume a fully deductible traditional contribution and a 22% tax rate now and at withdrawal.",
       "steps": [
-        "Traditional: invest $1,000, double to $2,000, then retain $2,000 \u00d7 0.78 = $1,560.",
+        "Traditional: invest $1,000, double to $2,000, then retain $2,000 × 0.78 = $1,560.",
         "Roth: pay $220 of tax now, invest $780, then double to $1,560 in a qualified distribution."
       ],
       "answer": "Both leave $1,560 under equal tax rates and the same pretax budget.",
@@ -1581,7 +1581,7 @@
     "tools": [
       {
         "id": "ira",
-        "text": "Compare the tool\u2019s traditional/Roth assumptions and stated tax rates."
+        "text": "Compare the tool’s traditional/Roth assumptions and stated tax rates."
       },
       {
         "id": "roth-ira",
@@ -1630,15 +1630,15 @@
     ],
     "definition": "An employer match is a plan contribution tied to employee contributions; vesting determines how much of an employer-provided benefit the employee owns.",
     "explanation": "A plan may match a fraction of employee deferrals up to a compensation percentage or use several tiers. Employees own their own salary deferrals; employer contributions can follow a vesting schedule. Limits, eligible compensation, timing and any true-up depend on the plan and applicable rules.",
-    "formula": "Simple one-tier match = matching percentage \u00d7 min(employee contribution, eligible compensation \u00d7 matched band)",
-    "formulaNote": "This formula precedes applicable plan and legal caps. A vested employer amount also depends on the plan\u2019s vesting percentage.",
+    "formula": "Simple one-tier match = matching percentage × min(employee contribution, eligible compensation × matched band)",
+    "formulaNote": "This formula precedes applicable plan and legal caps. A vested employer amount also depends on the plan’s vesting percentage.",
     "example": {
       "title": "A 50% match on the first 6% of $60,000 pay",
       "intro": "Assume the employee contributes 10% of eligible annual pay.",
       "steps": [
-        "Employee contribution: $60,000 \u00d7 10% = $6,000.",
-        "Matched band: $60,000 \u00d7 6% = $3,600; employer match: $3,600 \u00d7 50% = $1,800.",
-        "If the match is 40% vested, $1,800 \u00d7 40% = $720 of that match is vested."
+        "Employee contribution: $60,000 × 10% = $6,000.",
+        "Matched band: $60,000 × 6% = $3,600; employer match: $3,600 × 50% = $1,800.",
+        "If the match is 40% vested, $1,800 × 40% = $720 of that match is vested."
       ],
       "answer": "The match is $1,800; in the hypothetical vesting case, $720 of the match is owned.",
       "assumptions": "One annual calculation; no cap binds. The 40% vesting rate is illustrative, not a universal schedule.",
@@ -1660,7 +1660,7 @@
     ],
     "sources": [
       {
-        "title": "IRS: Retirement Topics \u2014 Vesting",
+        "title": "IRS: Retirement Topics — Vesting",
         "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-vesting"
       },
       {
@@ -1741,7 +1741,7 @@
     ],
     "sources": [
       {
-        "title": "IRS: Retirement Topics \u2014 Required Minimum Distributions",
+        "title": "IRS: Retirement Topics — Required Minimum Distributions",
         "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-required-minimum-distributions-rmds"
       },
       {
@@ -1756,22 +1756,22 @@
     "slug": "social-security-benefits",
     "name": "Social Security retirement benefits",
     "title": "Social Security retirement benefits: Definition, Formula and Example",
-    "description": "U.S. Social Security retirement benefits are monthly benefits based on a worker\u2019s covered earnings record, eligibility and claiming age.",
+    "description": "U.S. Social Security retirement benefits are monthly benefits based on a worker’s covered earnings record, eligibility and claiming age.",
     "category": "Retirement",
     "aliases": [
       "U.S. Social Security",
       "Full retirement age"
     ],
-    "definition": "U.S. Social Security retirement benefits are monthly benefits based on a worker\u2019s covered earnings record, eligibility and claiming age.",
+    "definition": "U.S. Social Security retirement benefits are monthly benefits based on a worker’s covered earnings record, eligibility and claiming age.",
     "explanation": "Full retirement age varies by birth year. Claiming a worker benefit early reduces the amount relative to full retirement age, while delayed retirement credits can increase it up to age 70. Spousal and survivor benefits follow different rules, and work before full retirement age can affect payments.",
-    "formula": "Illustrative worker benefit = full-retirement-age benefit \u00d7 applicable claiming-age factor",
+    "formula": "Illustrative worker benefit = full-retirement-age benefit × applicable claiming-age factor",
     "formulaNote": "The earnings-based benefit must first be established. A claiming factor alone does not calculate eligibility or the complete earnings record.",
     "example": {
       "title": "A hypothetical $2,000 full-retirement-age benefit",
       "intro": "For a worker born in 1960 or later, full retirement age is 67.",
       "steps": [
-        "SSA\u2019s age-62 worker factor is 70% for this birth cohort.",
-        "Early monthly benefit: $2,000 \u00d7 70% = $1,400."
+        "SSA’s age-62 worker factor is 70% for this birth cohort.",
+        "Early monthly benefit: $2,000 × 70% = $1,400."
       ],
       "answer": "The illustrated age-62 worker benefit is $1,400 a month, before other adjustments.",
       "assumptions": "Current SSA claiming factors checked October 23, 2026; excludes COLAs, earnings-test withholding, tax and spousal/survivor benefits.",
@@ -1784,7 +1784,7 @@
     "tools": [
       {
         "id": "social-security",
-        "text": "Explore the tool\u2019s earnings-based and claiming-age estimates with their stated scope."
+        "text": "Explore the tool’s earnings-based and claiming-age estimates with their stated scope."
       }
     ],
     "related": [
@@ -1812,14 +1812,14 @@
     ],
     "definition": "A withdrawal rate expresses portfolio withdrawals relative to a specified portfolio balance; the denominator and adjustment rule must be stated.",
     "explanation": "A starting-balance rule takes a percentage of the initial balance and may raise that dollar amount with inflation later. A current-balance rule recalculates the percentage each year. A fixed-horizon depletion model is different from either approach and can assume the balance is spent by a chosen age.",
-    "formula": "Initial annual withdrawal = starting portfolio balance \u00d7 initial withdrawal rate",
+    "formula": "Initial annual withdrawal = starting portfolio balance × initial withdrawal rate",
     "formulaNote": "Monthly amount = annual amount / 12 is a budgeting conversion, not a simulation of monthly returns or tax.",
     "example": {
       "title": "A 4% first-year withdrawal from $1 million",
       "intro": "Assume a starting-balance rule, then a 3% inflation adjustment.",
       "steps": [
-        "First year: $1,000,000 \u00d7 4% = $40,000, or about $3,333.33 per month.",
-        "Next year\u2019s inflation-adjusted amount: $40,000 \u00d7 1.03 = $41,200."
+        "First year: $1,000,000 × 4% = $40,000, or about $3,333.33 per month.",
+        "Next year’s inflation-adjusted amount: $40,000 × 1.03 = $41,200."
       ],
       "answer": "The first-year amount is $40,000; the second-year illustration is $41,200 regardless of the new balance.",
       "assumptions": "An illustration, not a recommended or guaranteed rate; taxes and fees excluded.",
@@ -1888,13 +1888,13 @@
     ],
     "definition": "A defined-benefit pension promises a retirement benefit determined by a plan formula, rather than merely the value of an individual investment account.",
     "explanation": "A formula may use credited service, eligible salary and an accrual percentage. Retirement age, vesting, survivor coverage, payment form and cost-of-living provisions can change the payable benefit. A stated pension amount is not the same thing as a cash account available for withdrawal.",
-    "formula": "Illustrative annual pension = credited years \u00d7 benefit accrual rate \u00d7 eligible average annual salary",
-    "formulaNote": "This is one possible formula, not a universal pension rule. Apply the actual plan\u2019s definitions and reductions.",
+    "formula": "Illustrative annual pension = credited years × benefit accrual rate × eligible average annual salary",
+    "formulaNote": "This is one possible formula, not a universal pension rule. Apply the actual plan’s definitions and reductions.",
     "example": {
       "title": "30 years of service with a 1.5% accrual rate",
       "intro": "Assume eligible average salary is $60,000.",
       "steps": [
-        "Annual pension: 30 \u00d7 0.015 \u00d7 $60,000 = $27,000.",
+        "Annual pension: 30 × 0.015 × $60,000 = $27,000.",
         "Monthly amount: $27,000 / 12 = $2,250."
       ],
       "answer": "The hypothetical formula produces $27,000 a year, or $2,250 a month.",
@@ -1903,7 +1903,7 @@
     },
     "pitfall": {
       "title": "A lump sum and lifetime income need more than a face-value comparison",
-      "text": "Present value depends on timing, discount rate and longevity. Survivor protection and inflation terms also matter. A simple discounted-value calculator does not independently verify the plan\u2019s funding, guarantees or your benefit entitlement."
+      "text": "Present value depends on timing, discount rate and longevity. Survivor protection and inflation terms also matter. A simple discounted-value calculator does not independently verify the plan’s funding, guarantees or your benefit entitlement."
     },
     "tools": [
       {
@@ -1936,15 +1936,15 @@
       "Annualized borrowing cost"
     ],
     "definition": "APR is an annualized measure of borrowing cost under a specified disclosure method; for many closed-end loans it includes specified finance charges as well as interest.",
-    "explanation": "Interest rate and APR need not be equal when points or other included charges reduce the borrower\u2019s net proceeds. Legal inclusions and calculation methods depend on jurisdiction and credit product. Credit-card or HELOC APR is not necessarily comparable to a fee-inclusive closed-end mortgage APR.",
+    "explanation": "Interest rate and APR need not be equal when points or other included charges reduce the borrower’s net proceeds. Legal inclusions and calculation methods depend on jurisdiction and credit product. Credit-card or HELOC APR is not necessarily comparable to a fee-inclusive closed-end mortgage APR.",
     "formula": "Cash-flow illustration: net amount received = present value of the scheduled payments at the borrowing rate",
     "formulaNote": "Do not simply add a fee percentage to the interest rate. Payment timing and net proceeds matter; the illustration below is not a universal legal APR formula.",
     "example": {
       "title": "$10,000 borrowed with a $100 included upfront fee",
       "intro": "Assume a single $11,000 repayment exactly one year later.",
       "steps": [
-        "Net proceeds: $10,000 \u2212 $100 = $9,900.",
-        "One-year cash-flow rate: $11,000/$9,900 \u2212 1 \u2248 11.1111%."
+        "Net proceeds: $10,000 − $100 = $9,900.",
+        "One-year cash-flow rate: $11,000/$9,900 − 1 ≈ 11.1111%."
       ],
       "answer": "The simplified one-year cash-flow cost is about 11.1111%, although interest on the $10,000 face amount is 10%.",
       "assumptions": "One annual payment and one assumed included finance charge; excludes other charges and special disclosure conventions.",
@@ -1957,7 +1957,7 @@
     "tools": [
       {
         "id": "apr",
-        "text": "Estimate borrowing APR under the tool\u2019s stated fee and timing assumptions."
+        "text": "Estimate borrowing APR under the tool’s stated fee and timing assumptions."
       },
       {
         "id": "personal-loan",
@@ -2002,15 +2002,15 @@
     ],
     "definition": "Principal is the outstanding amount borrowed; interest is the charge for using that money over time.",
     "explanation": "A payment may cover fees and accrued interest before reducing principal. On a standard amortizing loan, the interest portion changes as the balance changes. Mortgage escrow, insurance and taxes may increase the total payment without reducing the loan balance.",
-    "formula": "For one regular period: interest = opening principal \u00d7 periodic rate; principal repaid = payment \u2212 interest",
+    "formula": "For one regular period: interest = opening principal × periodic rate; principal repaid = payment − interest",
     "formulaNote": "This simple split excludes fees, arrears and contract-specific allocation rules. Daily-interest contracts also depend on elapsed days.",
     "example": {
       "title": "Splitting a $1,000 payment",
       "intro": "Start with $12,000 outstanding at 6% nominal annual interest with monthly periods.",
       "steps": [
-        "Monthly interest: $12,000 \u00d7 0.06/12 = $60.",
-        "Principal repaid: $1,000 \u2212 $60 = $940.",
-        "Closing principal: $12,000 \u2212 $940 = $11,060."
+        "Monthly interest: $12,000 × 0.06/12 = $60.",
+        "Principal repaid: $1,000 − $60 = $940.",
+        "Closing principal: $12,000 − $940 = $11,060."
       ],
       "answer": "Of this payment, $940 reduces principal and $60 pays interest.",
       "assumptions": "One regular month; no fees, escrow, new borrowing or prior unpaid interest.",
@@ -2111,7 +2111,7 @@
       },
       {
         "id": "interest-rate",
-        "text": "Solve a stated payment model\u2019s implied rate."
+        "text": "Solve a stated payment model’s implied rate."
       }
     ],
     "related": [
@@ -2140,17 +2140,17 @@
     ],
     "definition": "DTI compares required monthly debt payments with gross monthly income, using a consistent definition of included obligations.",
     "explanation": "A housing ratio focuses on housing obligations; a total debt ratio includes other qualifying debt payments. The denominator is usually gross income rather than take-home pay. Loan programs differ in income documentation, included costs and acceptable ratios.",
-    "formula": "DTI = qualifying monthly debt payments / gross monthly income \u00d7 100%",
+    "formula": "DTI = qualifying monthly debt payments / gross monthly income × 100%",
     "formulaNote": "Convert annual, weekly and other payment amounts to the same monthly basis. Do not use outstanding debt balances as the numerator.",
     "example": {
       "title": "$1,800 of debt payments on $6,000 gross monthly income",
       "intro": "Assume all listed payments qualify for the total ratio.",
       "steps": [
         "Monthly payment total: $1,400 housing + $400 other debt = $1,800.",
-        "DTI: $1,800/$6,000 \u00d7 100% = 30%."
+        "DTI: $1,800/$6,000 × 100% = 30%."
       ],
       "answer": "Total DTI is 30% under these definitions.",
-      "assumptions": "Gross income, monthly amounts; expenses not included in a lender\u2019s DTI may still affect affordability.",
+      "assumptions": "Gross income, monthly amounts; expenses not included in a lender’s DTI may still affect affordability.",
       "calculationNote": "The worked example uses the assumptions above. Related tools may model a different scope; check their descriptions before comparing results."
     },
     "pitfall": {
@@ -2200,7 +2200,7 @@
       "intro": "Combine $2,000 and $3,000 of balances.",
       "steps": [
         "Debt total: $2,000 + $3,000 = $5,000.",
-        "Fee: $5,000 \u00d7 3% = $150.",
+        "Fee: $5,000 × 3% = $150.",
         "New principal with financed fee: $5,000 + $150 = $5,150."
       ],
       "answer": "The new loan starts at $5,150, so consolidation has not erased any debt.",
@@ -2214,7 +2214,7 @@
     "tools": [
       {
         "id": "debt-consolidation",
-        "text": "Compare the tool\u2019s modeled debts, fees and consolidation terms."
+        "text": "Compare the tool’s modeled debts, fees and consolidation terms."
       }
     ],
     "related": [
@@ -2243,7 +2243,7 @@
     ],
     "definition": "Debt snowball directs extra repayment to the smallest balance first; debt avalanche directs it to the highest interest rate first, while minimums continue on other debts.",
     "explanation": "After a target debt is paid off, its payment can roll into the next target. With fixed rates, the same payment budget and no special constraints, prioritizing the highest rate generally minimizes interest. Snowball prioritizes earlier account closures rather than that interest ordering.",
-    "formula": "Extra payment budget = total available debt payment \u2212 sum of required minimum payments",
+    "formula": "Extra payment budget = total available debt payment − sum of required minimum payments",
     "formulaNote": "The strategies require enough to cover all minimums. Fees, promotional expirations, secured arrears and contractual rules can change priorities.",
     "example": {
       "title": "Two balances and $150 of extra payment",
@@ -2259,7 +2259,7 @@
     },
     "pitfall": {
       "title": "An ordering rule is not a full repayment schedule",
-      "text": "The total interest difference depends on payments and timing. Do not skip another account\u2019s minimum to follow a strategy. If total available payments do not cover accruing interest, debt may not amortize."
+      "text": "The total interest difference depends on payments and timing. Do not skip another account’s minimum to follow a strategy. If total available payments do not cover accruing interest, debt may not amortize."
     },
     "tools": [
       {
@@ -2272,7 +2272,7 @@
       },
       {
         "id": "credit-card",
-        "text": "Inspect a single card\u2019s payoff under stated payments."
+        "text": "Inspect a single card’s payoff under stated payments."
       },
       {
         "id": "debt-snowball",
@@ -2319,13 +2319,13 @@
         "New principal: $10,000 + $500 = $10,500.",
         "At 6% simple annual interest on an unchanged balance, annual interest becomes $630 instead of $600."
       ],
-      "answer": "Capitalization adds $500 to principal and $30 to the next illustrated year\u2019s interest.",
+      "answer": "Capitalization adds $500 to principal and $30 to the next illustrated year’s interest.",
       "assumptions": "No repayments, further capitalization or fees during the following year; hypothetical constant rate.",
       "calculationNote": "The worked example uses the assumptions above. Related tools may model a different scope; check their descriptions before comparing results."
     },
     "pitfall": {
       "title": "Unpaid interest is not always capitalized immediately",
-      "text": "Student-loan rules vary and can change. Confirm the actual capitalization event with the servicer. The generic tool\u2019s entered capitalization assumption is not a determination of eligibility for a federal repayment or forgiveness program."
+      "text": "Student-loan rules vary and can change. Confirm the actual capitalization event with the servicer. The generic tool’s entered capitalization assumption is not a determination of eligibility for a federal repayment or forgiveness program."
     },
     "tools": [
       {
@@ -2351,22 +2351,22 @@
     "slug": "interest-only-and-balloon-loans",
     "name": "Interest-only and balloon loans",
     "title": "Interest-only and balloon loans: Definition, Formula and Example",
-    "description": "An interest-only payment covers periodic interest without reducing principal; a balloon payment is a larger lump sum due under the loan\u2019s repayment structure.",
+    "description": "An interest-only payment covers periodic interest without reducing principal; a balloon payment is a larger lump sum due under the loan’s repayment structure.",
     "category": "Loans & debt",
     "aliases": [
       "Interest-only payment",
       "Balloon payment",
       "Negative amortization"
     ],
-    "definition": "An interest-only payment covers periodic interest without reducing principal; a balloon payment is a larger lump sum due under the loan\u2019s repayment structure.",
+    "definition": "An interest-only payment covers periodic interest without reducing principal; a balloon payment is a larger lump sum due under the loan’s repayment structure.",
     "explanation": "Some loans have an interest-only phase and later amortizing payments, while others require principal at maturity. If a permitted payment does not cover accruing interest and the shortfall is added to the balance, negative amortization occurs. These structures are not the same as a fully amortizing schedule.",
-    "formula": "Interest-only payment = outstanding principal \u00d7 periodic interest rate",
+    "formula": "Interest-only payment = outstanding principal × periodic interest rate",
     "formulaNote": "The principal remains due. Balloon size also depends on any interim principal repayment, fees or capitalized shortfalls.",
     "example": {
       "title": "$100,000 at 6% with monthly interest-only payments",
       "intro": "Assume the full principal is due after a year.",
       "steps": [
-        "Monthly interest: $100,000 \u00d7 0.06/12 = $500.",
+        "Monthly interest: $100,000 × 0.06/12 = $500.",
         "Twelve interest payments total $6,000.",
         "Principal is still $100,000 at maturity."
       ],
@@ -2419,8 +2419,8 @@
     ],
     "definition": "LTV compares a loan balance with a stated property value; combined LTV includes the relevant loans secured by the same property.",
     "explanation": "A larger down payment generally lowers initial LTV when the value basis is unchanged. Underwriting may use an appraisal, purchase price or a specified combination. Second liens require a combined measure; equity percentage and LTV describe different sides of the same simplified balance sheet.",
-    "formula": "LTV = loan balance / property value \u00d7 100%; CLTV = relevant secured loan balances / property value \u00d7 100%",
-    "formulaNote": "State the value date and which liens are included. A lender may treat a HELOC\u2019s drawn balance or full credit limit differently for particular underwriting ratios.",
+    "formula": "LTV = loan balance / property value × 100%; CLTV = relevant secured loan balances / property value × 100%",
+    "formulaNote": "State the value date and which liens are included. A lender may treat a HELOC’s drawn balance or full credit limit differently for particular underwriting ratios.",
     "example": {
       "title": "$240,000 borrowed on a $300,000 property",
       "intro": "Use the same $300,000 value for each ratio.",
@@ -2481,15 +2481,15 @@
     ],
     "definition": "Home equity is property value minus debt secured on it; a HELOC is revolving credit secured by the home, while a home equity loan usually advances a lump sum.",
     "explanation": "Equity is not automatically available cash. Lenders evaluate combined loan exposure, income, credit and other conditions. HELOCs typically have a draw phase and a repayment phase, with rates and payment requirements set by the contract. Using the home as collateral creates foreclosure risk.",
-    "formula": "Simplified equity = property value \u2212 secured debt; illustrative additional capacity = allowed combined debt \u2212 existing secured debt",
+    "formula": "Simplified equity = property value − secured debt; illustrative additional capacity = allowed combined debt − existing secured debt",
     "formulaNote": "An assumed CLTV ceiling is an input, not a universal lending rule or a guaranteed line of credit.",
     "example": {
       "title": "$300,000 home with $180,000 of secured debt",
       "intro": "Assume a hypothetical lender ceiling of 80% combined LTV.",
       "steps": [
-        "Equity: $300,000 \u2212 $180,000 = $120,000.",
-        "Assumed combined debt ceiling: 80% \u00d7 $300,000 = $240,000.",
-        "Illustrative extra capacity: $240,000 \u2212 $180,000 = $60,000."
+        "Equity: $300,000 − $180,000 = $120,000.",
+        "Assumed combined debt ceiling: 80% × $300,000 = $240,000.",
+        "Illustrative extra capacity: $240,000 − $180,000 = $60,000."
       ],
       "answer": "Equity is $120,000, but the illustrated additional borrowing room is only $60,000.",
       "assumptions": "No other liens or fees; the 80% ceiling is hypothetical and approval is not assumed.",
@@ -2525,7 +2525,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "Home-secured borrowing; examples and source terminology use the U.S. lending context."
+    "scope": "Home-secured borrowing; examples and source terminology use the U.S. lending context.",
+    "guides": [
+      {
+        "title": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
+        "path": "/guides/how-are-heloc-payments-calculated/"
+      }
+    ]
   },
   {
     "slug": "mortgage-points",
@@ -2539,13 +2545,13 @@
     ],
     "definition": "Discount points are upfront mortgage charges connected to a lower interest rate; one point equals 1% of the loan amount.",
     "explanation": "Paying points exchanges more cash at closing for a different rate and later payment stream. The rate reduction per point is not fixed across lenders or loans. Lender credits can make the opposite tradeoff, reducing upfront cost in exchange for a higher rate.",
-    "formula": "Points cost = loan amount \u00d7 points / 100; simple recovery months = upfront incremental cost / monthly payment saving",
+    "formula": "Points cost = loan amount × points / 100; simple recovery months = upfront incremental cost / monthly payment saving",
     "formulaNote": "The recovery formula ignores timing value, tax, financed costs and remaining principal. Use comparable offers and separate other closing costs.",
     "example": {
       "title": "1.25 points on a $240,000 mortgage",
       "intro": "Assume the lower-rate offer saves $60 per month and all else is comparable.",
       "steps": [
-        "Points cost: $240,000 \u00d7 1.25/100 = $3,000.",
+        "Points cost: $240,000 × 1.25/100 = $3,000.",
         "Simple payment recovery: $3,000/$60 = 50 months."
       ],
       "answer": "The points cost $3,000, with a simple payment-based recovery of 50 months.",
@@ -2594,13 +2600,13 @@
     "slug": "mortgage-escrow",
     "name": "Mortgage escrow",
     "title": "Mortgage escrow: Definition, Formula and Example",
-    "description": "A mortgage escrow account holds collected funds so a servicer can pay specified property expenses, commonly taxes and insurance, on the borrower\u2019s behalf.",
+    "description": "A mortgage escrow account holds collected funds so a servicer can pay specified property expenses, commonly taxes and insurance, on the borrower’s behalf.",
     "category": "Housing & property",
     "aliases": [
       "Impound account",
       "Tax and insurance escrow"
     ],
-    "definition": "A mortgage escrow account holds collected funds so a servicer can pay specified property expenses, commonly taxes and insurance, on the borrower\u2019s behalf.",
+    "definition": "A mortgage escrow account holds collected funds so a servicer can pay specified property expenses, commonly taxes and insurance, on the borrower’s behalf.",
     "explanation": "The monthly collection is part of the total housing payment but is not mortgage principal or interest. Tax bills, premiums, shortages and permitted account cushions can change the collection even on a fixed-rate mortgage. Closing escrow for a transaction is a different use of the word.",
     "formula": "Simple monthly provision = annual included property expenses / 12",
     "formulaNote": "An actual escrow analysis may also include timing, a permitted cushion and shortage repayment. Homeowners remain responsible for property expenses without escrow.",
@@ -2648,13 +2654,13 @@
     "slug": "private-mortgage-insurance",
     "name": "Private mortgage insurance (PMI)",
     "title": "Private mortgage insurance (PMI): Definition, Formula and Example",
-    "description": "PMI is insurance that protects the lender against certain losses if a borrower defaults on a conventional mortgage; it does not insure the borrower\u2019s equity.",
+    "description": "PMI is insurance that protects the lender against certain losses if a borrower defaults on a conventional mortgage; it does not insure the borrower’s equity.",
     "category": "Housing & property",
     "aliases": [
       "PMI",
       "Conventional mortgage insurance"
     ],
-    "definition": "PMI is insurance that protects the lender against certain losses if a borrower defaults on a conventional mortgage; it does not insure the borrower\u2019s equity.",
+    "definition": "PMI is insurance that protects the lender against certain losses if a borrower defaults on a conventional mortgage; it does not insure the borrower’s equity.",
     "explanation": "PMI is commonly required for a conventional purchase loan with less than 20% down, but pricing and arrangements vary. Premiums may be monthly, upfront or lender-paid through different pricing. Government-backed loans use different insurance or guarantee programs.",
     "formula": "Illustrative monthly premium = stated annual premium amount / 12",
     "formulaNote": "If an illustrative premium rate is applied to a loan balance, state that base. Actual pricing, renewal bases and cancellation rights are product-specific.",
@@ -2662,8 +2668,8 @@
       "title": "An assumed 0.5% annual premium on $200,000",
       "intro": "Use a hypothetical premium rate solely for arithmetic.",
       "steps": [
-        "Annual premium: $200,000 \u00d7 0.005 = $1,000.",
-        "Monthly equivalent: $1,000/12 \u2248 $83.33."
+        "Annual premium: $200,000 × 0.005 = $1,000.",
+        "Monthly equivalent: $1,000/12 ≈ $83.33."
       ],
       "answer": "The illustrative monthly premium is $83.33, separate from principal and interest.",
       "assumptions": "Hypothetical annual rate and fixed base; not a quote or a cancellation calculation.",
@@ -2676,15 +2682,15 @@
     "tools": [
       {
         "id": "mortgage",
-        "text": "Explore a conventional mortgage\u2019s entered insurance assumptions."
+        "text": "Explore a conventional mortgage’s entered insurance assumptions."
       },
       {
         "id": "fha-loan",
-        "text": "Model the tool\u2019s FHA-specific mortgage insurance assumptions."
+        "text": "Model the tool’s FHA-specific mortgage insurance assumptions."
       },
       {
         "id": "va-mortgage",
-        "text": "Review the tool\u2019s VA funding-fee and eligibility assumptions separately."
+        "text": "Review the tool’s VA funding-fee and eligibility assumptions separately."
       },
       {
         "id": "pmi",
@@ -2723,7 +2729,7 @@
       "title": "$2,400 of costs and $100 monthly savings",
       "intro": "Assume costs are paid upfront and payment savings stay unchanged.",
       "steps": [
-        "Monthly saving: $1,500 \u2212 $1,400 = $100.",
+        "Monthly saving: $1,500 − $1,400 = $100.",
         "Simple break-even: $2,400/$100 = 24 months."
       ],
       "answer": "The payment-based cost recovery is 24 months, not proof of an overall financial gain.",
@@ -2747,7 +2753,7 @@
     ],
     "sources": [
       {
-        "title": "Federal Reserve: A Consumer\u2019s Guide to Mortgage Refinancings",
+        "title": "Federal Reserve: A Consumer’s Guide to Mortgage Refinancings",
         "url": "https://www.federalreserve.gov/pubs/refinancings/default.htm"
       }
     ],
@@ -2773,7 +2779,7 @@
       "intro": "Assume $10,000 annual debt service and $60,000 initial cash investment.",
       "steps": [
         "Cap rate: $16,000/$200,000 = 8%.",
-        "Cash flow after debt service: $16,000 \u2212 $10,000 = $6,000.",
+        "Cash flow after debt service: $16,000 − $10,000 = $6,000.",
         "Cash-on-cash: $6,000/$60,000 = 10%."
       ],
       "answer": "Cap rate is 8%; cash-on-cash is 10% under the stated value and cash definitions.",
@@ -2795,7 +2801,7 @@
       },
       {
         "id": "rental-property",
-        "text": "Inspect the tool\u2019s NOI, financing, initial-cash and sale assumptions."
+        "text": "Inspect the tool’s NOI, financing, initial-cash and sale assumptions."
       },
       {
         "id": "noi",
@@ -2825,7 +2831,7 @@
       "heading": "Same property, five financing and reserve scenarios",
       "paragraphs": [
         "Hold the purchase price at $300,000 and annual NOI at $18,000. Every case has a 6% cap rate. Include $5,000 cash-paid closing costs, no repairs or initial reserve cash, and a 30-year amortizing loan where financed. Rent is $2,500 per month, vacancy and other income are zero, and operating expenses are $1,000 per month.",
-        "At 80% LTV and 5% loan interest, first-year P&I is $15,460.46. Annual cash flow is $2,539.54 on $65,000 cash invested, or 3.91%. At 8% interest it becomes \u2212$3,132.42, or \u22124.82%, although the cap rate remains 6%. Adding a $100 monthly capital reserve lowers cash yield further to \u22126.67%.",
+        "At 80% LTV and 5% loan interest, first-year P&I is $15,460.46. Annual cash flow is $2,539.54 on $65,000 cash invested, or 3.91%. At 8% interest it becomes −$3,132.42, or −4.82%, although the cap rate remains 6%. Adding a $100 monthly capital reserve lowers cash yield further to −6.67%.",
         "Even the cash purchase has a 5.90% cash yield because its $305,000 cash basis includes closing costs while cap rate divides NOI by the $300,000 property price. Neither result is wrong; their denominators answer different questions. A higher cap rate is not automatically a better investment, and cash-on-cash is not IRR."
       ],
       "questions": [
@@ -2844,6 +2850,14 @@
       {
         "title": "How to Calculate Cash-on-Cash Return: Costs & Examples",
         "path": "/guides/how-to-calculate-cash-on-cash-return/"
+      },
+      {
+        "title": "How to Calculate Cap Rate: Formula, NOI and Property Value",
+        "path": "/guides/how-to-calculate-cap-rate/"
+      },
+      {
+        "title": "How to Estimate Rental Property Cash Flow: A Worked Budget",
+        "path": "/guides/how-to-calculate-rental-property-cash-flow/"
       }
     ]
   },
@@ -2854,18 +2868,18 @@
     "description": "A down payment is the portion of a purchase price paid upfront rather than funded by the base purchase loan.",
     "category": "Housing & property",
     "aliases": [
-      "Buyer\u2019s upfront purchase contribution"
+      "Buyer’s upfront purchase contribution"
     ],
     "definition": "A down payment is the portion of a purchase price paid upfront rather than funded by the base purchase loan.",
     "explanation": "A larger payment generally reduces the starting loan amount, but cash needed at closing can also include fees, prepaid items and reserves. Required minimums depend on program and eligibility; a down payment is not a universal guarantee of approval or affordability.",
-    "formula": "Down payment = purchase price \u00d7 down-payment fraction; base loan = price \u2212 down payment",
+    "formula": "Down payment = purchase price × down-payment fraction; base loan = price − down payment",
     "formulaNote": "Financed fees or program-specific mortgage insurance can raise the final loan above this simplified base amount.",
     "example": {
       "title": "15% down on a $300,000 purchase",
       "intro": "Ignore financed fees for this first step.",
       "steps": [
-        "Down payment: $300,000 \u00d7 15% = $45,000.",
-        "Base loan: $300,000 \u2212 $45,000 = $255,000.",
+        "Down payment: $300,000 × 15% = $45,000.",
+        "Base loan: $300,000 − $45,000 = $255,000.",
         "On the same value basis, base LTV is 85%."
       ],
       "answer": "The down payment is $45,000 and the base loan is $255,000, before any financed charges.",
@@ -2883,7 +2897,7 @@
       },
       {
         "id": "mortgage",
-        "text": "Include the mortgage\u2019s other financing and ownership assumptions."
+        "text": "Include the mortgage’s other financing and ownership assumptions."
       },
       {
         "id": "auto-loan",
@@ -2926,8 +2940,8 @@
       "title": "A two-bracket hypothetical tax system",
       "intro": "Tax the first $20,000 at 10% and the next $10,000 at 20%.",
       "steps": [
-        "Tax on $30,000: $20,000 \u00d7 10% + $10,000 \u00d7 20% = $4,000.",
-        "Effective rate on taxable income: $4,000/$30,000 \u2248 13.3333%.",
+        "Tax on $30,000: $20,000 × 10% + $10,000 × 20% = $4,000.",
+        "Effective rate on taxable income: $4,000/$30,000 ≈ 13.3333%.",
         "An extra $1,000 in the same upper bracket adds $200 of tax."
       ],
       "answer": "The illustrated marginal bracket is 20%; the effective rate on taxable income is about 13.3333%.",
@@ -2974,21 +2988,21 @@
     "slug": "deduction-vs-credit",
     "name": "Tax deduction vs. tax credit",
     "title": "Tax deduction vs. tax credit: Definition, Formula and Example",
-    "description": "A tax deduction reduces the income used to calculate tax; a tax credit reduces the calculated tax, subject to the credit\u2019s rules.",
+    "description": "A tax deduction reduces the income used to calculate tax; a tax credit reduces the calculated tax, subject to the credit’s rules.",
     "category": "Tax & income",
     "aliases": [
       "Income deduction",
       "Tax credit"
     ],
-    "definition": "A tax deduction reduces the income used to calculate tax; a tax credit reduces the calculated tax, subject to the credit\u2019s rules.",
-    "explanation": "A deduction\u2019s value depends on how it changes taxable income across brackets. A nonrefundable credit generally cannot reduce the relevant tax below zero; a refundable credit may produce a refund if eligibility and other conditions are met. The meaning and availability depend on jurisdiction and tax year.",
-    "formula": "Simple deduction saving \u2248 deductible amount \u00d7 marginal rate; credit saving is the usable credit amount",
+    "definition": "A tax deduction reduces the income used to calculate tax; a tax credit reduces the calculated tax, subject to the credit’s rules.",
+    "explanation": "A deduction’s value depends on how it changes taxable income across brackets. A nonrefundable credit generally cannot reduce the relevant tax below zero; a refundable credit may produce a refund if eligibility and other conditions are met. The meaning and availability depend on jurisdiction and tax year.",
+    "formula": "Simple deduction saving ≈ deductible amount × marginal rate; credit saving is the usable credit amount",
     "formulaNote": "The deduction approximation assumes no bracket crossing or interactions. Limitations, phaseouts and refundability can change the result.",
     "example": {
       "title": "$1,000 deduction versus $1,000 usable credit",
       "intro": "Assume a 20% marginal rate and $3,000 of pre-adjustment tax.",
       "steps": [
-        "Deduction saving: $1,000 \u00d7 20% = $200; tax becomes $2,800.",
+        "Deduction saving: $1,000 × 20% = $200; tax becomes $2,800.",
         "A separate $1,000 fully usable credit reduces $3,000 to $2,000."
       ],
       "answer": "In these separate cases, the deduction saves $200 and the credit saves $1,000.",
@@ -3034,14 +3048,14 @@
     ],
     "definition": "Gross pay is earnings before paycheck deductions; net pay is the amount remaining after the deductions applied to that paycheck.",
     "explanation": "Deductions can include income-tax withholding, payroll taxes, retirement deferrals and insurance. Pretax and after-tax items can affect different tax bases. Annual salary, pay frequency and taxable wages are related but not interchangeable.",
-    "formula": "Net pay = gross pay \u2212 employee deductions \u2212 withheld taxes",
+    "formula": "Net pay = gross pay − employee deductions − withheld taxes",
     "formulaNote": "Use the same pay period and avoid deducting an item twice. Employer-paid benefits are not automatically employee paycheck deductions.",
     "example": {
       "title": "A $2,000 gross paycheck",
       "intro": "Assume $300 tax withholding, $100 retirement deferral and $80 insurance deduction.",
       "steps": [
         "Total deductions: $300 + $100 + $80 = $480.",
-        "Net pay: $2,000 \u2212 $480 = $1,520."
+        "Net pay: $2,000 − $480 = $1,520."
       ],
       "answer": "The illustrated take-home amount is $1,520.",
       "assumptions": "Deductions are given final amounts; this example does not calculate their tax treatment or final annual tax.",
@@ -3072,7 +3086,7 @@
     ],
     "sources": [
       {
-        "title": "CFPB: Teenagers and Earning \u2014 Gross and Net Pay",
+        "title": "CFPB: Teenagers and Earning — Gross and Net Pay",
         "url": "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/teen-young-adult/explore-earning/"
       }
     ],
@@ -3091,15 +3105,15 @@
     ],
     "definition": "Retail sales tax is generally collected on taxable retail sales; VAT is a consumption tax collected through a credit mechanism across taxable stages of supply.",
     "explanation": "For a consumer price, both may be represented by a tax-exclusive base plus a stated rate. That arithmetic does not mean the systems have identical registration, input-credit or invoicing rules. Rates, exemptions and the taxable base depend on jurisdiction and product.",
-    "formula": "Gross price = net price \u00d7 (1 + tax rate); included tax = gross price \u00d7 rate / (1 + rate)",
+    "formula": "Gross price = net price × (1 + tax rate); included tax = gross price × rate / (1 + rate)",
     "formulaNote": "Use decimal rates. Removing tax from an inclusive price requires division by 1 + rate, not subtraction of that rate times the gross price.",
     "example": {
       "title": "A price of $120 including a hypothetical 20% tax",
       "intro": "Assume the entire item is taxable at that one rate.",
       "steps": [
         "Net price: $120/1.20 = $100.",
-        "Included tax: $120 \u2212 $100 = $20.",
-        "Check: $100 \u00d7 20% = $20."
+        "Included tax: $120 − $100 = $20.",
+        "Check: $100 × 20% = $20."
       ],
       "answer": "The tax-inclusive $120 consists of $100 net price and $20 tax.",
       "assumptions": "Hypothetical rate; one taxable item; no exemption, special rounding rule or business input-credit calculation.",
@@ -3159,22 +3173,22 @@
     "slug": "estate-vs-inheritance-tax",
     "name": "Estate tax vs. inheritance tax",
     "title": "Estate tax vs. inheritance tax: Definition, Formula and Example",
-    "description": "An estate tax concerns a deceased person\u2019s taxable estate or transfer, while an inheritance tax generally depends on what a beneficiary receives and applicable beneficiary rules.",
+    "description": "An estate tax concerns a deceased person’s taxable estate or transfer, while an inheritance tax generally depends on what a beneficiary receives and applicable beneficiary rules.",
     "category": "Tax & income",
     "aliases": [
       "Transfer-at-death taxes",
       "Inheritance taxation"
     ],
-    "definition": "An estate tax concerns a deceased person\u2019s taxable estate or transfer, while an inheritance tax generally depends on what a beneficiary receives and applicable beneficiary rules.",
-    "explanation": "The United States has a federal estate-tax system, while some states impose estate or inheritance taxes under their own rules. Domicile, citizenship, asset location, deductions, exemptions and the recipient\u2019s relationship can affect the result. A beneficiary\u2019s receipt is not automatically subject to federal estate tax at a flat rate.",
-    "formula": "Illustrative inheritance-tax arithmetic = taxable beneficiary transfer \u00d7 assumed rate",
+    "definition": "An estate tax concerns a deceased person’s taxable estate or transfer, while an inheritance tax generally depends on what a beneficiary receives and applicable beneficiary rules.",
+    "explanation": "The United States has a federal estate-tax system, while some states impose estate or inheritance taxes under their own rules. Domicile, citizenship, asset location, deductions, exemptions and the recipient’s relationship can affect the result. A beneficiary’s receipt is not automatically subject to federal estate tax at a flat rate.",
+    "formula": "Illustrative inheritance-tax arithmetic = taxable beneficiary transfer × assumed rate",
     "formulaNote": "This is not the U.S. federal estate-tax formula. Federal calculations can involve adjusted taxable gifts, credits and other provisions.",
     "example": {
       "title": "A hypothetical $100,000 taxable beneficiary transfer",
       "intro": "Assume a fictional 5% inheritance-tax rate after all applicable exclusions.",
       "steps": [
-        "Tax: $100,000 \u00d7 5% = $5,000.",
-        "Amount after this one tax: $100,000 \u2212 $5,000 = $95,000."
+        "Tax: $100,000 × 5% = $5,000.",
+        "Amount after this one tax: $100,000 − $5,000 = $95,000."
       ],
       "answer": "The hypothetical tax is $5,000; no actual state or federal liability is determined.",
       "assumptions": "Fictional flat rate; no claim about current exemption thresholds, relationship classes or other taxes.",
@@ -3182,12 +3196,12 @@
     },
     "pitfall": {
       "title": "A large inheritance is not itself a federal estate-tax calculation",
-      "text": "Estate-tax liability is determined at the estate level under the relevant rules. Income earned by inherited assets, retirement distributions and basis rules are separate issues. Our estate tool does not model every state\u2019s inheritance tax."
+      "text": "Estate-tax liability is determined at the estate level under the relevant rules. Income earned by inherited assets, retirement distributions and basis rules are separate issues. Our estate tool does not model every state’s inheritance tax."
     },
     "tools": [
       {
         "id": "estate-tax",
-        "text": "Review the tool\u2019s supported federal estate-tax year and explicit assumptions; not state inheritance-tax filing."
+        "text": "Review the tool’s supported federal estate-tax year and explicit assumptions; not state inheritance-tax filing."
       }
     ],
     "related": [
@@ -3218,16 +3232,16 @@
       "Zero-profit sales volume"
     ],
     "definition": "The break-even point is the sales volume or revenue at which total revenue equals the included fixed and variable costs.",
-    "explanation": "Each unit\u2019s contribution covers a share of fixed costs before profit begins. A single-product model assumes a constant selling price, variable cost per unit and fixed-cost total over the relevant activity range. Different product mixes need a consistent weighted contribution assumption.",
-    "formula": "Break-even units = fixed costs / (unit price \u2212 unit variable cost); break-even revenue = fixed costs / contribution margin ratio",
+    "explanation": "Each unit’s contribution covers a share of fixed costs before profit begins. A single-product model assumes a constant selling price, variable cost per unit and fixed-cost total over the relevant activity range. Different product mixes need a consistent weighted contribution assumption.",
+    "formula": "Break-even units = fixed costs / (unit price − unit variable cost); break-even revenue = fixed costs / contribution margin ratio",
     "formulaNote": "The unit contribution must be positive for a finite break-even with positive fixed costs. Round units up when only whole units can be sold.",
     "example": {
       "title": "$1,000 fixed cost, $25 price and $15 variable cost",
       "intro": "Use costs and revenue from the same operating period.",
       "steps": [
-        "Unit contribution: $25 \u2212 $15 = $10.",
+        "Unit contribution: $25 − $15 = $10.",
         "Break-even units: $1,000/$10 = 100.",
-        "Revenue at break-even: 100 \u00d7 $25 = $2,500; variable costs are $1,500."
+        "Revenue at break-even: 100 × $25 = $2,500; variable costs are $1,500."
       ],
       "answer": "At 100 units, $2,500 revenue covers $1,500 variable cost and $1,000 fixed cost.",
       "assumptions": "One product, all units sold, constant unit economics and fixed costs; taxes and financing excluded.",
@@ -3287,15 +3301,15 @@
     ],
     "definition": "Contribution margin is revenue minus variable costs, showing the amount available to cover fixed costs and then profit.",
     "explanation": "Unlike gross profit, which uses the accounting cost-of-goods-sold classification, contribution margin separates costs by behavior. Some production overhead can be fixed, and some selling costs can be variable. Define the relevant sales volume and period before comparing ratios.",
-    "formula": "Unit contribution = unit price \u2212 unit variable cost; contribution margin ratio = contribution / revenue",
+    "formula": "Unit contribution = unit price − unit variable cost; contribution margin ratio = contribution / revenue",
     "formulaNote": "Revenue and variable costs must cover the same activity and period. Contribution is not net profit while fixed costs remain unpaid.",
     "example": {
       "title": "A $40 sale with $24 variable cost",
       "intro": "Assume 100 identical sales and $1,000 fixed costs.",
       "steps": [
-        "Unit contribution: $40 \u2212 $24 = $16.",
+        "Unit contribution: $40 − $24 = $16.",
         "Contribution ratio: $16/$40 = 40%.",
-        "Total contribution: 100 \u00d7 $16 = $1,600; operating profit: $1,600 \u2212 $1,000 = $600."
+        "Total contribution: 100 × $16 = $1,600; operating profit: $1,600 − $1,000 = $600."
       ],
       "answer": "Contribution is $16 per unit, but profit after the included fixed costs is only $600 in total.",
       "assumptions": "Constant price and variable cost; no other costs or taxes.",
@@ -3353,23 +3367,23 @@
     "slug": "depreciation",
     "name": "Depreciation",
     "title": "Depreciation: Definition, Formula and Example",
-    "description": "Depreciation allocates a tangible asset\u2019s depreciable cost over its estimated useful life; it does not directly measure market value or set aside cash.",
+    "description": "Depreciation allocates a tangible asset’s depreciable cost over its estimated useful life; it does not directly measure market value or set aside cash.",
     "category": "Business & pricing",
     "aliases": [
       "Allocation of tangible asset cost",
       "Book depreciation"
     ],
-    "definition": "Depreciation allocates a tangible asset\u2019s depreciable cost over its estimated useful life; it does not directly measure market value or set aside cash.",
+    "definition": "Depreciation allocates a tangible asset’s depreciable cost over its estimated useful life; it does not directly measure market value or set aside cash.",
     "explanation": "Straight-line depreciation allocates equal amounts over full periods. Accelerated methods allocate more in earlier periods. Residual value, useful life, placed-in-service timing and accounting or tax conventions affect the schedule.",
-    "formula": "Annual straight-line depreciation = (capitalized cost \u2212 estimated residual value) / useful life in years",
+    "formula": "Annual straight-line depreciation = (capitalized cost − estimated residual value) / useful life in years",
     "formulaNote": "Land is generally not depreciated. Book accounting and tax deductions can follow different methods and timing conventions.",
     "example": {
       "title": "$12,000 equipment with a $2,000 residual value",
       "intro": "Assume five full years of straight-line depreciation.",
       "steps": [
-        "Depreciable basis: $12,000 \u2212 $2,000 = $10,000.",
+        "Depreciable basis: $12,000 − $2,000 = $10,000.",
         "Annual expense: $10,000/5 = $2,000.",
-        "Book value after one full year: $12,000 \u2212 $2,000 = $10,000."
+        "Book value after one full year: $12,000 − $2,000 = $10,000."
       ],
       "answer": "Annual straight-line depreciation is $2,000; ending book value after five full years is $2,000.",
       "assumptions": "Full-year periods; no impairment, revaluation, disposal, tax bonus deduction or change in estimates.",
@@ -3401,7 +3415,7 @@
     },
     "pitfall": {
       "title": "Book value is not an appraisal",
-      "text": "Market prices can move differently from an accounting schedule. A noncash depreciation expense does not mean cash was paid in that year. A generic schedule also does not establish a tax deduction under a specific jurisdiction\u2019s rules."
+      "text": "Market prices can move differently from an accounting schedule. A noncash depreciation expense does not mean cash was paid in that year. A generic schedule also does not establish a tax deduction under a specific jurisdiction’s rules."
     },
     "tools": [
       {
@@ -3434,13 +3448,13 @@
     ],
     "definition": "A commission is compensation calculated from an agreed measure of sales or transactions under a stated payment rule.",
     "explanation": "A flat percentage applies one rate to eligible sales. A marginal tier applies each rate only within its band; a retroactive tier can instead change the rate on a larger amount. Returns, exclusions, thresholds and base salary depend on the agreement.",
-    "formula": "Flat commission = eligible sales \u00d7 commission rate",
+    "formula": "Flat commission = eligible sales × commission rate",
     "formulaNote": "Use a decimal rate and state whether the sales base includes tax, refunds or discounts. Distinguish commission from total compensation.",
     "example": {
       "title": "$20,000 eligible sales at 4%",
       "intro": "Assume one flat rate and no excluded transactions.",
       "steps": [
-        "Commission: $20,000 \u00d7 0.04 = $800.",
+        "Commission: $20,000 × 0.04 = $800.",
         "If there is a separate $2,000 base salary, total gross compensation is $2,800."
       ],
       "answer": "The commission is $800; base salary is a separate component.",
@@ -3492,23 +3506,23 @@
     "slug": "lease-residual-value",
     "name": "Lease residual value",
     "title": "Lease residual value: Definition, Formula and Example",
-    "description": "A lease residual is the contract\u2019s assumed value of the asset at lease end; it helps determine the amount recovered through lease payments.",
+    "description": "A lease residual is the contract’s assumed value of the asset at lease end; it helps determine the amount recovered through lease payments.",
     "category": "Business & pricing",
     "aliases": [
       "Lease-end residual",
       "Vehicle lease depreciation component"
     ],
-    "definition": "A lease residual is the contract\u2019s assumed value of the asset at lease end; it helps determine the amount recovered through lease payments.",
+    "definition": "A lease residual is the contract’s assumed value of the asset at lease end; it helps determine the amount recovered through lease payments.",
     "explanation": "In a common vehicle-lease illustration, adjusted capitalized cost less residual forms the depreciation component. A separate rent charge compensates financing. Taxes, fees, mileage, wear and purchase-option terms can add costs. The contract residual is not a guaranteed resale price available to the lessee.",
-    "formula": "Monthly depreciation component = (adjusted capitalized cost \u2212 residual) / lease months",
-    "formulaNote": "A common money-factor rent illustration is (adjusted capitalized cost + residual) \u00d7 money factor. It is not the formula for every lease.",
+    "formula": "Monthly depreciation component = (adjusted capitalized cost − residual) / lease months",
+    "formulaNote": "A common money-factor rent illustration is (adjusted capitalized cost + residual) × money factor. It is not the formula for every lease.",
     "example": {
       "title": "$30,000 adjusted cost and $18,000 residual over 36 months",
       "intro": "Assume a hypothetical monthly money factor of 0.002.",
       "steps": [
-        "Depreciation component: ($30,000 \u2212 $18,000)/36 \u2248 $333.33.",
-        "Illustrative rent charge: ($30,000 + $18,000) \u00d7 0.002 = $96.",
-        "Illustrated pretax base payment: $333.33 + $96 \u2248 $429.33."
+        "Depreciation component: ($30,000 − $18,000)/36 ≈ $333.33.",
+        "Illustrative rent charge: ($30,000 + $18,000) × 0.002 = $96.",
+        "Illustrated pretax base payment: $333.33 + $96 ≈ $429.33."
       ],
       "answer": "The illustrative base payment is $429.33 monthly before taxes and other charges.",
       "assumptions": "No acquisition fees, deposits, mileage penalties or tax; common vehicle money-factor model.",
@@ -3539,7 +3553,7 @@
         "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-leasing-versus-buying-a-car-en-815/"
       },
       {
-        "title": "OpenStax: Buying or Leasing a Car \u2014 Money-Factor Payment Formula",
+        "title": "OpenStax: Buying or Leasing a Car — Money-Factor Payment Formula",
         "url": "https://openstax.org/books/contemporary-mathematics/pages/6-11-buying-or-leasing-a-car"
       }
     ],
@@ -3558,14 +3572,14 @@
     ],
     "definition": "eCPM expresses advertising cost or revenue per 1,000 impressions; the reporting viewpoint and impression denominator must be specified.",
     "explanation": "For a publisher, effective revenue per thousand ad impressions can summarize mixed advertising revenue. AdSense uses RPM terminology in its current reports; page RPM uses page views, while ad RPM uses ad impressions. A page can contain several ads, so these measures need not match.",
-    "formula": "Publisher ad eCPM = ad revenue / ad impressions \u00d7 1,000",
+    "formula": "Publisher ad eCPM = ad revenue / ad impressions × 1,000",
     "formulaNote": "Use revenue and impressions from the same period, currency and reporting scope. Advertiser cost-based eCPM uses spending instead of publisher receipts.",
     "example": {
       "title": "$120 earned from 40,000 ad impressions",
       "intro": "Assume the revenue and impression counts use the same reporting basis.",
       "steps": [
         "Revenue per impression: $120/40,000 = $0.003.",
-        "Per thousand: $0.003 \u00d7 1,000 = $3."
+        "Per thousand: $0.003 × 1,000 = $3."
       ],
       "answer": "The illustrated ad eCPM is $3; it is not revenue per visitor or per page view.",
       "assumptions": "Hypothetical publisher revenue; no claim about future earnings, fill rate or a network payout.",
@@ -3591,7 +3605,7 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "Advertising reporting concept; AdSense\u2019s current RPM terminology is distinguished from historical eCPM naming."
+    "scope": "Advertising reporting concept; AdSense’s current RPM terminology is distinguished from historical eCPM naming."
   },
   {
     "slug": "emergency-fund",
@@ -3605,14 +3619,14 @@
     ],
     "definition": "An emergency fund is money reserved for unexpected expenses or income disruption rather than routine planned spending.",
     "explanation": "One planning method expresses a target as months of essential expenses. The appropriate buffer depends on income stability, dependents, insurance and other accessible resources. A selected number of months is an assumption, not a universal requirement.",
-    "formula": "Target reserve = essential monthly expenses \u00d7 chosen coverage months; gap = max(0, target \u2212 existing reserve)",
+    "formula": "Target reserve = essential monthly expenses × chosen coverage months; gap = max(0, target − existing reserve)",
     "formulaNote": "Define the expenses and eligible savings consistently. Borrowing capacity, volatile investments and restricted retirement funds are not automatically equivalent to accessible cash.",
     "example": {
       "title": "$2,500 essential expenses and six chosen months",
       "intro": "Assume $5,000 is already set aside.",
       "steps": [
-        "Target: $2,500 \u00d7 6 = $15,000.",
-        "Gap: $15,000 \u2212 $5,000 = $10,000.",
+        "Target: $2,500 × 6 = $15,000.",
+        "Gap: $15,000 − $5,000 = $10,000.",
         "Current coverage: $5,000/$2,500 = two months."
       ],
       "answer": "The chosen target is $15,000, leaving a $10,000 gap and two months already covered.",
@@ -3680,13 +3694,13 @@
     ],
     "definition": "A budget plans income and uses of money over a period; a savings rate expresses an explicitly defined saving amount relative to an explicitly defined income base.",
     "explanation": "A cash-flow budget distinguishes spending, debt repayment and transfers into savings so they are not counted twice. A take-home-income savings rate is different from a gross-income rate that includes pretax retirement contributions. There is no single percentage that suits every household.",
-    "formula": "Cash surplus before allocating savings = take-home income \u2212 spending; defined savings rate = saving / stated income base \u00d7 100%",
+    "formula": "Cash surplus before allocating savings = take-home income − spending; defined savings rate = saving / stated income base × 100%",
     "formulaNote": "Use consistent periods and specify whether debt principal, employer contributions and pretax deferrals count as saving.",
     "example": {
       "title": "$4,000 take-home income and $3,300 spending",
       "intro": "Plan to move the entire remaining amount to savings.",
       "steps": [
-        "Amount available for savings: $4,000 \u2212 $3,300 = $700.",
+        "Amount available for savings: $4,000 − $3,300 = $700.",
         "Take-home-basis savings rate: $700/$4,000 = 17.5%.",
         "After allocating the $700, no unassigned cash remains."
       ],
@@ -3738,17 +3752,17 @@
     ],
     "definition": "An exchange rate states how many units of one currency exchange for one unit of another, with direction, date and pricing basis specified.",
     "explanation": "If one U.S. dollar buys 0.90 euros, the quote is 0.90 EUR per USD; the inverse is USD per EUR. Reference rates are informational and may differ from bank or card transaction rates because of spreads, fees and timing.",
-    "formula": "Converted amount = original amount \u00d7 target-currency units per source-currency unit; inverse rate = 1 / rate",
+    "formula": "Converted amount = original amount × target-currency units per source-currency unit; inverse rate = 1 / rate",
     "formulaNote": "A positive rate and matching direction are required. Reciprocal quotes before costs are not the same as two actual executable buy/sell prices.",
     "example": {
       "title": "$100 at a hypothetical 0.90 EUR per USD",
       "intro": "Use a manual rate with no costs.",
       "steps": [
-        "EUR received: $100 \u00d7 0.90 = \u20ac90.",
-        "Inverse: 1/0.90 \u2248 1.111111 USD per EUR.",
-        "At an illustrative 2% fee deducted from the \u20ac90 proceeds, net proceeds would be \u20ac88.20."
+        "EUR received: $100 × 0.90 = €90.",
+        "Inverse: 1/0.90 ≈ 1.111111 USD per EUR.",
+        "At an illustrative 2% fee deducted from the €90 proceeds, net proceeds would be €88.20."
       ],
-      "answer": "The fee-free conversion is \u20ac90; the separate hypothetical fee reduces it to \u20ac88.20.",
+      "answer": "The fee-free conversion is €90; the separate hypothetical fee reduces it to €88.20.",
       "assumptions": "Hypothetical manual rate, not a live quote; the fee example is separate from the calculator conversion.",
       "calculator": {
         "id": "currency",
@@ -3803,14 +3817,14 @@
     ],
     "definition": "Percentage points measure the arithmetic difference between percentage rates; percentage change measures the difference relative to a starting value.",
     "explanation": "A move from 5% to 6% is one percentage point but a 20% relative increase in the rate. A basis point is one hundredth of a percentage point. Always name the base when describing a percentage increase, discount, tip or margin. For example, an ad eCPM rising from $3 to $3.60 increases by 20%. This is a relative percentage change, not a percentage-point change: eCPM is a currency amount per 1,000 impressions, not a percentage rate.",
-    "formula": "Relative change = (new value \u2212 old value) / old value \u00d7 100%; percentage-point change = new percentage \u2212 old percentage",
+    "formula": "Relative change = (new value − old value) / old value × 100%; percentage-point change = new percentage − old percentage",
     "formulaNote": "Relative change is undefined when the old value is zero. Negative starting values require additional interpretation; a percentage-point difference does not require division.",
     "example": {
       "title": "An interest rate moves from 5% to 6%",
       "intro": "Compare the quoted rate figures, not the resulting loan payment.",
       "steps": [
-        "Percentage-point increase: 6 \u2212 5 = one point.",
-        "Relative increase: (6 \u2212 5)/5 = 20%.",
+        "Percentage-point increase: 6 − 5 = one point.",
+        "Relative increase: (6 − 5)/5 = 20%.",
         "One percentage point equals 100 basis points."
       ],
       "answer": "The rate rises by one percentage point, or 100 basis points; its relative increase is 20%.",
@@ -3854,23 +3868,23 @@
     "slug": "margin-and-leverage",
     "name": "Trading margin and leverage",
     "title": "Trading margin and leverage: Definition, Formula and Example",
-    "description": "Trading margin is collateral or account equity supporting a leveraged position; it is different from a business\u2019s gross profit margin.",
+    "description": "Trading margin is collateral or account equity supporting a leveraged position; it is different from a business’s gross profit margin.",
     "category": "Saving & investing",
     "aliases": [
       "Margin account equity",
       "Leveraged exposure"
     ],
-    "definition": "Trading margin is collateral or account equity supporting a leveraged position; it is different from a business\u2019s gross profit margin.",
+    "definition": "Trading margin is collateral or account equity supporting a leveraged position; it is different from a business’s gross profit margin.",
     "explanation": "Borrowing to buy securities increases exposure relative to investor equity. Price changes, financing charges and maintenance requirements affect the remaining equity. Broker liquidation can occur under account rules. Forex and derivatives margin arrangements have their own conventions and risks.",
-    "formula": "Simplified long-position equity = market value \u2212 loan; exposure-to-equity leverage = market value / equity",
+    "formula": "Simplified long-position equity = market value − loan; exposure-to-equity leverage = market value / equity",
     "formulaNote": "This balance-sheet illustration excludes interest and costs. A regulatory or broker margin requirement is not a forecast of maximum possible loss.",
     "example": {
       "title": "$10,000 of securities funded with $5,000 equity",
       "intro": "Assume the remaining $5,000 is borrowed and the position falls 10%.",
       "steps": [
-        "New market value: $10,000 \u00d7 0.90 = $9,000.",
-        "Remaining equity: $9,000 \u2212 $5,000 = $4,000.",
-        "Equity loss: ($4,000 \u2212 $5,000)/$5,000 = \u221220%."
+        "New market value: $10,000 × 0.90 = $9,000.",
+        "Remaining equity: $9,000 − $5,000 = $4,000.",
+        "Equity loss: ($4,000 − $5,000)/$5,000 = −20%."
       ],
       "answer": "A 10% position loss produces a 20% equity loss in this simplified two-times exposure.",
       "assumptions": "Long position, unchanged debt, no interest, fees or broker liquidation during the price move.",
@@ -3973,7 +3987,7 @@
     ],
     "definition": "Current ratio divides current assets by current liabilities, describing their relative size at one balance-sheet date. It is a liquidity measure, not a profit margin.",
     "explanation": "Current assets may include inventory and prepaid expenses as well as cash and receivables. Working capital uses the same two totals but subtracts liabilities instead of dividing. Classification, collectibility and the dates when amounts turn into cash affect interpretation.",
-    "formula": "Current ratio = current assets / current liabilities; working capital = current assets \u2212 current liabilities",
+    "formula": "Current ratio = current assets / current liabilities; working capital = current assets − current liabilities",
     "formulaNote": "Use consistently classified balances from the same date and currency. With zero current liabilities the ratio is undefined, even when assets are zero.",
     "example": {
       "title": "Compare the entered balance-sheet amounts",
@@ -4035,18 +4049,18 @@
     ],
     "definition": "Coast FIRE is a planning milestone where an invested retirement portfolio is projected to grow to a future retirement target without further contributions, assuming it is left invested and the chosen return and spending assumptions hold.",
     "explanation": "The Coast FIRE number discounts a future retirement portfolio target back to the current age. More time lowers the required starting amount when the assumed inflation-adjusted return is positive; less time raises it. Reaching the number concerns future retirement saving. You still need a separate way to pay living expenses during the coast period, and the result needs reassessment when investments or spending plans change.",
-    "formula": "Coast number = (annual portfolio-funded spending / withdrawal rate) / (1 + real annual return)^years; real annual return = (1 + nominal return) / (1 + inflation) \u2212 1",
-    "formulaNote": "Use decimal rates and the years from current age to target retirement age. Budget, target and Coast number share today\u2019s purchasing power. This is a constant-return present-value model; the withdrawal assumption sizes a target and does not prove its sustainability.",
+    "formula": "Coast number = (annual portfolio-funded spending / withdrawal rate) / (1 + real annual return)^years; real annual return = (1 + nominal return) / (1 + inflation) − 1",
+    "formulaNote": "Use decimal rates and the years from current age to target retirement age. Budget, target and Coast number share today’s purchasing power. This is a constant-return present-value model; the withdrawal assumption sizes a target and does not prove its sustainability.",
     "example": {
       "title": "A future $1 million target needs a smaller portfolio today",
-      "intro": "Consider a hypothetical person aged 35 targeting retirement at 65 with $40,000 annual portfolio-funded spending in today\u2019s USD. Use a 4% withdrawal assumption, 7% nominal return after fees and 2.5% inflation.",
+      "intro": "Consider a hypothetical person aged 35 targeting retirement at 65 with $40,000 annual portfolio-funded spending in today’s USD. Use a 4% withdrawal assumption, 7% nominal return after fees and 2.5% inflation.",
       "steps": [
-        "The future portfolio target is $40,000 / 0.04 = $1,000,000 in today\u2019s purchasing power.",
-        "Exact real annual return is 1.07 / 1.025 \u2212 1, approximately 4.39024%.",
+        "The future portfolio target is $40,000 / 0.04 = $1,000,000 in today’s purchasing power.",
+        "Exact real annual return is 1.07 / 1.025 − 1, approximately 4.39024%.",
         "Discount over 30 years: $1,000,000 / (1.07 / 1.025)^30 = $275,551.41."
       ],
       "answer": "The modeled Coast FIRE number today is $275,551.41. That is a savings milestone for age 65, not $1 million available at 35.",
-      "assumptions": "All amounts in today\u2019s USD; constant effective returns; no deposits or withdrawals in the no-contribution path; no automatic taxes, benefits or account-access rules. Defaults are illustrative.",
+      "assumptions": "All amounts in today’s USD; constant effective returns; no deposits or withdrawals in the no-contribution path; no automatic taxes, benefits or account-access rules. Defaults are illustrative.",
       "calculator": {
         "id": "coast-fire",
         "mode": "coast",
@@ -4130,23 +4144,23 @@
     "slug": "net-operating-income",
     "name": "Net operating income (NOI)",
     "title": "What Is Net Operating Income? NOI Formula & Example",
-    "description": "Net operating income is a property\u2019s effective operating revenue minus property-level operating expenses, before financing, capital expenditure, depreciation and owner income tax.",
+    "description": "Net operating income is a property’s effective operating revenue minus property-level operating expenses, before financing, capital expenditure, depreciation and owner income tax.",
     "category": "Housing & property",
     "aliases": [
       "NOI",
       "Rental property operating income"
     ],
-    "definition": "Net operating income is a property\u2019s effective operating revenue minus property-level operating expenses, before financing, capital expenditure, depreciation and owner income tax.",
+    "definition": "Net operating income is a property’s effective operating revenue minus property-level operating expenses, before financing, capital expenditure, depreciation and owner income tax.",
     "explanation": "Effective revenue accounts for the modeled rental vacancy loss and other operating income. Compare properties using the same period and expense definition. The result does not tell you how much cash remains after paying a mortgage or replacing major assets.",
-    "formula": "NOI = scheduled rent \u2212 vacancy and collection loss + other operating income \u2212 operating expenses",
+    "formula": "NOI = scheduled rent − vacancy and collection loss + other operating income − operating expenses",
     "formulaNote": "Use one property or a consistently combined property portfolio and one reporting period. Dollar entries are monthly or annual as selected, in USD; changing that selector reinterprets rather than converts the values. Vacancy applies only to scheduled rent; other income must already reflect its own losses. Expenses are entered dollar amounts. NOI excludes debt service, owner income tax, depreciation, capital expenditure and replacement reserves. Lenders may use different reserve-adjusted definitions. Negative NOI is allowed; ratios are undefined at zero effective income.",
     "example": {
       "title": "Turn monthly rent and operating costs into annual NOI",
       "intro": "period: Monthly; rent: 4000; other_income: 100; vacancy: 5; taxes: 400; insurance: 150; repairs: 250; management: 300; utilities: 100; hoa: 0; other_expenses: 50.",
       "steps": [
         "Scheduled rent $4,000 less 5% loss gives $3,800; add $100 other income for $3,900 monthly effective income.",
-        "Operating costs total $1,250 per month. NOI = $3,900 \u2212 $1,250 = $2,650.",
-        "Annual NOI = $2,650 \u00d7 12 = $31,800."
+        "Operating costs total $1,250 per month. NOI = $3,900 − $1,250 = $2,650.",
+        "Annual NOI = $2,650 × 12 = $31,800."
       ],
       "answer": "Annual NOI is $31,800; monthly equivalent $2,650 before financing and capital costs.",
       "assumptions": "Use one property or a consistently combined property portfolio and one reporting period. Dollar entries are monthly or annual as selected, in USD; changing that selector reinterprets rather than converts the values. Vacancy applies only to scheduled rent; other income must already reflect its own losses. Expenses are entered dollar amounts. NOI excludes debt service, owner income tax, depreciation, capital expenditure and replacement reserves. Lenders may use different reserve-adjusted definitions. Negative NOI is allowed; ratios are undefined at zero effective income.",
@@ -4182,7 +4196,7 @@
     "tools": [
       {
         "id": "noi",
-        "text": "Net operating income isolates a rental property\u2019s operations before financing. Start with potential rent, subtract the entered vacancy and collection loss, add other operating income and deduct property-level operating costs. This tool reconciles the components and reports annual NOI plus its monthly equivalent; it is not business-wide net income or cash left after a mortgage."
+        "text": "Net operating income isolates a rental property’s operations before financing. Start with potential rent, subtract the entered vacancy and collection loss, add other operating income and deduct property-level operating costs. This tool reconciles the components and reports annual NOI plus its monthly equivalent; it is not business-wide net income or cash left after a mortgage."
       },
       {
         "id": "brrrr",
@@ -4208,6 +4222,14 @@
       {
         "title": "How to Calculate Cash-on-Cash Return: Costs & Examples",
         "path": "/guides/how-to-calculate-cash-on-cash-return/"
+      },
+      {
+        "title": "How to Calculate Net Operating Income for a Rental Property",
+        "path": "/guides/how-to-calculate-net-operating-income/"
+      },
+      {
+        "title": "How to Estimate Rental Property Cash Flow: A Worked Budget",
+        "path": "/guides/how-to-calculate-rental-property-cash-flow/"
       }
     ]
   },
@@ -4224,17 +4246,17 @@
     "definition": "A FIRE number is a portfolio-sizing target obtained by dividing annual portfolio-funded retirement spending by an assumed withdrawal rate.",
     "explanation": "FIRE abbreviates Financial Independence, Retire Early. A full target differs from a Coast milestone: Coast discounts a later target to a required balance now. Meeting a savings target does not establish whether the portfolio can support actual retirement withdrawals.",
     "formula": "FIRE number = annual portfolio-funded spending / assumed annual withdrawal rate",
-    "formulaNote": "A single current age and projection age limit, with all money in today\u2019s USD. Constant effective nominal return is adjusted for inflation using the exact real-growth relationship. Monthly investments maintain purchasing power and occur at month end. The path ends at the first full-target crossing or the age limit. No withdrawals after FIRE, random or historical returns, success probability, benefit eligibility, tax return, contribution cap or early-account-access rules are modeled. Four percent and the default return are illustrations, not assurances of safe retirement.",
+    "formulaNote": "A single current age and projection age limit, with all money in today’s USD. Constant effective nominal return is adjusted for inflation using the exact real-growth relationship. Monthly investments maintain purchasing power and occur at month end. The path ends at the first full-target crossing or the age limit. No withdrawals after FIRE, random or historical returns, success probability, benefit eligibility, tax return, contribution cap or early-account-access rules are modeled. Four percent and the default return are illustrations, not assurances of safe retirement.",
     "example": {
       "title": "Reach a $1 million full FIRE target with monthly investing",
       "intro": "age: 35; max_age: 80; balance: 150000; spending: 40000; monthly: 2000; return: 7; inflation: 2.5; withdrawal: 4.",
       "steps": [
-        "Annual portfolio-funded spending $40,000 / 4% = $1,000,000 in today\u2019s USD.",
-        "Exact real return = 1.07 / 1.025 \u2212 1 = approximately 4.39024%. Start with $150,000 and add $2,000 at each month end.",
+        "Annual portfolio-funded spending $40,000 / 4% = $1,000,000 in today’s USD.",
+        "Exact real return = 1.07 / 1.025 − 1 = approximately 4.39024%. Start with $150,000 and add $2,000 at each month end.",
         "The first whole-month crossing occurs after 221 months. Deposits and the savings projection stop there."
       ],
-      "answer": "The modeled target crossing is age 53 years, 5 months. Total new investments are $442,000 and the endpoint is $1,003,515.17 in today\u2019s USD; this is not a withdrawal-sustainability result.",
-      "assumptions": "A single current age and projection age limit, with all money in today\u2019s USD. Constant effective nominal return is adjusted for inflation using the exact real-growth relationship. Monthly investments maintain purchasing power and occur at month end. The path ends at the first full-target crossing or the age limit. No withdrawals after FIRE, random or historical returns, success probability, benefit eligibility, tax return, contribution cap or early-account-access rules are modeled. Four percent and the default return are illustrations, not assurances of safe retirement.",
+      "answer": "The modeled target crossing is age 53 years, 5 months. Total new investments are $442,000 and the endpoint is $1,003,515.17 in today’s USD; this is not a withdrawal-sustainability result.",
+      "assumptions": "A single current age and projection age limit, with all money in today’s USD. Constant effective nominal return is adjusted for inflation using the exact real-growth relationship. Monthly investments maintain purchasing power and occur at month end. The path ends at the first full-target crossing or the age limit. No withdrawals after FIRE, random or historical returns, success probability, benefit eligibility, tax return, contribution cap or early-account-access rules are modeled. Four percent and the default return are illustrations, not assurances of safe retirement.",
       "calculator": {
         "id": "fire",
         "mode": "plan",
@@ -4302,18 +4324,18 @@
     ],
     "definition": "MIRR is an equivalent return for equally spaced project cash flows after separately discounting payments at a financing rate and compounding receipts at a reinvestment rate.",
     "explanation": "Unlike IRR, MIRR uses two explicit rate assumptions to transform the signed cash flows. The period count is one fewer than the complete number of entries including time zero. Periodic and annualized rates differ for subannual cash-flow spacing.",
-    "formula": "Periodic MIRR = (terminal value of positive flows / absolute present value of negative flows)^(1 / periods) \u2212 1",
-    "formulaNote": "Cash flows are USD amounts at equally spaced dates, with the first entry at time zero and 2\u2013601 entries. At least one positive and one negative amount is required. Both financing and reinvestment inputs are effective annual rates; selected spacing converts them to equivalent period rates. Results show periodic and effective annual MIRR. Internal blank lines and labels are rejected instead of silently omitted; use explicit 0 for no-flow periods. No irregular-date XIRR, actual financing schedule, tax estimate, inflation adjustment or project accept/reject advice is supplied.",
+    "formula": "Periodic MIRR = (terminal value of positive flows / absolute present value of negative flows)^(1 / periods) − 1",
+    "formulaNote": "Cash flows are USD amounts at equally spaced dates, with the first entry at time zero and 2–601 entries. At least one positive and one negative amount is required. Both financing and reinvestment inputs are effective annual rates; selected spacing converts them to equivalent period rates. Results show periodic and effective annual MIRR. Internal blank lines and labels are rejected instead of silently omitted; use explicit 0 for no-flow periods. No irregular-date XIRR, actual financing schedule, tax estimate, inflation adjustment or project accept/reject advice is supplied.",
     "example": {
       "title": "Reinvest annual project receipts at 10%",
       "intro": "flows: -10000, 3000, 4000, 5000; period: Annually; finance: 8; reinvest: 10.",
       "steps": [
         "Time-zero outflow is $10,000. Receipts are $3,000, $4,000 and $5,000 at the next three year ends.",
-        "Terminal receipts = $3,000 \u00d7 1.10\u00b2 + $4,000 \u00d7 1.10 + $5,000 = $13,030.",
-        "MIRR = (13,030 / 10,000)^(1/3) \u2212 1."
+        "Terminal receipts = $3,000 × 1.10² + $4,000 × 1.10 + $5,000 = $13,030.",
+        "MIRR = (13,030 / 10,000)^(1/3) − 1."
       ],
       "answer": "Annual MIRR is approximately 9.22318%. The financing rate does not change the time-zero-only payment.",
-      "assumptions": "Cash flows are USD amounts at equally spaced dates, with the first entry at time zero and 2\u2013601 entries. At least one positive and one negative amount is required. Both financing and reinvestment inputs are effective annual rates; selected spacing converts them to equivalent period rates. Results show periodic and effective annual MIRR. Internal blank lines and labels are rejected instead of silently omitted; use explicit 0 for no-flow periods. No irregular-date XIRR, actual financing schedule, tax estimate, inflation adjustment or project accept/reject advice is supplied.",
+      "assumptions": "Cash flows are USD amounts at equally spaced dates, with the first entry at time zero and 2–601 entries. At least one positive and one negative amount is required. Both financing and reinvestment inputs are effective annual rates; selected spacing converts them to equivalent period rates. Results show periodic and effective annual MIRR. Internal blank lines and labels are rejected instead of silently omitted; use explicit 0 for no-flow periods. No irregular-date XIRR, actual financing schedule, tax estimate, inflation adjustment or project accept/reject advice is supplied.",
       "calculator": {
         "id": "mirr",
         "mode": "cashflows",
@@ -4366,7 +4388,7 @@
     ],
     "definition": "Debt snowball is a repayment ordering method that directs extra funds to smaller balances while minimum payments continue on the rest.",
     "explanation": "Its focus is a sequence of cleared balances. A fixed payment budget can roll into the next target, but the interest cost still depends on the rates, timing and payment rules. An earlier milestone is not a promise about motivation.",
-    "formula": "Available extra = total monthly debt budget \u2212 sum of capped minimum payments",
+    "formula": "Available extra = total monthly debt budget − sum of capped minimum payments",
     "formulaNote": "The calculator ranks balances after monthly interest and minimum payments. Ties use higher APR, then entered order.",
     "example": {
       "title": "Follow the first month of a $400 repayment budget",
@@ -4448,8 +4470,8 @@
       "Highest-APR-first debt repayment"
     ],
     "definition": "Debt avalanche is a repayment ordering method that directs extra funds to the highest APR while minimum payments continue on the rest.",
-    "explanation": "Its focus is the rate applied to the outstanding balance rather than the debt\u2019s size. A smaller debt can still clear through minimum payments first. Compare costs using a consistent budget and contractual assumptions.",
-    "formula": "Available extra = total monthly debt budget \u2212 sum of capped minimum payments",
+    "explanation": "Its focus is the rate applied to the outstanding balance rather than the debt’s size. A smaller debt can still clear through minimum payments first. Compare costs using a consistent budget and contractual assumptions.",
+    "formula": "Available extra = total monthly debt budget − sum of capped minimum payments",
     "formulaNote": "The calculator uses descending APR, with entered order for equal rates. APR / 12 is a monthly approximation, not daily card interest.",
     "example": {
       "title": "Follow the first month of a $400 repayment budget",
@@ -4541,7 +4563,7 @@
       "steps": [
         "From 45 to 55, the portfolio funds $12,000/year for 10 years: $120,000.",
         "From 55 to 65, it funds the full $36,000/year for 10 years: $360,000.",
-        "The full-retirement target is $24,000 \u00f7 0.04 = $600,000. At zero growth, add $120,000 + $360,000 + $600,000."
+        "The full-retirement target is $24,000 ÷ 0.04 = $600,000. At zero growth, add $120,000 + $360,000 + $600,000."
       ],
       "answer": "The required transition portfolio is $1,080,000. Ignoring the earnings stop would understate the required bridge capital.",
       "assumptions": "Constant purchasing power; zero returns and inflation; month-end cash flows; no taxes or benefits calculated. A terminal target is not a safe-withdrawal guarantee.",
@@ -4608,7 +4630,7 @@
       }
     ],
     "checkedOn": "2026-10-29",
-    "scope": "All amounts are in today\u2019s USD. Whole ages determine birthday boundaries. Monthly growth precedes end-month contributions or withdrawals. Contributions stop at the part-time start; earnings stop at the income-stop age, which may precede full retirement. Extra earnings above spending are not invested. After-tax earnings and spending allowances must account for healthcare and taxes. No Social Security, pension benefits, tax calculation, account-access rules, market paths or lifetime withdrawal simulation. The chosen withdrawal rate sizes the terminal target only; it is not a safety guarantee.",
+    "scope": "All amounts are in today’s USD. Whole ages determine birthday boundaries. Monthly growth precedes end-month contributions or withdrawals. Contributions stop at the part-time start; earnings stop at the income-stop age, which may precede full retirement. Extra earnings above spending are not invested. After-tax earnings and spending allowances must account for healthcare and taxes. No Social Security, pension benefits, tax calculation, account-access rules, market paths or lifetime withdrawal simulation. The chosen withdrawal rate sizes the terminal target only; it is not a safety guarantee.",
     "guides": [
       {
         "title": "Barista FIRE vs. Coast FIRE",
@@ -4631,7 +4653,7 @@
     "formulaNote": "Use the rate as a decimal. Default rates are illustrative; a target does not establish that later withdrawals are sustainable.",
     "example": {
       "title": "$30,000 annual spending at an illustrative 4% rate",
-      "intro": "Assume today\u2019s USD, no additional spending buffer and no separate benefits.",
+      "intro": "Assume today’s USD, no additional spending buffer and no separate benefits.",
       "steps": [
         "Annual portfolio-funded budget: $30,000.",
         "Withdrawal assumption: 4% = 0.04.",
@@ -4667,7 +4689,7 @@
       }
     ],
     "checkedOn": "2026-10-31",
-    "scope": "Today\u2019s purchasing power. Constant rates and month-end contributions in the target-age projection; no Social Security or lifetime retirement withdrawal test.",
+    "scope": "Today’s purchasing power. Constant rates and month-end contributions in the target-age projection; no Social Security or lifetime retirement withdrawal test.",
     "guides": [
       {
         "path": "/guides/how-to-calculate-coast-fire/",
@@ -4694,7 +4716,7 @@
     "formulaNote": "Use the rate as a decimal. Default rates are illustrative; a target does not establish that later withdrawals are sustainable.",
     "example": {
       "title": "$120,000 annual spending at an illustrative 4% rate",
-      "intro": "Assume today\u2019s USD, no additional spending buffer and no separate benefits.",
+      "intro": "Assume today’s USD, no additional spending buffer and no separate benefits.",
       "steps": [
         "Annual portfolio-funded budget: $120,000.",
         "Withdrawal assumption: 4% = 0.04.",
@@ -4730,7 +4752,7 @@
       }
     ],
     "checkedOn": "2026-10-31",
-    "scope": "Today\u2019s purchasing power. Constant rates and month-end contributions in the target-age projection; no Social Security or lifetime retirement withdrawal test.",
+    "scope": "Today’s purchasing power. Constant rates and month-end contributions in the target-age projection; no Social Security or lifetime retirement withdrawal test.",
     "guides": [
       {
         "path": "/guides/how-to-calculate-coast-fire/",
@@ -4760,8 +4782,8 @@
       "title": "A $100 quarterly dividend buys one share at $100",
       "intro": "Hold 100 shares at $100 with a 4% starting annual dividend yield, quarterly payment and no current dividend tax.",
       "steps": [
-        "Annual dividend per share: $100 \u00d7 4% = $4.",
-        "Quarterly gross dividend: 100 shares \u00d7 $4 / 4 = $100.",
+        "Annual dividend per share: $100 × 4% = $4.",
+        "Quarterly gross dividend: 100 shares × $4 / 4 = $100.",
         "At an unchanged $100 price, $100 buys one additional fractional-or-whole share."
       ],
       "answer": "The position has 101 shares after the first payout, before any external deposit.",
@@ -4828,16 +4850,16 @@
       "Roth IRA conversion ladder"
     ],
     "definition": "A Roth conversion ladder stages conversions into a Roth IRA in successive tax years and plans later use of conversion principal during an early-retirement bridge.",
-    "explanation": "A conversion moves existing retirement assets; it is different from a regular annual contribution. Planning must distinguish the amount converted, estimated tax, regular contribution basis, conversion-principal records and available market value. Our calculator models one owner\u2019s all-pre-tax traditional IRA without prior conversion lots or initial Roth earnings.",
-    "formula": "Illustrative conversion tax = actual fully taxable conversion \u00d7 entered flat tax assumption",
+    "explanation": "A conversion moves existing retirement assets; it is different from a regular annual contribution. Planning must distinguish the amount converted, estimated tax, regular contribution basis, conversion-principal records and available market value. Our calculator models one owner’s all-pre-tax traditional IRA without prior conversion lots or initial Roth earnings.",
+    "formula": "Illustrative conversion tax = actual fully taxable conversion × entered flat tax assumption",
     "formulaNote": "This is a cash-planning approximation, not a tax-bracket calculation. A conversion clock does not qualify all earnings for withdrawal.",
     "example": {
       "title": "$40,000 converted with an illustrative 20% tax assumption",
       "intro": "Assume a calendar-year taxpayer converts in 2027 and pays tax from outside cash.",
       "steps": [
         "Gross conversion entering Roth: $40,000.",
-        "Illustrative tax: $40,000 \u00d7 20% = $8,000.",
-        "The 2027 conversion\u2019s five-tax-year date is January 1, 2032; assess distribution conditions separately."
+        "Illustrative tax: $40,000 × 20% = $8,000.",
+        "The 2027 conversion’s five-tax-year date is January 1, 2032; assess distribution conditions separately."
       ],
       "answer": "Budget $8,000 tax cash separately; the converted $40,000 is not the same as after-tax cash available immediately.",
       "assumptions": "Fully taxable conversion, no withholding from IRA funds, no bracket or eligibility calculation.",
@@ -4893,7 +4915,7 @@
       }
     ],
     "checkedOn": "2026-10-31",
-    "scope": "Definition and simplified owner-IRA bridge only. No nondeductible basis, workplace-plan eligibility, prior lots or age-59\u00bd transition.",
+    "scope": "Definition and simplified owner-IRA bridge only. No nondeductible basis, workplace-plan eligibility, prior lots or age-59½ transition.",
     "guides": [
       {
         "path": "/guides/roth-conversion-ladder/",
@@ -4914,7 +4936,7 @@
     "definition": "Roth IRA rules use different five-tax-year periods for qualified distributions and for certain early distributions attributable to conversion amounts; the two clocks answer different questions.",
     "explanation": "IRS Publication 590-B describes a separate period for each conversion and a distinct qualified-distribution test. Regular contribution basis, converted amounts and earnings are different sources. Actual distribution ordering and possible exceptions depend on records and circumstances, not simply a five-year anniversary.",
     "formula": "Calendar-year conversion in Y: five-tax-year date = January 1 of Y + 5",
-    "formulaNote": "This date concerns the conversion period. Qualified earnings also require the applicable Roth holding period and a qualifying condition, commonly age 59\u00bd; it is not a general withdrawal permission.",
+    "formulaNote": "This date concerns the conversion period. Qualified earnings also require the applicable Roth holding period and a qualifying condition, commonly age 59½; it is not a general withdrawal permission.",
     "example": {
       "title": "Two conversions, two dates",
       "intro": "Consider calendar-year conversions in 2027 and 2028.",
@@ -4933,7 +4955,7 @@
     "tools": [
       {
         "id": "roth-conversion-ladder",
-        "text": "View separate clock dates within the tool\u2019s limited bridge model."
+        "text": "View separate clock dates within the tool’s limited bridge model."
       }
     ],
     "related": [
@@ -4967,7 +4989,7 @@
     ],
     "definition": "A covered call combines ownership of shares with a short call on an equivalent share quantity, receiving a premium while limiting upside and retaining substantial stock downside.",
     "explanation": "For a standard new buy-write in the calculator, one short contract covers exactly 100 purchased shares. At expiry, the stock plus short-call economic value is capped by the strike. The premium offsets part of initial cost but is not pure profit. Before-expiry values and actual assignment timing require more than an expiry payoff diagram.",
-    "formula": "Expiry profit/loss = shares \u00d7 min(expiry stock price, strike) \u2212 net initial debit \u2212 exit costs",
+    "formula": "Expiry profit/loss = shares × min(expiry stock price, strike) − net initial debit − exit costs",
     "formulaNote": "Net debit includes share purchase and opening fees less premium. Premium is per share; contract fees and position-wide fees use different units.",
     "example": {
       "title": "100 shares at $50 and a $55 call sold for $2 per share",
@@ -4975,7 +4997,7 @@
       "steps": [
         "Stock costs $5,000; premium received is $200.",
         "Net debit is $4,800; fee-free break-even price is $48.",
-        "At or above $55 at expiry, maximum economic profit is $5,500 \u2212 $4,800 = $700."
+        "At or above $55 at expiry, maximum economic profit is $5,500 − $4,800 = $700."
       ],
       "answer": "Upside is capped at $700, while a zero stock value loses $4,800.",
       "assumptions": "Expiry-only new buy-write, no dividend, tax, financing or early-close model.",
@@ -5011,7 +5033,7 @@
     },
     "pitfall": {
       "title": "Covered does not mean protected against a stock crash",
-      "text": "Early assignment can occur and gains above strike are limited. The simple annualized maximum return is not APY or repeatable income. Adjusted contracts, uncovered calls and existing holdings\u2019 tax basis require other analysis."
+      "text": "Early assignment can occur and gains above strike are limited. The simple annualized maximum return is not APY or repeatable income. Adjusted contracts, uncovered calls and existing holdings’ tax basis require other analysis."
     },
     "tools": [
       {

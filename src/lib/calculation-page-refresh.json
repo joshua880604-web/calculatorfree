@@ -89,5 +89,57 @@
       }
     ],
     "checkedOn": "2026-10-31"
+  },
+  "noi": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "How do I calculate property NOI in Excel or Google Sheets?",
+        "answer": "For the guide’s monthly example, use =4000*(1-5%)+100-SUM(400,150,250,300,100,0,50), giving $2,650 monthly NOI. Multiply by 12 for $31,800 annually. Keep all money entries in the same reporting period."
+      },
+      {
+        "question": "Does switching Monthly to Annually convert my NOI inputs?",
+        "answer": "No. The selector reinterprets the amounts already entered; it does not convert them. Enter annual rent, other income and costs explicitly to reproduce the same annual result."
+      }
+    ]
+  },
+  "cap-rate": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Is a higher cap rate always better?",
+        "answer": "No. A higher rate can reflect a lower price, more risk or different income assumptions. Compare property condition, lease quality and a consistent NOI definition; the tool does not provide a universal good rate."
+      },
+      {
+        "question": "Can I use monthly NOI in the known annual NOI field?",
+        "answer": "Annualize it first. Monthly NOI of $1,500 becomes $18,000 per year. At a $300,000 value the cap rate is 6%, not 0.5%. Use the rental worksheet if you need to build NOI from monthly income and expenses."
+      }
+    ]
+  },
+  "rental-property": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "What is good cash flow for a rental property?",
+        "answer": "There is no universal dollar target. Review cash invested, reserve needs, vacancy risk, financing and the return you require. A positive annual average can still leave months with cash shortfalls."
+      },
+      {
+        "question": "Does first-year rental cash flow include a capital replacement reserve?",
+        "answer": "This projection does not subtract a dedicated capital reserve. Subtract a separate budget outside the displayed cash flow or use the Cash-on-Cash Return Calculator’s reserve field. Ordinary maintenance is already included in operating costs."
+      }
+    ]
+  },
+  "heloc": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "How do I calculate interest-only HELOC payments?",
+        "answer": "For this equal-month model, multiply outstanding balance by the nominal annual rate divided by 12. At $50,000 and 8%, monthly interest is $333.33 before fees. Actual statements can use daily balances and different minimum-payment rules."
+      },
+      {
+        "question": "Does this HELOC model simulate rate resets or new draws?",
+        "answer": "No. Each scenario holds one rate fixed and the full entered balance constant during draw. A higher-rate calculation is a sensitivity scenario, not a simulation of a dated rate reset or changing daily balances."
+      }
+    ]
   }
 }
