@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
@@ -71,4 +72,5 @@ export default function MarginMarkupGuide(){return <div className="page-wrap glo
 <p>{"The pricing, conversion, discount and cost-change examples were checked against both calculators where their inputs overlap, and independently verified with 50-digit Decimal arithmetic. Percentage conversion rows, a below-cost sale and direct price formulas were checked separately. Values are displayed to cents or four percentage decimals while calculations retain internal precision."}</p>
 <p>{"The model excludes demand forecasts, competitor prices, inventory valuation, tax classification and complete financial statements. Its role is to expose the arithmetic and cost assumptions so you can compare consistent scenarios. See the "}<SiteLink href="/methodology">{"methodology and review status"}</SiteLink>{" and explore "}<SiteLink href="/business-calculators">{"Business Calculators"}</SiteLink>{" for related tools."}</p>
 <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
+<section aria-labelledby="sources"><h2 id="sources">Sources</h2><SourceReferences context={'guide:'+marginMarkupGuide.path} sources={[{"title": "AccountingCoach: gross margin and markup", "url": "https://www.accountingcoach.com/blog/gross-margin-markup"}, {"title": "IRS: business expense resources", "url": "https://www.irs.gov/forms-pubs/guide-to-business-expense-resources"}]}/></section>
 </article></main></div>;}

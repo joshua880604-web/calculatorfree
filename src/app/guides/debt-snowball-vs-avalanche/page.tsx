@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideScenarioReview,{GuideCheckSummary} from '@/components/GuideScenarioReview';
 import SiteLink from '@/components/SiteLink';
@@ -64,6 +65,6 @@ export default function DebtComparisonGuide(){return <div className="page-wrap g
 <p>{"Calculations retain full precision internally and display dollars to cents. Any budget left when a debt is cleared can go to another debt in the same month. The final overall payment is capped, so multiplying the full budget by the number of months overstates total paid."}</p>
 <p>{"All numerical scenarios in the tables were checked against our calculator and an independent 50-digit decimal monthly simulation, including the remaining balance of every debt. These checks verify the stated model, not an issuer's daily statement or a personalized repayment recommendation. No professional review is implied."}</p>
 <h2 id="sources">{"Sources"}</h2>
-<ul><li><SiteLink href="https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_debt-action-plan_tool_2018-11.pdf">{"CFPB: Debt action plan"}</SiteLink>{", the two repayment approaches and their trade-offs."}</li><li><SiteLink href="https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/">{"CFPB: How credit card interest is calculated"}</SiteLink>{", daily accrual, multiple APRs and payment allocation."}</li><li><SiteLink href="https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-i-cant-pay-my-credit-card-bills-en-1697/">{"CFPB: If you cannot pay credit card bills"}</SiteLink>{", contacting the issuer and seeking help."}</li><li><SiteLink href="/methodology">{"CalculatorFree.io methodology and review status"}</SiteLink>{"."}</li></ul>
+<SourceReferences context={'guide:'+debtGuide.path} sources={[{"title": "CFPB: Debt action plan (2018 worksheet)", "url": "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_debt-action-plan_tool_2018-11.pdf"}, {"title": "CFPB: daily card interest and payment allocation", "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"}, {"title": "CFPB: when minimum card payments are unaffordable", "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-i-cant-pay-my-credit-card-bills-en-1697/"}]}/>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
  </article></main></div>;}

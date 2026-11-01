@@ -1,3 +1,4 @@
+import SourceReferences from './SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from './RemainingGuideReview';
 import SiteLink from './SiteLink';
@@ -43,7 +44,8 @@ export default function DebtMethodGuide({strategy}:{strategy:'snowball'|'avalanc
   <h3>Does this reproduce daily credit-card interest?</h3><p>No. It uses a monthly APR / 12 approximation with fixed minimum dollar amounts. Daily balances, due dates, fees, changing minimums, introductory rates and multiple APR categories can change the real statement. The <SiteLink href="https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/">CFPB explains daily interest and card payment allocation</SiteLink>.</p>
   <h3>{snow?'Does clearing a balance mean I should close the account?':'Does the highest APR always mean the first debt paid off?'}</h3><p>{snow?'No account closure or credit-score recommendation is implied. The model records a zero balance, not the consequences of changing an account.':'No. Other balances still receive minimum payments and may clear earlier. Use the actual clearance months in the milestone table, not the first-target label alone.'}</p>
   <h2 id="sources">Sources, definitions and checks</h2>
-  <p>The first-month worksheet and full payoff totals were checked against independent 60-digit Decimal calculations. The <SiteLink href="https://www.consumerfinance.gov/archive/blog/how-reduce-your-debt/">CFPB debt strategy overview</SiteLink> provides conceptual context; it does not endorse this schedule or supply its numerical examples.</p>
+  <p>The first-month worksheet and full payoff totals were checked against independent 60-digit Decimal calculations. These are numerical checks of the stated model, not an external professional review.</p>
+  <SourceReferences context={'guide:'+guide.path} sources={[{"title": "CFPB: highest-interest and snowball repayment strategies", "url": "https://www.consumerfinance.gov/archive/blog/how-reduce-your-debt/"}, {"title": "CFPB: daily card interest and payment allocation", "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"}, {"title": "CFPB: when minimum card payments are unaffordable", "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-i-cant-pay-my-credit-card-bills-en-1697/"}]}/>
   <p>See the <SiteLink href={'/glossary/debt-'+strategy+'/'}>{strategy} definition</SiteLink>, <SiteLink href={'/glossary/debt-'+(snow?'avalanche':'snowball')+'/'}>other strategy definition</SiteLink>, <SiteLink href="/loan-calculators">Loans &amp; Debt calculators</SiteLink> and <SiteLink href="/methodology">calculation methodology</SiteLink>.</p>
  </article></main></div>;
 }

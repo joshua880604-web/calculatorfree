@@ -336,6 +336,302 @@
       "role": "background",
       "usedFor": "Where to obtain an official Social Security benefit estimate before entering a retirement-income assumption.",
       "scope": "The worksheet does not calculate benefits or establish eligibility; entered benefits are user assumptions."
+    },
+    "https://investfourmore.com/brrrr-calculator/": {
+      "role": "background",
+      "usedFor": "BRRRR acquisition, renovation, renting and cash-recovery concepts.",
+      "scope": "This third-party illustration does not supply our formulas, forecast an appraisal or prove repeat-deal profitability."
+    },
+    "https://myhome.freddiemac.com/refinancing/costs-of-refinancing": {
+      "role": "background",
+      "usedFor": "The refinance cost categories that reduce or add to a transaction’s cash requirement.",
+      "scope": "Actual lender charges vary; these cost concepts do not validate the entered loan or fee assumptions."
+    },
+    "https://selling-guide.fanniemae.com/sel/b2-1.3-03/cash-out-refinance-transactions": {
+      "role": "rule",
+      "usedFor": "Fannie Mae cash-out refinance ownership, loan-age and transaction requirements.",
+      "scope": "Program-specific rules and exceptions apply. Our cash-flow tools do not test seasoning, underwriting or approval."
+    },
+    "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/": {
+      "role": "background",
+      "usedFor": "Where loan costs, payoffs, payment components and cash to close appear on a mortgage disclosure.",
+      "scope": "Our worksheets are not official Closing Disclosures, lender offers or an audit of actual closing charges."
+    },
+    "https://www.reit.com/glossary/net-operating-income": {
+      "role": "method",
+      "usedFor": "Property revenue less operating expenses, excluding financing, depreciation and capital spending, as the NOI basis.",
+      "scope": "Use consistent expense definitions. This operating measure is not cash left after a mortgage or lender-adjusted DSCR."
+    },
+    "https://propertymetrics.com/blog/cash-on-cash-return/": {
+      "role": "method",
+      "usedFor": "Annual cash flow divided by a stated cash-investment basis, and the limitations of cash-on-cash yield.",
+      "scope": "Match the period, cash-flow exclusions and denominator. This is not appreciation, sale profit or a complete total-return measure."
+    },
+    "https://www.proapod.com/calculator/free/o_coc.php": {
+      "role": "method",
+      "usedFor": "The relationship among rental cash flow, invested cash and financing in a cash-on-cash calculation.",
+      "scope": "A related calculator explains the concept; it is not our calculation service or an independent validation of every model case."
+    },
+    "https://walletburst.com/tools/house-hacking-calculator/": {
+      "role": "background",
+      "usedFor": "How rent from rooms or other units can offset an owner-occupied housing budget.",
+      "scope": "This concept reference does not establish rental legality, lender income treatment or a promise of free housing."
+    },
+    "https://www.irs.gov/publications/p527": {
+      "role": "rule",
+      "usedFor": "Residential-rental personal-use, repair and improvement distinctions.",
+      "scope": "Publication 527 is the 2025 edition. Our cash-budget tools do not determine tax deductions, depreciation or the tax classification of a real project."
+    },
+    "https://www.reit.com/glossary/capitalization-rate": {
+      "role": "method",
+      "usedFor": "Cap rate as property NOI divided by a consistently stated purchase price or value.",
+      "scope": "The measure excludes financing and is not a total return, appraisal, guaranteed yield or live market cap-rate quote."
+    },
+    "https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/commercial-real-estate-lending/pub-ch-commercial-real-estate.pdf": {
+      "role": "background",
+      "usedFor": "Commercial-property income, capitalization, project and lending-risk terminology.",
+      "scope": "OCC handbook Version 2.0 is dated March 2022 with later stated edits. It does not certify our deal assumptions or apply a universal loan limit."
+    },
+    "https://www.irs.gov/publications/p544": {
+      "role": "background",
+      "usedFor": "Why property-sale tax treatment depends on asset use and transaction facts.",
+      "scope": "Publication 544 is the 2025 edition. A modeled project profit or manual tax assumption is not a determination of dealer status, capital gain or actual tax due."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-balloon-payment-when-is-one-allowed-en-104/": {
+      "role": "background",
+      "usedFor": "What a balloon payment is and why repayment or refinancing at maturity can be risky.",
+      "scope": "A payment schedule does not establish that a proposed balloon is lawful, permitted or refinanceable for a particular transaction."
+    },
+    "https://www.consumerfinance.gov/rules-policy/regulations/1026/36/": {
+      "role": "rule",
+      "usedFor": "The seller-financer provisions within Regulation Z’s loan-originator rules.",
+      "scope": "The calculator does not test exemptions, licensing, ability-to-repay, usury rules or complete legal compliance."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-prepayment-penalty-en-1957/": {
+      "role": "background",
+      "usedFor": "Why borrowers should check actual mortgage prepayment-penalty terms.",
+      "scope": "A projected payoff saving does not establish that a contract has no penalty; check excluded costs separately."
+    },
+    "https://www.consumerfinance.gov/archive/blog/how-reduce-your-debt/": {
+      "role": "background",
+      "usedFor": "The smallest-balance and highest-interest-rate repayment priorities.",
+      "scope": "This is strategy context, not the source of our month-by-month schedule, proof of motivation or an endorsement of a personal plan."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/": {
+      "role": "background",
+      "usedFor": "Daily balance interest, multiple card APRs and payment allocation.",
+      "scope": "Our debt tools use the stated monthly approximation. They do not reproduce every issuer’s daily accrual, due date, fee or allocation rule."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-i-cant-pay-my-credit-card-bills-en-1697/": {
+      "role": "background",
+      "usedFor": "Options to discuss with the issuer when minimum card payments cannot be met.",
+      "scope": "The payoff model assumes an affordable entered budget; it does not model hardship arrangements, settlement or credit-score outcomes."
+    },
+    "https://www.chase.com/personal/credit-cards/education/basics/how-to-calculate-your-minimum-credit-card-payment": {
+      "role": "background",
+      "usedFor": "Examples of percentage, interest-plus-percentage and floor-based minimum-payment approaches.",
+      "scope": "The actual card agreement controls. Editable examples are not a universal issuer rule or a prediction of a statement’s amount due."
+    },
+    "https://www.consumerfinance.gov/rules-policy/regulations/1026/m1/": {
+      "role": "rule",
+      "usedFor": "The assumptions used for regulated credit-card repayment disclosures.",
+      "scope": "This is legal context, not certification that a custom minimum-payment projection is an issuer disclosure or reproduces Appendix M1 in full."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/do-personal-installment-loans-have-fees-en-2120/": {
+      "role": "background",
+      "usedFor": "Common installment-loan fees and the need to review loan disclosures.",
+      "scope": "Entered fees and their cash-flow treatment are assumptions; the tool does not identify every mandatory or legally included APR charge."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/": {
+      "role": "background",
+      "usedFor": "The distinction between a note interest rate and an APR that includes applicable borrowing costs.",
+      "scope": "The site’s stated cash-flow/fee model is not a lender disclosure or a complete legal APR determination for every product."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/can-i-make-additional-payments-on-my-student-loan-en-607/": {
+      "role": "background",
+      "usedFor": "Directing additional student-loan payments and understanding paid-ahead treatment.",
+      "scope": "Our schedule follows the entered monthly assumptions; it does not reproduce every servicer instruction or program rule."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/how-is-my-student-loan-payment-applied-to-my-account-en-605/": {
+      "role": "background",
+      "usedFor": "How student-loan payments can be allocated to charges, interest and principal.",
+      "scope": "Daily accrual, accrued interest and actual allocation timing can differ from this monthly planning approximation."
+    },
+    "https://edfinancial.studentaid.gov/Payments-Interest-and-Fees": {
+      "role": "background",
+      "usedFor": "An official servicer’s explanation of daily interest and payment application.",
+      "scope": "This is a comparison of conventions, not our model’s live servicing engine. Repayment programs, discounts and changing policy are not automatically applied."
+    },
+    "https://studentaid.gov/repayment-calculator": {
+      "role": "background",
+      "usedFor": "Where borrowers can examine official federal repayment-program options.",
+      "scope": "Income-driven repayment, forgiveness and program eligibility are not calculated by our fixed-input schedule."
+    },
+    "https://www.sba.gov/loans/7a-loans/": {
+      "role": "background",
+      "usedFor": "SBA 7(a) financing context, including lender terms and fixed/variable structures.",
+      "scope": "Our generic business-loan illustration is not an official 7(a) quote, eligibility check or a model of every SBA fee and variable-rate change."
+    },
+    "https://support.google.com/google-ads/answer/13064207?hl=en": {
+      "role": "background",
+      "usedFor": "How advertising conversion values are defined and reported.",
+      "scope": "A platform’s reported value may differ from revenue, contribution or profit; the calculator does not audit tracking or attribution."
+    },
+    "https://support.google.com/google-ads/answer/6268637?hl=en": {
+      "role": "background",
+      "usedFor": "Conversion value divided by ad cost and the meaning of Target ROAS bidding.",
+      "scope": "A static break-even margin calculation does not reproduce Google’s bidding algorithm, establish incremental sales or predict campaign performance."
+    },
+    "https://www.trade.gov/determine-total-export-price": {
+      "role": "background",
+      "usedFor": "Product, freight, insurance, duties, taxes and other shipment-cost components.",
+      "scope": "This is commercial costing context, not a tariff lookup. Verify classification, origin, tax recoverability and responsibility for each charge."
+    },
+    "https://github.com/joshua880604-web/codex-test/blob/static-preview-20261021/src/lib/calculators/evergreen.ts": {
+      "role": "site",
+      "usedFor": "The published implementation and equations used by this site.",
+      "scope": "This is the publisher’s own source code, not an independent audit, a regulator’s method or a named professional review.",
+      "title": "CalculatorFree.io: published model source code"
+    },
+    "https://www.sba.gov/counseling/plan-your-business/break-even-point-calculator/": {
+      "role": "method",
+      "usedFor": "Fixed costs, selling price and variable costs in a basic break-even comparison.",
+      "scope": "The linear single-product assumptions and entered costs are illustrations, not demand forecasts, tax classifications or SBA endorsement."
+    },
+    "https://www.accountingcoach.com/blog/gross-margin-markup": {
+      "role": "method",
+      "usedFor": "Why gross margin divides profit by revenue while markup divides it by cost.",
+      "scope": "Keep cost definitions consistent. These ratios do not discover all expenses, forecast market prices or guarantee net profit."
+    },
+    "https://openstax.org/books/principles-finance/pages/6-3-liquidity-ratios": {
+      "role": "method",
+      "usedFor": "The current ratio and the liquid-asset exclusions used for a quick ratio.",
+      "scope": "Accounting classifications and collection timing matter; a ratio is not a universal solvency threshold or proof every asset can be converted to cash."
+    },
+    "https://corporatefinanceinstitute.com/resources/accounting/quick-ratio-definition/": {
+      "role": "method",
+      "usedFor": "Quick assets relative to current liabilities, including inventory and prepaid-expense exclusions.",
+      "scope": "Use the same reporting date and a consistent asset definition. This is not a liquidity forecast or universal target ratio."
+    },
+    "https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/cash-on-cash-return-cocr-in-real-estate": {
+      "role": "background",
+      "usedFor": "Property cash-on-cash yield as a financing-sensitive cash-flow comparison.",
+      "scope": "The entered cash basis and cash-flow exclusions determine the ratio; a lending article does not validate a personal investment or guarantee returns."
+    },
+    "/methodology": {
+      "role": "site",
+      "usedFor": "Our model versions, inputs, assumptions and numerical-check methods.",
+      "scope": "This is the site publisher’s documentation, not independent professional certification or an external financial opinion."
+    },
+    "https://www.fedex.com/en-us/small-business/articles-insights/what-is-landed-cost.html": {
+      "role": "background",
+      "usedFor": "A shipment costing example that includes acquisition, freight and border-related charges.",
+      "scope": "Carrier guidance is not a live quote, customs valuation or a determination of the correct tariff and recoverable tax treatment."
+    },
+    "https://corporatefinanceinstitute.com/resources/accounting/net-operating-income-noi/": {
+      "role": "method",
+      "usedFor": "Property operating revenue less operating expenses as an NOI definition.",
+      "scope": "Financing and capital costs must be distinguished; no real-property income, appraisal or lender qualification is established."
+    },
+    "https://corporatefinanceinstitute.com/resources/valuation/capitalization-cap-rate/": {
+      "role": "method",
+      "usedFor": "The relationship between a consistently defined NOI, property value and cap rate.",
+      "scope": "The implied value or yield depends on assumptions; this is not an appraisal or current comparable-market evidence."
+    },
+    "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/": {
+      "role": "background",
+      "usedFor": "The need to include complete housing costs when building an owner’s budget.",
+      "scope": "Actual taxes, insurance, maintenance and rental qualification are separate; the page does not supply this property’s expenses."
+    },
+    "https://legacy.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs/break-even-point": {
+      "role": "method",
+      "usedFor": "The fixed-cost, unit-price and variable-cost framework for break-even analysis.",
+      "scope": "This is an older SBA resource. Its arithmetic does not forecast sales, establish current program requirements or endorse our chosen costs."
+    },
+    "https://www.business.qld.gov.au/running-business/finance/improve-performance/ratios": {
+      "role": "method",
+      "usedFor": "The definitions and interpretation of business liquidity and profitability ratios.",
+      "scope": "Queensland guidance is used for general arithmetic, not U.S. tax, legal or filing requirements or a universal healthy-ratio threshold."
+    },
+    "https://www.rocketmortgage.com/learn/brrrr": {
+      "role": "background",
+      "usedFor": "The Buy, Rehab, Rent, Refinance, Repeat strategy and refinance cash-recovery concept.",
+      "scope": "This is context for one modeled deal; it does not predict approval, appraisal, profit or successful repeated acquisitions."
+    },
+    "https://www.rocketmortgage.com/learn/house-hacking": {
+      "role": "background",
+      "usedFor": "Owner occupancy and rent offsets from rooms or other units.",
+      "scope": "Our example is a cash budget, not a determination of local rental rules, tax allocation or mortgage eligibility."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-other-types-of-loans-are-similar-to-a-heloc-en-253/": {
+      "role": "background",
+      "usedFor": "How a cash-out refinance differs from a HELOC or separate home-equity loan.",
+      "scope": "Borrowed proceeds are not profit; actual rates, costs, eligibility and repayment terms must be checked independently."
+    },
+    "https://www.rocketmortgage.com/learn/arv": {
+      "role": "background",
+      "usedFor": "ARV as an estimate of a completed property’s market value.",
+      "scope": "Renovation spending need not equal value added. The site does not perform an appraisal or determine the lender’s accepted value."
+    },
+    "https://www.census.gov/housing/hvs/definitions.html": {
+      "role": "background",
+      "usedFor": "The Census rental-inventory definition underlying a market vacancy statistic.",
+      "scope": "This archived definition is not a current vacancy rate or a forecast of this property’s losses; a unit-month model uses a different time basis."
+    },
+    "https://www.chase.com/business/knowledge-center/manage/how-to-calculate-debt-service-coverage-ratio-dscr": {
+      "role": "method",
+      "usedFor": "A defined income numerator divided by required debt-service cash payments.",
+      "scope": "No universal approval threshold is implied. Check lender definitions, reserves and all required payments rather than relabeling simple NOI/P&I as qualifying DSCR."
+    },
+    "https://multifamily.fanniemae.com/media/37971/display": {
+      "role": "background",
+      "usedFor": "Reported property net cash flow, replacement reserves and operating-expense definitions.",
+      "scope": "The DUS glossary is dated 2025 and is multifamily reporting context; it is not a lender-specific rulebook applied by our calculators."
+    },
+    "https://www.occ.treas.gov/publications-and-resources/publications/comptrollers-handbook/files/commercial-real-estate-lending/pub-ch-commercial-real-estate.pdf": {
+      "role": "background",
+      "usedFor": "Commercial-property income, capitalization and underwriting-risk terminology.",
+      "scope": "The March 2022 OCC handbook with its stated later edits is not a validation of our project values, fees, legal assumptions or approval outcomes."
+    },
+    "https://edfinancial.studentaid.gov/payments-interest-and-fees": {
+      "role": "background",
+      "usedFor": "An official servicer’s explanation of daily interest and payment application.",
+      "scope": "The source’s daily and program conventions are not automatically reproduced by our monthly fixed-input model."
+    },
+    "https://www.trade.gov/import-tariffs-fees-overview": {
+      "role": "background",
+      "usedFor": "The distinction between import tariffs and other landed-shipment taxes and charges.",
+      "scope": "This resource does not supply a current rate for the entered goods; verify product classification, origin, valuation and applicable additional duties."
+    },
+    "https://www.trade.gov/know-your-incoterms": {
+      "role": "background",
+      "usedFor": "How Incoterms assign shipment tasks, costs and risks between buyer and seller.",
+      "scope": "Trade terms do not determine customs classification or the actual tax due. Avoid counting a charge again if the supplier price already includes it."
+    },
+    "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin": {
+      "role": "method",
+      "usedFor": "Contribution per unit, contribution-margin percentage and the role of variable costs.",
+      "scope": "Use the stated cost definition; contribution before advertising is not automatically net profit after overhead and tax."
+    },
+    "https://www.business.qld.gov.au/running-business/marketing-sales/marketing/calculators/mark-up": {
+      "role": "method",
+      "usedFor": "The different cost and revenue denominators in markup and margin.",
+      "scope": "General pricing arithmetic is used here, not Australian or U.S. tax advice or a guarantee that customers accept the calculated selling price."
+    },
+    "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars": {
+      "role": "method",
+      "usedFor": "Break-even units and revenue from fixed costs and a positive contribution margin.",
+      "scope": "The linear cost-volume-profit assumptions do not model demand, changing capacity, every product mix or unentered expenses."
+    },
+    "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_debt-action-plan_tool_2018-11.pdf": {
+      "role": "background",
+      "usedFor": "The two debt repayment priorities and their practical trade-offs.",
+      "scope": "The 2018 CFPB worksheet supplies concepts, not this site’s payoff figures, behavioral evidence or an issuer’s statement calculations."
+    },
+    "https://www.irs.gov/forms-pubs/guide-to-business-expense-resources": {
+      "role": "background",
+      "usedFor": "Where to research business expense and tax-reporting topics.",
+      "scope": "A pricing-cost example does not determine deductibility, cost capitalization or actual tax treatment."
     }
   },
   "pages": {
@@ -534,6 +830,251 @@
     },
     "guide:/guides/how-to-calculate-coast-fire/": {
       "note": "The present-value and inflation relationships are mathematical context. This site states and checks its exact real-return conversion; return, spending, inflation and benefit examples remain assumptions."
+    },
+    "calculator:brrrr": {
+      "note": "References support property definitions, financing context and cost categories. Entered values, rents, costs and rates remain assumptions; a calculated deal is not an appraisal, approval or prediction of investment performance."
+    },
+    "calculator:noi": {
+      "note": "References support property definitions, financing context and cost categories. Entered values, rents, costs and rates remain assumptions; a calculated deal is not an appraisal, approval or prediction of investment performance."
+    },
+    "calculator:cash-on-cash-return": {
+      "note": "References support property definitions, financing context and cost categories. Entered values, rents, costs and rates remain assumptions; a calculated deal is not an appraisal, approval or prediction of investment performance."
+    },
+    "calculator:house-hacking": {
+      "note": "References support property definitions, financing context and cost categories. Entered values, rents, costs and rates remain assumptions; a calculated deal is not an appraisal, approval or prediction of investment performance.",
+      "overrides": {}
+    },
+    "calculator:rental-property": {
+      "note": "References support property definitions, financing context and cost categories. Entered values, rents, costs and rates remain assumptions; a calculated deal is not an appraisal, approval or prediction of investment performance."
+    },
+    "calculator:cap-rate": {
+      "note": "References support property definitions, financing context and cost categories. Entered values, rents, costs and rates remain assumptions; a calculated deal is not an appraisal, approval or prediction of investment performance."
+    },
+    "calculator:fix-and-flip": {
+      "note": "References support property definitions, financing context and cost categories. Entered values, rents, costs and rates remain assumptions; a calculated deal is not an appraisal, approval or prediction of investment performance.",
+      "overrides": {}
+    },
+    "calculator:seller-financing": {
+      "note": "Separate the payment method from product rules, fees and eligibility. The entered rates and charges are assumptions; this schedule is not a lender disclosure or legal qualification test.",
+      "extras": [
+        {
+          "title": "OpenStax 8.3: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:mortgage-vs-invest": {
+      "note": "References support property definitions, financing context and cost categories. Entered values, rents, costs and rates remain assumptions; a calculated deal is not an appraisal, approval or prediction of investment performance."
+    },
+    "calculator:debt-snowball": {
+      "note": "References explain repayment priorities and issuer practices. This site calculates its own fixed-input monthly illustration; daily balances, changing minimums and actual statement rules may differ."
+    },
+    "calculator:debt-avalanche": {
+      "note": "References explain repayment priorities and issuer practices. This site calculates its own fixed-input monthly illustration; daily balances, changing minimums and actual statement rules may differ."
+    },
+    "calculator:credit-card-minimum-payment": {
+      "note": "References explain repayment priorities and issuer practices. This site calculates its own fixed-input monthly illustration; daily balances, changing minimums and actual statement rules may differ."
+    },
+    "calculator:credit-cards-payoff": {
+      "note": "References explain repayment priorities and issuer practices. This site calculates its own fixed-input monthly illustration; daily balances, changing minimums and actual statement rules may differ."
+    },
+    "calculator:personal-loan": {
+      "note": "Separate the payment method from product rules, fees and eligibility. The entered rates and charges are assumptions; this schedule is not a lender disclosure or legal qualification test.",
+      "extras": [
+        {
+          "title": "OpenStax 8.3: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:student-loan": {
+      "note": "Separate the payment method from product rules, fees and eligibility. The entered rates and charges are assumptions; this schedule is not a lender disclosure or legal qualification test.",
+      "extras": [
+        {
+          "title": "OpenStax 8.3: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:business-loan": {
+      "note": "Separate the payment method from product rules, fees and eligibility. The entered rates and charges are assumptions; this schedule is not a lender disclosure or legal qualification test.",
+      "extras": [
+        {
+          "title": "OpenStax 8.3: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:roas": {
+      "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts."
+    },
+    "calculator:landed-cost": {
+      "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts."
+    },
+    "calculator:break-even": {
+      "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts.",
+      "extras": [
+        {
+          "title": "OpenStax: break-even units, revenue and model assumptions",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars"
+        }
+      ]
+    },
+    "calculator:margin": {
+      "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts."
+    },
+    "calculator:markup": {
+      "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts."
+    },
+    "calculator:quick-ratio": {
+      "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts."
+    },
+    "calculator:current-ratio": {
+      "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts."
+    },
+    "guide:/guides/what-is-house-hacking/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-cash-on-cash-return/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-landed-cost/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-net-operating-income/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-cap-rate/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-rental-property-cash-flow/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-seller-financing/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-house-flipping-profit/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-personal-loan-payments/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-student-loan-payments/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-business-loan-payments/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-break-even-point/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/pay-off-mortgage-or-invest/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/current-ratio-vs-quick-ratio/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/credit-card-minimum-payment-and-payoff-time/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/brrrr-refinance-cash-flow-analysis/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/roas-profit-margin-analysis/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "glossary:brrrr-method": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:net-operating-income": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:house-hacking": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:cash-out-refinance": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:loan-seasoning": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:after-repair-value": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:vacancy-rate": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:capital-expenditure": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:debt-service-coverage-ratio": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:cap-rate-vs-cash-on-cash-return": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:debt-snowball": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:debt-avalanche": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:debt-snowball-vs-avalanche": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:interest-only-and-balloon-loans": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:capitalized-interest": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:return-on-ad-spend": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:landed-cost": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:contribution-margin": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:markup-vs-margin": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:break-even-point": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:quick-ratio": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "glossary:current-ratio": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
+    },
+    "guide:/guides/debt-snowball-vs-avalanche/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/apr-vs-interest-rate/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/margin-vs-markup/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-debt-snowball/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "guide:/guides/how-to-calculate-debt-avalanche/": {
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+    },
+    "calculator:apr": {
+      "note": "Separate the payment method from product rules, fees and eligibility. The entered rates and charges are assumptions; this schedule is not a lender disclosure or legal qualification test.",
+      "extras": [
+        {
+          "title": "OpenStax 8.3: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "glossary:apr": {
+      "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
     }
   }
 }

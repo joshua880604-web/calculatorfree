@@ -20,6 +20,6 @@ export default function SourceReferences({context,sources}:{context:string;sourc
     {note&&<><p className="source-use"><strong>Used for:</strong> {note.usedFor}</p><p className="source-scope"><strong>Scope:</strong> {note.scope}</p></>}
    </li>;
   })}</ul>
-  <p className="source-note-date">Source-use notes updated <time dateTime={notes.updatedOn}>November 1, 2026</time>. Calculation checks, publication dates and source/data editions are recorded separately.</p>
+  <p className="source-note-date">Source-use notes updated <time dateTime={notes.updatedOn}>{new Date(notes.updatedOn+'T00:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'})}</time>. Calculation checks, publication dates and source/data editions are recorded separately.</p>
  </div>;
 }
