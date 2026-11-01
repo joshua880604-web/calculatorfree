@@ -41,7 +41,7 @@ test("Production sitemap lists canonical pages and only reviewed content dates",
     SITE_INDEXABLE: "true",
   });
   const entries = sitemapEntries(config);
-  assert.equal(entries.length, 305);
+  assert.equal(entries.length, 310);
   assert.ok(entries.some(e=>new URL(e.url).pathname==='/disclaimer.html'));
   assert.equal(contentUpdatedOn['/fat-fire-calculator.html'],'2026-10-29');
   assert.equal(contentUpdatedOn['/lean-fire-calculator.html'],'2026-10-29');
@@ -178,7 +178,7 @@ test("Production SEO follows the confirmed www extensionless destination while o
   assert.equal(absoluteURL("/cd-calculator.html",config),"https://www.calculatorfree.io/cd-calculator");
   assert.equal(absoluteURL("/glossary/",config),"https://www.calculatorfree.io/glossary/");
   const entries=sitemapEntries(config);
-  assert.equal(entries.length,305);
+  assert.equal(entries.length,310);
   assert.equal(new Set(entries.map(e=>e.url)).size,entries.length);
   assert.ok(entries.every(e=>e.url.startsWith("https://www.calculatorfree.io/")&&!e.url.endsWith(".html")&&!e.url.includes("?")));
   for (const calc of calculators.filter(c=>!c.directory)) {

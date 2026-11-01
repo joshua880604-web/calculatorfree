@@ -260,3 +260,6 @@ for(const slug of ['health-savings-account','brrrr-method','sequence-of-returns-
 
 // Three property definitions and a withdrawal-rule clarification, checked November 1.
 for(const slug of ['house-hacking','loan-seasoning','cash-out-refinance','withdrawal-rate'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
+
+// Property operating assumptions and dividend-income definition, checked November 1.
+for(const slug of ['after-repair-value','vacancy-rate','capital-expenditure','debt-service-coverage-ratio','dividend-yield'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';

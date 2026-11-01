@@ -3028,7 +3028,8 @@
       "internal-rate-of-return",
       "return-on-investment",
       "loan-to-value-ratio",
-      "net-operating-income"
+      "net-operating-income",
+      "capital-expenditure"
     ],
     "sources": [
       {
@@ -4517,7 +4518,10 @@
       "cap-rate-vs-cash-on-cash-return",
       "mortgage-escrow",
       "brrrr-method",
-      "house-hacking"
+      "house-hacking",
+      "vacancy-rate",
+      "capital-expenditure",
+      "debt-service-coverage-ratio"
     ],
     "sources": [
       {
@@ -5146,7 +5150,8 @@
       "compound-interest",
       "return-on-investment",
       "covered-call",
-      "cost-basis"
+      "cost-basis",
+      "dividend-yield"
     ],
     "sources": [
       {
@@ -5490,7 +5495,9 @@
       "cap-rate-vs-cash-on-cash-return",
       "loan-to-value-ratio",
       "loan-seasoning",
-      "cash-out-refinance"
+      "cash-out-refinance",
+      "after-repair-value",
+      "debt-service-coverage-ratio"
     ],
     "sources": [
       {
@@ -5826,7 +5833,8 @@
     "related": [
       "net-operating-income",
       "mortgage-escrow",
-      "debt-to-income-ratio"
+      "debt-to-income-ratio",
+      "vacancy-rate"
     ],
     "sources": [
       {
@@ -5975,6 +5983,352 @@
       {
         "title": "BRRRR refinance cash-flow analysis",
         "path": "/guides/brrrr-refinance-cash-flow-analysis/"
+      }
+    ]
+  },
+  {
+    "slug": "after-repair-value",
+    "name": "After-repair value (ARV)",
+    "title": "What Is ARV? After-Repair Value & Refinance Sensitivity",
+    "description": "After-repair value is an estimate of what a property could be worth after a specified renovation is completed; it is a market-value assumption, not the sum of purchase price and repair spending.",
+    "category": "Housing & property",
+    "aliases": [
+      "ARV",
+      "After repair value",
+      "Post-renovation value"
+    ],
+    "definition": "After-repair value is an estimate of what a property could be worth after a specified renovation is completed; it is a market-value assumption, not the sum of purchase price and repair spending.",
+    "explanation": "Define the completed condition and compare relevant properties, location and market timing. The amount spent on a renovation need not equal the market value added. A lender may require an appraisal and apply its own valuation and loan limits. A proposed sale price can also differ from the eventual net proceeds after selling and financing costs.",
+    "formula": "For a hypothetical refinance sized only by value: proposed loan principal = entered ARV × assumed loan-to-value fraction",
+    "formulaNote": "This equation sizes a scenario; it does not estimate ARV or establish a lender’s permitted loan amount. Actual proceeds depend on the approved balance, old-loan payoff, fees and any other deductions. Do not treat the remaining property equity as cash already received.",
+    "example": {
+      "title": "A lower ARV reduces the same 75%-LTV loan assumption",
+      "intro": "Compare two assumed completed-property values, $300,000 and $260,000, while holding an illustrative refinance LTV at 75%.",
+      "steps": [
+        "At $300,000 ARV, the value-based loan scenario is $300,000 × 0.75 = $225,000.",
+        "At $260,000 ARV, the same calculation gives $260,000 × 0.75 = $195,000.",
+        "The $40,000 decrease in assumed value reduces this hypothetical loan by $30,000, before payoff and fees."
+      ],
+      "answer": "A value assumption can materially change refinance funding; neither proposed loan amount is an approval or a cash-profit estimate.",
+      "assumptions": "USD, one completed-condition valuation assumption and a fixed 75% scenario LTV. No comparable sales, appraisal, loan cap, seasoning, fee or tax rule is supplied by this calculation.",
+      "calculationNote": "BRRRR and Fix and Flip calculators use entered value and cost assumptions; they do not perform an appraisal or find comparable property sales."
+    },
+    "pitfall": {
+      "title": "Renovation cost is not guaranteed value creation",
+      "text": "Adding $40,000 of work does not establish a $40,000 increase in sale or appraised value. Test lower values and cost overruns separately. Do not substitute an optimistic future ARV for the lender’s actual valuation, current equity or available cash."
+    },
+    "tools": [
+      {
+        "id": "brrrr",
+        "text": "Inspect the effect of entered ARV on refinance principal, remaining cash and loan payments."
+      },
+      {
+        "id": "fix-and-flip",
+        "text": "Test a resale-price assumption against project, holding, financing and selling costs."
+      }
+    ],
+    "related": [
+      "brrrr-method",
+      "loan-to-value-ratio",
+      "cash-out-refinance"
+    ],
+    "sources": [
+      {
+        "title": "Rocket Mortgage: ARV as an estimate of completed-property value",
+        "url": "https://www.rocketmortgage.com/learn/arv"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "Educational valuation concept, not an appraisal, live market estimate, lender quote or investment recommendation.",
+    "guides": [
+      {
+        "title": "BRRRR refinance cash-flow analysis",
+        "path": "/guides/brrrr-refinance-cash-flow-analysis/"
+      },
+      {
+        "title": "How to Calculate House Flipping Profit",
+        "path": "/guides/how-to-calculate-house-flipping-profit/"
+      }
+    ]
+  },
+  {
+    "slug": "vacancy-rate",
+    "name": "Vacancy rate",
+    "title": "What Is Vacancy Rate? Rental Capacity & Rent-Loss Example",
+    "description": "A vacancy rate measures the share of rental capacity that is unoccupied, using a specified unit count or time period; a rent-loss allowance is a separate budgeting assumption.",
+    "category": "Housing & property",
+    "aliases": [
+      "Rental vacancy rate",
+      "Physical vacancy"
+    ],
+    "definition": "A vacancy rate measures the share of rental capacity that is unoccupied, using a specified unit count or time period; a rent-loss allowance is a separate budgeting assumption.",
+    "explanation": "For a property over time, define available unit-months or unit-days and the unoccupied portion. A market statistic can instead use rental units at a point in time. For example, the Census rental vacancy measure uses vacant-for-rent units relative to the relevant rental inventory; it is not a forecast of one landlord’s losses. Physical vacancy also differs from economic rent loss caused by concessions, bad debt or unequal rents.",
+    "formula": "Property vacancy percentage = vacant unit-months / available unit-months × 100%; modeled rent after a loss allowance = scheduled rent × (1 − entered loss fraction)",
+    "formulaNote": "Use matching periods and state whether unavailable units are included. A simple percentage applied to rent is appropriate only for the stated budget model. The site’s vacancy/loss inputs may combine more than physical vacancy; check each tool’s definition.",
+    "example": {
+      "title": "Three vacant unit-months in a five-unit property",
+      "intro": "Assume five identical rental units are available for all 12 months, each at $1,000 monthly rent. Across the year, three unit-months are unoccupied.",
+      "steps": [
+        "Available capacity = 5 × 12 = 60 unit-months. Vacancy = 3 / 60 = 5%.",
+        "Full scheduled annual rent = 5 × $1,000 × 12 = $60,000.",
+        "With identical rent and no other losses, three vacant unit-months forgo $3,000, leaving $57,000 before expenses."
+      ],
+      "answer": "Physical vacancy is 5% and the simplified lost rent is $3,000; those percentages need not agree when rents or other losses differ.",
+      "assumptions": "Hypothetical property history, equal rents, no unavailable units, concessions, nonpayment or other income. Reusing 5% as a future budget allowance would be an assumption, not a prediction of next year’s vacancy.",
+      "calculationNote": "NOI, Rental Property and House Hacking tools apply their entered loss conventions; they do not estimate market vacancy or predict a tenant’s payment history."
+    },
+    "pitfall": {
+      "title": "A regional vacancy statistic is not your property’s loss forecast",
+      "text": "A few expensive units being vacant can create greater revenue loss than their share of unit count. Separately consider turnover, collection losses and rent concessions. Avoid deducting the same loss through both reduced rent and another vacancy allowance."
+    },
+    "tools": [
+      {
+        "id": "noi",
+        "text": "Reconcile scheduled rent and the entered vacancy/collection allowance before operating costs."
+      },
+      {
+        "id": "rental-property",
+        "text": "Inspect how assumed rent loss changes a property cash-flow scenario."
+      },
+      {
+        "id": "house-hacking",
+        "text": "Keep the owner’s occupied space outside the rental list and test tenant-rent loss."
+      }
+    ],
+    "related": [
+      "net-operating-income",
+      "house-hacking",
+      "capital-expenditure"
+    ],
+    "sources": [
+      {
+        "title": "U.S. Census CPS/HVS: archived definitions of rental inventory and vacancy rates, not current market estimates",
+        "url": "https://www.census.gov/housing/hvs/definitions.html"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "Property-budget and statistical concept. The Census page is cited for definitions, not as a current rate or a directly comparable unit-month survey.",
+    "guides": [
+      {
+        "title": "How to Calculate Net Operating Income",
+        "path": "/guides/how-to-calculate-net-operating-income/"
+      },
+      {
+        "title": "How to Estimate Rental Property Cash Flow",
+        "path": "/guides/how-to-calculate-rental-property-cash-flow/"
+      },
+      {
+        "title": "What Is House Hacking?",
+        "path": "/guides/what-is-house-hacking/"
+      }
+    ]
+  },
+  {
+    "slug": "capital-expenditure",
+    "name": "Capital expenditure (CapEx)",
+    "title": "What Is CapEx? Rental Improvements, NOI & Cash Flow",
+    "description": "A capital expenditure is spending to acquire or improve a long-lived asset, distinct from routine operating costs; in property analysis, major replacements must be considered separately from NOI.",
+    "category": "Housing & property",
+    "aliases": [
+      "CapEx",
+      "Capital expenditures",
+      "Capital improvements"
+    ],
+    "definition": "A capital expenditure is spending to acquire or improve a long-lived asset, distinct from routine operating costs; in property analysis, major replacements must be considered separately from NOI.",
+    "explanation": "A capital project uses cash even when it is excluded from the operating-income measure. Accounting and tax treatment can spread an eligible asset’s cost across later periods rather than deducting all of it immediately. A replacement reserve is a budgeting provision for future capital needs; it is not proof that a repair has occurred or that money has been paid to a contractor. Keep estimated reserves separate from actual project spending.",
+    "formula": "Simplified cash after a capital project = NOI − debt-service cash payments − actual capital-project cash paid",
+    "formulaNote": "The classification of a repair or improvement depends on the facts and applicable rules. Use a consistent NOI definition. If reserve transfers and later project payments come from the same funds, reconcile the reserve account rather than treating both as new economic costs.",
+    "example": {
+      "title": "Positive NOI can coexist with a year of negative cash flow",
+      "intro": "Assume annual NOI is $18,000, annual debt payments are $12,000 and a $15,000 roof project is treated as capital expenditure for this illustration.",
+      "steps": [
+        "Cash after debt service but before the project = $18,000 − $12,000 = $6,000.",
+        "After paying the capital project, cash = $6,000 − $15,000 = −$9,000.",
+        "NOI remains $18,000 under this operating definition; the project is shown separately rather than deducted twice."
+      ],
+      "answer": "This example has $18,000 of NOI but a $9,000 cash shortfall after debt service and the capital project.",
+      "assumptions": "USD, one reporting year, no other cash flows, income tax, depreciation, prior reserve draw or additional borrowing. The project is assumed to be capital spending; the example does not determine its tax classification or deduction.",
+      "calculationNote": "The site’s rental tools differ in their use of a reserve allowance and actual project costs. Read each model’s boundary before substituting a capital-budget amount for an operating expense."
+    },
+    "pitfall": {
+      "title": "A reserve allowance is not the same transaction as a capital purchase",
+      "text": "Routine repair budgets, reserve contributions, actual replacements and depreciation answer different questions. Our NOI model excludes financing, capital spending and replacement reserves. A cash-flow model may subtract a reserve as a planning allowance; that alone does not calculate tax deductions or prove the reserve is adequate."
+    },
+    "tools": [
+      {
+        "id": "noi",
+        "text": "Inspect operating income before capital expenditure and financing."
+      },
+      {
+        "id": "cash-on-cash-return",
+        "text": "Check whether the entered cash flow includes the reserve and capital treatment you intend."
+      },
+      {
+        "id": "brrrr",
+        "text": "Distinguish initial rehabilitation funding from the separate ongoing capital reserve."
+      }
+    ],
+    "related": [
+      "net-operating-income",
+      "depreciation",
+      "cap-rate-vs-cash-on-cash-return",
+      "vacancy-rate"
+    ],
+    "sources": [
+      {
+        "title": "IRS Publication 527 (2025 edition): residential-rental repairs, improvements and capitalization",
+        "url": "https://www.irs.gov/publications/p527"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "General property cash-flow concept, not a classification of a real project for accounting or tax. The cited IRS publication is the 2025 edition; current rules and the project facts control tax treatment.",
+    "guides": [
+      {
+        "title": "How to Estimate Rental Property Cash Flow",
+        "path": "/guides/how-to-calculate-rental-property-cash-flow/"
+      },
+      {
+        "title": "How to Calculate Cash-on-Cash Return",
+        "path": "/guides/how-to-calculate-cash-on-cash-return/"
+      },
+      {
+        "title": "BRRRR refinance cash-flow analysis",
+        "path": "/guides/brrrr-refinance-cash-flow-analysis/"
+      }
+    ]
+  },
+  {
+    "slug": "debt-service-coverage-ratio",
+    "name": "Debt service coverage ratio (DSCR)",
+    "title": "What Is DSCR? Income Definitions & Debt Coverage Example",
+    "description": "Debt service coverage ratio compares a defined measure of income available for debt payments with the required debt service for the same period; the result depends on both definitions.",
+    "category": "Housing & property",
+    "aliases": [
+      "DSCR",
+      "Debt-service coverage ratio",
+      "NOI to debt service"
+    ],
+    "definition": "Debt service coverage ratio compares a defined measure of income available for debt payments with the required debt service for the same period; the result depends on both definitions.",
+    "explanation": "A property worksheet often starts with NOI divided by principal and interest. A lender may instead use underwritten net cash flow after replacement reserves or other adjustments, and may define debt service differently. Fannie Mae’s DUS glossary, for example, defines reported net cash flow after operating costs and replacement reserves. A calculator’s simple NOI-to-P&I coverage is therefore not necessarily a lender’s qualifying DSCR.",
+    "formula": "DSCR = defined income available for debt service / defined debt service; simple property illustration = annual NOI / annual principal and interest",
+    "formulaNote": "Keep periods consistent and debt service positive. A 1.00× ratio means the chosen numerator equals the chosen debt payments; it does not fund every omitted cost. No single ratio threshold establishes approval across all programs.",
+    "example": {
+      "title": "The same debt gives different coverage after a reserve adjustment",
+      "intro": "Assume annual NOI is $36,000 and annual principal and interest total $30,000. Compare a simple worksheet with an illustrative $3,000 annual reserve adjustment.",
+      "steps": [
+        "Simple NOI/P&I coverage = $36,000 / $30,000 = 1.20×.",
+        "After the assumed reserve adjustment, cash available is $36,000 − $3,000 = $33,000.",
+        "Using that adjusted numerator gives $33,000 / $30,000 = 1.10×."
+      ],
+      "answer": "Both ratios are arithmetically correct under their definitions; neither proves a loan qualifies.",
+      "assumptions": "USD, annual figures, one debt and an illustrative reserve only. This is not a quoted lender adjustment, required reserve or approval threshold. No other debt, tax, vacancy change or underwriting adjustment is modeled.",
+      "calculationNote": "BRRRR Calculator labels its ratio NOI / principal-and-interest coverage. NOI Calculator supplies an operating-income numerator only. Neither tool determines a lender-specific DSCR or loan eligibility."
+    },
+    "pitfall": {
+      "title": "Do not compare coverage ratios without their definitions",
+      "text": "A reserve-adjusted numerator can differ from NOI; a debt denominator may include other required payments. Adding property taxes and insurance to a denominator after already deducting them in NOI can also distort an intended NOI/P&I comparison. Follow the actual program definition rather than relabeling one tool’s output as an approval result."
+    },
+    "tools": [
+      {
+        "id": "brrrr",
+        "text": "Inspect the explicitly labeled NOI/P&I coverage under the deal’s entered assumptions."
+      },
+      {
+        "id": "noi",
+        "text": "Calculate an operating-income component without assuming it is underwritten net cash flow."
+      }
+    ],
+    "related": [
+      "net-operating-income",
+      "capital-expenditure",
+      "loan-to-value-ratio",
+      "loan-seasoning"
+    ],
+    "sources": [
+      {
+        "title": "Chase for Business: income/debt-service division and lender-specific requirements",
+        "url": "https://www.chase.com/business/knowledge-center/manage/how-to-calculate-debt-service-coverage-ratio-dscr"
+      },
+      {
+        "title": "Fannie Mae DUS Insights glossary (2025): reported net cash flow and replacement reserves",
+        "url": "https://multifamily.fanniemae.com/media/37971/display"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "General coverage concept with program-specific definitions. The cited multifamily material is a definition reference, not a rulebook applied by these calculators to every property or mortgage.",
+    "guides": [
+      {
+        "title": "BRRRR refinance cash-flow analysis",
+        "path": "/guides/brrrr-refinance-cash-flow-analysis/"
+      },
+      {
+        "title": "How to Calculate Net Operating Income",
+        "path": "/guides/how-to-calculate-net-operating-income/"
+      }
+    ]
+  },
+  {
+    "slug": "dividend-yield",
+    "name": "Dividend yield",
+    "title": "What Is Dividend Yield? Price, Payout & Return Example",
+    "description": "Dividend yield compares an annual dividend amount per share with a stated share price, usually as a percentage; it measures dividend income relative to price, not total investment return.",
+    "category": "Saving & investing",
+    "aliases": [
+      "Annual dividend yield",
+      "Indicated dividend yield",
+      "Trailing dividend yield"
+    ],
+    "definition": "Dividend yield compares an annual dividend amount per share with a stated share price, usually as a percentage; it measures dividend income relative to price, not total investment return.",
+    "explanation": "State whether the annual dividend is a trailing total or an indicated amount based on a recent payout. Special dividends and changing payment schedules can affect the comparison. A higher yield can result from a lower share price without any increase in the dividend. The cash amount, price change, reinvestment, taxes and fees are separate inputs when assessing an investor’s outcome.",
+    "formula": "Dividend yield percentage = annual dividend per share / stated share price × 100%",
+    "formulaNote": "Use a positive price and a dividend figure consistent with the chosen period. Yield at current price differs from yield on the investor’s original cost. A starting yield in a projection does not promise that future dividends or prices stay constant.",
+    "example": {
+      "title": "A price decline can increase yield without a dividend increase",
+      "intro": "Assume annual dividend per share stays at $2. Compare a $50 share price with a later hypothetical $40 price.",
+      "steps": [
+        "At $50, dividend yield = $2 / $50 × 100% = 4%.",
+        "At $40, the same dividend gives $2 / $40 × 100% = 5%.",
+        "The price fell $10, or 20%, while the assumed annual dividend stayed unchanged."
+      ],
+      "answer": "The indicated yield rises from 4% to 5% because the denominator fell; it does not demonstrate higher total return or a safer investment.",
+      "assumptions": "USD, an assumed unchanged annual dividend, no payout dates, tax, fees or reinvestment. This is a constructed comparison, not a quoted security or historical market result.",
+      "calculationNote": "DRIP Calculator uses a starting yield to derive its modeled dividend dollars per share; dividend growth and share-price growth are separate assumptions. Do not add dividend yield to a return input that already includes distributions."
+    },
+    "pitfall": {
+      "title": "A high yield is not a guaranteed payout or total return",
+      "text": "A company can reduce or stop dividends, and a declining investment can show a high displayed yield. Reinvestment buys additional shares but does not remove price risk or automatically eliminate taxable dividend income. Compare the dividend convention and total-return assumptions before comparing tools."
+    },
+    "tools": [
+      {
+        "id": "drip",
+        "text": "Keep starting yield, dividend growth and price growth separate when comparing reinvestment with cash."
+      },
+      {
+        "id": "stock-profit",
+        "text": "Reconcile entered dividend cash with price gain or loss and charges."
+      }
+    ],
+    "related": [
+      "dividend-reinvestment-plan",
+      "return-on-investment",
+      "cost-basis"
+    ],
+    "sources": [
+      {
+        "title": "FINRA: dividend yield and investment value measures",
+        "url": "https://syndication.finra.org/content/defining-value-investment"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "General investment-income concept, not a dividend forecast or a recommendation. No live stock quote, dividend declaration or tax determination is provided.",
+    "guides": [
+      {
+        "title": "Should You Reinvest Dividends?",
+        "path": "/guides/should-you-reinvest-dividends/"
+      },
+      {
+        "title": "How to Calculate Stock Profit",
+        "path": "/guides/how-to-calculate-stock-profit/"
       }
     ]
   }

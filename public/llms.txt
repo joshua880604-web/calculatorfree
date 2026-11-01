@@ -342,3 +342,12 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 - [Loan seasoning](https://www.calculatorfree.io/glossary/loan-seasoning/): Existing-loan age and ownership waiting periods are separate, program-specific requirements; the calculators do not test eligibility.
 - [Cash-out refinance](https://www.calculatorfree.io/glossary/cash-out-refinance/): Reconcile the new mortgage, payoff, deducted costs and net cash; distinguish borrowing from profit.
 - [Withdrawal rate, SWR and the 4% rule](https://www.calculatorfree.io/glossary/withdrawal-rate/): Initial-balance inflation adjustments differ from a percentage of current balance, lifespan depletion and required minimum distributions.
+
+
+## Property assumptions and dividend income
+
+- [After-repair value (ARV)](https://www.calculatorfree.io/glossary/after-repair-value/): Completed-condition value is an assumption, not renovation cost, an appraisal or approved refinance funding.
+- [Vacancy rate](https://www.calculatorfree.io/glossary/vacancy-rate/): Unit-count and unit-time measures differ from revenue-loss allowances; distinguish market statistics from property forecasts.
+- [Capital expenditure (CapEx)](https://www.calculatorfree.io/glossary/capital-expenditure/): Separate operating income, actual capital spending, reserves and tax treatment.
+- [Debt service coverage ratio (DSCR)](https://www.calculatorfree.io/glossary/debt-service-coverage-ratio/): Numerator and debt-service definitions matter; simple NOI/P&I coverage is not a lender approval result.
+- [Dividend yield](https://www.calculatorfree.io/glossary/dividend-yield/): Annual dividends divided by share price; distinguish income yield from growth and total return.

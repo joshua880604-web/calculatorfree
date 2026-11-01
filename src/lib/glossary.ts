@@ -19,7 +19,7 @@ export type GlossaryTerm = {
 export const glossaryCategories=['Saving & investing','Retirement','Loans & debt','Housing & property','Tax & income','Business & pricing','Everyday money'];
 export const glossaryPath='/glossary/';
 export const glossaryTerms=data as GlossaryTerm[];
-export const expandedGlossarySlugs=['health-savings-account','brrrr-method','sequence-of-returns-risk','return-on-ad-spend','landed-cost','cost-basis','house-hacking','loan-seasoning','cash-out-refinance','withdrawal-rate'];
+export const expandedGlossarySlugs=['health-savings-account','brrrr-method','sequence-of-returns-risk','return-on-ad-spend','landed-cost','cost-basis','house-hacking','loan-seasoning','cash-out-refinance','withdrawal-rate','after-repair-value','vacancy-rate','capital-expenditure','debt-service-coverage-ratio','dividend-yield'];
 export const glossaryTermPath=(slug:string)=>`${glossaryPath}${slug}/`;
 export const glossaryTerm=(slug:string)=>glossaryTerms.find(term=>term.slug===slug);
 export const glossaryForCalculator=(id:string)=>glossaryTerms.filter(term=>term.tools.some(tool=>tool.id===id));
