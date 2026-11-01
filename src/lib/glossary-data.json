@@ -2303,7 +2303,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General financial concept; examples are hypothetical."
+    "scope": "General financial concept; examples are hypothetical.",
+    "guides": [
+      {
+        "path": "/guides/how-to-compare-debt-consolidation-loans/",
+        "title": "How to Compare Debt Consolidation Loan Costs"
+      }
+    ]
   },
   {
     "slug": "debt-snowball-vs-avalanche",
@@ -2610,6 +2616,10 @@
       {
         "title": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
         "path": "/guides/how-are-heloc-payments-calculated/"
+      },
+      {
+        "path": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "title": "How to Calculate Home Equity Loan Payments and Costs"
       }
     ]
   },

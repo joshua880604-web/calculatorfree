@@ -4378,5 +4378,252 @@
         "67"
       ]
     }
+  ],
+  "equity": [
+    {
+      "label": "15 years, no closing costs",
+      "calculatorId": "home-equity-loan",
+      "mode": "loan",
+      "values": {
+        "principal": 60000,
+        "years": 15,
+        "months": 0,
+        "rate": 8,
+        "closing": 0,
+        "treatment": "Paid upfront"
+      },
+      "metrics": {
+        "Payment per period": 573.3912505982108,
+        "Total interest": 43210.42510767795,
+        "Total payments": 103210.42510767795,
+        "Number of payments": 180.0,
+        "Net proceeds": 60000.0,
+        "Nominal APR": 8.0
+      },
+      "display": [
+        "$573.39",
+        "$60,000.00",
+        "$103,210.43",
+        "$43,210.43"
+      ]
+    },
+    {
+      "label": "15 years, USD 1,500 upfront costs",
+      "calculatorId": "home-equity-loan",
+      "mode": "loan",
+      "values": {
+        "principal": 60000,
+        "years": 15,
+        "months": 0,
+        "rate": 8,
+        "closing": 1500,
+        "treatment": "Paid upfront"
+      },
+      "metrics": {
+        "Payment per period": 573.3912505982108,
+        "Total interest": 43210.42510767795,
+        "Total payments": 103210.42510767795,
+        "Number of payments": 180.0,
+        "Net proceeds": 58500.0,
+        "Nominal APR": 8.421713060882308
+      },
+      "display": [
+        "$573.39",
+        "$58,500.00",
+        "$103,210.43",
+        "$44,710.43"
+      ]
+    },
+    {
+      "label": "15 years, USD 1,500 financed costs",
+      "calculatorId": "home-equity-loan",
+      "mode": "loan",
+      "values": {
+        "principal": 60000,
+        "years": 15,
+        "months": 0,
+        "rate": 8,
+        "closing": 1500,
+        "treatment": "Financed"
+      },
+      "metrics": {
+        "Payment per period": 587.7260318631661,
+        "Total interest": 44290.6857353699,
+        "Total payments": 105790.6857353699,
+        "Number of payments": 180.0,
+        "Net proceeds": 60000.0,
+        "Nominal APR": 8.411235969198687
+      },
+      "display": [
+        "$587.73",
+        "$60,000.00",
+        "$105,790.69",
+        "$45,790.69"
+      ]
+    },
+    {
+      "label": "10 years, USD 1,500 upfront costs",
+      "calculatorId": "home-equity-loan",
+      "mode": "loan",
+      "values": {
+        "principal": 60000,
+        "years": 10,
+        "months": 0,
+        "rate": 8,
+        "closing": 1500,
+        "treatment": "Paid upfront"
+      },
+      "metrics": {
+        "Payment per period": 727.9655661321416,
+        "Total interest": 27355.867935856993,
+        "Total payments": 87355.867935857,
+        "Number of payments": 120.0,
+        "Net proceeds": 58500.0,
+        "Nominal APR": 8.584590243261257
+      },
+      "display": [
+        "$727.97",
+        "$58,500.00",
+        "$87,355.87",
+        "$28,855.87"
+      ]
+    },
+    {
+      "label": "20 years, USD 1,500 upfront costs",
+      "calculatorId": "home-equity-loan",
+      "mode": "loan",
+      "values": {
+        "principal": 60000,
+        "years": 20,
+        "months": 0,
+        "rate": 8,
+        "closing": 1500,
+        "treatment": "Paid upfront"
+      },
+      "metrics": {
+        "Payment per period": 501.8640413960777,
+        "Total interest": 60447.36993505865,
+        "Total payments": 120447.36993505865,
+        "Number of payments": 240.0,
+        "Net proceeds": 58500.0,
+        "Nominal APR": 8.342604280935113
+      },
+      "display": [
+        "$501.86",
+        "$58,500.00",
+        "$120,447.37",
+        "$61,947.37"
+      ]
+    }
+  ],
+  "consolidation": [
+    {
+      "label": "4 years, 3% fee financed",
+      "calculatorId": "debt-consolidation",
+      "mode": "comparison",
+      "values": {
+        "debts": "Loan A, 12000, 300, 12",
+        "new_rate": 8,
+        "years": 4,
+        "fees": 3,
+        "finance": "Yes"
+      },
+      "metrics": {
+        "Payment per period": 301.74372014097065,
+        "Total interest": 2123.6985667665917,
+        "Total payments": 14483.698566766592,
+        "Number of payments": 48.0,
+        "Origination fee": 360.0,
+        "Current plan total interest": 3401.5994136670092,
+        "Interest and fee savings": 917.9008469004176
+      },
+      "display": [
+        "$301.74",
+        "$2,483.70",
+        "$917.90",
+        "48"
+      ]
+    },
+    {
+      "label": "8 years, 3% fee financed",
+      "calculatorId": "debt-consolidation",
+      "mode": "comparison",
+      "values": {
+        "debts": "Loan A, 12000, 300, 12",
+        "new_rate": 8,
+        "years": 8,
+        "fees": 3,
+        "finance": "Yes"
+      },
+      "metrics": {
+        "Payment per period": 174.7293555861738,
+        "Total interest": 4414.0181362726835,
+        "Total payments": 16774.018136272683,
+        "Number of payments": 96.0,
+        "Origination fee": 360.0,
+        "Current plan total interest": 3401.5994136670092,
+        "Interest and fee savings": -1372.4187226056742
+      },
+      "display": [
+        "$174.73",
+        "$4,774.02",
+        "-$1,372.42",
+        "96"
+      ]
+    },
+    {
+      "label": "4 years, 3% fee upfront",
+      "calculatorId": "debt-consolidation",
+      "mode": "comparison",
+      "values": {
+        "debts": "Loan A, 12000, 300, 12",
+        "new_rate": 8,
+        "years": 4,
+        "fees": 3,
+        "finance": "No"
+      },
+      "metrics": {
+        "Payment per period": 292.95506809802976,
+        "Total interest": 2061.8432687054287,
+        "Total payments": 14061.843268705428,
+        "Number of payments": 48.0,
+        "Origination fee": 360.0,
+        "Current plan total interest": 3401.5994136670092,
+        "Interest and fee savings": 979.7561449615805
+      },
+      "display": [
+        "$292.96",
+        "$2,421.84",
+        "$979.76",
+        "48"
+      ]
+    },
+    {
+      "label": "4 years, no origination fee",
+      "calculatorId": "debt-consolidation",
+      "mode": "comparison",
+      "values": {
+        "debts": "Loan A, 12000, 300, 12",
+        "new_rate": 8,
+        "years": 4,
+        "fees": 0,
+        "finance": "Yes"
+      },
+      "metrics": {
+        "Payment per period": 292.95506809802976,
+        "Total interest": 2061.8432687054287,
+        "Total payments": 14061.843268705428,
+        "Number of payments": 48.0,
+        "Origination fee": 0.0,
+        "Current plan total interest": 3401.5994136670092,
+        "Interest and fee savings": 1339.7561449615805
+      },
+      "display": [
+        "$292.96",
+        "$2,061.84",
+        "$1,339.76",
+        "48"
+      ]
+    }
   ]
 }

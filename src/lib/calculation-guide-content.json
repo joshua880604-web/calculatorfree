@@ -4494,5 +4494,289 @@
         "label": "Social Security benefits glossary"
       }
     ]
+  },
+  "equity": {
+    "meta": {
+      "path": "/guides/how-to-calculate-home-equity-loan-payments/",
+      "title": "How to Calculate Home Equity Loan Payments and Costs",
+      "heading": "How to Calculate Home Equity Loan Payments and Costs",
+      "description": "Calculate fixed home equity loan payments and closing-cost effects. Five reproducible cases compare term, net proceeds and upfront versus financed charges.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "home-equity-loan"
+      ],
+      "topic": "Mortgage & housing",
+      "breadcrumb": "How to Calculate Home Equity Loan Payments and Costs",
+      "cardIntro": "Calculate fixed home equity loan payments and closing-cost effects. Five reproducible cases compare term, net proceeds and upfront versus financed charges.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/home-equity-loan-calculator",
+    "calculatorLabel": "Home Equity Loan Calculator",
+    "intro": "Start with an entered loan amount, fixed rate and repayment term, then account for how closing costs are paid. A home equity loan is secured borrowing; CFPB explains that failure to repay can put the home at risk. The payment calculation does not assess collateral value, eligibility or whether borrowing is appropriate.",
+    "answer": "For a hypothetical $60,000 loan at 8% over fifteen years, the monthly installment is $573.39 before any unentered charges. Paying $1,500 closing costs upfront leaves the same installment and $58,500 net initial cash on this model’s combined cash-flow basis. Financing those costs raises the repayment balance to $61,500 and the installment to $587.73.",
+    "sections": [
+      {
+        "id": "payment",
+        "title": "Calculate the payment on the repayment balance",
+        "paragraphs": [
+          "With no closing costs, the fifteen-year case uses 180 monthly periods and an 8% / 12 monthly rate. The resulting installment is $573.39 and total principal-and-interest payments are $103,210.43. Subtracting the original $60,000 yields $43,210.43 modeled interest.",
+          "The calculation holds the rate constant and caps the final payment at the remaining amount due. Internal values retain precision, so multiplying the displayed monthly amount by 180 may not reproduce the displayed total exactly. The rate and term are assumptions supplied by the user."
+        ],
+        "formula": "Payment = repayment balance × monthly rate / [1 − (1 + monthly rate)^(−months)]"
+      },
+      {
+        "id": "upfront",
+        "title": "Separate the actual deposit from economic net cash",
+        "paragraphs": [
+          "With $1,500 paid upfront, the repayment balance remains $60,000. The model combines the initial advance and separate charge into $58,500 net starting cash. It does not claim the bank necessarily deposits only $58,500; Paid upfront can represent a $60,000 advance followed by a separate $1,500 payment.",
+          "Deducted from proceeds uses the same net economic cash amount here, although the transaction flow differs. Total loan payments remain $103,210.43; subtracting $58,500 net cash gives $44,710.43 modeled cost above cash available. Do not deduct the closing charge a second time in that reconciliation."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "financed",
+        "title": "Financed costs change principal and cash available",
+        "paragraphs": [
+          "Financing the $1,500 charge creates a $61,500 repayment balance and $60,000 net initial cash. The monthly payment increases to $587.73. Total loan payments are $105,790.69 and the difference above net cash is $45,790.69. The fee does not disappear when it is included in the loan.",
+          "The upfront and financed examples do not supply identical net cash. Before comparing their payments or modeled APR, decide which amount of usable funding is needed. If comparing lender offers, enter the actual terms and charges rather than assuming the same base amount guarantees the same proceeds."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "term",
+        "title": "Compare ten, fifteen and twenty years with the same costs",
+        "paragraphs": [
+          "For the $60,000 base amount, 8% rate and $1,500 upfront costs, a ten-year term produces a $727.97 monthly installment and $87,355.87 total loan payments. A twenty-year term lowers the monthly installment to $501.86 but raises total payments to $120,447.37.",
+          "Subtract the same $58,500 net initial cash from each payment total: modeled costs are $28,855.87 over ten years and $61,947.37 over twenty. These examples show a payment-versus-term trade-off; they are not a recommendation to select the highest affordable installment or a claim about current market offers."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "apr",
+        "title": "Read the cash-flow APR as an illustration",
+        "paragraphs": [
+          "The model’s nominal APR solves a monthly discount rate equating net initial cash to the payment stream, then multiplies by twelve. With fees and the same stated interest rate, a payment based on a larger repayment balance or a smaller net advance can change that cash-flow comparison.",
+          "This does not classify every fee under lending disclosure rules or replace the APR on an actual offer. All entered closing costs are treated as time-zero charges here. Different required-charge definitions, payment dates or unentered costs can produce a different disclosed measure."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "scope",
+        "title": "Keep a second-loan payment separate from the whole housing budget",
+        "paragraphs": [
+          "The installment here is for this entered loan only. Your first mortgage, property tax, homeowners insurance and HOA payments are not added automatically. A property appraisal, loan-to-value constraint, lien priority and debt qualification also are not inferred from a payment fitting the calculator.",
+          "For a spreadsheet check, =-PMT(8%/12,15*12,60000) reproduces the no-cost monthly installment; use 61500 for financed closing costs. This form does not simulate extra principal. Use an appropriate repayment tool and actual contract terms for early payoff, or the separate HELOC tool for a draw-period and repayment-period scenario."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Monthly loan payment",
+      "Net initial cash",
+      "Total loan payments",
+      "Payments minus net cash"
+    ],
+    "chart": "equity-guide",
+    "chartAlt": "Home equity borrowing cost under five scenarios with different terms and upfront or financed closing costs.",
+    "chartCaption": "All cases use a $60,000 base amount and hypothetical 8% nominal annual rate. Financed costs and upfront costs produce different net cash amounts; they are not matched-proceeds offers.",
+    "questions": [
+      {
+        "question": "What is the payment on a $60,000 home equity loan?",
+        "answer": "At the hypothetical 8% fixed rate over fifteen years, $573.39 monthly before unentered charges. Financing closing costs can increase it."
+      },
+      {
+        "question": "Does paying closing costs upfront lower the repayment balance?",
+        "answer": "Not in this model. The balance stays at the entered principal, while the upfront charge reduces net economic starting cash."
+      },
+      {
+        "question": "Is the lowest payment the lowest total cost?",
+        "answer": "No. The twenty-year example has a smaller payment than the ten-year example but a much larger total cost under the same entered rate and upfront charges."
+      },
+      {
+        "question": "Does this include my first mortgage and property costs?",
+        "answer": "No. Add the existing mortgage, tax, insurance, HOA and other household costs separately when considering the full budget."
+      },
+      {
+        "question": "Does this determine how much equity I can borrow?",
+        "answer": "No. It calculates payments for an entered amount; it does not appraise the home, test lender limits or issue approval."
+      },
+      {
+        "question": "Is a home equity loan the same as a HELOC?",
+        "answer": "The fixed amortizing loan modeled here differs from a line-of-credit draw and repayment structure. Use the separate HELOC tool for that model and verify actual terms."
+      }
+    ],
+    "limitations": [
+      "Hypothetical fixed monthly rates, not live offers or lender approval.",
+      "No automatic prepayment penalty, variable-rate reset, tax deduction or dated daily-interest calculation.",
+      "The loan installment excludes the existing mortgage, property tax, homeowners insurance and HOA.",
+      "Net cash-flow APR is illustrative and does not classify fees under regulatory disclosure rules."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-home-equity-loan-en-106/",
+        "label": "CFPB: home equity loans, collateral and fees"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-are-heloc-payments-calculated/",
+        "label": "HELOC draw and repayment guide"
+      },
+      {
+        "href": "/guides/how-to-compare-debt-consolidation-loans/",
+        "label": "Debt consolidation cost comparison"
+      },
+      {
+        "href": "/glossary/home-equity-and-heloc/",
+        "label": "Home equity and HELOC glossary"
+      },
+      {
+        "href": "/loan-repayment-calculator",
+        "label": "Extra principal repayment calculator"
+      }
+    ]
+  },
+  "consolidation": {
+    "meta": {
+      "path": "/guides/how-to-compare-debt-consolidation-loans/",
+      "title": "How to Compare Debt Consolidation Loan Costs",
+      "heading": "How to Compare Debt Consolidation Loan Costs",
+      "description": "Compare a consolidation loan with continued repayment using four reproducible cases. Separate lower monthly payments from interest-plus-fee savings and a longer term.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "debt-consolidation"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "How to Compare Debt Consolidation Loan Costs",
+      "cardIntro": "Compare a consolidation loan with continued repayment using four reproducible cases. Separate lower monthly payments from interest-plus-fee savings and a longer term.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/debt-consolidation-calculator",
+    "calculatorLabel": "Debt Consolidation Calculator",
+    "intro": "Compare continued repayment with a new loan on both payment and total interest-plus-fee cost. A lower advertised rate or installment does not settle the comparison. These examples use a single fixed-rate old balance so the current-plan assumption can be checked independently, rather than treating declining card minimums as fixed payments.",
+    "answer": "For $12,000 current debt at 12% with a fixed $300 monthly payment, modeled remaining interest is $3,401.60. Replacing it with an 8% four-year loan and a financed 3% fee produces a $301.74 payment and $917.90 interest-plus-fee savings. Extending that new loan to eight years lowers payment to $174.73 but changes savings to −$1,372.42: modeled cost is higher than keeping the old plan.",
+    "sections": [
+      {
+        "id": "current",
+        "title": "Define the current repayment plan before comparing offers",
+        "paragraphs": [
+          "The current-plan example starts with $12,000 outstanding, a 12% annual rate and a fixed $300 monthly payment. Each month applies interest to the balance, then reduces principal by the remainder of the payment. The final payment is capped; the resulting future interest totals $3,401.60.",
+          "For several debt lines, the calculator uses a fixed combined budget equal to the sum of entered payments with avalanche rollover. It does not reproduce a card issuer’s changing minimum-payment formula. Keep that assumption visible: paying only declining statement minimums would create a different baseline."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "new",
+        "title": "Add the origination fee to the right part of the calculation",
+        "paragraphs": [
+          "A 3% fee on $12,000 is $360. With financed fees, the replacement principal is $12,360. Amortizing that amount at 8% over 48 months produces a $301.74 installment. The rate is lower than the old 12%, but this particular new payment is slightly higher than the entered old $300 budget.",
+          "The modeled new interest plus origination fee is $2,483.70. Subtract it from $3,401.60 current-plan interest to obtain $917.90 savings. Include the fee once in the comparison; interest incurred on a financed fee is already part of the new loan’s amortized interest."
+        ],
+        "formula": "Interest and fee savings = current-plan future interest − new-loan interest − origination fee"
+      },
+      {
+        "id": "extension",
+        "title": "A lower payment can come with a higher total cost",
+        "paragraphs": [
+          "Keeping the 8% rate and financed $360 fee but extending to 96 monthly payments lowers the installment to $174.73. Interest plus the origination fee rises to $4,774.02, which is $1,372.42 more than the baseline current-plan interest. A negative savings result must retain its sign.",
+          "This is a controlled term comparison, not an assessment of your credit or offers available to you. CFPB cautions that longer repayment can make a lower consolidation installment more expensive overall. Compare the complete payment commitment and any contractual terms outside the model."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "upfront",
+        "title": "Upfront and financed fees change the payment calculation",
+        "paragraphs": [
+          "When the $360 fee is paid upfront instead of financed, new principal remains $12,000 and the four-year installment is $292.96. New interest plus fee totals $2,421.84 and modeled savings are $979.76. The upfront fee still counts in cost even though it is not repaid through the installment.",
+          "With no origination fee, the installment remains $292.96, interest-plus-fee cost becomes $2,061.84 and savings rise to $1,339.76. The two equal installments do not imply equal all-in cost. Check whether an actual quote has other charges not entered here."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "reconcile",
+        "title": "Reconcile repayment totals without counting the fee twice",
+        "paragraphs": [
+          "For a financed fee, total new loan payments include the original balances, financed fee and new interest. Subtract the old $12,000 principal from that total to obtain new interest plus fee. With an upfront fee, add the separate fee to installment outflow before subtracting the old principal.",
+          "A spreadsheet can use =-PMT(8%/12,48,12360) for the financed example and =-PMT(8%/12,48,12000) for the upfront example. To reproduce the current plan, iterate balance*12%/12 interest and cap the last $300 payment. Preserve precision until the displayed results."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "boundaries",
+        "title": "Separate consolidation from settlement, promotions and secured debt",
+        "paragraphs": [
+          "This model does not calculate debt forgiveness, a teaser-rate balance transfer or federal student-loan consolidation rules. It assumes no new borrowing and no rate changes. It also cannot predict credit-score changes or whether a lender will approve the replacement loan.",
+          "Using home equity to replace unsecured debt adds a collateral question beyond interest arithmetic. CFPB explains that missed home-equity payments can put the home at risk. Neither a positive savings number nor a smaller installment assesses that change in risk, future spending or the household’s ability to meet payments."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "New monthly payment",
+      "New interest + fee",
+      "Interest + fee savings",
+      "New payment count"
+    ],
+    "chart": "consolidation-guide",
+    "chartAlt": "New loan interest plus fees under four consolidation scenarios compared with current-plan interest.",
+    "chartCaption": "All cases start with $12,000 at 12% and a fixed $300 monthly current-plan payment. New loans use 8%; the eight-year case has a lower payment but costs more in modeled interest and fees.",
+    "questions": [
+      {
+        "question": "Does a lower consolidation rate always save money?",
+        "answer": "No. The eight-year 8% example costs more in interest and fees than continuing the stated 12% current plan because repayment lasts longer."
+      },
+      {
+        "question": "Can savings be negative?",
+        "answer": "Yes. A negative amount means the modeled new interest plus fee exceeds the current plan’s future interest. It is not an error to remove or hide."
+      },
+      {
+        "question": "Do upfront origination fees count?",
+        "answer": "Yes. They are included in the interest-plus-fee comparison even when they are not added to the financed balance."
+      },
+      {
+        "question": "Are current debt payments treated as declining minimums?",
+        "answer": "No. They are fixed entered dollar payments with a fixed combined budget and avalanche rollover, assuming no new charges."
+      },
+      {
+        "question": "Does this predict approval or credit-score effects?",
+        "answer": "No. The tool compares entered repayment scenarios and does not check credit, price an offer or forecast a score change."
+      },
+      {
+        "question": "Does consolidation eliminate the debt?",
+        "answer": "This calculation replaces a repayment structure; it does not model forgiveness or settlement. New loan obligations still need to be paid."
+      }
+    ],
+    "limitations": [
+      "Hypothetical fixed monthly rates, not live offers or lender approval.",
+      "No automatic prepayment penalty, variable-rate reset, tax deduction or dated daily-interest calculation.",
+      "Current payments are fixed entered dollar amounts with avalanche rollover, not lender declining-minimum formulas.",
+      "No new charges, credit-score effect, debt forgiveness or federal student-loan consolidation rules are inferred."
+    ],
+    "sources": [
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-need-to-know-if-im-thinking-about-consolidating-my-credit-card-debt-en-1861/",
+        "label": "CFPB: consolidation terms, payments, fees and risks"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-personal-loan-payments/",
+        "label": "Personal loan fees and payments guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "label": "Home equity loan payments and closing costs"
+      },
+      {
+        "href": "/guides/debt-snowball-vs-avalanche/",
+        "label": "Debt repayment strategy comparison"
+      },
+      {
+        "href": "/glossary/debt-consolidation/",
+        "label": "Debt consolidation glossary"
+      }
+    ]
   }
 }

@@ -225,3 +225,6 @@ contentUpdatedOn['/glossary/annuity/']='2026-11-01';
 
 for(const id of ['pension','social-security'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
 for(const slug of ['defined-benefit-pension','social-security-benefits'])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';
+
+for(const id of ['home-equity-loan','debt-consolidation'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
+for(const slug of ['home-equity-and-heloc','debt-consolidation'])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';

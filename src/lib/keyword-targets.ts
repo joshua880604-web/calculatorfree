@@ -306,3 +306,9 @@ keywordTitles['pension']='Pension Calculator - Lump Sum vs Monthly Payments';
 keywordTitles['social-security']='Social Security Calculator - Compare Claiming Ages';
 searchTasks['pension'][0].description='Compare an entered pension lump sum with monthly benefits. Test horizon, discount rate and COLA; this is not plan-specific benefit or actuarial pricing.';
 searchTasks['social-security'][0].description='Compare Social Security claiming-age scenarios with entered benefits, horizon, discount and COLA assumptions. Use official SSA resources for earnings-based estimates.';
+
+// Home equity and consolidation fixed-rate cost comparisons checked 2026-11-01.
+keywordTitles['home-equity-loan']='Home Equity Loan Calculator - Payments & Closing Costs';
+keywordTitles['debt-consolidation']='Debt Consolidation Calculator - Payments, Fees & Savings';
+searchTasks['home-equity-loan'][0].description='Calculate fixed home equity loan payments and closing-cost effects. Compare terms and upfront or financed fees; existing mortgage and property costs are separate.';
+searchTasks['debt-consolidation'][0].description='Compare debt consolidation payments, interest and origination fees with continued repayment. A smaller payment can cost more over a longer term.';

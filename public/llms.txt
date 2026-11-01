@@ -264,3 +264,7 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## Pension and Social Security benefit comparisons
 - [Pension Lump Sum vs. Monthly Payments: How to Compare](https://www.calculatorfree.io/guides/pension-lump-sum-vs-monthly-payments/): Compare a pension lump sum with monthly benefits using four reproducible present-value cases. Test horizon, discount rate and COLA without treating a simple break-even as advice.
 - [How to Compare Social Security Claiming Ages](https://www.calculatorfree.io/guides/how-to-compare-social-security-claiming-ages/): Compare entered Social Security claiming-age quotes using five reproducible cases. Separate horizon, discount rate, COLA and today-dollar versus claim-date amounts.
+
+## Home equity and debt consolidation costs
+- [How to Calculate Home Equity Loan Payments and Costs](https://www.calculatorfree.io/guides/how-to-calculate-home-equity-loan-payments/): Calculate fixed home equity loan payments and closing-cost effects. Five reproducible cases compare term, net proceeds and upfront versus financed charges.
+- [How to Compare Debt Consolidation Loan Costs](https://www.calculatorfree.io/guides/how-to-compare-debt-consolidation-loans/): Compare a consolidation loan with continued repayment using four reproducible cases. Separate lower monthly payments from interest-plus-fee savings and a longer term.

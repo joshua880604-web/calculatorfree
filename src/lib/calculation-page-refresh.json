@@ -349,5 +349,31 @@
         "answer": "No. The tool does not evaluate all personal circumstances or excluded program rules. It reports a deterministic calculation under entered assumptions."
       }
     ]
+  },
+  "home-equity-loan": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Does paying closing costs upfront lower the repayment balance?",
+        "answer": "Not in this model. The balance stays at the entered principal, while the upfront charge reduces net economic starting cash."
+      },
+      {
+        "question": "Does this include my first mortgage and property costs?",
+        "answer": "No. Add the existing mortgage, tax, insurance, HOA and other household costs separately when considering the full budget."
+      }
+    ]
+  },
+  "debt-consolidation": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Can savings be negative?",
+        "answer": "Yes. A negative amount means the modeled new interest plus fee exceeds the current plan’s future interest. It is not an error to remove or hide."
+      },
+      {
+        "question": "Are current debt payments treated as declining minimums?",
+        "answer": "No. They are fixed entered dollar payments with a fixed combined budget and avalanche rollover, assuming no new charges."
+      }
+    ]
   }
 }
