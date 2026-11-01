@@ -1844,7 +1844,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "U.S. Social Security worker retirement benefits; the numerical factor applies to people born in 1960 or later."
+    "scope": "U.S. Social Security worker retirement benefits; the numerical factor applies to people born in 1960 or later.",
+    "guides": [
+      {
+        "path": "/guides/how-to-compare-social-security-claiming-ages/",
+        "title": "How to Compare Social Security Claiming Ages"
+      }
+    ]
   },
   {
     "slug": "withdrawal-rate",
@@ -1969,7 +1975,13 @@
       }
     ],
     "checkedOn": "2026-10-23",
-    "scope": "General pension concept; plan terminology and the cited regulatory context are U.S.-based."
+    "scope": "General pension concept; plan terminology and the cited regulatory context are U.S.-based.",
+    "guides": [
+      {
+        "path": "/guides/pension-lump-sum-vs-monthly-payments/",
+        "title": "Pension Lump Sum vs. Monthly Payments: How to Compare"
+      }
+    ]
   },
   {
     "slug": "apr",

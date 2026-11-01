@@ -4149,5 +4149,234 @@
         "$1,200.00"
       ]
     }
+  ],
+  "pension": [
+    {
+      "label": "Horizon age 85, zero discount",
+      "calculatorId": "pension",
+      "mode": "lump",
+      "values": {
+        "age": 65,
+        "life": 85,
+        "lump": 300000,
+        "monthly": 2000,
+        "return": 0,
+        "cola": 0
+      },
+      "metrics": {
+        "Present value of pension": 480000.0,
+        "Lump sum": 300000.0,
+        "Pension value advantage": 180000.0,
+        "Undiscounted break-even years": 12.5
+      },
+      "display": [
+        "$480,000.00",
+        "$300,000.00",
+        "$180,000.00",
+        "12.5"
+      ]
+    },
+    {
+      "label": "Horizon age 75, zero discount",
+      "calculatorId": "pension",
+      "mode": "lump",
+      "values": {
+        "age": 65,
+        "life": 75,
+        "lump": 300000,
+        "monthly": 2000,
+        "return": 0,
+        "cola": 0
+      },
+      "metrics": {
+        "Present value of pension": 240000.0,
+        "Lump sum": 300000.0,
+        "Pension value advantage": -60000.0,
+        "Undiscounted break-even years": 12.5
+      },
+      "display": [
+        "$240,000.00",
+        "$300,000.00",
+        "-$60,000.00",
+        "12.5"
+      ]
+    },
+    {
+      "label": "Horizon age 85, 5% discount",
+      "calculatorId": "pension",
+      "mode": "lump",
+      "values": {
+        "age": 65,
+        "life": 85,
+        "lump": 300000,
+        "monthly": 2000,
+        "return": 5,
+        "cola": 0
+      },
+      "metrics": {
+        "Present value of pension": 305886.8852379421,
+        "Lump sum": 300000.0,
+        "Pension value advantage": 5886.885237942128,
+        "Undiscounted break-even years": 12.5
+      },
+      "display": [
+        "$305,886.89",
+        "$300,000.00",
+        "$5,886.89",
+        "12.5"
+      ]
+    },
+    {
+      "label": "Horizon age 85, 5% discount, 2% COLA",
+      "calculatorId": "pension",
+      "mode": "lump",
+      "values": {
+        "age": 65,
+        "life": 85,
+        "lump": 300000,
+        "monthly": 2000,
+        "return": 5,
+        "cola": 2
+      },
+      "metrics": {
+        "Present value of pension": 359964.5614753988,
+        "Lump sum": 300000.0,
+        "Pension value advantage": 59964.5614753988,
+        "Undiscounted break-even years": 12.5
+      },
+      "display": [
+        "$359,964.56",
+        "$300,000.00",
+        "$59,964.56",
+        "12.5"
+      ]
+    }
+  ],
+  "social": [
+    {
+      "label": "62 vs 70; horizon 90; zero discount",
+      "calculatorId": "social-security",
+      "mode": "compare",
+      "values": {
+        "age1": 62,
+        "monthly1": 1400,
+        "age2": 70,
+        "monthly2": 2480,
+        "life": 90,
+        "return": 0,
+        "cola": 0
+      },
+      "metrics": {
+        "First option present value": 470400.0,
+        "Second option present value": 595200.0,
+        "Second option advantage": 124800.0
+      },
+      "display": [
+        "$470,400.00",
+        "$595,200.00",
+        "$124,800.00",
+        "62"
+      ]
+    },
+    {
+      "label": "62 vs 70; horizon 75; zero discount",
+      "calculatorId": "social-security",
+      "mode": "compare",
+      "values": {
+        "age1": 62,
+        "monthly1": 1400,
+        "age2": 70,
+        "monthly2": 2480,
+        "life": 75,
+        "return": 0,
+        "cola": 0
+      },
+      "metrics": {
+        "First option present value": 218400.0,
+        "Second option present value": 148800.0,
+        "Second option advantage": -69600.0
+      },
+      "display": [
+        "$218,400.00",
+        "$148,800.00",
+        "-$69,600.00",
+        "62"
+      ]
+    },
+    {
+      "label": "62 vs 70; horizon 90; 3% discount",
+      "calculatorId": "social-security",
+      "mode": "compare",
+      "values": {
+        "age1": 62,
+        "monthly1": 1400,
+        "age2": 70,
+        "monthly2": 2480,
+        "life": 90,
+        "return": 3,
+        "cola": 0
+      },
+      "metrics": {
+        "First option present value": 319548.394263979,
+        "Second option present value": 354293.9880497152,
+        "Second option advantage": 34745.59378573621
+      },
+      "display": [
+        "$319,548.39",
+        "$354,293.99",
+        "$34,745.59",
+        "62"
+      ]
+    },
+    {
+      "label": "62 vs 70; horizon 90; 3% discount, 2% COLA",
+      "calculatorId": "social-security",
+      "mode": "compare",
+      "values": {
+        "age1": 62,
+        "monthly1": 1400,
+        "age2": 70,
+        "monthly2": 2480,
+        "life": 90,
+        "return": 3,
+        "cola": 2
+      },
+      "metrics": {
+        "First option present value": 407077.4985473967,
+        "Second option present value": 422145.6730559512,
+        "Second option advantage": 15068.174508554515
+      },
+      "display": [
+        "$407,077.50",
+        "$422,145.67",
+        "$15,068.17",
+        "62"
+      ]
+    },
+    {
+      "label": "67 vs 70; horizon 90; 3% discount",
+      "calculatorId": "social-security",
+      "mode": "compare",
+      "values": {
+        "age1": 67,
+        "monthly1": 2000,
+        "age2": 70,
+        "monthly2": 2480,
+        "life": 90,
+        "return": 3,
+        "cola": 0
+      },
+      "metrics": {
+        "First option present value": 400044.0317682966,
+        "Second option present value": 410723.8350263888,
+        "Second option advantage": 10679.803258092232
+      },
+      "display": [
+        "$400,044.03",
+        "$410,723.84",
+        "$10,679.80",
+        "67"
+      ]
+    }
   ]
 }

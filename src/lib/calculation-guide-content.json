@@ -4216,5 +4216,283 @@
         "label": "Annuity glossary"
       }
     ]
+  },
+  "pension": {
+    "meta": {
+      "path": "/guides/pension-lump-sum-vs-monthly-payments/",
+      "title": "Pension Lump Sum vs. Monthly Payments: How to Compare",
+      "heading": "Pension Lump Sum vs. Monthly Payments: How to Compare",
+      "description": "Compare a pension lump sum with monthly benefits using four reproducible present-value cases. Test horizon, discount rate and COLA without treating a simple break-even as advice.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "pension"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "Pension Lump Sum vs. Monthly Payments: How to Compare",
+      "cardIntro": "Compare a pension lump sum with monthly benefits using four reproducible present-value cases. Test horizon, discount rate and COLA without treating a simple break-even as advice.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/pension-calculator",
+    "calculatorLabel": "Pension Calculator",
+    "intro": "Start with the benefit options actually offered by your plan, including payment form, timing and any COLA. Compare the monthly stream with the entered cash offer at a common date. A mathematical present value is one planning measure; it does not price a lifetime guarantee, verify plan terms or decide which option is appropriate for you.",
+    "answer": "A hypothetical $2,000 monthly pension from age 65 through an entered age-85 horizon totals $480,000 with zero discount and zero COLA. Against a $300,000 entered lump sum, its modeled value advantage is $180,000. At a 5% effective annual discount rate, that same stream has a present value of $305,886.89, reducing the modeled difference to $5,886.89.",
+    "sections": [
+      {
+        "id": "inputs",
+        "title": "Use an actual offer and a common starting date",
+        "paragraphs": [
+          "The checked cases assume monthly benefits begin at age 65 and are paid at month end. The lump sum is an entered $300,000 amount available at that same valuation date. No salary, service-credit history, vesting rule or plan-specific conversion factor is inferred. The monthly quote and lump sum must refer to compatible benefit choices.",
+          "A $300,000 cash offer here is hypothetical. It does not mean PBGC or your pension plan makes that offer available. PBGC’s guidance emphasizes that payment choices depend on the plan and explains separate rules for benefits it administers. Obtain the applicable terms before comparing options that may not actually be offered."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "horizon",
+        "title": "Separate an assumed horizon from a lifetime benefit",
+        "paragraphs": [
+          "The age-85 case includes 240 monthly payments of $2,000, producing $480,000 before any discounting. The horizon is a scenario entered into the calculator, not a prediction of your lifespan or the exact value of a lifetime promise. A longer or shorter horizon changes how many modeled payments are counted.",
+          "Changing only the horizon to age 75 leaves 120 monthly payments and $240,000 nominal value. The modeled pension-minus-lump-sum difference becomes −$60,000. This sensitivity does not make a recommendation based on health; it shows why the calculation depends heavily on the entered stopping date."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "discount",
+        "title": "Discount each monthly benefit to the same date",
+        "paragraphs": [
+          "A dollar paid in a later year is not automatically equivalent to a dollar available at the retirement date. The model discounts each monthly end payment using an entered effective annual rate. At 5% and a twenty-year horizon, the pension’s present value is $305,886.89 rather than its $480,000 nominal sum.",
+          "The 5% rate is an illustrative assumption, not a promised investment return on a lump sum. Changing it changes the relative valuation. Comparing a discounted pension with an undiscounted future total on another option mixes dates and can produce a misleading conclusion."
+        ],
+        "formula": "Present value = sum of each monthly benefit / (1 + annual discount rate)^(months from valuation / 12)"
+      },
+      {
+        "id": "cola",
+        "title": "Apply COLA only if it belongs in the modeled benefit",
+        "paragraphs": [
+          "With 2% assumed annual pension COLA and the same 5% discount rate, age-85 value becomes $359,964.56. In the local model, the starting $2,000 amount is held for twelve payments, then increases on modeled annual anniversaries. COLA is not compounded into the quote before payments begin in this lump-sum comparison.",
+          "Do not assume every pension has a COLA, and do not treat the 2% example as an expected inflation rate. A plan may have no increase or use another rule. Enter an assumption that matches what you intend to compare and review the actual plan provision separately."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "break-even",
+        "title": "Understand what the simple break-even omits",
+        "paragraphs": [
+          "The displayed undiscounted break-even is $300,000 / ($2,000 × 12) = 12.5 years. It answers when a flat stream of those nominal payments adds up to the entered cash amount. It is unchanged across these four cases because the starting monthly benefit and lump sum remain the same.",
+          "That simple ratio ignores COLA, investment returns, discounting, taxes and payments after the selected horizon. It is not a discounted crossover date or an actuarial assessment. Use it as a limited arithmetic check alongside the full stream rather than a stand-alone instruction to accept or reject the pension."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "scope",
+        "title": "Reproduce the stream and keep other decisions separate",
+        "paragraphs": [
+          "For month m starting at one, benefit is 2000*(1+COLA)^INT((m-1)/12). Discount it by (1+discount)^(m/12), and sum through the chosen month count. Keep intermediate precision; the four cases use complete years so no partial-month cutoff needs interpretation.",
+          "Single-life versus joint-survivor and working-longer choices require their own inputs and are available in separate modes. These lump-sum examples do not model those household streams. Taxes, investment management, liquidity, beneficiary protection and plan terms can matter even when two calculated present values are close."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "Pension present value",
+      "Entered lump sum",
+      "Pension value minus lump sum",
+      "Simple break-even years"
+    ],
+    "chart": "pension-guide",
+    "chartAlt": "Pension present values compared with the same $300,000 lump sum under different horizons, discount rates and COLA assumptions.",
+    "chartCaption": "Monthly end payments valued at age 65. The 12.5-year simple break-even ignores discounting and COLA; the modeled pension horizon is an assumption, not a mortality forecast.",
+    "questions": [
+      {
+        "question": "Is the largest present value always the best choice?",
+        "answer": "No. It is a result under entered horizon, discount and COLA assumptions, not a personalized comparison of liquidity, lifetime protection, taxes or survivor needs."
+      },
+      {
+        "question": "What does the 12.5-year break-even mean?",
+        "answer": "It is $300,000 divided by twelve $2,000 starting payments. It ignores discounting, COLA and other costs; it is not an actuarial or discounted crossover calculation."
+      },
+      {
+        "question": "Why does a higher discount rate reduce pension value?",
+        "answer": "It places less current value on later payments. That does not establish an attainable investment return on the cash alternative."
+      },
+      {
+        "question": "Does every pension have a COLA?",
+        "answer": "No automatic COLA is assumed from the plan. Enter the appropriate provision or explicit scenario and review actual plan documents."
+      },
+      {
+        "question": "Does this calculate a FERS or other plan benefit?",
+        "answer": "No. You enter benefit quotes; the tool does not infer salary, service credits, eligibility or plan-specific benefit formulas."
+      },
+      {
+        "question": "Does the entered horizon predict how long I will live?",
+        "answer": "No. It is a deterministic sensitivity input. Test more than one horizon and do not interpret it as a mortality forecast."
+      }
+    ],
+    "limitations": [
+      "Deterministic entered horizons, not mortality probabilities, actuarial pricing or a personal retirement recommendation.",
+      "Monthly end payments and annual-anniversary COLA simplify actual calendar payments and rounding.",
+      "No automatic tax, Medicare deduction, eligibility, plan solvency or survivor coordination is calculated in these examples."
+    ],
+    "sources": [
+      {
+        "href": "https://www.pbgc.gov/workers-retirees/learn/annuity-lump-sum",
+        "label": "PBGC: plan-dependent lump-sum and monthly-benefit choices"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-to-calculate-annuity-payouts/",
+        "label": "Finite balance payout guide"
+      },
+      {
+        "href": "/glossary/defined-benefit-pension/",
+        "label": "Defined benefit pension glossary"
+      },
+      {
+        "href": "/glossary/net-present-value/",
+        "label": "Present value and cash-flow comparison glossary"
+      }
+    ]
+  },
+  "social": {
+    "meta": {
+      "path": "/guides/how-to-compare-social-security-claiming-ages/",
+      "title": "How to Compare Social Security Claiming Ages",
+      "heading": "How to Compare Social Security Claiming Ages",
+      "description": "Compare entered Social Security claiming-age quotes using five reproducible cases. Separate horizon, discount rate, COLA and today-dollar versus claim-date amounts.",
+      "publishedOn": "2026-11-01",
+      "calculatorIds": [
+        "social-security"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "How to Compare Social Security Claiming Ages",
+      "cardIntro": "Compare entered Social Security claiming-age quotes using five reproducible cases. Separate horizon, discount rate, COLA and today-dollar versus claim-date amounts.",
+      "format": "Calculation guide & model check"
+    },
+    "calculatorPath": "/social-security-calculator",
+    "calculatorLabel": "Social Security Calculator",
+    "intro": "Obtain benefit estimates from official SSA resources, then compare their starting ages and dollar basis consistently. This guide uses the calculator’s Compare Application Ages mode with hypothetical entered claim-date quotes. It values those supplied streams; it does not calculate entitlement from your earnings record or prescribe a claiming age.",
+    "answer": "For hypothetical quotes of $1,400 monthly starting at 62 and $2,480 starting at 70, an age-90 horizon with zero discount and zero COLA gives $470,400 and $595,200 respectively. Shortening the horizon to age 75 changes those totals to $218,400 and $148,800. The larger starting monthly benefit therefore does not settle the whole comparison.",
+    "sections": [
+      {
+        "id": "quotes",
+        "title": "Begin with quotes, not an assumed entitlement",
+        "paragraphs": [
+          "The two starting amounts are independently entered hypothetical quotes, not benefits calculated from salary or a single PIA. SSA’s official calculators can help produce benefit estimates using relevant earnings information. Record the selected claiming date, future-work assumptions and whether each estimate is in today’s or future dollars.",
+          "Do not assume the guide’s $1,400 and $2,480 amounts apply to your record. This comparison mode does not determine insured status, earnings-test withholding, taxation, Medicare deductions, spousal benefits or survivor benefits. Those details require the applicable official resources and circumstances."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "dollars",
+        "title": "Keep today-dollar estimates distinct from nominal claim-date quotes",
+        "paragraphs": [
+          "Compare Application Ages takes each entered amount as the nominal monthly benefit when that option begins. It does not add waiting-period COLA before the start date. The entered COLA is applied only after each option starts, on modeled annual anniversaries.",
+          "An estimate shown in today’s dollars is on a different basis from an inflated quote at a future claiming date. Convert consistently before using nominal discount and COLA assumptions. Do not inflate a future-dollar quote again for the same waiting period; that would count the adjustment twice."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "horizon",
+        "title": "Test the payment years, not only the monthly amounts",
+        "paragraphs": [
+          "With a horizon at age 90, starting at 62 gives 28 years or 336 monthly payments, while starting at 70 gives 20 years or 240 payments. At zero discount and COLA, the totals are $470,400 and $595,200, and the second option’s modeled advantage is $124,800.",
+          "With a horizon at 75, the counts shrink to 156 and 60 payments. The first option totals $218,400 and the second $148,800, so the second-minus-first difference is −$69,600. This is an input sensitivity, not a forecast of longevity or a recommendation for a person with a particular health condition."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "valuation",
+        "title": "Value both streams at the earlier claiming age",
+        "paragraphs": [
+          "With the age-90 horizon, 3% effective annual discount and zero COLA, present values at age 62 are $319,548.39 and $354,293.99. Discounting the later-starting stream includes its eight-year wait; it is not enough to discount only the years after that stream starts.",
+          "The table also includes hypothetical $2,000 at 67 versus $2,480 at 70. That case is valued at age 67, not age 62, and produces $400,044.03 and $410,723.84. Different valuation dates must not be compared directly as though they described the same current dollars."
+        ],
+        "formula": "Present value = sum of each benefit / (1 + discount rate)^(waiting years + months after start / 12)"
+      },
+      {
+        "id": "cola",
+        "title": "Treat post-claim COLA as an assumption, not a forecast",
+        "paragraphs": [
+          "Holding the two claim-date quotes fixed while adding 2% post-claim COLA at a 3% discount rate gives age-62 present values of $407,077.50 and $422,145.67 through age 90. The resulting second-option advantage is $15,068.17. This controlled sensitivity changes the growth of paid benefits without recalculating the starting quotes.",
+          "The earlier stream has more years of post-start increases in that constructed case. The comparison therefore need not move in the direction guessed from the larger initial benefit alone. The 2% input is not an SSA prediction; actual calendar COLAs and benefit rounding differ from these annual-anniversary calculations."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "modes",
+        "title": "Distinguish a comparison from the ideal-age mode",
+        "paragraphs": [
+          "To reproduce a case, choose Compare Application Ages and load its complete inputs. Ideal Application Age uses a common age-62-dollar PIA and birth-year claiming factors with a different COLA treatment while waiting. A nominal claim-date quote should not be pasted into that PIA field without understanding the basis change.",
+          "A calculated advantage or highest-present-value age is not a complete retirement decision. Consider available bridge cash and excluded household benefits. Claiming benefits is also distinct from stopping work or enrolling in Medicare. Use the model to examine supplied assumptions and return to official resources for eligibility and program-specific estimates."
+        ],
+        "formula": ""
+      }
+    ],
+    "columns": [
+      "Scenario",
+      "First option present value",
+      "Second option present value",
+      "Second minus first",
+      "Valuation age"
+    ],
+    "chart": "social-guide",
+    "chartAlt": "Present values of hypothetical age-62 and age-70 benefit quotes under different horizons, discount rates and post-claim COLA assumptions.",
+    "chartCaption": "Chart includes the first four cases, all valued at age 62. The 67-versus-70 table case is valued at age 67 and must not be compared directly across valuation dates. All quotes are hypothetical.",
+    "questions": [
+      {
+        "question": "Does this calculate my Social Security benefit from earnings?",
+        "answer": "Not in the comparison mode used here. You supply benefit quotes; official SSA resources provide earnings-based estimates."
+      },
+      {
+        "question": "Should I use today’s dollars or future dollars?",
+        "answer": "Compare mode expects consistent nominal amounts at each claiming date. Convert today-dollar estimates before combining them with nominal future COLA and discount assumptions."
+      },
+      {
+        "question": "Does waiting always give a larger lifetime total?",
+        "answer": "Not under every entered horizon. The age-75 hypothetical case reverses the age-90 comparison; this is not a prediction of lifespan."
+      },
+      {
+        "question": "Can I decide using only a break-even age?",
+        "answer": "A simple crossover can omit discounting, COLA, bridge cash, taxes and household benefits. Review the complete assumptions instead of treating one age as a universal rule."
+      },
+      {
+        "question": "Is the assumed 2% COLA an official forecast?",
+        "answer": "No. It is a scenario input, applied after each quoted option starts in comparison mode."
+      },
+      {
+        "question": "Is the highest modeled present value a claiming recommendation?",
+        "answer": "No. The tool does not evaluate all personal circumstances or excluded program rules. It reports a deterministic calculation under entered assumptions."
+      }
+    ],
+    "limitations": [
+      "Deterministic entered horizons, not mortality probabilities, actuarial pricing or a personal retirement recommendation.",
+      "Monthly end payments and annual-anniversary COLA simplify actual calendar payments and rounding.",
+      "No automatic tax, Medicare deduction, eligibility, plan solvency or survivor coordination is calculated in these examples."
+    ],
+    "sources": [
+      {
+        "href": "https://www.ssa.gov/benefits/calculators/",
+        "label": "SSA: official estimates and today-dollar versus future-dollar options"
+      },
+      {
+        "href": "https://www.consumerfinance.gov/consumer-tools/retirement/before-you-claim/",
+        "label": "CFPB: claiming-age planning and personal considerations"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/pension-lump-sum-vs-monthly-payments/",
+        "label": "Pension income versus lump-sum comparison"
+      },
+      {
+        "href": "/guides/how-long-will-retirement-savings-last/",
+        "label": "Retirement savings duration guide"
+      },
+      {
+        "href": "/glossary/social-security-benefits/",
+        "label": "Social Security benefits glossary"
+      }
+    ]
   }
 }

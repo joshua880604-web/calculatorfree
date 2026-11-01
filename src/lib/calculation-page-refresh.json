@@ -323,5 +323,31 @@
         "answer": "Fix Length credits only the fractional-period return and drains the balance at the final date, so the last payout can differ from the regular formula amount."
       }
     ]
+  },
+  "pension": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "What does the 12.5-year break-even mean?",
+        "answer": "It is $300,000 divided by twelve $2,000 starting payments. It ignores discounting, COLA and other costs; it is not an actuarial or discounted crossover calculation."
+      },
+      {
+        "question": "Does the entered horizon predict how long I will live?",
+        "answer": "No. It is a deterministic sensitivity input. Test more than one horizon and do not interpret it as a mortality forecast."
+      }
+    ]
+  },
+  "social-security": {
+    "checkedOn": "2026-11-01",
+    "questions": [
+      {
+        "question": "Should I use today’s dollars or future dollars?",
+        "answer": "Compare mode expects consistent nominal amounts at each claiming date. Convert today-dollar estimates before combining them with nominal future COLA and discount assumptions."
+      },
+      {
+        "question": "Is the highest modeled present value a claiming recommendation?",
+        "answer": "No. The tool does not evaluate all personal circumstances or excluded program rules. It reports a deterministic calculation under entered assumptions."
+      }
+    ]
   }
 }

@@ -260,3 +260,7 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## Annuity accumulation and finite payouts
 - [How to Calculate Annuity Future Value and Contributions](https://www.calculatorfree.io/guides/how-to-calculate-annuity-future-value/): Calculate accumulation with initial principal, monthly and annual additions. Compare deposit timing, zero growth and a negative return in four reproducible cases.
 - [How to Calculate Annuity Payouts and a Final Payment](https://www.calculatorfree.io/guides/how-to-calculate-annuity-payouts/): Calculate finite annuity payouts from a balance and entered return. Compare term, frequency, partial periods and a capped final payment in six reproducible cases.
+
+## Pension and Social Security benefit comparisons
+- [Pension Lump Sum vs. Monthly Payments: How to Compare](https://www.calculatorfree.io/guides/pension-lump-sum-vs-monthly-payments/): Compare a pension lump sum with monthly benefits using four reproducible present-value cases. Test horizon, discount rate and COLA without treating a simple break-even as advice.
+- [How to Compare Social Security Claiming Ages](https://www.calculatorfree.io/guides/how-to-compare-social-security-claiming-ages/): Compare entered Social Security claiming-age quotes using five reproducible cases. Separate horizon, discount rate, COLA and today-dollar versus claim-date amounts.

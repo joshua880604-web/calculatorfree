@@ -300,3 +300,9 @@ keywordTitles['annuity']='Annuity Calculator - Future Value & Contributions';
 keywordTitles['annuity-payout']='Annuity Payout Calculator - Amount & Duration';
 searchTasks['annuity'][0].description='Calculate annuity future value with starting principal, monthly and annual additions. Compare deposit timing using an entered effective annual return.';
 searchTasks['annuity-payout'][0].description='Calculate a finite annuity payout or how long a chosen payment lasts. Compare terms and frequencies; this model does not price an insurance contract.';
+
+// Entered pension and Social Security quote comparisons checked 2026-11-01.
+keywordTitles['pension']='Pension Calculator - Lump Sum vs Monthly Payments';
+keywordTitles['social-security']='Social Security Calculator - Compare Claiming Ages';
+searchTasks['pension'][0].description='Compare an entered pension lump sum with monthly benefits. Test horizon, discount rate and COLA; this is not plan-specific benefit or actuarial pricing.';
+searchTasks['social-security'][0].description='Compare Social Security claiming-age scenarios with entered benefits, horizon, discount and COLA assumptions. Use official SSA resources for earnings-based estimates.';
