@@ -19,7 +19,7 @@ import GlossaryLinks from './GlossaryLinks';
 import RoiReference from './RoiReference';
 import { longTailHref } from '@/lib/long-tail-content';
 import GuideDisclosure from './GuideDisclosure';
-import {compactReadingIds,compactReadingLeadExamples} from '@/lib/compact-reading';
+import {compactReadingIds,compactReadingLeadExamples,compactReadingSections} from '@/lib/compact-reading';
 import './compact-reading.css';
 export default function CalculatorGuide({
   calculator,
@@ -30,8 +30,12 @@ export default function CalculatorGuide({
   const insight = guideInsights[calculator.id as keyof typeof guideInsights];
   const checkedOn = guide?.checkedOn ?? notesCheckedOn;
   const compact=compactReadingIds.includes(calculator.id);
+  const sections=compactReadingSections[calculator.id]??{};
+  const selective=Object.values(sections).some(Boolean);
+  const foldExamples=compact||sections.examples;
+  const foldQuestions=compact||sections.questions;
   const leadIndex=compactReadingLeadExamples[calculator.id]??0;
-  const examples=compact&&leadIndex>0&&guide?.examples[leadIndex]
+  const examples=foldExamples&&leadIndex>0&&guide?.examples[leadIndex]
     ? [guide.examples[leadIndex],...guide.examples.filter((_,index)=>index!==leadIndex)] : guide?.examples;
   const workedExamples=examples?.map((example)=><section className="worked-example" key={example.title}>
     <h3>{example.title}</h3><p>{example.inputs}</p>
@@ -40,7 +44,7 @@ export default function CalculatorGuide({
     <SiteLink href={calculatorPresetHref(routeFor(calculator.id),example.mode,example.values)}>Try these inputs</SiteLink>
   </section>);
   return (
-    <section className={"calculator-guide"+(motherPageCopy[calculator.id]?" mother-page-guide":"")+(compact?" compact-reading":"")} aria-label="Calculation guide">
+    <section className={"calculator-guide"+(motherPageCopy[calculator.id]?" mother-page-guide":"")+(compact||selective?" compact-reading":"")} data-reading-layout={compact?'compact':selective?'selective':undefined} aria-label="Calculation guide">
       {guide && (
         <>
           <nav className="guide-nav" aria-label="Calculation guide sections">
@@ -65,12 +69,12 @@ export default function CalculatorGuide({
           {calculator.id === "roi" && <RoiReference />}
           {['barista-fire','coast-fire'].includes(calculator.id) && <p>Compare the income and withdrawal assumptions in our <SiteLink href="/guides/barista-fire-vs-coast-fire/">Barista FIRE vs. Coast FIRE guide</SiteLink>.</p>}
           {calculator.id === "house-affordability" && <HouseIncomeReference/>}
-          {["personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && (compact?<GuideDisclosure title={loanCostComparisonTitle(calculator.id)}><LoanCostReference id={calculator.id}/></GuideDisclosure>:<LoanCostReference id={calculator.id}/>)}
+          {["personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && (compact||sections.comparisons?<GuideDisclosure title={loanCostComparisonTitle(calculator.id)}><LoanCostReference id={calculator.id}/></GuideDisclosure>:<LoanCostReference id={calculator.id}/>)}
           {calculator.id==='pmi' && <PmiRateReference/>}<RemainingFinanceReference id={calculator.id}/><h2 id="worked-examples">Worked examples</h2>
-          {compact?<>{workedExamples?.[0]}{workedExamples&&workedExamples.length>1&&<GuideDisclosure title={'More worked examples ('+(workedExamples.length-1)+')'}>{workedExamples.slice(1)}</GuideDisclosure>}</>:workedExamples}
+          {foldExamples?<>{workedExamples?.[0]}{workedExamples&&workedExamples.length>1&&<GuideDisclosure title={'More worked examples ('+(workedExamples.length-1)+')'}>{workedExamples.slice(1)}</GuideDisclosure>}</>:workedExamples}
           {calculator.id === "rmd" && <RmdReference/>}
           <h2 id="common-questions">Common questions</h2>
-          {guide.questions.map((item) => compact ? <details className="guide-disclosure guide-question" key={item.question}>
+          {guide.questions.map((item) => foldQuestions ? <details className="guide-disclosure guide-question" key={item.question}>
               <summary><h3>{item.question}</h3></summary>
               <div className="guide-disclosure-body" id={item.anchor}><p>{item.answer}</p>
               {item.steps&&<ol>{item.steps.map(step=><li key={step}>{step}</li>)}</ol>}
@@ -85,7 +89,7 @@ export default function CalculatorGuide({
           <h2 id="scope-assumptions">Scope and assumptions</h2>
           <p>{guide.scope}</p>
           <h2 id="sources">Sources</h2>
-          <SourceReferences context={'calculator:'+calculator.id} sources={guide.sources} compact={compact}/>
+          <SourceReferences context={'calculator:'+calculator.id} sources={guide.sources} compact={compact||sections.sources}/>
           <p className="content-date">
             Calculation notes checked{" "}
             <time dateTime={checkedOn}>{new Date(checkedOn + "T12:00:00Z").toLocaleDateString("en-US", {year:"numeric",month:"long",day:"numeric",timeZone:"UTC"})}</time>. Examples

@@ -31,4 +31,58 @@ export const compactReadingLeadExamples: Record<string,number> = {
  'cash-back-or-low-interest':1, 'auto-lease':1, 'take-home-paycheck':1,
  'debt-payoff':1, repayment:1, 'business-loan':2, 'boat-loan':2,
  pmi:2, 'biweekly-mortgage':2,
+ 'marriage-tax':1,
+};
+
+// Shorter pages retain their reading flow; only measured long sections are folded.
+export type CompactReadingSections = Partial<Record<'questions'|'examples'|'sources'|'comparisons',boolean>>;
+export const compactReadingSections: Record<string,CompactReadingSections> = {
+  "simple-interest": {
+    "questions": true,
+    "comparisons": true
+  },
+  "mutual-fund": {
+    "questions": true
+  },
+  "future-value": {
+    "questions": true,
+    "comparisons": true
+  },
+  "present-value": {
+    "questions": true,
+    "comparisons": true
+  },
+  "salary": {
+    "questions": true
+  },
+  "marriage-tax": {
+    "examples": true
+  },
+  "loan": {
+    "questions": true
+  },
+  "currency": {
+    "questions": true
+  },
+  "margin": {
+    "questions": true
+  },
+  "depreciation": {
+    "sources": true
+  },
+  "markup": {
+    "questions": true
+  },
+  "cagr": {
+    "questions": true
+  },
+  "real-return": {
+    "questions": true
+  },
+  "tax-equivalent-yield": {
+    "questions": true
+  },
+  "current-ratio": {
+    "questions": true
+  }
 };
