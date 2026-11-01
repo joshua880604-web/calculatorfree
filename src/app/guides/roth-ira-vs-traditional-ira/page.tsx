@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
@@ -60,4 +61,5 @@ export default function IRAGuide(){return <div className="page-wrap glossary-pag
 <p>{"The three tax-rate scenarios and a zero-return boundary were reproduced with the IRA tool and independently checked using 50-digit Decimal arithmetic. The calculation uses the closed-form future value of 30 year-end contributions, then applies the explicitly assumed tax factors. "}<SiteLink href="https://www.calculatorfree.io/ira-calculator#calc=share_version=1&mode=comparison&age=35&retire=65&balance=0&contribution=6000&max=No&return=0&tax=22&retire_tax=22">{"Open the zero-return check"}</SiteLink>{": both equal-rate after-tax values are $140,400.00."}</p>
 <p>{"All figures are nominal dollars and assume no account fees, no investment losses beyond the chosen return input, no state-tax differences, no inflation adjustment and no future changes in law. The displayed taxable-account comparison is not used to choose the winner in our two-IRA table. Explore the "}<SiteLink href="/retirement-calculators">{"Retirement Calculators directory"}</SiteLink>{" and "}<SiteLink href="/methodology">{"methodology"}</SiteLink>{" for related models and review status."}</p>
 <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
+<section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/roth-ira-vs-traditional-ira/" sources={[{"title": "IRS: Roth IRA rules and eligibility", "url": "https://www.irs.gov/retirement-plans/roth-iras"}, {"title": "IRS: published 2026 retirement contribution limits", "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500"}, {"title": "IRS Publication 590-B: distributions and Roth ordering", "url": "https://www.irs.gov/publications/p590b"}]}/></section>
 </article></main></div>;}

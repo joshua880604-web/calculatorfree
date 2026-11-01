@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
@@ -76,5 +77,6 @@ export default function EmergencyFundGuide(){return <div className="page-wrap gl
 <p>{"Nine scenarios were checked with independent 50-digit Decimal arithmetic: reserve targets, savings gaps, whole deposit counts, capped final deposits, higher expenses, rebuilding and an already-funded boundary case. The "}<SiteLink href="https://www.calculatorfree.io/emergency-fund-calculator">{"Emergency Fund Calculator"}</SiteLink>{" uses these simple expense and contribution relationships; it does not assess employment risk, insurance coverage or personal suitability."}</p>
 <p>{"Sources and calculations checked October 28, 2026. See our "}<SiteLink href="https://www.calculatorfree.io/methodology">{"methodology and review status"}</SiteLink>{"."}</p>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
- </article></main></div>;
+ <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/how-much-emergency-fund-should-i-have/" sources={[{"title": "FINRA: financial foundations", "url": "https://www.finra.org/investors/investing/investing-basics/financial-foundations"}, {"title": "CFPB: building an emergency fund", "url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"}]}/></section>
+</article></main></div>;
 }

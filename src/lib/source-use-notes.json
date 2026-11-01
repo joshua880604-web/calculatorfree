@@ -927,6 +927,396 @@
       "role": "background",
       "usedFor": "Factors to consider before choosing a Social Security claiming age.",
       "scope": "Health, work, family benefits and financial needs matter; the highest modeled present value is not a universally best claiming decision."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-do-i-need-to-know-if-im-thinking-about-consolidating-my-credit-card-debt-en-1861/": {
+      "role": "background",
+      "usedFor": "Debt-consolidation costs, payment changes and the risk of extending repayment.",
+      "scope": "A smaller payment does not necessarily mean a lower total cost. The model does not determine approval, credit scores or settlement outcomes."
+    },
+    "https://www.gov.uk/vat-rates": {
+      "role": "rule",
+      "usedFor": "UK standard, reduced and zero VAT rate categories.",
+      "scope": "These are UK examples, not universal rates or U.S. sales-tax rules. The calculator uses an entered rate and does not classify a product or seller."
+    },
+    "https://www.consumerfinance.gov/consumer-tools/educator-tool/your-money-your-goals/toolkit/": {
+      "role": "background",
+      "usedFor": "Debt action planning and prioritizing payments within a household budget.",
+      "scope": "The toolkit supplies concepts, not this site’s payoff schedule, behavioral evidence or an issuer’s actual accrual and allocation rules."
+    },
+    "https://www.boatus.com/faq/boat-loans": {
+      "role": "background",
+      "usedFor": "Boat-loan underwriting and boat-dependent financing considerations.",
+      "scope": "Lender terms and eligibility vary. This reference does not supply the entered rate or approve a vessel, borrower or loan."
+    },
+    "https://www.boatus.com/products-and-services/boat-loans": {
+      "role": "background",
+      "usedFor": "Separating a boat’s financing payment from other ownership expenses.",
+      "scope": "Insurance, storage, maintenance and actual loan charges must be checked separately; examples are not current lender offers."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-leasing-versus-buying-a-car-en-815/": {
+      "role": "background",
+      "usedFor": "Lease payments, residual value, ownership and lease-versus-buy trade-offs.",
+      "scope": "The source explains concepts, not a universal money factor, tax treatment, contract quote or regulatory APR."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/how-do-i-qualify-for-an-advertised-0-auto-financing-en-781/": {
+      "role": "background",
+      "usedFor": "Advertised zero-percent financing, manufacturer incentives and qualification limits.",
+      "scope": "Rebates and promotional rates may not be combined. The model compares entered offers and does not establish qualification or current availability."
+    },
+    "https://www.fncalculator.com/financialcalculator?type=loanBiweeklyCalculator": {
+      "role": "background",
+      "usedFor": "The input and comparison structure of a dedicated biweekly-payment calculator.",
+      "scope": "This is a third-party interface reference, not our calculation engine, a servicer posting rule or independent validation of modeled savings."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-home-equity-line-of-credit-heloc-en-107/": {
+      "role": "background",
+      "usedFor": "HELOC draw and repayment phases, collateral risk and variable interest rates.",
+      "scope": "The calculator’s entered-rate scenarios do not predict future resets or implement every lender’s minimum-payment and draw rules."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-home-equity-loan-and-a-home-equity-line-of-credit-heloc-en-247/": {
+      "role": "background",
+      "usedFor": "A lump-sum home-equity loan compared with a revolving HELOC.",
+      "scope": "The distinction does not establish borrowing capacity, approval or the actual lien and repayment terms offered to a household."
+    },
+    "https://consumer.ftc.gov/articles/home-equity-loans-and-home-equity-lines-credit": {
+      "role": "background",
+      "usedFor": "Home-equity borrowing costs, collateral risk and HELOC APR conventions.",
+      "scope": "A fee-aware planning comparison is not a full legal APR disclosure or eligibility test. Verify which fees the actual quoted APR includes."
+    },
+    "https://files.consumerfinance.gov/f/documents/cfpb_heloc-brochure.pdf": {
+      "role": "background",
+      "usedFor": "HELOC offer comparison, variable rates, repayment terms and fees.",
+      "scope": "The brochure describes choices and risks; our fixed-input scenarios do not forecast rate changes or reproduce every contract feature."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/": {
+      "role": "background",
+      "usedFor": "Discount points and lender credits as upfront-cost and rate trade-offs.",
+      "scope": "A point does not buy a universal rate reduction. Compare actual quotes with consistent loan terms and costs; tax treatment is separate."
+    },
+    "https://www.consumerfinance.gov/owning-a-home/compare/compare-loan-estimates/": {
+      "role": "background",
+      "usedFor": "Comparing mortgage Loan Estimates using terms, costs and cash requirements.",
+      "scope": "The worksheet does not obtain lender quotes or replace a legally required Loan Estimate; entered savings depend on the chosen holding period."
+    },
+    "https://www.fncalculator.com/financialcalculator?type=loanPointCalculator": {
+      "role": "background",
+      "usedFor": "Point-comparison inputs such as loan amount, quoted rates and upfront costs.",
+      "scope": "This third-party calculator does not certify our formula, supply lender quotes or establish the tax deductibility of points."
+    },
+    "https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf": {
+      "role": "rule",
+      "usedFor": "FHA annual mortgage insurance premium rates published in Mortgagee Letter 2023-05.",
+      "scope": "Apply the letter’s product, term, loan-size, LTV and effective-date conditions. It is not a lender offer, loan-limit lookup or complete eligibility review."
+    },
+    "https://www.hud.gov/hud-partners/housing-premium-calculation": {
+      "role": "method",
+      "usedFor": "HUD’s declining-balance method for monthly mortgage insurance premiums.",
+      "scope": "Historical example rates illustrate the calculation method, not current premium rates. Rate and duration rules come from separate applicable HUD guidance."
+    },
+    "https://www.hud.gov/sites/documents/13-04ml.pdf": {
+      "role": "rule",
+      "usedFor": "FHA annual MIP duration changes for applicable case numbers assigned from June 3, 2013.",
+      "scope": "Mortgagee Letter 2013-04 supplies duration context, not today’s premium rate; FHA MIP is not conventional PMI’s 80%/78% termination framework."
+    },
+    "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/": {
+      "role": "rule",
+      "usedFor": "VA purchase funding-fee categories, exemptions and payment choices.",
+      "scope": "Rates depend on use, down payment and exemption status; prior manufactured-home use has special treatment. The tool does not verify entitlement or an exemption."
+    },
+    "https://www.va.gov/housing-assistance/home-loans/loan-types/purchase-loan/": {
+      "role": "background",
+      "usedFor": "VA purchase-loan eligibility, down-payment context and the absence of monthly PMI or MIP.",
+      "scope": "No monthly mortgage insurance does not mean no funding fee, closing costs or underwriting. Actual qualification requires the lender and VA process."
+    },
+    "https://myhome.freddiemac.com/buying/what-can-you-afford": {
+      "role": "background",
+      "usedFor": "Income, existing obligations and complete ownership expenses in affordability planning.",
+      "scope": "Suggested ratios are planning assumptions, not universal underwriting limits or an approval. Taxes, insurance, maintenance and reserves still matter."
+    },
+    "https://www.chase.com/personal/mortgage/education/managing-your-mortgage/what-is-mortgage-recast": {
+      "role": "background",
+      "usedFor": "How recasting differs from refinancing and why loan eligibility and servicer policy matter.",
+      "scope": "A lender’s educational explanation is not a promise that this loan qualifies, has a specified minimum curtailment or carries the entered fee."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-home-equity-loan-en-106/": {
+      "role": "background",
+      "usedFor": "Home-equity loans as lump-sum borrowing secured by the home, with associated costs.",
+      "scope": "The entered property value, balance, rate and fees do not establish an appraisal, credit limit, approval or actual loan quote."
+    },
+    "/average-return-calculator#calc=share_version=1&mode=cashflows": {
+      "role": "site",
+      "usedFor": "The site’s separate dated-cash-flow return tool for irregular dates.",
+      "scope": "This is navigation to another model, not an external citation or proof that periodic IRR equals dated XIRR."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-are-some-of-the-financial-considerations-of-buying-a-home-en-119/": {
+      "role": "background",
+      "usedFor": "Ownership costs beyond a mortgage’s principal-and-interest payment.",
+      "scope": "The reference does not supply local expenses, predict appreciation or validate a rent-versus-buy investment outcome."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-amortization-and-how-could-it-affect-my-auto-loan-en-771/": {
+      "role": "method",
+      "usedFor": "How a periodic installment is divided between principal and interest as the balance declines.",
+      "scope": "Actual contracts can use different day counts, fees and posting dates; an equal-period schedule is not a lender payoff quote."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-an-escrow-or-impound-account-en-140/": {
+      "role": "background",
+      "usedFor": "Escrow as a mechanism for paying specified property taxes and insurance costs.",
+      "scope": "Escrow does not cover every ownership cost, and estimated deposits can change; this is not a prediction of a servicer’s escrow analysis."
+    },
+    "https://taxation-customs.ec.europa.eu/taxation/vat/vat-directive/how-does-vat-work_en": {
+      "role": "background",
+      "usedFor": "VAT as a consumption-tax system with input-tax and output-tax concepts.",
+      "scope": "EU context does not determine a specific jurisdiction’s registration, product rate or recoverability; U.S. sales tax uses different rules."
+    },
+    "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications": {
+      "role": "method",
+      "usedFor": "Percentage calculations for sales tax, commission and discounts.",
+      "scope": "The chosen base and rate determine the result; arithmetic does not identify the applicable tax, employment or commission-contract rules."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-rate-and-adjustable-rate-mortgage-arm-loan-en-100/": {
+      "role": "background",
+      "usedFor": "The difference between fixed mortgage rates and adjustable-rate loan structures.",
+      "scope": "A fixed-rate illustration does not model an ARM’s future index path, caps, reset schedule or payment shock unless explicitly stated."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/is-it-better-to-pay-off-the-interest-or-principal-on-my-auto-loan-en-845/": {
+      "role": "background",
+      "usedFor": "Why reducing principal can reduce later interest, subject to the loan’s payment rules.",
+      "scope": "Confirm how the lender applies extra payments and any penalty. Our schedule does not reproduce every daily-accrual or precomputed-interest contract."
+    },
+    "https://service-manual.ons.gov.uk/content/numbers/percentages": {
+      "role": "method",
+      "usedFor": "The distinction between relative percentage change and an absolute percentage-point difference.",
+      "scope": "Specify the baseline. A correct rate comparison does not establish the financial significance or suitability of a product."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/": {
+      "role": "method",
+      "usedFor": "Debt-to-income ratio as monthly debt obligations divided by gross monthly income.",
+      "scope": "Lenders differ in income and debt treatment and accepted ratios. A computed ratio is not an approval or a complete household spending budget."
+    },
+    "https://openstax.org/books/principles-financial-accounting/pages/11-3-explain-and-apply-depreciation-methods-to-allocate-capitalized-costs": {
+      "role": "method",
+      "usedFor": "Book depreciation using useful life, depreciable cost, salvage value and allocation methods.",
+      "scope": "Accounting depreciation is not automatically MACRS, a section 179 deduction, bonus depreciation, market-value loss or the tax due on a sale."
+    },
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html": {
+      "role": "data",
+      "usedFor": "The nature and quotation conventions of ECB reference exchange rates.",
+      "scope": "Reference rates are not executable bank quotes. This site’s stored Frankfurter snapshot has its own provider and dates; the ECB page does not make it live."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-to-value-ratio-and-how-does-it-relate-to-my-costs-en-121/": {
+      "role": "method",
+      "usedFor": "Loan-to-value ratio from a stated loan balance and property value.",
+      "scope": "A calculated LTV does not verify an appraisal, combined liens, program limits, mortgage insurance or lender approval."
+    },
+    "https://openstax.org/books/principles-finance/pages/16-1-payback-period-method": {
+      "role": "method",
+      "usedFor": "The payback-period concept and its limitations as a project screening measure.",
+      "scope": "Simple payback ignores the time value of money and later cash flows; discounted payback depends on a chosen rate and still is not NPV."
+    },
+    "https://openstax.org/books/contemporary-mathematics/pages/6-11-buying-or-leasing-a-car": {
+      "role": "method",
+      "usedFor": "A simplified auto-lease payment from depreciation, residual value and the money-factor finance charge.",
+      "scope": "This classroom convention is not every lease contract, a tax determination or an exact legal APR; excluded fees and mileage charges can matter."
+    },
+    "https://www.federalreserve.gov/pubs/refinancings/default.htm": {
+      "role": "background",
+      "usedFor": "Refinancing costs, repayment horizons and break-even considerations.",
+      "scope": "This is an older Federal Reserve guide. Its product examples and rates are not current offers or current underwriting rules."
+    },
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax": {
+      "role": "rule",
+      "usedFor": "The federal estate-tax framework and filing considerations.",
+      "scope": "An estate estimate is not state inheritance tax or a completed Form 706; exclusions depend on the year and transaction facts."
+    },
+    "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/inheritance-tax.html": {
+      "role": "rule",
+      "usedFor": "Pennsylvania inheritance-tax concepts and relationship-dependent treatment.",
+      "scope": "This is one state’s framework, not a nationwide rule or a calculation of the user’s inheritance tax."
+    },
+    "https://www.consumerfinance.gov/about-us/blog/how-decide-how-much-spend-your-down-payment/": {
+      "role": "background",
+      "usedFor": "Balancing a down payment with closing costs and remaining cash reserves.",
+      "scope": "This archived CFPB article supplies planning context, not a current loan offer or a universal required down-payment percentage."
+    },
+    "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/leveraged-investing-strategies-know-risks-using-these-advanced-investment-tools": {
+      "role": "background",
+      "usedFor": "How borrowing and leverage can magnify both investment gains and losses.",
+      "scope": "A margin illustration does not establish account eligibility, maintenance requirements or the chance of a margin call."
+    },
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-vesting": {
+      "role": "rule",
+      "usedFor": "Ownership and vesting distinctions for employee and employer retirement contributions.",
+      "scope": "Actual employer deposits and vesting depend on the plan and service history; a generic projection does not determine vested benefits."
+    },
+    "https://www.irs.gov/retirement-plans/matching-contributions-help-you-save-more-for-retirement": {
+      "role": "background",
+      "usedFor": "Employer matching contributions and the importance of plan-specific terms.",
+      "scope": "Match formulas, limits, true-ups and eligibility vary. The reference does not validate a particular modeled plan or promised employer deposit."
+    },
+    "https://support.google.com/adsense/answer/190515?hl=en": {
+      "role": "method",
+      "usedFor": "AdSense RPM as estimated revenue per thousand impressions under its reporting definition.",
+      "scope": "Match the impression denominator. Modeled eCPM or RPM is not an earnings guarantee, a payout forecast or evidence of current advertising rates."
+    },
+    "https://adsense.googleblog.com/2011/11/understanding-ecpm-and-rpm.html": {
+      "role": "background",
+      "usedFor": "The historical 2011 explanation of eCPM and RPM terminology.",
+      "scope": "This is a dated terminology note, not current product policy, current ad pricing or a guarantee that all platforms use the same denominator."
+    },
+    "https://guide-servicing.fanniemae.com/svc/f-1-09/processing-mortgage-loan-payments-and-payoffs": {
+      "role": "rule",
+      "usedFor": "Principal curtailment and possible re-amortization using current balance, rate and remaining term.",
+      "scope": "F-1-09 is displayed with an October 19, 2016 section date. Recasting is subject to applicable guide provisions and servicer agreement; the calculator does not determine eligibility."
+    },
+    "https://www.consumerfinance.gov/consumer-tools/mortgages/answers/key-terms/": {
+      "role": "background",
+      "usedFor": "Mortgage repayment, refinance, amortization and biweekly-payment terminology.",
+      "scope": "Definitions do not prescribe every servicer’s posting behavior or establish the savings of a particular payment program."
+    },
+    "https://www.consumerfinance.gov/owning-a-home/loan-estimate/": {
+      "role": "background",
+      "usedFor": "Where to find loan terms, projected payments, estimated costs and cash to close on a Loan Estimate.",
+      "scope": "Our illustrations are not official disclosures and do not obtain or audit a lender’s offer."
+    },
+    "https://www.irs.gov/publications/p946": {
+      "role": "background",
+      "usedFor": "The separate federal tax-depreciation framework and its elections.",
+      "scope": "Publication 946 is the 2025 edition. Our book-depreciation arithmetic does not determine MACRS classification, section 179 or bonus depreciation eligibility."
+    },
+    "https://www.irs.gov/instructions/i706": {
+      "role": "rule",
+      "usedFor": "The federal estate-tax return framework, adjusted taxable gifts and applicable-credit context.",
+      "scope": "Form 706 instructions are the July 2026 revision. The simplified model does not complete every schedule, value an estate or determine portability or GST tax."
+    },
+    "https://www.gov.uk/vat-businesses/charging-vat": {
+      "role": "background",
+      "usedFor": "UK VAT-inclusive and VAT-exclusive invoicing and price presentation.",
+      "scope": "This is UK guidance, not a universal tax rate or U.S. sales-tax sourcing rule. The tool applies the entered tax basis and rate."
+    },
+    "https://frankfurter.dev/": {
+      "role": "data",
+      "usedFor": "Frankfurter reference-rate API conventions and provider documentation.",
+      "scope": "The converter uses a stored October 2026 snapshot with quote-specific dates, not a live market feed or an executable bank or card rate."
+    },
+    "https://www.investor.gov/financial-tools-calculators/calculators/college-savings-calculator": {
+      "role": "background",
+      "usedFor": "College-saving inputs, future costs, time and assumed investment growth.",
+      "scope": "An educational projection is not a tuition quote, an aid award, a 529 tax determination or a guarantee of future returns."
+    },
+    "https://www.irs.gov/publications/p501": {
+      "role": "rule",
+      "usedFor": "Federal filing-status and dependent concepts relevant to tax comparisons.",
+      "scope": "Publication 501 is the 2025 edition. Selected-year brackets are separate, and this simplified comparison does not determine every credit, deduction or filing-status fact."
+    },
+    "https://yourhome.fanniemae.com/buy/rent-vs-buy-whats-right-you": {
+      "role": "background",
+      "usedFor": "Rent-versus-buy differences in upfront cash, ongoing costs, flexibility and maintenance.",
+      "scope": "These categories do not forecast local appreciation, validate investment returns or decide the household’s nonfinancial preferences."
+    },
+    "https://www.finra.org/investors/investing/investing-basics/financial-foundations": {
+      "role": "background",
+      "usedFor": "Financial foundations including cash flow, emergency savings, debt and investing.",
+      "scope": "General priorities do not specify a household’s correct reserve amount, expected return or debt-versus-saving allocation."
+    },
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/": {
+      "role": "background",
+      "usedFor": "Comparing auto-financing terms, total borrowing costs and purchase documents.",
+      "scope": "The calculator does not obtain quotes or determine credit approval, dealer charges or every state’s tax and trade-in treatment."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/": {
+      "role": "background",
+      "usedFor": "A Loan Estimate as a standardized explanation of a mortgage offer’s terms and costs.",
+      "scope": "The example comparison is not a lender disclosure, rate lock or assurance that a quoted fee cannot change."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/": {
+      "role": "background",
+      "usedFor": "How no-closing-cost refinance offers can shift costs into a higher rate or loan balance.",
+      "scope": "No cash due upfront does not mean no financing cost. Compare actual fee treatment over a consistent horizon."
+    },
+    "https://www.census.gov/library/stories/2022/12/housing-costs-burden.html": {
+      "role": "background",
+      "usedFor": "Housing-cost burden statistics and the inclusion of rent and utilities.",
+      "scope": "This 2022 Census article supplies definitional context, not current local rent data or proof that a fixed income percentage is affordable for every household."
+    },
+    "https://www.consumerfinance.gov/data-research/research-reports/data-spotlight-trends-in-discount-points-amid-rising-interest-rates/": {
+      "role": "data",
+      "usedFor": "Observed discount-point patterns in the CFPB report’s stated mortgage-data period.",
+      "scope": "Historical borrower statistics do not establish a current point-to-rate exchange, a lender quote or a causal prediction for an individual loan."
+    },
+    "https://www.irs.gov/taxtopics/tc504": {
+      "role": "rule",
+      "usedFor": "Home-mortgage points and interest-deduction considerations.",
+      "scope": "Deductibility depends on loan use, itemization, timing and other requirements; a break-even calculation does not establish an individual deduction."
+    },
+    "https://www.consumerfinance.gov/consumer-tools/mortgages/answers/key-terms/#bi-weekly-payment": {
+      "role": "background",
+      "usedFor": "The distinction between biweekly payments and ordinary monthly mortgage installments.",
+      "scope": "Two half payments each month are not 26 half payments per year. Actual savings depend on payment amount, posting and contract terms."
+    },
+    "https://www.consumerfinance.gov/consumer-tools/mortgages/your-mortgage-servicer-must-comply-with-federal-rules/": {
+      "role": "rule",
+      "usedFor": "Mortgage-servicing duties and protections relevant to payment handling.",
+      "scope": "A numerical illustration does not audit servicer compliance or guarantee how a voluntary partial-payment program posts funds."
+    },
+    "https://www.wellsfargo.com/mortgage/manage-account/automatic-mortgage-payments/": {
+      "role": "background",
+      "usedFor": "One servicer’s automatic-payment options and processing context.",
+      "scope": "These terms are provider-specific and can change; they are not a universal rule for immediate application of partial payments."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/can-i-prepay-my-loan-at-any-time-without-penalty-en-843/": {
+      "role": "background",
+      "usedFor": "The need to check auto-loan prepayment penalties and contract restrictions.",
+      "scope": "The model does not inspect a contract or compute every penalty, per-diem payoff amount or precomputed-interest adjustment."
+    },
+    "https://files.consumerfinance.gov/f/documents/cfpb_heloc-brochure_print.pdf": {
+      "role": "background",
+      "usedFor": "HELOC terms, borrowing costs, repayment choices and risks in the printed CFPB brochure.",
+      "scope": "This educational brochure does not forecast variable rates or certify a fixed-input plan as a lender’s current contract."
+    },
+    "https://www.consumerfinance.gov/rules-policy/regulations/1026/40/": {
+      "role": "rule",
+      "usedFor": "Regulation Z’s disclosure framework for home-equity plans.",
+      "scope": "The planner is not a compliant disclosure, an eligibility test or a reproduction of every open-end plan’s fee and repayment terms."
+    },
+    "https://www.investor.gov/build-wealth-over-time-through-saving-and-investing": {
+      "role": "background",
+      "usedFor": "The roles of saving, investing, time, compounding and risk in building wealth.",
+      "scope": "Educational guidance does not supply our return assumptions or establish that a projected outcome will occur."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-certificate-of-deposit-cd-en-917/": {
+      "role": "background",
+      "usedFor": "CD maturity, deposit terms and withdrawal restrictions.",
+      "scope": "The reference does not supply a current APY, the reader’s actual early-withdrawal penalty or an account-specific quote."
+    },
+    "https://www.consumerfinance.gov/rules-policy/regulations/1030/4/": {
+      "role": "rule",
+      "usedFor": "Regulation DD account-opening disclosures, including rate, balance, fee and time-account terms.",
+      "scope": "A comparison of entered rates is not a complete legal disclosure or a determination that an institution’s terms comply."
+    },
+    "https://www.fdic.gov/resources/deposit-insurance/brochures/deposits-at-a-glance": {
+      "role": "rule",
+      "usedFor": "FDIC deposit-insurance categories and coverage concepts.",
+      "scope": "Coverage depends on bank, ownership category and aggregation; the calculator does not verify an institution or calculate insured balances."
+    },
+    "https://ncua.gov/consumers/share-insurance-coverage/frequently-asked-questions-about-share-insurance": {
+      "role": "rule",
+      "usedFor": "NCUA share-insurance coverage concepts and account ownership categories.",
+      "scope": "Coverage requires an applicable insured credit union and depends on account facts; the tool does not determine insurance eligibility or aggregate balances."
+    },
+    "https://www.chase.com/personal/banking/education/basics/define-certificate-of-deposit": {
+      "role": "background",
+      "usedFor": "Basic CD terms, maturity and early-access considerations.",
+      "scope": "A bank’s educational page is not our product recommendation or a live offer; actual rates and penalties come from the account agreement."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-certificate-of-deposit-cd-rollover-or-renewal-en-923/": {
+      "role": "background",
+      "usedFor": "CD rollover, automatic renewal and the need to review new terms.",
+      "scope": "A maturity illustration does not assume the next CD has the same rate or model a particular bank’s grace-period and renewal instructions."
+    },
+    "/methodology.html#model-scope": {
+      "role": "site",
+      "usedFor": "This publisher’s cash-flow model scope and numerical-check documentation.",
+      "scope": "This is our own methodology, not external certification or a professional financial review."
     }
   },
   "pages": {
@@ -1698,6 +2088,541 @@
     },
     "guide:/guides/how-to-calculate-average-stock-price/": {
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+    },
+    "calculator:simple-interest": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "OpenStax: fixed-principal simple interest",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-4-solve-simple-interest-applications"
+        }
+      ]
+    },
+    "calculator:debt-consolidation": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote."
+    },
+    "calculator:average-return": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "FINRA: investment returns and annualization",
+          "url": "https://syndication.finra.org/content/how-are-your-investments-doing-returns-explained"
+        }
+      ]
+    },
+    "calculator:rent": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:vat": {
+      "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction."
+    },
+    "calculator:debt-payoff": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote."
+    },
+    "calculator:finance": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "OpenStax: time-value-of-money concepts",
+          "url": "https://openstax.org/books/principles-finance/pages/7-1-now-versus-later-concepts"
+        }
+      ]
+    },
+    "calculator:boat-loan": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "extras": [
+        {
+          "title": "OpenStax: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:auto-lease": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "extras": [
+        {
+          "title": "OpenStax: simplified auto-lease money-factor method",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-11-buying-or-leasing-a-car"
+        }
+      ]
+    },
+    "calculator:cash-back-or-low-interest": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote."
+    },
+    "calculator:biweekly-mortgage": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:heloc": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:auto-loan": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "extras": [
+        {
+          "title": "OpenStax: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:salary": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "CFPB: distinguish take-home income and spending",
+          "url": "https://www.consumerfinance.gov/owning-a-home/prepare/assess-your-spending/"
+        }
+      ]
+    },
+    "calculator:discount-points": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:repayment": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "extras": [
+        {
+          "title": "OpenStax: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:fha-loan": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:inflation": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "BLS: CPI definitions and interpretation",
+          "url": "https://www.bls.gov/cpi/questions-and-answers.htm"
+        }
+      ]
+    },
+    "calculator:va-mortgage": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:commission": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "OpenStax: percentage bases for tax, commission and discount",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications"
+        }
+      ]
+    },
+    "calculator:college-cost": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "Investor.gov: college-saving inputs and assumptions",
+          "url": "https://www.investor.gov/financial-tools-calculators/calculators/college-savings-calculator"
+        }
+      ]
+    },
+    "calculator:debt-to-income-ratio": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "CFPB: debt-to-income definition and lender-specific treatment",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/"
+        }
+      ]
+    },
+    "calculator:discount": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "OpenStax: percentage bases for tax, commission and discount",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications"
+        }
+      ]
+    },
+    "calculator:credit-card": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote."
+    },
+    "calculator:amortization": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "extras": [
+        {
+          "title": "OpenStax: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:house-affordability": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote.",
+      "extras": [
+        {
+          "title": "CFPB: debt-to-income definition and lender-specific treatment",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/"
+        }
+      ]
+    },
+    "calculator:mortgage-recast": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:home-equity-loan": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:mortgage-payoff": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote.",
+      "extras": [
+        {
+          "title": "OpenStax: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:currency": {
+      "note": "The converter uses a stored reference snapshot with the provider and quote dates shown in the tool. References explain rate conventions; they do not turn stored rates into live executable quotes.",
+      "extras": [
+        {
+          "title": "Frankfurter: reference-rate provider documentation",
+          "url": "https://frankfurter.dev/"
+        }
+      ]
+    },
+    "calculator:estate-tax": {
+      "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction.",
+      "extras": [
+        {
+          "title": "IRS Form 706 instructions (July 2026): federal estate-tax framework",
+          "url": "https://www.irs.gov/instructions/i706"
+        }
+      ]
+    },
+    "calculator:sales-tax": {
+      "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction.",
+      "extras": [
+        {
+          "title": "OpenStax: percentage bases for tax, commission and discount",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications"
+        }
+      ]
+    },
+    "calculator:down-payment": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:irr": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "Microsoft: periodic IRR, cash-flow signs and iteration",
+          "url": "https://support.microsoft.com/en-us/excel/functions/irr-function"
+        }
+      ]
+    },
+    "calculator:lease": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "extras": [
+        {
+          "title": "OpenStax: simplified auto-lease money-factor method",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-11-buying-or-leasing-a-car"
+        }
+      ]
+    },
+    "calculator:bond": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "OpenStax: discounted coupon and principal valuation",
+          "url": "https://openstax.org/books/principles-finance/pages/10-2-bond-valuation"
+        }
+      ]
+    },
+    "calculator:interest-rate": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "extras": [
+        {
+          "title": "OpenStax: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:depreciation": {
+      "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction.",
+      "extras": [
+        {
+          "title": "OpenStax: book depreciation and salvage-value methods",
+          "url": "https://openstax.org/books/principles-financial-accounting/pages/11-3-explain-and-apply-depreciation-methods-to-allocate-capitalized-costs"
+        },
+        {
+          "title": "IRS Publication 946 (2025): separate tax depreciation rules",
+          "url": "https://www.irs.gov/publications/p946"
+        }
+      ]
+    },
+    "calculator:future-value": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "OpenStax: time-value-of-money concepts",
+          "url": "https://openstax.org/books/principles-finance/pages/7-1-now-versus-later-concepts"
+        },
+        {
+          "title": "Microsoft: future-value function and payment timing",
+          "url": "https://support.microsoft.com/en-us/excel/functions/fv-function"
+        }
+      ]
+    },
+    "calculator:mutual-fund": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "SEC Investor.gov: expense ratios and fund costs",
+          "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio"
+        }
+      ]
+    },
+    "calculator:rent-vs-buy": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+    },
+    "calculator:ira": {
+      "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction.",
+      "extras": [
+        {
+          "title": "IRS: Roth IRA rules and eligibility",
+          "url": "https://www.irs.gov/retirement-plans/roth-iras"
+        },
+        {
+          "title": "IRS Publication 590-B: distributions, distinct from contribution limits",
+          "url": "https://www.irs.gov/publications/p590b"
+        }
+      ]
+    },
+    "calculator:loan": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "extras": [
+        {
+          "title": "OpenStax: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:refinance": {
+      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote.",
+      "extras": [
+        {
+          "title": "OpenStax: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:present-value": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "OpenStax: time-value-of-money concepts",
+          "url": "https://openstax.org/books/principles-finance/pages/7-1-now-versus-later-concepts"
+        },
+        {
+          "title": "Microsoft: present-value function, payment timing and cash-flow signs",
+          "url": "https://support.microsoft.com/en-us/excel/functions/pv-function"
+        }
+      ]
+    },
+    "calculator:payback-period": {
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "extras": [
+        {
+          "title": "OpenStax: payback method and its limitations",
+          "url": "https://openstax.org/books/principles-finance/pages/16-1-payback-period-method"
+        }
+      ]
+    },
+    "calculator:payment": {
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "extras": [
+        {
+          "title": "OpenStax: periodic loan payment and amortization method",
+          "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
+        }
+      ]
+    },
+    "calculator:marriage-tax": {
+      "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction."
+    },
+    "glossary:debt-consolidation": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:mortgage-escrow": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:sales-tax-vs-vat": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:home-equity-and-heloc": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:fixed-vs-variable-interest": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:principal-and-interest": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:percentage-vs-percentage-points": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:debt-to-income-ratio": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:depreciation": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:exchange-rate": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:amortization": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:loan-to-value-ratio": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:payback-period": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:commission": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:mortgage-points": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:lease-residual-value": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:refinance-break-even": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:estate-vs-inheritance-tax": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:down-payment": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:margin-and-leverage": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:employer-match-and-vesting": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "glossary:ecpm": {
+      "note": "These references support the definition and its scope. Worked examples are hypothetical; the term alone does not establish tax treatment, product eligibility, current pricing or a guaranteed outcome."
+    },
+    "guide:/guides/barista-fire-vs-coast-fire/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/mortgage-recast-vs-refinance/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/hourly-to-salary-and-paid-time-off/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/discounts-and-sales-commission-bases/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
+      "extras": [
+        {
+          "title": "OpenStax: percentage bases for tax, commission and discount",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications"
+        }
+      ]
+    },
+    "guide:/guides/lease-payment-and-residual-value/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-debt-to-income-ratio/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/book-depreciation-methods-and-salvage/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-read-amortization-and-loan-payments/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/federal-estate-tax-exclusion-and-gifts/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/tax-inclusive-prices-sales-tax-and-vat/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/simple-and-discounted-payback/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
+      "extras": [
+        {
+          "title": "OpenStax: payback method and its limitations",
+          "url": "https://openstax.org/books/principles-finance/pages/16-1-payback-period-method"
+        }
+      ]
+    },
+    "guide:/guides/currency-conversion-rate-direction-and-spread/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/college-costs-and-saving-before-enrollment/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/down-payment-and-closing-cost-cash/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/marriage-tax-penalty-or-bonus/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/rent-vs-buy-a-house/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-compare-debt-consolidation-loans/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-much-emergency-fund-should-i-have/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-home-equity-loan-payments/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-auto-loan-payments/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/is-refinancing-worth-it/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-boat-loan-payments/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-rent-affordability/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/cash-rebate-vs-low-interest-financing/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-auto-lease-payments/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/are-mortgage-points-worth-it/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/biweekly-vs-monthly-mortgage-payments/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-fha-loan-payments/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-to-calculate-va-loan-payments/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/pay-off-car-loan-early/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-are-heloc-payments-calculated/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/should-i-pay-off-debt-or-save/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/cd-vs-savings-account/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/how-much-house-can-i-afford/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/roth-ira-vs-traditional-ira/": {
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     }
   }
 }

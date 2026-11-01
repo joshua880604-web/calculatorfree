@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
@@ -74,6 +75,6 @@ export default function MortgageRecastGuide(){return <div className="page-wrap g
 <p>{"The figures were checked against the linked CalculatorFree.io models and an independent payment-equation and cash-flow calculation. No independent professional review or lender approval is implied."}</p>
 <p>{"For recurring or differently timed extra principal, use the "}<SiteLink href="/mortgage-payoff-calculator">{"Mortgage Payoff Calculator"}</SiteLink>{". That is a different cash-flow schedule from the immediate lump sum shown here."}</p>
 <h2 id="sources">{"Sources"}</h2>
-<ul><li><SiteLink href="https://guide-servicing.fanniemae.com/svc/f-1-09/processing-mortgage-loan-payments-and-payoffs">{"Fannie Mae: Processing Mortgage Loan Payments and Payoffs"}</SiteLink>{", principal-curtailment and re-amortization provisions."}</li><li><SiteLink href="https://www.consumerfinance.gov/consumer-tools/mortgages/answers/key-terms/">{"CFPB: Mortgage key terms"}</SiteLink>{", refinancing and amortization definitions."}</li><li><SiteLink href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/">{"CFPB: Loan Estimate explainer"}</SiteLink>{", loan terms, P&I, total payments and closing costs."}</li><li><SiteLink href="/methodology">{"CalculatorFree.io calculation methodology"}</SiteLink>{"."}</li></ul>
+<SourceReferences context="guide:/guides/mortgage-recast-vs-refinance/" sources={[{"title": "Fannie Mae: Processing Mortgage Loan Payments and Payoffs", "url": "https://guide-servicing.fanniemae.com/svc/f-1-09/processing-mortgage-loan-payments-and-payoffs"}, {"title": "CFPB: Mortgage key terms", "url": "https://www.consumerfinance.gov/consumer-tools/mortgages/answers/key-terms/"}, {"title": "CFPB: Loan Estimate explainer", "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"}, {"title": "CalculatorFree.io calculation methodology", "url": "/methodology"}]}/>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
  </article></main></div>;}

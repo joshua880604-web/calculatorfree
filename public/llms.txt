@@ -367,3 +367,9 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 - Purchase averages are not automatically eligible tax-lot basis; dividend reinvestment can remain taxable. Annual fee timing, constant returns and flat tax inputs are model assumptions.
 - Social Security comparisons start with an entered benefit; they do not retrieve an earnings record or issue an official SSA award. Annuity/pension cash-flow estimates are not insurer quotes or plan eligibility decisions.
 - Treasury bill discount yield, purchase-price yield and deposit APY use different conventions. References do not supply live product rates or guarantee retirement outcomes.
+
+## Remaining finance references and scope
+- Remaining financial calculator pages and associated guides/glossary entries now identify each reference’s purpose and limits. Publisher methodology is distinguished from external methods, rules, product context and historical data.
+- FHA historical premium examples are not current rate tables; VA fee references do not verify entitlement or exemptions. Recast eligibility and biweekly-payment posting depend on actual servicer terms.
+- Book depreciation is separate from tax depreciation. UK/EU VAT examples are jurisdiction-specific. Stored Frankfurter reference rates are dated snapshots, not live executable quotes; deposit insurance depends on account and institution facts.
+- Original calculation-check and source-edition dates remain separate from reference-use annotation dates. These annotations do not certify complete legal compliance, tax liability, underwriting or investment outcomes.

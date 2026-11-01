@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideScenarioReview,{GuideCheckSummary} from '@/components/GuideScenarioReview';
 import SiteLink from '@/components/SiteLink';
@@ -72,5 +73,6 @@ export default function MortgagePointsGuide(){return <div className="page-wrap g
 <p>{"Thirteen scenarios were checked with an independent 50-digit Decimal amortization of both quotes. Checks cover 4,680 monthly comparison rows, including payment cash flows, interest, remaining balances, horizon results and both first-break-even measures. They also include a lender-credit case and a no-rate-reduction boundary case. The example links restore the same quote inputs through the existing calculator; no lender pricing or quote feed is used."}</p>
 <p>{"The model charges monthly interest at the contractual annual rate divided by 12, retains precision and adjusts the final payment to the balance actually owed. Official sources are linked where they support product and disclosure explanations. Source and calculation checks: October 27, 2026. See our "}<SiteLink href="https://www.calculatorfree.io/methodology">{"methodology and review status"}</SiteLink>{"."}</p>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
- </article></main></div>;
+ <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/are-mortgage-points-worth-it/" sources={[{"title": "CFPB: Lender Credits and Discount Points", "url": "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/"}, {"title": "CFPB: historical discount-point trends", "url": "https://www.consumerfinance.gov/data-research/research-reports/data-spotlight-trends-in-discount-points-amid-rising-interest-rates/"}, {"title": "CFPB: compare loan estimates", "url": "https://www.consumerfinance.gov/owning-a-home/compare/compare-loan-estimates/"}, {"title": "IRS Topic 504: home-mortgage points", "url": "https://www.irs.gov/taxtopics/tc504"}]}/></section>
+</article></main></div>;
 }

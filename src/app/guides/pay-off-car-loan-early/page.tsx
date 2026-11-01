@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
@@ -69,5 +70,6 @@ export default function CarPayoffGuide(){return <div className="page-wrap glossa
 <p>{"Eight car-loan scenarios were checked against an independent 50-digit Decimal monthly simulation, including each period’s interest, payment, principal and remaining balance. Checks include monthly extras, a lump sum at payment 1 or 12, a combined strategy and a zero-rate case. Internal precision is retained; money is displayed to cents. This validates the stated model, not a lender’s exact daily payoff quote."}</p>
 <p>{"Official sources are linked alongside the claims they support. Source and calculation checks: October 27, 2026. See our "}<SiteLink href="https://www.calculatorfree.io/methodology">{"calculation methodology and review status"}</SiteLink>{"."}</p>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
- </article></main></div>;
+ <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/pay-off-car-loan-early/" sources={[{"title": "CFPB: simple versus precomputed auto-loan interest", "url": "https://www.consumerfinance.gov/ask-cfpb/whats-the-difference-between-a-simple-interest-rate-and-precomputed-interest-on-an-auto-loan-en-841/"}, {"title": "CFPB: auto-loan prepayment restrictions", "url": "https://www.consumerfinance.gov/ask-cfpb/can-i-prepay-my-loan-at-any-time-without-penalty-en-843/"}, {"title": "CFPB: Interest and Principal on an Auto Loan", "url": "https://www.consumerfinance.gov/ask-cfpb/is-it-better-to-pay-off-the-interest-or-principal-on-my-auto-loan-en-845/"}]}/></section>
+</article></main></div>;
 }

@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
@@ -77,5 +78,6 @@ export default function RentBuyGuide(){return <div className="page-wrap glossary
 <p>{"Use the "}<SiteLink href="https://www.calculatorfree.io/rent-vs-buy-calculator">{"Rent vs. Buy Calculator"}</SiteLink>{" to inspect the schedule and assumptions. The "}<SiteLink href="https://www.calculatorfree.io/mortgage-calculator">{"Mortgage Calculator"}</SiteLink>{" and "}<SiteLink href="https://www.calculatorfree.io/house-affordability-calculator">{"House Affordability Calculator"}</SiteLink>{" answer related payment and budget questions, rather than replacing the exit-date comparison."}</p>
 <p>{"Sources and calculations checked October 28, 2026. See our "}<SiteLink href="https://www.calculatorfree.io/methodology">{"methodology and review status"}</SiteLink>{"."}</p>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
- </article></main></div>;
+ <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/rent-vs-buy-a-house/" sources={[{"title": "Fannie Mae: rent-versus-buy responsibilities and costs", "url": "https://yourhome.fanniemae.com/buy/rent-vs-buy-whats-right-you"}, {"title": "CFPB: complete housing budgets, down payment and upfront cash", "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/"}, {"title": "CFPB: costs and financial considerations of homeownership", "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-some-of-the-financial-considerations-of-buying-a-home-en-119/"}]}/></section>
+</article></main></div>;
 }

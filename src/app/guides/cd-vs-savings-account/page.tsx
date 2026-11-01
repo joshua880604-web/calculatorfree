@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
@@ -80,5 +81,6 @@ export default function CDSavingsGuide(){return <div className="page-wrap glossa
 <h2 id="how-we-checked-the-examples">{"How we checked the examples"}</h2>
 <p>{"We ran eight constant-rate calculator cases, including the successive six-month runs, and checked them against a separate 50-digit Decimal implementation of the effective-yield formula. We also independently checked the full-year rate-change chains, equal-horizon comparisons and penalty arithmetic. Values are rounded to cents for display; calculations carry intermediate precision. Source and calculation check: October 27, 2026."}</p>
  <p><SiteLink href="/methodology">Calculation methodology and review status</SiteLink> · <SiteLink href="/guides/">All financial guides</SiteLink></p>
- </article></main></div>;
+ <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/cd-vs-savings-account/" sources={[{"title": "CFPB: CD definition and restrictions", "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-certificate-of-deposit-cd-en-917/"}, {"title": "CFPB Regulation DD: APY calculation", "url": "https://www.consumerfinance.gov/rules-policy/regulations/1030/a/"}, {"title": "CFPB Regulation DD: account-opening disclosures", "url": "https://www.consumerfinance.gov/rules-policy/regulations/1030/4/"}, {"title": "FDIC: deposit-insurance coverage concepts", "url": "https://www.fdic.gov/resources/deposit-insurance/brochures/deposits-at-a-glance"}, {"title": "NCUA: share-insurance questions", "url": "https://ncua.gov/consumers/share-insurance-coverage/frequently-asked-questions-about-share-insurance"}, {"title": "SEC Investor.gov: CD terms and risks", "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/certificates-deposit-cds"}, {"title": "Chase: CD terms and maturity", "url": "https://www.chase.com/personal/banking/education/basics/define-certificate-of-deposit"}, {"title": "CFPB: CD rollover and renewal", "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-certificate-of-deposit-cd-rollover-or-renewal-en-923/"}]}/></section>
+</article></main></div>;
 }

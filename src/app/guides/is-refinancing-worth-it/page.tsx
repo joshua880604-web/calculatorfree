@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideGlossaryLinks from '@/components/GuideGlossaryLinks';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
@@ -65,4 +66,5 @@ export default function RefinanceGuide(){return <div className="page-wrap glossa
 <p>{"The model does not determine legal fee classifications, lender approval, tax deductions, cash-out benefits, changing insurance premiums or opportunity cost. Use the "}<SiteLink href="/real-estate-calculator">{"Mortgage and Housing directory"}</SiteLink>{" for related tools and the "}<SiteLink href="/methodology">{"methodology"}</SiteLink>{" for review status."}</p>
 <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
 <GuideGlossaryLinks path={refinanceGuide.path}/>
+<section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/is-refinancing-worth-it/" sources={[{"title": "CFPB: Loan Estimate definition", "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/"}, {"title": "CFPB: no-closing-cost refinance trade-offs", "url": "https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/"}]}/></section>
 </article></main></div>;}

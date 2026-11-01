@@ -1,3 +1,4 @@
+import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideScenarioReview,{GuideCheckSummary} from '@/components/GuideScenarioReview';
 import SiteLink from '@/components/SiteLink';
@@ -66,5 +67,6 @@ export default function BiweeklyMortgageGuide(){return <div className="page-wrap
 <p>{"We independently checked the payment equation and every biweekly schedule row at 0%, 3%, 6% and 9% using 50-digit Decimal arithmetic. Standard and matched monthly interest totals were also independently checked. The 6% matched monthly result was reproduced through the Mortgage Payoff tool. These checks establish the stated model, not your servicer’s actual posting behavior."}</p>
 <p>{"Official sources are linked alongside the relevant explanations. Source and calculation checks: October 27, 2026. See our "}<SiteLink href="https://www.calculatorfree.io/methodology">{"calculation methodology and review status"}</SiteLink>{"."}</p>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
- </article></main></div>;
+ <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/biweekly-vs-monthly-mortgage-payments/" sources={[{"title": "CFPB: biweekly mortgage-payment terminology", "url": "https://www.consumerfinance.gov/consumer-tools/mortgages/answers/key-terms/#bi-weekly-payment"}, {"title": "CFPB: mortgage-servicing obligations", "url": "https://www.consumerfinance.gov/consumer-tools/mortgages/your-mortgage-servicer-must-comply-with-federal-rules/"}, {"title": "Wells Fargo: provider-specific automatic-payment options", "url": "https://www.wellsfargo.com/mortgage/manage-account/automatic-mortgage-payments/"}, {"title": "CFPB: mortgage principal and interest amortization", "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-paying-down-a-mortgage-work-en-1943/"}]}/></section>
+</article></main></div>;
 }
