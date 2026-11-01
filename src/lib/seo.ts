@@ -254,3 +254,6 @@ for(const id of ["amortization", "debt-to-income-ratio", "down-payment", "intere
 contentUpdatedOn['/guides/compound-interest-with-monthly-contributions/']='2026-11-01';
 
 for(const slug of ["amortization", "apr", "bond-yield", "cagr", "commission", "debt-to-income-ratio", "depreciation", "estate-vs-inheritance-tax", "exchange-rate", "expense-ratio", "gross-vs-net-pay", "inflation", "lease-residual-value", "loan-to-value-ratio", "marginal-vs-effective-tax-rate", "net-present-value", "quick-ratio", "real-rate-of-return", "return-on-investment", "sales-tax-vs-vat", "simple-interest"])contentUpdatedOn['/glossary/'+slug+'/']='2026-11-01';
+
+// Six scoped glossary definitions and reciprocal concept links added November 1.
+for(const slug of ['health-savings-account','brrrr-method','sequence-of-returns-risk','return-on-ad-spend','landed-cost','cost-basis'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';

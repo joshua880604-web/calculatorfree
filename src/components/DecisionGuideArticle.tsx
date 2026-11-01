@@ -1,4 +1,5 @@
 import ContentReviewNotice from '@/components/ContentReviewNotice';
+import GuideGlossaryLinks from './GuideGlossaryLinks';
 import content from '@/lib/decision-guide-content.json';
 import {decisionGuideEntries,type DecisionGuideTopic} from '@/lib/decision-guides';
 import {editorialSchema} from '@/lib/editorial-guides';
@@ -19,6 +20,7 @@ export default function DecisionGuideArticle({topic}:{topic:DecisionGuideTopic})
  {data.sections.map(section=><section key={section.id} aria-labelledby={section.id}><h2 id={section.id}>{section.title}</h2>{section.paragraphs.map(p=><p key={p}>{p}</p>)}{section.links.length>0&&<ul>{section.links.map(link=><li key={link.href}><SiteLink href={link.href}>{link.label}</SiteLink></li>)}</ul>}</section>)}
  <section aria-labelledby="questions"><h2 id="questions">Common questions</h2>{data.questions.map(q=><section key={q.question}><h3>{q.question}</h3><p>{q.answer}</p></section>)}</section>
  <section aria-labelledby="sources"><h2 id="sources">Sources, arithmetic checks and limitations</h2><ul>{data.limitations.map(p=><li key={p}>{p}</li>)}</ul><p>The 19 scenarios across these three guides and the cap-rate comparison were independently calculated in Python Decimal at 60-digit precision and checked against the website models within 0.000001 in the stated units before display rounding. This checks the stated arithmetic, not real-world suitability or an external professional review. Reproduction scripts and CSV assumptions describe this model version; future changes may alter outputs.</p><ul>{data.sources.map(s=><li key={s.href}><SiteLink href={s.href}>{s.label}</SiteLink></li>)}</ul><p>Sources explain rules and concepts, not our hypothetical outcomes, and do not endorse the calculators. Read our <SiteLink href="/methodology">methodology and limitations</SiteLink>.</p></section>
+ <GuideGlossaryLinks path={guide.path}/>
  <section className="related"><h2>Related tools and concepts</h2><ul>{data.related.map(link=><li key={link.href}><SiteLink href={link.href}>{link.label}</SiteLink></li>)}</ul><p><SiteLink href={data.calculatorPath}>{data.calculatorLabel}</SiteLink> · <SiteLink href="/guides/">All guides</SiteLink></p></section>
  </article></main></div>;
 }

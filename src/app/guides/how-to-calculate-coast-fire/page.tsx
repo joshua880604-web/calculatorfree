@@ -1,4 +1,5 @@
 import ContentReviewNotice from '@/components/ContentReviewNotice';
+import GuideGlossaryLinks from '@/components/GuideGlossaryLinks';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
 import {pageMetadata} from '@/lib/seo';
@@ -106,4 +107,5 @@ export default function CoastFireGuide(){return <div className="page-wrap glossa
  <li><SiteLink href="https://walletburst.com/barista-fire/">WalletBurst: Barista FIRE and combining work income with portfolio withdrawals</SiteLink>.</li>
  </ul>
  <p>Sources support the concepts; they do not validate a personal plan or endorse the illustrative rates. See our <SiteLink href="/methodology">calculation methodology and review status</SiteLink>, <SiteLink href="/retirement-calculators">Retirement Calculators</SiteLink>, and <SiteLink href="/guides/">all financial guides</SiteLink>.</p>
+<GuideGlossaryLinks path={coastFireGuide.path}/>
 </article></main></div>;}

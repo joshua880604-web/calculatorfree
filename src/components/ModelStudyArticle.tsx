@@ -1,4 +1,5 @@
 import ContentReviewNotice from '@/components/ContentReviewNotice';
+import GuideGlossaryLinks from './GuideGlossaryLinks';
 import SiteLink from './SiteLink';
 import StudyChart from './StudyChart';
 import type {ModelStudy} from '@/lib/model-study-articles';
@@ -24,6 +25,7 @@ export default function ModelStudyArticle({study}:{study:ModelStudy}){
  <div className="guide-table" role="region" aria-label={meta.breadcrumb+' full data'} tabIndex={0}><table><caption>{study.tableCaption}</caption><thead><tr>{study.columns.map(c=><th scope="col" key={c}>{c}</th>)}<th scope="col">Reproduce</th></tr></thead><tbody>{study.rows.map(row=><tr key={row.key}>{row.cells.map((cell,i)=>i===0?<th scope="row" key={i}>{cell}</th>:<td key={i}>{cell}</td>)}<td>{row.links.map(link=><SiteLink className="study-case-link" key={link.href} href={link.href}>{link.label}</SiteLink>)}</td></tr>)}</tbody></table></div></section>
  <section aria-labelledby="limitations"><h2 id="limitations">What this analysis does not establish</h2><ul>{study.limits.map(p=><li key={p}>{p}</li>)}</ul><p>These calculations test internal model relationships, not whether the assumptions will occur. They do not establish causation in real markets or validate a personal plan. See our <SiteLink href="/methodology">methodology and model review status</SiteLink>.</p></section>
  <section aria-labelledby="sources"><h2 id="sources">Sources and calculation checks</h2><p>The figures are our own model calculations. An independent Python Decimal implementation checked the stated equations at 60-digit precision; the permitted numerical difference was 0.0000001 before display rounding. This is a numerical cross-check, not an external audit or independent financial review.</p><ul>{study.sources.map(source=><li key={source.url}><SiteLink href={source.url}>{source.title}</SiteLink></li>)}</ul><p>References support concepts and scope; they do not supply the hypothetical scenario outcomes or endorse these tools. No historical return series or user financial records was used.</p></section>
+ <GuideGlossaryLinks path={meta.path}/>
  <section className="related" aria-labelledby="related-tools"><h2 id="related-tools">Explore the calculation</h2><ul>{study.related.map(link=><li key={link.href}><SiteLink href={link.href}>{link.label}</SiteLink></li>)}</ul><p><SiteLink href="/guides/">Browse all financial guides</SiteLink></p></section>
  </article></main></div>;
 }

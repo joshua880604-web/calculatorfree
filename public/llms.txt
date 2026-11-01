@@ -324,3 +324,13 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 ## PMI quote assumptions and cross-site comparisons
 - [PMI Calculator](https://www.calculatorfree.io/pmi-calculator): Illustrative dated rate-card assumptions are distinct from actual annual quotes; compare equal loan inputs and the 80% request, original-schedule 78% and final midpoint benchmarks.
 - [PMI calculation and cancellation guide](https://www.calculatorfree.io/guides/how-to-calculate-pmi-and-cancellation/): Explains why website estimates differ, with hypothetical 0.38% / 0.40% annual rates on the same original principal.
+
+
+## Additional financial definitions
+
+- [Health savings account (HSA)](https://www.calculatorfree.io/glossary/health-savings-account/): Federal tax advantages, eligibility boundaries and a simplified income-tax example.
+- [BRRRR method](https://www.calculatorfree.io/glossary/brrrr-method/): Acquisition, rehabilitation, renting and refinance cash; borrowed proceeds are not profit.
+- [Sequence of returns risk](https://www.calculatorfree.io/glossary/sequence-of-returns-risk/): How return order interacts with withdrawals; constant-return tools do not simulate this risk.
+- [Return on ad spend (ROAS)](https://www.calculatorfree.io/glossary/return-on-ad-spend/): Revenue attribution, advertising spend and the distinction from contribution and profit.
+- [Landed cost](https://www.calculatorfree.io/glossary/landed-cost/): Shipment cost boundaries, allocation and a per-unit example; no live tariff determination.
+- [Cost basis](https://www.calculatorfree.io/glossary/cost-basis/): Purchased shares, acquisition fees, reinvestment lots and the limits of planning averages for tax reporting.

@@ -690,7 +690,8 @@
     "related": [
       "contribution-margin",
       "break-even-point",
-      "margin-and-leverage"
+      "margin-and-leverage",
+      "landed-cost"
     ],
     "sources": [
       {
@@ -1993,7 +1994,8 @@
       "required-minimum-distribution",
       "annuity",
       "real-rate-of-return",
-      "coast-fire"
+      "coast-fire",
+      "sequence-of-returns-risk"
     ],
     "sources": [
       {
@@ -3598,7 +3600,9 @@
     ],
     "related": [
       "break-even-point",
-      "markup-vs-margin"
+      "markup-vs-margin",
+      "return-on-ad-spend",
+      "landed-cost"
     ],
     "sources": [
       {
@@ -4497,7 +4501,8 @@
     ],
     "related": [
       "cap-rate-vs-cash-on-cash-return",
-      "mortgage-escrow"
+      "mortgage-escrow",
+      "brrrr-method"
     ],
     "sources": [
       {
@@ -5125,7 +5130,8 @@
     "related": [
       "compound-interest",
       "return-on-investment",
-      "covered-call"
+      "covered-call",
+      "cost-basis"
     ],
     "sources": [
       {
@@ -5360,6 +5366,403 @@
       {
         "path": "/guides/should-you-reinvest-dividends/",
         "title": "Reinvestment is a different cash-flow decision"
+      }
+    ]
+  },
+  {
+    "slug": "health-savings-account",
+    "name": "Health savings account (HSA)",
+    "title": "What Is an HSA? Health Savings Account Benefits & Example",
+    "description": "A health savings account is a U.S. tax-advantaged account for qualified medical expenses, with contribution eligibility and limits determined by applicable rules.",
+    "category": "Retirement",
+    "aliases": [
+      "HSA",
+      "Health savings account",
+      "HSA triple tax advantage"
+    ],
+    "definition": "A health savings account is a U.S. tax-advantaged account for qualified medical expenses, with contribution eligibility and limits determined by applicable rules.",
+    "explanation": "Under federal rules, qualifying contributions can receive favorable tax treatment, account earnings can grow tax-free, and distributions for qualified medical expenses can be tax-free. These are the three benefits often called the triple tax advantage. Eligibility generally requires qualifying health coverage, commonly an HSA-eligible high-deductible health plan. Keeping an account and being eligible to contribute are different questions. Employer deposits use contribution room too; coverage, other insurance, Medicare enrollment and eligibility months can affect the amount allowed. Unused balances can carry forward. State treatment and payroll-tax effects can differ from the federal income-tax illustration below.",
+    "formula": "Simplified federal income-tax reduction = eligible deductible contribution × assumed marginal federal income-tax rate",
+    "formulaNote": "This is a marginal-rate illustration, not a full return. An employer contribution is not also your personal deduction. Confirm the selected tax year, eligibility and remaining room; the example amount is not an annual contribution limit.",
+    "example": {
+      "title": "A $4,000 eligible personal contribution at an assumed 22% rate",
+      "intro": "Assume a person is eligible for the entire year and a $4,000 personal contribution is fully deductible and within the applicable limit after all other contributions.",
+      "steps": [
+        "Assumed federal marginal rate: 22%, held constant for the full deduction.",
+        "$4,000 × 0.22 = $880 of simplified federal income-tax reduction.",
+        "The contribution net of this income-tax effect is $4,000 − $880 = $3,120; the account still receives $4,000."
+      ],
+      "answer": "The illustrative income-tax reduction is $880, not a guaranteed refund or investment gain.",
+      "assumptions": "No state tax, payroll-tax saving, investment growth, distribution or tax-bracket crossing is modeled. This is not a contribution-limit or eligibility determination.",
+      "calculationNote": "The arithmetic isolates one tax effect. The HSA Calculator separately models selected-year contribution room and assumed growth; consult its stated exclusions."
+    },
+    "pitfall": {
+      "title": "Tax advantages do not make every withdrawal tax-free",
+      "text": "Qualification depends on the expense and applicable rules. Nonqualified distributions can create tax and, in some cases, an additional tax. Keep records, distinguish your deductible contributions from employer deposits, and verify current rules. An investment held inside an HSA can lose value."
+    },
+    "tools": [
+      {
+        "id": "hsa",
+        "text": "Inspect selected-year contribution room, entered marginal-tax assumptions and an optional growth projection."
+      }
+    ],
+    "related": [
+      "traditional-vs-roth-ira",
+      "marginal-vs-effective-tax-rate",
+      "compound-interest"
+    ],
+    "sources": [
+      {
+        "title": "IRS Publication 969 (2025 edition): HSA eligibility, contributions and distributions",
+        "url": "https://www.irs.gov/publications/p969"
+      },
+      {
+        "title": "IRS Form 8889 instructions (2025 edition): eligibility and deduction reporting",
+        "url": "https://www.irs.gov/instructions/i8889"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "U.S. federal concept, not personalized tax advice. The cited publication is the 2025 edition; check current-year instructions and the calculator’s selected year. No annual limit is asserted by this example.",
+    "guides": [
+      {
+        "title": "How Does an HSA Work? Contributions, Tax Savings & Growth",
+        "path": "/guides/how-does-an-hsa-work/"
+      }
+    ]
+  },
+  {
+    "slug": "brrrr-method",
+    "name": "BRRRR method",
+    "title": "What Is the BRRRR Method? Steps, Refinance Cash & Example",
+    "description": "BRRRR means Buy, Rehab, Rent, Refinance, Repeat: a rental-property strategy that seeks to recover some invested cash through refinancing after acquisition and rehabilitation.",
+    "category": "Housing & property",
+    "aliases": [
+      "BRRRR",
+      "Buy rehab rent refinance repeat"
+    ],
+    "definition": "BRRRR means Buy, Rehab, Rent, Refinance, Repeat: a rental-property strategy that seeks to recover some invested cash through refinancing after acquisition and rehabilitation.",
+    "explanation": "The sequence combines a renovation project, a rental business and a financing transaction. A larger appraised value does not itself return cash: a lender must approve a loan, the old balance must be repaid, and refinance costs reduce proceeds. Rent must support operating expenses and debt payments. The repeat step describes an investor’s potential next project, not an automatic outcome. Our BRRRR model evaluates one acquisition and one refinance, rather than a chain of purchases.",
+    "formula": "Net refinance cash = new loan − acquisition loan payoff − refinance costs; cash remaining = cash invested before refinance − net refinance cash",
+    "formulaNote": "Cash invested before refinance includes the cash-funded acquisition, rehabilitation, holding and financing costs included in the selected model. Do not deduct refinance fees twice. A negative net refinance amount requires additional cash; negative cash remaining is not an infinite cash-on-cash return.",
+    "example": {
+      "title": "A refinance returns part of an $80,000 cash investment",
+      "intro": "Assume cash invested before refinance is $80,000, the new loan is $180,000, the acquisition payoff is $120,000 and refinance costs are $5,000.",
+      "steps": [
+        "Net refinance cash = $180,000 − $120,000 − $5,000 = $55,000.",
+        "Cash remaining in the deal = $80,000 − $55,000 = $25,000.",
+        "If annual rental cash flow after the new debt payments and modeled reserve is $3,000, cash-on-cash return is $3,000 / $25,000 = 12%."
+      ],
+      "answer": "The deal retains $25,000 of invested cash after returning $55,000; the $180,000 refinance is debt, not profit.",
+      "assumptions": "Hypothetical rounded USD amounts. Cash invested and cash flow are assumed reconciled totals; no appraisal, lender approval, tax result, appreciation or later property purchase is predicted.",
+      "calculationNote": "This worksheet isolates refinance cash and the return denominator. Enter the complete acquisition, rehabilitation, operating and loan assumptions in the full calculator."
+    },
+    "pitfall": {
+      "title": "Recovering more cash can also increase payment risk",
+      "text": "A larger refinance can release more cash while reducing rental cash flow and increasing leverage. Check liquidity, reserves, vacancies, renovation overruns, appraisal uncertainty and lender seasoning requirements. Returned borrowed cash does not establish a profitable sale or eliminate personal risk."
+    },
+    "tools": [
+      {
+        "id": "brrrr",
+        "text": "Model one purchase, rehabilitation and refinance with separate cash and rental results."
+      },
+      {
+        "id": "cash-on-cash-return",
+        "text": "Inspect annual cash yield and the cash-investment denominator."
+      }
+    ],
+    "related": [
+      "net-operating-income",
+      "cap-rate-vs-cash-on-cash-return",
+      "loan-to-value-ratio"
+    ],
+    "sources": [
+      {
+        "title": "Rocket Mortgage: the BRRRR steps and cash-out refinance concept",
+        "url": "https://www.rocketmortgage.com/learn/brrrr"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "Educational property-investment concept, not a lender qualification, appraisal or recommendation. Commercial explanations describe the strategy and do not endorse this website or its assumptions.",
+    "guides": [
+      {
+        "title": "Does Recovering More BRRRR Cash Improve the Deal?",
+        "path": "/guides/brrrr-refinance-cash-flow-analysis/"
+      }
+    ]
+  },
+  {
+    "slug": "sequence-of-returns-risk",
+    "name": "Sequence of returns risk",
+    "title": "What Is Sequence of Returns Risk? Withdrawal Order Example",
+    "description": "Sequence of returns risk is the risk that the timing of investment gains and losses, together with cash flows, changes a portfolio’s outcome even when the same period returns occur.",
+    "category": "Retirement",
+    "aliases": [
+      "Sequence risk",
+      "Sequence-of-returns risk",
+      "Retirement return order"
+    ],
+    "definition": "Sequence of returns risk is the risk that the timing of investment gains and losses, together with cash flows, changes a portfolio’s outcome even when the same period returns occur.",
+    "explanation": "Without deposits or withdrawals, rearranging the same returns leaves the compounded ending balance unchanged. With fixed-dollar withdrawals, early losses leave less money invested for later recovery. The amount and timing of cash flows matter; a constant-average-return projection cannot reproduce this effect. It is especially relevant when retirement spending starts, but it does not mean every early decline makes a plan fail.",
+    "formula": "With an end-of-year withdrawal: next balance = opening balance × (1 + annual return) − withdrawal",
+    "formulaNote": "Specify whether withdrawals happen before or after the return. The example applies returns first and then withdraws $10,000 each year. An arithmetic average is not a compounded return or a safe withdrawal rate.",
+    "example": {
+      "title": "The same −20% and +25% returns, reversed",
+      "intro": "Begin with $100,000 and withdraw $10,000 at the end of each year. Compare two hypothetical two-year return sequences.",
+      "steps": [
+        "Loss first: $100,000 × 0.80 − $10,000 = $70,000; then $70,000 × 1.25 − $10,000 = $77,500.",
+        "Gain first: $100,000 × 1.25 − $10,000 = $115,000; then $115,000 × 0.80 − $10,000 = $82,000.",
+        "Without withdrawals, either order ends at $100,000 because 0.80 × 1.25 = 1."
+      ],
+      "answer": "The ending balances differ by $4,500 despite identical return observations and $20,000 of withdrawals in each path.",
+      "assumptions": "Nominal USD; end-of-year fixed withdrawals, no tax, fees, deposits or inflation. This two-year constructed example is not historical data, a retirement success probability or a recommended withdrawal amount.",
+      "calculationNote": "The linked planning tools use their stated deterministic assumptions; they do not replay these annual returns or run a Monte Carlo or historical sequence test."
+    },
+    "pitfall": {
+      "title": "A constant-return result does not establish withdrawal safety",
+      "text": "A target based on spending divided by a withdrawal rate is a planning relationship. It does not test the order of future returns, longevity, changing expenses or inflation shocks. Review these risks separately instead of treating a smooth balance projection as proof that retirement funding is secure."
+    },
+    "tools": [
+      {
+        "id": "retirement",
+        "text": "Explore income and savings under the tool’s stated lifespan and constant-return assumptions."
+      },
+      {
+        "id": "coast-fire",
+        "text": "Inspect how assumed growth and spending determine a target; variable return sequences are not simulated."
+      },
+      {
+        "id": "fire",
+        "text": "Estimate a target and time horizon under entered deterministic assumptions."
+      }
+    ],
+    "related": [
+      "withdrawal-rate",
+      "arithmetic-vs-geometric-return",
+      "coast-fire"
+    ],
+    "sources": [
+      {
+        "title": "Charles Schwab: What Is Sequence-of-Returns Risk? (January 30, 2026)",
+        "url": "https://www.schwab.com/learn/story/timing-matters-understanding-sequence-returns-risk"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "General risk concept. Hypothetical arithmetic illustrates cash-flow timing, not market performance or personalized investment advice.",
+    "guides": [
+      {
+        "title": "How Long Will My Retirement Savings Last?",
+        "path": "/guides/how-long-will-retirement-savings-last/"
+      },
+      {
+        "title": "How to Calculate Coast FIRE",
+        "path": "/guides/how-to-calculate-coast-fire/"
+      },
+      {
+        "title": "Coast FIRE inflation sensitivity analysis",
+        "path": "/guides/coast-fire-inflation-sensitivity/"
+      }
+    ]
+  },
+  {
+    "slug": "return-on-ad-spend",
+    "name": "Return on ad spend (ROAS)",
+    "title": "What Is ROAS? Revenue, Ad Spend & Break-Even Example",
+    "description": "Return on ad spend compares revenue attributed to advertising with the advertising spend used to generate it, usually expressed as a multiple or a percentage.",
+    "category": "Business & pricing",
+    "aliases": [
+      "ROAS",
+      "Return on advertising spend",
+      "Revenue per advertising dollar"
+    ],
+    "definition": "Return on ad spend compares revenue attributed to advertising with the advertising spend used to generate it, usually expressed as a multiple or a percentage.",
+    "explanation": "Revenue-based ROAS answers how many dollars of attributed sales correspond to one advertising dollar. It does not subtract product costs, fulfillment, payment fees or overhead. Ad platforms may report conversion value instead of revenue, so confirm what is being measured. Use a consistent attribution window, refund treatment and spending definition before comparing campaigns or websites.",
+    "formula": "Revenue ROAS = attributed revenue / ad spend; ROAS percentage = revenue ROAS × 100%; simplified break-even ROAS = 1 / pre-ad contribution-margin fraction",
+    "formulaNote": "Ad spend must be positive. The break-even relationship assumes a constant pre-ad contribution margin after all modeled non-ad variable costs; it excludes fixed overhead, tax and any future repeat-customer value.",
+    "example": {
+      "title": "A 4× ROAS can still lose money on a contribution basis",
+      "intro": "Assume $2,000 of advertising is credited with $8,000 of revenue. Non-ad variable costs leave a 20% contribution margin before advertising.",
+      "steps": [
+        "Revenue ROAS = $8,000 / $2,000 = 4×, or 400%.",
+        "Contribution before ads = $8,000 × 20% = $1,600. After ads: $1,600 − $2,000 = −$400.",
+        "Break-even revenue ROAS under this margin assumption is 1 / 0.20 = 5×, or 500%."
+      ],
+      "answer": "Reported revenue ROAS is 4×, but modeled contribution after advertising is a $400 loss before fixed overhead and tax.",
+      "assumptions": "USD, one matched reporting period and a fixed 20% pre-ad contribution margin. Revenue attribution is assumed rather than proven; sales do not necessarily represent incremental revenue caused by the ads.",
+      "calculationNote": "Use the ROAS Calculator’s revenue and cost definitions consistently. This example does not evaluate Google Ads bidding performance or establish a universal target."
+    },
+    "pitfall": {
+      "title": "ROAS is neither net profit nor proof of incrementality",
+      "text": "A high multiple can coexist with thin margins or losses. Platforms can attribute the same sale differently, and a customer may have purchased without the advertisement. Reconcile refunds and attribution settings, then assess contribution and total profit separately."
+    },
+    "tools": [
+      {
+        "id": "roas",
+        "text": "Calculate revenue ROAS and inspect the effect of entered margins and costs."
+      },
+      {
+        "id": "margin",
+        "text": "Distinguish a profit margin from a revenue-to-spend multiple."
+      }
+    ],
+    "related": [
+      "contribution-margin",
+      "return-on-investment",
+      "break-even-point"
+    ],
+    "sources": [
+      {
+        "title": "Google Ads Help: conversion value, cost and Target ROAS",
+        "url": "https://support.google.com/google-ads/answer/6268637?hl=en"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "Marketing measurement concept, not an attribution audit or a bidding recommendation. Ratios depend on what revenue, conversion value and spend include.",
+    "guides": [
+      {
+        "title": "Why ROAS Needs a Profit-Margin Check",
+        "path": "/guides/roas-profit-margin-analysis/"
+      }
+    ]
+  },
+  {
+    "slug": "landed-cost",
+    "name": "Landed cost",
+    "title": "What Is Landed Cost? Shipment Costs & Per-Unit Example",
+    "description": "Landed cost is the combined cost of acquiring goods and getting them to a specified destination, including the purchase price and applicable transport, insurance, import and handling charges.",
+    "category": "Business & pricing",
+    "aliases": [
+      "Total landed cost",
+      "Landed cost per unit",
+      "Import landed cost"
+    ],
+    "definition": "Landed cost is the combined cost of acquiring goods and getting them to a specified destination, including the purchase price and applicable transport, insurance, import and handling charges.",
+    "explanation": "State the destination and which party pays each charge. A supplier price may already include freight or duties, depending on the agreed trade terms; adding those amounts again overstates cost. Allocate shipment-level charges across a stated quantity, using a method appropriate to mixed products. A commercial landed-cost estimate is not necessarily the customs value on which duties are assessed.",
+    "formula": "Total landed cost = goods cost + freight + insurance + duties + included fees and taxes; per-unit landed cost = total / allocated units",
+    "formulaNote": "Use one currency and consistent exchange-rate dates. Tariff classification, origin, valuation, additional duties and tax recoverability require separate verification. Distinguish recoverable import taxes from nonrecoverable costs and prevent double counting. No live tariff rate is supplied by this example.",
+    "example": {
+      "title": "A 100-unit shipment costs more than its supplier invoice",
+      "intro": "Assume a USD invoice of $1,000 plus separately payable freight of $200, insurance of $20, assumed duties of $50 and broker/handling charges of $30.",
+      "steps": [
+        "Total included shipment cost = $1,000 + $200 + $20 + $50 + $30 = $1,300.",
+        "With 100 equally allocated saleable units, landed cost per unit = $1,300 / 100 = $13.",
+        "The $10 supplier unit price understates this modeled landed unit cost by $3."
+      ],
+      "answer": "The illustrative landed cost is $1,300 for the shipment, or $13 per unit.",
+      "assumptions": "Identical units, no damaged inventory, additional tax, storage, financing or subsequent delivery costs. All listed charges are separate and payable by the buyer. The $50 duty is an assumed dollar amount, not an implied tariff rule.",
+      "calculationNote": "The Landed Cost Calculator also accepts its own stated shipment and allocation inputs. Check its duty-base and tax treatment before comparing with a customs entry or broker invoice."
+    },
+    "pitfall": {
+      "title": "A tariff percentage alone does not determine landed cost",
+      "text": "The duty base and additional charges can differ by product and jurisdiction. Incoterms allocate responsibilities but do not replace customs classification, a broker quote or local tax rules. Make the delivery boundary and cost allocation explicit when using a per-unit figure to set a selling price."
+    },
+    "tools": [
+      {
+        "id": "landed-cost",
+        "text": "Reconcile entered shipment costs and inspect the resulting per-unit estimate."
+      },
+      {
+        "id": "markup",
+        "text": "Explore selling-price assumptions after establishing the relevant unit cost."
+      }
+    ],
+    "related": [
+      "markup-vs-margin",
+      "contribution-margin",
+      "exchange-rate"
+    ],
+    "sources": [
+      {
+        "title": "International Trade Administration: import tariffs and other landed-shipment charges",
+        "url": "https://www.trade.gov/import-tariffs-fees-overview"
+      },
+      {
+        "title": "International Trade Administration: Incoterms responsibilities for shipment and costs",
+        "url": "https://www.trade.gov/know-your-incoterms"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "General commercial costing concept. Rates and import requirements are not determined here. Hypothetical examples are not customs, legal or tax advice.",
+    "guides": [
+      {
+        "title": "How to Calculate Landed Cost",
+        "path": "/guides/how-to-calculate-landed-cost/"
+      }
+    ]
+  },
+  {
+    "slug": "cost-basis",
+    "name": "Cost basis",
+    "title": "What Is Cost Basis? Stock Purchases, Fees & DRIP Example",
+    "description": "Cost basis is the amount used to measure an asset’s gain or loss for tax purposes; for purchased stock it generally begins with purchase cost and allowable acquisition costs, then changes for applicable adjustments.",
+    "category": "Saving & investing",
+    "aliases": [
+      "Investment cost basis",
+      "Stock cost basis",
+      "Adjusted basis"
+    ],
+    "definition": "Cost basis is the amount used to measure an asset’s gain or loss for tax purposes; for purchased stock it generally begins with purchase cost and allowable acquisition costs, then changes for applicable adjustments.",
+    "explanation": "Broker records may track several tax lots of the same investment. Reinvesting a dividend purchases another lot; it does not make that purchase cost zero. Splits, return of capital, wash-sale adjustments, gifts and inherited property can require different treatment. A portfolio’s average acquisition cost is useful for a planning comparison, but it is not automatically an allowed tax-basis method for every security or sale.",
+    "formula": "Simple purchased-stock starting basis = shares × purchase price + included acquisition costs; realized gain or loss = net sale proceeds − adjusted basis of the shares sold",
+    "formulaNote": "This formula is limited to a simple purchase. Apply the correct lot identification, adjustments, holding period and jurisdiction for an actual sale. Selling costs reduce proceeds in this example; they are not also added to purchase basis.",
+    "example": {
+      "title": "A stock purchase plus a dividend reinvestment creates two lots",
+      "intro": "Buy 100 shares at $20 and pay a $10 acquisition commission. Later, reinvest a $50 cash dividend at $25 per share with no additional purchase charge.",
+      "steps": [
+        "Original lot basis = 100 × $20 + $10 = $2,010.",
+        "The $50 reinvestment buys 2 additional shares and creates $50 of additional basis. Total holdings are 102 shares with $2,060 combined basis.",
+        "Combined average acquisition cost is $2,060 / 102 ≈ $20.1961 per share. If only the original 100-share lot is sold for $2,500 with a $10 selling charge, net proceeds are $2,490 and its gain is $2,490 − $2,010 = $480."
+      ],
+      "answer": "Combined basis is $2,060 across 102 shares; the separately identified original lot has a $480 hypothetical realized gain on the stated sale.",
+      "assumptions": "Taxable purchased-stock example in USD; no wash sale, corporate action, return of capital or other adjustment. The dividend’s income-tax treatment is separate from the basis created by reinvestment. No gain tax is calculated.",
+      "calculationNote": "Stock Average Calculator shows a planning average, not a complete tax-lot ledger. Stock Profit Calculator uses its stated entered costs; DRIP Calculator projects shares but does not track every tax-basis adjustment."
+    },
+    "pitfall": {
+      "title": "Average purchase price does not always equal reportable tax basis",
+      "text": "Do not apply a pooled average to a partial sale without checking the permitted method and broker instructions. Selling a specific lot, FIFO treatment, and eligible average-basis elections can produce different results. Keep original purchase and reinvestment records and reconcile adjustments before filing."
+    },
+    "tools": [
+      {
+        "id": "stock-profit",
+        "text": "Inspect purchase and sale amounts and entered charges; tax-basis adjustments are not automatically determined."
+      },
+      {
+        "id": "stock-average",
+        "text": "Calculate an average acquisition cost across entered buys, without treating it as a universal tax election."
+      },
+      {
+        "id": "drip",
+        "text": "Project dividend reinvestment while recognizing that the projection is not a tax-lot ledger."
+      }
+    ],
+    "related": [
+      "dividend-reinvestment-plan",
+      "return-on-investment",
+      "covered-call"
+    ],
+    "sources": [
+      {
+        "title": "IRS Publication 551 (December 2025 edition): purchased stocks, acquisition costs and basis",
+        "url": "https://www.irs.gov/publications/p551"
+      },
+      {
+        "title": "IRS Publication 550 (2025 edition): investment basis and dividend reinvestment",
+        "url": "https://www.irs.gov/publications/p550"
+      }
+    ],
+    "checkedOn": "2026-11-01",
+    "scope": "U.S. federal tax concept, not a tax-lot determination or personalized tax advice. Cited publications are identified by edition; use current applicable instructions and account records.",
+    "guides": [
+      {
+        "title": "How to Calculate Stock Profit",
+        "path": "/guides/how-to-calculate-stock-profit/"
+      },
+      {
+        "title": "How to Calculate Average Stock Price",
+        "path": "/guides/how-to-calculate-average-stock-price/"
+      },
+      {
+        "title": "Should You Reinvest Dividends?",
+        "path": "/guides/should-you-reinvest-dividends/"
       }
     ]
   }
