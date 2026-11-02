@@ -36,6 +36,7 @@ export function pageMetadata(
   config = siteConfig(),
 ): Metadata {
   const url = absoluteURL(path, config);
+  const image = absoluteURL('/social/og-default-v1.png', config);
   return {
     title: title.length + (` | ${siteName}`).length > 70 || title.toLowerCase().includes(siteName) ? { absolute: title } : title,
     description,
@@ -48,8 +49,9 @@ export function pageMetadata(
       title,
       description,
       ...(url ? { url } : {}),
+      ...(image ? {images:[{url:image,width:1200,height:630,type:'image/png',alt:'CalculatorFree.io — free financial calculators for mortgages, investing and retirement.'}]} : {}),
     },
-    twitter: { card: "summary", title, description },
+    twitter: { card: "summary_large_image", title, description, ...(image ? {images:[image]} : {}) },
   };
 }
 export function calculatorMetadata(calc: Calculator, config = siteConfig()) {
@@ -273,3 +275,7 @@ for(const id of ['biweekly-mortgage','mortgage-recast','emergency-fund','take-ho
 // Date only the eight pages receiving new mode walkthroughs and example checks.
 for(const id of ['loan','finance','bond','average-return','margin','mortgage-payoff','depreciation','lease'])
  contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-02';
+
+// Substantive homepage/contact/privacy changes and the corrected contextual links.
+for(const path of [directoryPath,'/about.html','/privacy.html','/methodology.html','/covered-call-calculator.html'])
+ contentUpdatedOn[path]='2026-11-02';

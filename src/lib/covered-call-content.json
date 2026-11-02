@@ -28,8 +28,8 @@
         "steps": [
           "Stock purchase $5,000 minus gross premium $200 gives a $4,800 net initial debit.",
           "At $60, stock value is $6,000 and the short-call intrinsic liability is $500; combined expiry value is $5,500.",
-          "Covered call profit = $5,500 \u2212 $4,800 = $700. Shares alone earn $1,000, so covered call profit is $300 lower at this price.",
-          "Break-even = $4,800 \u00f7 100 = $48. If the stock goes to zero, the covered call loses $4,800; receiving $200 was not a guarantee against loss."
+          "Covered call profit = $5,500 − $4,800 = $700. Shares alone earn $1,000, so covered call profit is $300 lower at this price.",
+          "Break-even = $4,800 ÷ 100 = $48. If the stock goes to zero, the covered call loses $4,800; receiving $200 was not a guarantee against loss."
         ],
         "expected": {
           "label": "Covered call profit / loss at your expiry price",
@@ -53,10 +53,10 @@
         },
         "inputs": "Buy 200 shares at $50 and sell two $55 calls for $2/share. Total stock entry fee $5, option opening fee $0.65 per contract, fixed expiry exit costs $3. Stock ends at $45.",
         "steps": [
-          "Gross premium = $2 \u00d7 200 = $400; option opening fees = $0.65 \u00d7 2 = $1.30.",
-          "Net debit = $10,000 + $5 + $1.30 \u2212 $400 = $9,606.30.",
-          "Expiry combined value = $45 \u00d7 200 = $9,000. P/L = $9,000 \u2212 $9,606.30 \u2212 $3 = \u2212$609.30.",
-          "Shares-only loss is $9,000 \u2212 $10,000 \u2212 $5 \u2212 $3 = \u2212$1,008. The call improves the comparison by $398.70 while the overall trade still loses money."
+          "Gross premium = $2 × 200 = $400; option opening fees = $0.65 × 2 = $1.30.",
+          "Net debit = $10,000 + $5 + $1.30 − $400 = $9,606.30.",
+          "Expiry combined value = $45 × 200 = $9,000. P/L = $9,000 − $9,606.30 − $3 = −$609.30.",
+          "Shares-only loss is $9,000 − $10,000 − $5 − $3 = −$1,008. The call improves the comparison by $398.70 while the overall trade still loses money."
         ],
         "expected": {
           "label": "Covered call profit / loss at your expiry price",
@@ -73,17 +73,17 @@
           "covered call profit calculator"
         ],
         "question": "How do you calculate covered call profit at expiry?",
-        "answer": "For this buy-write, subtract the net initial debit and entered expiry exit costs from 100 \u00d7 contracts \u00d7 the lower of the expiry stock price and strike. The stock value and short-call intrinsic liability are reconciled separately below. Below strike, stock value is marked to market; profit is not automatically realized cash.",
+        "answer": "For this buy-write, subtract the net initial debit and entered expiry exit costs from 100 × contracts × the lower of the expiry stock price and strike. The stock value and short-call intrinsic liability are reconciled separately below. Below strike, stock value is marked to market; profit is not automatically realized cash.",
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -98,13 +98,13 @@
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -118,13 +118,13 @@
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -140,13 +140,13 @@
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -160,13 +160,13 @@
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -180,13 +180,13 @@
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -196,17 +196,17 @@
           "covered call maximum profit calculator"
         ],
         "question": "Why is the maximum covered call profit capped?",
-        "answer": "At or above strike, the stock gain is offset by the short call\u2019s intrinsic liability. Maximum expiry profit is strike times covered shares minus net initial debit and expiry exit costs. It can be negative if your entered costs exceed the capped value. The shares-only line continues to participate in stock price increases.",
+        "answer": "At or above strike, the stock gain is offset by the short call’s intrinsic liability. Maximum expiry profit is strike times covered shares minus net initial debit and expiry exit costs. It can be negative if your entered costs exceed the capped value. The shares-only line continues to participate in stock price increases.",
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -220,13 +220,13 @@
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -237,17 +237,17 @@
           "covered call option calculator"
         ],
         "question": "How many shares does each covered call require here?",
-        "answer": "This model purchases exactly 100 shares per standard contract and covers them with one short call. It accepts whole contracts only and automatically scales stock, premium and option opening fees. Adjusted contracts, uncovered stock or calls, synthetic positions and poor man\u2019s covered calls require a different model.",
+        "answer": "This model purchases exactly 100 shares per standard contract and covers them with one short call. It accepts whole contracts only and automatically scales stock, premium and option opening fees. Adjusted contracts, uncovered stock or calls, synthetic positions and poor man’s covered calls require a different model.",
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -261,13 +261,13 @@
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       },
@@ -282,13 +282,13 @@
         "links": [
           {
             "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
+            "mode": "length",
+            "label": "Compare a clearly defined investment return basis."
           },
           {
             "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "mode": "end",
+            "label": "Explore a separate long-term investment projection."
           }
         ]
       }

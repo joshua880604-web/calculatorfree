@@ -22,6 +22,7 @@ test('Contextual guide links open real calculation modes with valid declared pre
       anchors.add(item.anchor);
       assert.ok(item.links.length > 0 && item.queries.length > 0, id);
       for (const link of item.links) {
+        assert.ok(typeof link.label==='string'&&link.label.trim().length>0,id+' contextual link has visible text');
         const calc = calculators.find(calc => calc.id === link.id);
         const mode = calc?.modes.find(mode => mode.id === link.mode);
         assert.ok(mode, id + ' -> ' + link.id + '/' + link.mode);

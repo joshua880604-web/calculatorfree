@@ -6,7 +6,7 @@ Financial calculators are the site's primary focus. The links below are a curate
 
 Interactive calculations run in the browser and require JavaScript. Default inputs and results are illustrations; estimates depend on the entered values, selected mode, timing, and rounding conventions. Future return and inflation presets are editable assumptions. General financial mathematics is not a jurisdiction-specific tax model; tax and retirement rules apply only to the jurisdictions and years stated on each page. Currency conversion uses a dated bundled reference snapshot or a manually entered rate. Consult the methodology and each tool's scope before interpreting a result.
 
-Reviewed: October 30, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
+Navigation links checked: November 2, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
 
 ## Start here
 
