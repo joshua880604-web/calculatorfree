@@ -142,6 +142,8 @@ export default async function Page({
               need an account. Favorites and appearance preferences
               can be saved in this browser when you choose to use those features.
             </p>
+            <h2>Contacting us</h2>
+            <p>If you email us using the <SiteLink href="/about#contact">contact and corrections channel</SiteLink>, your email address and message are sent through your email provider and received in our Gmail inbox. Please use non-sensitive sample inputs when reporting a calculation issue, rather than sending personal financial records.</p>
             <h2>Google advertising</h2>
             <p>
               We use Google AdSense to serve advertisements. Google and its

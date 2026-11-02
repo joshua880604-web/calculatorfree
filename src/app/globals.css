@@ -593,6 +593,7 @@ tr:nth-child(even) {
   font-size: 14px;
   margin: 0 18px 8px 0;
 }
+.publisher-contact {overflow-wrap:anywhere;}
 footer {
   max-width: var(--shell-width, 1020px);
   margin: 30px auto 0;

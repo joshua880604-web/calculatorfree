@@ -35,7 +35,11 @@ for(const name of await readdir(guides)){
 }
 await rename('out/guides.html',join(guides,'index.html'));
 console.log('Prepared guides directory documents.');
-// Normal HTML pages retain ads; only the two explicitly approved embed documents are ad-free.
+// Error screens have no advertising inventory. Strip the inherited root loader
+// from both static HTML and hydration data before the coverage gate runs.
+const {prepareAdFreeErrors}=await import('./prepare-ad-free-errors.mjs');
+await prepareAdFreeErrors();
+// Content pages retain ads; approved embeds and explicit error pages are ad-free.
 const {checkAdSenseBuild}=await import('./check-adsense-build.mjs');
 console.log('AdSense coverage:',await checkAdSenseBuild());
 await import('./check-public-brand.mjs');

@@ -3,6 +3,7 @@ import {readdir,readFile} from 'node:fs/promises';
 import {join,relative,resolve} from 'node:path';
 import embedTools from '../src/lib/embed-tools.json' with {type:'json'};
 import {pathToFileURL} from 'node:url';
+import {adFreeErrorPages} from './prepare-ad-free-errors.mjs';
 
 export const adsensePublisher='ca-pub-5145325695425659';
 
@@ -37,10 +38,10 @@ export async function checkAdSenseBuild(root='out'){
   }
  }
  await collect(root);assert.ok(files.length,'AdSense check found no exported HTML pages');
- const violations=[],adFreeEmbedPages=[];
+ const violations=[],adFreeEmbedPages=[],adFreeErrors=[];
  const allowedEmbeds=new Set(embedTools.map(tool=>'embed/'+tool.slug+'/index.html'));
- for(const file of files){const name=relative(root,file).replaceAll('\\','/');try{const html=await readFile(file,'utf8');if(allowedEmbeds.has(name)){assert.ok(!/adsbygoogle|googlesyndication|google-analytics|googletagmanager/i.test(html),name+': embed must be ad-free');assert.match(html,/<meta name="robots" content="noindex,follow">/,name+': embed must be noindex');adFreeEmbedPages.push(name);}else validateAdSense(html,name);}catch(error){violations.push(error.message);}}
+ for(const file of files){const name=relative(root,file).replaceAll('\\','/');try{const html=await readFile(file,'utf8');if(adFreeErrorPages.includes(name)){assert.ok(!/adsbygoogle|googlesyndication/i.test(html),name+': error page must be ad-free');assert.match(html,/<meta\s+name="robots"\s+content="noindex(?:,[^"]*)?"\s*\/?\s*>/i,name+': error page must be noindex');adFreeErrors.push(name);}else if(allowedEmbeds.has(name)){assert.ok(!/adsbygoogle|googlesyndication|google-analytics|googletagmanager/i.test(html),name+': embed must be ad-free');assert.match(html,/<meta name="robots" content="noindex,follow">/,name+': embed must be noindex');adFreeEmbedPages.push(name);}else validateAdSense(html,name);}catch(error){violations.push(error.message);}}
  assert.equal(violations.length,0,'AdSense coverage failed:\n'+violations.join('\n'));
- return {passed:true,htmlPages:files.length,publisher:adsensePublisher,...(adFreeEmbedPages.length?{adFreeEmbedPages}: {})};
+ return {passed:true,htmlPages:files.length,publisher:adsensePublisher,...(adFreeEmbedPages.length?{adFreeEmbedPages}: {}),...(adFreeErrors.length?{adFreeErrorPages:adFreeErrors}: {})};
 }
 if(process.argv[1]&&pathToFileURL(resolve(process.argv[1])).href===import.meta.url)console.log(await checkAdSenseBuild(process.argv[2]??'out'));

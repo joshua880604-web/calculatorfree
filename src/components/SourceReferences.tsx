@@ -22,6 +22,6 @@ export default function SourceReferences({context,sources,compact=false}:{contex
  return <div className="source-reference-block" data-source-context={context}>
   <p className="source-model-note">{page.note}</p>
   {compact?<><ul className="source-preview">{entries.filter(source=>notes.entries[source.url]?.role!=='site').slice(0,2).map(source=>{const base=notes.entries[source.url],note={...base,...page.overrides?.[source.url]};return <li key={source.url}><SiteLink href={source.url}>{note.title??source.title}</SiteLink><p>{note.usedFor}</p></li>;})}</ul><GuideDisclosure title={'Full source notes and limitations ('+entries.length+')'}>{fullList}</GuideDisclosure></>:fullList}
-  <p className="source-note-date">Source-use notes updated <time dateTime={notes.updatedOn}>{new Date(notes.updatedOn+'T00:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'})}</time>. Calculation checks, publication dates and source/data editions are recorded separately.</p>
+  <p className="source-note-date">Source-use notes updated <time dateTime={notes.updatedOn}>{new Date(notes.updatedOn+'T00:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'})}</time>. <SiteLink href="/methodology#editorial-policy">About checking and source dates</SiteLink>.</p>
  </div>;
 }

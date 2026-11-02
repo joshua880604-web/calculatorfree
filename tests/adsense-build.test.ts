@@ -4,6 +4,7 @@ import {mkdtemp,mkdir,writeFile,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {validateAdSense,checkAdSenseBuild,adsensePublisher} from '../scripts/check-adsense-build.mjs';
+import {stripErrorDocumentAds,stripErrorFlightAds} from '../scripts/prepare-ad-free-errors.mjs';
 
 const loader=`<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisher}" crossorigin="anonymous"></script>`;
 const document=(head:string,body='')=>`<!doctype html><html><head>${head}</head><body>${body}</body></html>`;
@@ -39,7 +40,7 @@ test('New nested HTML pages are included automatically in the build gate',async(
  }finally{await rm(root,{recursive:true,force:true});}
 });
 
-test('Only the two approved embed paths may omit ads; ordinary and unexpected embed pages still need them',async()=>{
+test('Only approved embed paths may omit ads; ordinary and unexpected embed pages still need them',async()=>{
  const root=await mkdtemp(join(tmpdir(),'calculatorfree-embeds-'));
  try{
   await writeFile(join(root,'index.html'),document(loader));
@@ -53,5 +54,31 @@ test('Only the two approved embed paths may omit ads; ordinary and unexpected em
   await writeFile(join(dir,'index.html'),document('<meta name="robots" content="noindex,follow">'));
   const extra=join(root,'embed','unapproved');await mkdir(extra,{recursive:true});await writeFile(join(extra,'index.html'),document(''));
   await assert.rejects(checkAdSenseBuild(root),/exactly one AdSense/);
+ }finally{await rm(root,{recursive:true,force:true});}
+});
+
+test('Error exports remove advertising before load and hydration while preserving page content',()=>{
+ const payload='0:["$","h1",null,{"children":"Not found"}]\n4:'+JSON.stringify(['$','script',null,{async:true,src:`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisher}`,crossOrigin:'anonymous'}])+'\n';
+ const flight='<script>self.__next_f.push('+JSON.stringify([1,payload])+')</script>';
+ const html=document(loader+'<meta name="robots" content="noindex">','<h1>Not found</h1>'+flight+'<script src="/_next/static/chunks/runtime.js"></script>');
+ const cleaned=stripErrorDocumentAds(html);
+ assert.doesNotMatch(cleaned,/adsbygoogle|googlesyndication/);
+ assert.match(cleaned,/<h1>Not found<\/h1>/);
+ assert.match(cleaned,/runtime.js/);
+ assert.match(cleaned,/content="noindex"/);
+ assert.doesNotMatch(stripErrorFlightAds(payload),/adsbygoogle/);
+ assert.throws(()=>stripErrorDocumentAds(html+'<!-- unexpected adsbygoogle reference -->'),/still contains an ad reference/);
+});
+
+test('Explicit error documents must be ad-free and noindex; content pages still require ads',async()=>{
+ const root=await mkdtemp(join(tmpdir(),'calculatorfree-error-ads-'));
+ try{
+  await writeFile(join(root,'index.html'),document(loader));
+  for(const name of ['404.html','_not-found.html'])await writeFile(join(root,name),document('<meta name="robots" content="noindex"/>'));
+  assert.deepEqual((await checkAdSenseBuild(root)).adFreeErrorPages,['404.html','_not-found.html']);
+  await writeFile(join(root,'404.html'),document(loader+'<meta name="robots" content="noindex"/>'));
+  await assert.rejects(checkAdSenseBuild(root),/error page must be ad-free/);
+  await writeFile(join(root,'404.html'),document(''));
+  await assert.rejects(checkAdSenseBuild(root),/error page must be noindex/);
  }finally{await rm(root,{recursive:true,force:true});}
 });
