@@ -1,5 +1,5 @@
 {
-  "updatedOn": "2026-11-01",
+  "updatedOn": "2026-11-02",
   "entries": {
     "https://www.irs.gov/irb/2025-45_IRB": {
       "role": "rule",
@@ -1327,6 +1327,26 @@
       "role": "rule",
       "usedFor": "Filing-status eligibility context and its effects on federal tax, deductions and credits.",
       "scope": "Does not endorse a tax-planning strategy or make the marriage comparison an optimization of married filing separately."
+    },
+    "https://www.irs.gov/retirement-plans/traditional-iras": {
+      "role": "rule",
+      "usedFor": "Traditional IRA contribution deductibility context and tax-deferred accumulation described in the FAQ.",
+      "scope": "Does not establish a visitor’s deduction eligibility or a future investment return."
+    },
+    "https://www.irs.gov/retirement-plans/ira-deduction-limits": {
+      "role": "rule",
+      "usedFor": "Distinguishing contribution eligibility from deductibility affected by income, filing status and workplace-plan coverage.",
+      "scope": "The growth comparison does not calculate the visitor’s allowable IRA deduction."
+    },
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits": {
+      "role": "rule",
+      "usedFor": "The combined annual contribution limit across traditional and Roth IRAs and compensation eligibility context.",
+      "scope": "The calculator freezes 2026 caps and does not aggregate other accounts or determine eligibility."
+    },
+    "https://www.irs.gov/retirement-plans/retirement-plans-faqs-regarding-iras-distributions-withdrawals": {
+      "role": "rule",
+      "usedFor": "Separating ordinary IRA distribution taxation from basis, early-distribution taxes and exceptions.",
+      "scope": "Applying a flat retirement rate to the projected balance does not compute an actual withdrawal tax bill."
     }
   },
   "pages": {

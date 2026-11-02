@@ -1,0 +1,171 @@
+{
+  "salary": {
+    "checkedOn": "2026-11-02",
+    "items": [
+      {
+        "question": "How do I calculate annual salary from an hourly rate?",
+        "answer": "Multiply gross hourly pay by hours per week and paid weeks per year. At $30 per hour, 40 hours and 52 paid weeks, annual gross pay is $62,400. For this simple comparison, set Holidays and Vacation days to zero. The calculator uses 52 weeks; variable schedules, unpaid weeks, overtime premiums and bonuses need separate treatment. Its time-off adjustment treats the entered days as unpaid, not automatically as lost earnings from paid leave.",
+        "queries": [
+          "how to calculate annual salary from hourly",
+          "how to calculate salary from hourly rate"
+        ],
+        "replacesQuestion": "How much is 30 an hour annually at 40 hours a week?"
+      },
+      {
+        "question": "Should I subtract paid vacation days?",
+        "answer": "Use zero for paid holiday or vacation days when pay continues unchanged. The adjustment is for unpaid time off: the model subtracts those days from 52 × workdays per week. For hourly or daily input it reduces annual pay; for annual and other non-hourly inputs, the amount entered is treated as already adjusted and the model works back to an unadjusted equivalent. It does not decide your employer’s paid-leave policy.",
+        "queries": [
+          "how to convert hourly pay to salary with paid vacation"
+        ],
+        "replacesQuestion": "Should I subtract paid vacation days?"
+      },
+      {
+        "question": "How do I convert an annual salary to an hourly rate?",
+        "answer": "Divide annual gross salary by the assumed annual hours. With no unpaid leave, $62,400 ÷ (40 × 52) = $30 per hour. Select Annually, enter the salary and work schedule, and set holiday and vacation days to zero for that simple conversion. If you enter unpaid days, this model treats annual salary as already adjusted and reports the unadjusted equivalent hourly rate. Paid leave should not automatically be subtracted.",
+        "queries": [
+          "how to calculate hourly rate from salary",
+          "how to convert annual salary into hourly rate"
+        ],
+        "replacesQuestion": "How do I convert an annual salary to an hourly rate?"
+      },
+      {
+        "question": "Does hourly-to-salary conversion calculate my paycheck after taxes?",
+        "answer": "No. These are gross-pay conversions before income tax, payroll taxes, benefits and other deductions. To estimate take-home pay, convert your hours to annual wages and use Paycheck Calculator with its explicit tax and deduction assumptions. Neither tool determines overtime eligibility or reproduces your employer’s exact withholding.",
+        "queries": [
+          "hourly to salary calculator after taxes",
+          "salary to hourly calculator after taxes"
+        ],
+        "replacesQuestion": "Does hourly-to-salary conversion calculate my paycheck after taxes?"
+      },
+      {
+        "question": "How many work hours are in a year?",
+        "answer": "A common planning assumption is 40 hours per week × 52 weeks = 2,080 hours. At 37.5 hours per week it is 1,950. At 40 hours over 50 paid weeks it is 2,000. These are schedule assumptions, not the exact working hours in every calendar year. In this calculator, use your weekly hours and count only unpaid days in the time-off adjustment.",
+        "queries": [
+          "how many work hours are in a year",
+          "how many working hours are in a year"
+        ],
+        "anchor": "faq-salary-annual-hours"
+      },
+      {
+        "question": "How do I convert biweekly salary to hourly pay?",
+        "answer": "For the calculator’s 52-week convention, multiply gross biweekly pay by 26 and divide by weekly hours × 52. At $2,400 biweekly and 40 hours per week, that is $30 per hour with no unpaid days. Biweekly and semimonthly differ: the same $62,400 annual salary gives $2,400 across 26 periods or $2,600 across 24. Actual payroll calendars can differ; this tool uses fixed frequency factors.",
+        "queries": [
+          "how to calculate biweekly salary to hourly",
+          "how to calculate hourly rate from biweekly salary"
+        ],
+        "anchor": "faq-salary-biweekly-hourly"
+      },
+      {
+        "question": "How do I convert part-time salary to an hourly rate?",
+        "answer": "Use the actual part-time weekly hours rather than assuming 40. With 20 hours per week, 52 paid weeks and no unpaid days, $31,200 annual gross salary ÷ 1,040 hours = $30 per hour. Enter the corresponding workdays too when applying unpaid time off; the model assumes the weekly hours are evenly spread across those days. It does not infer overtime or fluctuating schedules.",
+        "queries": [
+          "how to calculate part time salary to hourly wage"
+        ],
+        "anchor": "faq-salary-part-time"
+      },
+      {
+        "question": "What is the difference between hourly and salaried pay in this calculator?",
+        "answer": "Hourly input specifies pay per hour; annual or other salaried input specifies gross pay for the selected period. The tool compares them using the same hours, weeks and time-off assumptions. A mathematically equivalent annual amount does not make two jobs equivalent: benefits, paid leave, overtime arrangements and actual hours can differ. The calculator does not classify a worker or determine legal overtime entitlement.",
+        "queries": [
+          "hourly vs salary pay",
+          "salary vs hourly pay difference"
+        ],
+        "anchor": "faq-salary-hourly-versus-salary"
+      }
+    ],
+    "removeQuestions": [
+      "Is annual salary here take-home pay?",
+      "Does vacation always reduce actual salary?"
+    ],
+    "sources": []
+  },
+  "ira": {
+    "checkedOn": "2026-11-02",
+    "items": [
+      {
+        "question": "How are traditional IRA withdrawals taxed in this calculator?",
+        "answer": "The tool applies your entered Retirement tax rate to the entire projected traditional balance. For example, a $2,000 pre-tax balance at an assumed 20% rate becomes $1,600 after tax. This is a simplified comparison, not a withdrawal-tax calculation: nondeductible basis, progressive brackets, withdrawal timing, state taxes and early-distribution rules can change actual tax. The model does not add an early-withdrawal penalty or determine an exception.",
+        "queries": [
+          "how are traditional ira withdrawals taxed",
+          "traditional ira withdrawal tax calculator"
+        ],
+        "replacesQuestion": "Why is the traditional IRA after-tax balance smaller?"
+      },
+      {
+        "question": "Is a traditional IRA better than a Roth IRA?",
+        "answer": "There is no universal winner. Compare spendable after-tax amounts under the same pre-tax saving resources, not a traditional pre-tax balance with a Roth after-tax balance. This model reduces the starting amount and contributions by the Current marginal tax rate for the equivalent Roth path, and applies the Retirement tax rate to the traditional result. It assumes eligible contributions and qualified Roth distributions; deduction limits, future tax law and personal withdrawal needs can change the comparison.",
+        "queries": [
+          "which is better roth iras vs. traditional iras",
+          "roth vs traditional ira calculator"
+        ],
+        "replacesQuestion": "Does a larger IRA balance mean greater spendable retirement money?"
+      },
+      {
+        "question": "What is a traditional IRA and how does it work?",
+        "answer": "A traditional IRA is a retirement account with tax advantages, not an investment with a guaranteed return. Contributions may be deductible subject to applicable rules, and investment earnings generally accumulate without annual income tax until distribution. This calculator projects a balance from your starting amount, annual contributions, years and assumed return, then shows a simplified after-tax value. It does not establish contribution or deduction eligibility.",
+        "queries": [
+          "what is a traditional ira",
+          "how does a traditional ira work"
+        ],
+        "anchor": "faq-ira-how-it-works"
+      },
+      {
+        "question": "How does the calculator project traditional IRA growth?",
+        "answer": "Each modeled year grows the opening balance by the assumed annual return, then adds the annual contribution at year-end. At $1,000 initially, $1,000 contributed at each year-end and a constant 6% return, two years produce $3,183.60 before withdrawal tax. An assumed 20% retirement tax gives $2,546.88. The return is an editable assumption, not a market forecast; monthly deposits and volatility are not modeled. Use whole-year ages for a whole-year illustration.",
+        "queries": [
+          "how does a traditional ira grow",
+          "traditional ira growth calculator"
+        ],
+        "anchor": "faq-ira-growth"
+      },
+      {
+        "question": "How much can I contribute to a traditional IRA in this calculator?",
+        "answer": "The model holds 2026 IRA caps fixed throughout the projection: $7,500 annually, plus $1,100 when the modeled starting age of that projection year is at least 50. Use annual maximum chooses that cap; otherwise the entered contribution is limited to it. Actual eligibility, taxable compensation, calendar-year age rules and contributions to other IRAs still need checking. This is not a forecast of future limits or an excess-contribution detector.",
+        "queries": [
+          "how much can i contribute to a traditional ira"
+        ],
+        "anchor": "faq-ira-contribution-cap"
+      },
+      {
+        "question": "Are traditional IRA contributions tax deductible?",
+        "answer": "They may be fully, partly or not deductible depending on the applicable rules, including income, filing status and workplace-plan coverage for you or your spouse. This calculator does not test those conditions. Its equivalent pre-tax saving comparison assumes the entered current tax treatment is appropriate; a nondeductible IRA contribution or existing basis requires a different tax analysis. Do not treat a projected balance as confirmation of a deduction.",
+        "queries": [
+          "are traditional ira contributions tax deductible"
+        ],
+        "anchor": "faq-ira-deductibility"
+      },
+      {
+        "question": "Can I contribute to both a Roth IRA and a traditional IRA?",
+        "answer": "You can contribute to both if you meet the applicable eligibility rules, but the annual IRA contribution limit applies to their combined contributions rather than separately to each account. This tool compares alternatives; it does not track a split across existing accounts or determine Roth income eligibility. Check the total of all contributions and the selected tax year before funding either account.",
+        "queries": [
+          "can you have a roth ira and a traditional ira",
+          "can i have a roth and traditional ira"
+        ],
+        "anchor": "faq-ira-combined-contributions"
+      }
+    ],
+    "removeQuestions": [],
+    "sources": [
+      {
+        "title": "IRS: traditional IRA tax treatment",
+        "url": "https://www.irs.gov/retirement-plans/traditional-iras"
+      },
+      {
+        "title": "IRS: IRA deduction eligibility and limits",
+        "url": "https://www.irs.gov/retirement-plans/ira-deduction-limits"
+      },
+      {
+        "title": "IRS: published 2026 IRA contribution and catch-up limits",
+        "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500"
+      },
+      {
+        "title": "IRS: combined traditional and Roth IRA contribution limits",
+        "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits"
+      },
+      {
+        "title": "IRS: IRA distributions and early-withdrawal limitations",
+        "url": "https://www.irs.gov/retirement-plans/retirement-plans-faqs-regarding-iras-distributions-withdrawals"
+      }
+    ]
+  }
+}

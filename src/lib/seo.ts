@@ -263,3 +263,5 @@ for(const slug of ['house-hacking','loan-seasoning','cash-out-refinance','withdr
 
 // Property operating assumptions and dividend-income definition, checked November 1.
 for(const slug of ['after-repair-value','vacancy-rate','capital-expenditure','debt-service-coverage-ratio','dividend-yield'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
+
+for(const id of ['salary','ira'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-02';
