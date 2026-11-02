@@ -1352,6 +1352,21 @@
       "role": "background",
       "usedFor": "Refinancing as replacement debt, rate/term tradeoffs and cash-out background in the questions.",
       "scope": "Fannie Mae’s calculator defaults, housing-cost coverage and eligibility are not reproduced or adopted by this P&I-only model."
+    },
+    "https://openstax.org/books/principles-managerial-accounting/pages/11-3-explain-the-time-value-of-money-and-calculate-present-and-future-values-of-lump-sums-and-annuities": {
+      "role": "method",
+      "usedFor": "Discounting a lump sum and an ordinary end-of-period payment stream. The lease walkthrough combines their present values; the finance walkthroughs solve the corresponding cash-flow equation.",
+      "scope": "Supports the mathematical components, not a complete lease contract, dealer money-factor convention, tax treatment or fee-inclusive regulatory APR."
+    },
+    "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-29": {
+      "role": "background",
+      "usedFor": "The difference between a leveraged position’s initial collateral and its possible losses; borrowing or leverage can magnify losses relative to equity.",
+      "scope": "Risk background for the stock/FX illustrations, not a live provider quote, permitted-leverage check, maintenance-margin calculation or loss guarantee."
+    },
+    "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CustomerAdvisory_MustKnowForex.html": {
+      "role": "background",
+      "usedFor": "The difference between a leveraged position’s initial collateral and its possible losses; borrowing or leverage can magnify losses relative to equity.",
+      "scope": "Risk background for the stock/FX illustrations, not a live provider quote, permitted-leverage check, maintenance-margin calculation or loss guarantee."
     }
   },
   "pages": {
@@ -1641,7 +1656,8 @@
       ]
     },
     "calculator:margin": {
-      "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts."
+      "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts.",
+      "updatedOn": "2026-11-02"
     },
     "calculator:markup": {
       "note": "References explain the relevant cost definitions and arithmetic. Entered prices, margins and shipment charges remain assumptions, not sourced quotes, complete financial statements or forecasts."
@@ -2161,7 +2177,8 @@
           "title": "OpenStax: time-value-of-money concepts",
           "url": "https://openstax.org/books/principles-finance/pages/7-1-now-versus-later-concepts"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-02"
     },
     "calculator:boat-loan": {
       "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
@@ -2353,7 +2370,8 @@
           "title": "OpenStax: simplified auto-lease money-factor method",
           "url": "https://openstax.org/books/contemporary-mathematics/pages/6-11-buying-or-leasing-a-car"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-02"
     },
     "calculator:bond": {
       "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",

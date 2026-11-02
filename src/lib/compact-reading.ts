@@ -32,6 +32,8 @@ export const compactReadingLeadExamples: Record<string,number> = {
  'debt-payoff':1, repayment:1, 'business-loan':2, 'boat-loan':2,
  pmi:2, 'biweekly-mortgage':2,
  'marriage-tax':1,
+ 'finance':1, 'bond':1, 'average-return':1, 'margin':2,
+ 'mortgage-payoff':1, 'depreciation':1, 'lease':1,
 };
 
 // Shorter pages retain their reading flow; only measured long sections are folded.
@@ -43,18 +45,18 @@ export const compactReadingSections: Record<string,CompactReadingSections> = {
     "questions": true,
     "comparisons": true
   },
-  "bond": { "questions": true },
+  "bond": { "questions": true, "examples": true },
   "interest": { "questions": true },
   "payment": { "questions": true },
   "estate-tax": { "questions": true },
-  "lease": { "questions": true },
+  "lease": { "questions": true, "examples": true },
   "sales-tax": { "questions": true },
   "discount": { "questions": true, "examples": true, "sources": true },
   "vat": { "questions": true },
   "interest-rate": { "questions": true, "examples": true, "sources": true },
-  "average-return": { "questions": true },
+  "average-return": { "questions": true, "examples": true },
   "college-cost": { "questions": true },
-  "finance": { "questions": true },
+  "finance": { "questions": true, "examples": true },
   "commission": { "questions": true },
   "inflation": { "questions": true },
   "down-payment": { "questions": true },
@@ -79,16 +81,17 @@ export const compactReadingSections: Record<string,CompactReadingSections> = {
     "examples": true
   },
   "loan": {
-    "questions": true
+    "questions": true, "examples": true
   },
   "currency": {
     "questions": true
   },
   "margin": {
-    "questions": true
+    "questions": true, "examples": true
   },
   "depreciation": {
     "questions": true,
+    "examples": true,
     "sources": true
   },
   "markup": {

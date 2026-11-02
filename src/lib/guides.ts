@@ -1,3 +1,4 @@
+import calculatorDepthContent from './calculator-depth-content.json';
 import semrushFollowupFiveFaq from './semrush-followup-five-faq-content.json';
 import semrushRefinanceFaq from './semrush-refinance-faq-content.json';
 import semrushSalaryIraFaq from './semrush-salary-ira-faq-content.json';
@@ -927,3 +928,15 @@ for(const id of ['sales-tax','margin','markup','commission'])
 
 Object.assign(guides.refinance,{summary:semrushRefinanceFaq.refinance.summary,scope:semrushRefinanceFaq.refinance.scope});
 guides.refinance.examples.push(...semrushRefinanceFaq.refinance.examples);
+
+// Add explicit mode walkthroughs without replacing published examples or FAQ anchors.
+for (const [id, content] of Object.entries(calculatorDepthContent)) {
+  const guide=guides[id];
+  if ('summary' in content) guide.summary=content.summary;
+  if ('scope' in content) guide.scope=content.scope;
+  guide.examples.push(...content.examples.map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));
+  guide.questions.push(...content.questions);
+  if ('sources' in content) for (const source of content.sources)
+    if (!guide.sources.some(existing=>existing.url===source.url)) guide.sources.push(source);
+  guide.checkedOn=content.checkedOn;
+}

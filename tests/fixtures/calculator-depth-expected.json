@@ -1,0 +1,502 @@
+[
+  {
+    "id": "loan",
+    "mode": "deferred",
+    "values": {
+      "principal": "10000",
+      "years": "2",
+      "months": "0",
+      "rate": "6",
+      "compound": "Annually"
+    },
+    "title": "A two-year loan with one maturity payment",
+    "expected": {
+      "Amount due at maturity": 11236,
+      "Total interest": 1236
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "loan",
+    "mode": "bond",
+    "values": {
+      "face": "11236",
+      "years": "2",
+      "months": "0",
+      "rate": "6",
+      "compound": "Annually"
+    },
+    "title": "Discount the same future payment back to today",
+    "expected": {
+      "Bond present value": 10000,
+      "Discount from face value": 1236
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "finance",
+    "mode": "pmt",
+    "values": {
+      "N": "12",
+      "rate": "12",
+      "PV": "10000",
+      "FV": "0",
+      "pay": "12",
+      "compound": "12",
+      "timing": "End of period"
+    },
+    "title": "Solve the monthly payment on a one-year loan",
+    "expected": {
+      "PMT": -888.4878867834161
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "finance",
+    "mode": "i-y",
+    "values": {
+      "N": "2",
+      "PV": "-1000",
+      "PMT": "0",
+      "FV": "1210",
+      "pay": "1",
+      "compound": "1",
+      "timing": "End of period"
+    },
+    "title": "Recover a rate from present and future cash flows",
+    "expected": {
+      "I/Y": 10
+    },
+    "rows": null,
+    "tolerance": 1e-06
+  },
+  {
+    "id": "finance",
+    "mode": "n",
+    "values": {
+      "rate": "10",
+      "PV": "-1000",
+      "PMT": "0",
+      "FV": "1210",
+      "pay": "1",
+      "compound": "1",
+      "timing": "End of period"
+    },
+    "title": "Solve how many annual periods the same growth needs",
+    "expected": {
+      "N": 2
+    },
+    "rows": null,
+    "tolerance": 1e-06
+  },
+  {
+    "id": "finance",
+    "mode": "pv",
+    "values": {
+      "N": "2",
+      "rate": "10",
+      "PMT": "0",
+      "FV": "1210",
+      "pay": "1",
+      "compound": "1",
+      "timing": "End of period"
+    },
+    "title": "Find the investment needed for a future receipt",
+    "expected": {
+      "PV": -1000
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "bond",
+    "mode": "price",
+    "values": {
+      "face": "1000",
+      "coupon": "5",
+      "coupon_unit": "Percent",
+      "yield": "6",
+      "years": "2",
+      "frequency": "Annually"
+    },
+    "title": "Price a two-year coupon bond below face value",
+    "expected": {
+      "price": 981.6660733357066
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "bond",
+    "mode": "yield",
+    "values": {
+      "price": "981.6660733357066",
+      "face": "1000",
+      "coupon": "5",
+      "coupon_unit": "Percent",
+      "years": "2",
+      "frequency": "Annually"
+    },
+    "title": "Recover yield from the coupon bond’s unrounded price",
+    "expected": {
+      "yield": 6
+    },
+    "rows": null,
+    "tolerance": 1e-06
+  },
+  {
+    "id": "bond",
+    "mode": "dated",
+    "values": {
+      "face": "1000",
+      "coupon": "6",
+      "coupon_unit": "Percent",
+      "yield": "8",
+      "frequency": "Semiannually",
+      "settlement": "2026-04-01",
+      "maturity": "2027-01-01",
+      "daycount": "30/360"
+    },
+    "title": "Separate clean price from accrued coupon interest",
+    "expected": {
+      "Accrued interest": 15,
+      "Clean price": 985.5694356184657,
+      "Dirty price": 1000.5694356184657,
+      "Interest accrued days": 90
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "average-return",
+    "mode": "cashflows",
+    "values": {
+      "cashflows": "2025-01-01, -1000\n2026-01-01, -1100\n2027-01-01, 2420"
+    },
+    "title": "Measure return when another deposit is added later",
+    "expected": {
+      "Annual IRR 1": 10
+    },
+    "rows": null,
+    "tolerance": 1e-06
+  },
+  {
+    "id": "average-return",
+    "mode": "variable-periods",
+    "values": {
+      "period_returns": "10, 1, 0\n21, 2, 0"
+    },
+    "title": "Annualize returns from unequal holding periods",
+    "expected": {
+      "Annualized compound return": 10,
+      "Cumulative return": 33.1,
+      "Total holding years": 3
+    },
+    "rows": null,
+    "tolerance": 1e-06
+  },
+  {
+    "id": "margin",
+    "mode": "stock",
+    "values": {
+      "price": "50",
+      "shares": "100",
+      "requirement": "50"
+    },
+    "title": "Stock margin: separate position value from your equity",
+    "expected": {
+      "Required equity": 2500,
+      "Position value": 5000,
+      "Borrowed amount": 2500
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "margin",
+    "mode": "currency",
+    "values": {
+      "units": "100000",
+      "rate": "1.1",
+      "leverage": "20"
+    },
+    "title": "FX margin: keep notional and collateral in the quote currency",
+    "expected": {
+      "Required margin in quote currency": 5500,
+      "Notional value in quote currency": 110000
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "mortgage-payoff",
+    "mode": "remaining-normal",
+    "values": {
+      "principal": "120000",
+      "payment": "2500",
+      "rate": "6"
+    },
+    "title": "Start with a positive-interest repayment baseline",
+    "expected": {
+      "Interest with strategy": 17561.3327105011,
+      "Interest saved": 0,
+      "Years to payoff": 4.666666666666667
+    },
+    "rows": {
+      "first": [
+        1,
+        2500,
+        600.0,
+        1900.0,
+        118100.0
+      ],
+      "last": [
+        56,
+        61.33271050107578,
+        0.30513786318943176,
+        61.02757263788635,
+        0.0
+      ]
+    },
+    "tolerance": 0.005
+  },
+  {
+    "id": "mortgage-payoff",
+    "mode": "remaining-extra",
+    "values": {
+      "principal": "120000",
+      "payment": "2500",
+      "rate": "6",
+      "extra_monthly": "250",
+      "extra_yearly": "0",
+      "extra_once": "0",
+      "extra_once_month": "1"
+    },
+    "title": "Add $250 monthly to the same mortgage",
+    "expected": {
+      "Interest saved": 1848.4331327102354,
+      "Interest with strategy": 15712.899577790866,
+      "Years to payoff": 4.166666666666667
+    },
+    "rows": {
+      "first": [
+        1,
+        2750,
+        600.0,
+        2150.0,
+        117850.0
+      ],
+      "last": [
+        50,
+        962.8995777908301,
+        4.790545163138459,
+        958.1090326276917,
+        0.0
+      ]
+    },
+    "tolerance": 0.005
+  },
+  {
+    "id": "mortgage-payoff",
+    "mode": "remaining-extra",
+    "values": {
+      "principal": "120000",
+      "payment": "2500",
+      "rate": "6",
+      "extra_monthly": "0",
+      "extra_yearly": "0",
+      "extra_once": "10000",
+      "extra_once_month": "1"
+    },
+    "title": "Make a one-time $10,000 extra payment in month one",
+    "expected": {
+      "Interest saved": 2955.558454950391,
+      "Interest with strategy": 14605.77425555071,
+      "Years to payoff": 4.166666666666667
+    },
+    "rows": {
+      "first": [
+        1,
+        12500,
+        600.0,
+        11900.0,
+        108100.0
+      ],
+      "last": [
+        50,
+        2105.7742555506916,
+        10.476488833585531,
+        2095.2977667171062,
+        0.0
+      ]
+    },
+    "tolerance": 0.005
+  },
+  {
+    "id": "mortgage-payoff",
+    "mode": "known-normal",
+    "values": {
+      "principal": "120000",
+      "years": "5",
+      "months": "0",
+      "rate": "6",
+      "elapsed": "12"
+    },
+    "title": "Derive a current balance from original-loan information",
+    "expected": {
+      "Current principal balance": 98783.61993064152
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "depreciation",
+    "mode": "declining",
+    "values": {
+      "cost": "50000",
+      "salvage": "5000",
+      "life": "5",
+      "factor": "1.5",
+      "partial": "No",
+      "convention": "Custom months",
+      "first_months": "12",
+      "service_date": "2026-01-01",
+      "fiscal_end": "2026-12-31",
+      "round": "No"
+    },
+    "title": "Compare declining balance with the same straight-line asset",
+    "expected": {
+      "Ending book value": 8403.5,
+      "Total depreciation": 41596.5
+    },
+    "rows": {
+      "all": [
+        [
+          1,
+          15000.0,
+          15000.0,
+          35000.0
+        ],
+        [
+          2,
+          10500.0,
+          25500.0,
+          24500.0
+        ],
+        [
+          3,
+          7350.0,
+          32850.0,
+          17150.0
+        ],
+        [
+          4,
+          5145.0,
+          37995.0,
+          12005.0
+        ],
+        [
+          5,
+          3601.5,
+          41596.5,
+          8403.5
+        ]
+      ]
+    },
+    "tolerance": 0.005
+  },
+  {
+    "id": "depreciation",
+    "mode": "syd",
+    "values": {
+      "cost": "50000",
+      "salvage": "5000",
+      "life": "5",
+      "partial": "No",
+      "convention": "Custom months",
+      "first_months": "12",
+      "service_date": "2026-01-01",
+      "fiscal_end": "2026-12-31",
+      "round": "No"
+    },
+    "title": "Use sum-of-years digits on the same asset",
+    "expected": {
+      "Total depreciation": 45000,
+      "Ending book value": 5000
+    },
+    "rows": {
+      "all": [
+        [
+          1,
+          15000.0,
+          15000.0,
+          35000.0
+        ],
+        [
+          2,
+          12000.0,
+          27000.0,
+          23000.0
+        ],
+        [
+          3,
+          9000.0,
+          36000.0,
+          14000.0
+        ],
+        [
+          4,
+          6000.0,
+          42000.0,
+          8000.0
+        ],
+        [
+          5,
+          3000.0,
+          45000.0,
+          5000.0
+        ]
+      ]
+    },
+    "tolerance": 0.005
+  },
+  {
+    "id": "lease",
+    "mode": "rate",
+    "values": {
+      "price": "30000",
+      "residual": "10000",
+      "years": "3",
+      "months": "0",
+      "rate": "6"
+    },
+    "title": "Compute a lease payment with interest and a residual",
+    "expected": {
+      "Monthly payment": 658.4387490311142,
+      "Total lease payments": 23703.794965120112,
+      "Total cost with residual purchase": 33703.79496512011
+    },
+    "rows": null,
+    "tolerance": 0.005
+  },
+  {
+    "id": "lease",
+    "mode": "payment",
+    "values": {
+      "price": "30000",
+      "residual": "10000",
+      "years": "3",
+      "months": "0",
+      "payment": "658.4387490311142"
+    },
+    "title": "Recover the lease rate from the same payment",
+    "expected": {
+      "Nominal annual rate": 6
+    },
+    "rows": null,
+    "tolerance": 1e-06
+  }
+]

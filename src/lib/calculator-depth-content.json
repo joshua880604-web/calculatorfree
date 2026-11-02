@@ -1,0 +1,609 @@
+{
+  "loan": {
+    "checkedOn": "2026-11-02",
+    "examples": [
+      {
+        "title": "A two-year loan with one maturity payment",
+        "mode": "deferred",
+        "values": {
+          "principal": "10000",
+          "years": "2",
+          "months": "0",
+          "rate": "6",
+          "compound": "Annually"
+        },
+        "inputs": "$10,000 borrowed, 6% nominal annual interest compounded annually, two years, no intervening payments or fees.",
+        "steps": [
+          "At the end of year one, 10,000 × 1.06 = 10,600. No installment reduces that balance.",
+          "At maturity, 10,600 × 1.06 = 11,236. Total interest is 11,236 − 10,000 = 1,236.",
+          "This is compounded lump-sum repayment. It is not an interest-only loan with monthly interest payments, or a statement about eligibility for a lender’s deferment program."
+        ],
+        "answer": "Amount due at maturity: $11,236.00; total interest: $1,236.00.",
+        "expected": {
+          "label": "Amount due at maturity",
+          "value": 11236,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Discount the same future payment back to today",
+        "mode": "bond",
+        "values": {
+          "face": "11236",
+          "years": "2",
+          "months": "0",
+          "rate": "6",
+          "compound": "Annually"
+        },
+        "inputs": "One $11,236 maturity payment after two years, discounted at an assumed 6% annual yield.",
+        "steps": [
+          "The growth factor is 1.06² = 1.1236. Present value is 11,236 / 1.1236 = 10,000.",
+          "The $1,236 difference is the discount from the future amount, not a periodic cash coupon.",
+          "This mode assumes one maturity payment. Use Bond Calculator for coupons, settlement dates and accrued interest. A mathematical price is not a market quote or a guarantee of repayment."
+        ],
+        "answer": "Bond present value: $10,000.00.",
+        "expected": {
+          "label": "Bond present value",
+          "value": 10000,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How does deferred repayment differ from interest-only repayment?",
+        "answer": "This Deferred Payment Loan mode makes no interim payments: interest compounds into the amount due at maturity. An interest-only contract instead collects interest during the term and leaves principal for a later payment. The cash-flow timing differs, so the two results should not be compared as the same repayment plan. Contract-specific capitalization, fees and deferment eligibility are not supplied."
+      }
+    ],
+    "scope": "Fixed-rate mathematical models: fees, insurance, penalties and lender-specific capitalization rules are excluded. Amortized Loan takes payment and compounding frequencies separately; Deferred Payment Loan assumes no interim payment; Bond Present Value assumes one maturity cash flow without coupons. Enter the actual quote convention. A nominal rate is not necessarily a fee-inclusive APR.",
+    "summary": "Choose the loan model that matches the payment pattern. Amortized Loan repays principal through regular installments; Deferred Payment Loan compounds unpaid interest into one maturity payment; Bond Present Value discounts a single future maturity amount. A monthly installment, a future lump sum and a present price answer different questions."
+  },
+  "finance": {
+    "checkedOn": "2026-11-02",
+    "examples": [
+      {
+        "title": "Solve the monthly payment on a one-year loan",
+        "mode": "pmt",
+        "values": {
+          "N": "12",
+          "rate": "12",
+          "PV": "10000",
+          "FV": "0",
+          "pay": "12",
+          "compound": "12",
+          "timing": "End of period"
+        },
+        "inputs": "From the borrower’s perspective: receive $10,000 today; 12 monthly payments; 12% nominal annual rate compounded monthly; ending balance zero.",
+        "steps": [
+          "Monthly rate is 12% / 12 = 1%; N = 12 payment periods, not 12 years.",
+          "Payment magnitude = 10,000 × 0.01 / [1 − 1.01^(−12)] = 888.48788678. The borrower pays it out, so PMT is negative.",
+          "Twelve unrounded payments total $10,661.85; interest is $661.85 before fees. Round only for display; a lender’s cent-rounded schedule can differ."
+        ],
+        "answer": "PMT: −$888.49 per month. The minus sign denotes a cash outflow.",
+        "expected": {
+          "label": "PMT",
+          "value": -888.4878867834161,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Recover a rate from present and future cash flows",
+        "mode": "i-y",
+        "values": {
+          "N": "2",
+          "PV": "-1000",
+          "PMT": "0",
+          "FV": "1210",
+          "pay": "1",
+          "compound": "1",
+          "timing": "End of period"
+        },
+        "inputs": "Invest $1,000 now (PV = −1000), receive $1,210 after two annual periods, no payments in between.",
+        "steps": [
+          "The positive future receipt must offset the negative initial investment: 1,000 × (1 + r)² = 1,210.",
+          "r = sqrt(1,210 / 1,000) − 1 = 10% per year with annual compounding.",
+          "This is a numerical implied rate under the entered cash flows, not a fee-inclusive regulatory APR or a forecast."
+        ],
+        "answer": "I/Y: 10.00% annually.",
+        "expected": {
+          "label": "I/Y",
+          "value": 10,
+          "tolerance": 1e-06
+        }
+      },
+      {
+        "title": "Solve how many annual periods the same growth needs",
+        "mode": "n",
+        "values": {
+          "rate": "10",
+          "PV": "-1000",
+          "PMT": "0",
+          "FV": "1210",
+          "pay": "1",
+          "compound": "1",
+          "timing": "End of period"
+        },
+        "inputs": "PV = −$1,000; FV = $1,210; 10% annual interest; P/Y = C/Y = 1; PMT = 0.",
+        "steps": [
+          "With no payments, N = ln(1,210 / 1,000) / ln(1.10) = 2.",
+          "N is a count of payment periods. Here one period is one year; with P/Y = 12, divide a solved N by twelve to express years.",
+          "The constant rate and endpoint values are assumptions. A solver result does not establish when a real investment will reach a goal."
+        ],
+        "answer": "N: 2 annual periods.",
+        "expected": {
+          "label": "N",
+          "value": 2,
+          "tolerance": 1e-06
+        }
+      },
+      {
+        "title": "Find the investment needed for a future receipt",
+        "mode": "pv",
+        "values": {
+          "N": "2",
+          "rate": "10",
+          "PMT": "0",
+          "FV": "1210",
+          "pay": "1",
+          "compound": "1",
+          "timing": "End of period"
+        },
+        "inputs": "Receive $1,210 after two years; discount at 10% annually; no intermediate payments.",
+        "steps": [
+          "Present-value magnitude is 1,210 / 1.10² = 1,000.",
+          "With the future receipt entered positively, the required investment has the opposite sign: PV = −1,000.",
+          "This discounts one lump sum. A stream of payments requires PMT and a consistent beginning/end timing selection."
+        ],
+        "answer": "PV: −$1,000.00, an investment paid out today.",
+        "expected": {
+          "label": "PV",
+          "value": -1000,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why is the solved loan payment negative?",
+        "answer": "Signs describe the chosen cash-flow perspective, not whether a number is good or bad. A borrower receiving positive PV repays negative PMT when FV is zero. An investor paying negative PV can receive positive FV. Keep all signs and payment periods consistent; removing a minus sign changes the equation. In the one-year example, negative $888.49 is the monthly outflow before fees."
+      }
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: present/future values of lump sums and ordinary annuities",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/11-3-explain-the-time-value-of-money-and-calculate-present-and-future-values-of-lump-sums-and-annuities"
+      }
+    ]
+  },
+  "bond": {
+    "checkedOn": "2026-11-02",
+    "examples": [
+      {
+        "title": "Price a two-year coupon bond below face value",
+        "mode": "price",
+        "values": {
+          "face": "1000",
+          "coupon": "5",
+          "coupon_unit": "Percent",
+          "yield": "6",
+          "years": "2",
+          "frequency": "Annually"
+        },
+        "inputs": "$1,000 face value, 5% annual coupon, two years, annual payments, assumed 6% annual yield.",
+        "steps": [
+          "The annual coupon is 1,000 × 5% = $50. Cash flows are $50 after year one and $1,050 after year two.",
+          "Price = 50 / 1.06 + 1,050 / 1.06² = $981.67. A yield above the coupon rate discounts this bond below its $1,000 face value.",
+          "Coupon rate is 5%; current yield is 50 / price, approximately 5.09%; the discount rate used to price every payment is 6%. These are different measures."
+        ],
+        "answer": "Price: $981.67 under the entered cash-flow assumptions.",
+        "expected": {
+          "label": "price",
+          "value": 981.6660733357066,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Recover yield from the coupon bond’s unrounded price",
+        "mode": "yield",
+        "values": {
+          "price": "981.6660733357066",
+          "face": "1000",
+          "coupon": "5",
+          "coupon_unit": "Percent",
+          "years": "2",
+          "frequency": "Annually"
+        },
+        "inputs": "The same annual coupons and two-year maturity, using the unrounded price 981.666073335707.",
+        "steps": [
+          "Solve price = 50 / (1 + y) + 1,050 / (1 + y)² for y.",
+          "Using the unrounded price from the preceding example recovers y = 6% annually. A displayed price rounded to cents can imply a slightly different result.",
+          "This yield assumes the specified payments occur. Reinvestment, an early sale, fees and default can change realized return."
+        ],
+        "answer": "Yield to maturity: 6.00% with annual coupon frequency.",
+        "expected": {
+          "label": "yield",
+          "value": 6,
+          "tolerance": 1e-06
+        }
+      },
+      {
+        "title": "Separate clean price from accrued coupon interest",
+        "mode": "dated",
+        "values": {
+          "face": "1000",
+          "coupon": "6",
+          "coupon_unit": "Percent",
+          "yield": "8",
+          "frequency": "Semiannually",
+          "settlement": "2026-04-01",
+          "maturity": "2027-01-01",
+          "daycount": "30/360"
+        },
+        "inputs": "$1,000 face, 6% annual coupon, 8% nominal annual yield, semiannual payments; settle April 1, 2026; mature January 1, 2027; use 30/360.",
+        "steps": [
+          "Regular coupon dates are January 1 and July 1. Each coupon is $30. From January 1 to settlement, the stated 30/360 rule counts 90 of 180 days, so accrued interest is 30 × 90/180 = $15.",
+          "The next $30 arrives half a coupon period after settlement, followed one period later by $1,030. Dirty price = 30 / 1.04^0.5 + 1,030 / 1.04^1.5 = $1,000.57.",
+          "Clean price = dirty price − accrued interest = $985.57. Changing the day-count convention can change both the accrued fraction and price; unusual coupons and ex-coupon rules are not modeled."
+        ],
+        "answer": "Accrued interest: $15.00; clean price: $985.57; dirty price: $1,000.57.",
+        "expected": {
+          "label": "Accrued interest",
+          "value": 15,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why can settlement-date pricing differ from whole-year pricing?",
+        "answer": "The whole-year modes discount coupons at full periodic intervals. Settlement-Date Pricing uses the chosen dates and day-count fraction to the next coupon, then separates accrued interest from the discounted payment total. In the April 1 example, 30/360 accrues $15. Clean price excludes that amount; dirty price includes it. Compare the same dates, coupon frequency and price convention before treating a difference as a calculation error."
+      }
+    ]
+  },
+  "average-return": {
+    "checkedOn": "2026-11-02",
+    "examples": [
+      {
+        "title": "Measure return when another deposit is added later",
+        "mode": "cashflows",
+        "values": {
+          "cashflows": "2025-01-01, -1000\n2026-01-01, -1100\n2027-01-01, 2420"
+        },
+        "inputs": "Pay $1,000 on January 1, 2025 and $1,100 on January 1, 2026; receive $2,420 on January 1, 2027 as the ending value.",
+        "steps": [
+          "Each interval in this example is exactly 365 days, matching the solver’s date-difference / 365 convention.",
+          "At 10%, the first deposit becomes 1,000 × 1.10² = 1,210, and the later deposit becomes 1,100 × 1.10 = 1,210. Together they equal 2,420.",
+          "The discounted cash-flow equation is −1,000 − 1,100/1.10 + 2,420/1.10² = 0. Include an ending investment value as a receipt; money still in the account cannot be omitted from the measurement."
+        ],
+        "answer": "Annual money-weighted IRR: 10.00% for these dates and cash flows.",
+        "expected": {
+          "label": "Annual IRR 1",
+          "value": 10,
+          "tolerance": 1e-06
+        }
+      },
+      {
+        "title": "Annualize returns from unequal holding periods",
+        "mode": "variable-periods",
+        "values": {
+          "period_returns": "10, 1, 0\n21, 2, 0"
+        },
+        "inputs": "A 10% total return over one year, followed by a 21% total return over two years. Neither row is a deposit or an annual-rate quote.",
+        "steps": [
+          "Total growth factor is 1.10 × 1.21 = 1.331, a 33.1% cumulative return over three years.",
+          "Annualized compound return = 1.331^(1/3) − 1 = 10%. Enter the second period as 21%, two years, not 21% for each year.",
+          "A simple sum divided by duration gives 31% / 3, about 10.33%; it is not the compound growth rate. Use dated cash flows instead when external deposits or withdrawals matter."
+        ],
+        "answer": "Cumulative return: 33.10%; annualized compound return: 10.00%.",
+        "expected": {
+          "label": "Annualized compound return",
+          "value": 10,
+          "tolerance": 1e-06
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can I compare money-weighted IRR directly with a fund’s reported return?",
+        "answer": "Not without matching the measurement. Money-weighted IRR depends on your deposit and withdrawal dates and amounts; a fund’s published time-weighted performance measures a different experience. In Dated Cash Flows, include the opening investment and the ending value with consistent signs. The variable-period mode instead compounds entered period returns; it does not remove external cash-flow effects or retrieve a fund’s history."
+      }
+    ]
+  },
+  "margin": {
+    "checkedOn": "2026-11-02",
+    "examples": [
+      {
+        "title": "Stock margin: separate position value from your equity",
+        "mode": "stock",
+        "values": {
+          "price": "50",
+          "shares": "100",
+          "requirement": "50"
+        },
+        "inputs": "100 shares at $50 each; enter a hypothetical initial equity requirement of 50%.",
+        "steps": [
+          "Position value = 100 × 50 = $5,000. Required equity = 5,000 × 50% = $2,500; borrowed amount = $2,500.",
+          "As a separate manual stress illustration, a drop to $40 leaves $4,000 of securities against the same $2,500 borrowing: equity is $1,500 before interest and fees. That is a 40% equity loss from a 20% stock-price decline.",
+          "The tool calculates the initial position, not this later price path, maintenance equity or a margin-call trigger. The entered 50% is an example, not confirmation of a broker’s requirement."
+        ],
+        "answer": "Required equity: $2,500.00; borrowed amount: $2,500.00.",
+        "expected": {
+          "label": "Required equity",
+          "value": 2500,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "FX margin: keep notional and collateral in the quote currency",
+        "mode": "currency",
+        "values": {
+          "units": "100000",
+          "rate": "1.1",
+          "leverage": "20"
+        },
+        "inputs": "100,000 base-currency units; 1.10 quote-currency units per base unit; assumed leverage 20:1.",
+        "steps": [
+          "Notional in quote currency = 100,000 × 1.10 = 110,000. Required margin = 110,000 / 20 = 5,500 quote-currency units.",
+          "A separate 1% adverse move on that initial notional is about 1,100 quote-currency units, or 20% of the initial margin, before spreads and other charges. This is a risk illustration, not an output forecast.",
+          "Collateral is not a maximum-loss limit. Actual permitted leverage, maintenance rules, liquidation and fees depend on the product, jurisdiction and provider; this calculation does not verify eligibility."
+        ],
+        "answer": "Required margin: 5,500.00 in the quote currency, not 5,500 base-currency units.",
+        "expected": {
+          "label": "Required margin in quote currency",
+          "value": 5500,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does required margin tell me the most I could lose?",
+        "answer": "No. These stock and FX modes calculate initial equity or collateral under an entered assumption, not a loss cap or a maintenance-margin test. Borrowing magnifies gains and losses relative to your equity. Providers can impose different requirements or liquidate positions; losses may exceed the amount initially deposited. Financing charges, changing prices and contract-specific protections are not inferred."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: margin accounts and magnified losses",
+        "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-29"
+      },
+      {
+        "title": "CFTC: OTC forex margin and leverage risks",
+        "url": "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CustomerAdvisory_MustKnowForex.html"
+      }
+    ]
+  },
+  "mortgage-payoff": {
+    "checkedOn": "2026-11-02",
+    "examples": [
+      {
+        "title": "Start with a positive-interest repayment baseline",
+        "mode": "remaining-normal",
+        "values": {
+          "principal": "120000",
+          "payment": "2500",
+          "rate": "6"
+        },
+        "inputs": "Current principal $120,000; 6% nominal annual interest; regular monthly principal-and-interest payment $2,500; no extra payments.",
+        "steps": [
+          "First-month interest = 120,000 × 6% / 12 = $600. The $2,500 payment reduces principal by $1,900, leaving $118,100.",
+          "Repeat with each opening balance and cap the final payment at balance plus interest. The baseline takes 56 monthly payments and totals $17,561.33 of interest.",
+          "Escrow, insurance, property taxes, daily payoff interest and lender fees are separate. Keep this same balance, rate and regular payment when comparing extras."
+        ],
+        "answer": "Baseline interest: $17,561.33 over 56 payments.",
+        "expected": {
+          "label": "Interest with strategy",
+          "value": 17561.3327105011,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Add $250 monthly to the same mortgage",
+        "mode": "remaining-extra",
+        "values": {
+          "principal": "120000",
+          "payment": "2500",
+          "rate": "6",
+          "extra_monthly": "250",
+          "extra_yearly": "0",
+          "extra_once": "0",
+          "extra_once_month": "1"
+        },
+        "inputs": "Use the preceding $120,000 balance, 6% rate and $2,500 regular payment, plus $250 extra principal every month.",
+        "steps": [
+          "First interest is still $600. Paying $2,750 reduces principal by $2,150, leaving $117,850; the lower balance reduces later interest.",
+          "The capped-payment schedule takes 50 months, 6 fewer than the baseline. Interest is $15,712.90, saving $1,848.43.",
+          "The extra $250 is an ongoing cash commitment. Savings assume the extra reaches principal at the modeled payment time, with no penalty or rate change."
+        ],
+        "answer": "Interest saved versus the same baseline: $1,848.43.",
+        "expected": {
+          "label": "Interest saved",
+          "value": 1848.4331327102354,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Make a one-time $10,000 extra payment in month one",
+        "mode": "remaining-extra",
+        "values": {
+          "principal": "120000",
+          "payment": "2500",
+          "rate": "6",
+          "extra_monthly": "0",
+          "extra_yearly": "0",
+          "extra_once": "10000",
+          "extra_once_month": "1"
+        },
+        "inputs": "The same $120,000 mortgage at 6%, $2,500 regular payment; add $10,000 once in month one and no recurring extra.",
+        "steps": [
+          "First-month interest remains $600 because the model charges interest on the opening balance before applying payments. The $12,500 combined payment leaves $108,100 principal.",
+          "Later payments return to $2,500. The schedule takes 50 months and incurs $14,605.77 interest, saving $2,955.56 against the baseline.",
+          "This uses $10,000 upfront rather than $250 extra each month. The examples have different cash commitments; interest savings alone do not establish which choice is suitable."
+        ],
+        "answer": "Interest saved with the month-one lump sum: $2,955.56.",
+        "expected": {
+          "label": "Interest saved",
+          "value": 2955.558454950391,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Derive a current balance from original-loan information",
+        "mode": "known-normal",
+        "values": {
+          "principal": "120000",
+          "years": "5",
+          "months": "0",
+          "rate": "6",
+          "elapsed": "12"
+        },
+        "inputs": "Original principal $120,000; five-year term; 6% annual interest; twelve regular payments already made; no past extras.",
+        "steps": [
+          "Original monthly payment = 120,000 × 0.005 / [1 − 1.005^(−60)] = $2,319.94 before display rounding.",
+          "After twelve payments, balance = 120,000 × 1.005^12 − payment × (1.005^12 − 1) / 0.005 = $98,783.62.",
+          "This derives a balance from the original contract assumptions. If you made past extras or have a statement balance, Current balance avoids reconstructing the wrong repayment history."
+        ],
+        "answer": "Estimated current principal: $98,783.62 after twelve scheduled payments.",
+        "expected": {
+          "label": "Current principal balance",
+          "value": 98783.61993064152,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Are the monthly-extra and lump-sum examples equally funded?",
+        "answer": "No. The illustrated $250 monthly extra and $10,000 month-one lump sum use different amounts and timing. Each is compared with the same original baseline to show the repayment mechanism, not to recommend a winner. To assess alternatives, consider cash available at each date, reserves, penalties and other uses of the money. The tool does not assign a value to keeping liquidity."
+      }
+    ]
+  },
+  "depreciation": {
+    "checkedOn": "2026-11-02",
+    "examples": [
+      {
+        "title": "Compare declining balance with the same straight-line asset",
+        "mode": "declining",
+        "values": {
+          "cost": "50000",
+          "salvage": "5000",
+          "life": "5",
+          "factor": "1.5",
+          "partial": "No",
+          "convention": "Custom months",
+          "first_months": "12",
+          "service_date": "2026-01-01",
+          "fiscal_end": "2026-12-31",
+          "round": "No"
+        },
+        "inputs": "$50,000 cost, $5,000 salvage, five years, factor 1.5, full years and no whole-dollar rounding.",
+        "steps": [
+          "Annual declining rate = 1.5 / 5 = 30%. Year one expense is $15,000 and book value is $35,000; year two expense is $10,500 and book value is $24,500.",
+          "The five expenses are $15,000, $10,500, $7,350, $5,145 and $3,601.50. Total depreciation is $41,596.50; ending book value is $8,403.50.",
+          "For the same asset, straight line charges (50,000 − 5,000) / 5 = $9,000 per year and ends at $5,000. This declining model neither switches to straight line nor forces a final write-down, so salvage is a floor rather than a guaranteed final balance."
+        ],
+        "answer": "Ending book value: $8,403.50 under this declining-balance convention.",
+        "expected": {
+          "label": "Ending book value",
+          "value": 8403.5,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Use sum-of-years digits on the same asset",
+        "mode": "syd",
+        "values": {
+          "cost": "50000",
+          "salvage": "5000",
+          "life": "5",
+          "partial": "No",
+          "convention": "Custom months",
+          "first_months": "12",
+          "service_date": "2026-01-01",
+          "fiscal_end": "2026-12-31",
+          "round": "No"
+        },
+        "inputs": "The same $50,000 cost, $5,000 salvage and five-year life; full years, no whole-dollar rounding.",
+        "steps": [
+          "Depreciable basis = $45,000; sum of years = 5 + 4 + 3 + 2 + 1 = 15.",
+          "Annual expenses are 45,000 × 5/15 = $15,000, then $12,000, $9,000, $6,000 and $3,000. After two years, accumulated depreciation is $27,000 and book value is $23,000.",
+          "Total depreciation reaches $45,000 and ends at $5,000. Different methods change expense timing; none of these book schedules determines a MACRS classification or a tax deduction. Partial-year settings would change the year-by-year allocation."
+        ],
+        "answer": "Total depreciation: $45,000.00; ending book value: $5,000.00.",
+        "expected": {
+          "label": "Total depreciation",
+          "value": 45000,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why can declining balance end above the salvage value?",
+        "answer": "This implementation applies opening book value × factor / life and prevents the balance from falling below salvage. It does not switch to straight line or force a final write-down. A $50,000 asset with $5,000 salvage, five full years and factor 1.5 ends at $8,403.50. That is a stated modeling convention; your accounting policy or tax rules may require another treatment."
+      }
+    ]
+  },
+  "lease": {
+    "checkedOn": "2026-11-02",
+    "examples": [
+      {
+        "title": "Compute a lease payment with interest and a residual",
+        "mode": "rate",
+        "values": {
+          "price": "30000",
+          "residual": "10000",
+          "years": "3",
+          "months": "0",
+          "rate": "6"
+        },
+        "inputs": "$30,000 asset value, $10,000 terminal residual, 36 end-of-month payments, 6% nominal annual financing rate.",
+        "steps": [
+          "Monthly rate is 0.5%; annuity present-value factor = [1 − 1.005^(−36)] / 0.005. The residual has present value 10,000 / 1.005^36.",
+          "Monthly payment = [30,000 − 10,000 / 1.005^36] / annuity factor = $658.43874903. Total unrounded installments are $23,703.79.",
+          "If purchased for the entered residual, total installments plus residual are $33,703.79 before other charges. A residual assumption does not establish that a purchase option exists. The model differs from a dealer money-factor quote."
+        ],
+        "answer": "Monthly payment: $658.44 before taxes and fees.",
+        "expected": {
+          "label": "Monthly payment",
+          "value": 658.4387490311142,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Recover the lease rate from the same payment",
+        "mode": "payment",
+        "values": {
+          "price": "30000",
+          "residual": "10000",
+          "years": "3",
+          "months": "0",
+          "payment": "658.4387490311142"
+        },
+        "inputs": "The same asset, residual and 36-month term; enter the unrounded monthly payment 658.438749031114.",
+        "steps": [
+          "Solve 30,000 = payment × [1 − (1 + i)^(−36)] / i + 10,000 / (1 + i)^36.",
+          "The solution is i = 0.005 per month. Nominal annual rate is 12 × 0.5% = 6%; effective annual compounding would instead give (1.005^12 − 1) × 100 ≈ 6.1678%.",
+          "A payment rounded to cents can solve to a slightly different rate. Fees and taxes omitted from the cash-flow equation are not converted into a regulatory APR."
+        ],
+        "answer": "Nominal annual rate: 6.00% from the unrounded payment.",
+        "expected": {
+          "label": "Nominal annual rate",
+          "value": 6,
+          "tolerance": 1e-06
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why does a rounded monthly payment give a slightly different solved rate?",
+        "answer": "The rate solver matches the asset value to the payment stream and terminal residual. Rounding the illustrative payment to $658.44 changes that equation slightly, so the recovered rate need not be exactly 6%. Use the unrounded value to reproduce the mathematical example; use actual contractual cash flows to investigate a quote. This nominal financing rate excludes unentered fees and is not a regulatory APR disclosure."
+      }
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: present/future values of lump sums and ordinary annuities",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/11-3-explain-the-time-value-of-money-and-calculate-present-and-future-values-of-lump-sums-and-annuities"
+      }
+    ]
+  }
+}

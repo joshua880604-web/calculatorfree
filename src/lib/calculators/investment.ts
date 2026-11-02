@@ -366,7 +366,16 @@ const finance = tool(
           -50,
           100,
         );
-      else value = bisect((x) => tvm(v, r, x), 0.001, 12000);
+      else {
+        // Find a local bracket before evaluating extreme powers at N=12,000.
+        // A valid short solution can otherwise be rejected when that endpoint overflows.
+        const equation=(x:number)=>tvm(v,r,x),start=equation(0.001);
+        let high=1,end=equation(high);
+        while(Number.isFinite(end)&&start*end>0&&high<12000){
+          high=Math.min(12000,high*2);end=equation(high);
+        }
+        value=bisect(equation,0.001,high);
+      }
       return {
         metrics: [
           metric(

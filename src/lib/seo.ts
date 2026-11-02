@@ -269,3 +269,7 @@ for(const id of ['salary','ira'])contentUpdatedOn[catalog.find(c=>c.id===id)!.lo
 contentUpdatedOn[catalog.find(c=>c.id==='refinance')!.local_route]='2026-11-02';
 
 for(const id of ['biweekly-mortgage','mortgage-recast','emergency-fund','take-home-paycheck','roth-ira'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-02';
+
+// Date only the eight pages receiving new mode walkthroughs and example checks.
+for(const id of ['loan','finance','bond','average-return','margin','mortgage-payoff','depreciation','lease'])
+ contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-02';
