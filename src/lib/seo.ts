@@ -267,3 +267,5 @@ for(const slug of ['after-repair-value','vacancy-rate','capital-expenditure','de
 for(const id of ['salary','ira'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-02';
 
 contentUpdatedOn[catalog.find(c=>c.id==='refinance')!.local_route]='2026-11-02';
+
+for(const id of ['biweekly-mortgage','mortgage-recast','emergency-fund','take-home-paycheck','roth-ira'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-02';

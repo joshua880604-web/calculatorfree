@@ -1,3 +1,4 @@
+import semrushFollowupFiveFaq from './semrush-followup-five-faq-content.json';
 import semrushRefinanceFaq from './semrush-refinance-faq-content.json';
 import semrushSalaryIraFaq from './semrush-salary-ira-faq-content.json';
 import discountPriorityContent from './discount-priority-content.json';
@@ -896,7 +897,7 @@ for(const [id,refresh] of Object.entries(calculationPageRefresh)){
 }
 
 // Export-backed FAQ review: merge in place to retain published anchors and links.
-for (const [id, review] of Object.entries({...semrushEightFaq, ...semrushNextEightFaq, ...semrushThirdEightFaq, ...semrushFourthEightFaq, ...semrushSalaryIraFaq, ...semrushRefinanceFaq})) {
+for (const [id, review] of Object.entries({...semrushEightFaq, ...semrushNextEightFaq, ...semrushThirdEightFaq, ...semrushFourthEightFaq, ...semrushSalaryIraFaq, ...semrushRefinanceFaq, ...semrushFollowupFiveFaq})) {
   const guide = guides[id];
   guide.questions = guide.questions.filter(q => !(review.removeQuestions as string[]).includes(q.question));
   for (const item of review.items) {

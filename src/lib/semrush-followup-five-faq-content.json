@@ -1,0 +1,219 @@
+{
+  "biweekly-mortgage": {
+    "checkedOn": "2026-11-02",
+    "items": [
+      {
+        "question": "Are biweekly mortgage payments the same as paying twice a month?",
+        "answer": "No. This model uses 26 biweekly payments per year; twice monthly is 24. If ordinary monthly P&I is $2,000, half-payments of $1,000 cost $26,000 across 26 periods, versus $24,000 across 24. That is one extra monthly payment in the biweekly annual budget, not a benefit created simply by splitting a bill. The actual final payment can be smaller when the loan ends.",
+        "queries": [
+          "does paying your mortgage twice a month save money",
+          "how do biweekly mortgage payments work"
+        ],
+        "replacesQuestion": "Is biweekly the same as twice a month?"
+      },
+      {
+        "question": "Why compare biweekly with monthly payments using the same annual budget?",
+        "answer": "The comparison separates paying extra principal from paying at different intervals. On the illustrated $300,000 loan at 6% for 30 years, the biweekly budget is equivalent to about $1,948.54 per month, above ordinary monthly P&I of about $1,798.65. The modeled biweekly interest saving is about $74,436.02 against ordinary monthly payments but only about $770.66 against the equal-budget monthly plan. These are constant-rate, immediate-crediting calculations, not a lender promise.",
+        "queries": [
+          "should i pay mortgage monthly or biweekly",
+          "is it better to pay mortgage biweekly or monthly"
+        ],
+        "replacesQuestion": "Why include an equal-budget monthly comparison?"
+      },
+      {
+        "question": "How much interest can biweekly mortgage payments save?",
+        "answer": "It depends on balance, rate, remaining term and any extra amount per biweekly payment. For a hypothetical $300,000 balance at fixed 6% with 30 years remaining and no extra beyond half-monthly P&I, the model shows about $347,514.57 interest for ordinary monthly payments versus $273,078.55 for biweekly payments. The difference is about $74,436.02, largely because the biweekly plan pays more each year. It excludes servicing fees, daily accrual and delayed crediting.",
+        "queries": [
+          "how much does biweekly mortgage payments save",
+          "does paying mortgage biweekly save money"
+        ],
+        "anchor": "faq-biweekly-interest-saving"
+      },
+      {
+        "question": "How much do biweekly payments shorten a 30-year mortgage?",
+        "answer": "There is no fixed number of years. In the same $300,000, 6% illustration, the modeled loan ends after 638 biweekly payments, about 24.54 years, versus 30 years for ordinary monthly payments: roughly 5.46 years earlier. A different rate or extra payment changes that result. The tool uses equal 1/26-year periods, not an actual dated 14-day schedule; confirm how your servicer applies partial payments.",
+        "queries": [
+          "how much do biweekly payments shorten a 30-year mortgage",
+          "how much do biweekly payments shorten a 30 year mortgage"
+        ],
+        "anchor": "faq-biweekly-earlier-payoff"
+      }
+    ],
+    "removeQuestions": [],
+    "sources": []
+  },
+  "mortgage-recast": {
+    "checkedOn": "2026-11-02",
+    "items": [
+      {
+        "question": "How does a mortgage recast work, and how is it different from refinancing?",
+        "answer": "A recast applies a lump-sum principal payment and recalculates monthly P&I over the remaining contractual term at the same fixed rate. Refinancing replaces the loan and can change the rate, term and costs. This calculator starts from the current balance and models a cash-paid recast fee; it does not assume a new rate, lender approval or an immediate real-world processing date. Use Refinance to examine replacement borrowing instead.",
+        "queries": [
+          "how does recasting a mortgage work",
+          "how does a mortgage recast work"
+        ],
+        "replacesQuestion": "How is a mortgage recast different from refinancing?"
+      },
+      {
+        "question": "How much does it cost to recast a mortgage?",
+        "answer": "Use your servicer’s actual fee and minimum principal-reduction requirement. There is no universal amount in this model: a zero fee is an editable starting assumption, not a promise of free recasting. The fee is paid in cash and reduces net modeled interest savings. A small or zero lump sum can be a sensitivity test without qualifying for a real recast. Eligibility, minimums and processing time remain separate from repayment arithmetic.",
+        "queries": [
+          "how much does it cost to recast a mortgage"
+        ],
+        "replacesQuestion": "How much does a recast cost, and what is the minimum lump sum?"
+      },
+      {
+        "question": "How much will a lump-sum payment reduce my recast monthly payment?",
+        "answer": "The reduction depends on the balance, lump sum, fixed rate and remaining term. In the hypothetical $300,000 balance at 6% with 25 years left, a $50,000 principal payment and zero recast fee reduce estimated P&I from $1,932.90 to $1,610.75, about $322.15 monthly. This assumes current P&I is estimated from the remaining term. The $50,000 is principal you pay, not interest saved; taxes, insurance and PMI are separate. Enter actual scheduled P&I if prior prepayments changed the baseline.",
+        "queries": [
+          "how does a mortgage recast work"
+        ],
+        "anchor": "faq-recast-payment-reduction"
+      }
+    ],
+    "removeQuestions": [],
+    "sources": []
+  },
+  "emergency-fund": {
+    "checkedOn": "2026-11-02",
+    "items": [
+      {
+        "question": "How do I calculate how much emergency fund I need?",
+        "answer": "Multiply essential monthly expenses by the reserve months you choose, then subtract accessible emergency savings to find the remaining gap. For $3,000 monthly expenses and six months, the target is $18,000; with $5,000 already saved, the gap is $13,000. Use expenses rather than automatically multiplying gross income. This is a planning scenario, not a personal recommendation about the right reserve duration.",
+        "queries": [
+          "how much emergency fund should i have",
+          "how to calculate emergency fund"
+        ],
+        "replacesQuestion": "How should I choose an emergency-fund target?"
+      },
+      {
+        "question": "How many months of expenses does my emergency fund cover?",
+        "answer": "Divide accessible emergency savings by essential monthly expenses. At $5,000 saved and $3,000 per month, current coverage is about 1.67 months, regardless of a six-month target. The result assumes expenses remain unchanged; it does not count a credit limit, expected future earnings or an unconfirmed benefit as savings. Update the input when essential spending changes.",
+        "queries": [
+          "how to calculate emergency fund"
+        ],
+        "replacesQuestion": "How many months does my emergency fund cover?"
+      },
+      {
+        "question": "How long will it take to build an emergency fund?",
+        "answer": "Use Savings Plan with the target, current savings and a sustainable monthly deposit. For $3,000 expenses, a six-month target, $5,200 saved and $500 deposited each month, the $12,800 gap takes 26 month-end deposits; the last deposit needed is $300. The plan rounds up to the actual final deposit month. It assumes no interest, withdrawals, inflation or changing expenses. If a gap remains, a positive deposit is required; a completed target needs zero more months.",
+        "queries": [
+          "how long does it take to build an emergency fund",
+          "how to build an emergency fund"
+        ],
+        "anchor": "faq-emergency-saving-time"
+      }
+    ],
+    "removeQuestions": [],
+    "sources": []
+  },
+  "take-home-paycheck": {
+    "checkedOn": "2026-11-02",
+    "items": [
+      {
+        "question": "Why does this paycheck estimate differ from my actual payslip?",
+        "answer": "The tool estimates annual federal tax and allocates it across pay periods; it does not reproduce the IRS Publication 15-T payroll withholding procedure or your Form W-4 elections. Both modes use 2026 federal assumptions. State and local rates are effective rates you enter, not full jurisdiction-specific tax calculations. Actual payroll can also differ because of year-to-date wages, bonuses, benefit treatment, rounding and the employer’s calendar. Review the model notes and your pay statement rather than treating this as exact withholding.",
+        "queries": [
+          "how to calculate paycheck federal tax withholding",
+          "how to determine federal withholding from paycheck"
+        ],
+        "replacesQuestion": "Why does this estimate differ from my actual paycheck?"
+      },
+      {
+        "question": "Why do biweekly and semimonthly paychecks differ?",
+        "answer": "This model divides annual amounts by 26 for biweekly pay and 24 for semimonthly pay. With the same modeled annual net pay, dividing by 26 produces a smaller amount per paycheck. For gross pay of $62,400, the simple frequency equivalents are $2,400 biweekly and $2,600 semimonthly before deductions. Real payroll calendars can have a different count; this is an annual allocation convention, not a dated payroll schedule.",
+        "queries": [
+          "how to calculate biweekly paycheck",
+          "how to calculate monthly income from biweekly paycheck"
+        ],
+        "replacesQuestion": "Why do biweekly and semimonthly paychecks differ?"
+      },
+      {
+        "question": "What are FICA and OASDI on my paycheck?",
+        "answer": "FICA includes Social Security and Medicare. OASDI is the Social Security component, not a third payroll tax to subtract again. Check the employee Social Security and Medicare rows without adding a separate duplicate FICA deduction. Employer contributions are not extra employee deductions from gross pay. Covered wages and benefit treatment can differ; the tool’s self-employment assumptions are separate from an employee payroll calculation.",
+        "queries": [
+          "what is fica on my paycheck",
+          "what is oasdi on my paycheck"
+        ],
+        "replacesQuestion": "What are FICA and OASDI on my paycheck?"
+      },
+      {
+        "question": "Does tax withholding reduce my tax liability?",
+        "answer": "Withholding is generally a payment toward tax, not a deduction that automatically lowers the underlying tax liability. It can change cash received and the refund or amount due when compared with the actual tax owed. This calculator allocates estimated annual liability rather than setting an official W-4 withholding election. Do not treat the displayed allocation as a recommended amount to withhold.",
+        "queries": [
+          "how to determine federal withholding from paycheck"
+        ],
+        "replacesQuestion": "Does withholding reduce my tax liability?"
+      },
+      {
+        "question": "How do I estimate my paycheck after taxes?",
+        "answer": "Enter annual gross income, the applicable filing and job assumptions, pay frequency, and eligible deductions in the selected mode. The calculator estimates annual tax and divides the modeled net amount across its fixed pay-period count. State and local tax rates are assumptions you provide. An hourly amount must first be converted using hours and paid weeks; do not enter a per-paycheck wage in an annual income field. The result is a planning estimate, not an employer payroll statement.",
+        "queries": [
+          "how to calculate paycheck",
+          "how to calculate taxes on paycheck"
+        ],
+        "anchor": "faq-paycheck-after-tax-inputs"
+      },
+      {
+        "question": "What is the difference between gross pay and take-home pay?",
+        "answer": "Gross pay is earnings before taxes and payroll deductions; take-home pay is the amount left after the deductions modeled for that paycheck. For a simple fixed-frequency gross conversion, annual salary divided by the pay-period count gives gross pay per check. That is not the net result. Pre-tax and after-tax deductions can have different tax effects, so subtracting one flat tax percentage from gross pay does not reproduce this model.",
+        "queries": [
+          "how to calculate gross pay per paycheck"
+        ],
+        "anchor": "faq-paycheck-gross-versus-net"
+      }
+    ],
+    "removeQuestions": [
+      "Will this estimate exactly match my employer's tax withholding?",
+      "Will the paycheck result match my payslip exactly?"
+    ],
+    "sources": []
+  },
+  "roth-ira": {
+    "checkedOn": "2026-11-02",
+    "items": [
+      {
+        "question": "Does this calculator determine how much I am eligible to contribute to a Roth IRA?",
+        "answer": "No. It applies fixed 2026 model caps of $7,500 plus $1,100 when the modeled starting age of a projection year is at least 50, but it does not determine your permitted contribution. Taxable compensation, MAGI, filing status, calendar-year age rules and other IRA contributions can reduce available room. Traditional and Roth contributions share a combined limit. Future caps are not forecast; check eligibility separately before entering a contribution.",
+        "queries": [
+          "how much can you contribute to a roth ira"
+        ],
+        "replacesQuestion": "Does this calculator determine how much I am eligible to contribute?"
+      },
+      {
+        "question": "Is a Roth IRA balance always available tax-free?",
+        "answer": "No. Qualified Roth distributions can be tax-free, but contribution, conversion and earnings withdrawals have different rules. This projection assumes qualified distributions; it does not test qualification, five-year periods, ordering, penalties or a particular withdrawal’s tax treatment. An account-growth estimate is not permission to withdraw the full balance tax-free. Review the applicable IRS distribution rules for the transaction.",
+        "queries": [
+          "is roth ira tax free",
+          "is a roth ira tax free"
+        ],
+        "replacesQuestion": "Is a Roth IRA balance always available tax-free?"
+      },
+      {
+        "question": "How does a Roth IRA work in this calculator?",
+        "answer": "A Roth IRA is an account with specific tax treatment, not an investment paying a fixed return. Roth contributions are not deductible, and qualified distributions can be tax-free. This tool grows the entered opening balance, adds eligible annual contributions at year-end and compares it with a simplified taxable account under the same assumptions. The taxable result is not a traditional IRA; use IRA Calculator for the separate traditional/Roth comparison.",
+        "queries": [
+          "how does a roth ira work",
+          "what is a roth ira and how does it work"
+        ],
+        "anchor": "faq-roth-account-versus-investment"
+      },
+      {
+        "question": "How much interest or return does a Roth IRA earn?",
+        "answer": "There is no single Roth IRA interest rate. Returns depend on the holdings, costs and market outcomes inside the account. The Annual return field is your assumed constant rate, not a current quote or a guaranteed yield. The existing 0% and 6% examples show how changing an assumption affects the same deposits; they are illustrations, not predictions. This model does not simulate market volatility or infer an appropriate investment allocation.",
+        "queries": [
+          "how much interest does a roth ira earn",
+          "does a roth ira earn interest"
+        ],
+        "anchor": "faq-roth-return-assumption"
+      }
+    ],
+    "removeQuestions": [],
+    "sources": [
+      {
+        "title": "IRS: published 2026 IRA contribution and catch-up limits",
+        "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500"
+      }
+    ]
+  }
+}
