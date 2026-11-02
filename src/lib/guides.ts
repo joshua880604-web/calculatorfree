@@ -1,3 +1,4 @@
+import semrushRefinanceFaq from './semrush-refinance-faq-content.json';
 import semrushSalaryIraFaq from './semrush-salary-ira-faq-content.json';
 import discountPriorityContent from './discount-priority-content.json';
 import semrushFourthEightFaq from './semrush-fourth-eight-faq-content.json';
@@ -895,7 +896,7 @@ for(const [id,refresh] of Object.entries(calculationPageRefresh)){
 }
 
 // Export-backed FAQ review: merge in place to retain published anchors and links.
-for (const [id, review] of Object.entries({...semrushEightFaq, ...semrushNextEightFaq, ...semrushThirdEightFaq, ...semrushFourthEightFaq, ...semrushSalaryIraFaq})) {
+for (const [id, review] of Object.entries({...semrushEightFaq, ...semrushNextEightFaq, ...semrushThirdEightFaq, ...semrushFourthEightFaq, ...semrushSalaryIraFaq, ...semrushRefinanceFaq})) {
   const guide = guides[id];
   guide.questions = guide.questions.filter(q => !(review.removeQuestions as string[]).includes(q.question));
   for (const item of review.items) {
@@ -922,3 +923,6 @@ Object.assign(guides.discount, discountPriorityContent);
 relatedCalculatorIds.discount=['sales-tax','margin','markup','commission','percentage'];
 for(const id of ['sales-tax','margin','markup','commission'])
   relatedCalculatorIds[id]=[...new Set(['discount',...(relatedCalculatorIds[id]??[])])].slice(0,8);
+
+Object.assign(guides.refinance,{summary:semrushRefinanceFaq.refinance.summary,scope:semrushRefinanceFaq.refinance.scope});
+guides.refinance.examples.push(...semrushRefinanceFaq.refinance.examples);

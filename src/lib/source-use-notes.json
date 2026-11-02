@@ -1347,6 +1347,11 @@
       "role": "rule",
       "usedFor": "Separating ordinary IRA distribution taxation from basis, early-distribution taxes and exceptions.",
       "scope": "Applying a flat retirement rate to the projected balance does not compute an actual withdrawal tax bill."
+    },
+    "https://yourhome.fanniemae.com/calculators-tools/mortgage-refinance-calculator": {
+      "role": "background",
+      "usedFor": "Refinancing as replacement debt, rate/term tradeoffs and cash-out background in the questions.",
+      "scope": "Fannie Mae’s calculator defaults, housing-cost coverage and eligibility are not reproduced or adopted by this P&I-only model."
     }
   },
   "pages": {

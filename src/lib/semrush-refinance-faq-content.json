@@ -1,0 +1,123 @@
+{
+  "refinance": {
+    "checkedOn": "2026-11-02",
+    "items": [
+      {
+        "question": "Does refinancing lower your monthly mortgage payment?",
+        "answer": "It can, but a lower payment is not guaranteed and does not by itself prove that refinancing saves money. The rate, new term, cash-out amount and financed costs all affect principal and interest. Extending the term can lower the bill while increasing time in debt; shortening it can raise the payment while reducing interest. The calculator’s payment comparison excludes escrow, taxes, insurance and other ownership costs.",
+        "queries": [
+          "does refinancing lower your monthly payment"
+        ],
+        "replacesQuestion": "Does a lower refinance payment always save money?"
+      },
+      {
+        "question": "How does cash-out refinancing work in this calculator?",
+        "answer": "Cash-out adds borrowing above the current mortgage balance. Here, new principal equals current balance plus Cash out, plus closing costs if you select Finance closing costs. A $250,000 balance with $30,000 cash-out, 1% points and $3,000 other fees gives $5,800 modeled costs and $285,800 principal when those costs are financed. Points use balance plus cash-out before financed costs. Cash received is borrowed money, not profit or savings; the tool does not calculate a lender’s maximum cash-out, LTV or approval.",
+        "queries": [
+          "how does cash out refinancing work",
+          "how does a cash out refinance work"
+        ],
+        "replacesQuestion": "How do cash-out and closing costs affect a refinance comparison?"
+      },
+      {
+        "question": "How do I calculate the refinance break-even point?",
+        "answer": "Simple payment-based break-even is closing costs divided by a positive monthly payment reduction. For a hypothetical $250,000 balance, $1,800 current P&I, a new 20-year loan at 5%, no cash-out or points, and $3,000 costs paid upfront, new P&I is about $1,649.89. The reduction is about $150.11 and simple break-even is about 19.99 months. The figure is omitted when payment reduction is zero or negative. It ignores differing remaining balances, tax effects and opportunity cost; financed costs make it particularly unsuitable as an upfront-cash recovery measure.",
+        "queries": [
+          "how to calculate refinance break even",
+          "refinance break even calculator"
+        ],
+        "anchor": "faq-refinance-break-even"
+      },
+      {
+        "question": "How much does it cost to refinance a mortgage?",
+        "answer": "Use the lender’s quoted points and itemized charges rather than assuming one fee percentage fits every loan. In this model, closing costs = Other closing costs + (current balance + cash-out) × points / 100. For a $250,000 balance, no cash-out, 1% points and $3,000 other fees, costs are $5,500. Do not also include those points in Other closing costs. The tool does not itemize prepaid taxes, escrow adjustments or final cash to close; compare the actual Loan Estimates and check the lender’s points basis.",
+        "queries": [
+          "how much does it cost to refinance a mortgage",
+          "how much does refinancing a mortgage cost"
+        ],
+        "anchor": "faq-refinance-closing-costs"
+      },
+      {
+        "question": "Can I refinance with no closing costs?",
+        "answer": "An offer with little cash due upfront can still have financing costs. A lender credit may be reflected in a higher quoted rate, while rolling charges into the loan increases principal and interest. Finance closing costs in this calculator models the second approach; it does not erase the fees. Enter the quoted rate and costs you actually pay or finance. The tool does not price lender credits or certify a no-cost offer.",
+        "queries": [
+          "can you refinance with no closing costs"
+        ],
+        "anchor": "faq-refinance-no-closing-costs"
+      },
+      {
+        "question": "Does refinancing reset the mortgage term?",
+        "answer": "Refinancing replaces the mortgage with a new loan and its own repayment term; it does not have to be another 30-year loan. Enter the term actually being considered in New term. The Original Loan Information mode uses original terms and Payments already made to estimate the current balance; New term then starts from the refinance date. Compare remaining repayment time and full modeled interest, not just the change in monthly payment.",
+        "queries": [
+          "does refinancing reset loan term",
+          "does refinancing restart your mortgage"
+        ],
+        "anchor": "faq-refinance-new-term"
+      },
+      {
+        "question": "When is refinancing worth it?",
+        "answer": "Compare the quoted rate, fees, new repayment term and how long you expect to keep the replacement loan. A payment-based break-even before your expected sale or next refinance is a screening result, not proof of a better financial outcome. Also compare costs and remaining balances over the same horizon, any prepayment charges and effects of taking extra cash. This calculator reports full-loan interest and a simple break-even, not a custom holding-period net-worth or after-tax analysis. No universal rate drop makes every refinance worthwhile.",
+        "queries": [
+          "is refinancing worth it",
+          "when should i refinance my mortgage"
+        ],
+        "anchor": "faq-refinance-worth-it"
+      },
+      {
+        "question": "Which mortgage information should I enter for a refinance comparison?",
+        "answer": "Use the current principal balance, fixed annual note rate and scheduled monthly principal-and-interest payment from your statement. Exclude escrow and voluntary extra payments from Current monthly payment. If you use Original Loan Information instead, enter the original loan terms and the number of payments already made; prior extra principal is not reconstructed. Then enter the new quote’s rate, term, points, other costs and any cash-out. These are user-supplied assumptions, not live rates, underwriting or an application.",
+        "queries": [
+          "mortgage refinance calculator",
+          "how does refinancing a mortgage work"
+        ],
+        "anchor": "faq-refinance-inputs"
+      }
+    ],
+    "removeQuestions": [],
+    "sources": [
+      {
+        "title": "CFPB: compare Loan Estimates, fees, lender credits and borrowing costs",
+        "url": "https://www.consumerfinance.gov/owning-a-home/compare/compare-loan-estimates/"
+      },
+      {
+        "title": "CFPB: how no-closing-cost refinance offers shift costs",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/"
+      },
+      {
+        "title": "Fannie Mae: refinancing replaces the existing mortgage",
+        "url": "https://yourhome.fanniemae.com/calculators-tools/mortgage-refinance-calculator"
+      }
+    ],
+    "summary": "Compare fixed-rate monthly principal and interest on your current mortgage with a replacement loan. Enter points, other costs and cash-out explicitly, and distinguish simple payment break-even from a complete holding-period comparison.",
+    "scope": "No live rates, lender approval, maximum cash-out, property valuation or tax advice. Payment results exclude escrow and ownership costs. Simple break-even does not compare remaining balances or provide a custom sale-date net-worth analysis; full-loan interest totals can span different repayment terms.",
+    "examples": [
+      {
+        "title": "Check a simple payment-based refinance break-even",
+        "mode": "balance",
+        "values": {
+          "principal": "250000",
+          "payment": "1800",
+          "rate": "6",
+          "new_rate": "5",
+          "new_years": "20",
+          "cashout": "0",
+          "points": "0",
+          "fees": "3000",
+          "finance": "No"
+        },
+        "inputs": "Hypothetical $250,000 balance, current fixed 6% note rate and $1,800 monthly P&I; new fixed 5% rate for 20 years; no cash-out or points; $3,000 costs paid upfront.",
+        "steps": [
+          "Monthly new rate is 0.05 / 12 and the new term is 240 monthly payments. The amortizing payment is about $1,649.89.",
+          "Monthly reduction is $1,800 minus the unrounded new payment, about $150.11. Divide $3,000 by that unrounded reduction to obtain about 19.99 months.",
+          "This is a payment-based illustration. It does not establish same-horizon savings after fees, remaining debt, taxes or future rate changes."
+        ],
+        "answer": "Simple closing-cost break-even is approximately 19.99 months.",
+        "expected": {
+          "label": "Simple closing-cost break-even (months)",
+          "value": 19.985257280957345,
+          "tolerance": 1e-06
+        }
+      }
+    ]
+  }
+}

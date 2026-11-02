@@ -37,6 +37,7 @@ export const compactReadingLeadExamples: Record<string,number> = {
 // Shorter pages retain their reading flow; only measured long sections are folded.
 export type CompactReadingSections = Partial<Record<'questions'|'examples'|'sources'|'comparisons',boolean>>;
 export const compactReadingSections: Record<string,CompactReadingSections> = {
+  "refinance": {"questions": true, "sources": true},
   "ira": {"questions": true, "sources": true},
   "simple-interest": {
     "questions": true,
