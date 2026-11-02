@@ -11,7 +11,7 @@ test('Everyday links restore all 19 calculation modes without adding unsupported
  for(const id of everydayShareToolIds){
   const c=calculators.find(c=>c.id===id)!;
   assert.ok(hasShareTools(id));assert.equal(shareToolPaths[routeFor(id).slice(0,-5)],id);
-  assert.equal(hasEmbed(id),id==='discount');assert.equal(hasPinterest(id),false);assert.deepEqual(shareTabs(id),id==='discount'?['Share','Embed','Cite','Export']:['Share','Cite','Export']);
+  assert.equal(hasEmbed(id),id==='discount');assert.equal(hasPinterest(id),id==='discount');assert.deepEqual(shareTabs(id),id==='discount'?['Share','Embed','Cite','Export']:['Share','Cite','Export']);
   assert.doesNotMatch(shareScenarioHelp(id),/financial advisor|retirement/);
   for(const m of c.modes){
    const v=defaults(m),plain=new URL(calculationLink('https://example.com',routeFor(id),m,v)),url=new URL(calculationLink('https://example.com',routeFor(id),m,v,true));

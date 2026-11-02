@@ -1,0 +1,306 @@
+[
+  {
+    "id": "savings",
+    "mode": "accumulation",
+    "values": {
+      "principal": "10000",
+      "years": "10",
+      "months": "0",
+      "rate_type": "Nominal interest rate",
+      "rate": "5",
+      "compound": "Monthly",
+      "annual": "0",
+      "monthly": "100",
+      "timing": "End of period",
+      "tax": "0",
+      "inflation": "0",
+      "annual_increase": "0",
+      "monthly_increase": "0"
+    },
+    "metrics": [
+      {
+        "label": "Ending balance",
+        "value": "$31,998.32"
+      },
+      {
+        "label": "Total contributions",
+        "value": "$22,000.00"
+      }
+    ]
+  },
+  {
+    "id": "cd",
+    "mode": "accumulation",
+    "values": {
+      "principal": "10000",
+      "rate_type": "Nominal interest rate",
+      "rate": "5",
+      "compound": "Monthly",
+      "years": "3",
+      "months": "0",
+      "tax": "0"
+    },
+    "metrics": [
+      {
+        "label": "Maturity balance",
+        "value": "$11,614.72"
+      },
+      {
+        "label": "Interest earned",
+        "value": "$1,614.72"
+      }
+    ]
+  },
+  {
+    "id": "cagr",
+    "mode": "rate",
+    "values": {
+      "begin": "10000",
+      "end": "20000",
+      "years": "10"
+    },
+    "metrics": [
+      {
+        "label": "Compound annual growth rate",
+        "value": "7.1773%"
+      },
+      {
+        "label": "Total change",
+        "value": "100.0000%"
+      }
+    ]
+  },
+  {
+    "id": "investment-fee",
+    "mode": "impact",
+    "values": {
+      "balance": "10000",
+      "deposit": "1000",
+      "years": "20",
+      "rate": "8",
+      "basis": "Before fund fees",
+      "fund": "0.2",
+      "advisor": "0"
+    },
+    "metrics": [
+      {
+        "label": "Modeled fees paid",
+        "value": "$1,650.02"
+      },
+      {
+        "label": "Balance reduction including lost growth",
+        "value": "$2,909.70"
+      }
+    ]
+  },
+  {
+    "id": "mortgage",
+    "mode": "monthly",
+    "values": {
+      "loan_basis": "Home price & down payment",
+      "loan_amount": "320000",
+      "property_value": "",
+      "price": "400000",
+      "down": "20",
+      "down_unit": "Percent",
+      "years": "30",
+      "months": "0",
+      "rate": "6",
+      "start": "2026-10-01",
+      "tax": "4800",
+      "tax_unit": "Dollars",
+      "insurance": "1500",
+      "insurance_unit": "Dollars",
+      "pmi_method": "Automatic estimate",
+      "pmi_credit": "740-759",
+      "pmi": "0",
+      "pmi_unit": "Dollars",
+      "pmi_years": "11",
+      "pmi_policy": "Fixed duration",
+      "hoa": "0",
+      "hoa_unit": "Dollars",
+      "other": "0",
+      "other_unit": "Dollars",
+      "tax_growth": "0",
+      "insurance_growth": "0",
+      "hoa_growth": "0",
+      "other_growth": "0",
+      "extra_monthly": "0",
+      "extra_yearly": "0",
+      "extra_once": "0",
+      "extra_once_month": "1",
+      "extra_start": "1",
+      "extra_yearly_start": "12",
+      "dated": "",
+      "appraised_value": ""
+    },
+    "metrics": [
+      {
+        "label": "Monthly principal & interest",
+        "value": "$1,918.56"
+      },
+      {
+        "label": "Financed loan amount",
+        "value": "$320,000.00"
+      }
+    ]
+  },
+  {
+    "id": "refinance",
+    "mode": "balance",
+    "values": {
+      "principal": "250000",
+      "payment": "1800",
+      "rate": "6",
+      "new_rate": "5",
+      "new_years": "20",
+      "cashout": "0",
+      "points": "0",
+      "fees": "3000",
+      "finance": "No"
+    },
+    "metrics": [
+      {
+        "label": "New monthly payment",
+        "value": "$1,649.89"
+      },
+      {
+        "label": "Monthly payment reduction",
+        "value": "$150.11"
+      }
+    ]
+  },
+  {
+    "id": "down-payment",
+    "mode": "price",
+    "values": {
+      "cash": "100000",
+      "down": "20",
+      "closing": "3",
+      "closing_unit": "Percent",
+      "rate": "6",
+      "years": "30"
+    },
+    "metrics": [
+      {
+        "label": "Home price",
+        "value": "$434,782.61"
+      },
+      {
+        "label": "Down payment",
+        "value": "$86,956.52"
+      }
+    ]
+  },
+  {
+    "id": "biweekly-mortgage",
+    "mode": "biweekly",
+    "values": {
+      "principal": "300000",
+      "rate": "6.5",
+      "years": "30",
+      "months": "0",
+      "extra": "0"
+    },
+    "metrics": [
+      {
+        "label": "Biweekly payment",
+        "value": "$948.10"
+      },
+      {
+        "label": "Interest saved versus standard monthly",
+        "value": "$88,121.78"
+      }
+    ]
+  },
+  {
+    "id": "mortgage-recast",
+    "mode": "compare",
+    "values": {
+      "principal": "300000",
+      "rate": "6",
+      "years": "25",
+      "months": "0",
+      "lump": "50000",
+      "fee": "0",
+      "current_payment": ""
+    },
+    "metrics": [
+      {
+        "label": "New monthly P&I after recast",
+        "value": "$1,610.75"
+      },
+      {
+        "label": "Monthly P&I reduction",
+        "value": "$322.15"
+      }
+    ]
+  },
+  {
+    "id": "business-loan",
+    "mode": "repayment",
+    "values": {
+      "principal": "100000",
+      "years": "10",
+      "months": "0",
+      "rate": "6",
+      "compound": "Monthly",
+      "pay": "Monthly",
+      "origination": "3",
+      "documentation": "0",
+      "other_fee": "0",
+      "treatment": "Deducted from proceeds",
+      "insurance": "0"
+    },
+    "metrics": [
+      {
+        "label": "Payment per period",
+        "value": "$1,110.21"
+      },
+      {
+        "label": "Total interest",
+        "value": "$33,224.60"
+      }
+    ]
+  },
+  {
+    "id": "discount",
+    "mode": "percent",
+    "values": {
+      "before": "100",
+      "rate": "20"
+    },
+    "metrics": [
+      {
+        "label": "Sale price",
+        "value": "$80.00"
+      },
+      {
+        "label": "Amount saved",
+        "value": "$20.00"
+      }
+    ]
+  },
+  {
+    "id": "salary",
+    "mode": "conversion",
+    "values": {
+      "salary": "30",
+      "frequency": "Hourly",
+      "hours": "40",
+      "days": "5",
+      "holidays": "10",
+      "vacation": "15"
+    },
+    "metrics": [
+      {
+        "label": "Unadjusted annual salary",
+        "value": "$62,400.00"
+      },
+      {
+        "label": "Adjusted annual salary",
+        "value": "$56,400.00"
+      }
+    ]
+  }
+]

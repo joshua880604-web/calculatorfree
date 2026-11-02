@@ -12,7 +12,7 @@
   "mortgage-payoff": "Explore how extra payments could change payoff time and interest.",
   "house-affordability": "Estimate a home budget using income, debts and housing costs.",
   "pmi": "Estimate private mortgage insurance costs under your assumptions.",
-  "heloc": "Explore payments across a home equity line of credit\u2019s phases.",
+  "heloc": "Explore payments across a home equity line of credit’s phases.",
   "debt-snowball": "Explore a payoff plan that targets smaller balances first.",
   "debt-avalanche": "Explore a payoff plan that targets higher interest rates first.",
   "credit-cards-payoff": "Plan payments across multiple cards with one monthly budget.",
@@ -36,5 +36,17 @@
   "margin": "Keep margin on revenue separate from markup on cost when setting prices.",
   "markup": "Turn unit costs and markup into prices, then check the resulting margin.",
   "roi": "Separate total profit, total return and the annualized rate over a holding period.",
-  "discount-points": "Compare upfront points, monthly payments and costs before selling or refinancing."
+  "discount-points": "Compare upfront points, monthly payments and costs before selling or refinancing.",
+  "savings": "See how starting savings and regular deposits could grow.",
+  "cd": "Estimate maturity value from an assumed fixed rate and term.",
+  "cagr": "Turn beginning and ending values into a compound annual rate.",
+  "investment-fee": "See fees paid separately from the growth they may displace.",
+  "mortgage": "Separate principal and interest from the full housing budget.",
+  "refinance": "Compare the new payment with the payment you make today.",
+  "down-payment": "See how closing costs change the home price your cash supports.",
+  "biweekly-mortgage": "Compare accelerated biweekly payments with a monthly schedule.",
+  "mortgage-recast": "Estimate the payment after a lump sum with the same rate and term.",
+  "business-loan": "Separate the installment from fees and cash actually received.",
+  "discount": "Find the sale price and savings without adding percentages.",
+  "salary": "Convert gross pay while keeping time-off assumptions visible."
 }
