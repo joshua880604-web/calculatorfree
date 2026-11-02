@@ -1,4 +1,5 @@
 import SiteLink from "@/components/SiteLink";
+import DirectoryReading from './DirectoryReading';
 
 import {directoryGroups,directoryGroup,directorySort} from "@/lib/directory";
 import {categoryPaths,categoryHref} from '@/lib/calculator-categories';
@@ -55,7 +56,7 @@ export default function Directory({ propertyOnly = false }: { propertyOnly?: boo
           {categoryPaths[id]&&<SiteLink className="category-overview" href={categoryHref(id)}>Browse {title.toLowerCase()} tools »</SiteLink>}
         </section>; })}
       </div>
-
+      {!propertyOnly&&<DirectoryReading/>}
     </div>
   );
 }
