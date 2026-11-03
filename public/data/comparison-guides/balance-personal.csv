@@ -1,0 +1,21 @@
+Guide,"Balance Transfer vs Personal Loan: Compare Fees, Deadlines and Payoff"
+Scope,Monthly interest and payment timing are simplified; real billing cycles and daily interest can differ.,"No approval, transfer-limit, deferred-interest, late-payment, mixed-balance or new-purchase scenario is modeled."
+
+Hypothetical offer assumptions used in the examples
+Input,Balance transfer,Personal loan
+Existing debt cleared,"$10,000.00","$10,000.00"
+Fee financed,$300.00 (3%),$300.00 (3% origination)
+Starting amount owed,"$10,300.00","$10,300.00"
+Interest convention,0% for 18 months; then 24% nominal modeled monthly,12% nominal interest modeled monthly
+Other charges and new spending,None,None
+
+Same debt and financed fee: 18-month payoff comparison plus a 36-month control
+Path,Monthly plan or installment,Total repaid,Interest plus financed fee
+"0% transfer, cleared before expiration",$572.22,"$10,300.00",$300.00
+18-month personal loan at 12%,$628.12,"$11,306.07","$1,306.07"
+36-month personal loan at 12%,$342.11,"$12,315.87","$2,315.87"
+
+Original $400-per-month control; fees already financed
+Path,Payoff payments,Interest after financing,"Total financing cost versus $10,000 debt"
+"0% transfer for 18 months, then 24%",27,$302.94,$602.94
+"Personal loan at 12%, $400 payments",30,"$1,668.89","$1,968.89"

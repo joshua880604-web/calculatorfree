@@ -6,7 +6,7 @@ Financial calculators are the site's primary focus. The links below are a curate
 
 Interactive calculations run in the browser and require JavaScript. Default inputs and results are illustrations; estimates depend on the entered values, selected mode, timing, and rounding conventions. Future return and inflation presets are editable assumptions. General financial mathematics is not a jurisdiction-specific tax model; tax and retirement rules apply only to the jurisdictions and years stated on each page. Currency conversion uses a dated bundled reference snapshot or a manually entered rate. Consult the methodology and each tool's scope before interpreting a result.
 
-Navigation links checked: November 3, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
+Navigation links checked: November 4, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
 
 ## Start here
 
@@ -387,3 +387,10 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 - [CD Ladder: Build a Maturity Schedule Before Chasing a Rate](https://www.calculatorfree.io/guides/cd-ladder/): Build a CD ladder with an original three-rung maturity example, explicit APY inputs, reinvestment choices and liquidity limits, with individual CD calculator presets.
 - [Mortgage refinance waiting periods](https://www.calculatorfree.io/guides/how-soon-can-you-refinance-a-mortgage/): Product-specific timing and calculator limitations.
 - [Reinvested dividend taxes](https://www.calculatorfree.io/guides/are-reinvested-dividends-taxable/): Account types, reporting and an original cost-basis example.
+
+## Tax amounts, profit layers and borrowing choices
+
+- [Roth Conversion Taxes: Find the Taxable Amount Before Estimating the Bill](https://www.calculatorfree.io/guides/roth-conversion-taxes/): Understand taxable Roth conversions, IRA basis and pro-rata treatment with bounded examples, tax-payment planning and clear limits of the conversion-ladder model.
+- [Gross Margin vs Net Margin: Trace the Same Revenue to Net Profit](https://www.calculatorfree.io/guides/gross-margin-vs-net-margin/): Compare gross and net profit margins with an original income statement, operating-cost sensitivity cases and clear limits of the pricing margin calculator.
+- [HELOC vs Home Equity Loan: Compare Access and Repayment](https://www.calculatorfree.io/guides/heloc-vs-home-equity-loan/): Compare HELOC and home equity loan structures using equal borrowing, upfront fees and a 15-year horizon, with draw-period and repayment examples.
+- [Balance Transfer vs Personal Loan: Compare Fees, Deadlines and Payoff](https://www.calculatorfree.io/guides/balance-transfer-vs-personal-loan/): Compare a zero-rate balance transfer and a personal loan with equal debt and financed fees, an 18-month payoff target and a budget-limited post-promo example.

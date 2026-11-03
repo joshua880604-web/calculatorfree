@@ -267,7 +267,8 @@
       "topic": "Retirement",
       "breadcrumb": "Roth conversion ladder",
       "cardIntro": "An eight-year bridge shows why five years of living expenses may not cover conversion taxes across the whole selected plan.",
-      "format": "Planning guide & model check"
+      "format": "Planning guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "intro": "A Roth conversion ladder converts portions of a traditional IRA to Roth over successive tax years and plans later access to conversion principal. The difficult part is not just remembering a five-year period: living costs, taxes, prior contribution basis and actual available account value must fit together. Our zero-growth illustration makes those cash movements visible without optimizing tax brackets or promising early-retirement eligibility.",
     "calculatorId": "roth-conversion-ladder",
@@ -368,6 +369,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/roth-conversion-taxes/",
+        "label": "Roth conversion taxes: basis, taxable amount and tax-payment examples"
+      },
       {
         "href": "/glossary/roth-ira-five-year-rules/",
         "label": "Conversion clocks versus qualified distributions"

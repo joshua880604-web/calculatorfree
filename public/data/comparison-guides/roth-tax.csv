@@ -1,0 +1,17 @@
+Guide,Roth Conversion Taxes: Find the Taxable Amount Before Estimating the Bill
+Scope,"No pro-rata allocation, actual marginal tax brackets, state tax or income-linked effects are modeled by the linked ladder preset.","The two manual tax examples are distinct illustrations, not a combined recommendation or a tax return."
+
+Original no-growth illustration; not a completed Form 8606
+Step,Calculation,Amount
+Documented basis,Assumed starting basis,"$20,000.00"
+Allocation base,"$75,000 year-end IRA value + $25,000 conversion","$100,000.00"
+Basis fraction,"$20,000 ÷ $100,000",20.00%
+Nontaxable conversion,"$25,000 × 20%","$5,000.00"
+Taxable conversion,"$25,000 − $5,000","$20,000.00"
+Remaining basis,"$20,000 − $5,000","$15,000.00"
+
+Original hypothetical marginal-band illustration
+Taxable portion,Assumed rate,Illustrated tax
+"First $10,000",22%,"$2,200.00"
+"Next $30,000",24%,"$7,200.00"
+"Total $40,000",23.5% blended,"$9,400.00"

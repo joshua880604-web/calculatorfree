@@ -6,10 +6,11 @@ import ContentReviewNotice from './ContentReviewNotice';
 import SourceReferences from './SourceReferences';
 import SiteLink from './SiteLink';
 export default function QuestionGuideArticle({guide,sections,sources,children,lead}:{guide:EditorialGuide;sections:{id:string;label:string}[];sources:{title:string;url:string}[];children:ReactNode;lead?:ReactNode}){
+ const dateLabel=(date:string)=>new Date(date+'T00:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'});
  return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="editorial-article">
   <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">{guide.breadcrumb}</span></nav>
   <p className="glossary-category">{guide.topic} · {guide.format}</p><h1>{guide.heading}</h1>
-  <p className="guide-byline">By <SiteLink href="/about#publisher">CalculatorFree.io</SiteLink> · Published <time dateTime={guide.publishedOn}>November 3, 2026</time>. Source context and example arithmetic checked on this date.</p>
+  <p className="guide-byline">By <SiteLink href="/about#publisher">CalculatorFree.io</SiteLink> · Published <time dateTime={guide.publishedOn}>{dateLabel(guide.publishedOn)}</time>{guide.updatedOn&&<> · Updated <time dateTime={guide.updatedOn}>{dateLabel(guide.updatedOn)}</time></>}. Source scope and model limitations appear below.</p>
   <ContentReviewNotice kind="guide"/>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(editorialSchema(guide))}}/>
   {lead}

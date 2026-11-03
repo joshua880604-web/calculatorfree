@@ -1,0 +1,19 @@
+Guide,Gross Margin vs Net Margin: Trace the Same Revenue to Net Profit
+Scope,Revenue and cost classifications are assumptions; no accounting standard or industry benchmark is inferred.,"Net-profit and tax-expense rows are manual illustrations, not full income-statement or tax-calculator results."
+
+Original simplified income statement for one hypothetical period
+Line,Amount,Share of revenue
+Net revenue,"$100,000.00",100.00%
+Cost of sales,"$60,000.00",60.00%
+Gross profit,"$40,000.00",40.00%
+Operating expenses,"$30,000.00",30.00%
+Operating profit,"$10,000.00",10.00%
+Interest expense,"$2,000.00",2.00%
+Entered income-tax expense,"$2,000.00",2.00%
+Net profit,"$6,000.00",6.00%
+
+"Same $100,000 revenue and $60,000 cost of sales; interest expense $2,000"
+Case,Operating expense,Entered tax expense,Gross profit,Gross margin,Net profit,Net margin
+Base,"$30,000.00","$2,000.00","$40,000.00",40.00%,"$6,000.00",6%
+Higher operating expense,"$35,000.00","$2,000.00","$40,000.00",40.00%,"$1,000.00",1%
+Operating-loss case,"$45,000.00",$0.00,"$40,000.00",40.00%,"$-7,000.00",-7%

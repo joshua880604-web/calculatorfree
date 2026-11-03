@@ -28,10 +28,11 @@ test('Articles and Guides collection describe the same visible entries without i
 
 test('Substantive question updates preserve original publication and advance reviewed sitemap dates',()=>{
  const updated=editorialGuides.filter(g=>g.updatedOn);
- assert.equal(updated.length,28);
+ assert.equal(updated.length,32);
+ const november4Updates=new Set(["/guides/how-are-heloc-payments-calculated/", "/guides/how-to-calculate-home-equity-loan-payments/", "/guides/how-to-calculate-personal-loan-payments/", "/guides/how-to-compare-debt-consolidation-loans/", "/guides/roth-conversion-ladder/"]);
  const novemberUpdates=new Set(['/guides/how-to-calculate-monthly-mortgage-payment/','/guides/compound-interest-with-monthly-contributions/','/guides/how-long-will-retirement-savings-last/','/guides/how-does-an-hsa-work/','/guides/how-401k-matching-works/','/guides/how-to-calculate-cap-rate/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/how-are-heloc-payments-calculated/','/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-simple-interest/','/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/should-you-reinvest-dividends/','/guides/is-refinancing-worth-it/']);
  for(const guide of updated){
-  assert.equal(guide.updatedOn,novemberUpdates.has(guide.path)?'2026-11-03':['/guides/compound-interest-with-monthly-contributions/','/guides/biweekly-vs-monthly-mortgage-payments/'].includes(guide.path)?'2026-11-01':guide.path==='/guides/how-to-calculate-coast-fire/'?'2026-10-31':'2026-10-30');
+  assert.equal(guide.updatedOn,november4Updates.has(guide.path)?'2026-11-04':novemberUpdates.has(guide.path)?'2026-11-03':['/guides/compound-interest-with-monthly-contributions/','/guides/biweekly-vs-monthly-mortgage-payments/'].includes(guide.path)?'2026-11-01':guide.path==='/guides/how-to-calculate-coast-fire/'?'2026-10-31':'2026-10-30');
   assert.ok(guide.publishedOn<=guide.updatedOn!);
   const entry=sitemapEntries(config).find(e=>e.url===config.origin+guide.path)!;
   assert.equal(entry.lastModified,guide.updatedOn);

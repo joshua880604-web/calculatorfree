@@ -1,0 +1,146 @@
+[
+  {
+    "calculatorId": "roth-conversion-ladder",
+    "mode": "bridge",
+    "values": {
+      "start_year": 2027,
+      "age": 40,
+      "years": 1,
+      "pretax": 100000,
+      "bridge": 5500,
+      "roth_basis": 0,
+      "conversion": 25000,
+      "conversion_growth": 0,
+      "tax": 22,
+      "spending": 0,
+      "spending_growth": 0,
+      "pretax_return": 0,
+      "roth_return": 0
+    },
+    "metrics": {
+      "Total actually converted": 25000.0,
+      "Estimated conversion tax": 5500.0,
+      "Conversion tax paid from cash": 5500.0
+    }
+  },
+  {
+    "calculatorId": "margin",
+    "mode": "margin",
+    "values": {
+      "cost": 60000,
+      "revenue": 100000
+    },
+    "metrics": {
+      "Profit": 40000.0,
+      "Gross margin": 40.0
+    }
+  },
+  {
+    "calculatorId": "heloc",
+    "mode": "draw-repay",
+    "values": {
+      "principal": 50000,
+      "rate": 8,
+      "draw": 5,
+      "years": 10,
+      "closing": 1000,
+      "closing_unit": "Dollars",
+      "closing_treatment": "Upfront",
+      "charge": 0
+    },
+    "metrics": {
+      "Monthly draw payment": 333.3333333333333,
+      "Monthly repayment": 606.6379717767846,
+      "Total interest": 42796.55661321416,
+      "Fees and annual charges": 1000.0
+    }
+  },
+  {
+    "calculatorId": "home-equity-loan",
+    "mode": "loan",
+    "values": {
+      "principal": 50000,
+      "years": 15,
+      "months": 0,
+      "rate": 8,
+      "closing": 1000,
+      "treatment": "Paid upfront"
+    },
+    "metrics": {
+      "Payment per period": 477.8260421651757,
+      "Total interest": 36008.68758973163,
+      "Net proceeds": 49000.0
+    }
+  },
+  {
+    "calculatorId": "heloc",
+    "mode": "draw-repay",
+    "values": {
+      "principal": 50000,
+      "rate": 10,
+      "draw": 5,
+      "years": 10,
+      "closing": 1000,
+      "closing_unit": "Dollars",
+      "closing_treatment": "Upfront",
+      "charge": 0
+    },
+    "metrics": {
+      "Monthly draw payment": 416.6666666666667,
+      "Monthly repayment": 660.7536844088083
+    }
+  },
+  {
+    "calculatorId": "personal-loan",
+    "mode": "repayment",
+    "values": {
+      "principal": 10000,
+      "years": 1,
+      "months": 6,
+      "rate": 12,
+      "origination": 3,
+      "documentation": 0,
+      "other_fee": 0,
+      "treatment": "Financed",
+      "insurance": 0
+    },
+    "metrics": {
+      "Payment per period": 628.1150933216037,
+      "Total interest": 1006.0716797888656,
+      "Loan fees": 300.0,
+      "Net proceeds after fees": 10000.0
+    }
+  },
+  {
+    "calculatorId": "personal-loan",
+    "mode": "repayment",
+    "values": {
+      "principal": 10000,
+      "years": 3,
+      "months": 0,
+      "rate": 12,
+      "origination": 3,
+      "documentation": 0,
+      "other_fee": 0,
+      "treatment": "Financed",
+      "insurance": 0
+    },
+    "metrics": {
+      "Payment per period": 342.1073910723673,
+      "Total interest": 2015.866078605223
+    }
+  },
+  {
+    "calculatorId": "credit-card",
+    "mode": "payment",
+    "values": {
+      "principal": 3100,
+      "rate": 24,
+      "payment": 400
+    },
+    "metrics": {
+      "Total interest": 302.9355902829456,
+      "Number of payments": 9
+    }
+  }
+]

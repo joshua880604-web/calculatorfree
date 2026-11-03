@@ -1973,7 +1973,7 @@
       "breadcrumb": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
       "cardIntro": "Calculate interest-only HELOC draw payments and amortizing repayment. Compare rates, terms, annual fees and closing costs using six reproducible scenarios.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-03"
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/heloc-calculator",
     "calculatorLabel": "HELOC Calculator",
@@ -2096,6 +2096,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/heloc-vs-home-equity-loan/",
+        "label": "HELOC versus a home equity loan: matching amount and horizon"
+      },
       {
         "href": "/guides/cash-out-refinance-vs-heloc/",
         "label": "Cash-out refinance versus HELOC: whole-loan comparison"
@@ -3335,7 +3339,8 @@
       "topic": "Loans & debt",
       "breadcrumb": "How to Calculate Personal Loan Payments, Fees and Total Cost",
       "cardIntro": "Calculate personal loan installments, net proceeds and borrowing cost. Compare deducted or financed fees and a longer term using four reproducible examples.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/personal-loan-calculator",
     "calculatorLabel": "Personal Loan Calculator",
@@ -3450,6 +3455,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/balance-transfer-vs-personal-loan/",
+        "label": "Balance transfer versus personal loan: fees and deadlines"
+      },
       {
         "href": "/guides/apr-vs-interest-rate/",
         "label": "APR versus interest rate guide"
@@ -4590,7 +4599,8 @@
       "topic": "Mortgage & housing",
       "breadcrumb": "How to Calculate Home Equity Loan Payments and Costs",
       "cardIntro": "Calculate fixed home equity loan payments and closing-cost effects. Five reproducible cases compare term, net proceeds and upfront versus financed charges.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/home-equity-loan-calculator",
     "calculatorLabel": "Home Equity Loan Calculator",
@@ -4702,6 +4712,10 @@
     ],
     "related": [
       {
+        "href": "/guides/heloc-vs-home-equity-loan/",
+        "label": "Compare a fixed loan and a credit line"
+      },
+      {
         "href": "/guides/how-are-heloc-payments-calculated/",
         "label": "HELOC draw and repayment guide"
       },
@@ -4732,7 +4746,8 @@
       "topic": "Loans & debt",
       "breadcrumb": "How to Compare Debt Consolidation Loan Costs",
       "cardIntro": "Compare a consolidation loan with continued repayment using four reproducible cases. Separate lower monthly payments from interest-plus-fee savings and a longer term.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/debt-consolidation-calculator",
     "calculatorLabel": "Debt Consolidation Calculator",
@@ -4843,6 +4858,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/balance-transfer-vs-personal-loan/",
+        "label": "Promotional transfer versus installment-loan comparison"
+      },
       {
         "href": "/guides/how-to-calculate-personal-loan-payments/",
         "label": "Personal loan fees and payments guide"

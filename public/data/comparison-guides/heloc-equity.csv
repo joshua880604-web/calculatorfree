@@ -1,0 +1,19 @@
+Guide,HELOC vs Home Equity Loan: Compare Access and Repayment
+Scope,"The example assumes an immediate full draw, constant scenario rates and full amortization after the draw phase.","No future rate reset, partial-draw schedule, first-mortgage cost, tax benefit or eligibility check is modeled."
+
+General structure questions; the contract determines the answer
+Question,Home equity loan,HELOC
+How is cash accessed?,Typically a lump sum,Draws under an available line
+What balance earns interest?,Outstanding borrowed principal,Outstanding drawn balance under its terms
+What must be budgeted?,Scheduled loan payment and fees,"Draw payment, later repayment and possible rate changes"
+What remains alongside it?,Existing first-mortgage obligations,Existing first-mortgage obligations
+
+"Original same-amount, same-fee, same-final-horizon comparison"
+Path,First 60 monthly payments,Later monthly payments,Interest through payoff,Interest plus upfront fee
+Fixed 15-year loan at 8%,$477.83,$477.83,"$36,008.69","$37,008.69"
+HELOC at constant 8%,$333.33,$606.64,"$42,796.56","$43,796.56"
+
+"Separate constant-rate HELOC stress cases; same $50,000 balance"
+Assumed rate,Monthly interest-only draw payment,Monthly ten-year repayment
+8%,$333.33,$606.64
+10%,$416.67,$660.75

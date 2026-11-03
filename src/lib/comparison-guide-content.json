@@ -1947,5 +1947,985 @@
       "No future renewal rates, taxes, fees, early-exit penalties, calls or market sale prices are simulated.",
       "Initial maturity amounts are at different dates and are not a common-date total portfolio value."
     ]
+  },
+  "roth-tax": {
+    "meta": {
+      "path": "/guides/roth-conversion-taxes/",
+      "title": "Roth Conversion Taxes: Taxable Amount, Basis & Examples",
+      "heading": "Roth Conversion Taxes: Find the Taxable Amount Before Estimating the Bill",
+      "description": "Understand taxable Roth conversions, IRA basis and pro-rata treatment with bounded examples, tax-payment planning and clear limits of the conversion-ladder model.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "roth-conversion-ladder",
+        "ira"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "Roth Conversion Taxes",
+      "cardIntro": "Understand taxable Roth conversions, IRA basis and pro-rata treatment with bounded examples, tax-payment planning and clear limits of the conversion-ladder model.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "A Roth conversion can add taxable ordinary income for the year of conversion. The taxable amount is not always the whole transfer, and multiplying it by one guessed tax bracket is not a complete tax calculation. First establish IRA basis and the applicable allocation, then compare the full return with and without the conversion.",
+    "intro": "This guide concerns general U.S. federal treatment of an individual’s traditional-IRA-to-Roth-IRA conversion. It does not determine your filing liability, state treatment, eligibility for a particular transfer or the effects of every account. An ordinary Roth IRA contribution and a conversion are different transactions.",
+    "sections": [
+      {
+        "id": "taxable",
+        "title": "Separate the transfer, taxable amount and tax owed",
+        "paragraphs": [
+          "A $25,000 transfer is an amount moved between accounts. Its taxable portion depends on whether the IRA includes nondeductible basis and on the applicable tax rules. The additional tax bill then depends on the rest of the return: income, deductions, filing status and other interactions can affect the change.",
+          "IRS Publication 590-A explains that amounts otherwise taxable when distributed generally remain includible when converted. A return of basis is different. Keep prior Forms 8606 and records from all relevant accounts; a custodian knowing only one account may not have your complete basis history."
+        ],
+        "formula": "Additional federal tax from a conversion = tax with the conversion − tax without it"
+      },
+      {
+        "id": "basis",
+        "title": "A simplified pro-rata example",
+        "paragraphs": [
+          "Assume one owner has $20,000 of documented nondeductible basis and $100,000 in aggregate traditional IRA value immediately before a $25,000 conversion. Assume no market movement, contributions, other distributions, outstanding rollovers or special adjustments. After the conversion, the year-end traditional IRA value is $75,000.",
+          "In this deliberately simple case, $75,000 remaining plus $25,000 converted gives a $100,000 allocation base. The basis fraction is 20%, so $5,000 of the conversion is nontaxable and $20,000 is taxable. The remaining basis is $15,000. Actual Form 8606 calculations use the specified year-end values and adjustments; do not automatically substitute a balance observed on conversion day.",
+          "The relevant aggregation can include traditional, SEP and SIMPLE IRAs for the same owner. Choosing to transfer from the account containing nondeductible contributions does not by itself let you select only after-tax dollars. Special account and rollover rules require individual review."
+        ],
+        "table": {
+          "caption": "Original no-growth illustration; not a completed Form 8606",
+          "headers": [
+            "Step",
+            "Calculation",
+            "Amount"
+          ],
+          "rows": [
+            [
+              "Documented basis",
+              "Assumed starting basis",
+              "$20,000.00"
+            ],
+            [
+              "Allocation base",
+              "$75,000 year-end IRA value + $25,000 conversion",
+              "$100,000.00"
+            ],
+            [
+              "Basis fraction",
+              "$20,000 ÷ $100,000",
+              "20.00%"
+            ],
+            [
+              "Nontaxable conversion",
+              "$25,000 × 20%",
+              "$5,000.00"
+            ],
+            [
+              "Taxable conversion",
+              "$25,000 − $5,000",
+              "$20,000.00"
+            ],
+            [
+              "Remaining basis",
+              "$20,000 − $5,000",
+              "$15,000.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "brackets",
+        "title": "A marginal rate is not always the rate on every converted dollar",
+        "paragraphs": [
+          "For a hypothetical $40,000 fully taxable conversion, suppose the first $10,000 falls in a 22% marginal band and the next $30,000 in a 24% band. Ignoring every other interaction, the increment is $2,200 + $7,200 = $9,400. Applying 22% to all $40,000 would give $8,800, understating this illustration by $600.",
+          "These assumed band capacities are not a current-year tax table. They illustrate why the rest of the return matters. Deductions, credits and income-linked provisions can change the effective cost. A comparison should identify the tax year and verify the actual rules rather than treating the illustrated rates as a recommendation."
+        ],
+        "table": {
+          "caption": "Original hypothetical marginal-band illustration",
+          "headers": [
+            "Taxable portion",
+            "Assumed rate",
+            "Illustrated tax"
+          ],
+          "rows": [
+            [
+              "First $10,000",
+              "22%",
+              "$2,200.00"
+            ],
+            [
+              "Next $30,000",
+              "24%",
+              "$7,200.00"
+            ],
+            [
+              "Total $40,000",
+              "23.5% blended",
+              "$9,400.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "payment",
+        "title": "Plan how the tax will be paid",
+        "paragraphs": [
+          "A conversion can create a payment obligation even though cash never arrives in a checking account. Review withholding and estimated-payment needs using the applicable rules. A filing deadline is not automatically permission to delay all payments until then.",
+          "If money is withheld or retained from a distribution rather than moved into the Roth account, it is a different cash flow from tax paid using outside savings. Depending on age and exceptions, the retained amount can also have distribution consequences. Our example assumes a properly completed conversion and taxes paid from separate cash."
+        ]
+      },
+      {
+        "id": "model",
+        "title": "What the conversion-ladder calculator can reproduce",
+        "paragraphs": [
+          "The linked single-year preset converts $25,000 of entirely pre-tax money at an entered flat 22% scenario rate. It therefore estimates $5,500 of conversion tax, paid from $5,500 outside cash. Returns and living spending are zero so the arithmetic is easy to trace. This is not the pro-rata example above: the tool does not calculate nondeductible basis or a marginal tax return.",
+          "The ladder model also follows conversion timing and a disclosed early-retirement bridge. Conversion five-tax-year rules and qualified Roth earnings rules are separate checks, explained in the ladder guide. Do not read the account’s total value as proof that all funds can be withdrawn without tax or additional charges."
+        ],
+        "links": [
+          {
+            "href": "/guides/roth-conversion-ladder/",
+            "label": "Roth conversion ladder timing and accessibility"
+          }
+        ]
+      },
+      {
+        "id": "records",
+        "title": "Keep a conversion review worksheet",
+        "paragraphs": [
+          "Record the owner, source account type, transaction year, gross amount, amount actually received by the Roth account, any withholding and the source of tax-payment cash. Gather prior nondeductible contribution records and the year-end information needed for the applicable form.",
+          "Then compare a baseline return and a conversion return with a qualified tax professional or suitable filing software. Preserve transaction confirmations and reconcile the reporting forms. A calculator scenario can help organize the discussion, but cannot resolve missing basis records or guarantee a particular tax outcome."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Are Roth conversions taxed as ordinary income?",
+        "answer": "The taxable portion generally enters ordinary income under the applicable conversion rules. It is not automatically taxed at a capital-gains rate, and basis can change the taxable portion."
+      },
+      {
+        "question": "Can I choose to convert only after-tax IRA money?",
+        "answer": "Not simply by choosing one traditional IRA account. Applicable aggregation and basis-allocation rules must be considered, including relevant SEP and SIMPLE IRA balances."
+      },
+      {
+        "question": "When do I pay the tax on a Roth conversion?",
+        "answer": "Review the rules for withholding and estimated payments for the conversion year. The full filing and payment situation matters; this guide does not calculate a safe harbor or penalty."
+      },
+      {
+        "question": "Does the conversion-ladder calculator calculate my actual tax bill?",
+        "answer": "No. It uses an entered flat tax scenario for fully taxable conversions, and does not implement a full return or pro-rata basis allocation."
+      },
+      {
+        "question": "Is a Roth conversion the same as a Roth IRA contribution?",
+        "answer": "No. Contribution eligibility, limits and conversion treatment are different questions. Use the appropriate rules for the transaction and tax year."
+      }
+    ],
+    "sources": [
+      {
+        "title": "IRS Publication 590-A: converting to a Roth IRA",
+        "url": "https://www.irs.gov/publications/p590a",
+        "usedFor": "Conversion income, basis distinctions and retained-distribution context.",
+        "scope": "Use the edition and tax-year rules applicable to the actual transaction; the article is not a return calculation."
+      },
+      {
+        "title": "IRS Form 8606 instructions",
+        "url": "https://www.irs.gov/instructions/i8606",
+        "usedFor": "IRA basis allocation, reporting and year-end account values.",
+        "scope": "The original no-growth example omits adjustments required in more complex cases. Check the form for the actual filing year."
+      },
+      {
+        "title": "IRS: estimated taxes",
+        "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+        "usedFor": "The need to review tax payment timing.",
+        "scope": "No safe-harbor amount, estimated-payment obligation or penalty is calculated here."
+      }
+    ],
+    "related": [
+      {
+        "href": "/roth-conversion-ladder-calculator",
+        "label": "Roth Conversion Ladder Calculator"
+      },
+      {
+        "href": "/guides/roth-conversion-ladder/",
+        "label": "How a Roth conversion ladder works"
+      },
+      {
+        "href": "/guides/401k-vs-roth-ira/",
+        "label": "Account structure versus tax treatment"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the fully taxable $25,000 conversion at a flat 22% only",
+        "path": "/roth-conversion-ladder-calculator",
+        "mode": "bridge",
+        "values": {
+          "start_year": 2027,
+          "age": 40,
+          "years": 1,
+          "pretax": 100000,
+          "bridge": 5500,
+          "roth_basis": 0,
+          "conversion": 25000,
+          "conversion_growth": 0,
+          "tax": 22,
+          "spending": 0,
+          "spending_growth": 0,
+          "pretax_return": 0,
+          "roth_return": 0
+        }
+      }
+    ],
+    "limitations": [
+      "No pro-rata allocation, actual marginal tax brackets, state tax or income-linked effects are modeled by the linked ladder preset.",
+      "The two manual tax examples are distinct illustrations, not a combined recommendation or a tax return."
+    ]
+  },
+  "gross-net-margin": {
+    "meta": {
+      "path": "/guides/gross-margin-vs-net-margin/",
+      "title": "Gross Margin vs Net Margin: Formulas & Worked Examples",
+      "heading": "Gross Margin vs Net Margin: Trace the Same Revenue to Net Profit",
+      "description": "Compare gross and net profit margins with an original income statement, operating-cost sensitivity cases and clear limits of the pricing margin calculator.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "margin",
+        "markup",
+        "break-even"
+      ],
+      "topic": "Business finance",
+      "breadcrumb": "Gross Margin vs Net Margin",
+      "cardIntro": "Compare gross and net profit margins with an original income statement, operating-cost sensitivity cases and clear limits of the pricing margin calculator.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "Gross margin compares revenue after cost of sales with that revenue. Net margin compares the final profit or loss after all included expenses with the same revenue. A healthy-looking gross margin can coexist with a low or negative net margin when operating, financing and tax expenses are large.",
+    "intro": "This guide uses an original simplified income statement to keep the definitions consistent. The amounts are hypothetical and describe one reporting period. The Margin Calculator reproduces the gross-margin arithmetic for the entered cost and revenue; it does not prepare a complete income statement or calculate business taxes.",
+    "sections": [
+      {
+        "id": "formulas",
+        "title": "Use the same revenue denominator",
+        "paragraphs": [
+          "For a stated period, gross profit is revenue minus cost of sales, and gross margin is gross profit divided by revenue. Net profit is the result after the other included expenses and income items, and net margin is that result divided by the same revenue. Specify whether revenue is already net of returns and allowances.",
+          "Use consistent cost classifications and reporting periods. A company can classify some costs differently from another company, making a headline ratio less comparable. If revenue is zero, these percentage margins are undefined; do not invent a zero or infinite business-performance score."
+        ],
+        "formula": "Gross margin = (revenue − cost of sales) / revenue × 100%; net margin = net profit / revenue × 100%"
+      },
+      {
+        "id": "statement",
+        "title": "An original $100,000 revenue example",
+        "paragraphs": [
+          "Assume $100,000 net revenue, $60,000 cost of sales, $30,000 operating expenses, $2,000 interest expense and $2,000 entered income-tax expense. There are no other income items or expenses. Gross profit is $40,000, operating profit is $10,000 and final net profit is $6,000.",
+          "The tax expense is an assumption, not the output of a tax model. In a real report, verify what is included at each subtotal before using the same labels. Gross profit, operating profit and net profit answer different questions about the same revenue."
+        ],
+        "table": {
+          "caption": "Original simplified income statement for one hypothetical period",
+          "headers": [
+            "Line",
+            "Amount",
+            "Share of revenue"
+          ],
+          "rows": [
+            [
+              "Net revenue",
+              "$100,000.00",
+              "100.00%"
+            ],
+            [
+              "Cost of sales",
+              "$60,000.00",
+              "60.00%"
+            ],
+            [
+              "Gross profit",
+              "$40,000.00",
+              "40.00%"
+            ],
+            [
+              "Operating expenses",
+              "$30,000.00",
+              "30.00%"
+            ],
+            [
+              "Operating profit",
+              "$10,000.00",
+              "10.00%"
+            ],
+            [
+              "Interest expense",
+              "$2,000.00",
+              "2.00%"
+            ],
+            [
+              "Entered income-tax expense",
+              "$2,000.00",
+              "2.00%"
+            ],
+            [
+              "Net profit",
+              "$6,000.00",
+              "6.00%"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "sensitivity",
+        "title": "Gross margin can stay unchanged while net profit falls",
+        "paragraphs": [
+          "Hold revenue, cost of sales and $2,000 interest expense constant. Increasing operating expenses from $30,000 to $35,000 reduces net profit from $6,000 to $1,000 when the entered tax expense remains $2,000. The 40% gross margin did not change, because no cost-of-sales input changed.",
+          "The last case uses $45,000 operating expense and zero entered tax expense to illustrate a loss. It makes no assumption about tax refunds or loss carryforwards. These controlled cases isolate cost layers; they do not forecast how expenses or taxes would actually respond to revenue changes."
+        ],
+        "table": {
+          "caption": "Same $100,000 revenue and $60,000 cost of sales; interest expense $2,000",
+          "headers": [
+            "Case",
+            "Operating expense",
+            "Entered tax expense",
+            "Gross profit",
+            "Gross margin",
+            "Net profit",
+            "Net margin"
+          ],
+          "rows": [
+            [
+              "Base",
+              "$30,000.00",
+              "$2,000.00",
+              "$40,000.00",
+              "40.00%",
+              "$6,000.00",
+              "6%"
+            ],
+            [
+              "Higher operating expense",
+              "$35,000.00",
+              "$2,000.00",
+              "$40,000.00",
+              "40.00%",
+              "$1,000.00",
+              "1%"
+            ],
+            [
+              "Operating-loss case",
+              "$45,000.00",
+              "$0.00",
+              "$40,000.00",
+              "40.00%",
+              "$-7,000.00",
+              "-7%"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "markup",
+        "title": "Margin is also different from markup",
+        "paragraphs": [
+          "Gross margin divides gross profit by revenue. Markup divides the difference between selling price and cost by cost. In the base example, $40,000 divided by $100,000 is a 40% gross margin, while $40,000 divided by $60,000 is a 66.67% markup. Neither is the 6% net margin.",
+          "Changing a selling price based on a markup target does not ensure a target net margin. To assess the latter, model the rest of the cost structure and any volume response. The existing margin-versus-markup guide focuses on the pricing denominator, while this article follows the other income-statement layers."
+        ],
+        "links": [
+          {
+            "href": "/guides/margin-vs-markup/",
+            "label": "Margin versus markup: pricing and denominator examples"
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Compare like periods and like cost definitions",
+        "paragraphs": [
+          "Check net revenue, returns, discounts, cost-of-sales policies, operating expenses, interest and tax treatment. Separate one-off items from recurring operations without silently deleting real costs. A margin adjusted to exclude expenses should be labeled and reconciled rather than presented as ordinary net margin.",
+          "Do not assume profit equals cash available to spend. Receivables, inventory, capital purchases, borrowing and principal repayments can make cash flow differ from reported profit. A business with a positive margin can still face a cash shortfall."
+        ]
+      },
+      {
+        "id": "tool",
+        "title": "Use the calculator for the part it actually models",
+        "paragraphs": [
+          "Enter revenue $100,000 and cost $60,000 in the Margin Calculator to reproduce $40,000 profit at that cost layer and a 40% gross margin. The tool’s output label does not establish which expenses belong in your cost of sales. Classification still comes from the accounts.",
+          "The net-profit calculations above are separate worksheet arithmetic. Do not label a tool result “net margin” merely because all expenses were placed into a field intended for product cost. Preserve the income-statement lines when moving between a pricing tool, a break-even model and management reporting."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is gross margin the same as net margin?",
+        "answer": "No. Gross margin stops after cost of sales. Net margin uses the final profit or loss after the other included income and expense lines."
+      },
+      {
+        "question": "Can gross margin be positive while net margin is negative?",
+        "answer": "Yes. The operating-loss case has a 40% gross margin but a −7% net margin under its entered expenses."
+      },
+      {
+        "question": "Is a higher gross margin always a better business?",
+        "answer": "No. Operating costs, investment needs, financing, cash conversion and consistent definitions also matter. A ratio alone cannot rank the businesses."
+      },
+      {
+        "question": "Does this calculator calculate net income tax?",
+        "answer": "No. The example uses an explicitly entered tax expense; it does not determine a company’s tax liability."
+      },
+      {
+        "question": "What happens when revenue is zero?",
+        "answer": "The percentage ratios have a zero denominator and are undefined. Report the underlying amounts and explain the situation instead of forcing a percentage."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC: beginners’ guide to financial statements",
+        "url": "https://www.sec.gov/about/reports-publications/investorpubsbegfinstmtguide",
+        "usedFor": "Income-statement layers and the distinction between profit and cash flow.",
+        "scope": "General financial-reporting education, not a determination of an entity’s accounting classification or tax expense."
+      }
+    ],
+    "related": [
+      {
+        "href": "/margin-calculator",
+        "label": "Margin Calculator"
+      },
+      {
+        "href": "/markup-calculator",
+        "label": "Markup Calculator"
+      },
+      {
+        "href": "/guides/margin-vs-markup/",
+        "label": "Margin versus markup"
+      },
+      {
+        "href": "/guides/how-to-calculate-break-even-point/",
+        "label": "Break-even and target profit"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the gross-profit layer only: $100,000 revenue and $60,000 cost",
+        "path": "/margin-calculator",
+        "mode": "margin",
+        "values": {
+          "cost": 60000,
+          "revenue": 100000
+        }
+      }
+    ],
+    "limitations": [
+      "Revenue and cost classifications are assumptions; no accounting standard or industry benchmark is inferred.",
+      "Net-profit and tax-expense rows are manual illustrations, not full income-statement or tax-calculator results."
+    ]
+  },
+  "heloc-equity": {
+    "meta": {
+      "path": "/guides/heloc-vs-home-equity-loan/",
+      "title": "HELOC vs Home Equity Loan: Payments, Fees & Examples",
+      "heading": "HELOC vs Home Equity Loan: Compare Access and Repayment",
+      "description": "Compare HELOC and home equity loan structures using equal borrowing, upfront fees and a 15-year horizon, with draw-period and repayment examples.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "heloc",
+        "home-equity-loan"
+      ],
+      "topic": "Mortgages",
+      "breadcrumb": "HELOC vs Home Equity Loan",
+      "cardIntro": "Compare HELOC and home equity loan structures using equal borrowing, upfront fees and a 15-year horizon, with draw-period and repayment examples.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "A home equity loan typically provides an agreed lump sum, while a HELOC provides access to a line under its draw terms. Compare when you need the cash, how principal is repaid, rate changes and all fees. A lower interest-only payment does not by itself mean a lower total borrowing cost.",
+    "intro": "Both can use the home as collateral and create an additional obligation alongside an existing mortgage. Product names do not guarantee a fixed rate, a particular draw period or approval. The comparison below uses specified hypothetical contracts so the amounts and timing can be checked.",
+    "sections": [
+      {
+        "id": "structures",
+        "title": "Start with the cash need and contract structure",
+        "paragraphs": [
+          "If all funds are needed immediately, compare that lump sum across both options. If spending is staged, a line may let you draw later rather than borrow everything at once, but the contract controls available credit and draw conditions. Do not compare a fully drawn loan with a mostly unused credit limit as though the balances were equal.",
+          "HELOCs commonly use adjustable rates, while home equity loan terms can differ. A fixed-rate loan can offer a predictable scheduled payment; a credit line can have separate draw and repayment phases. Check the specific rate, fees, payment formula and whether principal is due as a balloon."
+        ],
+        "table": {
+          "caption": "General structure questions; the contract determines the answer",
+          "headers": [
+            "Question",
+            "Home equity loan",
+            "HELOC"
+          ],
+          "rows": [
+            [
+              "How is cash accessed?",
+              "Typically a lump sum",
+              "Draws under an available line"
+            ],
+            [
+              "What balance earns interest?",
+              "Outstanding borrowed principal",
+              "Outstanding drawn balance under its terms"
+            ],
+            [
+              "What must be budgeted?",
+              "Scheduled loan payment and fees",
+              "Draw payment, later repayment and possible rate changes"
+            ],
+            [
+              "What remains alongside it?",
+              "Existing first-mortgage obligations",
+              "Existing first-mortgage obligations"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "example",
+        "title": "Equal $50,000 initial borrowing and $1,000 upfront fees",
+        "paragraphs": [
+          "Assume both products disburse $50,000 and charge $1,000 paid from outside cash. Cash delivered is $50,000; economic proceeds after that upfront cost are $49,000. These are different descriptions of the same cash flows, not two alternative fee deductions.",
+          "The fixed home equity loan amortizes over 15 years at 8%. The HELOC uses 8% throughout this first scenario, pays interest only for five years and then amortizes its unchanged $50,000 over ten years. There are no additional draws, principal extras, annual charges or tax benefits. Both paths therefore end after 15 years, but repay principal at different speeds."
+        ],
+        "table": {
+          "caption": "Original same-amount, same-fee, same-final-horizon comparison",
+          "headers": [
+            "Path",
+            "First 60 monthly payments",
+            "Later monthly payments",
+            "Interest through payoff",
+            "Interest plus upfront fee"
+          ],
+          "rows": [
+            [
+              "Fixed 15-year loan at 8%",
+              "$477.83",
+              "$477.83",
+              "$36,008.69",
+              "$37,008.69"
+            ],
+            [
+              "HELOC at constant 8%",
+              "$333.33",
+              "$606.64",
+              "$42,796.56",
+              "$43,796.56"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "balances",
+        "title": "A draw-period payment can leave all principal outstanding",
+        "paragraphs": [
+          "After the first 60 payments, the fixed loan’s remaining balance is $39,383.13. The interest-only HELOC still owes $50,000. The HELOC’s smaller first-phase installment partly reflects delayed principal repayment; the later amortizing installment is larger.",
+          "If you expect to sell, refinance or repay early, compare payments and remaining balances at that common date. A full-term total alone can answer the wrong question for a five-year stay. Include any applicable closing or early-termination charge in that exit scenario."
+        ]
+      },
+      {
+        "id": "rates",
+        "title": "Test a higher-rate path without calling it a forecast",
+        "paragraphs": [
+          "For a separate stress scenario, hold the HELOC at 10% for both phases instead of 8%. Its draw payment becomes $416.67 and the ten-year repayment installment becomes $660.75. This is a constant-rate sensitivity case, not a prediction of how an index or lender margin will change.",
+          "For a real adjustable contract, review the index, margin, adjustment dates, caps and any conversion options. A rate cap does not itself make every payment affordable. Also verify whether the loan example’s fixed rate is fixed for the full term rather than assuming it from the product label."
+        ],
+        "table": {
+          "caption": "Separate constant-rate HELOC stress cases; same $50,000 balance",
+          "headers": [
+            "Assumed rate",
+            "Monthly interest-only draw payment",
+            "Monthly ten-year repayment"
+          ],
+          "rows": [
+            [
+              "8%",
+              "$333.33",
+              "$606.64"
+            ],
+            [
+              "10%",
+              "$416.67",
+              "$660.75"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "fees",
+        "title": "Compare fees and the whole housing budget",
+        "paragraphs": [
+          "Collect origination, appraisal, annual line, transaction and early-closure charges as applicable. If a fee is deducted from proceeds, increase or otherwise adjust the proposed borrowing when you need a fixed cash amount. If it is financed, include interest on the fee. Do not count the same fee both as a deduction and as an additional cash payment.",
+          "The tables exclude the existing first mortgage, property taxes and insurance because those unchanged amounts do not explain the difference between the two new borrowing paths. They still belong in the household affordability budget. Neither tool decides how much equity a lender will allow or evaluates foreclosure risk for you."
+        ]
+      },
+      {
+        "id": "choice",
+        "title": "Choose a comparison that matches the spending schedule",
+        "paragraphs": [
+          "Write down the amount needed now, amounts needed later, expected repayment date and cash buffer. Compare a fixed lump sum with an actual draw plan, not just two advertised rates. If later expenses do not happen, an unused portion of a line has different cash flows from already borrowed principal.",
+          "The presets below reproduce the full-draw example separately in the HELOC and Home Equity Loan calculators. They do not simulate arbitrary future draw dates, changing rates, subordination approval or a lender’s eligibility decision. For replacing the first mortgage instead, use the separate cash-out refinance comparison."
+        ],
+        "links": [
+          {
+            "href": "/guides/cash-out-refinance-vs-heloc/",
+            "label": "Cash-out refinance versus HELOC: retaining or replacing the first mortgage"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is a HELOC the same as a home equity loan?",
+        "answer": "No. A line and a lump-sum loan have different access and repayment structures, even though both can be secured by home equity."
+      },
+      {
+        "question": "Is a home equity loan always fixed-rate?",
+        "answer": "Do not assume so from the name. Review the actual contract; this guide’s 8% loan is explicitly a fixed-rate example."
+      },
+      {
+        "question": "Why is the HELOC payment lower at first?",
+        "answer": "The example pays only interest during its draw phase. Principal remains outstanding, causing a different later repayment burden."
+      },
+      {
+        "question": "Can I compare their APRs alone?",
+        "answer": "Review APR disclosures alongside fees, amounts drawn, timing, rate changes and the expected exit date. Different cash-flow schedules need more than one headline percentage."
+      },
+      {
+        "question": "Does this comparison determine approval or a borrowing limit?",
+        "answer": "No. The cases assume the amounts are available; lenders must separately assess eligibility, collateral and contract requirements."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: home equity loan versus HELOC",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-home-equity-loan-and-a-home-equity-line-of-credit-heloc-en-247/",
+        "usedFor": "Lump-sum versus revolving access, security and rate distinctions.",
+        "scope": "The actual contract controls payment phases and rate terms."
+      },
+      {
+        "title": "CFPB: alternatives to a HELOC",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-other-types-of-loans-are-similar-to-a-heloc-en-253/",
+        "usedFor": "Distinguishing added home-equity borrowing from a cash-out replacement mortgage.",
+        "scope": "No current pricing, approval or suitability recommendation is inferred."
+      }
+    ],
+    "related": [
+      {
+        "href": "/heloc-calculator",
+        "label": "HELOC Calculator"
+      },
+      {
+        "href": "/home-equity-loan-calculator",
+        "label": "Home Equity Loan Calculator"
+      },
+      {
+        "href": "/guides/how-are-heloc-payments-calculated/",
+        "label": "Draw and repayment calculations"
+      },
+      {
+        "href": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "label": "Home equity loan fees and amortization"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the 8% HELOC: five-year draw and ten-year repayment",
+        "path": "/heloc-calculator",
+        "mode": "draw-repay",
+        "values": {
+          "principal": 50000,
+          "rate": 8,
+          "draw": 5,
+          "years": 10,
+          "closing": 1000,
+          "closing_unit": "Dollars",
+          "closing_treatment": "Upfront",
+          "charge": 0
+        }
+      },
+      {
+        "label": "Reproduce the fixed 15-year 8% home equity loan",
+        "path": "/home-equity-loan-calculator",
+        "mode": "loan",
+        "values": {
+          "principal": 50000,
+          "years": 15,
+          "months": 0,
+          "rate": 8,
+          "closing": 1000,
+          "treatment": "Paid upfront"
+        }
+      },
+      {
+        "label": "Test the separate constant-10% HELOC scenario",
+        "path": "/heloc-calculator",
+        "mode": "draw-repay",
+        "values": {
+          "principal": 50000,
+          "rate": 10,
+          "draw": 5,
+          "years": 10,
+          "closing": 1000,
+          "closing_unit": "Dollars",
+          "closing_treatment": "Upfront",
+          "charge": 0
+        }
+      }
+    ],
+    "limitations": [
+      "The example assumes an immediate full draw, constant scenario rates and full amortization after the draw phase.",
+      "No future rate reset, partial-draw schedule, first-mortgage cost, tax benefit or eligibility check is modeled."
+    ]
+  },
+  "balance-personal": {
+    "meta": {
+      "path": "/guides/balance-transfer-vs-personal-loan/",
+      "title": "Balance Transfer vs Personal Loan: Fees & Payoff Examples",
+      "heading": "Balance Transfer vs Personal Loan: Compare Fees, Deadlines and Payoff",
+      "description": "Compare a zero-rate balance transfer and a personal loan with equal debt and financed fees, an 18-month payoff target and a budget-limited post-promo example.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "personal-loan",
+        "credit-card",
+        "debt-consolidation"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "Balance Transfer vs Personal Loan",
+      "cardIntro": "Compare a zero-rate balance transfer and a personal loan with equal debt and financed fees, an 18-month payoff target and a budget-limited post-promo example.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "A balance transfer can reduce interest during an introductory period, but its fee and payoff deadline matter. A personal installment loan offers a scheduled repayment path under its contract, with interest and possible fees. Compare the same debt cleared, cash costs and realistic monthly budget rather than choosing from the advertised rate alone.",
+    "intro": "The original examples assume $10,000 of existing debt is cleared under either option. They are hypothetical offers, not market quotes or approval predictions. No new spending, late payments, additional fees, insurance or tax effects are included, and the original debt is not counted as an extra balance after being paid off.",
+    "sections": [
+      {
+        "id": "terms",
+        "title": "Record the offer details before calculating",
+        "paragraphs": [
+          "For a transfer, record the fee, deadline to make the transfer, promotional duration, promotional rate and rate on any remaining balance afterward. Confirm how the fee itself is treated and whether the credit limit covers it. A 0% offer can still charge a transfer fee.",
+          "For the personal loan, record the amount financed, net proceeds, interest rate, APR disclosure, term and all fees. A fee deducted from proceeds can leave too little money to clear the intended debt. Our example instead finances the stated fee, so the borrower receives the full $10,000 and owes $10,300."
+        ],
+        "table": {
+          "caption": "Hypothetical offer assumptions used in the examples",
+          "headers": [
+            "Input",
+            "Balance transfer",
+            "Personal loan"
+          ],
+          "rows": [
+            [
+              "Existing debt cleared",
+              "$10,000.00",
+              "$10,000.00"
+            ],
+            [
+              "Fee financed",
+              "$300.00 (3%)",
+              "$300.00 (3% origination)"
+            ],
+            [
+              "Starting amount owed",
+              "$10,300.00",
+              "$10,300.00"
+            ],
+            [
+              "Interest convention",
+              "0% for 18 months; then 24% nominal modeled monthly",
+              "12% nominal interest modeled monthly"
+            ],
+            [
+              "Other charges and new spending",
+              "None",
+              "None"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "deadline",
+        "title": "An 18-month payoff target requires more than the minimum",
+        "paragraphs": [
+          "To clear $10,300 during 18 months at 0%, the unrounded monthly requirement is $572.2222…. Budget at least $572.23 with a final adjustment if using cents. This is a payoff-plan amount, not the issuer’s contractual minimum payment.",
+          "For the personal loan with the same $10,300 financed balance and an 18-month term at 12% nominal interest, the calculated installment is $628.12. The $300 fee is not added again to total payments: it is already included in the financed balance. The note rate is not the fee-inclusive APR disclosed for the transaction."
+        ],
+        "table": {
+          "caption": "Same debt and financed fee: 18-month payoff comparison plus a 36-month control",
+          "headers": [
+            "Path",
+            "Monthly plan or installment",
+            "Total repaid",
+            "Interest plus financed fee"
+          ],
+          "rows": [
+            [
+              "0% transfer, cleared before expiration",
+              "$572.22",
+              "$10,300.00",
+              "$300.00"
+            ],
+            [
+              "18-month personal loan at 12%",
+              "$628.12",
+              "$11,306.07",
+              "$1,306.07"
+            ],
+            [
+              "36-month personal loan at 12%",
+              "$342.11",
+              "$12,315.87",
+              "$2,315.87"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "budget",
+        "title": "A $400 monthly budget changes the comparison",
+        "paragraphs": [
+          "At $400 a month, the transfer is not cleared within the 18-month promotion. It has $3,100 remaining. For a separate continuation, assume exactly 24% nominal interest thereafter, credited monthly before each $400 month-end payment, with no further fees or purchases. The balance then needs 9 further payments, including a reduced final one.",
+          "For the other path, use the 36-month personal-loan structure and voluntarily pay the same $400 monthly from the start on its $10,300 financed balance at constant 12% interest. This exceeds that contract’s required installment and assumes penalty-free extra principal with appropriate payment application. It is a manual equal-budget continuation, not the contractual 18-month schedule, whose required payment would exceed this budget."
+        ],
+        "table": {
+          "caption": "Original $400-per-month control; fees already financed",
+          "headers": [
+            "Path",
+            "Payoff payments",
+            "Interest after financing",
+            "Total financing cost versus $10,000 debt"
+          ],
+          "rows": [
+            [
+              "0% transfer for 18 months, then 24%",
+              "27",
+              "$302.94",
+              "$602.94"
+            ],
+            [
+              "Personal loan at 12%, $400 payments",
+              "30",
+              "$1,668.89",
+              "$1,968.89"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "risks",
+        "title": "Keep new purchases and missed payments out of the simplified plan",
+        "paragraphs": [
+          "New purchases can have different rates and grace-period treatment from the transfer. A transfer promotion is not automatically a 0% purchase offer. The issuer’s disclosure controls, and payment allocation can become more complicated when several balances have different rates.",
+          "Late payments and other contract events can affect costs or promotional terms. An ordinary 0% introductory APR is also different from deferred-interest financing, where the consequences of an unpaid promotional balance may be different. This guide does not model retroactive deferred interest or penalty rates."
+        ]
+      },
+      {
+        "id": "cash",
+        "title": "A lower required payment can extend the debt",
+        "paragraphs": [
+          "The 36-month personal-loan row has a lower installment than the 18-month loan but more total interest. If the lower payment encourages new borrowing or slower repayment, consolidating the account does not solve the household cash-flow problem.",
+          "Keep the starting debt, financed fees, payment dates and comparison horizon consistent. Compare the total cost of clearing the debt with each plan and stress-test a lower affordable payment. Approval, available transfer limits and exact loan terms remain separate questions."
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Reproduce the schedules in their proper scope",
+        "paragraphs": [
+          "The Personal Loan Calculator presets reproduce the 18- and 36-month financed-fee loans. The Credit Card Calculator link starts only with the $3,100 post-promotion balance at a fixed 24% rate and $400 monthly payment. It does not automatically prepend the 18 zero-rate months.",
+          "The full promotional path and equal-budget totals are original worksheet calculations shown in the CSV. The website does not search live offers, make a transfer, verify a credit score or guarantee a future refinance. Use the actual disclosures before relying on any proposed plan."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is a 0% balance transfer free?",
+        "answer": "Not necessarily. A transfer fee can apply even at 0%, and the example finances a $300 fee. Review all offer terms."
+      },
+      {
+        "question": "What payment clears the example before the promotion ends?",
+        "answer": "The $10,300 financed balance divided by 18 is $572.2222… per month. Using $572.23 with an adjusted final payment avoids leaving a small rounding balance."
+      },
+      {
+        "question": "What happens if I still owe money after the promotion?",
+        "answer": "Apply the actual post-promotion terms to the remaining balance. The guide’s 24% continuation is a hypothetical fixed-rate scenario, not a prediction."
+      },
+      {
+        "question": "Is a personal-loan interest rate the same as APR?",
+        "answer": "Not when relevant fees change the annualized cost. Review the lender’s APR disclosure and the treatment of financed or deducted fees."
+      },
+      {
+        "question": "Can your calculator compare a complete promotional offer automatically?",
+        "answer": "No. The linked credit-card preset models the post-promotion portion only; the guide’s full path is a separate, explicitly stated calculation."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: balance transfer fees on 0% offers",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-balance-transfer-fee-can-a-balance-transfer-fee-be-charged-on-a-zero-percent-interest-rate-offer-en-53/",
+        "usedFor": "Why a zero promotional rate does not eliminate the transfer fee.",
+        "scope": "No actual issuer fee or offer is assumed."
+      },
+      {
+        "title": "CFPB: introductory-rate duration and disclosures",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/how-long-can-i-keep-a-low-rate-on-a-balance-transfer-or-other-introductory-rate-en-15/",
+        "usedFor": "The need to identify promotional and later terms.",
+        "scope": "Our 18-month and 24% inputs are hypothetical, not legal minimums or product quotes."
+      },
+      {
+        "title": "CFPB: purchases after a balance transfer",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/do-i-pay-interest-on-new-purchases-after-i-get-a-zero-or-low-rate-balance-transfer-en-49/",
+        "usedFor": "Purchase-rate and grace-period distinctions.",
+        "scope": "The numeric cases assume no new purchases or mixed-rate balances."
+      },
+      {
+        "title": "CFPB: personal installment loan fees",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/do-personal-installment-loans-have-fees-en-2120/",
+        "usedFor": "Origination and other charges in a loan comparison.",
+        "scope": "The article models only the stated $300 financed fee and no insurance."
+      }
+    ],
+    "related": [
+      {
+        "href": "/personal-loan-calculator",
+        "label": "Personal Loan Calculator"
+      },
+      {
+        "href": "/credit-card-calculator",
+        "label": "Credit Card Calculator"
+      },
+      {
+        "href": "/guides/how-to-compare-debt-consolidation-loans/",
+        "label": "Debt-consolidation cost comparison"
+      },
+      {
+        "href": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "label": "Why minimum-payment schedules differ"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the 18-month personal loan with financed fee",
+        "path": "/personal-loan-calculator",
+        "mode": "repayment",
+        "values": {
+          "principal": 10000,
+          "years": 1,
+          "months": 6,
+          "rate": 12,
+          "origination": 3,
+          "documentation": 0,
+          "other_fee": 0,
+          "treatment": "Financed",
+          "insurance": 0
+        }
+      },
+      {
+        "label": "Reproduce the 36-month personal loan with financed fee",
+        "path": "/personal-loan-calculator",
+        "mode": "repayment",
+        "values": {
+          "principal": 10000,
+          "years": 3,
+          "months": 0,
+          "rate": 12,
+          "origination": 3,
+          "documentation": 0,
+          "other_fee": 0,
+          "treatment": "Financed",
+          "insurance": 0
+        }
+      },
+      {
+        "label": "Reproduce only the post-promotion $3,100 balance",
+        "path": "/credit-card-calculator",
+        "mode": "payment",
+        "values": {
+          "principal": 3100,
+          "rate": 24,
+          "payment": 400
+        }
+      }
+    ],
+    "limitations": [
+      "Monthly interest and payment timing are simplified; real billing cycles and daily interest can differ.",
+      "No approval, transfer-limit, deferred-interest, late-payment, mixed-balance or new-purchase scenario is modeled."
+    ]
   }
 }
