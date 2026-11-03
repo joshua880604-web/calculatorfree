@@ -6,7 +6,7 @@ Financial calculators are the site's primary focus. The links below are a curate
 
 Interactive calculations run in the browser and require JavaScript. Default inputs and results are illustrations; estimates depend on the entered values, selected mode, timing, and rounding conventions. Future return and inflation presets are editable assumptions. General financial mathematics is not a jurisdiction-specific tax model; tax and retirement rules apply only to the jurisdictions and years stated on each page. Currency conversion uses a dated bundled reference snapshot or a manually entered rate. Consult the methodology and each tool's scope before interpreting a result.
 
-Navigation links checked: November 2, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
+Navigation links checked: November 3, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
 
 ## Start here
 
@@ -373,3 +373,17 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 - FHA historical premium examples are not current rate tables; VA fee references do not verify entitlement or exemptions. Recast eligibility and biweekly-payment posting depend on actual servicer terms.
 - Book depreciation is separate from tax depreciation. UK/EU VAT examples are jurisdiction-specific. Stored Frankfurter reference rates are dated snapshots, not live executable quotes; deposit insurance depends on account and institution facts.
 - Original calculation-check and source-edition dates remain separate from reference-use annotation dates. These annotations do not certify complete legal compliance, tax liability, underwriting or investment outcomes.
+
+## Account, borrowing and retirement comparisons
+
+- [APR vs APY: Compare Borrowing Costs and Deposit Growth](https://www.calculatorfree.io/guides/apr-vs-apy/): Understand APR versus APY with same-deposit compounding examples, borrowing-fee distinctions and calculator inputs that keep rate conventions explicit.
+- [HSA vs FSA: Eligibility, Carryover and a Spending Example](https://www.calculatorfree.io/guides/hsa-vs-fsa/): Compare HSA and health care FSA eligibility, ownership, 2026 limits and unused funds, with a clearly bounded tax-saving example and HSA calculator inputs.
+- [Simple Interest vs Compound Interest: Compare the Same Money](https://www.calculatorfree.io/guides/simple-interest-vs-compound-interest/): Compare simple and compound interest with equal principal, rate and time, original tables, formulas and calculator presets that keep cash flows consistent.
+- [401(k) vs Roth IRA: Separate the Account from the Tax Treatment](https://www.calculatorfree.io/guides/401k-vs-roth-ira/): Compare Traditional 401(k), Roth 401(k) and Roth IRA structures, 2026 base limits and an equal-take-home-budget example, with employer-match and eligibility checks.
+- [Cash-Out Refinance vs HELOC: Compare the Whole Mortgage Budget](https://www.calculatorfree.io/guides/cash-out-refinance-vs-heloc/): Compare cash-out refinancing and a HELOC using the same cash amount, existing mortgage, draw and repayment periods, with clear fee and rate assumptions.
+- [15 vs 30 Year Mortgage: Compare Payments and the Same Cash Budget](https://www.calculatorfree.io/guides/15-vs-30-year-mortgage/): Compare 15-year and 30-year mortgages with the same principal, hypothetical rate quotes and an equal-payment extra-principal case you can reproduce.
+- [How Much Money Do I Need to Retire? Start with the Spending Gap](https://www.calculatorfree.io/guides/how-much-money-do-i-need-to-retire/): Estimate a retirement portfolio target from spending and other income, compare withdrawal assumptions, and separate today’s dollars from future money and early-retirement needs.
+- [The 4 Percent Rule: Initial Withdrawals, Inflation and Risk](https://www.calculatorfree.io/guides/4-percent-rule/): Understand the 4% rule, distinguish inflation-adjusted dollars from a percentage of remaining assets, and trace original sequence-risk examples without a safety guarantee.
+- [CD Ladder: Build a Maturity Schedule Before Chasing a Rate](https://www.calculatorfree.io/guides/cd-ladder/): Build a CD ladder with an original three-rung maturity example, explicit APY inputs, reinvestment choices and liquidity limits, with individual CD calculator presets.
+- [Mortgage refinance waiting periods](https://www.calculatorfree.io/guides/how-soon-can-you-refinance-a-mortgage/): Product-specific timing and calculator limitations.
+- [Reinvested dividend taxes](https://www.calculatorfree.io/guides/are-reinvested-dividends-taxable/): Account types, reporting and an original cost-basis example.

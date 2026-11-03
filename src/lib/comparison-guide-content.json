@@ -1,0 +1,1951 @@
+{
+  "apr-apy": {
+    "meta": {
+      "path": "/guides/apr-vs-apy/",
+      "title": "APR vs APY: Fees, Compounding & Worked Examples",
+      "heading": "APR vs APY: Compare Borrowing Costs and Deposit Growth",
+      "description": "Understand APR versus APY with same-deposit compounding examples, borrowing-fee distinctions and calculator inputs that keep rate conventions explicit.",
+      "publishedOn": "2026-11-03",
+      "calculatorIds": [
+        "apr",
+        "compound-interest",
+        "cd"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "APR vs APY",
+      "cardIntro": "Understand APR versus APY with same-deposit compounding examples, borrowing-fee distinctions and calculator inputs that keep rate conventions explicit.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "APR describes an annualized borrowing cost; APY describes annual deposit yield including compounding. They answer different questions. For a deposit, compare the disclosed APY and account terms. For a loan, compare the APR together with fees, payments and the time you expect to keep the debt.",
+    "intro": "A percentage without a rate convention is incomplete. A 6% nominal deposit rate compounded monthly differs from a 6% APY, and a loan APR that includes financing charges is not simply a deposit interest rate waiting to be compounded. The examples below use hypothetical rates and a constant $10,000 deposit; they are not account offers.",
+    "sections": [
+      {
+        "id": "definitions",
+        "title": "What APR and APY measure",
+        "paragraphs": [
+          "Think of a loan quote as a schedule of money received and money repaid. A mortgage APR can include specified charges beyond note interest. A deposit APY expresses the annualized interest yield under its disclosure assumptions. Neither number tells you all the practical conditions: access restrictions, minimum balances, variable rates and other terms still matter.",
+          "Keep the label attached when moving a number into a calculator. If the calculator requests a nominal interest rate, do not enter a disclosed APY without selecting an APY mode or converting the convention. Our CD Calculator offers a rate-type choice; the Compound Interest Calculator expects the rate convention explained in its guide."
+        ],
+        "table": {
+          "caption": "Choose the measure for the question",
+          "headers": [
+            "Question",
+            "Useful starting measure",
+            "Still review"
+          ],
+          "rows": [
+            [
+              "What does borrowing cost?",
+              "APR and note rate",
+              "Fees, term, payment schedule and early exit"
+            ],
+            [
+              "What does a deposit earn over a year?",
+              "APY",
+              "Variable-rate terms, access and required balances"
+            ],
+            [
+              "How much interest accrues each period?",
+              "Periodic or nominal interest rate",
+              "Compounding frequency and timing"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "formula",
+        "title": "Convert a nominal deposit rate under stated assumptions",
+        "paragraphs": [
+          "For a constant nominal annual deposit rate r compounded n times a year, the effective annual yield is (1 + r/n)^n − 1. Use decimal rates inside the expression. This simplified formula assumes interest stays deposited and there are no fees, deposits, withdrawals or rate changes during the year.",
+          "The inverse calculation is r = n × [(1 + APY)^(1/n) − 1]. Convert both rates consistently. This is a compounding relationship, not a universal conversion from a fee-inclusive loan APR to an account APY. Legal disclosure calculations can use more detailed conventions, including term length."
+        ],
+        "formula": "Effective annual deposit yield = (1 + nominal annual rate / periods per year)^periods per year − 1"
+      },
+      {
+        "id": "comparison",
+        "title": "Same $10,000, same nominal rate, different compounding",
+        "paragraphs": [
+          "The table isolates compounding: all three cases start with $10,000, earn a constant 6% nominal annual rate for one year and retain all interest. Taxes and fees are zero. Daily means exactly 365 equal periods here. More frequent compounding increases this modeled yield, but the difference should be evaluated in dollars as well as percentages.",
+          "The monthly case earns about $16.78 more than annual compounding. A higher advertised nominal rate can therefore lose its apparent advantage once both offers are expressed as APY. Use actual disclosures to compare offers; do not assume a real account uses the exact simplified schedule in this table."
+        ],
+        "table": {
+          "caption": "Hypothetical one-year compounding comparison",
+          "headers": [
+            "Compounding",
+            "Nominal annual rate",
+            "Effective annual yield",
+            "Ending balance",
+            "Interest"
+          ],
+          "rows": [
+            [
+              "Annual",
+              "6.0000%",
+              "6.0000%",
+              "$10,600.00",
+              "$600.00"
+            ],
+            [
+              "Monthly",
+              "6.0000%",
+              "6.1678%",
+              "$10,616.78",
+              "$616.78"
+            ],
+            [
+              "Daily (365)",
+              "6.0000%",
+              "6.1831%",
+              "$10,618.31",
+              "$618.31"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "fees",
+        "title": "Why a borrowing APR is not just a compounded note rate",
+        "paragraphs": [
+          "A loan can disburse less spendable cash than the amount on which payments are based because charges are paid or financed. That changes the effective cost of obtaining the cash even when the note rate is unchanged. The APR Calculator models specified fees and a payment schedule; its result is not a guarantee that every entered fee belongs in a legal disclosure.",
+          "Compare offers with the same loan amount and similar terms, then check the planned exit date. A fee spread over the full contractual term can have a different practical effect if the loan is repaid early. For mortgage APR versus note rate examples, use the existing guide linked below rather than treating a savings-yield conversion as a loan comparison."
+        ],
+        "links": [
+          {
+            "href": "/guides/apr-vs-interest-rate/",
+            "label": "APR versus loan interest rate: fees and matched borrowing examples"
+          }
+        ]
+      },
+      {
+        "id": "checklist",
+        "title": "A short comparison checklist",
+        "paragraphs": [
+          "First identify whether you are saving or borrowing. Then record the exact rate label, whether it is fixed or variable, the term and any required balance. Put fees and access restrictions beside the rate instead of silently dropping them.",
+          "Next compare dollar outcomes over your actual horizon. For a deposit, test the balance after taxes and any penalty if you need early access. For borrowing, inspect the payments, charges and payoff balance. A rate comparison becomes useful when the units and cash-flow dates match."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is APY always higher than APR?",
+        "answer": "That statement mixes unlike products. For a positive nominal deposit rate, compounding more than annually creates a higher effective annual yield under the stated assumptions. A fee-inclusive borrowing APR is a different measure."
+      },
+      {
+        "question": "Can I enter APY into a compound-interest calculator?",
+        "answer": "Only if the tool accepts APY directly or you convert its rate convention. Entering APY as a nominal monthly-compounded rate compounds the yield again."
+      },
+      {
+        "question": "Does APY include income tax?",
+        "answer": "A disclosed deposit APY is not your personal after-tax return. Tax treatment and your circumstances need separate modeling."
+      },
+      {
+        "question": "Does a higher APY guarantee the better account?",
+        "answer": "No. Review access, fees, variable-rate terms, minimum balances and any applicable deposit-insurance conditions."
+      },
+      {
+        "question": "Why can APR exceed a mortgage note rate?",
+        "answer": "Specified borrowing charges can increase the annualized cost relative to the note interest rate. Use the Loan Estimate and fee definitions for the actual offer."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: mortgage note rate and APR",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/",
+        "usedFor": "The borrowing-rate and finance-charge distinction.",
+        "scope": "Mortgage context; not a rule that every fee in every product is included."
+      },
+      {
+        "title": "CFPB Regulation DD Appendix A: APY calculation",
+        "url": "https://www.consumerfinance.gov/rules-policy/regulations/1030/a/",
+        "usedFor": "Annualized deposit-yield disclosure context.",
+        "scope": "The article’s equal-period example is simplified, not a substitute for the full disclosure rules."
+      }
+    ],
+    "related": [
+      {
+        "href": "/apr-calculator",
+        "label": "APR Calculator"
+      },
+      {
+        "href": "/cd-calculator",
+        "label": "CD Calculator with nominal-rate and APY choices"
+      },
+      {
+        "href": "/guides/compound-interest-with-monthly-contributions/",
+        "label": "Compound interest and contribution timing"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the monthly-compounded $10,000 deposit",
+        "path": "/compound-interest-calculator",
+        "mode": "growth",
+        "values": {
+          "principal": 10000,
+          "years": 1,
+          "months": 0,
+          "rate": 6,
+          "compound": "Monthly",
+          "monthly": 0,
+          "annual": 0,
+          "tax": 0,
+          "inflation": 0,
+          "timing": "End of period"
+        }
+      }
+    ],
+    "limitations": [
+      "No fees, taxes, deposits, withdrawals or variable rates in the deposit table.",
+      "No comparison of live bank offers or guarantee of legal APR disclosure compliance."
+    ]
+  },
+  "hsa-fsa": {
+    "meta": {
+      "path": "/guides/hsa-vs-fsa/",
+      "title": "HSA vs FSA: Eligibility, Rollover & 2026 Examples",
+      "heading": "HSA vs FSA: Eligibility, Carryover and a Spending Example",
+      "description": "Compare HSA and health care FSA eligibility, ownership, 2026 limits and unused funds, with a clearly bounded tax-saving example and HSA calculator inputs.",
+      "publishedOn": "2026-11-03",
+      "calculatorIds": [
+        "hsa"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "HSA vs FSA",
+      "cardIntro": "Compare HSA and health care FSA eligibility, ownership, 2026 limits and unused funds, with a clearly bounded tax-saving example and HSA calculator inputs.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "An HSA is an individually owned account available to eligible people; a health care FSA is an employer-plan benefit. Both can help pay qualified medical expenses, but eligibility, unused-money rules and access differ. Compare the health plan and the account together rather than choosing only by the tax label.",
+    "intro": "This comparison concerns a health savings account and a health care flexible spending arrangement. A dependent-care FSA and an HRA are different benefits. The examples use general U.S. federal rules and hypothetical spending, not an enrollment recommendation or a personal tax return.",
+    "sections": [
+      {
+        "id": "comparison",
+        "title": "HSA versus health care FSA at a glance",
+        "paragraphs": [
+          "Start by identifying your health coverage and other benefits, including coverage available through a spouse. HSA contributions require eligibility; an employer offering an HSA is not by itself enough. A general-purpose health FSA can affect HSA eligibility even when you intended to use the accounts for different bills.",
+          "An HSA balance can remain for later years, whereas an FSA election needs careful expense planning. Employer documents control whether an FSA offers an allowed carryover or grace period. Do not assume a plan offers either provision, or that unused funds are automatically portable after leaving the job."
+        ],
+        "table": {
+          "caption": "General account distinctions; plan terms still matter",
+          "headers": [
+            "Feature",
+            "HSA",
+            "Health care FSA"
+          ],
+          "rows": [
+            [
+              "Ownership",
+              "Individual account",
+              "Employer-plan arrangement"
+            ],
+            [
+              "Contributing",
+              "Requires HSA eligibility",
+              "Requires access to the employer’s plan"
+            ],
+            [
+              "Unused balance",
+              "Can remain in the account",
+              "Use-or-lose framework, subject to permitted plan provisions"
+            ],
+            [
+              "Funding access",
+              "Limited by available account funds",
+              "Annual election generally available during the coverage period"
+            ],
+            [
+              "Investing",
+              "May be offered by the custodian; investments can lose value",
+              "Not a personal investment account"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "eligibility",
+        "title": "Check eligibility before comparing tax savings",
+        "paragraphs": [
+          "Use an HSA-eligible coverage designation and confirm the other eligibility conditions. Do not treat every high-deductible policy as automatically qualifying. Starting in 2026, certain Bronze and catastrophic coverage has special HSA treatment, so older shorthand descriptions can miss eligible arrangements.",
+          "A limited-purpose or qualifying post-deductible FSA may be compatible with an HSA, while a general-purpose health FSA generally is not. Medicare enrollment and other disqualifying coverage can also matter. Ask the benefits administrator which benefits you actually have and use IRS guidance for the applicable year."
+        ]
+      },
+      {
+        "id": "limits",
+        "title": "2026 contribution limits are different kinds of limits",
+        "paragraphs": [
+          "For 2026, the HSA base annual limits are $4,400 for self-only coverage and $8,750 for family coverage, before any applicable catch-up and eligibility adjustments. Employer contributions count toward the HSA total. For plan years beginning in 2026, the health FSA employee salary-reduction limit is $3,400; an employer may set a lower plan limit.",
+          "Do not subtract an HSA employer contribution from the FSA employee limit as though they were the same account. Conversely, do not add the full HSA limit on top of employer HSA funding. Partial-year eligibility, catch-up eligibility and special rules require an individual check. The HSA Calculator’s contribution mode states its supported assumptions."
+        ],
+        "table": {
+          "caption": "Illustrative full-year 2026 HSA room, no catch-up",
+          "headers": [
+            "Coverage",
+            "Base limit",
+            "Assumed employer contribution",
+            "Remaining personal room"
+          ],
+          "rows": [
+            [
+              "Self-only",
+              "$4,400.00",
+              "$500.00",
+              "$3,900.00"
+            ],
+            [
+              "Family",
+              "$8,750.00",
+              "$500.00",
+              "$8,250.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "spending",
+        "title": "Worked example: the tax benefit and unused balance are separate",
+        "paragraphs": [
+          "Assume an eligible person contributes $3,000 and incurs $2,000 of qualified, unreimbursed expenses during coverage. For illustration, every contributed dollar reduces federal taxable income at a constant 22% marginal rate. The modeled federal income-tax reduction is $660, excluding payroll taxes, state taxes, fees and investment returns.",
+          "That arithmetic does not choose the account. The $1,000 left in an HSA can stay for later use. For a hypothetical health FSA plan with a $680 permitted carryover, no grace period and all applicable participation conditions met, $680 could carry forward and $320 could be forfeited. A different plan design or claims timing changes the FSA outcome; the HSA Calculator does not model this FSA scenario."
+        ],
+        "table": {
+          "caption": "Hypothetical $3,000 election or contribution and $2,000 eligible spending",
+          "headers": [
+            "Item",
+            "Amount",
+            "Interpretation"
+          ],
+          "rows": [
+            [
+              "Modeled federal tax reduction",
+              "$660.00",
+              "$3,000 × 22%; not a complete tax calculation"
+            ],
+            [
+              "Unused funds before year-end provisions",
+              "$1,000.00",
+              "$3,000 − $2,000"
+            ],
+            [
+              "HSA retained balance",
+              "$1,000.00",
+              "No modeled fee, withdrawal or investment change"
+            ],
+            [
+              "Illustrative FSA carryover",
+              "$680.00",
+              "Only if the plan permits and conditions are met"
+            ],
+            [
+              "Illustrative FSA forfeiture",
+              "$320.00",
+              "Under this specified carryover-only example"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "decision",
+        "title": "Compare the complete benefit package",
+        "paragraphs": [
+          "Write down premiums, deductible exposure, expected medical spending, employer funding and the account’s fees. An account tax benefit does not erase a higher premium or a larger out-of-pocket bill. Keep a cash plan for unexpected expenses even if you intend to invest part of an HSA balance.",
+          "Before enrolling, confirm the claims deadline and coverage dates. A run-out period for submitting claims is different from a grace period for incurring expenses. Avoid claiming two reimbursements for one medical bill, and keep records supporting the eligible expense."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can I have an HSA and an FSA?",
+        "answer": "Some combinations are permitted, such as certain limited-purpose arrangements. A general-purpose health FSA generally conflicts with HSA contribution eligibility. Confirm all coverage, including relevant spousal benefits."
+      },
+      {
+        "question": "Do FSA funds always disappear at year-end?",
+        "answer": "No single answer covers every plan. An employer may offer a permitted carryover or grace period under applicable rules. Read the plan rather than assuming unlimited rollover."
+      },
+      {
+        "question": "Does HSA money expire if I change jobs?",
+        "answer": "The HSA is individually owned. Existing funds and future contribution eligibility are separate questions; leaving a job does not itself erase the account."
+      },
+      {
+        "question": "Is an HSA automatically better because it can be invested?",
+        "answer": "No. Investment access does not remove market risk, health-plan costs, cash needs or eligibility restrictions."
+      },
+      {
+        "question": "Can this calculator compare my full HSA and FSA benefits?",
+        "answer": "No. The HSA tool models disclosed HSA contribution or growth assumptions. The FSA spending illustration here is separate, and neither is a full insurance or tax-return comparison."
+      }
+    ],
+    "sources": [
+      {
+        "title": "IRS Publication 969: HSA and FSA rules",
+        "url": "https://www.irs.gov/publications/p969",
+        "usedFor": "Eligibility, account ownership, qualified spending and compatible arrangements.",
+        "scope": "Use the applicable year and actual plan terms; not a personalized eligibility decision."
+      },
+      {
+        "title": "IRS Publication 15-B (2026): health benefits",
+        "url": "https://www.irs.gov/publications/p15b",
+        "usedFor": "2026 HSA amounts and the health FSA salary-reduction limit.",
+        "scope": "Annual limits differ from an employer’s actual plan design."
+      },
+      {
+        "title": "IRS 2026-02 Bulletin: expanded HSA coverage guidance",
+        "url": "https://www.irs.gov/irb/2026-02_IRB",
+        "usedFor": "2026 coverage-rule context, including Bronze and catastrophic plans.",
+        "scope": "Special coverage treatment does not waive all other eligibility conditions."
+      },
+      {
+        "title": "FSAFEDS: 2026 carryover example",
+        "url": "https://fsafeds.gov/support/messageboard/333",
+        "usedFor": "A documented $680 carryover provision and participation conditions.",
+        "scope": "This is one plan’s implementation, not proof that every employer offers carryover."
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/how-does-an-hsa-work/",
+        "label": "HSA contributions and growth guide"
+      },
+      {
+        "href": "/hsa-calculator",
+        "label": "HSA Calculator"
+      },
+      {
+        "href": "/guides/401k-vs-roth-ira/",
+        "label": "Compare other tax-advantaged account structures"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce $3,000 personal contribution with $500 employer HSA funding",
+        "path": "/hsa-calculator",
+        "mode": "contribution",
+        "values": {
+          "year": "2026",
+          "coverage": "Self-only",
+          "catchup": "No",
+          "months": 12,
+          "employee": 3000,
+          "employer": 500,
+          "federal": 22,
+          "state": 0,
+          "method": "Direct contribution",
+          "payroll_rate": 0
+        }
+      }
+    ],
+    "limitations": [
+      "The FSA example is a manual illustration, not an FSA tool result.",
+      "No payroll tax, state tax, insurance premium, investment return or individualized eligibility determination is modeled."
+    ]
+  },
+  "simple-compound": {
+    "meta": {
+      "path": "/guides/simple-interest-vs-compound-interest/",
+      "title": "Simple vs Compound Interest: Formulas & Examples",
+      "heading": "Simple Interest vs Compound Interest: Compare the Same Money",
+      "description": "Compare simple and compound interest with equal principal, rate and time, original tables, formulas and calculator presets that keep cash flows consistent.",
+      "publishedOn": "2026-11-03",
+      "calculatorIds": [
+        "simple-interest",
+        "compound-interest"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "Simple vs Compound Interest",
+      "cardIntro": "Compare simple and compound interest with equal principal, rate and time, original tables, formulas and calculator presets that keep cash flows consistent.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "Simple interest is calculated on the original principal under the stated schedule. Compound interest adds credited interest to the balance that earns future interest. With the same positive rate, retained interest and more than one compounding period, the compound model grows faster; real product terms still determine actual cash flows.",
+    "intro": "To see the difference, hold the starting principal and outside deposits constant. Comparing a one-time simple-interest deposit with a compound plan receiving new monthly savings would mix two effects. Our examples start with $10,000, make no new deposits and use hypothetical rates, with no tax or fee deductions.",
+    "sections": [
+      {
+        "id": "formula",
+        "title": "Write both formulas before comparing results",
+        "paragraphs": [
+          "For a constant annual simple rate r and time t measured in years, interest is P × r × t and ending balance is P × (1 + r × t). For a nominal annual rate compounded n times a year, ending balance is P × (1 + r/n)^(n × t), under the equal-period assumptions used here.",
+          "Use rates as decimals: 5% is 0.05. Keep the time unit consistent with the rate unit. A daily simple-interest calculation also needs a day-count convention; multiplying an annual percentage directly by a day count is not a valid year-based calculation."
+        ],
+        "formula": "Simple balance = P × (1 + r × t); compound balance = P × (1 + r/n)^(n × t)"
+      },
+      {
+        "id": "table",
+        "title": "Equal $10,000 principal and 5% nominal annual rate",
+        "paragraphs": [
+          "Each row below starts from the same initial deposit. Simple interest remains $500 per year in this model. Annual compounding credits interest once per year, while monthly compounding uses 5%/12 per month. All interest remains in the account; there are no additional cash flows.",
+          "The difference grows with time because later interest is earned on earlier credits. The monthly-compounded column also isolates frequency. It should not be compared with a disclosed 5% APY as though that APY were a nominal monthly-compounded rate."
+        ],
+        "table": {
+          "caption": "Hypothetical balances before tax and fees",
+          "headers": [
+            "Years",
+            "Simple interest",
+            "Annual compounding",
+            "Monthly compounding",
+            "Annual-compound advantage"
+          ],
+          "rows": [
+            [
+              "1",
+              "$10,500.00",
+              "$10,500.00",
+              "$10,511.62",
+              "$0.00"
+            ],
+            [
+              "5",
+              "$12,500.00",
+              "$12,762.82",
+              "$12,833.59",
+              "$262.82"
+            ],
+            [
+              "10",
+              "$15,000.00",
+              "$16,288.95",
+              "$16,470.09",
+              "$1,288.95"
+            ],
+            [
+              "20",
+              "$20,000.00",
+              "$26,532.98",
+              "$27,126.40",
+              "$6,532.98"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "first-years",
+        "title": "Trace the mechanism through the first two years",
+        "paragraphs": [
+          "At the end of year one, both simple interest and annual compounding give $10,500. During year two, simple interest still adds $500. Annual compounding adds 5% of $10,500, or $525, ending at $11,025. The first $25 difference is interest earned on the prior $500 credit.",
+          "This tracing exercise is useful when checking a spreadsheet: the opening balance should match the prior closing balance, external contributions should have a stated date, and the interest should use the balance eligible to earn it. Rounding every intermediate amount can slightly change a long projection."
+        ]
+      },
+      {
+        "id": "loans",
+        "title": "A simple-interest loan is not necessarily a flat-interest loan",
+        "paragraphs": [
+          "A loan described as simple interest may accrue interest on an outstanding balance that falls as principal is repaid. That is different from charging the original principal for the full contractual term regardless of repayment. Read the contract’s balance, accrual and payment-allocation rules before using a deposit formula for borrowing.",
+          "Likewise, a compound-growth chart is not a prediction of an investment account. Market returns vary, fees reduce balances and distributions can be spent rather than reinvested. Interest calculations explain a mechanism; they do not establish that a product will provide a constant positive return."
+        ]
+      },
+      {
+        "id": "workflow",
+        "title": "Build a comparison with consistent inputs",
+        "paragraphs": [
+          "First choose principal, annual-rate convention, horizon and compounding frequency. Set outside deposits to zero to isolate interest. Reproduce a one-year and a two-year result before extending the horizon. Then introduce one change at a time, such as a monthly contribution or a fee.",
+          "If you need spending-power results, compare both plans using the same inflation assumption. If a tax is deducted when interest is credited, disclose that timing rather than applying an unexplained haircut to only one option. Our linked preset uses zero tax and inflation so the table remains a pure arithmetic comparison."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the difference between simple and compound interest?",
+        "answer": "Under these assumptions, simple interest uses the original principal, while compounding lets credited interest earn later interest. The schedule and balance definitions matter."
+      },
+      {
+        "question": "Are they equal after one year?",
+        "answer": "They are equal at one year when both use the same annual rate and the compound case credits annually. More frequent compounding can produce a different one-year yield."
+      },
+      {
+        "question": "Is compound interest always better?",
+        "answer": "For a saver under the equal positive-rate assumptions, it creates a larger balance. Borrowing costs, negative returns, fees, risk and access restrictions require a separate assessment."
+      },
+      {
+        "question": "Which calculator should I use?",
+        "answer": "Use Simple Interest for its supported principal/rate/time calculation and Compound Interest for frequency and deposit scenarios. Match the units before comparing."
+      },
+      {
+        "question": "Does a monthly contribution count as compound interest?",
+        "answer": "No. It is new external money. Keep contributions separate from earnings when explaining why a balance increased."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: compound interest calculator",
+        "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+        "usedFor": "Principal, rates, time and compounding as separate inputs.",
+        "scope": "A mechanical calculator does not forecast investment performance."
+      },
+      {
+        "title": "ASIC Moneysmart: compound interest",
+        "url": "https://moneysmart.gov.au/saving/compound-interest",
+        "usedFor": "The interest-on-interest mechanism and simple-interest distinction.",
+        "scope": "Conceptual source; no claim about U.S. product terms."
+      }
+    ],
+    "related": [
+      {
+        "href": "/simple-interest-calculator",
+        "label": "Simple Interest Calculator"
+      },
+      {
+        "href": "/compound-interest-calculator",
+        "label": "Compound Interest Calculator"
+      },
+      {
+        "href": "/guides/apr-vs-apy/",
+        "label": "APR, APY and rate conventions"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce ten years of simple interest",
+        "path": "/simple-interest-calculator",
+        "mode": "balance",
+        "values": {
+          "principal": 10000,
+          "rate": 5,
+          "rate_unit": "Annual",
+          "years": 10,
+          "term_unit": "Years"
+        }
+      },
+      {
+        "label": "Reproduce ten years of monthly compounding",
+        "path": "/compound-interest-calculator",
+        "mode": "growth",
+        "values": {
+          "principal": 10000,
+          "years": 10,
+          "months": 0,
+          "rate": 5,
+          "compound": "Monthly",
+          "monthly": 0,
+          "annual": 0,
+          "tax": 0,
+          "inflation": 0,
+          "timing": "End of period"
+        }
+      }
+    ],
+    "limitations": [
+      "Constant positive rates are assumptions, not promised returns.",
+      "The table excludes contributions, withdrawals, taxes and fees and is not an amortizing loan calculation."
+    ]
+  },
+  "401k-roth": {
+    "meta": {
+      "path": "/guides/401k-vs-roth-ira/",
+      "title": "401(k) vs Roth IRA: Taxes, Match & Equal-Budget Examples",
+      "heading": "401(k) vs Roth IRA: Separate the Account from the Tax Treatment",
+      "description": "Compare Traditional 401(k), Roth 401(k) and Roth IRA structures, 2026 base limits and an equal-take-home-budget example, with employer-match and eligibility checks.",
+      "publishedOn": "2026-11-03",
+      "calculatorIds": [
+        "401k",
+        "roth-ira",
+        "ira"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "401(k) vs Roth IRA",
+      "cardIntro": "Compare Traditional 401(k), Roth 401(k) and Roth IRA structures, 2026 base limits and an equal-take-home-budget example, with employer-match and eligibility checks.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "A 401(k) is an employer retirement plan that may offer pre-tax and Roth contributions; a Roth IRA is an individual account funded with after-tax money. The choice involves employer matching, fees, investments, eligibility and tax timing. Comparing “401(k)” with “Roth” alone confuses the account with its tax treatment.",
+    "intro": "Begin by finding out what your employer actually offers. Then compare the same reduction in take-home cash, not just equal contribution labels. The worked example isolates tax timing; it does not assume any investment is safer because it is held in one account type.",
+    "sections": [
+      {
+        "id": "accounts",
+        "title": "Compare three structures, not two labels",
+        "paragraphs": [
+          "A pre-tax 401(k) employee contribution generally reduces current federal taxable income, while a Roth employee contribution does not. Qualified Roth distributions can receive favorable treatment, but the applicable account and distribution rules must be met. A retirement account is a container; investments inside it can rise or fall.",
+          "A Roth IRA has direct-contribution income eligibility rules and separate IRA limits. Employer plans have their own contribution elections and investment menus. Having both accounts may be possible, but it does not waive any account’s limits or eligibility conditions."
+        ],
+        "table": {
+          "caption": "General structure comparison, not an individualized eligibility decision",
+          "headers": [
+            "Feature",
+            "Pre-tax 401(k)",
+            "Roth 401(k)",
+            "Roth IRA"
+          ],
+          "rows": [
+            [
+              "Where held",
+              "Employer plan",
+              "Employer plan if offered",
+              "Individual account"
+            ],
+            [
+              "Employee tax timing",
+              "Generally pre-tax",
+              "After-tax",
+              "After-tax"
+            ],
+            [
+              "Employer match",
+              "May be offered",
+              "May be offered; check match treatment",
+              "No employer-plan match"
+            ],
+            [
+              "Contribution limit framework",
+              "Shares employee deferral limit with Roth 401(k)",
+              "Shares employee deferral limit with pre-tax 401(k)",
+              "Separate IRA limit, shared with Traditional IRA"
+            ],
+            [
+              "Investments and fees",
+              "Plan menu and charges",
+              "Plan menu and charges",
+              "Custodian and chosen investments"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "limits",
+        "title": "Use current-year limits and your plan documents",
+        "paragraphs": [
+          "The 2026 base employee elective-deferral limit for a 401(k) is $24,500. Traditional and Roth employee deferrals share it; they are not two independent $24,500 allowances. The 2026 IRA base limit is $7,500, shared across Traditional and Roth IRAs and subject to compensation and other applicable rules.",
+          "These are base amounts, not a complete contribution decision. Catch-ups, special ages, income phase-outs, employer additions and participation in multiple plans can change the relevant check. Use current IRS guidance instead of copying dollar limits from an older comparison chart."
+        ]
+      },
+      {
+        "id": "budget",
+        "title": "Worked example: compare the same take-home cost",
+        "paragraphs": [
+          "Assume $3,000 of pre-tax compensation is available, every dollar of a pre-tax contribution saves federal income tax at 22%, and there is no state tax, payroll-tax difference, employer match or fee. A $3,000 pre-tax 401(k) contribution reduces take-home pay by $2,340 after the modeled $660 tax reduction. Investing the same $2,340 take-home amount in a Roth IRA is the equal-budget alternative.",
+          "Now assume either investment doubles before withdrawal. This is an arbitrary growth factor used to isolate taxes, not a return forecast. The 401(k) is worth $6,000 before withdrawal tax; the Roth is worth $4,680 with an assumed qualified distribution. The table changes only the 401(k) withdrawal tax rate."
+        ],
+        "table": {
+          "caption": "Equal $2,340 take-home cost, hypothetical doubling, no match or fees",
+          "headers": [
+            "Withdrawal tax",
+            "Pre-tax contribution",
+            "Roth contribution",
+            "After-tax 401(k)",
+            "Qualified Roth amount",
+            "401(k) minus Roth"
+          ],
+          "rows": [
+            [
+              "12%",
+              "$3,000.00",
+              "$2,340.00",
+              "$5,280.00",
+              "$4,680.00",
+              "$600.00"
+            ],
+            [
+              "22%",
+              "$3,000.00",
+              "$2,340.00",
+              "$4,680.00",
+              "$4,680.00",
+              "$0.00"
+            ],
+            [
+              "32%",
+              "$3,000.00",
+              "$2,340.00",
+              "$4,080.00",
+              "$4,680.00",
+              "$-600.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "match",
+        "title": "Add the employer match as a separate cash flow",
+        "paragraphs": [
+          "The tax-only table is incomplete when an employer contributes. Read the match formula, the compensation definition, payroll timing, any true-up policy and vesting schedule. A credited amount is not necessarily an amount you can keep immediately after leaving the job.",
+          "For example, a hypothetical 50% match on employee contributions up to 6% of an $80,000 salary can credit $2,400 when the employee contributes $4,800. The $2,400 is employer funding, not a tax deduction or an investment return. Our matching guide reproduces this sort of formula independently of the account-tax example."
+        ],
+        "links": [
+          {
+            "href": "/guides/how-401k-matching-works/",
+            "label": "How 401(k) matching, payroll timing and vesting differ"
+          }
+        ]
+      },
+      {
+        "id": "decisions",
+        "title": "Build the decision around constraints",
+        "paragraphs": [
+          "List accessible employer matching, emergency cash, high-cost debt, investment options, plan fees and current contribution eligibility. Then test several current and future tax assumptions. A single guessed retirement tax bracket should not carry the entire decision.",
+          "Keep access rules separate from tax-free growth. Early distributions, Roth conversions, rollovers and ordering rules can have consequences that the simple table does not model. For a personalized contribution or withdrawal plan, use qualified financial and tax advice and the actual plan documents."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is a Roth 401(k) the same as a Roth IRA?",
+        "answer": "No. Both involve Roth tax treatment, but an employer-plan account and an individual IRA have different limits, eligibility and administration."
+      },
+      {
+        "question": "Can I contribute to a 401(k) and a Roth IRA?",
+        "answer": "Potentially, if each account’s eligibility and contribution rules are met. The IRA limit is separate from the 401(k) employee limit, while Traditional and Roth contributions within each framework share applicable limits."
+      },
+      {
+        "question": "Should I always choose the account with the employer match?",
+        "answer": "Evaluate the actual match, vesting, fees and your cash needs. The worked example deliberately omits matching and therefore cannot rank a real employer offer."
+      },
+      {
+        "question": "Why not compare equal $3,000 contributions?",
+        "answer": "At a positive current marginal tax rate, a pre-tax contribution and an after-tax contribution can require different take-home sacrifices. Equal-budget examples make that difference visible."
+      },
+      {
+        "question": "Does a Roth account guarantee tax-free withdrawals?",
+        "answer": "Qualified-distribution and other rules matter. An account label alone does not establish the treatment of every withdrawal."
+      }
+    ],
+    "sources": [
+      {
+        "title": "IRS: Roth comparison chart",
+        "url": "https://www.irs.gov/retirement-plans/roth-comparison-chart",
+        "usedFor": "Conceptual distinction between account structures and contribution tax treatment.",
+        "scope": "The chart includes older year-specific figures; our 2026 amounts use the separate current-year release, not its historical limits or distribution-age entries."
+      },
+      {
+        "title": "IRS: 2026 retirement contribution limit release",
+        "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500",
+        "usedFor": "2026 base deferral and IRA limits and the existence of catch-up and phase-out rules.",
+        "scope": "Does not establish an individual’s contribution eligibility."
+      },
+      {
+        "title": "IRS Publication 590-B: IRA distributions",
+        "url": "https://www.irs.gov/publications/p590b",
+        "usedFor": "The need to distinguish qualified Roth distributions and other withdrawal rules.",
+        "scope": "Our table assumes a qualified Roth distribution and models none of the exceptions."
+      }
+    ],
+    "related": [
+      {
+        "href": "/401k-calculator",
+        "label": "401(k) Calculator"
+      },
+      {
+        "href": "/roth-ira-calculator",
+        "label": "Roth IRA Calculator"
+      },
+      {
+        "href": "/guides/roth-ira-vs-traditional-ira/",
+        "label": "Traditional versus Roth IRA equal-budget guide"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the $660 modeled tax saving and $2,340 paycheck reduction",
+        "path": "/401k-calculator",
+        "mode": "tax-savings",
+        "values": {
+          "age": 35,
+          "salary": 80000,
+          "employee": 3000,
+          "roth_share": 0,
+          "prior_wages": 0,
+          "federal": 22,
+          "state": 0,
+          "paychecks": 26
+        }
+      }
+    ],
+    "limitations": [
+      "The tax table assumes a fixed 22% current marginal rate, doubling and a qualified Roth distribution.",
+      "No fees, match, state tax, bracket calculation, phase-out determination or early-withdrawal exceptions are included."
+    ]
+  },
+  "cashout-heloc": {
+    "meta": {
+      "path": "/guides/cash-out-refinance-vs-heloc/",
+      "title": "Cash-Out Refinance vs HELOC: Same-Cash Cost Comparison",
+      "heading": "Cash-Out Refinance vs HELOC: Compare the Whole Mortgage Budget",
+      "description": "Compare cash-out refinancing and a HELOC using the same cash amount, existing mortgage, draw and repayment periods, with clear fee and rate assumptions.",
+      "publishedOn": "2026-11-03",
+      "calculatorIds": [
+        "refinance",
+        "heloc",
+        "home-equity-loan"
+      ],
+      "topic": "Mortgages",
+      "breadcrumb": "Cash-Out Refinance vs HELOC",
+      "cardIntro": "Compare cash-out refinancing and a HELOC using the same cash amount, existing mortgage, draw and repayment periods, with clear fee and rate assumptions.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "A cash-out refinance replaces the existing mortgage with a larger loan. A HELOC adds a credit line while generally leaving the first mortgage in place. Compare the cost of all remaining debt, not just the rate on the extra cash, and test what happens when the HELOC draw period ends.",
+    "intro": "Both options use the home as collateral and require lender eligibility review. The following example is a controlled payment comparison, not a current quote, underwriting decision or recommendation. Keeping an inexpensive first mortgage can matter, but fees, borrowing amounts and future rates can change the result.",
+    "sections": [
+      {
+        "id": "structures",
+        "title": "What changes under each option?",
+        "paragraphs": [
+          "With a cash-out refinance, the new principal must repay the existing loan as well as fund the cash and any financed costs. A rate increase therefore applies to the refinanced old balance too. With a HELOC, the line has its own balance and payment in addition to the first mortgage.",
+          "A fixed home equity loan is another structure, distinct from a revolving HELOC. Keep these products separate when collecting quotes. Ask whether rates are fixed or variable, when principal repayment begins, what fees apply and whether existing liens require subordination."
+        ],
+        "table": {
+          "caption": "Compare the structure before comparing rates",
+          "headers": [
+            "Feature",
+            "Cash-out refinance",
+            "HELOC"
+          ],
+          "rows": [
+            [
+              "Existing first mortgage",
+              "Replaced",
+              "Generally retained"
+            ],
+            [
+              "Cash access",
+              "Lump sum at closing",
+              "Draws up to the available line under its terms"
+            ],
+            [
+              "Budget to review",
+              "New mortgage payment",
+              "First mortgage plus HELOC payments"
+            ],
+            [
+              "Key uncertainty",
+              "Quote, costs and new payoff date",
+              "Variable-rate changes, draw rules and repayment transition"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "example",
+        "title": "Same $50,000 of borrowing, different whole-loan payments",
+        "paragraphs": [
+          "Assume the current mortgage has a $250,000 balance, 25 years remaining and a fixed 3% nominal annual rate. A cash-out replacement borrows $300,000 at a hypothetical fixed 7% for the same 25 years. The alternative draws $50,000 on a HELOC at a constant assumed 8%, pays interest only for ten years, then amortizes the unchanged $50,000 over ten more years.",
+          "To isolate structure, both alternatives initially provide $50,000 before any closing costs, with zero fees in this first comparison. The existing mortgage payment continues throughout the HELOC example. Rates are held constant deliberately; real HELOC rate changes, additional draws and contract provisions are not simulated."
+        ],
+        "table": {
+          "caption": "Hypothetical monthly principal-and-interest obligations; excludes taxes and insurance",
+          "headers": [
+            "Path or period",
+            "First / replacement mortgage",
+            "HELOC payment",
+            "Combined monthly payment"
+          ],
+          "rows": [
+            [
+              "Keep current loan only",
+              "$1,185.53",
+              "—",
+              "$1,185.53"
+            ],
+            [
+              "Cash-out replacement",
+              "$2,120.34",
+              "—",
+              "$2,120.34"
+            ],
+            [
+              "Keep first loan + HELOC draw period",
+              "$1,185.53",
+              "$333.33",
+              "$1,518.86"
+            ],
+            [
+              "Keep first loan + HELOC repayment period",
+              "$1,185.53",
+              "$606.64",
+              "$1,792.17"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "transition",
+        "title": "An interest-only payment is not a payoff schedule",
+        "paragraphs": [
+          "The draw-period HELOC payment in this example covers interest and leaves the entire $50,000 principal outstanding. When amortization begins, the payment rises even if its rate does not change. A variable-rate increase can add another change on top of that transition.",
+          "Do not call the difference between the interest-only payment and a fully amortizing refinance payment a pure saving. The schedules repay principal at different speeds and end on different dates. For a planned sale or refinance, compare balances outstanding at the same exit date as well as payments made."
+        ]
+      },
+      {
+        "id": "fees",
+        "title": "Normalize cash available and fee treatment",
+        "paragraphs": [
+          "If a lender deducts $2,000 of closing costs from a $50,000 draw or cash-out amount, only $48,000 remains for the intended project. Paying those costs from outside cash instead preserves the $50,000 deposit but uses additional money. Financing costs increases the debt. Specify which treatment each quote uses before comparing.",
+          "Add any annual line fee, appraisal or origination charge, early-closure charge and other applicable costs. Avoid treating escrow funding as automatically identical to a nonrefundable fee. The existing refinance cost guide explains why cash to close and incremental borrowing cost can differ."
+        ],
+        "links": [
+          {
+            "href": "/guides/is-refinancing-worth-it/",
+            "label": "Refinance fees, payoff balances and holding-period comparisons"
+          }
+        ]
+      },
+      {
+        "id": "workflow",
+        "title": "Stress-test the choice before applying",
+        "paragraphs": [
+          "First hold required project cash and the comparison date constant. Keep the actual current mortgage payment and balance in the worksheet. Then replace hypothetical rates with written quotes, and test a higher HELOC rate plus a shorter holding period. Preserve a household cash buffer rather than assuming every dollar of available equity should be borrowed.",
+          "Our two calculator links model separate schedules. Adding their payments as shown in the table is a guide calculation; neither tool automatically consolidates every lien, forecasts future rates or decides which lender will approve the application. Read the contracts for repayment and collateral consequences."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is a HELOC always better when my first mortgage rate is low?",
+        "answer": "No. Keeping the first loan can be valuable, but line costs, rate changes, repayment terms and the amount borrowed still matter. Use the whole-loan comparison rather than a universal rule."
+      },
+      {
+        "question": "Which option has the lowest monthly payment?",
+        "answer": "That depends on rate, balance, term and whether a quoted payment is interest-only. Compare principal repayment and remaining balances too."
+      },
+      {
+        "question": "Does cash-out refinance interest apply only to the cash I take?",
+        "answer": "No. The new loan replaces the existing mortgage, so its terms apply to the new balance, including the amount used to repay the old loan."
+      },
+      {
+        "question": "Can the calculators predict my future HELOC rate?",
+        "answer": "No. The example holds one entered rate constant. A stress case is a hypothetical input change, not a rate forecast."
+      },
+      {
+        "question": "Can a HELOC affect a later refinance?",
+        "answer": "It can. Lien priority and lender approval or subordination may need to be addressed. Ask the lenders before relying on a future transaction."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: alternatives to a HELOC",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-other-types-of-loans-are-similar-to-a-heloc-en-253/",
+        "usedFor": "How cash-out replacement differs from an added home-equity borrowing product.",
+        "scope": "Conceptual comparison, not a live quote or suitability assessment."
+      },
+      {
+        "title": "CFPB: HELOC effects on a later refinance",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/does-a-heloc-affect-my-ability-to-refinance-my-first-mortgage-loan-en-252/",
+        "usedFor": "Lien and lender approval considerations.",
+        "scope": "The relevant lenders and actual lien documents control."
+      },
+      {
+        "title": "PNC: cash-out versus HELOC overview",
+        "url": "https://www.pnc.com/insights/personal-finance/borrow/cash-out-refinance-vs-heloc.html",
+        "usedFor": "Product-structure context alongside the official sources.",
+        "scope": "Lender education is not a quote, independent endorsement or validation of our hypothetical rates."
+      }
+    ],
+    "related": [
+      {
+        "href": "/refinance-calculator",
+        "label": "Refinance Calculator"
+      },
+      {
+        "href": "/heloc-calculator",
+        "label": "HELOC Calculator"
+      },
+      {
+        "href": "/guides/how-are-heloc-payments-calculated/",
+        "label": "HELOC draw and repayment guide"
+      },
+      {
+        "href": "/guides/how-soon-can-you-refinance-a-mortgage/",
+        "label": "Refinance waiting periods"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the $300,000 cash-out replacement schedule",
+        "path": "/refinance-calculator",
+        "mode": "balance",
+        "values": {
+          "principal": 250000,
+          "payment": "1185.52828464418261228051085892164396889138849122500817393646",
+          "rate": 3,
+          "new_rate": 7,
+          "new_years": 25,
+          "cashout": 50000,
+          "points": 0,
+          "fees": 0,
+          "finance": "No"
+        }
+      },
+      {
+        "label": "Reproduce the separate $50,000 HELOC draw and repayment",
+        "path": "/heloc-calculator",
+        "mode": "draw-repay",
+        "values": {
+          "principal": 50000,
+          "rate": 8,
+          "draw": 10,
+          "years": 10,
+          "closing": 0,
+          "closing_unit": "Dollars",
+          "closing_treatment": "Upfront",
+          "charge": 0
+        }
+      }
+    ],
+    "limitations": [
+      "The example has no fees, changing rates, new draws, insurance, tax benefits or approval test.",
+      "A monthly-payment comparison is not a complete holding-period or total-cost ranking."
+    ]
+  },
+  "mortgage-terms": {
+    "meta": {
+      "path": "/guides/15-vs-30-year-mortgage/",
+      "title": "15 vs 30 Year Mortgage: Payments, Interest & Equal Budgets",
+      "heading": "15 vs 30 Year Mortgage: Compare Payments and the Same Cash Budget",
+      "description": "Compare 15-year and 30-year mortgages with the same principal, hypothetical rate quotes and an equal-payment extra-principal case you can reproduce.",
+      "publishedOn": "2026-11-03",
+      "calculatorIds": [
+        "mortgage",
+        "mortgage-payoff"
+      ],
+      "topic": "Mortgages",
+      "breadcrumb": "15 vs 30 Year Mortgage",
+      "cardIntro": "Compare 15-year and 30-year mortgages with the same principal, hypothetical rate quotes and an equal-payment extra-principal case you can reproduce.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "A 15-year mortgage generally requires a larger scheduled payment and repays principal sooner; a 30-year mortgage spreads required payments over longer. Compare the same amount borrowed, actual quoted rates, costs and your household budget. A smaller required payment and a smaller total interest bill are different objectives.",
+    "intro": "Our examples borrow $300,000 against a $375,000 purchase with 20% down. They exclude property taxes, insurance, HOA, PMI, fees and tax effects to isolate loan terms. The quoted rates below are hypothetical scenario inputs, not current market rates or offers.",
+    "sections": [
+      {
+        "id": "comparison",
+        "title": "Hold the loan amount constant first",
+        "paragraphs": [
+          "Changing both the house price and the loan term makes it difficult to see what the term itself changed. Start with one principal balance, monthly amortization and no extra payments. Then compare the same note rate, followed by separate actual quotes if one term has a different rate.",
+          "The 15-year 6% case pays the same principal as the 30-year 6% case, but over 180 rather than 360 months. Its higher installment accelerates principal reduction and reduces the time on which interest accrues. A hypothetical lower 15-year quote adds a separate rate effect."
+        ],
+        "table": {
+          "caption": "Hypothetical $300,000 fixed-rate loans, no fees or extras",
+          "headers": [
+            "Term and note rate",
+            "Monthly P&I",
+            "Interest to payoff",
+            "Total P&I"
+          ],
+          "rows": [
+            [
+              "30 years, 6%",
+              "$1,798.65",
+              "$347,514.57",
+              "$647,514.57"
+            ],
+            [
+              "15 years, 6%",
+              "$2,531.57",
+              "$155,682.69",
+              "$455,682.69"
+            ],
+            [
+              "15 years, 5.5%",
+              "$2,451.25",
+              "$141,225.07",
+              "$441,225.07"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "budget",
+        "title": "Compare the same monthly cash budget",
+        "paragraphs": [
+          "The 15-year 6% payment exceeds the 30-year 6% payment by $732.92 monthly, using unrounded figures internally. If that exact difference is paid as additional principal on the 30-year loan every month from the first payment, the total payment equals the 15-year payment.",
+          "At the same rate and payment timing, the balance paths coincide and the 30-year loan is repaid in 180 payments under this arithmetic model. The longer contract can allow a lower required payment in a difficult month, but stopping extras changes the result. A real borrower must verify that additional money is applied to principal and check any contractual restrictions."
+        ],
+        "formula": "Monthly extra principal in the equal-budget case = 15-year payment − 30-year required payment"
+      },
+      {
+        "id": "different-rates",
+        "title": "A lower 15-year rate changes the equal-budget conclusion",
+        "paragraphs": [
+          "When the hypothetical 15-year rate is 5.5% and the 30-year rate is 6%, equal payment dollars no longer produce identical balance paths. Rate and repayment schedule now both differ. Do not generalize the same-rate identity into a claim that a 30-year loan always duplicates the cheaper 15-year quote.",
+          "Include points and other incremental costs when comparing real quotes. A lower note rate with a larger upfront cost can have a different value at a short sale date. Compare balances and fees at that same date rather than only adding all contractual payments through maturity."
+        ]
+      },
+      {
+        "id": "household",
+        "title": "Test required payment against the whole housing budget",
+        "paragraphs": [
+          "The payment table omits ownership costs that still need cash: taxes, insurance, maintenance and any association or mortgage-insurance charge. Add those before comparing the loan with take-home income. A payment that fits a gross-income ratio may still crowd out emergency savings or other priorities.",
+          "Ask what happens if income falls or a major repair arrives. The option to make a larger payment is useful only if the cash is actually available. Conversely, committing to a shorter term does not by itself establish that the purchase price is affordable."
+        ],
+        "links": [
+          {
+            "href": "/guides/how-much-house-can-i-afford/",
+            "label": "House affordability: income, debt and ownership costs"
+          }
+        ]
+      },
+      {
+        "id": "exit",
+        "title": "Use your expected holding period as another comparison",
+        "paragraphs": [
+          "For a sale in five or ten years, compute payments made, remaining principal and new fees at that common exit date. The house value is not created by choosing a different amortization term, so keep common home-value assumptions out of claimed loan savings.",
+          "The linked mortgage presets show their schedules, and the extra-principal preset reproduces the equal-budget example. They are deterministic calculations: no future refinancing, investment return, tax deduction or property-price appreciation is used to make one term look better."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is a 15-year mortgage always better?",
+        "answer": "No. It can reduce modeled interest at the cost of a higher required payment. Quote differences, liquidity and other household obligations can change the practical choice."
+      },
+      {
+        "question": "Can I pay a 30-year mortgage like a 15-year mortgage?",
+        "answer": "At the same rate, principal and timing, making the 15-year payment from the start gives the same amortization in this model. Different rates or interrupted extras change the result."
+      },
+      {
+        "question": "Does the comparison include taxes and insurance?",
+        "answer": "No. The table isolates principal and interest. Enter actual ownership costs in the Mortgage Calculator before making a household budget comparison."
+      },
+      {
+        "question": "Which term has the lowest current rate?",
+        "answer": "This guide provides no live quotes. Collect comparable lender offers and their fees rather than treating the hypothetical 5.5% and 6% as market rates."
+      },
+      {
+        "question": "Does lower lifetime interest mean the best investment outcome?",
+        "answer": "No. This guide does not model investment alternatives, tax treatment or your need for accessible cash."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: choosing a loan term",
+        "url": "https://www.consumerfinance.gov/owning-a-home/explore/understand-the-different-kinds-of-loans-available/",
+        "usedFor": "Term, interest and payment trade-offs when comparing mortgages.",
+        "scope": "Consumer education, not underwriting approval or current pricing."
+      },
+      {
+        "title": "Chase: 15-year versus 30-year mortgages",
+        "url": "https://www.chase.com/personal/mortgage/education/financing-a-home/15-vs-30-year-mortgage",
+        "usedFor": "Product comparison context and the distinction between required and extra payments.",
+        "scope": "Lender education; our numeric examples are independently calculated and hypothetical."
+      }
+    ],
+    "related": [
+      {
+        "href": "/mortgage-calculator",
+        "label": "Mortgage Calculator"
+      },
+      {
+        "href": "/mortgage-payoff-calculator",
+        "label": "Mortgage Payoff Calculator"
+      },
+      {
+        "href": "/guides/pay-off-mortgage-or-invest/",
+        "label": "Pay off a mortgage or invest: a separate equal-budget comparison"
+      }
+    ],
+    "presets": [
+      {
+        "label": "30-year loan at 6%",
+        "path": "/mortgage-calculator",
+        "mode": "monthly",
+        "values": {
+          "price": 375000,
+          "down": 20,
+          "down_unit": "Percent",
+          "years": 30,
+          "months": 0,
+          "rate": 6,
+          "tax": 0,
+          "tax_unit": "Dollars",
+          "insurance": 0,
+          "insurance_unit": "Dollars",
+          "hoa": 0,
+          "hoa_unit": "Dollars",
+          "other": 0,
+          "pmi_method": "Manual",
+          "pmi": 0,
+          "pmi_years": 0,
+          "pmi_policy": "Fixed duration",
+          "extra_monthly": 0,
+          "extra_yearly": 0,
+          "extra_once": 0,
+          "dated": ""
+        }
+      },
+      {
+        "label": "15-year loan at the same 6%",
+        "path": "/mortgage-calculator",
+        "mode": "monthly",
+        "values": {
+          "price": 375000,
+          "down": 20,
+          "down_unit": "Percent",
+          "years": 15,
+          "months": 0,
+          "rate": 6,
+          "tax": 0,
+          "tax_unit": "Dollars",
+          "insurance": 0,
+          "insurance_unit": "Dollars",
+          "hoa": 0,
+          "hoa_unit": "Dollars",
+          "other": 0,
+          "pmi_method": "Manual",
+          "pmi": 0,
+          "pmi_years": 0,
+          "pmi_policy": "Fixed duration",
+          "extra_monthly": 0,
+          "extra_yearly": 0,
+          "extra_once": 0,
+          "dated": ""
+        }
+      },
+      {
+        "label": "15-year loan at hypothetical 5.5%",
+        "path": "/mortgage-calculator",
+        "mode": "monthly",
+        "values": {
+          "price": 375000,
+          "down": 20,
+          "down_unit": "Percent",
+          "years": 15,
+          "months": 0,
+          "rate": 5.5,
+          "tax": 0,
+          "tax_unit": "Dollars",
+          "insurance": 0,
+          "insurance_unit": "Dollars",
+          "hoa": 0,
+          "hoa_unit": "Dollars",
+          "other": 0,
+          "pmi_method": "Manual",
+          "pmi": 0,
+          "pmi_years": 0,
+          "pmi_policy": "Fixed duration",
+          "extra_monthly": 0,
+          "extra_yearly": 0,
+          "extra_once": 0,
+          "dated": ""
+        }
+      },
+      {
+        "label": "30-year contract with the same payment budget as the 15-year 6% loan",
+        "path": "/mortgage-calculator",
+        "mode": "monthly",
+        "values": {
+          "price": 375000,
+          "down": 20,
+          "down_unit": "Percent",
+          "years": 30,
+          "months": 0,
+          "rate": 6,
+          "tax": 0,
+          "tax_unit": "Dollars",
+          "insurance": 0,
+          "insurance_unit": "Dollars",
+          "hoa": 0,
+          "hoa_unit": "Dollars",
+          "other": 0,
+          "pmi_method": "Manual",
+          "pmi": 0,
+          "pmi_years": 0,
+          "pmi_policy": "Fixed duration",
+          "extra_monthly": "732.91890868709674752861035102640660588934502778627499545563",
+          "extra_yearly": 0,
+          "extra_once": 0,
+          "dated": ""
+        }
+      }
+    ],
+    "limitations": [
+      "No loan fees, taxes, insurance, PMI, investment returns or future refinancing are included.",
+      "The equal-budget identity uses the same 6% rate and exact unrounded payment difference from the first month."
+    ]
+  },
+  "retirement-target": {
+    "meta": {
+      "path": "/guides/how-much-money-do-i-need-to-retire/",
+      "title": "How Much Money Do I Need to Retire? Budget & Target Examples",
+      "heading": "How Much Money Do I Need to Retire? Start with the Spending Gap",
+      "description": "Estimate a retirement portfolio target from spending and other income, compare withdrawal assumptions, and separate today’s dollars from future money and early-retirement needs.",
+      "publishedOn": "2026-11-03",
+      "calculatorIds": [
+        "retirement",
+        "fire",
+        "social-security"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "How Much Money Do I Need to Retire? Budget & Target Examples",
+      "cardIntro": "Estimate a retirement portfolio target from spending and other income, compare withdrawal assumptions, and separate today’s dollars from future money and early-retirement needs.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "A useful retirement target starts with the annual amount your portfolio must fund, not a universal salary multiple. Estimate spending, subtract dependable income available at the same date, and test several withdrawal and time-horizon assumptions. The result is a planning range, not proof that a portfolio will last.",
+    "intro": "This guide estimates a target amount. Our existing savings-longevity guide asks a different question: how long a stated balance might fund a stated withdrawal under a deterministic return. Neither calculation replaces a full plan for taxes, investments, benefit timing, health costs and uncertainty.",
+    "sections": [
+      {
+        "id": "budget",
+        "title": "Build the annual spending gap",
+        "paragraphs": [
+          "List housing, food, transport, health costs, taxes funded by withdrawals, travel and a provision for irregular purchases. Use the intended retirement budget rather than automatically replacing a percentage of salary. A mortgage ending can reduce one cost, while medical expenses or repairs can increase another.",
+          "Suppose annual spending is $60,000 in today’s purchasing power and $24,000 of annual benefits or pension income is available at the planned retirement date on the same net-of-tax basis. The portfolio-funded gap is $36,000. If a benefit starts later, it cannot reduce the gap during earlier years."
+        ],
+        "formula": "Annual portfolio-funded gap = spending and taxes to fund − dependable income available in that year"
+      },
+      {
+        "id": "targets",
+        "title": "Compare target amounts without calling a rate safe",
+        "paragraphs": [
+          "Dividing the annual gap by an assumed initial withdrawal rate provides a simple capitalization screen. At a $36,000 gap, 4% gives $900,000, 3% gives $1.2 million and 5% gives $720,000. Changing the assumption changes the target; it does not establish how much market risk a household should take.",
+          "The table is in today’s dollars. No success probability, lifetime guarantee or historical backtest is implied. A longer horizon, taxes, investment costs, legacy objectives and spending flexibility can require a different approach. Read the 4% rule guide for the distinction between target sizing and a withdrawal policy."
+        ],
+        "table": {
+          "caption": "Targets in today’s dollars under three illustrative initial-rate assumptions",
+          "headers": [
+            "Annual portfolio-funded gap",
+            "At 3%",
+            "At 4%",
+            "At 5%"
+          ],
+          "rows": [
+            [
+              "$24,000.00",
+              "$800,000.00",
+              "$600,000.00",
+              "$480,000.00"
+            ],
+            [
+              "$36,000.00",
+              "$1,200,000.00",
+              "$900,000.00",
+              "$720,000.00"
+            ],
+            [
+              "$48,000.00",
+              "$1,600,000.00",
+              "$1,200,000.00",
+              "$960,000.00"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/4-percent-rule/",
+            "label": "What the 4% rule means and what this target calculation cannot prove"
+          }
+        ]
+      },
+      {
+        "id": "inflation",
+        "title": "Keep today’s dollars and future dollars separate",
+        "paragraphs": [
+          "At a hypothetical 2.5% annual inflation rate for 20 years, the same $36,000 purchasing-power gap becomes $58,990.19 per year in nominal money. The corresponding $900,000 current-dollar target becomes $1,474,754.80 nominally. Both figures have been multiplied by the same inflation factor.",
+          "Do not compare that future-dollar target with a current-dollar savings chart without conversion. Likewise, subtracting inflation from investment returns and then inflating the same spending again can mix units. Our FIRE Calculator expresses its target in today’s purchasing power and discloses how nominal returns are converted."
+        ],
+        "formula": "Future-dollar amount = today’s-dollar amount × (1 + inflation)^years"
+      },
+      {
+        "id": "early",
+        "title": "Retiring at 55 needs a timeline, not just a smaller age input",
+        "paragraphs": [
+          "An early retirement can create a period before benefits begin and a longer investment horizon. Write a year-by-year gap: the first years may need the portfolio to cover the full spending budget, while later benefits can reduce withdrawals. Health coverage and access to different account types also require separate planning.",
+          "For illustration only, a $60,000 annual gap for seven years is $420,000 of undiscounted outflows before investment returns or inflation. That is not automatically an extra $420,000 to add to a target that already funds the same years. A timeline prevents double-counting the bridge or subtracting future benefits too early."
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Choose the tool that matches the question",
+        "paragraphs": [
+          "Use the FIRE Calculator to explore a current-dollar spending target and a deterministic contribution path. Enter the portfolio-funded budget, including costs and taxes you expect it to cover. The linked $36,000 preset reproduces a $900,000 target at a 4% sizing assumption; its modeled crossing age is not permission to retire.",
+          "Use the Retirement Calculator for its supported retirement, saving or withdrawal questions, and compare assumptions before transferring results. Obtain Social Security estimates from your own official record. The website does not connect to benefit accounts, verify pension guarantees or simulate every future tax year."
+        ],
+        "links": [
+          {
+            "href": "/guides/how-long-will-retirement-savings-last/",
+            "label": "How long retirement savings last under a fixed-withdrawal model"
+          },
+          {
+            "href": "/guides/how-to-compare-social-security-claiming-ages/",
+            "label": "Social Security claiming-age comparison guide"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is $1 million enough to retire?",
+        "answer": "It depends on the portfolio-funded spending gap, horizon, taxes, assets and flexibility. A round balance alone does not determine readiness."
+      },
+      {
+        "question": "Does the target include Social Security?",
+        "answer": "The simplified calculation uses a gap after income available in the relevant year. Do not subtract benefits before they begin or mix gross benefits with a net-of-tax spending number."
+      },
+      {
+        "question": "How much do I need to retire at 55?",
+        "answer": "Build an early-years and later-years budget, including benefit start dates and account access. The same spending multiple may not address a much longer horizon or an unfunded bridge."
+      },
+      {
+        "question": "Is the 25-times rule a guarantee?",
+        "answer": "No. It is the arithmetic reciprocal of a 4% initial-rate assumption. It does not by itself model sequence risk or establish a safe withdrawal rate."
+      },
+      {
+        "question": "Should I include home equity?",
+        "answer": "Only include resources that can realistically fund the modeled spending, with any sale, borrowing or replacement-housing costs explicitly planned. Do not count unavailable equity as spendable cash."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SSA: plan for retirement",
+        "url": "https://www.ssa.gov/retirement/plan-for-retirement",
+        "usedFor": "Personal benefit estimates and the need to examine claiming dates.",
+        "scope": "An illustration here is not an SSA record or eligibility determination."
+      },
+      {
+        "title": "SEC Investor.gov: asset allocation",
+        "url": "https://www.investor.gov/introduction-investing/getting-started/asset-allocation",
+        "usedFor": "Time horizon and risk context for investment planning.",
+        "scope": "No specific allocation or success probability is recommended."
+      },
+      {
+        "title": "William Bengen: original withdrawal-rate research",
+        "url": "https://obj.portfolioconstructionforum.edu.au/articles_perspectives/retailinvestor.org_pdf_Bengen1.pdf",
+        "usedFor": "Historical research context behind initial-rate withdrawal rules.",
+        "scope": "Our target table is arithmetic, not a reproduction of that historical study."
+      }
+    ],
+    "related": [
+      {
+        "href": "/retirement-calculator",
+        "label": "Retirement Calculator"
+      },
+      {
+        "href": "/fire-calculator",
+        "label": "FIRE Calculator"
+      },
+      {
+        "href": "/guides/4-percent-rule/",
+        "label": "4% rule guide"
+      },
+      {
+        "href": "/guides/how-to-calculate-coast-fire/",
+        "label": "Coast FIRE: a different milestone from retiring now"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the $36,000 budget and $900,000 FIRE target",
+        "path": "/fire-calculator",
+        "mode": "plan",
+        "values": {
+          "age": 35,
+          "max_age": 80,
+          "balance": 150000,
+          "spending": 36000,
+          "monthly": 2000,
+          "return": 7,
+          "inflation": 2.5,
+          "withdrawal": 4
+        }
+      }
+    ],
+    "limitations": [
+      "Withdrawal rates are sensitivity assumptions, not recommendations or guaranteed sustainable rates.",
+      "No personalized tax projection, health-cost forecast, benefit verification or historical sequence simulation is performed."
+    ]
+  },
+  "four-percent": {
+    "meta": {
+      "path": "/guides/4-percent-rule/",
+      "title": "4 Percent Rule: Withdrawals, Inflation & Sequence Risk",
+      "heading": "The 4 Percent Rule: Initial Withdrawals, Inflation and Risk",
+      "description": "Understand the 4% rule, distinguish inflation-adjusted dollars from a percentage of remaining assets, and trace original sequence-risk examples without a safety guarantee.",
+      "publishedOn": "2026-11-03",
+      "calculatorIds": [
+        "fire",
+        "retirement",
+        "coast-fire"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "4 Percent Rule",
+      "cardIntro": "Understand the 4% rule, distinguish inflation-adjusted dollars from a percentage of remaining assets, and trace original sequence-risk examples without a safety guarantee.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "The familiar 4% rule begins with 4% of the portfolio’s starting retirement value, then adjusts the withdrawal amount for inflation. It is different from withdrawing 4% of the remaining balance every year. Historical research informs the rule of thumb, but it does not guarantee a future retirement outcome.",
+    "intro": "Use the rule to ask clearer planning questions: what spending must the portfolio fund, for how long, with what investments and flexibility? The examples below demonstrate cash-flow definitions and return ordering. They are deliberately small arithmetic controls, not historical tests or probability estimates.",
+    "sections": [
+      {
+        "id": "definition",
+        "title": "Calculate the first withdrawal, then define later years",
+        "paragraphs": [
+          "For a $1 million starting portfolio, a 4% initial withdrawal is $40,000. With assumed 3% inflation, the next year’s inflation-adjusted amount is $41,200. The second amount is derived from the previous withdrawal, not by taking 4% of whatever investments happen to remain.",
+          "A fixed percentage of the remaining portfolio is another policy. It can reduce spending after losses and increase it after gains, so it does not preserve a fixed purchasing-power budget. Neither policy should be described simply as “take 4%” without stating the base and timing."
+        ],
+        "formula": "First withdrawal = initial portfolio × 4%; later inflation-adjusted withdrawal = prior amount × (1 + inflation)"
+      },
+      {
+        "id": "definitions",
+        "title": "A market loss makes the two policies visibly different",
+        "paragraphs": [
+          "Assume $40,000 is taken at the start of year one and the remaining investments then return −20%. The ending balance is $768,000. With 3% inflation, the initial-rate policy calls for $41,200 at the start of year two. A 4%-of-current-balance policy instead calls for $30,720.",
+          "The latter withdrawal is smaller because the base shrank. Calling both policies the same hides a $10,480 spending difference in this example. These numbers omit taxes and fees and assume no income, deposits or other withdrawals."
+        ],
+        "table": {
+          "caption": "Same year-one loss, different year-two withdrawal definitions",
+          "headers": [
+            "Calculation",
+            "Amount"
+          ],
+          "rows": [
+            [
+              "Year-one initial withdrawal",
+              "$40,000.00"
+            ],
+            [
+              "Balance after withdrawal and −20% return",
+              "$768,000.00"
+            ],
+            [
+              "Year-two withdrawal with 3% inflation",
+              "$41,200.00"
+            ],
+            [
+              "Year-two withdrawal at 4% of remaining balance",
+              "$30,720.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "sequence",
+        "title": "Same two returns, different remaining balances",
+        "paragraphs": [
+          "Now take the same $40,000 and $41,200 at the start of two years. Compare returns of −20% then +25% with the same returns in reverse. Without withdrawals, those two returns have the same cumulative growth factor: 0.8 × 1.25 = 1. The order still matters when withdrawals occur between the returns.",
+          "The table uses unrounded arithmetic, no fees and no outside income. It isolates a mechanism: a withdrawal after an early loss removes assets that no longer participate in a later rebound. Two paths do not represent the full range of possible returns and cannot establish a safe spending rate."
+        ],
+        "table": {
+          "caption": "Original two-year sequence illustration; withdrawals occur before each annual return",
+          "headers": [
+            "Return order",
+            "End of year one",
+            "End of year two"
+          ],
+          "rows": [
+            [
+              "−20%, then +25%",
+              "$768,000.00",
+              "$908,500.00"
+            ],
+            [
+              "+25%, then −20%",
+              "$1,200,000.00",
+              "$927,040.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "research",
+        "title": "What the historical rule does and does not establish",
+        "paragraphs": [
+          "Bengen’s original work examined historical investment returns, inflation and withdrawal outcomes under particular portfolio assumptions. That is different from applying one constant average return to a balance formula. History can show how a policy behaved in tested periods, but cannot make future returns repeat those periods.",
+          "Longer retirements, different investments, costs, taxes, unusual inflation or an inability to reduce spending can change the planning problem. A rule designed as a starting point is not a universal personal recommendation. Flexible spending or other income can also change the cash the portfolio must supply."
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Use our tools within their disclosed scope",
+        "paragraphs": [
+          "The FIRE Calculator divides entered annual portfolio-funded spending by the assumed rate to size a target. For $36,000 at 4%, that target is $900,000. This reciprocal relationship does not reproduce historical survival analysis, and the projected target-crossing age is not a withdrawal guarantee.",
+          "The Retirement Calculator has separate deterministic saving and withdrawal modes. Read their inflation and timing conventions before using them. Our two-year illustration is provided in the guide and CSV; it is not an additional sequence simulation hidden inside the calculator."
+        ],
+        "links": [
+          {
+            "href": "/guides/how-much-money-do-i-need-to-retire/",
+            "label": "Build a retirement target from the actual spending gap"
+          },
+          {
+            "href": "/guides/how-long-will-retirement-savings-last/",
+            "label": "What a deterministic savings-longevity result means"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is the rule 4% of my balance every year?",
+        "answer": "The familiar initial-rate policy adjusts the first withdrawal amount for inflation. A constant percentage of the remaining balance is a different policy with a different spending path."
+      },
+      {
+        "question": "Does the 4% rule include Social Security?",
+        "answer": "It concerns portfolio withdrawals. Other income can reduce the budget the portfolio needs to fund, but its start date and tax basis must match the spending calculation."
+      },
+      {
+        "question": "Does it preserve my original principal?",
+        "answer": "No. A withdrawal rule does not guarantee a fixed ending balance or legacy amount."
+      },
+      {
+        "question": "Can I apply it to a 40- or 50-year retirement?",
+        "answer": "A longer horizon changes the problem. Do not assume conclusions from a shorter historical horizon automatically transfer unchanged."
+      },
+      {
+        "question": "Does your FIRE calculator prove a withdrawal rate is safe?",
+        "answer": "No. Its entered rate sizes a target under disclosed assumptions. It does not run a historical backtest or estimate a probability of success."
+      }
+    ],
+    "sources": [
+      {
+        "title": "William Bengen: Determining Withdrawal Rates Using Historical Data",
+        "url": "https://obj.portfolioconstructionforum.edu.au/articles_perspectives/retailinvestor.org_pdf_Bengen1.pdf",
+        "usedFor": "Original historical research context and the initial-rate policy distinction.",
+        "scope": "Our original arithmetic examples do not reproduce the study or guarantee any future rate."
+      },
+      {
+        "title": "Schwab: the 4% rule and spending assumptions",
+        "url": "https://www.schwab.com/learn/story/beyond-4-rule-how-much-can-you-spend-retirement",
+        "usedFor": "Contemporary explanation of inflation-adjusted withdrawals and planning limitations.",
+        "scope": "Educational discussion; no Schwab forecast, model result or recommendation is attributed to this website."
+      }
+    ],
+    "related": [
+      {
+        "href": "/fire-calculator",
+        "label": "FIRE Calculator"
+      },
+      {
+        "href": "/retirement-calculator",
+        "label": "Retirement Calculator"
+      },
+      {
+        "href": "/guides/how-much-money-do-i-need-to-retire/",
+        "label": "Retirement target and early-years funding"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce target sizing only: $36,000 divided by 4%",
+        "path": "/fire-calculator",
+        "mode": "plan",
+        "values": {
+          "age": 35,
+          "max_age": 80,
+          "balance": 150000,
+          "spending": 36000,
+          "monthly": 2000,
+          "return": 7,
+          "inflation": 2.5,
+          "withdrawal": 4
+        }
+      }
+    ],
+    "limitations": [
+      "The sequence tables are original two-year arithmetic examples, not observed performance or backtests.",
+      "No safe-withdrawal guarantee, allocation recommendation or personalized tax calculation is made."
+    ]
+  },
+  "cd-ladder": {
+    "meta": {
+      "path": "/guides/cd-ladder/",
+      "title": "CD Ladder: How It Works, Steps & Maturity Examples",
+      "heading": "CD Ladder: Build a Maturity Schedule Before Chasing a Rate",
+      "description": "Build a CD ladder with an original three-rung maturity example, explicit APY inputs, reinvestment choices and liquidity limits, with individual CD calculator presets.",
+      "publishedOn": "2026-11-03",
+      "calculatorIds": [
+        "cd",
+        "savings"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "CD Ladder",
+      "cardIntro": "Build a CD ladder with an original three-rung maturity example, explicit APY inputs, reinvestment choices and liquidity limits, with individual CD calculator presets.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "A CD ladder splits money among certificates with different maturity dates. As a rung matures, you can spend the proceeds or reinvest them under then-available terms. The schedule creates planned access points; it does not guarantee that future reinvestment rates will be attractive or that early access is cost-free.",
+    "intro": "This guide uses a hypothetical $15,000, three-rung ladder to show the timing. The initial APYs are assumptions, not market quotes. Our CD Calculator reproduces an individual rung; the guide’s schedule combines those separate calculations without pretending the tool automatically manages a ladder.",
+    "sections": [
+      {
+        "id": "setup",
+        "title": "Separate emergency cash before assigning rungs",
+        "paragraphs": [
+          "Choose the money that can remain committed until the planned maturity dates. Keep cash needed for emergencies or known near-term bills outside the ladder unless the account contract provides suitable access. A recurring maturity date does not mean all principal is available at every date.",
+          "Next decide how often you want funds to mature and how far out you are comfortable committing new deposits. Equal rungs are easy to illustrate, but actual amounts should match known cash needs. Check minimum deposits, withdrawal terms, insurance coverage and whether a product can be called before treating its headline yield as the whole decision."
+        ]
+      },
+      {
+        "id": "example",
+        "title": "An original $15,000 three-rung ladder",
+        "paragraphs": [
+          "At time zero, put $5,000 into each of one-, two- and three-year CDs. Assume APYs of 4%, 4.25% and 4.5%, respectively, with no tax, fee, early exit, call or outside deposits. Interest stays in each CD until its maturity. The balance formula is principal × (1 + APY)^years.",
+          "These maturity balances occur on different dates. Do not add them and call the sum the ladder’s value at the end of year three without specifying what happened to the earlier proceeds. This table describes only the initial contracts and intentionally makes no forecast about renewal rates."
+        ],
+        "table": {
+          "caption": "Initial rungs only; maturity years are measured from opening",
+          "headers": [
+            "Initial term",
+            "Deposit",
+            "Assumed APY",
+            "Maturity year",
+            "Maturity proceeds",
+            "Interest to maturity"
+          ],
+          "rows": [
+            [
+              "1 year",
+              "$5,000.00",
+              "4%",
+              "1",
+              "$5,200.00",
+              "$200.00"
+            ],
+            [
+              "2 year",
+              "$5,000.00",
+              "4.25%",
+              "2",
+              "$5,434.03",
+              "$434.03"
+            ],
+            [
+              "3 year",
+              "$5,000.00",
+              "4.5%",
+              "3",
+              "$5,705.83",
+              "$705.83"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "renewal",
+        "title": "Decide what to do when each rung matures",
+        "paragraphs": [
+          "When the one-year rung matures, three choices include taking cash, renewing a shorter term, or opening a new three-year rung. A three-year renewal at the end of year one matures at the end of year four. Repeating that pattern at years two and three can establish one scheduled maturity each year.",
+          "Write down whether you reinvest the full proceeds or withdraw interest and renew only principal. The two choices create different deposit sizes and future earnings. Every renewal needs a new rate assumption and contract review; the initial three APYs are not promises about those future deposits."
+        ],
+        "table": {
+          "caption": "Illustrative renewal timetable; no future rate is assumed",
+          "headers": [
+            "Initial rung matures",
+            "If renewed for three years",
+            "New maturity"
+          ],
+          "rows": [
+            [
+              "End of year 1",
+              "New contract begins at year 1",
+              "End of year 4"
+            ],
+            [
+              "End of year 2",
+              "New contract begins at year 2",
+              "End of year 5"
+            ],
+            [
+              "End of year 3",
+              "New contract begins at year 3",
+              "End of year 6"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "risks",
+        "title": "Review liquidity, calls and deposit coverage",
+        "paragraphs": [
+          "A bank CD may have an early-withdrawal penalty. A brokered CD can have different exit mechanics, including a sale at a price below principal if a market is available. Callable products can return principal earlier than planned under their terms. Confirm which structure you are buying rather than assuming every CD behaves alike.",
+          "Check applicable deposit-insurance rules across accounts at the same institution and ownership category; opening several rungs does not automatically create separate insurance limits for each. Also consider inflation and taxes: a positive nominal maturity interest amount does not guarantee preserved purchasing power."
+        ]
+      },
+      {
+        "id": "compare",
+        "title": "Compare a ladder with one CD or accessible savings",
+        "paragraphs": [
+          "An all-in long CD fixes a different access schedule. A savings account may provide easier withdrawals but a rate that changes. A ladder spreads maturity dates and future rate-reset decisions, while also adding account administration. Compare these features against the dates on which the money is needed.",
+          "For a fair numeric comparison, choose one common evaluation date, include all interest and cash withdrawals, and state every reinvestment rate. Keeping early maturity proceeds in cash at zero interest is one possible assumption; renewing them at a future market rate is another. Neither should be silently assumed."
+        ],
+        "links": [
+          {
+            "href": "/guides/cd-vs-savings-account/",
+            "label": "CD versus savings: matched deposits, access and penalties"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is a CD ladder?",
+        "answer": "A set of CDs with different maturity dates that can create scheduled access or reinvestment opportunities. It is a timing structure, not a guaranteed extra yield."
+      },
+      {
+        "question": "How do I build one step by step?",
+        "answer": "Set aside needed cash, choose maturity spacing, allocate rung amounts, verify each contract and insurance treatment, then record maturity instructions and review each renewal."
+      },
+      {
+        "question": "Can I withdraw all my ladder money each year?",
+        "answer": "Not necessarily. A maturity releases that rung’s proceeds. Other contracts can remain locked or subject to early-exit terms."
+      },
+      {
+        "question": "Does your CD Calculator simulate the whole ladder?",
+        "answer": "No. It models one disclosed CD scenario. The three links reproduce the initial rungs separately; future renewals require additional assumptions."
+      },
+      {
+        "question": "Is a ladder always better than a high-yield savings account?",
+        "answer": "No. Access needs, rates, penalties, product structure and taxes can favor different choices. The initial example does not rank current offers."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: certificates of deposit",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/certificates-deposit-cds",
+        "usedFor": "CD terms, brokered structures, early exit and deposit-insurance context.",
+        "scope": "Insurance conditions depend on institution and ownership category; no current offer is endorsed."
+      },
+      {
+        "title": "Fidelity: CD ladder overview",
+        "url": "https://www.fidelity.com/fixed-income-bonds/cd-ladders",
+        "usedFor": "Staggered maturity structure and reinvestment context.",
+        "scope": "Product education, not our hypothetical APYs or a guarantee of future renewals."
+      }
+    ],
+    "related": [
+      {
+        "href": "/cd-calculator",
+        "label": "CD Calculator"
+      },
+      {
+        "href": "/savings-calculator",
+        "label": "Savings Calculator"
+      },
+      {
+        "href": "/guides/apr-vs-apy/",
+        "label": "Use APY without compounding the yield twice"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the 1-year initial rung",
+        "path": "/cd-calculator",
+        "mode": "accumulation",
+        "values": {
+          "principal": 5000,
+          "rate_type": "APY",
+          "rate": "4",
+          "compound": "Monthly",
+          "years": 1,
+          "months": 0,
+          "tax": 0
+        }
+      },
+      {
+        "label": "Reproduce the 2-year initial rung",
+        "path": "/cd-calculator",
+        "mode": "accumulation",
+        "values": {
+          "principal": 5000,
+          "rate_type": "APY",
+          "rate": "4.25",
+          "compound": "Monthly",
+          "years": 2,
+          "months": 0,
+          "tax": 0
+        }
+      },
+      {
+        "label": "Reproduce the 3-year initial rung",
+        "path": "/cd-calculator",
+        "mode": "accumulation",
+        "values": {
+          "principal": 5000,
+          "rate_type": "APY",
+          "rate": "4.5",
+          "compound": "Monthly",
+          "years": 3,
+          "months": 0,
+          "tax": 0
+        }
+      }
+    ],
+    "limitations": [
+      "No future renewal rates, taxes, fees, early-exit penalties, calls or market sale prices are simulated.",
+      "Initial maturity amounts are at different dates and are not a common-date total portfolio value."
+    ]
+  }
+}

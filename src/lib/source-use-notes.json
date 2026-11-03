@@ -1407,6 +1407,56 @@
       "role": "rule",
       "usedFor": "IRRRL purpose and existing VA-backed loan context.",
       "scope": "Overview, not a complete underwriting or seasoning decision."
+    },
+    "https://www.irs.gov/irb/2026-02_IRB": {
+      "role": "rule",
+      "usedFor": "2026 coverage-rule context, including Bronze and catastrophic plans.",
+      "scope": "Special coverage treatment does not waive all other eligibility conditions."
+    },
+    "https://fsafeds.gov/support/messageboard/333": {
+      "role": "rule",
+      "usedFor": "A documented $680 carryover provision and participation conditions.",
+      "scope": "This is one plan’s implementation, not proof that every employer offers carryover."
+    },
+    "https://moneysmart.gov.au/saving/compound-interest": {
+      "role": "rule",
+      "usedFor": "The interest-on-interest mechanism and simple-interest distinction.",
+      "scope": "Conceptual source; no claim about U.S. product terms."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/does-a-heloc-affect-my-ability-to-refinance-my-first-mortgage-loan-en-252/": {
+      "role": "rule",
+      "usedFor": "Lien and lender approval considerations.",
+      "scope": "The relevant lenders and actual lien documents control."
+    },
+    "https://www.pnc.com/insights/personal-finance/borrow/cash-out-refinance-vs-heloc.html": {
+      "role": "rule",
+      "usedFor": "Product-structure context alongside the official sources.",
+      "scope": "Lender education is not a quote, independent endorsement or validation of our hypothetical rates."
+    },
+    "https://www.consumerfinance.gov/owning-a-home/explore/understand-the-different-kinds-of-loans-available/": {
+      "role": "rule",
+      "usedFor": "Term, interest and payment trade-offs when comparing mortgages.",
+      "scope": "Consumer education, not underwriting approval or current pricing."
+    },
+    "https://www.chase.com/personal/mortgage/education/financing-a-home/15-vs-30-year-mortgage": {
+      "role": "rule",
+      "usedFor": "Product comparison context and the distinction between required and extra payments.",
+      "scope": "Lender education; our numeric examples are independently calculated and hypothetical."
+    },
+    "https://www.investor.gov/introduction-investing/getting-started/asset-allocation": {
+      "role": "rule",
+      "usedFor": "Time horizon and risk context for investment planning.",
+      "scope": "No specific allocation or success probability is recommended."
+    },
+    "https://obj.portfolioconstructionforum.edu.au/articles_perspectives/retailinvestor.org_pdf_Bengen1.pdf": {
+      "role": "rule",
+      "usedFor": "Historical research context behind initial-rate withdrawal rules.",
+      "scope": "Our target table is arithmetic, not a reproduction of that historical study."
+    },
+    "https://www.fidelity.com/fixed-income-bonds/cd-ladders": {
+      "role": "rule",
+      "usedFor": "Staggered maturity structure and reinvestment context.",
+      "scope": "Product education, not our hypothetical APYs or a guarantee of future renewals."
     }
   },
   "pages": {
@@ -1493,7 +1543,8 @@
       ]
     },
     "guide:/guides/how-does-an-hsa-work/": {
-      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes."
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/how-to-calculate-rmd/": {
       "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
@@ -1505,10 +1556,12 @@
       }
     },
     "guide:/guides/how-401k-matching-works/": {
-      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes."
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/how-long-will-retirement-savings-last/": {
-      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes."
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/how-to-calculate-pmi-and-cancellation/": {
       "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
@@ -1526,7 +1579,8 @@
           "title": "OpenStax 8.3: loan amortization",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/roth-conversion-ladder/": {
       "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
@@ -1721,7 +1775,8 @@
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
     },
     "guide:/guides/how-to-calculate-cap-rate/": {
-      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/how-to-calculate-rental-property-cash-flow/": {
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements.",
@@ -2122,7 +2177,8 @@
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
     },
     "guide:/guides/compound-interest-with-monthly-contributions/": {
-      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/cagr-and-annualized-growth/": {
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
@@ -2149,7 +2205,8 @@
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
     },
     "guide:/guides/how-to-calculate-simple-interest/": {
-      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/how-to-calculate-irr/": {
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
@@ -2706,7 +2763,8 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/how-are-heloc-payments-calculated/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/should-i-pay-off-debt-or-save/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
@@ -2728,6 +2786,124 @@
     "guide:/guides/how-soon-can-you-refinance-a-mortgage/": {
       "note": "The source rules distinguish programs and date endpoints. The original calendar example checks only two timing conditions; the calculator does not determine eligibility. Program rules, effective dates, exceptions and lender requirements must be confirmed for a real application.",
       "updatedOn": "2026-11-03"
+    },
+    "guide:/guides/apr-vs-apy/": {
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
+      "updatedOn": "2026-11-03",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/": {
+          "role": "rule",
+          "usedFor": "The borrowing-rate and finance-charge distinction.",
+          "scope": "Mortgage context; not a rule that every fee in every product is included."
+        },
+        "https://www.consumerfinance.gov/rules-policy/regulations/1030/a/": {
+          "role": "rule",
+          "usedFor": "Annualized deposit-yield disclosure context.",
+          "scope": "The article’s equal-period example is simplified, not a substitute for the full disclosure rules."
+        }
+      }
+    },
+    "guide:/guides/hsa-vs-fsa/": {
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
+      "updatedOn": "2026-11-03",
+      "overrides": {
+        "https://www.irs.gov/publications/p969": {
+          "role": "rule",
+          "usedFor": "Eligibility, account ownership, qualified spending and compatible arrangements.",
+          "scope": "Use the applicable year and actual plan terms; not a personalized eligibility decision."
+        },
+        "https://www.irs.gov/publications/p15b": {
+          "role": "rule",
+          "usedFor": "2026 HSA amounts and the health FSA salary-reduction limit.",
+          "scope": "Annual limits differ from an employer’s actual plan design."
+        }
+      }
+    },
+    "guide:/guides/simple-interest-vs-compound-interest/": {
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
+      "updatedOn": "2026-11-03",
+      "overrides": {
+        "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator": {
+          "role": "rule",
+          "usedFor": "Principal, rates, time and compounding as separate inputs.",
+          "scope": "A mechanical calculator does not forecast investment performance."
+        }
+      }
+    },
+    "guide:/guides/401k-vs-roth-ira/": {
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
+      "updatedOn": "2026-11-03",
+      "overrides": {
+        "https://www.irs.gov/retirement-plans/roth-comparison-chart": {
+          "role": "rule",
+          "usedFor": "Conceptual distinction between account structures and contribution tax treatment.",
+          "scope": "The chart includes older year-specific figures; our 2026 amounts use the separate current-year release, not its historical limits or distribution-age entries."
+        },
+        "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500": {
+          "role": "rule",
+          "usedFor": "2026 base deferral and IRA limits and the existence of catch-up and phase-out rules.",
+          "scope": "Does not establish an individual’s contribution eligibility."
+        },
+        "https://www.irs.gov/publications/p590b": {
+          "role": "rule",
+          "usedFor": "The need to distinguish qualified Roth distributions and other withdrawal rules.",
+          "scope": "Our table assumes a qualified Roth distribution and models none of the exceptions."
+        }
+      }
+    },
+    "guide:/guides/cash-out-refinance-vs-heloc/": {
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
+      "updatedOn": "2026-11-03",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-other-types-of-loans-are-similar-to-a-heloc-en-253/": {
+          "role": "rule",
+          "usedFor": "How cash-out replacement differs from an added home-equity borrowing product.",
+          "scope": "Conceptual comparison, not a live quote or suitability assessment."
+        }
+      }
+    },
+    "guide:/guides/15-vs-30-year-mortgage/": {
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
+      "updatedOn": "2026-11-03",
+      "overrides": {}
+    },
+    "guide:/guides/how-much-money-do-i-need-to-retire/": {
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
+      "updatedOn": "2026-11-03",
+      "overrides": {
+        "https://www.ssa.gov/retirement/plan-for-retirement": {
+          "role": "rule",
+          "usedFor": "Personal benefit estimates and the need to examine claiming dates.",
+          "scope": "An illustration here is not an SSA record or eligibility determination."
+        }
+      }
+    },
+    "guide:/guides/4-percent-rule/": {
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
+      "updatedOn": "2026-11-03",
+      "overrides": {
+        "https://obj.portfolioconstructionforum.edu.au/articles_perspectives/retailinvestor.org_pdf_Bengen1.pdf": {
+          "role": "rule",
+          "usedFor": "Original historical research context and the initial-rate policy distinction.",
+          "scope": "Our original arithmetic examples do not reproduce the study or guarantee any future rate."
+        },
+        "https://www.schwab.com/learn/story/beyond-4-rule-how-much-can-you-spend-retirement": {
+          "role": "rule",
+          "usedFor": "Contemporary explanation of inflation-adjusted withdrawals and planning limitations.",
+          "scope": "Educational discussion; no Schwab forecast, model result or recommendation is attributed to this website."
+        }
+      }
+    },
+    "guide:/guides/cd-ladder/": {
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
+      "updatedOn": "2026-11-03",
+      "overrides": {
+        "https://www.investor.gov/introduction-investing/investing-basics/investment-products/certificates-deposit-cds": {
+          "role": "rule",
+          "usedFor": "CD terms, brokered structures, early exit and deposit-insurance context.",
+          "scope": "Insurance conditions depend on institution and ownership category; no current offer is endorsed."
+        }
+      }
     }
   }
 }

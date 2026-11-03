@@ -4,7 +4,7 @@ const expected={'biweekly-mortgage':7,'mortgage-recast':8,'emergency-fund':7,'ta
 const calc=(id:string,values:Record<string,string>={},mode?:string)=>{const c=calculators.find(c=>c.id===id)!,m=mode?c.modes.find(m=>m.id===mode)!:c.modes[0];return runCalculation(id,m.id,{...defaults(m),...values});};
 const metric=(r:ReturnType<typeof calc>,label:string)=>r.metrics.find(m=>m.label===label)!.value;
 test('Five FAQ refreshes retain anchored calculation links and correct review dates',()=>{
- for(const[id,count]of Object.entries(expected)){const g=guides[id];assert.equal(g.questions.length,count);assert.equal(new Set(g.questions.map(q=>q.question)).size,count);assert.equal(g.checkedOn,'2026-11-02');assert.equal(contentUpdatedOn[routeFor(id)],'2026-11-02');}
+ for(const[id,count]of Object.entries(expected)){const g=guides[id];assert.equal(g.questions.length,count);assert.equal(new Set(g.questions.map(q=>q.question)).size,count);assert.equal(g.checkedOn,'2026-11-02');assert.equal(contentUpdatedOn[routeFor(id)],id==='roth-ira'?'2026-11-03':'2026-11-02');}
  for(const[id,anchors]of Object.entries({'emergency-fund':['use-target'],'take-home-paycheck':['use-actual-paycheck','use-pay-frequency','use-fica-oasdi'],'roth-ira':['use-roth-eligibility-vs-growth','use-roth-growth-example','use-roth-versus-traditional-tool','use-roth-annual-monthly-timing']}))for(const anchor of anchors)assert.ok(guides[id].questions.find(q=>q.anchor===anchor)?.links?.length);
  assert.ok(!guides['take-home-paycheck'].questions.some(q=>q.question==='Will the paycheck result match my payslip exactly?'));
 });

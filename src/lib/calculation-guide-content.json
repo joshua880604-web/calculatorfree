@@ -12,7 +12,8 @@
       "topic": "Mortgages",
       "breadcrumb": "Calculate a monthly mortgage payment",
       "cardIntro": "Separate loan repayment from tax, insurance and HOA costs, with three checked scenarios and a spreadsheet formula.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/mortgage-calculator",
     "calculatorLabel": "Mortgage Calculator",
@@ -134,6 +135,10 @@
     ],
     "related": [
       {
+        "href": "/guides/15-vs-30-year-mortgage/",
+        "label": "15-year versus 30-year mortgage comparison"
+      },
+      {
         "href": "/mortgage-payoff-calculator",
         "label": "Mortgage Payoff Calculator"
       },
@@ -171,7 +176,7 @@
       "breadcrumb": "Compound growth with monthly deposits",
       "cardIntro": "Four matched scenarios separate money you contribute from earnings and show the effect of deposit timing.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-01"
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/compound-interest-calculator",
     "calculatorLabel": "Compound Interest Calculator",
@@ -293,6 +298,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/apr-vs-apy/",
+        "label": "APR versus APY rate conventions"
+      },
       {
         "href": "/investment-calculator",
         "label": "Investment Calculator"
@@ -948,7 +957,8 @@
       "topic": "Retirement",
       "breadcrumb": "How Long Will My Retirement Savings Last?",
       "cardIntro": "Estimate retirement savings longevity with fixed monthly withdrawals. Compare returns, spending and final partial payments, and understand inflation and sequence risk.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/retirement-calculator",
     "calculatorLabel": "Retirement Calculator",
@@ -1052,6 +1062,10 @@
     ],
     "related": [
       {
+        "href": "/guides/how-much-money-do-i-need-to-retire/",
+        "label": "How much money you need to retire"
+      },
+      {
         "href": "/glossary/withdrawal-rate/",
         "label": "Withdrawal rate"
       },
@@ -1078,7 +1092,8 @@
       "topic": "Retirement",
       "breadcrumb": "How Does an HSA Work? Contributions, Tax Savings and Growth",
       "cardIntro": "Understand HSA contribution room, employer deposits, tax assumptions and investment growth. Includes 2026 limits, six reproducible cases and medical-spending scenarios.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/hsa-calculator",
     "calculatorLabel": "HSA Calculator",
@@ -1186,6 +1201,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/hsa-vs-fsa/",
+        "label": "HSA versus health care FSA"
+      },
       {
         "href": "/retirement-calculator",
         "label": "Retirement Calculator"
@@ -1352,7 +1371,8 @@
       "topic": "Retirement",
       "breadcrumb": "How Does 401(k) Matching Work? Formulas and Checked Examples",
       "cardIntro": "Calculate two-tier 401(k) matching, distinguish match rate from salary band, and understand contribution limits, payroll timing, true-ups and vesting.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/401k-calculator",
     "calculatorLabel": "401(k) Calculator",
@@ -1461,6 +1481,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/401k-vs-roth-ira/",
+        "label": "401(k) versus Roth IRA structures"
+      },
       {
         "href": "/glossary/401k/",
         "label": "401(k) glossary"
@@ -1631,7 +1655,8 @@
       "topic": "Property investing",
       "breadcrumb": "How to Calculate Cap Rate: Formula, NOI and Property Value",
       "cardIntro": "Calculate cap rate from annual NOI and property value. Compare prices, estimate value at a target rate, and understand good cap rates, mortgage exclusions and ROI differences.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/cap-rate-calculator",
     "calculatorLabel": "Cap Rate Calculator",
@@ -1678,8 +1703,10 @@
         "id": "interpretation",
         "title": "What is a good cap rate, and is a higher one better?",
         "paragraphs": [
-          "There is no universal good cap rate. Property type, location, lease quality, vacancy, repair needs, growth expectations and the income convention affect comparisons. A higher number is not automatic evidence of a safer or better deal; it can accompany risks or costs not captured by a headline NOI figure.",
-          "Cap rate is not total ROI, a mortgage-adjusted return or a guarantee of annual distributions. It omits appreciation, sale costs, financing and other cash flows. For cash remaining after debt service relative to invested cash, use cash-on-cash return and a complete cash budget. Our existing comparison glossary explains that distinction without creating another competing calculator page."
+          "A good cap rate is a context-dependent comparison, not a universal percentage. Compare the same property type, location, lease quality and income period. Separate current collected income from a projected stabilized year, and verify every operating expense before deciding that one yield is more attractive.",
+          "Ask why the quoted percentage is higher. A lower price may reflect repair needs, expiring leases, unreliable collections or limited resale demand. A higher stated NOI may omit management, insurance, property taxes or recurring repairs. The same 6% headline can describe very different evidence and risks.",
+          "The comparison table below holds annual NOI or price constant to expose the arithmetic. It is not a market benchmark: no scenario is labeled a recommended purchase. A $3,000 expense omission raises the displayed yield from 5% to 6% on a $300,000 property without creating any extra economic income.",
+          "Cap rate excludes financing and is not total ROI. After checking comparable NOI, separately review debt service, future capital replacements, cash invested and sale costs. A positive cap rate does not guarantee positive owner cash flow, sufficient reserves or an investment profit."
         ],
         "formula": ""
       },
@@ -1945,7 +1972,8 @@
       "topic": "Home equity",
       "breadcrumb": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
       "cardIntro": "Calculate interest-only HELOC draw payments and amortizing repayment. Compare rates, terms, annual fees and closing costs using six reproducible scenarios.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/heloc-calculator",
     "calculatorLabel": "HELOC Calculator",
@@ -2068,6 +2096,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/cash-out-refinance-vs-heloc/",
+        "label": "Cash-out refinance versus HELOC: whole-loan comparison"
+      },
       {
         "href": "/home-equity-loan-calculator",
         "label": "Home Equity Loan Calculator"
@@ -5849,7 +5881,8 @@
       "topic": "Savings & investing",
       "breadcrumb": "How to Calculate Simple Interest: Formula, Days and Rate Units",
       "cardIntro": "Calculate simple interest, principal, time or rate with six reproducible examples. Match rate and time units and distinguish unchanged-principal math from loan amortization.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/simple-interest-calculator",
     "calculatorLabel": "Simple Interest Calculator",
@@ -5968,6 +6001,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/simple-interest-vs-compound-interest/",
+        "label": "Simple versus compound interest"
+      },
       {
         "href": "/simple-interest-calculator",
         "label": "Simple Interest Calculator"

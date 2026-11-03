@@ -1,0 +1,14 @@
+Guide,APR vs APY: Compare Borrowing Costs and Deposit Growth
+Scope,"No fees, taxes, deposits, withdrawals or variable rates in the deposit table.",No comparison of live bank offers or guarantee of legal APR disclosure compliance.
+
+Choose the measure for the question
+Question,Useful starting measure,Still review
+What does borrowing cost?,APR and note rate,"Fees, term, payment schedule and early exit"
+What does a deposit earn over a year?,APY,"Variable-rate terms, access and required balances"
+How much interest accrues each period?,Periodic or nominal interest rate,Compounding frequency and timing
+
+Hypothetical one-year compounding comparison
+Compounding,Nominal annual rate,Effective annual yield,Ending balance,Interest
+Annual,6.0000%,6.0000%,"$10,600.00",$600.00
+Monthly,6.0000%,6.1678%,"$10,616.78",$616.78
+Daily (365),6.0000%,6.1831%,"$10,618.31",$618.31

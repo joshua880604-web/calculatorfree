@@ -1,4 +1,4 @@
-const contentGuidePaths=["/guides/how-soon-can-you-refinance-a-mortgage/", "/guides/are-reinvested-dividends-taxable/", "/guides/should-you-reinvest-dividends/", "/guides/how-much-house-can-i-afford/", "/guides/how-to-calculate-rental-property-cash-flow/", "/guides/is-refinancing-worth-it/", "/guides/", "/refinance-calculator.html", "/drip-calculator.html", "/stock-profit-calculator.html", "/mortgage-calculator.html"];
+const contentGuidePaths=['/guides/apr-vs-apy/','/guides/hsa-vs-fsa/','/guides/simple-interest-vs-compound-interest/','/guides/401k-vs-roth-ira/','/guides/cash-out-refinance-vs-heloc/','/guides/15-vs-30-year-mortgage/','/guides/how-much-money-do-i-need-to-retire/','/guides/4-percent-rule/','/guides/cd-ladder/','/guides/how-to-calculate-monthly-mortgage-payment/','/guides/compound-interest-with-monthly-contributions/','/guides/how-long-will-retirement-savings-last/','/guides/how-does-an-hsa-work/','/guides/how-401k-matching-works/','/guides/how-to-calculate-cap-rate/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/how-are-heloc-payments-calculated/','/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-simple-interest/','/mortgage-calculator.html','/mortgage-payoff-calculator.html','/refinance-calculator.html','/apr-calculator.html','/home-equity-loan-calculator.html','/heloc-calculator.html','/compound-interest-calculator.html','/savings-calculator.html','/simple-interest-calculator.html','/cd-calculator.html','/retirement-calculator.html','/401k-calculator.html','/social-security-calculator.html','/roth-ira-calculator.html','/ira-calculator.html','/coast-fire-calculator.html','/fire-calculator.html','/hsa-calculator.html','/cap-rate-calculator.html','/real-estate-calculator.html','/retirement-calculators.html','/savings-investment-calculators.html',"/guides/how-soon-can-you-refinance-a-mortgage/", "/guides/are-reinvested-dividends-taxable/", "/guides/should-you-reinvest-dividends/", "/guides/how-much-house-can-i-afford/", "/guides/how-to-calculate-rental-property-cash-flow/", "/guides/is-refinancing-worth-it/", "/guides/", "/refinance-calculator.html", "/drip-calculator.html", "/stock-profit-calculator.html", "/mortgage-calculator.html"];
 const followupReviewPaths=['/biweekly-mortgage-calculator.html','/mortgage-recast-calculator.html','/emergency-fund-calculator.html','/paycheck-calculator.html','/roth-ira-calculator.html'];
 const depthReviewPaths=['/loan-calculator.html','/finance-calculator.html','/bond-calculator.html','/average-return-calculator.html','/margin-calculator.html','/mortgage-payoff-calculator.html','/depreciation-calculator.html','/lease-calculator.html'];
 followupReviewPaths.push(...depthReviewPaths);
@@ -46,8 +46,8 @@ test("Production sitemap lists canonical pages and only reviewed content dates",
     SITE_INDEXABLE: "true",
   });
   const entries = sitemapEntries(config);
-  assert.equal(entries.length, 312);
-  for(const path of depthReviewPaths)assert.equal(contentUpdatedOn[path],'2026-11-02');
+  assert.equal(entries.length, 321);
+  for(const path of depthReviewPaths)assert.equal(contentUpdatedOn[path],contentGuidePaths.includes(path)?'2026-11-03':'2026-11-02');
   assert.ok(entries.some(e=>new URL(e.url).pathname==='/disclaimer.html'));
   assert.equal(contentUpdatedOn['/fat-fire-calculator.html'],'2026-10-29');
   assert.equal(contentUpdatedOn['/lean-fire-calculator.html'],'2026-10-29');
@@ -76,7 +76,7 @@ test("Production sitemap lists canonical pages and only reviewed content dates",
   assert.equal(contentUpdatedOn['/privacy.html'],'2026-11-02');
   assert.equal(contentUpdatedOn['/about.html'],'2026-11-02');
   assert.equal(contentUpdatedOn['/methodology.html'],'2026-11-02');
-  assert.equal(contentUpdatedOn['/401k-calculator.html'],'2026-11-01');
+  assert.equal(contentUpdatedOn['/401k-calculator.html'],'2026-11-03');
   assert.equal(contentUpdatedOn['/rmd-calculator.html'],'2026-11-01');
   assert.equal(contentUpdatedOn['/guides/debt-snowball-vs-avalanche/'],'2026-10-30');
   assert.equal(contentUpdatedOn['/guides/mortgage-recast-vs-refinance/'],'2026-10-30');
@@ -185,7 +185,7 @@ test("Production SEO follows the confirmed www extensionless destination while o
   assert.equal(absoluteURL("/cd-calculator.html",config),"https://www.calculatorfree.io/cd-calculator");
   assert.equal(absoluteURL("/glossary/",config),"https://www.calculatorfree.io/glossary/");
   const entries=sitemapEntries(config);
-  assert.equal(entries.length,312);
+  assert.equal(entries.length,321);
   assert.equal(new Set(entries.map(e=>e.url)).size,entries.length);
   assert.ok(entries.every(e=>e.url.startsWith("https://www.calculatorfree.io/")&&!e.url.endsWith(".html")&&!e.url.includes("?")));
   for (const calc of calculators.filter(c=>!c.directory)) {

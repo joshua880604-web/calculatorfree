@@ -28,8 +28,8 @@ test('Articles and Guides collection describe the same visible entries without i
 
 test('Substantive question updates preserve original publication and advance reviewed sitemap dates',()=>{
  const updated=editorialGuides.filter(g=>g.updatedOn);
- assert.equal(updated.length,21);
- const novemberUpdates=new Set(['/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/should-you-reinvest-dividends/','/guides/is-refinancing-worth-it/']);
+ assert.equal(updated.length,28);
+ const novemberUpdates=new Set(['/guides/how-to-calculate-monthly-mortgage-payment/','/guides/compound-interest-with-monthly-contributions/','/guides/how-long-will-retirement-savings-last/','/guides/how-does-an-hsa-work/','/guides/how-401k-matching-works/','/guides/how-to-calculate-cap-rate/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/how-are-heloc-payments-calculated/','/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-simple-interest/','/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/should-you-reinvest-dividends/','/guides/is-refinancing-worth-it/']);
  for(const guide of updated){
   assert.equal(guide.updatedOn,novemberUpdates.has(guide.path)?'2026-11-03':['/guides/compound-interest-with-monthly-contributions/','/guides/biweekly-vs-monthly-mortgage-payments/'].includes(guide.path)?'2026-11-01':guide.path==='/guides/how-to-calculate-coast-fire/'?'2026-10-31':'2026-10-30');
   assert.ok(guide.publishedOn<=guide.updatedOn!);

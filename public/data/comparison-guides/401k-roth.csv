@@ -1,0 +1,16 @@
+Guide,401(k) vs Roth IRA: Separate the Account from the Tax Treatment
+Scope,"The tax table assumes a fixed 22% current marginal rate, doubling and a qualified Roth distribution.","No fees, match, state tax, bracket calculation, phase-out determination or early-withdrawal exceptions are included."
+
+"General structure comparison, not an individualized eligibility decision"
+Feature,Pre-tax 401(k),Roth 401(k),Roth IRA
+Where held,Employer plan,Employer plan if offered,Individual account
+Employee tax timing,Generally pre-tax,After-tax,After-tax
+Employer match,May be offered,May be offered; check match treatment,No employer-plan match
+Contribution limit framework,Shares employee deferral limit with Roth 401(k),Shares employee deferral limit with pre-tax 401(k),"Separate IRA limit, shared with Traditional IRA"
+Investments and fees,Plan menu and charges,Plan menu and charges,Custodian and chosen investments
+
+"Equal $2,340 take-home cost, hypothetical doubling, no match or fees"
+Withdrawal tax,Pre-tax contribution,Roth contribution,After-tax 401(k),Qualified Roth amount,401(k) minus Roth
+12%,"$3,000.00","$2,340.00","$5,280.00","$4,680.00",$600.00
+22%,"$3,000.00","$2,340.00","$4,680.00","$4,680.00",$0.00
+32%,"$3,000.00","$2,340.00","$4,080.00","$4,680.00",$-600.00

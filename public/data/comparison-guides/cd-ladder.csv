@@ -1,0 +1,14 @@
+Guide,CD Ladder: Build a Maturity Schedule Before Chasing a Rate
+Scope,"No future renewal rates, taxes, fees, early-exit penalties, calls or market sale prices are simulated.",Initial maturity amounts are at different dates and are not a common-date total portfolio value.
+
+Initial rungs only; maturity years are measured from opening
+Initial term,Deposit,Assumed APY,Maturity year,Maturity proceeds,Interest to maturity
+1 year,"$5,000.00",4%,1,"$5,200.00",$200.00
+2 year,"$5,000.00",4.25%,2,"$5,434.03",$434.03
+3 year,"$5,000.00",4.5%,3,"$5,705.83",$705.83
+
+Illustrative renewal timetable; no future rate is assumed
+Initial rung matures,If renewed for three years,New maturity
+End of year 1,New contract begins at year 1,End of year 4
+End of year 2,New contract begins at year 2,End of year 5
+End of year 3,New contract begins at year 3,End of year 6

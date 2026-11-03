@@ -1,3 +1,4 @@
+import {comparisonGuideList} from './comparison-guides';
 import {questionGuideList} from './question-guides';
 import {practicalGuideList} from './practical-guides';
 import {publisherIdentity} from './content-transparency';
@@ -200,7 +201,7 @@ export const baristaCoastGuide:EditorialGuide={
  topic:'Retirement',breadcrumb:'Barista FIRE vs. Coast FIRE',format:'Comparison guide',
  cardIntro:'See why part-time income, its stop date and pre-retirement withdrawals change the assets you need. Compare a checked zero-growth example.',
 };
-export const editorialGuides=[...questionGuideList,...practicalGuideList,...calculationGuideList,...decisionGuideList,...modelStudyGuides,baristaCoastGuide,snowballMethodGuide,avalancheMethodGuide,coastFireGuide,recastGuide,debtGuide,cdSavingsGuide,carPayoffGuide,biweeklyGuide,pointsGuide,emergencyGuide,rentBuyGuide,debtSaveGuide,aprGuide,refinanceGuide,iraGuide,marginMarkupGuide];
+export const editorialGuides=[...comparisonGuideList,...questionGuideList,...practicalGuideList,...calculationGuideList,...decisionGuideList,...modelStudyGuides,baristaCoastGuide,snowballMethodGuide,avalancheMethodGuide,coastFireGuide,recastGuide,debtGuide,cdSavingsGuide,carPayoffGuide,biweeklyGuide,pointsGuide,emergencyGuide,rentBuyGuide,debtSaveGuide,aprGuide,refinanceGuide,iraGuide,marginMarkupGuide];
 export function editorialSchema(article:boolean|EditorialGuide=false,config=siteConfig()){
  const entry=article===true?recastGuide:typeof article==='object'?article:undefined;
  const url=absoluteURL(entry?entry.path:guidesPath,config);

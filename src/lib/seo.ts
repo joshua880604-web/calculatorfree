@@ -283,3 +283,8 @@ for(const path of [directoryPath,'/about.html','/privacy.html','/methodology.htm
 // Reviewed new guide relationships; calculation models are unchanged.
 for(const id of ['refinance','drip','stock-profit','mortgage'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-03';
 
+
+// New comparison guides and their visible tool/category reading links, November 3.
+for(const id of ['apr','compound-interest','cd','hsa','simple-interest','401k','roth-ira','ira','refinance','heloc','home-equity-loan','mortgage','mortgage-payoff','retirement','fire','social-security','coast-fire','savings','cap-rate'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-03';
+for(const path of ['/guides/','/real-estate-calculator.html','/retirement-calculators.html','/savings-investment-calculators.html'])contentUpdatedOn[path]='2026-11-03';
+contentUpdatedOn['/guides/compound-interest-with-monthly-contributions/']='2026-11-03';

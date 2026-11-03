@@ -1,0 +1,23 @@
+Guide,"HSA vs FSA: Eligibility, Carryover and a Spending Example"
+Scope,"The FSA example is a manual illustration, not an FSA tool result.","No payroll tax, state tax, insurance premium, investment return or individualized eligibility determination is modeled."
+
+General account distinctions; plan terms still matter
+Feature,HSA,Health care FSA
+Ownership,Individual account,Employer-plan arrangement
+Contributing,Requires HSA eligibility,Requires access to the employer’s plan
+Unused balance,Can remain in the account,"Use-or-lose framework, subject to permitted plan provisions"
+Funding access,Limited by available account funds,Annual election generally available during the coverage period
+Investing,May be offered by the custodian; investments can lose value,Not a personal investment account
+
+"Illustrative full-year 2026 HSA room, no catch-up"
+Coverage,Base limit,Assumed employer contribution,Remaining personal room
+Self-only,"$4,400.00",$500.00,"$3,900.00"
+Family,"$8,750.00",$500.00,"$8,250.00"
+
+"Hypothetical $3,000 election or contribution and $2,000 eligible spending"
+Item,Amount,Interpretation
+Modeled federal tax reduction,$660.00,"$3,000 × 22%; not a complete tax calculation"
+Unused funds before year-end provisions,"$1,000.00","$3,000 − $2,000"
+HSA retained balance,"$1,000.00","No modeled fee, withdrawal or investment change"
+Illustrative FSA carryover,$680.00,Only if the plan permits and conditions are met
+Illustrative FSA forfeiture,$320.00,Under this specified carryover-only example

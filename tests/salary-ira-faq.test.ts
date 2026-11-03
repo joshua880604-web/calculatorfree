@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';
 import review from '../src/lib/semrush-salary-ira-faq-content.json';import{guides}from '../src/lib/guides';import{calculators,defaults,runCalculation}from '../src/lib/calculators';import{contentUpdatedOn}from '../src/lib/seo';
 test('Salary and IRA FAQs retain functional links, explain scope and advance only their content review dates',()=>{
  assert.equal(guides.salary.questions.length,8);assert.equal(guides.ira.questions.length,7);
- for(const id of ['salary','ira']){const g=guides[id];assert.equal(g.checkedOn,'2026-11-02');assert.equal(contentUpdatedOn['/'+id+'-calculator.html'],'2026-11-02');assert.equal(new Set(g.questions.map(q=>q.question)).size,g.questions.length);}
+ for(const id of ['salary','ira']){const g=guides[id];assert.equal(g.checkedOn,'2026-11-02');assert.equal(contentUpdatedOn['/'+id+'-calculator.html'],id==='ira'?'2026-11-03':'2026-11-02');assert.equal(new Set(g.questions.map(q=>q.question)).size,g.questions.length);}
  for(const anchor of ['use-salary-to-hourly','use-hourly-to-paycheck'])assert.ok(guides.salary.questions.find(q=>q.anchor===anchor)?.links?.length);
  assert.ok(guides.ira.questions.some(q=>q.answer.includes('not a withdrawal-tax calculation')));assert.ok(guides.ira.questions.some(q=>q.answer.includes('does not test those conditions')));
  for(const r of Object.values(review))for(const q of r.items)assert.ok(q.queries.length>0);

@@ -1,0 +1,9 @@
+Guide,Simple Interest vs Compound Interest: Compare the Same Money
+Scope,"Constant positive rates are assumptions, not promised returns.","The table excludes contributions, withdrawals, taxes and fees and is not an amortizing loan calculation."
+
+Hypothetical balances before tax and fees
+Years,Simple interest,Annual compounding,Monthly compounding,Annual-compound advantage
+1,"$10,500.00","$10,500.00","$10,511.62",$0.00
+5,"$12,500.00","$12,762.82","$12,833.59",$262.82
+10,"$15,000.00","$16,288.95","$16,470.09","$1,288.95"
+20,"$20,000.00","$26,532.98","$27,126.40","$6,532.98"

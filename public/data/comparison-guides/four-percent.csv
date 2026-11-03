@@ -1,0 +1,14 @@
+Guide,"The 4 Percent Rule: Initial Withdrawals, Inflation and Risk"
+Scope,"The sequence tables are original two-year arithmetic examples, not observed performance or backtests.","No safe-withdrawal guarantee, allocation recommendation or personalized tax calculation is made."
+
+"Same year-one loss, different year-two withdrawal definitions"
+Calculation,Amount
+Year-one initial withdrawal,"$40,000.00"
+Balance after withdrawal and −20% return,"$768,000.00"
+Year-two withdrawal with 3% inflation,"$41,200.00"
+Year-two withdrawal at 4% of remaining balance,"$30,720.00"
+
+Original two-year sequence illustration; withdrawals occur before each annual return
+Return order,End of year one,End of year two
+"−20%, then +25%","$768,000.00","$908,500.00"
+"+25%, then −20%","$1,200,000.00","$927,040.00"

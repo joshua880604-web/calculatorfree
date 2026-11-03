@@ -1,0 +1,353 @@
+[
+  {
+    "calculatorId": "compound-interest",
+    "mode": "growth",
+    "values": {
+      "principal": 10000,
+      "years": 1,
+      "months": 0,
+      "rate": 6,
+      "compound": "Monthly",
+      "monthly": 0,
+      "annual": 0,
+      "tax": 0,
+      "inflation": 0,
+      "timing": "End of period"
+    },
+    "metrics": {
+      "Ending balance": 10616.778118644996
+    }
+  },
+  {
+    "calculatorId": "hsa",
+    "mode": "contribution",
+    "values": {
+      "year": "2026",
+      "coverage": "Self-only",
+      "catchup": "No",
+      "months": 12,
+      "employee": 3000,
+      "employer": 500,
+      "federal": 22,
+      "state": 0,
+      "method": "Direct contribution",
+      "payroll_rate": 0
+    },
+    "metrics": {
+      "Maximum personal contribution after employer": 3900.0,
+      "Estimated tax savings on personal contribution": 660.0
+    }
+  },
+  {
+    "calculatorId": "simple-interest",
+    "mode": "balance",
+    "values": {
+      "principal": 10000,
+      "rate": 5,
+      "rate_unit": "Annual",
+      "years": 10,
+      "term_unit": "Years"
+    },
+    "metrics": {
+      "Balance": 15000.0
+    }
+  },
+  {
+    "calculatorId": "compound-interest",
+    "mode": "growth",
+    "values": {
+      "principal": 10000,
+      "years": 10,
+      "months": 0,
+      "rate": 5,
+      "compound": "Monthly",
+      "monthly": 0,
+      "annual": 0,
+      "tax": 0,
+      "inflation": 0,
+      "timing": "End of period"
+    },
+    "metrics": {
+      "Ending balance": 16470.09497690283
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "tax-savings",
+    "values": {
+      "age": 35,
+      "salary": 80000,
+      "employee": 3000,
+      "roth_share": 0,
+      "prior_wages": 0,
+      "federal": 22,
+      "state": 0,
+      "paychecks": 26
+    },
+    "metrics": {
+      "Estimated annual income-tax saving": 660.0,
+      "Estimated net annual paycheck reduction": 2340.0
+    }
+  },
+  {
+    "calculatorId": "heloc",
+    "mode": "draw-repay",
+    "values": {
+      "principal": 50000,
+      "rate": 8,
+      "draw": 10,
+      "years": 10,
+      "closing": 0,
+      "closing_unit": "Dollars",
+      "closing_treatment": "Upfront",
+      "charge": 0
+    },
+    "metrics": {
+      "Monthly draw payment": 333.3333333333333,
+      "Monthly repayment": 606.6379717767846
+    }
+  },
+  {
+    "calculatorId": "mortgage",
+    "mode": "monthly",
+    "values": {
+      "price": 375000,
+      "down": 20,
+      "down_unit": "Percent",
+      "years": 30,
+      "months": 0,
+      "rate": 6.0,
+      "tax": 0,
+      "tax_unit": "Dollars",
+      "insurance": 0,
+      "insurance_unit": "Dollars",
+      "hoa": 0,
+      "hoa_unit": "Dollars",
+      "other": 0,
+      "pmi_method": "Manual",
+      "pmi": 0,
+      "pmi_years": 0,
+      "pmi_policy": "Fixed duration",
+      "extra_monthly": 0,
+      "extra_yearly": 0,
+      "extra_once": 0,
+      "dated": ""
+    },
+    "metrics": {
+      "Monthly principal & interest": 1798.6515754582572,
+      "Total interest": 347514.5671649726
+    }
+  },
+  {
+    "calculatorId": "mortgage",
+    "mode": "monthly",
+    "values": {
+      "price": 375000,
+      "down": 20,
+      "down_unit": "Percent",
+      "years": 15,
+      "months": 0,
+      "rate": 6.0,
+      "tax": 0,
+      "tax_unit": "Dollars",
+      "insurance": 0,
+      "insurance_unit": "Dollars",
+      "hoa": 0,
+      "hoa_unit": "Dollars",
+      "other": 0,
+      "pmi_method": "Manual",
+      "pmi": 0,
+      "pmi_years": 0,
+      "pmi_policy": "Fixed duration",
+      "extra_monthly": 0,
+      "extra_yearly": 0,
+      "extra_once": 0,
+      "dated": ""
+    },
+    "metrics": {
+      "Monthly principal & interest": 2531.570484145354,
+      "Total interest": 155682.68714616372
+    }
+  },
+  {
+    "calculatorId": "mortgage",
+    "mode": "monthly",
+    "values": {
+      "price": 375000,
+      "down": 20,
+      "down_unit": "Percent",
+      "years": 15,
+      "months": 0,
+      "rate": 5.5,
+      "tax": 0,
+      "tax_unit": "Dollars",
+      "insurance": 0,
+      "insurance_unit": "Dollars",
+      "hoa": 0,
+      "hoa_unit": "Dollars",
+      "other": 0,
+      "pmi_method": "Manual",
+      "pmi": 0,
+      "pmi_years": 0,
+      "pmi_policy": "Fixed duration",
+      "extra_monthly": 0,
+      "extra_yearly": 0,
+      "extra_once": 0,
+      "dated": ""
+    },
+    "metrics": {
+      "Monthly principal & interest": 2451.250363863418,
+      "Total interest": 141225.0654954152
+    }
+  },
+  {
+    "calculatorId": "mortgage",
+    "mode": "monthly",
+    "values": {
+      "price": 375000,
+      "down": 20,
+      "down_unit": "Percent",
+      "years": 30,
+      "months": 0,
+      "rate": 6,
+      "tax": 0,
+      "tax_unit": "Dollars",
+      "insurance": 0,
+      "insurance_unit": "Dollars",
+      "hoa": 0,
+      "hoa_unit": "Dollars",
+      "other": 0,
+      "pmi_method": "Manual",
+      "pmi": 0,
+      "pmi_years": 0,
+      "pmi_policy": "Fixed duration",
+      "extra_monthly": "732.91890868709674752861035102640660588934502778627499545563",
+      "extra_yearly": 0,
+      "extra_once": 0,
+      "dated": ""
+    },
+    "metrics": {
+      "Total interest": 155682.68714616372
+    }
+  },
+  {
+    "calculatorId": "fire",
+    "mode": "plan",
+    "values": {
+      "age": 35,
+      "max_age": 80,
+      "balance": 150000,
+      "spending": 36000,
+      "monthly": 2000,
+      "return": 7,
+      "inflation": 2.5,
+      "withdrawal": 4
+    },
+    "metrics": {
+      "FIRE portfolio target": 900000.0
+    }
+  },
+  {
+    "calculatorId": "cd",
+    "mode": "accumulation",
+    "values": {
+      "principal": 5000,
+      "rate_type": "APY",
+      "rate": "4",
+      "compound": "Monthly",
+      "years": 1,
+      "months": 0,
+      "tax": 0
+    },
+    "metrics": {
+      "Maturity balance": 5200.0
+    }
+  },
+  {
+    "calculatorId": "cd",
+    "mode": "accumulation",
+    "values": {
+      "principal": 5000,
+      "rate_type": "APY",
+      "rate": "4.25",
+      "compound": "Monthly",
+      "years": 2,
+      "months": 0,
+      "tax": 0
+    },
+    "metrics": {
+      "Maturity balance": 5434.03125
+    }
+  },
+  {
+    "calculatorId": "cd",
+    "mode": "accumulation",
+    "values": {
+      "principal": 5000,
+      "rate_type": "APY",
+      "rate": "4.5",
+      "compound": "Monthly",
+      "years": 3,
+      "months": 0,
+      "tax": 0
+    },
+    "metrics": {
+      "Maturity balance": 5705.830625
+    }
+  },
+  {
+    "calculatorId": "cap-rate",
+    "mode": "noi",
+    "values": {
+      "value": 300000,
+      "noi": 18000,
+      "target": 6
+    },
+    "metrics": {
+      "Capitalization rate": 6.0
+    }
+  },
+  {
+    "calculatorId": "cap-rate",
+    "mode": "noi",
+    "values": {
+      "value": 360000,
+      "noi": 18000,
+      "target": 6
+    },
+    "metrics": {
+      "Capitalization rate": 5.0
+    }
+  },
+  {
+    "calculatorId": "cap-rate",
+    "mode": "noi",
+    "values": {
+      "value": 300000,
+      "noi": 15000,
+      "target": 6
+    },
+    "metrics": {
+      "Capitalization rate": 5.0
+    }
+  },
+  {
+    "calculatorId": "refinance",
+    "mode": "balance",
+    "values": {
+      "principal": 250000,
+      "payment": "1185.52828464418261228051085892164396889138849122500817393646",
+      "rate": 3,
+      "new_rate": 7,
+      "new_years": 25,
+      "cashout": 50000,
+      "points": 0,
+      "fees": 0,
+      "finance": "No"
+    },
+    "metrics": {
+      "New monthly payment": 2120.3375918252755,
+      "New total interest": 336101.2775475826
+    }
+  }
+]
