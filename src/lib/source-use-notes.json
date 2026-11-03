@@ -1367,6 +1367,46 @@
       "role": "background",
       "usedFor": "The difference between a leveraged position’s initial collateral and its possible losses; borrowing or leverage can magnify losses relative to equity.",
       "scope": "Risk background for the stock/FX illustrations, not a live provider quote, permitted-leverage check, maintenance-margin calculation or loss guarantee."
+    },
+    "https://www.irs.gov/faqs/capital-gains-losses-and-sale-of-home/stocks-options-splits-traders/stocks-options-splits-traders-2": {
+      "role": "rule",
+      "usedFor": "Reporting dividends used for automatic share purchases.",
+      "scope": "General U.S. federal reporting context; not an individual tax calculation."
+    },
+    "https://www.irs.gov/taxtopics/tc451": {
+      "role": "rule",
+      "usedFor": "Distinguishing IRA earnings and distribution treatment from taxable accounts.",
+      "scope": "Does not determine eligibility or the tax treatment of a particular withdrawal."
+    },
+    "https://selling-guide.fanniemae.com/sel/b2-1.3-02/limited-cash-out-refinance-transactions": {
+      "role": "rule",
+      "usedFor": "Limited cash-out classification, ownership requirements and transaction-specific restrictions.",
+      "scope": "Fannie Mae rules; lender overlays and other investors can differ."
+    },
+    "https://guide-selling.fanniemae.com/sel/b2-1.3-03/cash-out-refinance-transactions": {
+      "role": "rule",
+      "usedFor": "Separating first-mortgage note seasoning from ownership seasoning.",
+      "scope": "General Fannie Mae cash-out rules and exceptions, not a universal waiting period."
+    },
+    "https://sf.freddiemac.com/working-with-us/origination-underwriting/mortgage-products/cash-out-refinance": {
+      "role": "rule",
+      "usedFor": "Freddie Mac cash-out note-date and ownership timing.",
+      "scope": "Product overview; detailed Seller/Servicer Guide and lender review control."
+    },
+    "https://www.hud.gov/program_offices/housing/sfh/handbook_4000-1": {
+      "role": "rule",
+      "usedFor": "Handbook 4000.1 II.A.8.d: FHA streamline payment and elapsed-time tests.",
+      "scope": "FHA streamline only; verify the version effective for the case-assignment date and lender requirements."
+    },
+    "https://www.govinfo.gov/link/uscode/38/3709": {
+      "role": "rule",
+      "usedFor": "38 U.S.C. 3709(c): six consecutive payments and 210 days after the first payment due date.",
+      "scope": "Statutory VA timing context; exceptions, benefit tests and lender review still apply."
+    },
+    "https://www.va.gov/housing-assistance/home-loans/loan-types/interest-rate-reduction-loan/": {
+      "role": "rule",
+      "usedFor": "IRRRL purpose and existing VA-backed loan context.",
+      "scope": "Overview, not a complete underwriting or seasoning decision."
     }
   },
   "pages": {
@@ -1684,7 +1724,8 @@
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
     },
     "guide:/guides/how-to-calculate-rental-property-cash-flow/": {
-      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/how-to-calculate-seller-financing/": {
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
@@ -2123,7 +2164,8 @@
           "usedFor": "Dividend taxation, reinvestment and the basis of acquired shares.",
           "scope": "Publication 550 is the 2025 edition. Reinvested dividends can still be taxable; the model’s flat annual tax input does not classify qualified dividends or implement every account rule."
         }
-      }
+      },
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/pension-lump-sum-vs-monthly-payments/": {
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
@@ -2633,7 +2675,8 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/is-refinancing-worth-it/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/how-to-calculate-boat-loan-payments/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
@@ -2672,10 +2715,19 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/how-much-house-can-i-afford/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
+      "updatedOn": "2026-11-03"
     },
     "guide:/guides/roth-ira-vs-traditional-ira/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+    },
+    "guide:/guides/are-reinvested-dividends-taxable/": {
+      "note": "U.S. federal tax concepts are separate from the simplified DRIP model. The original share and cost-basis example is hypothetical and is not a tax-lot ledger or filing calculation.",
+      "updatedOn": "2026-11-03"
+    },
+    "guide:/guides/how-soon-can-you-refinance-a-mortgage/": {
+      "note": "The source rules distinguish programs and date endpoints. The original calendar example checks only two timing conditions; the calculator does not determine eligibility. Program rules, effective dates, exceptions and lender requirements must be confirmed for a real application.",
+      "updatedOn": "2026-11-03"
     }
   }
 }

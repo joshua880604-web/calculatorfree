@@ -39,7 +39,7 @@ test('Updated guide controls retain zero-case identities, sensitivity reversals 
  assert.deepEqual(get('margin').rows[0].outputs,[100,0]);
  for(const c of remainingGuideChecks){
   const step=c.rows[1].x-c.rows[0].x;for(let i=1;i<c.rows.length;i++)assert.equal(c.rows[i].x-c.rows[i-1].x,step);
-  const g=editorialGuides.find(g=>g.path===`/guides/${c.slug}/`)!;assert.ok(g);assert.equal(g.updatedOn,c.slug==='how-to-calculate-coast-fire'?'2026-10-31':'2026-10-30');assert.ok(g.publishedOn<'2026-10-30');assert.equal(editorialSchema(g)['@graph'][0].datePublished,g.publishedOn);
+  const g=editorialGuides.find(g=>g.path===`/guides/${c.slug}/`)!;assert.ok(g);assert.equal(g.updatedOn,c.slug==='is-refinancing-worth-it'?'2026-11-03':c.slug==='how-to-calculate-coast-fire'?'2026-10-31':'2026-10-30');assert.ok(g.publishedOn<'2026-10-30');assert.equal(editorialSchema(g)['@graph'][0].datePublished,g.publishedOn);
   for(const ext of ['svg','png'])assert.ok(readFileSync('public/research-charts/'+c.figure.id+'.'+ext).length>1000);
   const csv=readFileSync('public'+c.csv,'utf8');assert.equal(csv.split('Hypothetical deterministic model case; not observed data').length-1,5);
  }

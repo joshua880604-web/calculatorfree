@@ -113,7 +113,7 @@ for(const id of ['mortgage','compound-interest','roi','coast-fire','house-hackin
 contentUpdatedOn['/about.html']='2026-10-31';
 // Added reviewed guide links; model inputs and rules are unchanged.
 for(const id of ['retirement','hsa','rmd','401k'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-01';
-contentUpdatedOn['/guides/']='2026-11-01';
+contentUpdatedOn['/guides/']='2026-11-03';
 for(const slug of ['401k','employer-match-and-vesting','withdrawal-rate'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-01';
 
 // New property guides and scoped explanatory additions, checked November 1.
@@ -279,3 +279,7 @@ for(const id of ['loan','finance','bond','average-return','margin','mortgage-pay
 // Substantive homepage/contact/privacy changes and the corrected contextual links.
 for(const path of [directoryPath,'/about.html','/privacy.html','/methodology.html','/covered-call-calculator.html'])
  contentUpdatedOn[path]='2026-11-02';
+
+// Reviewed new guide relationships; calculation models are unchanged.
+for(const id of ['refinance','drip','stock-profit','mortgage'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-03';
+

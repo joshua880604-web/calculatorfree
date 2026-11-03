@@ -1,5 +1,7 @@
 # Financial Calculators
 
+GitHub 仓库：[joshua880604-web/calculatorfree](https://github.com/joshua880604-web/calculatorfree)。Cloudflare Pages 生产分支：`static-preview-20261021`。
+
 面向英文用户的本地金融计算器站。项目目录：`/workspace/financial-calculators`。
 
 当前覆盖原金融区的全部 **71 个入口**：70 个具有计算功能的工具，以及原站本就没有计算表单的 Real Estate 目录。各工具有独立路由和计算函数，未放置 Coming soon 页面，也未用固定结果代替计算。

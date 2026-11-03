@@ -1780,7 +1780,8 @@
       "topic": "Property investing",
       "breadcrumb": "How to Estimate Rental Property Cash Flow: A Worked Budget",
       "cardIntro": "Estimate rental cash flow after vacancy, operating costs and debt service. Compare five scenarios, negative cash flow and reserve adjustments with a reproducible worksheet.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/rental-property-calculator",
     "calculatorLabel": "Rental Property Calculator",
@@ -1795,6 +1796,16 @@
           "Total first-year operating expenses are therefore $10,380, leaving $18,120 NOI. Management in the Rental Property Calculator is a percentage of collected rent plus other income. This differs from the separate NOI Calculator’s management-dollar field; translate the amount when moving the same property between tools."
         ],
         "formula": "Effective annual income = monthly rent × 12 × (1 − vacancy rate) + other monthly income × 12"
+      },
+      {
+        "id": "verify-inputs",
+        "title": "Verify the inputs before trusting a rental cash-flow estimate",
+        "formula": "",
+        "paragraphs": [
+          "Build a source-backed worksheet for the specific property. Record the proposed lease or comparable rents, the vacancy and collection allowance, tax records, an insurance quote, HOA documents, the management agreement and a repair estimate. Mark each figure as documented or assumed and record its date. Advertised rent and the seller’s headline expense total are not substitutes for an expense-by-expense budget.",
+          "Keep one-time acquisition repairs separate from recurring maintenance and future capital replacements. Set aside any owner-paid utilities, leasing charges or other operating items in the appropriate expense category. Do not deduct management twice: this tool applies its entered management percentage to effective rent plus other income.",
+          "Run the documented base case, change one uncertain input at a time using the checked cases below, then test a combined downside. Finally prepare a cash calendar for deposits, debt payments and large bills. An annual average can be positive while the bank balance runs short before rent is collected; the calculator does not verify an opening reserve or model every payment date."
+        ]
       },
       {
         "id": "debt",
@@ -3115,13 +3126,24 @@
       "topic": "Mortgage & housing",
       "breadcrumb": "How Much House Can I Afford? Income, Debt and Ownership Costs",
       "cardIntro": "Estimate a home price from gross-income ratios or a monthly budget. Compare debt, taxes and HOA costs with five reproducible cases, without treating the estimate as approval.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "calculatorPath": "/house-affordability-calculator",
     "calculatorLabel": "House Affordability Calculator",
     "intro": "Begin with a housing budget you can sustain, then calculate the loan and home price consistent with that budget and the entered ownership costs. Income ratios are one planning lens; they do not replace take-home cash budgeting or lender review. Existing debts, property tax, insurance, HOA and maintenance can materially reduce the amount left for mortgage principal and interest.",
     "answer": "Using $100,000 annual gross household income, $500 monthly other debt and entered 28% housing and 36% total-debt limits, the modeled housing budget is $2,333.33 monthly. With 20% down, a 6% thirty-year loan, 1.2% annual property tax and $1,500 annual insurance, the estimated home price is $380,983.32. These ratios and costs are scenario inputs, not underwriting guarantees.",
     "sections": [
+      {
+        "id": "100k-salary",
+        "title": "How much house can I afford with a $100k salary?",
+        "formula": "",
+        "paragraphs": [
+          "At $100,000 annual gross income, first separate the lender-style ratio calculation from the amount you personally want to spend. The base case below gives a $2,333.33 monthly housing budget and a $380,983.32 estimated price. That result assumes $500 of other monthly debt and a 20% down payment; it is not a salary multiplier or a recommended purchase limit.",
+          "Compare three constraints before using that price: the monthly payment after other debts, the cash available for the down payment plus closing and moving costs, and a household budget that preserves savings and reserves. The modeled $76,196.66 down payment does not include those other cash needs. If your available savings are lower, change the down-payment input and make a separate allowance for any PMI rather than assuming the same price still fits.",
+          "Then test the property, not just the salary. Use its likely taxes, an insurance quote and actual HOA charges; enter a maintenance allowance instead of leaving it at zero. The checked cases below hold income constant while changing debt, tax or HOA costs. Use Based on Monthly Budget mode if a take-home spending review gives you a lower housing cap than the income ratios."
+        ]
+      },
       {
         "id": "income-scenarios",
         "title": "Compare income scenarios without using a salary multiplier",
@@ -3199,7 +3221,7 @@
     "questions": [
       {
         "question": "How much house can I afford on a $100,000 salary?",
-        "answer": "There is no salary-only answer. Under the guide’s specified debt, ratio, rate, down-payment and ownership-cost assumptions, the estimate is $380,983.32. Changing any of those inputs can change the result."
+        "answer": "Under this guide’s hypothetical 6% thirty-year loan, 20% down, $500 monthly other debt, entered 28%/36% ratios, 1.2% annual property tax and $1,500 annual insurance, the estimate is $380,983.32. It requires $76,196.66 down and excludes HOA, maintenance, PMI, closing costs and reserves. A different rate, debt balance, available cash or property cost can materially change the result; $100k salary alone does not determine an affordable price."
       },
       {
         "question": "Should I enter gross income or take-home pay?",

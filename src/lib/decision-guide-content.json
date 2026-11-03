@@ -133,7 +133,8 @@
       "topic": "Savings & investing",
       "breadcrumb": "Reinvest dividends or take cash",
       "cardIntro": "Compare shares plus cash in both paths, including a declining-price scenario where reinvestment finishes lower.",
-      "format": "Decision guide & model check"
+      "format": "Decision guide & model check",
+      "updatedOn": "2026-11-03"
     },
     "intro": "Reinvesting dividends buys additional shares; taking cash keeps the payment available for spending or another use. Neither choice creates free money. To understand the difference, compare the same security and external deposits, and retain the cash in the non-reinvestment path instead of pretending it disappears. Our examples separate share-price appreciation from dividends and show a case where reinvestment finishes lower.",
     "calculatorId": "drip",
@@ -188,6 +189,10 @@
         ],
         "links": [
           {
+            "href": "/guides/are-reinvested-dividends-taxable/",
+            "label": "Detailed reinvested dividend tax guide and cost-basis example"
+          },
+          {
             "href": "https://www.irs.gov/publications/p550",
             "label": "IRS Publication 550: dividends used to buy more stock"
           },
@@ -231,6 +236,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/are-reinvested-dividends-taxable/",
+        "label": "Reinvested dividend taxes: account types, reporting and cost basis"
+      },
       {
         "href": "/glossary/dividend-reinvestment-plan/",
         "label": "DRIP terminology"

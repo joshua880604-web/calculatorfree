@@ -1,0 +1,50 @@
+import QuestionGuideArticle from '@/components/QuestionGuideArticle';
+import SiteLink from '@/components/SiteLink';
+import {dividendTaxGuide as guide} from '@/lib/question-guides';
+import {pageMetadata} from '@/lib/seo';
+const meta=pageMetadata(guide.path,guide.title,guide.description);
+export const metadata={...meta,openGraph:{...meta.openGraph,type:'article' as const,publishedTime:guide.publishedOn,modifiedTime:guide.publishedOn}};
+const sources=[
+ {title:'IRS FAQ: reporting reinvested dividends',url:'https://www.irs.gov/faqs/capital-gains-losses-and-sale-of-home/stocks-options-splits-traders/stocks-options-splits-traders-2'},
+ {title:'IRS Topic 404: dividend classifications and reporting',url:'https://www.irs.gov/taxtopics/tc404'},
+ {title:'IRS Publication 550 (2025): investment income and basis',url:'https://www.irs.gov/publications/p550'},
+ {title:'IRS Topic 451: traditional and Roth IRA treatment',url:'https://www.irs.gov/taxtopics/tc451'},
+];
+export default function Page(){return <QuestionGuideArticle guide={guide} sources={sources} sections={[{id:'account',label:'Account type'},{id:'reporting',label:'Dividend reporting'},{id:'example',label:'Worked example'},{id:'records',label:'Record checklist'},{id:'calculator',label:'Model after-tax growth'},{id:'questions',label:'Common questions'}]}>
+ <p><strong>In a U.S. taxable brokerage account, reinvested dividends generally remain reportable dividend income.</strong> Automatically buying more shares does not make the dividend disappear for tax purposes. Whether a tax is actually due depends on the distribution, your income and applicable rules. An IRA has different treatment, so identify the account before applying a tax assumption.</p>
+ <p>This guide covers general U.S. federal concepts for an individual investor. It does not calculate a tax return, state taxes, foreign withholding, special business structures or every distribution type. For the investment decision itself, read <SiteLink href="/guides/should-you-reinvest-dividends/">whether to reinvest dividends or keep the cash</SiteLink>.</p>
+ <section aria-labelledby="account"><h2 id="account">Start with the account holding the investment</h2>
+ <div className="guide-table" role="region" aria-label="Dividend treatment by account type" tabIndex={0}><table><caption>Account type changes the tax question</caption><thead><tr><th scope="col">Account</th><th scope="col">General treatment inside the account</th><th scope="col">What to check next</th></tr></thead><tbody>
+ <tr><th scope="row">Taxable brokerage</th><td>A taxable dividend is generally reportable whether retained as cash or reinvested.</td><td>Distribution classification, tax forms and purchase records.</td></tr>
+ <tr><th scope="row">Traditional IRA</th><td>Earnings generally are not taxed currently inside the IRA; distributions generally trigger the tax question.</td><td>Withdrawal rules and any nondeductible contribution basis.</td></tr>
+ <tr><th scope="row">Roth IRA</th><td>Internal reinvestment is different from taking money out. Qualified distributions are generally tax-free.</td><td>Distribution qualifications and applicable account rules.</td></tr>
+ </tbody></table></div>
+ <p>These descriptions do not make taxable and retirement accounts interchangeable. A zero current dividend-tax assumption in a model does not establish that a later withdrawal is tax-free. IRA eligibility, contributions and withdrawals require their own review. See <SiteLink href="https://www.irs.gov/taxtopics/tc451">IRS Topic 451</SiteLink>.</p></section>
+ <section aria-labelledby="reporting"><h2 id="reporting">Reinvestment does not decide whether a dividend is qualified</h2>
+ <p>Qualified dividends are a subset of ordinary dividends eligible for capital-gain tax rates when the requirements are met. Form 1099-DIV identifies total ordinary dividends in box 1a and qualified dividends in box 1b. Do not add those two boxes together as separate income: qualified dividends are already included in the ordinary-dividend total. Reinvestment alone does not satisfy the qualification requirements.</p>
+ <p>Capital-gain distributions and nondividend distributions have different treatment; not every amount paid by an investment belongs in the same category. Use the actual form and its instructions, including corrections. The <SiteLink href="https://www.irs.gov/taxtopics/tc404">IRS dividend overview</SiteLink> explains the main categories.</p>
+ <p>The <SiteLink href={sources[0].url}>IRS reinvestment FAQ</SiteLink> addresses automatic purchases directly. A plan that buys shares below fair market value can also create additional dividend income. The example below assumes purchases at market value, with no discount or fees.</p></section>
+ <section aria-labelledby="example"><h2 id="example">Worked example: separate the dividend, the purchase and the sale</h2>
+ <p>Suppose you own 100 shares purchased for $50 each. Your original cost basis is $5,000. A $200 cash dividend is fully reinvested at $50 a share, buying four additional shares. Assume the entire $200 is a taxable dividend and any tax is paid from separate cash.</p>
+ <div className="guide-table" role="region" aria-label="Reinvested dividend purchase and cost basis example" tabIndex={0}><table><caption>Hypothetical full reinvestment, with no fees or other basis adjustments</caption><thead><tr><th scope="col">Step</th><th scope="col">Calculation</th><th scope="col">Result</th></tr></thead><tbody>
+ <tr><th scope="row">Dividend received</th><td>100 shares × $2</td><td>$200 dividend income</td></tr>
+ <tr><th scope="row">New shares purchased</th><td>$200 ÷ $50</td><td>4 new shares; 104 total</td></tr>
+ <tr><th scope="row">Combined purchase basis</th><td>$5,000 + $200</td><td>$5,200 across the two lots</td></tr>
+ <tr><th scope="row">Later sale of all shares</th><td>104 × $55</td><td>$5,720 proceeds</td></tr>
+ <tr><th scope="row">Gain before sale tax</th><td>$5,720 − $5,200</td><td>$520 gain</td></tr>
+ </tbody></table></div>
+ <p>Using only the original $5,000 basis would incorrectly show a $720 gain in this simplified example. Recording the reinvested purchase avoids overstating the sale gain by $200. Dividend income and a later sale remain separate tax events; this is not a promise that the same tax rate applies to both.</p>
+ <p>The two purchase lots have different acquisition dates. Selling only some shares requires the applicable lot-identification or basis method rather than automatically using this combined total. <SiteLink href="https://www.irs.gov/publications/p550">Publication 550</SiteLink> explains basis and holding periods. The arithmetic above is independently checked with decimal calculations; it excludes fees, stock splits, return of capital, loss-sale adjustments and other basis changes.</p></section>
+ <section aria-labelledby="records"><h2 id="records">Keep records for each reinvested purchase</h2>
+ <ol><li>Confirm whether the investment is in a taxable or retirement account.</li><li>Retain the dividend statement, purchase date, price, shares acquired and fees.</li><li>Reconcile annual tax forms with the account records, including corrected forms.</li><li>Check that reinvested lots and their basis transfer when changing brokers.</li><li>Plan how to fund any tax bill when all cash dividends have been reinvested.</li></ol>
+ <p>A brokerage election handles the purchase, not your entire tax filing. If records disagree or shares moved between accounts, resolve the discrepancy before relying on an estimated gain.</p></section>
+ <section aria-labelledby="calculator"><h2 id="calculator">Use the DRIP calculator for growth scenarios, not tax reporting</h2>
+ <p>The <SiteLink href="/drip-calculator">DRIP Calculator</SiteLink> deducts one entered flat tax rate from each modeled payout, then reinvests the remainder when reinvestment is enabled. For a hypothetical $200 payout and a 20% scenario rate, that convention deducts $40 and reinvests $160. At $50 per share it buys 3.2 shares, unlike the four shares in the full-reinvestment example above.</p>
+ <p>That is a cash-flow assumption, not a claim that your broker withholds 20% or that it is your actual tax rate. The tool does not track tax lots, qualified-dividend holding periods, capital gains on sale or your tax bracket. Compare the same investment and external deposits with and without reinvestment; include retained cash in the alternative.</p></section>
+ <section aria-labelledby="questions"><h2 id="questions">Common questions</h2>
+ <h3>Do I owe tax if I never withdraw the dividends?</h3><p>Leaving dividends inside a taxable brokerage account does not by itself remove reporting requirements. A retirement account has different rules. Whether you owe tax is separate from whether an amount must be reported.</p>
+ <h3>Does dividend reinvestment cause double taxation when I sell?</h3><p>Track the basis of shares bought with reinvested dividends. In the worked example, the $200 purchase increases basis; omitting it overstates the later gain. Special adjustments can change actual records.</p>
+ <h3>Are reinvested dividends a new IRA contribution?</h3><p>Earnings reinvested inside an existing IRA are different from an external contribution. Do not count the same internal payout as a fresh deposit in a savings projection.</p>
+ <h3>Can I use one dividend tax percentage for every year?</h3><p>You can use it as a simplified scenario, but actual tax depends on distribution type and personal circumstances. Test assumptions and consult a qualified tax professional for filing decisions.</p></section>
+ <section className="related"><h2>Related tools and reading</h2><ul><li><SiteLink href="/guides/should-you-reinvest-dividends/">Reinvest dividends or take cash: same-investment scenarios</SiteLink></li><li><SiteLink href="/glossary/dividend-reinvestment-plan/">DRIP terminology</SiteLink></li><li><SiteLink href="/stock-profit-calculator">Stock profit calculator</SiteLink> — a separate simplified trade model, not a tax-lot ledger.</li></ul></section>
+ </QuestionGuideArticle>;}

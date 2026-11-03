@@ -1,3 +1,4 @@
+import {questionGuideList} from './question-guides';
 import {practicalGuideList} from './practical-guides';
 import {publisherIdentity} from './content-transparency';
 import {calculationGuideList} from './calculation-guides';
@@ -118,7 +119,7 @@ export const aprGuide:EditorialGuide={
  "cardIntro": "Compare two $20,000 loan offers to see why a lower interest rate and smaller payment can still produce a higher APR and total borrowing cost."
 };
 export const refinanceGuide:EditorialGuide={
- updatedOn:'2026-10-30',
+ updatedOn:'2026-11-03',
  "path": "/guides/is-refinancing-worth-it/",
  "title": "Is Refinancing Worth It? Fees, Terms & Break-Even",
  "heading": "Is Refinancing Worth It? Compare Fees, Loan Terms, and Your Holding Period",
@@ -199,7 +200,7 @@ export const baristaCoastGuide:EditorialGuide={
  topic:'Retirement',breadcrumb:'Barista FIRE vs. Coast FIRE',format:'Comparison guide',
  cardIntro:'See why part-time income, its stop date and pre-retirement withdrawals change the assets you need. Compare a checked zero-growth example.',
 };
-export const editorialGuides=[...practicalGuideList,...calculationGuideList,...decisionGuideList,...modelStudyGuides,baristaCoastGuide,snowballMethodGuide,avalancheMethodGuide,coastFireGuide,recastGuide,debtGuide,cdSavingsGuide,carPayoffGuide,biweeklyGuide,pointsGuide,emergencyGuide,rentBuyGuide,debtSaveGuide,aprGuide,refinanceGuide,iraGuide,marginMarkupGuide];
+export const editorialGuides=[...questionGuideList,...practicalGuideList,...calculationGuideList,...decisionGuideList,...modelStudyGuides,baristaCoastGuide,snowballMethodGuide,avalancheMethodGuide,coastFireGuide,recastGuide,debtGuide,cdSavingsGuide,carPayoffGuide,biweeklyGuide,pointsGuide,emergencyGuide,rentBuyGuide,debtSaveGuide,aprGuide,refinanceGuide,iraGuide,marginMarkupGuide];
 export function editorialSchema(article:boolean|EditorialGuide=false,config=siteConfig()){
  const entry=article===true?recastGuide:typeof article==='object'?article:undefined;
  const url=absoluteURL(entry?entry.path:guidesPath,config);

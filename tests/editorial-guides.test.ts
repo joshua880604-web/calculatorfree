@@ -28,9 +28,10 @@ test('Articles and Guides collection describe the same visible entries without i
 
 test('Substantive question updates preserve original publication and advance reviewed sitemap dates',()=>{
  const updated=editorialGuides.filter(g=>g.updatedOn);
- assert.equal(updated.length,18);
+ assert.equal(updated.length,21);
+ const novemberUpdates=new Set(['/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/should-you-reinvest-dividends/','/guides/is-refinancing-worth-it/']);
  for(const guide of updated){
-  assert.equal(guide.updatedOn,['/guides/compound-interest-with-monthly-contributions/','/guides/biweekly-vs-monthly-mortgage-payments/'].includes(guide.path)?'2026-11-01':guide.path==='/guides/how-to-calculate-coast-fire/'?'2026-10-31':'2026-10-30');
+  assert.equal(guide.updatedOn,novemberUpdates.has(guide.path)?'2026-11-03':['/guides/compound-interest-with-monthly-contributions/','/guides/biweekly-vs-monthly-mortgage-payments/'].includes(guide.path)?'2026-11-01':guide.path==='/guides/how-to-calculate-coast-fire/'?'2026-10-31':'2026-10-30');
   assert.ok(guide.publishedOn<=guide.updatedOn!);
   const entry=sitemapEntries(config).find(e=>e.url===config.origin+guide.path)!;
   assert.equal(entry.lastModified,guide.updatedOn);
