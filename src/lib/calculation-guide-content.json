@@ -176,7 +176,7 @@
       "breadcrumb": "Compound growth with monthly deposits",
       "cardIntro": "Four matched scenarios separate money you contribute from earnings and show the effect of deposit timing.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-03"
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/compound-interest-calculator",
     "calculatorLabel": "Compound Interest Calculator",
@@ -321,6 +321,10 @@
       {
         "href": "/interest-calculator",
         "label": "Interest Calculator"
+      },
+      {
+        "href": "/guides/lump-sum-vs-dollar-cost-averaging/",
+        "label": "Lump Sum vs Dollar-Cost Averaging"
       }
     ]
   },
@@ -1372,7 +1376,7 @@
       "breadcrumb": "How Does 401(k) Matching Work? Formulas and Checked Examples",
       "cardIntro": "Calculate two-tier 401(k) matching, distinguish match rate from salary band, and understand contribution limits, payroll timing, true-ups and vesting.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-03"
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/401k-calculator",
     "calculatorLabel": "401(k) Calculator",
@@ -1500,6 +1504,10 @@
       {
         "href": "/retirement-calculator",
         "label": "Retirement Calculator"
+      },
+      {
+        "href": "/guides/roth-vs-traditional-401k/",
+        "label": "Roth vs Traditional 401(k)"
       }
     ]
   },
@@ -4893,7 +4901,8 @@
       "topic": "Loans & debt",
       "breadcrumb": "How to Calculate Auto Loan Payments, Taxes and Trade Equity",
       "cardIntro": "Calculate auto loan payments from price, down payment, trade debt and entered taxes. Five reproducible cases compare term, upfront cash and interest.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/auto-loan-calculator",
     "calculatorLabel": "Auto Loan Calculator",
@@ -5018,6 +5027,10 @@
       {
         "href": "/glossary/amortization/",
         "label": "Amortization glossary"
+      },
+      {
+        "href": "/guides/leasing-vs-buying-a-car/",
+        "label": "Leasing vs Buying a Car"
       }
     ]
   },
@@ -5179,7 +5192,8 @@
       "topic": "Loans & debt",
       "breadcrumb": "How to Calculate Auto Lease Payments and Rent Charges",
       "cardIntro": "Calculate a simplified auto lease payment from capitalized cost, residual, rent charge and monthly tax. Five reproducible cases compare money factor, cash reduction and price solving.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/auto-lease-calculator",
     "calculatorLabel": "Auto Lease Calculator",
@@ -5304,6 +5318,10 @@
       {
         "href": "/glossary/lease-residual-value/",
         "label": "Lease residual value glossary"
+      },
+      {
+        "href": "/guides/leasing-vs-buying-a-car/",
+        "label": "Leasing vs Buying a Car"
       }
     ]
   },
@@ -6059,7 +6077,8 @@
       "topic": "Budgeting & housing",
       "breadcrumb": "How to Calculate a Monthly Budget from Income and Expenses",
       "cardIntro": "Build a monthly budget with mixed pay frequencies, spending and saving allocations. Six checked examples explain tax assumptions, irregular bills and signed deficits.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/budget-calculator",
     "calculatorLabel": "Budget Calculator",
@@ -6189,6 +6208,10 @@
       {
         "href": "/glossary/budget-and-savings-rate/",
         "label": "Budget and savings rate"
+      },
+      {
+        "href": "/guides/50-30-20-rule/",
+        "label": "50/30/20 Rule"
       }
     ]
   },

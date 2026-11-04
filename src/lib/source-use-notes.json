@@ -1487,6 +1487,41 @@
       "role": "rule",
       "usedFor": "Purchase-rate and grace-period distinctions.",
       "scope": "The numeric cases assume no new purchases or mixed-rate balances."
+    },
+    "https://consumer.ftc.gov/articles/financing-or-leasing-car": {
+      "role": "context",
+      "usedFor": "Written out-the-door prices and total-cost comparison.",
+      "scope": "The hypothetical quotes and resale sensitivities are our own calculations."
+    },
+    "https://www.irs.gov/newsroom/secure-2-point-0-act-changes-affect-how-businesses-complete-forms-w-2": {
+      "role": "rule",
+      "usedFor": "Why employer contributions require plan-specific treatment.",
+      "scope": "No specific employer plan, vesting determination or tax-reporting calculation is modeled."
+    },
+    "https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf": {
+      "role": "context",
+      "usedFor": "The dated historical comparison and its three-installment, one-year assumptions.",
+      "scope": "The 2023 study is separate from our twelve-purchase hypothetical paths and is not a forecast."
+    },
+    "https://files.consumerfinance.gov/f/documents/201606_cfpb_rules-to-live-by_my-spending-rule-to-live-by.pdf": {
+      "role": "context",
+      "usedFor": "The take-home-pay rule of thumb and permission to adapt it.",
+      "scope": "This 2016 educational worksheet is not a legal requirement or a universal household recommendation."
+    },
+    "https://www.unfcu.org/financial-wellness/50-30-20-rule/": {
+      "role": "context",
+      "usedFor": "Minimum-versus-extra debt-payment categories and payroll-deduction convention.",
+      "scope": "Our main worksheet explicitly uses deposited cash rather than this source’s broader after-tax income base."
+    },
+    "https://sfs.mit.edu/manage-your-money/budgeting/50-20-30-strategy/": {
+      "role": "context",
+      "usedFor": "An alternative presentation of the three-bucket framework and flexible percentages.",
+      "scope": "MIT uses fixed expenses and flexible spending categories; those are not asserted to match every need/want definition."
+    },
+    "https://www.investor.gov/additional-resources/retirement-toolkit/employer-sponsored-plans/traditional-and-roth-401k-plans": {
+      "role": "context",
+      "usedFor": "Basic employer-plan account choices and tax timing.",
+      "scope": "An educational overview, not a contribution-limit table or a complete tax calculation."
     }
   },
   "pages": {
@@ -2979,6 +3014,90 @@
           "role": "rule",
           "usedFor": "Origination and other charges in a loan comparison.",
           "scope": "The article models only the stated $300 financed fee and no insurance."
+        }
+      }
+    },
+    "guide:/guides/leasing-vs-buying-a-car/": {
+      "note": "Original hypothetical examples use independently checked arithmetic. Source rules and historical studies are limited to the scope below; calculator links reproduce only the stated portion of each example. No professional review, market forecast or complete tax-return calculation is claimed.",
+      "updatedOn": "2026-11-04",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-leasing-versus-buying-a-car-en-815/": {
+          "role": "context",
+          "usedFor": "Ownership, mileage and lease-end differences.",
+          "scope": "Contract terms determine actual fees and options; no market price is supplied."
+        },
+        "https://consumer.ftc.gov/articles/financing-or-leasing-car": {
+          "role": "context",
+          "usedFor": "Written out-the-door prices and total-cost comparison.",
+          "scope": "The hypothetical quotes and resale sensitivities are our own calculations."
+        }
+      }
+    },
+    "guide:/guides/roth-vs-traditional-401k/": {
+      "note": "Original hypothetical examples use independently checked arithmetic. Source rules and historical studies are limited to the scope below; calculator links reproduce only the stated portion of each example. No professional review, market forecast or complete tax-return calculation is claimed.",
+      "updatedOn": "2026-11-04",
+      "overrides": {
+        "https://www.irs.gov/retirement-plans/retirement-plans-faqs-on-designated-roth-accounts": {
+          "role": "rule",
+          "usedFor": "Employee elections, shared deferral structure, income restrictions and qualified-distribution conditions.",
+          "scope": "Some FAQ limit and employer-match passages retain historical wording. Current-year limits and SECURE 2.0 employer features use the separate sources below."
+        },
+        "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500": {
+          "role": "rule",
+          "usedFor": "The 2026 basic employee limit and distinction from catch-up amounts.",
+          "scope": "The projected 30-year example is not a forecast of future limits or future tax rates."
+        },
+        "https://www.irs.gov/newsroom/secure-2-point-0-act-changes-affect-how-businesses-complete-forms-w-2": {
+          "role": "rule",
+          "usedFor": "Why employer contributions require plan-specific treatment.",
+          "scope": "No specific employer plan, vesting determination or tax-reporting calculation is modeled."
+        },
+        "https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs": {
+          "role": "rule",
+          "usedFor": "The current owner-lifetime designated Roth exception and separate beneficiary rules.",
+          "scope": "This guide does not calculate an RMD or inherited-account distribution."
+        },
+        "https://www.investor.gov/additional-resources/retirement-toolkit/employer-sponsored-plans/traditional-and-roth-401k-plans": {
+          "role": "context",
+          "usedFor": "Basic employer-plan account choices and tax timing.",
+          "scope": "An educational overview, not a contribution-limit table or a complete tax calculation."
+        }
+      }
+    },
+    "guide:/guides/lump-sum-vs-dollar-cost-averaging/": {
+      "note": "Original hypothetical examples use independently checked arithmetic. Source rules and historical studies are limited to the scope below; calculator links reproduce only the stated portion of each example. No professional review, market forecast or complete tax-return calculation is claimed.",
+      "updatedOn": "2026-11-04",
+      "overrides": {
+        "https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf": {
+          "role": "context",
+          "usedFor": "The dated historical comparison and its three-installment, one-year assumptions.",
+          "scope": "The 2023 study is separate from our twelve-purchase hypothetical paths and is not a forecast."
+        },
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/dollar-cost-averaging": {
+          "role": "context",
+          "usedFor": "The definition of investing fixed amounts at regular intervals.",
+          "scope": "A definition does not establish a preferred schedule or guarantee a profit."
+        }
+      }
+    },
+    "guide:/guides/50-30-20-rule/": {
+      "note": "Original hypothetical examples use independently checked arithmetic. Source rules and historical studies are limited to the scope below; calculator links reproduce only the stated portion of each example. No professional review, market forecast or complete tax-return calculation is claimed.",
+      "updatedOn": "2026-11-04",
+      "overrides": {
+        "https://files.consumerfinance.gov/f/documents/201606_cfpb_rules-to-live-by_my-spending-rule-to-live-by.pdf": {
+          "role": "context",
+          "usedFor": "The take-home-pay rule of thumb and permission to adapt it.",
+          "scope": "This 2016 educational worksheet is not a legal requirement or a universal household recommendation."
+        },
+        "https://www.unfcu.org/financial-wellness/50-30-20-rule/": {
+          "role": "context",
+          "usedFor": "Minimum-versus-extra debt-payment categories and payroll-deduction convention.",
+          "scope": "Our main worksheet explicitly uses deposited cash rather than this source’s broader after-tax income base."
+        },
+        "https://sfs.mit.edu/manage-your-money/budgeting/50-20-30-strategy/": {
+          "role": "context",
+          "usedFor": "An alternative presentation of the three-bucket framework and flexible percentages.",
+          "scope": "MIT uses fixed expenses and flexible spending categories; those are not asserted to match every need/want definition."
         }
       }
     }

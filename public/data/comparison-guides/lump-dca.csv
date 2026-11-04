@@ -1,0 +1,14 @@
+Guide,"Lump Sum vs. Dollar-Cost Averaging: Compare Timing, Cash, and Risk"
+Scope,"The price paths are invented, smooth, dividend-free illustrations with fractional shares and full-precision calculations.","All $12,000 is available initially. Twelve $1,000 purchases occur at months 0–11, and valuation is at month 12.",Waiting cash earns either 0% or a hypothetical constant 3% effective annual yield. Interest is retained in cash; taxes and fees are excluded.,The cited historical study uses different purchase timing and historical data. The article does not label the hypothetical examples as a backtest.
+
+Original twelve-month paths; no idle-cash yield; not historical market returns
+Final price / path,Lump-sum shares,Installment shares,Lump-sum value,Installment value
+$112.00 / +12%,120.000000,113.986588,"$13,440.00","$12,766.50"
+$100.00 / +0%,120.000000,120.000000,"$12,000.00","$12,000.00"
+$88.00 / -12%,120.000000,127.326940,"$10,560.00","$11,204.77"
+
+Same purchases; only the assumed yield on waiting cash changes
+Market path,Installment investment value,Ending cash interest,Total with 3% cash yield
++12%,"$12,766.50",$165.88,"$12,932.38"
++0%,"$12,000.00",$165.88,"$12,165.88"
+-12%,"$11,204.77",$165.88,"$11,370.65"

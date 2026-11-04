@@ -639,7 +639,8 @@
       "topic": "Retirement",
       "breadcrumb": "401(k) vs Roth IRA",
       "cardIntro": "Compare Traditional 401(k), Roth 401(k) and Roth IRA structures, 2026 base limits and an equal-take-home-budget example, with employer-match and eligibility checks.",
-      "format": "Comparison & worked examples"
+      "format": "Comparison & worked examples",
+      "updatedOn": "2026-11-04"
     },
     "answer": "A 401(k) is an employer retirement plan that may offer pre-tax and Roth contributions; a Roth IRA is an individual account funded with after-tax money. The choice involves employer matching, fees, investments, eligibility and tax timing. Comparing “401(k)” with “Roth” alone confuses the account with its tax treatment.",
     "intro": "Begin by finding out what your employer actually offers. Then compare the same reduction in take-home cash, not just equal contribution labels. The worked example isolates tax timing; it does not assume any investment is safer because it is held in one account type.",
@@ -823,6 +824,10 @@
       {
         "href": "/guides/roth-ira-vs-traditional-ira/",
         "label": "Traditional versus Roth IRA equal-budget guide"
+      },
+      {
+        "href": "/guides/roth-vs-traditional-401k/",
+        "label": "Compare Roth and traditional choices within a 401(k)"
       }
     ],
     "presets": [
@@ -2926,6 +2931,1152 @@
     "limitations": [
       "Monthly interest and payment timing are simplified; real billing cycles and daily interest can differ.",
       "No approval, transfer-limit, deferred-interest, late-payment, mixed-balance or new-purchase scenario is modeled."
+    ]
+  },
+  "lease-buy": {
+    "meta": {
+      "path": "/guides/leasing-vs-buying-a-car/",
+      "title": "Leasing vs Buying a Car: Total Cost & Worked Examples",
+      "heading": "Leasing vs. Buying a Car: Compare Payments, Equity, and Total Cost",
+      "description": "Compare leasing and buying at the same exit date with worked examples for payments, remaining debt, resale value, lease-end fees and mileage charges.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "auto-loan",
+        "auto-lease"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "Leasing vs Buying a Car",
+      "cardIntro": "Compare leasing and buying at the same exit date with worked examples for payments, remaining debt, resale value, lease-end fees and mileage charges.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "Compare leasing and buying over the same period, including the cash paid and what you own or owe at the end. A smaller lease payment does not by itself establish a lower total cost; a purchase payment also reduces a debt attached to an asset.",
+    "intro": "This guide follows one hypothetical $35,000 vehicle through a 36-month lease or the first 36 months of a 60-month purchase loan. Both start with $3,000 cash. The examples separate payment affordability from exit-date cost and then vary resale value and excess mileage. They are not dealer offers or predictions of used-car prices.",
+    "sections": [
+      {
+        "id": "decision",
+        "title": "Start with the vehicle, exit date, and contract",
+        "paragraphs": [
+          "Buying and leasing provide different end positions. A financed buyer has a vehicle and a remaining loan until it is repaid. A lessee returning the vehicle normally has no vehicle to sell. A lease purchase option is a third path, with its own buyout price and charges; it is not included in the return-the-car examples below.",
+          "Use a common comparison date, even when the contracts have different lengths. Comparing three years of lease payments with five years of purchase payments mixes time horizons. Comparing only three years of purchase payments and ignoring the outstanding loan is incomplete in the other direction.",
+          "The FTC recommends reviewing the written out-the-door price and total financing cost. Collect the agreed vehicle price, cash due, loan or lease terms, included fees, tax treatment, mileage allowance and exit charges. A worksheet is useful only after you identify which amounts are already included in a quote."
+        ],
+        "links": [
+          {
+            "href": "/guides/how-to-calculate-auto-loan-payments/",
+            "label": "Build the purchase amount financed"
+          },
+          {
+            "href": "/guides/how-to-calculate-auto-lease-payments/",
+            "label": "Understand lease depreciation and rent charges"
+          }
+        ]
+      },
+      {
+        "id": "quotes",
+        "title": "One vehicle and equal upfront cash",
+        "paragraphs": [
+          "For the purchase, assume a $35,000 price, $3,000 down and a $32,000 loan amortized over 60 months at a fixed 6% annual rate. Payments occur at month end. For the lease, assume the same $35,000 price, $3,000 capital-cost reduction, $32,000 adjusted capitalized cost, $21,000 contractual residual, 36 months and a 0.0025 money factor.",
+          "The $3,000 lease amount is entirely a capital-cost reduction, not a first installment or refundable deposit. All 36 lease installments are additional. A separate hypothetical $350 disposition fee is due when returning the car. Acquisition fees, sales tax, registration, insurance, maintenance and selling fees are set to zero here solely to isolate the financing comparison; they are not normally free.",
+          "The money factor is used directly in the rent-charge formula. Multiplying it by 2,400 gives a familiar rate approximation, not a complete fee-inclusive loan APR. The residual belongs to the lease contract; the buyer’s eventual resale proceeds are a separate uncertain amount."
+        ],
+        "table": {
+          "caption": "Hypothetical quotes; USD; taxes and other stated ownership costs excluded",
+          "headers": [
+            "Item",
+            "Purchase",
+            "Lease and return"
+          ],
+          "rows": [
+            [
+              "Vehicle price",
+              "$35,000.00",
+              "$35,000.00"
+            ],
+            [
+              "Initial cash",
+              "$3,000.00",
+              "$3,000.00 capital-cost reduction"
+            ],
+            [
+              "Opening loan / adjusted cap cost",
+              "$32,000.00",
+              "$32,000.00"
+            ],
+            [
+              "Contract length",
+              "60 months",
+              "36 months"
+            ],
+            [
+              "Rate convention",
+              "6% annual loan rate",
+              "0.0025 money factor"
+            ],
+            [
+              "Contractual residual",
+              "Not applicable",
+              "$21,000.00"
+            ],
+            [
+              "Monthly installment",
+              "$618.65",
+              "$438.06"
+            ],
+            [
+              "Disposition fee at month 36",
+              "$0.00 assumed",
+              "$350.00 assumed"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "exit",
+        "title": "Subtract equity, rather than every dollar of resale proceeds",
+        "paragraphs": [
+          "After 36 purchase payments, cash paid is $25,271.39 and the remaining loan is $13,958.51. With assumed resale proceeds of $22,000, net vehicle equity is $8,041.49. Subtracting that equity from cash paid gives an exit-date cost of $17,229.90.",
+          "The lease’s modeled installments and initial cash total $18,770.00. Adding the separate $350 disposition fee gives $19,120.00. The purchase has the higher monthly payment in this example, but the lower 36-month exit cost at the assumed $22,000 resale value.",
+          "These are undiscounted net cash costs, not monthly budgets or accounting depreciation. The buyer would need sale proceeds sufficient to settle the loan; negative equity would require additional cash. The comparison also assumes no prepayment penalty and no sale fee. Check an actual payoff quote, rather than using an amortization balance as a settlement promise."
+        ],
+        "formula": "Purchase exit cost = down payment + payments made + remaining loan − resale proceeds; returned-lease cost = upfront cash + lease installments + return charges.",
+        "table": {
+          "caption": "Month-36 reconciliation; no excess mileage in the base lease",
+          "headers": [
+            "Reconciliation",
+            "Purchase at $22,000 resale",
+            "Lease and return"
+          ],
+          "rows": [
+            [
+              "Cash before exit",
+              "$25,271.39",
+              "$18,770.00"
+            ],
+            [
+              "Remaining debt",
+              "$13,958.51",
+              "$0.00 after scheduled lease end"
+            ],
+            [
+              "Sale proceeds",
+              "$22,000.00",
+              "$0.00"
+            ],
+            [
+              "Net equity / disposition",
+              "$8,041.49 equity",
+              "$350.00 fee"
+            ],
+            [
+              "Exit-date cost",
+              "$17,229.90",
+              "$19,120.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "sensitivity",
+        "title": "Resale value or mileage can reverse the result",
+        "paragraphs": [
+          "Hold the quotes fixed and vary only the buyer’s resale value. Purchase and lease costs cross at approximately $20,109.90 of sale proceeds in this simplified worksheet. That threshold is a calculation from the assumptions, not an appraisal.",
+          "Separately, assume the lease returns with 5,000 billable excess miles at $0.25 each. That adds $1,250, bringing the returned-lease cost to $20,370. Actual allowances, waivers and per-mile charges come from the contract. Do not also add a general mileage penalty if it is already included in a quoted lease-end amount.",
+          "High mileage can affect the buyer’s resale value too. A fair high-mileage comparison should revise both the contractual lease charges and the purchase resale estimate, rather than changing only the side you want to favor."
+        ],
+        "table": {
+          "caption": "Only resale proceeds change here; base lease cost remains $19,120",
+          "headers": [
+            "Assumed purchase resale",
+            "Purchase equity",
+            "Purchase exit cost",
+            "Base returned-lease cost"
+          ],
+          "rows": [
+            [
+              "$18,000.00",
+              "$4,041.49",
+              "$21,229.90",
+              "$19,120.00"
+            ],
+            [
+              "$20,000.00",
+              "$6,041.49",
+              "$19,229.90",
+              "$19,120.00"
+            ],
+            [
+              "$22,000.00",
+              "$8,041.49",
+              "$17,229.90",
+              "$19,120.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "holding",
+        "title": "What changes if you keep the car or buy used?",
+        "paragraphs": [
+          "A longer holding period needs a fresh comparison. Once a purchase loan ends, keeping the vehicle avoids that loan installment, while repair costs and resale value continue to change. Replacing a lease with another lease introduces a new quote, upfront cash and another return date. Repeating the first contract unchanged is an assumption, not a future offer.",
+          "Buying a used vehicle changes the purchase price, financing terms, expected repairs and resale path. It is a valid alternative, but no longer a same-new-vehicle experiment. Put that scenario in its own row with the same transportation period and an explicit repair allowance.",
+          "For your decision, review cash reserves, expected miles, how long you want the vehicle, warranty coverage, insurance requirements and exit flexibility. Add any unequal operating costs to the worksheet. A separate discounted comparison can include the value of earlier versus later cash payments; the tables above do not invest payment differences or assume a market return."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is it cheaper to lease or buy a car?",
+        "answer": "It depends on the quotes, holding period, resale proceeds and lease-end charges. In this example buying costs less at $22,000 resale, but costs more at $18,000 resale. A lower monthly installment answers an affordability question, not the entire ownership-cost question."
+      },
+      {
+        "question": "What are the benefits of leasing compared with buying?",
+        "answer": "A lease can suit a planned replacement cycle and may have a smaller installment, subject to its terms. Consider those features alongside mileage limits, return charges and the absence of a vehicle to sell after returning it. Convenience is a preference; it is not a demonstrated cash saving."
+      },
+      {
+        "question": "Should I compare the lease residual with the purchase loan balance?",
+        "answer": "They play different roles. The residual helps determine the lease payment and may relate to a purchase option. A purchase loan balance is debt owed at the comparison date. Purchase equity requires a separate resale estimate minus that debt."
+      },
+      {
+        "question": "What if I drive more than the lease allowance?",
+        "answer": "Use the contract’s billable miles and charge, and revise the buyer’s resale assumption for the same usage. The $1,250 excess-mileage illustration uses invented terms and excludes other wear charges."
+      },
+      {
+        "question": "Can these calculators tell me which offer to accept?",
+        "answer": "The linked tools reproduce the installment arithmetic for each stated quote. The exit costs, resale sensitivity and separate $350 return fee are reconciled in this guide. They do not supply a complete dealer quote, residual forecast or personalized recommendation."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: leasing versus buying a car",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-leasing-versus-buying-a-car-en-815/",
+        "usedFor": "Ownership, mileage and lease-end differences.",
+        "scope": "Contract terms determine actual fees and options; no market price is supplied."
+      },
+      {
+        "title": "FTC: financing or leasing a car",
+        "url": "https://consumer.ftc.gov/articles/financing-or-leasing-car",
+        "usedFor": "Written out-the-door prices and total-cost comparison.",
+        "scope": "The hypothetical quotes and resale sensitivities are our own calculations."
+      }
+    ],
+    "related": [
+      {
+        "href": "/auto-loan-calculator",
+        "label": "Auto Loan Calculator"
+      },
+      {
+        "href": "/auto-lease-calculator",
+        "label": "Auto Lease Calculator"
+      },
+      {
+        "href": "/guides/pay-off-car-loan-early/",
+        "label": "Extra payments and car-loan payoff"
+      },
+      {
+        "href": "/glossary/lease-residual-value/",
+        "label": "Residual value and lease terminology"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the purchase installment; use schedule month 36 for the balance",
+        "path": "/auto-loan-calculator",
+        "mode": "payment",
+        "values": {
+          "tax_state": "Manual",
+          "purchase_year": 2026,
+          "price": 35000,
+          "months": 60,
+          "rate": 6,
+          "rebate": 0,
+          "down": 3000,
+          "trade": 0,
+          "owed": 0,
+          "tax": 0,
+          "fees": 0,
+          "trade_credit": "Yes",
+          "rebate_tax": "No",
+          "finance_fees": "Yes"
+        }
+      },
+      {
+        "label": "Reproduce lease installments before the separate $350 disposition fee",
+        "path": "/auto-lease-calculator",
+        "mode": "payment",
+        "values": {
+          "price": 35000,
+          "residual": 21000,
+          "down": 3000,
+          "trade": 0,
+          "fees": 0,
+          "months": 36,
+          "rate": ".0025",
+          "rate_unit": "Money factor",
+          "tax": 0
+        }
+      }
+    ],
+    "limitations": [
+      "The purchase and lease share a 36-month exit date, but the purchase contract lasts 60 months.",
+      "Resale values, money factor and fees are hypothetical. Taxes, operating costs, selling fees and cash opportunity cost are excluded.",
+      "The purchase amortization retains full precision. Displayed installments are rounded, so multiplying displayed cents can differ from table totals."
+    ]
+  },
+  "roth-401k": {
+    "meta": {
+      "path": "/guides/roth-vs-traditional-401k/",
+      "title": "Roth vs Traditional 401(k): Taxes & Equal-Budget Examples",
+      "heading": "Roth vs. Traditional 401(k): Compare Taxes and Equal Budgets",
+      "description": "Compare Roth and traditional 401(k) contributions using equal take-home budgets, tax-rate scenarios, employer-match limits and reproducible growth examples.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "401k"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "Roth vs Traditional 401(k)",
+      "cardIntro": "Compare Roth and traditional 401(k) contributions using equal take-home budgets, tax-rate scenarios, employer-match limits and reproducible growth examples.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "Roth and traditional 401(k) contributions mainly change when income tax is paid. Compare the same reduction in spendable pay, not only the same account contribution. The outcome depends on taxes when contributing and withdrawing, plan terms and how any current tax savings are used.",
+    "intro": "Both alternatives in this guide are employer-plan 401(k) contributions. This is a different question from choosing a Roth IRA instead of a workplace plan. Our original examples hold returns and timing constant, vary hypothetical tax rates, and keep employer contributions separate. They are illustrations, not a forecast of your future tax bracket.",
+    "sections": [
+      {
+        "id": "accounts",
+        "title": "The account choices and the budget question",
+        "paragraphs": [
+          "Traditional employee deferrals generally reduce current federal taxable income; designated Roth employee contributions use after-tax dollars. Qualified Roth distributions can be tax-free. An income-tax deduction is not automatically a matching reduction in every payroll tax, and withholding is not the same as the final tax liability.",
+          "A 401(k) plan must offer the relevant option for you to elect it. Roth 401(k) participation does not use the Roth IRA income phaseout. Annual employee deferrals across traditional and designated Roth choices share a limit; choosing both does not create two separate employee allowances.",
+          "Before projecting balances, choose your comparison. Equal contributions ask what happens to the same dollars inside each account. Equal take-home cost asks what happens when the household gives up the same spendable income. Both are informative, but their starting cash commitments differ."
+        ],
+        "links": [
+          {
+            "href": "/guides/401k-vs-roth-ira/",
+            "label": "Compare a workplace 401(k) with a Roth IRA separately"
+          },
+          {
+            "href": "/guides/how-401k-matching-works/",
+            "label": "Review employer-match formulas"
+          }
+        ]
+      },
+      {
+        "id": "budget",
+        "title": "An equal take-home-cost example",
+        "paragraphs": [
+          "Assume $100,000 of annual eligible salary, no employer match, no starting balance, 30 year-end contributions and a constant 6% effective annual return. Suppose a traditional contribution saves income tax at an assumed 22% rate throughout the saving period. A $10,000 traditional contribution then reduces spendable pay by $7,800; the equal-budget Roth contribution is $7,800.",
+          "These assumed rates are not a tax return or a statement of the bracket reached by any particular salary. The tax saving is treated as contemporaneous and fully usable. Both contributions are below the cited 2026 basic limit, and the example does not increase contributions as future legal limits change.",
+          "The traditional account reaches $790,581.86 before withdrawal tax. The Roth contribution stream reaches $616,653.85. The larger traditional account is carrying a potential tax liability, so comparing those two balances without a withdrawal-tax assumption would stop too early."
+        ],
+        "formula": "Equal-budget Roth contribution = traditional contribution × (1 − assumed current tax-saving rate).",
+        "table": {
+          "caption": "Original annual contribution example; no match, fees or market volatility",
+          "headers": [
+            "Input / result",
+            "Traditional 401(k)",
+            "Roth 401(k)"
+          ],
+          "rows": [
+            [
+              "Year-end employee contribution",
+              "$10,000.00",
+              "$7,800.00"
+            ],
+            [
+              "Assumed current income-tax saving",
+              "$2,200.00",
+              "$0.00"
+            ],
+            [
+              "Annual spendable-pay reduction",
+              "$7,800.00",
+              "$7,800.00"
+            ],
+            [
+              "Annual return and years",
+              "6%; 30 years",
+              "6%; 30 years"
+            ],
+            [
+              "Projected account balance",
+              "$790,581.86",
+              "$616,653.85"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "tax-rates",
+        "title": "Change the assumed withdrawal tax, not the investment return",
+        "paragraphs": [
+          "For this table only, apply a flat hypothetical tax to the entire traditional ending balance and assume the Roth distribution is qualified. Real retirement spending usually occurs over time, with brackets, other income, state rules and income-linked provisions affecting the incremental tax. The table isolates one effect rather than computing those interactions.",
+          "At the same assumed 22% rate when contributing and withdrawing, the two equal-budget outcomes match. At a lower assumed withdrawal rate the traditional illustration has more after-tax value; at a higher rate the Roth illustration has more. This relationship follows from the stated constant-rate algebra, not from a prediction of which rate you will face.",
+          "The relevant current rate is the tax actually avoided by the contribution. The relevant later rate is the tax attributable to withdrawals under your retirement plan. A headline marginal bracket, an average tax rate on total income and a tax rate applied to an incremental withdrawal are different measures."
+        ],
+        "table": {
+          "caption": "Illustrative after-tax values; qualified Roth withdrawal assumed",
+          "headers": [
+            "Hypothetical withdrawal tax",
+            "Traditional after tax",
+            "Roth after tax",
+            "Roth minus traditional"
+          ],
+          "rows": [
+            [
+              "12%",
+              "$695,712.04",
+              "$616,653.85",
+              "$-79,058.19"
+            ],
+            [
+              "22%",
+              "$616,653.85",
+              "$616,653.85",
+              "$0.00"
+            ],
+            [
+              "32%",
+              "$537,595.67",
+              "$616,653.85",
+              "$79,058.19"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "equal-contributions",
+        "title": "Why an equal-contribution comparison looks different",
+        "paragraphs": [
+          "If both accounts instead receive $10,000 each year, both reach $790,581.86 before any withdrawal tax under identical investment assumptions. At a flat 22% withdrawal rate, the traditional amount is $616,653.85, while a qualified Roth distribution retains the full balance.",
+          "That apparent Roth advantage uses a larger household cash commitment: $10,000 of spendable-pay reduction instead of the traditional example’s $7,800. The extra $2,200 each year is not a free investment advantage. A complete household comparison must specify whether traditional tax savings are spent, saved or invested elsewhere, together with taxes and fees on that other account.",
+          "At a contribution ceiling, equal employee contribution amounts may be the practical comparison because you cannot simply enlarge the traditional deferral to match the after-tax cost. Any outside-account investment then needs explicit assumptions. Our equal-budget table stays below the legal ceiling and avoids silently assuming an extra taxable account."
+        ],
+        "table": {
+          "caption": "Same $10,000 account contribution; different take-home cost",
+          "headers": [
+            "Comparison",
+            "Traditional",
+            "Roth"
+          ],
+          "rows": [
+            [
+              "Annual account contribution",
+              "$10,000.00",
+              "$10,000.00"
+            ],
+            [
+              "Assumed annual take-home cost",
+              "$7,800.00",
+              "$10,000.00"
+            ],
+            [
+              "Balance before any withdrawal tax",
+              "$790,581.86",
+              "$790,581.86"
+            ],
+            [
+              "After assumed 22% traditional tax",
+              "$616,653.85",
+              "$790,581.86 if qualified"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "plan-rules",
+        "title": "Check limits, employer contributions, and withdrawal conditions",
+        "paragraphs": [
+          "The IRS lists a $24,500 basic employee elective-deferral limit for 2026, before applicable catch-up contributions and subject to compensation and other rules. Traditional and Roth deferrals share that employee limit. Catch-up eligibility and high-earner Roth catch-up requirements need their own current-year check; this example uses no catch-up contribution.",
+          "Keep employer money outside the employee-only tables. Match eligibility, payroll timing, vesting and the tax treatment of employer contributions depend on the plan. SECURE 2.0 permits an optional Roth treatment for certain employer contributions; electing Roth employee deferrals does not establish that every employer contribution is Roth. Ask the administrator which options and tax reporting apply.",
+          "Qualified designated Roth distributions generally require a five-taxable-year participation period and age 59½, death or disability. Early or nonqualified distributions can be different. Current IRS RMD guidance excludes designated Roth accounts from owner-lifetime required minimum distributions, while beneficiary rules remain. Older comparison charts can contain historical RMD or limit figures; use the current topic guidance for those details."
+        ]
+      },
+      {
+        "id": "use",
+        "title": "How to use the linked 401(k) calculator",
+        "paragraphs": [
+          "The two presets reproduce the $10,000 and $7,800 annual growth streams with zero match and fixed salary. They check the account-growth arithmetic before withdrawal tax. The existing calculator does not split traditional and Roth balances into a complete tax-aware comparison; the after-tax table applies the separate hypothetical rates described here.",
+          "Change the growth inputs to test your own assumptions, and keep both scenarios consistent. Before acting, review the actual plan document, the tax year, whether distributions will qualify and the household cash needed to sustain contributions. A qualified professional can assess interactions that a flat-rate illustration omits."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is a Roth 401(k) always better than a traditional 401(k)?",
+        "answer": "No. Under the equal-budget assumptions here, the choice turns on the modeled current and future tax rates. Plan features, cash constraints, withdrawal timing and future tax rules also matter. The examples demonstrate a relationship; they do not identify the best account for an individual."
+      },
+      {
+        "question": "Can I contribute to both in the same year?",
+        "answer": "A plan may allow a split between traditional and designated Roth employee deferrals. The combined employee amount is subject to the applicable shared limit and plan rules. Separate annual limits are not created merely by using two tax treatments."
+      },
+      {
+        "question": "Does a high income prevent Roth 401(k) contributions?",
+        "answer": "The Roth IRA income phaseout is not the participation rule for designated Roth 401(k) deferrals. You still need an eligible plan and compensation, and compensation, contribution and plan restrictions can apply."
+      },
+      {
+        "question": "Does choosing Roth change my employer match?",
+        "answer": "Do not infer the match formula or its tax treatment from the employee contribution label alone. Check the plan’s matching rules, vesting, true-up provisions and whether any optional Roth employer-contribution feature is offered. The numerical examples exclude all matching."
+      },
+      {
+        "question": "Can I withdraw Roth 401(k) money like Roth IRA contributions?",
+        "answer": "Do not assume the same withdrawal ordering or access rules. A designated Roth plan account and a Roth IRA have different provisions. This guide assumes a qualified retirement distribution and does not calculate early withdrawals or rollovers."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Investor.gov: traditional and Roth 401(k) plans",
+        "url": "https://www.investor.gov/additional-resources/retirement-toolkit/employer-sponsored-plans/traditional-and-roth-401k-plans",
+        "usedFor": "Basic employer-plan account choices and tax timing.",
+        "scope": "An educational overview, not a contribution-limit table or a complete tax calculation."
+      },
+      {
+        "title": "IRS: designated Roth account FAQs",
+        "url": "https://www.irs.gov/retirement-plans/retirement-plans-faqs-on-designated-roth-accounts",
+        "usedFor": "Employee elections, shared deferral structure, income restrictions and qualified-distribution conditions.",
+        "scope": "Some FAQ limit and employer-match passages retain historical wording. Current-year limits and SECURE 2.0 employer features use the separate sources below."
+      },
+      {
+        "title": "IRS: 2026 contribution-limit announcement",
+        "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500",
+        "usedFor": "The 2026 basic employee limit and distinction from catch-up amounts.",
+        "scope": "The projected 30-year example is not a forecast of future limits or future tax rates."
+      },
+      {
+        "title": "IRS: optional Roth employer contributions under SECURE 2.0",
+        "url": "https://www.irs.gov/newsroom/secure-2-point-0-act-changes-affect-how-businesses-complete-forms-w-2",
+        "usedFor": "Why employer contributions require plan-specific treatment.",
+        "scope": "No specific employer plan, vesting determination or tax-reporting calculation is modeled."
+      },
+      {
+        "title": "IRS: required minimum distribution FAQs",
+        "url": "https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs",
+        "usedFor": "The current owner-lifetime designated Roth exception and separate beneficiary rules.",
+        "scope": "This guide does not calculate an RMD or inherited-account distribution."
+      }
+    ],
+    "related": [
+      {
+        "href": "/401k-calculator",
+        "label": "401(k) contribution and growth calculator"
+      },
+      {
+        "href": "/guides/401k-vs-roth-ira/",
+        "label": "401(k) versus Roth IRA"
+      },
+      {
+        "href": "/guides/how-401k-matching-works/",
+        "label": "How 401(k) matching works"
+      },
+      {
+        "href": "/glossary/employer-match-and-vesting/",
+        "label": "Employer match and vesting"
+      },
+      {
+        "href": "/guides/roth-ira-vs-traditional-ira/",
+        "label": "Roth versus traditional IRA"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce only the traditional $10,000 annual growth stream",
+        "path": "/401k-calculator",
+        "mode": "projection",
+        "values": {
+          "age": 35,
+          "retire": 65,
+          "life": 90,
+          "salary": 100000,
+          "balance": 0,
+          "contribution": 10,
+          "match": 0,
+          "match_limit": 0,
+          "salary_growth": 0,
+          "inflation": 0,
+          "return": 6
+        }
+      },
+      {
+        "label": "Reproduce only the $7,800 annual growth stream used for Roth",
+        "path": "/401k-calculator",
+        "mode": "projection",
+        "values": {
+          "age": 35,
+          "retire": 65,
+          "life": 90,
+          "salary": 100000,
+          "balance": 0,
+          "contribution": "7.8",
+          "match": 0,
+          "match_limit": 0,
+          "salary_growth": 0,
+          "inflation": 0,
+          "return": 6
+        }
+      }
+    ],
+    "limitations": [
+      "Rates of 22%, 12% and 32% are hypothetical flat-rate assumptions, not a completed tax-return calculation.",
+      "Year-end contributions earn the same 6% effective annual return; no fees, inflation, market volatility, employer match or early-withdrawal taxes are modeled.",
+      "The calculator presets reproduce growth before withdrawal tax. Qualified Roth treatment and the article’s after-tax adjustments are separate assumptions."
+    ]
+  },
+  "lump-dca": {
+    "meta": {
+      "path": "/guides/lump-sum-vs-dollar-cost-averaging/",
+      "title": "Lump Sum vs Dollar-Cost Averaging: Timing & Examples",
+      "heading": "Lump Sum vs. Dollar-Cost Averaging: Compare Timing, Cash, and Risk",
+      "description": "Compare investing the same available cash immediately or in installments. Worked market-path examples separate idle-cash interest, timing and historical research.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "investment",
+        "compound-interest"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "Lump Sum vs Dollar-Cost Averaging",
+      "cardIntro": "Compare investing the same available cash immediately or in installments. Worked market-path examples separate idle-cash interest, timing and historical research.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "Lump-sum investing puts available cash into the chosen investment immediately. Dollar-cost averaging spreads purchases over a stated period. Compare the same initial cash and valuation date, including money still waiting to be invested; the market path and cash yield can change the outcome.",
+    "intro": "The decision here concerns money you already have. Investing from future paychecks is a different cash-flow situation. Our original $12,000 examples use invented rising, flat and falling price paths, while a separate section explains the scope of published historical research. Neither the paths nor the historical result predicts the next year.",
+    "sections": [
+      {
+        "id": "cash",
+        "title": "Available cash is different from future income",
+        "paragraphs": [
+          "Assume the full $12,000 is available today. The lump-sum strategy buys immediately. The installment strategy buys $1,000 at the beginning of each of twelve months, starting today. Both are valued twelve months after the first purchase. No additional household contributions arrive during the experiment.",
+          "If instead only $1,000 becomes available each month from pay, a $12,000 day-one investment would require other cash or borrowing. Calling that an equal-budget comparison would conceal the different funding. Regular payroll investing can be sensible operationally without being a decision to delay an already available lump sum.",
+          "An installment schedule also needs an endpoint. State the first purchase date, number of installments, last purchase date and final valuation date. A result for three installments held for a year does not automatically describe twelve installments or an indefinite monthly saving plan."
+        ],
+        "links": [
+          {
+            "href": "/glossary/dollar-cost-averaging/",
+            "label": "Dollar-cost averaging definition"
+          },
+          {
+            "href": "/guides/compound-interest-with-monthly-contributions/",
+            "label": "How contribution timing changes compound growth"
+          }
+        ]
+      },
+      {
+        "id": "paths",
+        "title": "Three transparent hypothetical price paths",
+        "paragraphs": [
+          "Start the share price at $100. In each path it changes smoothly at a constant monthly compound rate to reach $112, $100 or $88 at month twelve. Prices are P(m) = $100 × (1 + g)^(m/12), where g is +12%, 0% or −12%, and m runs from zero through twelve. There are no dividends, trading fees, taxes or inflation.",
+          "The lump sum buys 120 shares at time zero. Installments buy $1,000 ÷ P(m) shares at months zero through eleven. Month twelve is only the valuation date, not an extra purchase. Fractional shares are allowed. The first table assumes the cash awaiting investment earns nothing and is fully used by the scheduled purchases.",
+          "On the rising path, investing immediately ends at $13,440.00, compared with $12,766.50 for the installments. On the falling path, installments end at $11,204.77, above the lump sum’s $10,560.00. Both falling-path results remain below the original $12,000; losing less is not the same as earning a positive return."
+        ],
+        "table": {
+          "caption": "Original twelve-month paths; no idle-cash yield; not historical market returns",
+          "headers": [
+            "Final price / path",
+            "Lump-sum shares",
+            "Installment shares",
+            "Lump-sum value",
+            "Installment value"
+          ],
+          "rows": [
+            [
+              "$112.00 / +12%",
+              "120.000000",
+              "113.986588",
+              "$13,440.00",
+              "$12,766.50"
+            ],
+            [
+              "$100.00 / +0%",
+              "120.000000",
+              "120.000000",
+              "$12,000.00",
+              "$12,000.00"
+            ],
+            [
+              "$88.00 / -12%",
+              "120.000000",
+              "127.326940",
+              "$10,560.00",
+              "$11,204.77"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "cash-yield",
+        "title": "Count interest on the cash still waiting",
+        "paragraphs": [
+          "Now leave the same $1,000 purchase schedule unchanged, but assume the uninvested cash earns a constant 3% effective annual yield, credited at the equivalent monthly rate. Interest stays in cash rather than increasing the scheduled share purchases. At each month’s start, withdraw the next $1,000 from cash; then credit that month’s interest. The final valuation includes any interest left in cash.",
+          "This produces $165.88 of ending cash interest. It is not $360, because the full $12,000 does not remain in cash for the whole year. The same cash schedule applies to all three stock paths, so the cash amount adds equally to each installment result in this controlled experiment.",
+          "The 3% yield is hypothetical and not a bank offer. Taxes on interest, restrictions, variable yields or fees would alter the result. Compare the total wealth of both strategies, rather than putting idle-cash interest in one result while omitting idle cash itself from the other."
+        ],
+        "table": {
+          "caption": "Same purchases; only the assumed yield on waiting cash changes",
+          "headers": [
+            "Market path",
+            "Installment investment value",
+            "Ending cash interest",
+            "Total with 3% cash yield"
+          ],
+          "rows": [
+            [
+              "+12%",
+              "$12,766.50",
+              "$165.88",
+              "$12,932.38"
+            ],
+            [
+              "+0%",
+              "$12,000.00",
+              "$165.88",
+              "$12,165.88"
+            ],
+            [
+              "-12%",
+              "$11,204.77",
+              "$165.88",
+              "$11,370.65"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "history",
+        "title": "What the historical research actually tested",
+        "paragraphs": [
+          "Vanguard’s February 2023 research reported that immediate investment outperformed a three-installment strategy in 68% of rolling one-year comparisons using MSCI World Index returns for 1976–2022. That figure used a 100% equity allocation and no interest on the portion awaiting investment; purchases were a month apart.",
+          "That result describes that historical test, not a 68% probability of winning next year. Our twelve-purchase paths above are separate illustrations and do not reproduce the study. The paper also examines other allocations and scenarios. Review the original methodology rather than applying one headline percentage to every market, installment period or cash yield."
+        ],
+        "links": [
+          {
+            "href": "https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf",
+            "label": "Read the original Vanguard study and Figure 2 assumptions"
+          }
+        ]
+      },
+      {
+        "id": "risk",
+        "title": "A timing choice does not remove investment risk",
+        "paragraphs": [
+          "Spreading purchases temporarily leaves less money exposed to the investment. That can reduce an early loss if prices fall while cash is waiting, or miss gains if prices rise. After the schedule finishes, the purchased assets still carry their normal risks. There is no rule requiring the market to recover before you need the money.",
+          "A fixed schedule can also reduce repeated decisions about entry dates. That practical benefit depends on following the schedule: repeatedly delaying the final installments changes the plan. Compare a schedule you can actually sustain with the chosen investment’s risks, rather than assuming perfect knowledge of later prices.",
+          "Money needed for near-term expenses or emergencies presents a separate suitability question. The existence of an installment method does not turn a volatile asset into a cash reserve. The examples do not select securities, choose an asset allocation or determine an appropriate investing horizon for you."
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Reproduce the constant-growth parts",
+        "paragraphs": [
+          "The first preset compounds $12,000 for one year at 12%, producing $13,440.00. The second uses $1,000 beginning-of-month contributions, no starting investment and the same effective one-year growth rate, producing $12,766.50. Select annual compounding so the entered 12% is the effective annual rate in these examples.",
+          "The contribution tool does not also hold the initial $12,000 in a separate cash account. The waiting-cash reconciliation belongs to this guide. Nor does a constant-rate projection reproduce a historical backtest or a path with irregular monthly returns. Use the downloadable tables with the stated timing if you want to audit the full comparison."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is dollar-cost averaging better than investing a lump sum?",
+        "answer": "Neither method wins on every path. Our rising path favors earlier investment and our falling path favors the scheduled purchases. The historical study examines a defined set of periods and assumptions, not a guarantee about your next investment."
+      },
+      {
+        "question": "Does dollar-cost averaging guarantee that I buy at a lower average price?",
+        "answer": "No. It buys more shares when the stated purchase price is lower, but prices could rise through the schedule. In our rising path the installments acquire fewer than the 120 shares bought immediately. An average purchase price is not itself an investment return."
+      },
+      {
+        "question": "How long should I spread out a lump sum?",
+        "answer": "There is no universally correct period established by these examples. A longer schedule changes both risk exposure and time in cash. The twelve-purchase illustration is not a recommendation, and the cited three-installment historical study does not directly test every possible schedule."
+      },
+      {
+        "question": "Should unused cash be included in the result?",
+        "answer": "Yes. Include remaining principal and any interest at the common valuation date. Our fixed purchases consume all $12,000 principal, while the 3% cash-yield sensitivity leaves $165.88 of interest in cash."
+      },
+      {
+        "question": "Can the growth calculator reproduce the historical result?",
+        "answer": "No. The presets check only constant-growth lump-sum and deposit arithmetic. Historical returns, changing market paths and the separate waiting-cash account need the research or an explicitly specified independent worksheet."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Vanguard Research: Cost averaging — invest now or temporarily hold your cash?",
+        "url": "https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf",
+        "usedFor": "The dated historical comparison and its three-installment, one-year assumptions.",
+        "scope": "The 2023 study is separate from our twelve-purchase hypothetical paths and is not a forecast."
+      },
+      {
+        "title": "Investor.gov: dollar-cost averaging",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/dollar-cost-averaging",
+        "usedFor": "The definition of investing fixed amounts at regular intervals.",
+        "scope": "A definition does not establish a preferred schedule or guarantee a profit."
+      }
+    ],
+    "related": [
+      {
+        "href": "/investment-calculator",
+        "label": "Investment Calculator"
+      },
+      {
+        "href": "/compound-interest-calculator",
+        "label": "Compound Interest Calculator"
+      },
+      {
+        "href": "/glossary/dollar-cost-averaging/",
+        "label": "Dollar-cost averaging terminology"
+      },
+      {
+        "href": "/guides/compound-interest-with-monthly-contributions/",
+        "label": "Contribution timing and compound growth"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce only $12,000 invested immediately at 12% for one year",
+        "path": "/compound-interest-calculator",
+        "mode": "growth",
+        "values": {
+          "principal": 12000,
+          "years": 1,
+          "months": 0,
+          "rate": 12,
+          "compound": "Annually",
+          "annual": 0,
+          "monthly": 0,
+          "timing": "Beginning of period",
+          "tax": 0,
+          "inflation": 0
+        }
+      },
+      {
+        "label": "Reproduce only beginning-of-month $1,000 purchases on the +12% path",
+        "path": "/compound-interest-calculator",
+        "mode": "growth",
+        "values": {
+          "principal": 0,
+          "years": 1,
+          "months": 0,
+          "rate": 12,
+          "compound": "Annually",
+          "annual": 0,
+          "monthly": 1000,
+          "timing": "Beginning of period",
+          "tax": 0,
+          "inflation": 0
+        }
+      },
+      {
+        "label": "Reproduce the flat-price installment total at 0% growth",
+        "path": "/compound-interest-calculator",
+        "mode": "growth",
+        "values": {
+          "principal": 0,
+          "years": 1,
+          "months": 0,
+          "rate": 0,
+          "compound": "Annually",
+          "annual": 0,
+          "monthly": 1000,
+          "timing": "Beginning of period",
+          "tax": 0,
+          "inflation": 0
+        }
+      }
+    ],
+    "limitations": [
+      "The price paths are invented, smooth, dividend-free illustrations with fractional shares and full-precision calculations.",
+      "All $12,000 is available initially. Twelve $1,000 purchases occur at months 0–11, and valuation is at month 12.",
+      "Waiting cash earns either 0% or a hypothetical constant 3% effective annual yield. Interest is retained in cash; taxes and fees are excluded.",
+      "The cited historical study uses different purchase timing and historical data. The article does not label the hypothetical examples as a backtest."
+    ]
+  },
+  "budget-rule": {
+    "meta": {
+      "path": "/guides/50-30-20-rule/",
+      "title": "50/30/20 Rule: Take-Home Pay & Budget Examples",
+      "heading": "The 50/30/20 Rule: Income, Categories, and Practical Budget Examples",
+      "description": "Apply the 50/30/20 budget rule to a stated income base. Worked examples classify needs, wants, saving and debt, then adjust for high essential costs.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "budget",
+        "emergency-fund"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "50/30/20 Rule",
+      "cardIntro": "Apply the 50/30/20 budget rule to a stated income base. Worked examples classify needs, wants, saving and debt, then adjust for high essential costs.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "The 50/30/20 rule is a budgeting guideline that starts with about 50% for needs, 30% for wants and 20% for saving and financial goals. State your income base and category rules before applying the percentages. If essential costs do not fit, use the budget to identify a feasible adjustment rather than treating the guideline as a requirement.",
+    "intro": "The worked worksheets below use $5,000 of monthly deposited take-home pay and an explicitly cash-only budget. They keep required debt payments separate from extra repayments and show how a household can reconcile a higher housing bill. This is a planning framework, not a tax calculation or a measure of anyone’s financial worth.",
+    "sections": [
+      {
+        "id": "income",
+        "title": "Choose the income denominator first",
+        "paragraphs": [
+          "For the main example, $5,000 is the cash deposited after tax and payroll deductions. The starting allocations are $2,500 of needs, $1,500 of wants and $1,000 of financial goals. Applying those shares to gross salary would describe a different budget because income tax and other deductions still need to be funded.",
+          "Sources use different budgeting conventions. The CFPB worksheet uses take-home pay and treats its rule as adjustable. UNFCU’s version starts after taxes but adds back other payroll deductions so they can be classified. Our cash-only example instead excludes amounts already removed from deposited pay and tracks those payroll items separately. Do not silently switch denominators between the worksheet and your percentages.",
+          "For variable income, distinguish a conservative recurring cash base from occasional receipts. Annual bonuses and one-off transfers should not automatically support monthly commitments. Convert weekly or biweekly income consistently before combining it with monthly bills; a two-paycheck month is not the same as the annual average for a biweekly schedule."
+        ],
+        "formula": "Starting category amount = stated monthly income base × category percentage."
+      },
+      {
+        "id": "categories",
+        "title": "Define needs, wants, and goals without counting a payment twice",
+        "paragraphs": [
+          "In this guide’s convention, needs include essential housing, basic utilities, essential transport, groceries, health costs and required debt minimums. Wants are discretionary additions. Financial goals include additional saving and extra debt principal beyond required minimums. Other versions place debt payments differently; record your convention and apply it consistently.",
+          "A bill can contain more than one purpose. Basic food and optional restaurant meals need not share a category merely because both involve eating. A phone plan might have an essential portion and a premium upgrade. Use itemized amounts where the distinction helps, rather than classifying every dollar solely from the provider’s name.",
+          "Savings transfers are budget allocations, even though they are not consumption. Count them when reconciling available cash. For debt, record a required payment once; an extra principal payment can be a separate goal allocation. Do not enter the full payment in needs and then enter that same full amount again in goals."
+        ],
+        "table": {
+          "caption": "Classification convention used in our cash-only examples",
+          "headers": [
+            "Category",
+            "Example items",
+            "Important boundary"
+          ],
+          "rows": [
+            [
+              "Needs",
+              "Rent, basic utilities, essential transport, required debt payments",
+              "Separate optional upgrades when relevant"
+            ],
+            [
+              "Wants",
+              "Dining out, leisure, nonessential purchases",
+              "A subscription is not automatically essential because it recurs"
+            ],
+            [
+              "Financial goals",
+              "Emergency saving, additional retirement saving, extra debt principal",
+              "Exclude payroll amounts already removed from this cash base"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "worksheet",
+        "title": "A $5,000 example that reconciles to zero",
+        "paragraphs": [
+          "Assume no separate tax is deducted again inside the Budget Calculator because the $5,000 input is already deposited take-home pay. Needs total $2,500: $1,500 rent, $200 utilities, $250 required vehicle payment, $100 vehicle insurance, $100 fuel, $250 groceries and $100 separately paid health insurance.",
+          "Wants total $1,500: $300 dining, $200 entertainment, $400 travel, $100 gifts, $150 discretionary personal care, $150 discretionary clothing and $200 other optional spending. Goals total $1,000: $400 to an emergency reserve and $600 of additional retirement saving paid from the deposited cash.",
+          "The calculator reports $5,000 of monthly spending and saving and a zero unallocated surplus. Zero here means every cash dollar has a stated use; it does not mean the household has no savings. The $1,000 goal allocation remains part of the plan. These examples do not determine whether the amounts are adequate for a particular household."
+        ],
+        "table": {
+          "caption": "Original cash-only monthly budget; deposited income $5,000; tax input 0%",
+          "headers": [
+            "Allocation",
+            "Monthly amount",
+            "Share of stated income",
+            "Annual amount if repeated"
+          ],
+          "rows": [
+            [
+              "Needs",
+              "$2,500.00",
+              "50%",
+              "$30,000.00"
+            ],
+            [
+              "Wants",
+              "$1,500.00",
+              "30%",
+              "$18,000.00"
+            ],
+            [
+              "Goals",
+              "$1,000.00",
+              "20%",
+              "$12,000.00"
+            ],
+            [
+              "Total allocated",
+              "$5,000.00",
+              "100%",
+              "$60,000.00"
+            ],
+            [
+              "Unallocated cash",
+              "$0.00",
+              "0%",
+              "$0.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "adjust",
+        "title": "What if rent and essential costs exceed 50%?",
+        "paragraphs": [
+          "In a second hypothetical worksheet, raise rent by $700 to $2,200. Essential costs become $3,200. Holding everything else unchanged would create a $700 shortfall; changing the label on the rent would not fund it. Our revised worksheet reduces optional spending from $1,500 to $800 and keeps the $1,000 goal allocation.",
+          "That revised allocation is 64% needs, 16% wants and 20% goals. It is an internally consistent example, not a claim that every household can make those reductions. If there is no feasible discretionary reduction, assess the actual amounts, timing and commitments. A temporary lower saving allocation may be more honest than a mathematically impossible target.",
+          "The table also shows an illustrative tight-period allocation. A percentage framework cannot solve inadequate cash flow by itself. Start with actual bills and deadlines, then identify changes that are practical for your household. The emergency-reserve tool can help turn a separately chosen expense target into a savings plan."
+        ],
+        "table": {
+          "caption": "Alternative $5,000 allocations; scenarios, not recommended universal targets",
+          "headers": [
+            "Scenario",
+            "Needs",
+            "Wants",
+            "Goals",
+            "Unallocated"
+          ],
+          "rows": [
+            [
+              "Starting 50/30/20",
+              "$2,500.00 / 50%",
+              "$1,500.00 / 30%",
+              "$1,000.00 / 20%",
+              "$0.00"
+            ],
+            [
+              "Higher essentials",
+              "$3,200.00 / 64%",
+              "$800.00 / 16%",
+              "$1,000.00 / 20%",
+              "$0.00"
+            ],
+            [
+              "Illustrative tight period",
+              "$3,500.00 / 70%",
+              "$1,000.00 / 20%",
+              "$500.00 / 10%",
+              "$0.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "payroll",
+        "title": "Handle payroll retirement saving and irregular bills explicitly",
+        "paragraphs": [
+          "Suppose a retirement contribution was deducted before the $5,000 reached your bank. In this cash-only worksheet, do not subtract it from that $5,000 a second time. Track it in a separate payroll-saving record. The $600 retirement line in our example is additional saving from deposited cash, not a repeat of that payroll contribution.",
+          "If you instead want a broader after-tax-income allocation that includes payroll retirement and insurance, rebuild both the income base and the matching categories together. Pretax deductions and after-tax deductions can need different treatment. Adding a pretax contribution to a take-home number without explaining the convention mixes measurements.",
+          "Annual expenses also need a monthly funding plan. Saving $100 each month for an expected $1,200 annual bill creates a reserve for a predictable expense; it is different from an emergency fund for unexpected events. Decide whether to classify the funding transfer or the later payment in your monthly allocation, and avoid counting both against the same month’s income."
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Use the Budget Calculator as a worksheet, not an automatic classifier",
+        "paragraphs": [
+          "The presets enter the two fully reconciled worksheets with the tax field set to zero. The Budget Calculator converts frequencies and totals spending and saving; it does not automatically decide whether a purchase is a need, want or goal, and it does not automatically enforce the 50/30/20 percentages. The category totals in this guide are classified separately.",
+          "Review actual spending after using the worksheet, including costs paid outside the listed accounts. Compare amounts as well as percentages: the same percentage can describe very different cash cushions at different incomes. Revisit the plan when income, household obligations or major bills change."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does the 50/30/20 rule use gross or net income?",
+        "answer": "Use a clearly stated after-tax or take-home convention. Our examples use deposited pay after payroll deductions and track excluded payroll saving separately. If you use a version that adds back non-tax payroll deductions, adjust both the income base and expense categories consistently."
+      },
+      {
+        "question": "Are minimum debt payments part of the 20%?",
+        "answer": "Classification varies. Our examples count required minimums in needs and extra principal in goals, following an explicit convention. Other summaries group debt payments with the 20% category. Choose one convention and avoid recording the same payment in both buckets."
+      },
+      {
+        "question": "What if my rent alone is close to 50% of income?",
+        "answer": "Calculate all essential costs before allocating the rest. The 64/16/20 example demonstrates a possible adjustment, not a requirement. Where the cash does not cover actual commitments, a different plan and individual assistance may be needed; changing category names does not close a deficit."
+      },
+      {
+        "question": "Does the 20% include employer matching?",
+        "answer": "Our cash-only budget counts money allocated from deposited pay and tracks payroll contributions separately. Employer matching is not spendable deposited income in this worksheet. A broader net-worth or compensation analysis can track it elsewhere under the plan’s rules."
+      },
+      {
+        "question": "Do I need a separate 50/30/20 calculator?",
+        "answer": "A percentage calculation gives the starting category amounts, but classification and actual spending still matter. The linked Budget Calculator is an itemized cash-flow worksheet. It does not automatically make those classification decisions for you."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: My spending rule to live by",
+        "url": "https://files.consumerfinance.gov/f/documents/201606_cfpb_rules-to-live-by_my-spending-rule-to-live-by.pdf",
+        "usedFor": "The take-home-pay rule of thumb and permission to adapt it.",
+        "scope": "This 2016 educational worksheet is not a legal requirement or a universal household recommendation."
+      },
+      {
+        "title": "UNFCU: budgeting basics and the 50/30/20 rule",
+        "url": "https://www.unfcu.org/financial-wellness/50-30-20-rule/",
+        "usedFor": "Minimum-versus-extra debt-payment categories and payroll-deduction convention.",
+        "scope": "Our main worksheet explicitly uses deposited cash rather than this source’s broader after-tax income base."
+      },
+      {
+        "title": "MIT Student Financial Services: 50/20/30 strategy",
+        "url": "https://sfs.mit.edu/manage-your-money/budgeting/50-20-30-strategy/",
+        "usedFor": "An alternative presentation of the three-bucket framework and flexible percentages.",
+        "scope": "MIT uses fixed expenses and flexible spending categories; those are not asserted to match every need/want definition."
+      }
+    ],
+    "related": [
+      {
+        "href": "/budget-calculator",
+        "label": "Budget Calculator"
+      },
+      {
+        "href": "/emergency-fund-calculator",
+        "label": "Emergency Fund Calculator"
+      },
+      {
+        "href": "/guides/how-to-calculate-monthly-budget/",
+        "label": "Normalize monthly income and expenses"
+      },
+      {
+        "href": "/guides/how-much-emergency-fund-should-i-have/",
+        "label": "Choose an emergency-reserve target"
+      },
+      {
+        "href": "/glossary/budget-and-savings-rate/",
+        "label": "Budget and savings-rate definitions"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Open the fully itemized $5,000 cash-only 50/30/20 example",
+        "path": "/budget-calculator",
+        "mode": "budget",
+        "values": {
+          "tax": 0,
+          "Income_0": 5000,
+          "Housing_0": 1500,
+          "Housing_3": 200,
+          "Transportation_0": 250,
+          "Transportation_1": 100,
+          "Transportation_2": 100,
+          "Living_0": 250,
+          "Health_0": 100,
+          "Living_1": 300,
+          "Living_3": 200,
+          "Miscellaneous_0": 400,
+          "Miscellaneous_1": 100,
+          "Miscellaneous_4": 150,
+          "Living_2": 150,
+          "Living_4": 200,
+          "Savings_0": 400,
+          "Savings_1": 600
+        }
+      },
+      {
+        "label": "Open the higher-rent 64/16/20 cash-flow example",
+        "path": "/budget-calculator",
+        "mode": "budget",
+        "values": {
+          "tax": 0,
+          "Income_0": 5000,
+          "Housing_0": 2200,
+          "Housing_3": 200,
+          "Transportation_0": 250,
+          "Transportation_1": 100,
+          "Transportation_2": 100,
+          "Living_0": 250,
+          "Health_0": 100,
+          "Living_1": 200,
+          "Living_3": 100,
+          "Miscellaneous_0": 200,
+          "Miscellaneous_1": 50,
+          "Miscellaneous_4": 100,
+          "Living_2": 100,
+          "Living_4": 50,
+          "Savings_0": 400,
+          "Savings_1": 600
+        }
+      }
+    ],
+    "limitations": [
+      "Examples use deposited monthly take-home income and a zero calculator tax rate to avoid deducting tax twice.",
+      "Required debt minimums are counted as needs and extra principal as goals in these examples; alternative conventions must not be mixed.",
+      "Payroll deductions already excluded from deposited income are tracked separately, not counted again as cash outflows.",
+      "The percentages are an adjustable organizing guideline, not personalized financial advice or a guarantee that a household can meet every goal."
     ]
   }
 }

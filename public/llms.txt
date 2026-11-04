@@ -394,3 +394,10 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 - [Gross Margin vs Net Margin: Trace the Same Revenue to Net Profit](https://www.calculatorfree.io/guides/gross-margin-vs-net-margin/): Compare gross and net profit margins with an original income statement, operating-cost sensitivity cases and clear limits of the pricing margin calculator.
 - [HELOC vs Home Equity Loan: Compare Access and Repayment](https://www.calculatorfree.io/guides/heloc-vs-home-equity-loan/): Compare HELOC and home equity loan structures using equal borrowing, upfront fees and a 15-year horizon, with draw-period and repayment examples.
 - [Balance Transfer vs Personal Loan: Compare Fees, Deadlines and Payoff](https://www.calculatorfree.io/guides/balance-transfer-vs-personal-loan/): Compare a zero-rate balance transfer and a personal loan with equal debt and financed fees, an 18-month payoff target and a budget-limited post-promo example.
+
+## More worked comparisons
+
+- [Leasing vs. Buying a Car: Compare Payments, Equity, and Total Cost](https://www.calculatorfree.io/guides/leasing-vs-buying-a-car/): Compare leasing and buying at the same exit date with worked examples for payments, remaining debt, resale value, lease-end fees and mileage charges.
+- [Roth vs. Traditional 401(k): Compare Taxes and Equal Budgets](https://www.calculatorfree.io/guides/roth-vs-traditional-401k/): Compare Roth and traditional 401(k) contributions using equal take-home budgets, tax-rate scenarios, employer-match limits and reproducible growth examples.
+- [Lump Sum vs. Dollar-Cost Averaging: Compare Timing, Cash, and Risk](https://www.calculatorfree.io/guides/lump-sum-vs-dollar-cost-averaging/): Compare investing the same available cash immediately or in installments. Worked market-path examples separate idle-cash interest, timing and historical research.
+- [The 50/30/20 Rule: Income, Categories, and Practical Budget Examples](https://www.calculatorfree.io/guides/50-30-20-rule/): Apply the 50/30/20 budget rule to a stated income base. Worked examples classify needs, wants, saving and debt, then adjust for high essential costs.

@@ -1,0 +1,27 @@
+Guide,"Leasing vs. Buying a Car: Compare Payments, Equity, and Total Cost"
+Scope,"The purchase and lease share a 36-month exit date, but the purchase contract lasts 60 months.","Resale values, money factor and fees are hypothetical. Taxes, operating costs, selling fees and cash opportunity cost are excluded.","The purchase amortization retains full precision. Displayed installments are rounded, so multiplying displayed cents can differ from table totals."
+
+Hypothetical quotes; USD; taxes and other stated ownership costs excluded
+Item,Purchase,Lease and return
+Vehicle price,"$35,000.00","$35,000.00"
+Initial cash,"$3,000.00","$3,000.00 capital-cost reduction"
+Opening loan / adjusted cap cost,"$32,000.00","$32,000.00"
+Contract length,60 months,36 months
+Rate convention,6% annual loan rate,0.0025 money factor
+Contractual residual,Not applicable,"$21,000.00"
+Monthly installment,$618.65,$438.06
+Disposition fee at month 36,$0.00 assumed,$350.00 assumed
+
+Month-36 reconciliation; no excess mileage in the base lease
+Reconciliation,"Purchase at $22,000 resale",Lease and return
+Cash before exit,"$25,271.39","$18,770.00"
+Remaining debt,"$13,958.51",$0.00 after scheduled lease end
+Sale proceeds,"$22,000.00",$0.00
+Net equity / disposition,"$8,041.49 equity",$350.00 fee
+Exit-date cost,"$17,229.90","$19,120.00"
+
+"Only resale proceeds change here; base lease cost remains $19,120"
+Assumed purchase resale,Purchase equity,Purchase exit cost,Base returned-lease cost
+"$18,000.00","$4,041.49","$21,229.90","$19,120.00"
+"$20,000.00","$6,041.49","$19,229.90","$19,120.00"
+"$22,000.00","$8,041.49","$17,229.90","$19,120.00"

@@ -1,5 +1,7 @@
 const latestGuidePaths=["/guides/how-are-heloc-payments-calculated/", "/guides/how-to-calculate-home-equity-loan-payments/", "/guides/how-to-calculate-personal-loan-payments/", "/guides/how-to-compare-debt-consolidation-loans/", "/guides/roth-conversion-ladder/", "/guides/roth-conversion-taxes/", "/guides/gross-margin-vs-net-margin/", "/guides/heloc-vs-home-equity-loan/", "/guides/balance-transfer-vs-personal-loan/", "/home-equity-loan-calculator.html", "/heloc-calculator.html", "/ira-calculator.html", "/single-credit-card-payoff-calculator.html", "/debt-consolidation-calculator.html", "/margin-calculator.html", "/personal-loan-calculator.html", "/markup-calculator.html", "/break-even-calculator.html", "/roth-conversion-ladder-calculator.html", "/guides/", "/retirement-calculators.html", "/business-calculators.html", "/real-estate-calculator.html", "/loan-calculators.html"];
 latestGuidePaths.push("/auto-loan-calculator.html","/retirement-calculator.html","/401k-calculator.html","/emergency-fund-calculator.html","/budget-calculator.html");
+latestGuidePaths.push("/guides/leasing-vs-buying-a-car/","/guides/roth-vs-traditional-401k/","/guides/lump-sum-vs-dollar-cost-averaging/","/guides/50-30-20-rule/","/guides/how-to-calculate-auto-loan-payments/","/guides/how-to-calculate-auto-lease-payments/","/guides/how-401k-matching-works/","/guides/compound-interest-with-monthly-contributions/","/guides/how-to-calculate-monthly-budget/","/guides/401k-vs-roth-ira/","/investment-calculator.html","/compound-interest-calculator.html","/savings-investment-calculators.html");
+latestGuidePaths.push("/auto-lease-calculator.html");
 const contentGuidePaths=['/guides/apr-vs-apy/','/guides/hsa-vs-fsa/','/guides/simple-interest-vs-compound-interest/','/guides/401k-vs-roth-ira/','/guides/cash-out-refinance-vs-heloc/','/guides/15-vs-30-year-mortgage/','/guides/how-much-money-do-i-need-to-retire/','/guides/4-percent-rule/','/guides/cd-ladder/','/guides/how-to-calculate-monthly-mortgage-payment/','/guides/compound-interest-with-monthly-contributions/','/guides/how-long-will-retirement-savings-last/','/guides/how-does-an-hsa-work/','/guides/how-401k-matching-works/','/guides/how-to-calculate-cap-rate/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/how-are-heloc-payments-calculated/','/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-simple-interest/','/mortgage-calculator.html','/mortgage-payoff-calculator.html','/refinance-calculator.html','/apr-calculator.html','/home-equity-loan-calculator.html','/heloc-calculator.html','/compound-interest-calculator.html','/savings-calculator.html','/simple-interest-calculator.html','/cd-calculator.html','/retirement-calculator.html','/401k-calculator.html','/social-security-calculator.html','/roth-ira-calculator.html','/ira-calculator.html','/coast-fire-calculator.html','/fire-calculator.html','/hsa-calculator.html','/cap-rate-calculator.html','/real-estate-calculator.html','/retirement-calculators.html','/savings-investment-calculators.html',"/guides/how-soon-can-you-refinance-a-mortgage/", "/guides/are-reinvested-dividends-taxable/", "/guides/should-you-reinvest-dividends/", "/guides/how-much-house-can-i-afford/", "/guides/how-to-calculate-rental-property-cash-flow/", "/guides/is-refinancing-worth-it/", "/guides/", "/refinance-calculator.html", "/drip-calculator.html", "/stock-profit-calculator.html", "/mortgage-calculator.html"];
 const followupReviewPaths=['/biweekly-mortgage-calculator.html','/mortgage-recast-calculator.html','/emergency-fund-calculator.html','/paycheck-calculator.html','/roth-ira-calculator.html'];
 const depthReviewPaths=['/loan-calculator.html','/finance-calculator.html','/bond-calculator.html','/average-return-calculator.html','/margin-calculator.html','/mortgage-payoff-calculator.html','/depreciation-calculator.html','/lease-calculator.html'];
@@ -48,7 +50,7 @@ test("Production sitemap lists canonical pages and only reviewed content dates",
     SITE_INDEXABLE: "true",
   });
   const entries = sitemapEntries(config);
-  assert.equal(entries.length, 325);
+  assert.equal(entries.length, 329);
   for(const path of depthReviewPaths)assert.equal(contentUpdatedOn[path],latestGuidePaths.includes(path)?'2026-11-04':contentGuidePaths.includes(path)?'2026-11-03':'2026-11-02');
   assert.ok(entries.some(e=>new URL(e.url).pathname==='/disclaimer.html'));
   assert.equal(contentUpdatedOn['/fat-fire-calculator.html'],'2026-10-29');
@@ -187,7 +189,7 @@ test("Production SEO follows the confirmed www extensionless destination while o
   assert.equal(absoluteURL("/cd-calculator.html",config),"https://www.calculatorfree.io/cd-calculator");
   assert.equal(absoluteURL("/glossary/",config),"https://www.calculatorfree.io/glossary/");
   const entries=sitemapEntries(config);
-  assert.equal(entries.length,325);
+  assert.equal(entries.length,329);
   assert.equal(new Set(entries.map(e=>e.url)).size,entries.length);
   assert.ok(entries.every(e=>e.url.startsWith("https://www.calculatorfree.io/")&&!e.url.endsWith(".html")&&!e.url.includes("?")));
   for (const calc of calculators.filter(c=>!c.directory)) {

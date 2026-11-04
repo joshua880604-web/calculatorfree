@@ -295,3 +295,10 @@ for(const path of ['/guides/','/retirement-calculators.html','/business-calculat
 
 // New embed controls and public Pinterest cover assets, November 4.
 for(const id of ["auto-loan", "personal-loan", "credit-card", "debt-consolidation", "retirement", "401k", "emergency-fund", "budget"])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-04';
+
+// Four decision guides and their visible reading relationships, November 4.
+for(const id of ["auto-loan", "auto-lease", "401k", "investment", "compound-interest", "budget", "emergency-fund"])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-04';
+for(const path of ['/guides/','/loan-calculators.html','/retirement-calculators.html','/savings-investment-calculators.html'])contentUpdatedOn[path]='2026-11-04';
+
+// Preserve current review dates on the six guides receiving reciprocal reading links.
+for(const path of ["/guides/how-to-calculate-auto-loan-payments/", "/guides/how-to-calculate-auto-lease-payments/", "/guides/how-401k-matching-works/", "/guides/compound-interest-with-monthly-contributions/", "/guides/how-to-calculate-monthly-budget/", "/guides/401k-vs-roth-ira/"])contentUpdatedOn[path]='2026-11-04';

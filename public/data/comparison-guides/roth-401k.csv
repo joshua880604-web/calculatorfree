@@ -1,0 +1,23 @@
+Guide,Roth vs. Traditional 401(k): Compare Taxes and Equal Budgets
+Scope,"Rates of 22%, 12% and 32% are hypothetical flat-rate assumptions, not a completed tax-return calculation.","Year-end contributions earn the same 6% effective annual return; no fees, inflation, market volatility, employer match or early-withdrawal taxes are modeled.",The calculator presets reproduce growth before withdrawal tax. Qualified Roth treatment and the article’s after-tax adjustments are separate assumptions.
+
+"Original annual contribution example; no match, fees or market volatility"
+Input / result,Traditional 401(k),Roth 401(k)
+Year-end employee contribution,"$10,000.00","$7,800.00"
+Assumed current income-tax saving,"$2,200.00",$0.00
+Annual spendable-pay reduction,"$7,800.00","$7,800.00"
+Annual return and years,6%; 30 years,6%; 30 years
+Projected account balance,"$790,581.86","$616,653.85"
+
+Illustrative after-tax values; qualified Roth withdrawal assumed
+Hypothetical withdrawal tax,Traditional after tax,Roth after tax,Roth minus traditional
+12%,"$695,712.04","$616,653.85","$-79,058.19"
+22%,"$616,653.85","$616,653.85",$0.00
+32%,"$537,595.67","$616,653.85","$79,058.19"
+
+"Same $10,000 account contribution; different take-home cost"
+Comparison,Traditional,Roth
+Annual account contribution,"$10,000.00","$10,000.00"
+Assumed annual take-home cost,"$7,800.00","$10,000.00"
+Balance before any withdrawal tax,"$790,581.86","$790,581.86"
+After assumed 22% traditional tax,"$616,653.85","$790,581.86 if qualified"

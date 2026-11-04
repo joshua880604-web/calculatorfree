@@ -1,0 +1,211 @@
+[
+  {
+    "calculatorId": "auto-loan",
+    "mode": "payment",
+    "values": {
+      "tax_state": "Manual",
+      "purchase_year": 2026,
+      "price": 35000,
+      "months": 60,
+      "rate": 6,
+      "rebate": 0,
+      "down": 3000,
+      "trade": 0,
+      "owed": 0,
+      "tax": 0,
+      "fees": 0,
+      "trade_credit": "Yes",
+      "rebate_tax": "No",
+      "finance_fees": "Yes"
+    },
+    "metrics": {
+      "Payment per period": 618.6496489416934,
+      "Total interest": 5118.978936501603
+    },
+    "schedule_checks": [
+      {
+        "row": 35,
+        "column": 4,
+        "value": 13958.509267214142
+      }
+    ]
+  },
+  {
+    "calculatorId": "auto-lease",
+    "mode": "payment",
+    "values": {
+      "price": 35000,
+      "residual": 21000,
+      "down": 3000,
+      "trade": 0,
+      "fees": 0,
+      "months": 36,
+      "rate": ".0025",
+      "rate_unit": "Money factor",
+      "tax": 0
+    },
+    "metrics": {
+      "Monthly lease payment": 438.05555555555554,
+      "Total lease cash outlay": 18770.0
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "projection",
+    "values": {
+      "age": 35,
+      "retire": 65,
+      "life": 90,
+      "salary": 100000,
+      "balance": 0,
+      "contribution": 10,
+      "match": 0,
+      "match_limit": 0,
+      "salary_growth": 0,
+      "inflation": 0,
+      "return": 6
+    },
+    "metrics": {
+      "Projected 401(k) balance": 790581.8621522083,
+      "Employee contributions": 300000.0,
+      "Employer contributions": 0.0
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "projection",
+    "values": {
+      "age": 35,
+      "retire": 65,
+      "life": 90,
+      "salary": 100000,
+      "balance": 0,
+      "contribution": "7.8",
+      "match": 0,
+      "match_limit": 0,
+      "salary_growth": 0,
+      "inflation": 0,
+      "return": 6
+    },
+    "metrics": {
+      "Projected 401(k) balance": 616653.8524787225,
+      "Employee contributions": 234000.0
+    }
+  },
+  {
+    "calculatorId": "compound-interest",
+    "mode": "growth",
+    "values": {
+      "principal": 12000,
+      "years": 1,
+      "months": 0,
+      "rate": 12,
+      "compound": "Annually",
+      "annual": 0,
+      "monthly": 0,
+      "timing": "Beginning of period",
+      "tax": 0,
+      "inflation": 0
+    },
+    "metrics": {
+      "Ending balance": 13440.0
+    }
+  },
+  {
+    "calculatorId": "compound-interest",
+    "mode": "growth",
+    "values": {
+      "principal": 0,
+      "years": 1,
+      "months": 0,
+      "rate": 12,
+      "compound": "Annually",
+      "annual": 0,
+      "monthly": 1000,
+      "timing": "Beginning of period",
+      "tax": 0,
+      "inflation": 0
+    },
+    "metrics": {
+      "Ending balance": 12766.497908353178,
+      "Total contributions": 12000.0
+    }
+  },
+  {
+    "calculatorId": "compound-interest",
+    "mode": "growth",
+    "values": {
+      "principal": 0,
+      "years": 1,
+      "months": 0,
+      "rate": 0,
+      "compound": "Annually",
+      "annual": 0,
+      "monthly": 1000,
+      "timing": "Beginning of period",
+      "tax": 0,
+      "inflation": 0
+    },
+    "metrics": {
+      "Ending balance": 12000.0
+    }
+  },
+  {
+    "calculatorId": "budget",
+    "mode": "budget",
+    "values": {
+      "tax": 0,
+      "Income_0": 5000,
+      "Housing_0": 1500,
+      "Housing_3": 200,
+      "Transportation_0": 250,
+      "Transportation_1": 100,
+      "Transportation_2": 100,
+      "Living_0": 250,
+      "Health_0": 100,
+      "Living_1": 300,
+      "Living_3": 200,
+      "Miscellaneous_0": 400,
+      "Miscellaneous_1": 100,
+      "Miscellaneous_4": 150,
+      "Living_2": 150,
+      "Living_4": 200,
+      "Savings_0": 400,
+      "Savings_1": 600
+    },
+    "metrics": {
+      "Monthly take-home income": 5000.0,
+      "Monthly spending and saving": 5000.0,
+      "Monthly surplus / deficit": 0.0
+    }
+  },
+  {
+    "calculatorId": "budget",
+    "mode": "budget",
+    "values": {
+      "tax": 0,
+      "Income_0": 5000,
+      "Housing_0": 2200,
+      "Housing_3": 200,
+      "Transportation_0": 250,
+      "Transportation_1": 100,
+      "Transportation_2": 100,
+      "Living_0": 250,
+      "Health_0": 100,
+      "Living_1": 200,
+      "Living_3": 100,
+      "Miscellaneous_0": 200,
+      "Miscellaneous_1": 50,
+      "Miscellaneous_4": 100,
+      "Living_2": 100,
+      "Living_4": 50,
+      "Savings_0": 400,
+      "Savings_1": 600
+    },
+    "metrics": {
+      "Monthly take-home income": 5000.0,
+      "Monthly spending and saving": 5000.0,
+      "Monthly surplus / deficit": 0.0
+    }
+  }
+]
