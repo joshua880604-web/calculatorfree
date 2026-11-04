@@ -1,4 +1,6 @@
 const latestGuidePaths=["/guides/how-are-heloc-payments-calculated/", "/guides/how-to-calculate-home-equity-loan-payments/", "/guides/how-to-calculate-personal-loan-payments/", "/guides/how-to-compare-debt-consolidation-loans/", "/guides/roth-conversion-ladder/", "/guides/roth-conversion-taxes/", "/guides/gross-margin-vs-net-margin/", "/guides/heloc-vs-home-equity-loan/", "/guides/balance-transfer-vs-personal-loan/", "/home-equity-loan-calculator.html", "/heloc-calculator.html", "/ira-calculator.html", "/single-credit-card-payoff-calculator.html", "/debt-consolidation-calculator.html", "/margin-calculator.html", "/personal-loan-calculator.html", "/markup-calculator.html", "/break-even-calculator.html", "/roth-conversion-ladder-calculator.html", "/guides/", "/retirement-calculators.html", "/business-calculators.html", "/real-estate-calculator.html", "/loan-calculators.html"];
+latestGuidePaths.push('/fha-loan-calculator.html','/mortgage-calculator.html','/irr-calculator.html','/present-value-calculator.html','/glossary/internal-rate-of-return/','/glossary/net-present-value/','/glossary/lease-residual-value/','/glossary/money-factor/');
+latestGuidePaths.push('/guides/fha-vs-conventional-loan/','/guides/irr-vs-npv/','/guides/how-to-calculate-fha-loan-payments/','/guides/how-to-calculate-irr/','/guides/how-to-calculate-present-value/','/glossary/');
 latestGuidePaths.push("/auto-loan-calculator.html","/retirement-calculator.html","/401k-calculator.html","/emergency-fund-calculator.html","/budget-calculator.html");
 latestGuidePaths.push("/guides/leasing-vs-buying-a-car/","/guides/roth-vs-traditional-401k/","/guides/lump-sum-vs-dollar-cost-averaging/","/guides/50-30-20-rule/","/guides/how-to-calculate-auto-loan-payments/","/guides/how-to-calculate-auto-lease-payments/","/guides/how-401k-matching-works/","/guides/compound-interest-with-monthly-contributions/","/guides/how-to-calculate-monthly-budget/","/guides/401k-vs-roth-ira/","/investment-calculator.html","/compound-interest-calculator.html","/savings-investment-calculators.html");
 latestGuidePaths.push("/auto-lease-calculator.html");
@@ -50,7 +52,7 @@ test("Production sitemap lists canonical pages and only reviewed content dates",
     SITE_INDEXABLE: "true",
   });
   const entries = sitemapEntries(config);
-  assert.equal(entries.length, 329);
+  assert.equal(entries.length, 332);
   for(const path of depthReviewPaths)assert.equal(contentUpdatedOn[path],latestGuidePaths.includes(path)?'2026-11-04':contentGuidePaths.includes(path)?'2026-11-03':'2026-11-02');
   assert.ok(entries.some(e=>new URL(e.url).pathname==='/disclaimer.html'));
   assert.equal(contentUpdatedOn['/fat-fire-calculator.html'],'2026-10-29');
@@ -71,7 +73,7 @@ test("Production sitemap lists canonical pages and only reviewed content dates",
   );
   assert.equal(sitemapEntries(siteConfig({})).length, 0);
   assert.equal(entries.filter(e=>e.lastModified).length,Object.keys(contentUpdatedOn).length);
-  assert.equal(contentUpdatedOn['/mortgage-calculator.html'],'2026-11-03');
+  assert.equal(contentUpdatedOn['/mortgage-calculator.html'],'2026-11-04');
   assert.equal(contentUpdatedOn['/guides/'],'2026-11-04');
   for(const path of ['/seller-financing-calculator.html','/fix-and-flip-calculator.html','/pmi-calculator.html','/house-affordability-calculator.html','/glossary/interest-only-and-balloon-loans/','/glossary/private-mortgage-insurance/','/glossary/debt-to-income-ratio/','/glossary/down-payment/'])assert.equal(contentUpdatedOn[path],latestGuidePaths.includes(path)?'2026-11-04':contentGuidePaths.includes(path)?'2026-11-03':followupReviewPaths.includes(path)?'2026-11-02':'2026-11-01');
   for(const path of ['/stock-profit-calculator.html','/stock-average-calculator.html','/irr-calculator.html','/mirr-calculator.html','/glossary/return-on-investment/','/glossary/internal-rate-of-return/','/glossary/modified-internal-rate-of-return/'])assert.equal(contentUpdatedOn[path],latestGuidePaths.includes(path)?'2026-11-04':contentGuidePaths.includes(path)?'2026-11-03':followupReviewPaths.includes(path)?'2026-11-02':'2026-11-01');
@@ -189,7 +191,7 @@ test("Production SEO follows the confirmed www extensionless destination while o
   assert.equal(absoluteURL("/cd-calculator.html",config),"https://www.calculatorfree.io/cd-calculator");
   assert.equal(absoluteURL("/glossary/",config),"https://www.calculatorfree.io/glossary/");
   const entries=sitemapEntries(config);
-  assert.equal(entries.length,329);
+  assert.equal(entries.length,332);
   assert.equal(new Set(entries.map(e=>e.url)).size,entries.length);
   assert.ok(entries.every(e=>e.url.startsWith("https://www.calculatorfree.io/")&&!e.url.endsWith(".html")&&!e.url.includes("?")));
   for (const calc of calculators.filter(c=>!c.directory)) {

@@ -38,7 +38,7 @@ test('DCA illustration uses share-weighted cost and shows the ending loss',()=>{
 test('Glossary structured data and sitemap describe real visible pages without invented authority',()=>{
  const config={origin:'https://www.calculatorfree.io',indexable:true};
  const entries=sitemapEntries(config),hub=glossarySchema(undefined,config);
- assert.equal(glossaryTerms.length,88);assert.equal(new Set(glossaryTerms.map(term=>term.slug)).size,glossaryTerms.length);
+ assert.equal(glossaryTerms.length,89);assert.equal(new Set(glossaryTerms.map(term=>term.slug)).size,glossaryTerms.length);
  assert.equal(hub['@graph'][0]['@type'],'DefinedTermSet');
  for(const term of glossaryTerms){
   assert.ok(entries.some(entry=>entry.url===config.origin+glossaryTermPath(term.slug)));

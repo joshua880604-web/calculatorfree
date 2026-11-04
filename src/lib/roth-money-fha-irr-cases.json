@@ -1,0 +1,350 @@
+[
+  {
+    "calculatorId": "401k",
+    "mode": "roth-vs-traditional",
+    "values": {
+      "basis": "Same take-home budget",
+      "amount": 7800,
+      "years": 30,
+      "rate": 6,
+      "current_tax": 22,
+      "retirement_tax": 12,
+      "allowance": 24500
+    },
+    "metrics": {
+      "Traditional after-tax value": 695712.0386939433,
+      "Roth qualified after-tax value": 616653.8524787225,
+      "After-tax difference (Roth minus traditional)": -79058.18621522083,
+      "Annual traditional contribution": 10000.0,
+      "Annual Roth contribution": 7800.0,
+      "Annual traditional take-home cost": 7800.0,
+      "Annual Roth take-home cost": 7800.0,
+      "Traditional account before withdrawal tax": 790581.8621522083
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "roth-vs-traditional",
+    "values": {
+      "basis": "Same take-home budget",
+      "amount": 7800,
+      "years": 30,
+      "rate": 6,
+      "current_tax": 22,
+      "retirement_tax": 22,
+      "allowance": 24500
+    },
+    "metrics": {
+      "Traditional after-tax value": 616653.8524787225,
+      "Roth qualified after-tax value": 616653.8524787225,
+      "After-tax difference (Roth minus traditional)": 0.0,
+      "Annual traditional contribution": 10000.0,
+      "Annual Roth contribution": 7800.0,
+      "Annual traditional take-home cost": 7800.0,
+      "Annual Roth take-home cost": 7800.0,
+      "Traditional account before withdrawal tax": 790581.8621522083
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "roth-vs-traditional",
+    "values": {
+      "basis": "Same take-home budget",
+      "amount": 7800,
+      "years": 30,
+      "rate": 6,
+      "current_tax": 22,
+      "retirement_tax": 32,
+      "allowance": 24500
+    },
+    "metrics": {
+      "Traditional after-tax value": 537595.6662635016,
+      "Roth qualified after-tax value": 616653.8524787225,
+      "After-tax difference (Roth minus traditional)": 79058.18621522083,
+      "Annual traditional contribution": 10000.0,
+      "Annual Roth contribution": 7800.0,
+      "Annual traditional take-home cost": 7800.0,
+      "Annual Roth take-home cost": 7800.0,
+      "Traditional account before withdrawal tax": 790581.8621522083
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "roth-vs-traditional",
+    "values": {
+      "basis": "Same employee contribution",
+      "amount": 10000,
+      "years": 30,
+      "rate": 6,
+      "current_tax": 22,
+      "retirement_tax": 22,
+      "allowance": 24500
+    },
+    "metrics": {
+      "Traditional after-tax value": 616653.8524787225,
+      "Roth qualified after-tax value": 790581.8621522083,
+      "After-tax difference (Roth minus traditional)": 173928.00967348582,
+      "Annual traditional contribution": 10000.0,
+      "Annual Roth contribution": 10000.0,
+      "Annual traditional take-home cost": 7800.0,
+      "Annual Roth take-home cost": 10000.0,
+      "Traditional account before withdrawal tax": 790581.8621522083
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "roth-vs-traditional",
+    "values": {
+      "basis": "Same take-home budget",
+      "amount": 7800,
+      "years": 5,
+      "rate": 0,
+      "current_tax": 22,
+      "retirement_tax": 22,
+      "allowance": 24500
+    },
+    "metrics": {
+      "Traditional after-tax value": 39000.0,
+      "Roth qualified after-tax value": 39000.0,
+      "After-tax difference (Roth minus traditional)": 0.0,
+      "Annual traditional contribution": 10000.0,
+      "Annual Roth contribution": 7800.0,
+      "Annual traditional take-home cost": 7800.0,
+      "Annual Roth take-home cost": 7800.0,
+      "Traditional account before withdrawal tax": 50000.0
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "roth-vs-traditional",
+    "values": {
+      "basis": "Same take-home budget",
+      "amount": 7800,
+      "years": 5,
+      "rate": -10,
+      "current_tax": 22,
+      "retirement_tax": 22,
+      "allowance": 24500
+    },
+    "metrics": {
+      "Traditional after-tax value": 31941.78,
+      "Roth qualified after-tax value": 31941.78,
+      "After-tax difference (Roth minus traditional)": 0.0,
+      "Annual traditional contribution": 10000.0,
+      "Annual Roth contribution": 7800.0,
+      "Annual traditional take-home cost": 7800.0,
+      "Annual Roth take-home cost": 7800.0,
+      "Traditional account before withdrawal tax": 40951.0
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "roth-vs-traditional",
+    "values": {
+      "basis": "Same take-home budget",
+      "amount": 0,
+      "years": 30,
+      "rate": 6,
+      "current_tax": 22,
+      "retirement_tax": 22,
+      "allowance": 0
+    },
+    "metrics": {
+      "Traditional after-tax value": 0.0,
+      "Roth qualified after-tax value": 0.0,
+      "After-tax difference (Roth minus traditional)": 0.0,
+      "Annual traditional contribution": 0.0,
+      "Annual Roth contribution": 0.0,
+      "Annual traditional take-home cost": 0.0,
+      "Annual Roth take-home cost": 0.0,
+      "Traditional account before withdrawal tax": 0.0
+    }
+  },
+  {
+    "calculatorId": "401k",
+    "mode": "roth-vs-traditional",
+    "values": {
+      "basis": "Same take-home budget",
+      "amount": 24500,
+      "years": 1,
+      "rate": 6,
+      "current_tax": 0,
+      "retirement_tax": 0,
+      "allowance": 24500
+    },
+    "metrics": {
+      "Traditional after-tax value": 24500.0,
+      "Roth qualified after-tax value": 24500.0,
+      "After-tax difference (Roth minus traditional)": 0.0,
+      "Annual traditional contribution": 24500.0,
+      "Annual Roth contribution": 24500.0,
+      "Annual traditional take-home cost": 24500.0,
+      "Annual Roth take-home cost": 24500.0,
+      "Traditional account before withdrawal tax": 24500.0
+    }
+  },
+  {
+    "calculatorId": "auto-lease",
+    "mode": "payment",
+    "values": {
+      "price": 35000,
+      "residual": 21000,
+      "down": 3000,
+      "trade": 0,
+      "fees": 0,
+      "months": 36,
+      "rate": ".0025",
+      "rate_unit": "Money factor",
+      "tax": 0
+    },
+    "metrics": {
+      "Monthly lease payment": 438.05555555555554,
+      "Total lease cash outlay": 18770.0
+    }
+  },
+  {
+    "calculatorId": "auto-lease",
+    "mode": "payment",
+    "values": {
+      "price": 35000,
+      "residual": 21000,
+      "down": 3000,
+      "trade": 0,
+      "fees": 0,
+      "months": 36,
+      "rate": ".002",
+      "rate_unit": "Money factor",
+      "tax": 0
+    },
+    "metrics": {
+      "Monthly lease payment": 411.55555555555554,
+      "Total lease cash outlay": 17816.0
+    }
+  },
+  {
+    "calculatorId": "fha-loan",
+    "mode": "monthly",
+    "values": {
+      "price": 350000,
+      "down": 3.5,
+      "down_unit": "Percent",
+      "years": 30,
+      "months": 0,
+      "start": "2026-11-01",
+      "tax": 0,
+      "insurance": 0,
+      "hoa": 0,
+      "other": 0,
+      "extra_monthly": 0,
+      "extra_yearly": 0,
+      "extra_once": 0,
+      "dated": "",
+      "appraised_value": "",
+      "rate": 6,
+      "mip_method": "Manual",
+      "upfront": 1.75,
+      "annual_mip": 0.55,
+      "mip_years": 30
+    },
+    "metrics": {
+      "Monthly principal & interest": 2060.4191119082575,
+      "Initial monthly total": 2214.3591119082575,
+      "Financed loan amount": 343660.63,
+      "Upfront fee": 5910.63,
+      "Initial monthly FHA MIP": 153.94
+    },
+    "schedule_checks": [
+      {
+        "row": 59,
+        "column": 5,
+        "value": 319791.18889974966
+      }
+    ]
+  },
+  {
+    "calculatorId": "mortgage",
+    "mode": "monthly",
+    "values": {
+      "price": 350000,
+      "down": 3.5,
+      "down_unit": "Percent",
+      "years": 30,
+      "months": 0,
+      "start": "2026-11-01",
+      "tax": 0,
+      "insurance": 0,
+      "hoa": 0,
+      "other": 0,
+      "extra_monthly": 0,
+      "extra_yearly": 0,
+      "extra_once": 0,
+      "dated": "",
+      "appraised_value": "",
+      "rate": 6.5,
+      "loan_basis": "Home price & down payment",
+      "pmi_method": "Manual",
+      "pmi": 0.6,
+      "pmi_unit": "Percent of loan",
+      "pmi_policy": "Cancel at 80% original LTV",
+      "pmi_years": 30
+    },
+    "metrics": {
+      "Monthly principal & interest": 2134.809749347485,
+      "Initial monthly total": 2303.684749347485,
+      "Initial monthly PMI": 168.875
+    },
+    "schedule_checks": [
+      {
+        "row": 59,
+        "column": 5,
+        "value": 316171.0763088825
+      }
+    ]
+  },
+  {
+    "calculatorId": "irr",
+    "mode": "irregular",
+    "values": {
+      "initial": 1000,
+      "flows": "1500"
+    },
+    "metrics": {
+      "Annual IRR 1": 50.0
+    }
+  },
+  {
+    "calculatorId": "present-value",
+    "mode": "lump",
+    "values": {
+      "future": 1500,
+      "periods": 1,
+      "rate": 10
+    },
+    "metrics": {
+      "Present value": 1363.6363636363637
+    }
+  },
+  {
+    "calculatorId": "irr",
+    "mode": "irregular",
+    "values": {
+      "initial": 10000,
+      "flows": "13000"
+    },
+    "metrics": {
+      "Annual IRR 1": 30.0
+    }
+  },
+  {
+    "calculatorId": "present-value",
+    "mode": "lump",
+    "values": {
+      "future": 13000,
+      "periods": 1,
+      "rate": 10
+    },
+    "metrics": {
+      "Present value": 11818.181818181818
+    }
+  }
+]

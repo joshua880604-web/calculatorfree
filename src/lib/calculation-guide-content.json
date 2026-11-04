@@ -13,7 +13,7 @@
       "breadcrumb": "Calculate a monthly mortgage payment",
       "cardIntro": "Separate loan repayment from tax, insurance and HOA costs, with three checked scenarios and a spreadsheet formula.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-03"
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/mortgage-calculator",
     "calculatorLabel": "Mortgage Calculator",
@@ -157,6 +157,10 @@
       {
         "href": "/glossary/principal-and-interest/",
         "label": "Principal and interest"
+      },
+      {
+        "href": "/guides/fha-vs-conventional-loan/",
+        "label": "Compare FHA and conventional financing"
       }
     ]
   },
@@ -2433,7 +2437,8 @@
       "topic": "Savings & investing",
       "breadcrumb": "How to Calculate IRR: Cash-Flow Timing, Excel and Multiple Roots",
       "cardIntro": "Calculate IRR from signed cash flows and correct timing. Includes six checked examples, Excel formulas, zero periods, negative returns and a two-IRR case.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/irr-calculator",
     "calculatorLabel": "IRR Calculator",
@@ -2561,6 +2566,10 @@
       {
         "href": "/guides/annualized-return-vs-total-return/",
         "label": "Annualized versus total return"
+      },
+      {
+        "href": "/guides/irr-vs-npv/",
+        "label": "Why IRR and NPV can rank projects differently"
       }
     ]
   },
@@ -5322,6 +5331,10 @@
       {
         "href": "/guides/leasing-vs-buying-a-car/",
         "label": "Leasing vs Buying a Car"
+      },
+      {
+        "href": "/glossary/money-factor/",
+        "label": "Money factor conversion and lease rent charges"
       }
     ]
   },
@@ -5480,7 +5493,8 @@
       "topic": "Mortgage & housing",
       "breadcrumb": "How to Calculate FHA Loan Payments and Mortgage Insurance",
       "cardIntro": "Calculate FHA payments with financed upfront MIP, monthly premiums and entered property costs. Four reproducible cases compare down payment and term using documented premium assumptions.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/fha-loan-calculator",
     "calculatorLabel": "FHA Loan Calculator",
@@ -5610,6 +5624,10 @@
       {
         "href": "/glossary/down-payment/",
         "label": "Down payment glossary"
+      },
+      {
+        "href": "/guides/fha-vs-conventional-loan/",
+        "label": "Compare FHA with a conventional loan over the same five years"
       }
     ]
   },
@@ -6530,7 +6548,8 @@
       "topic": "Savings & investing",
       "breadcrumb": "How to Calculate Present Value of a Lump Sum and Payments",
       "cardIntro": "Discount a future amount and equal payments to present value. Six checked cases separate terminal cash, payment timing, discount assumptions and zero-rate arithmetic.",
-      "format": "Calculation guide & model check"
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-04"
     },
     "calculatorPath": "/present-value-calculator",
     "calculatorLabel": "Present Value Calculator",
@@ -6669,6 +6688,10 @@
       {
         "href": "/glossary/net-present-value/",
         "label": "Net present value"
+      },
+      {
+        "href": "/guides/irr-vs-npv/",
+        "label": "Compare dollar NPV with percentage IRR"
       }
     ]
   }

@@ -1522,6 +1522,31 @@
       "role": "context",
       "usedFor": "Basic employer-plan account choices and tax timing.",
       "scope": "An educational overview, not a contribution-limit table or a complete tax calculation."
+    },
+    "https://www.consumerfinance.gov/owning-a-home/fha-loans/": {
+      "role": "rule",
+      "usedFor": "Government insurance, low-down-payment access and comparing lender quotes.",
+      "scope": "No approval decision, credit-score pricing or local loan-limit determination."
+    },
+    "https://www.financialprofessionals.org/training-resources/resources/articles/Details/net-present-value-vs.-internal-rate-of-return": {
+      "role": "context",
+      "usedFor": "The distinct roles of dollar-value and percentage-return measures in investment appraisal.",
+      "scope": "Our project amounts and cash-flow examples are original hypothetical cases, not AFP forecasts or recommendations."
+    },
+    "https://support.microsoft.com/en-us/excel/functions/npv-function": {
+      "role": "rule",
+      "usedFor": "End-of-period periodic cash flows and the separate treatment of a time-zero investment.",
+      "scope": "Spreadsheet syntax is not an economic forecast or a prescribed discount rate."
+    },
+    "https://www.chase.com/personal/auto/education/leasing/what-is-the-lease-money-factor": {
+      "role": "context",
+      "usedFor": "Decimal factor, rent-charge context and why actual quotes vary.",
+      "scope": "The worked amounts and factor comparison are our own assumptions, not Chase lease offers."
+    },
+    "https://corporatefinanceinstitute.com/resources/commercial-lending/money-factor/": {
+      "role": "context",
+      "usedFor": "The customary 2,400 money-factor conversion and simplified lease financing formula.",
+      "scope": "A comparison convention, not an itemized fee-inclusive effective APR calculation."
     }
   },
   "pages": {
@@ -1553,7 +1578,57 @@
       "note": "Separate account rules and contribution limits from editable planning assumptions. Returns, inflation and example results are not forecasts supplied or endorsed by the cited organizations."
     },
     "calculator:401k": {
-      "note": "Separate account rules and contribution limits from editable planning assumptions. Returns, inflation and example results are not forecasts supplied or endorsed by the cited organizations."
+      "note": "Projection, employer-match and Roth comparison modes answer different questions. Roth vs Traditional mode starts from zero prospective employee contributions, assumes qualified Roth withdrawal and flat tax rates, and excludes employer money, existing balances and outside-account investment. The editable annual allowance is not an eligibility determination.",
+      "updatedOn": "2026-11-04",
+      "extras": [
+        {
+          "title": "Investor.gov: traditional and Roth 401(k) plans",
+          "url": "https://www.investor.gov/additional-resources/retirement-toolkit/employer-sponsored-plans/traditional-and-roth-401k-plans"
+        },
+        {
+          "title": "IRS: designated Roth account FAQs",
+          "url": "https://www.irs.gov/retirement-plans/retirement-plans-faqs-on-designated-roth-accounts"
+        },
+        {
+          "title": "IRS: 2026 contribution-limit announcement",
+          "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500"
+        },
+        {
+          "title": "IRS: optional Roth employer contributions under SECURE 2.0",
+          "url": "https://www.irs.gov/newsroom/secure-2-point-0-act-changes-affect-how-businesses-complete-forms-w-2"
+        },
+        {
+          "title": "IRS: required minimum distribution FAQs",
+          "url": "https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs"
+        }
+      ],
+      "overrides": {
+        "https://www.investor.gov/additional-resources/retirement-toolkit/employer-sponsored-plans/traditional-and-roth-401k-plans": {
+          "role": "rule",
+          "usedFor": "Basic employer-plan account choices and tax timing.",
+          "scope": "An educational overview, not a contribution-limit table or a complete tax calculation."
+        },
+        "https://www.irs.gov/retirement-plans/retirement-plans-faqs-on-designated-roth-accounts": {
+          "role": "rule",
+          "usedFor": "Employee elections, shared deferral structure, income restrictions and qualified-distribution conditions.",
+          "scope": "Some FAQ limit and employer-match passages retain historical wording. Current-year limits and SECURE 2.0 employer features use the separate sources below."
+        },
+        "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500": {
+          "role": "rule",
+          "usedFor": "The 2026 basic employee limit and distinction from catch-up amounts.",
+          "scope": "The projected 30-year example is not a forecast of future limits or future tax rates."
+        },
+        "https://www.irs.gov/newsroom/secure-2-point-0-act-changes-affect-how-businesses-complete-forms-w-2": {
+          "role": "rule",
+          "usedFor": "Why employer contributions require plan-specific treatment.",
+          "scope": "No specific employer plan, vesting determination or tax-reporting calculation is modeled."
+        },
+        "https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs": {
+          "role": "rule",
+          "usedFor": "The current owner-lifetime designated Roth exception and separate beneficiary rules.",
+          "scope": "This guide does not calculate an RMD or inherited-account distribution."
+        }
+      }
     },
     "calculator:roth-ira": {
       "note": "Separate account rules and contribution limits from editable planning assumptions. Returns, inflation and example results are not forecasts supplied or endorsed by the cited organizations.",
@@ -3034,9 +3109,14 @@
       }
     },
     "guide:/guides/roth-vs-traditional-401k/": {
-      "note": "Original hypothetical examples use independently checked arithmetic. Source rules and historical studies are limited to the scope below; calculator links reproduce only the stated portion of each example. No professional review, market forecast or complete tax-return calculation is claimed.",
+      "note": "Original hypothetical examples use independently checked arithmetic. Calculator links reproduce the stated part of each case; source references explain the concepts and rules, not the invented rates or cash-flow forecasts. No complete tax return, lender approval or professional review is claimed.",
       "updatedOn": "2026-11-04",
       "overrides": {
+        "https://www.investor.gov/additional-resources/retirement-toolkit/employer-sponsored-plans/traditional-and-roth-401k-plans": {
+          "role": "rule",
+          "usedFor": "Basic employer-plan account choices and tax timing.",
+          "scope": "An educational overview, not a contribution-limit table or a complete tax calculation."
+        },
         "https://www.irs.gov/retirement-plans/retirement-plans-faqs-on-designated-roth-accounts": {
           "role": "rule",
           "usedFor": "Employee elections, shared deferral structure, income restrictions and qualified-distribution conditions.",
@@ -3056,11 +3136,6 @@
           "role": "rule",
           "usedFor": "The current owner-lifetime designated Roth exception and separate beneficiary rules.",
           "scope": "This guide does not calculate an RMD or inherited-account distribution."
-        },
-        "https://www.investor.gov/additional-resources/retirement-toolkit/employer-sponsored-plans/traditional-and-roth-401k-plans": {
-          "role": "context",
-          "usedFor": "Basic employer-plan account choices and tax timing.",
-          "scope": "An educational overview, not a contribution-limit table or a complete tax calculation."
         }
       }
     },
@@ -3098,6 +3173,69 @@
           "role": "context",
           "usedFor": "An alternative presentation of the three-bucket framework and flexible percentages.",
           "scope": "MIT uses fixed expenses and flexible spending categories; those are not asserted to match every need/want definition."
+        }
+      }
+    },
+    "guide:/guides/fha-vs-conventional-loan/": {
+      "note": "Original hypothetical examples use independently checked arithmetic. Calculator links reproduce the stated part of each case; source references explain the concepts and rules, not the invented rates or cash-flow forecasts. No complete tax return, lender approval or professional review is claimed.",
+      "updatedOn": "2026-11-04",
+      "overrides": {
+        "https://www.consumerfinance.gov/owning-a-home/fha-loans/": {
+          "role": "rule",
+          "usedFor": "Government insurance, low-down-payment access and comparing lender quotes.",
+          "scope": "No approval decision, credit-score pricing or local loan-limit determination."
+        },
+        "https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf": {
+          "role": "rule",
+          "usedFor": "Ordinary upfront premium and annual premium rate and duration structure.",
+          "scope": "The example is a 30-year, 96.5% base-LTV loan. Special programs and historical cases can differ; the letter is not a current county loan-limit table."
+        },
+        "https://www.consumerfinance.gov/ask-cfpb/when-can-i-remove-private-mortgage-insurance-pmi-from-my-loan-en-202/": {
+          "role": "rule",
+          "usedFor": "Borrower-requested 80% original-value cancellation and general scheduled 78% automatic termination, subject to conditions.",
+          "scope": "Conventional borrower-paid PMI rules are distinct from FHA MIP. The tool’s 80% option assumes a request is approved; it does not determine all statutory termination rules."
+        },
+        "https://www.consumerfinance.gov/owning-a-home/loan-estimate/": {
+          "role": "rule",
+          "usedFor": "Using the lender’s itemized Loan Estimate to compare actual financing terms.",
+          "scope": "The rates, PMI quote and exclusions in our scenario are invented planning inputs, not lender offers."
+        }
+      }
+    },
+    "guide:/guides/irr-vs-npv/": {
+      "note": "Original hypothetical examples use independently checked arithmetic. Calculator links reproduce the stated part of each case; source references explain the concepts and rules, not the invented rates or cash-flow forecasts. No complete tax return, lender approval or professional review is claimed.",
+      "updatedOn": "2026-11-04",
+      "overrides": {
+        "https://www.financialprofessionals.org/training-resources/resources/articles/Details/net-present-value-vs.-internal-rate-of-return": {
+          "role": "context",
+          "usedFor": "The distinct roles of dollar-value and percentage-return measures in investment appraisal.",
+          "scope": "Our project amounts and cash-flow examples are original hypothetical cases, not AFP forecasts or recommendations."
+        },
+        "https://support.microsoft.com/en-us/excel/functions/npv-function": {
+          "role": "rule",
+          "usedFor": "End-of-period periodic cash flows and the separate treatment of a time-zero investment.",
+          "scope": "Spreadsheet syntax is not an economic forecast or a prescribed discount rate."
+        },
+        "https://support.microsoft.com/en-us/excel/functions/irr-function": {
+          "role": "rule",
+          "usedFor": "Regular-interval cash flows, signs, ordering and iterative root finding.",
+          "scope": "Unequal amounts still require equal time intervals. A computed root does not establish uniqueness or a realized reinvestment return."
+        }
+      }
+    },
+    "glossary:money-factor": {
+      "note": "Definition, conversion and original lease arithmetic checked November 4, 2026. No current lease pricing or lessor approval is supplied.",
+      "updatedOn": "2026-11-04",
+      "overrides": {
+        "https://www.chase.com/personal/auto/education/leasing/what-is-the-lease-money-factor": {
+          "role": "context",
+          "usedFor": "Decimal factor, rent-charge context and why actual quotes vary.",
+          "scope": "The worked amounts and factor comparison are our own assumptions, not Chase lease offers."
+        },
+        "https://corporatefinanceinstitute.com/resources/commercial-lending/money-factor/": {
+          "role": "context",
+          "usedFor": "The customary 2,400 money-factor conversion and simplified lease financing formula.",
+          "scope": "A comparison convention, not an itemized fee-inclusive effective APR calculation."
         }
       }
     }

@@ -1,4 +1,5 @@
 import type { Values } from "./types";
+import {roth401kComparisonScope} from './roth-401k-scope';
 
 // Scope labels describe implemented rules, not a promise of worldwide tax support.
 export function calculatorScope(id: string, mode: string, values: Values): string | undefined {
@@ -48,6 +49,7 @@ export function calculatorScope(id: string, mode: string, values: Values): strin
     case "va-mortgage":
       return "U.S. ordinary VA purchase-loan planning using the fee table effective April 7, 2023. Prior manufactured-home-only use keeps first-use rates; entitlement and exemption eligibility are entered assumptions. Other VA loan types require different fee rules.";
     case "401k":
+      if (mode === 'roth-vs-traditional') return roth401kComparisonScope;
       if (mode === "early") return "U.S. 401(k) early-withdrawal estimate using your entered tax rates and selected exceptions to the modeled 10% additional tax. This is not a complete income-tax return.";
       return "U.S. 401(k) planning using fixed 2026 contribution and age-based catch-up rules. Limits combine traditional and Roth deferrals; applicable high-earner catch-up must be Roth. This projection does not split those tax treatments or project future legal limit changes.";
     case "ira":

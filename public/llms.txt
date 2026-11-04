@@ -401,3 +401,8 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 - [Roth vs. Traditional 401(k): Compare Taxes and Equal Budgets](https://www.calculatorfree.io/guides/roth-vs-traditional-401k/): Compare Roth and traditional 401(k) contributions using equal take-home budgets, tax-rate scenarios, employer-match limits and reproducible growth examples.
 - [Lump Sum vs. Dollar-Cost Averaging: Compare Timing, Cash, and Risk](https://www.calculatorfree.io/guides/lump-sum-vs-dollar-cost-averaging/): Compare investing the same available cash immediately or in installments. Worked market-path examples separate idle-cash interest, timing and historical research.
 - [The 50/30/20 Rule: Income, Categories, and Practical Budget Examples](https://www.calculatorfree.io/guides/50-30-20-rule/): Apply the 50/30/20 budget rule to a stated income base. Worked examples classify needs, wants, saving and debt, then adjust for high essential costs.
+
+## Additional comparison and lease references
+- [FHA versus conventional loan](https://www.calculatorfree.io/guides/fha-vs-conventional-loan/): Compare matched purchase assumptions, insurance and five-year financing costs.
+- [IRR versus NPV](https://www.calculatorfree.io/guides/irr-vs-npv/): Original scale, discount-rate and multiple-root examples.
+- [Money factor](https://www.calculatorfree.io/glossary/money-factor/): Lease rent charges and approximate annual-rate conversions.

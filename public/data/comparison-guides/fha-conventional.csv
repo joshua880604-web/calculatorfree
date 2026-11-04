@@ -1,0 +1,27 @@
+Guide,FHA vs. Conventional Loan: Compare the Same Home and Time Horizon
+Scope,"All interest rates and the conventional PMI quote are hypothetical. No live offers, approval, credit-score pricing or local loan limits are determined.","The 60-month comparison excludes points, other closing costs, property expenses, taxes on deductions, sale costs and time-value discounting.",FHA MIP follows the stated ordinary premium assumptions and scheduled-balance method. Conventional 80% cancellation assumes an approved request; statutory 78% termination is not automatically determined by the tool.
+
+Questions to ask before comparing payments
+Question,FHA quote,Conventional quote
+Eligibility and property,"Confirm program, appraisal and local limits","Confirm program, underwriting and local limits"
+Interest and points,"Obtain rate, points and lender fees","Obtain rate, points and lender fees"
+Mortgage insurance,"Identify upfront premium, annual MIP and duration",Identify actual PMI premium and cancellation terms
+Cash needed,"Separate down payment, fees and prepaids","Separate down payment, fees and prepaids"
+
+Original purchase example; financing components only
+Input / initial result,FHA illustration,Conventional illustration
+Cash down payment,"$12,250.00","$12,250.00"
+Base loan,"$337,750.00","$337,750.00"
+Financed upfront premium,"$5,910.63",$0.00 in this example
+Starting principal,"$343,660.63","$337,750.00"
+Note rate,6.00% assumed,6.50% assumed
+Monthly principal and interest,"$2,060.42","$2,134.81"
+First monthly mortgage insurance,$153.94,$168.88
+Initial P&I plus mortgage insurance,"$2,214.36","$2,303.68"
+
+After 60 payments; no sale proceeds or appreciation assumed
+Five-year measure,FHA illustration,Conventional illustration
+P&I plus monthly insurance paid,"$132,612.19","$138,221.08"
+Monthly mortgage insurance within that total,"$8,987.04","$10,132.50"
+Remaining principal,"$319,791.19","$316,171.08"
+"Modeled borrowing cost, including upfront premium","$114,653.38","$116,642.16"

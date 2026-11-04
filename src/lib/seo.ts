@@ -302,3 +302,7 @@ for(const path of ['/guides/','/loan-calculators.html','/retirement-calculators.
 
 // Preserve current review dates on the six guides receiving reciprocal reading links.
 for(const path of ["/guides/how-to-calculate-auto-loan-payments/", "/guides/how-to-calculate-auto-lease-payments/", "/guides/how-401k-matching-works/", "/guides/compound-interest-with-monthly-contributions/", "/guides/how-to-calculate-monthly-budget/", "/guides/401k-vs-roth-ira/"])contentUpdatedOn[path]='2026-11-04';
+
+// Roth comparison mode, matched-loan guide, IRR/NPV guide and lease definition.
+for(const id of ["401k","fha-loan","mortgage","irr","present-value","auto-lease"])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]="2026-11-04";
+for(const path of ["/guides/", "/glossary/", "/loan-calculators.html", "/real-estate-calculator.html", "/savings-investment-calculators.html", "/guides/fha-vs-conventional-loan/", "/guides/irr-vs-npv/", "/glossary/money-factor/", "/glossary/lease-residual-value/", "/glossary/net-present-value/", "/glossary/internal-rate-of-return/", "/guides/how-to-calculate-fha-loan-payments/", "/guides/how-to-calculate-monthly-mortgage-payment/", "/guides/how-to-calculate-irr/", "/guides/how-to-calculate-present-value/", "/guides/how-to-calculate-auto-lease-payments/"])contentUpdatedOn[path]="2026-11-04";

@@ -24,7 +24,7 @@ function metricText(metric: Metric) {
 function renderResult(result: Result) {
   output.replaceChildren();
   const heading=document.createElement('h2');heading.textContent='Result · CalculatorFree.io';output.append(heading);
-  const context=embedContext(config.id,Object.fromEntries(new FormData(form)) as Values);if(context){const scope=document.createElement('p');scope.className='embed-result-context';scope.textContent=context.label;output.append(scope);}
+  const context=embedContext(config.id,Object.fromEntries(new FormData(form)) as Values,active.id);if(context){const scope=document.createElement('p');scope.className='embed-result-context';scope.textContent=context.label;output.append(scope);}
   const list=document.createElement('dl');list.className='metrics';
   for(const metric of result.metrics){const row=document.createElement('div'),term=document.createElement('dt'),value=document.createElement('dd');term.textContent=metric.label;value.textContent=metricText(metric);row.append(term,value);list.append(row);}output.append(list);
   if(result.notes?.length){const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Assumptions and limitations';details.append(summary);for(const note of result.notes){const p=document.createElement('p');p.textContent=note;details.append(p);}output.append(details);}
@@ -112,6 +112,12 @@ function renderFields(){
   syncHousehold();syncStockFees();
 }
 function syncHousehold(){
+  const context=embedContext(config.id,Object.fromEntries(new FormData(form)) as Values,active.id),aside=document.getElementById('embed-context');
+  if(context&&aside){
+    const label=aside.querySelector('strong'),paragraphs=aside.querySelectorAll('p');if(label)label.textContent=context.label;
+    if(paragraphs[0])paragraphs[0].textContent=context.scope;
+    if(paragraphs[1]){const sourceLink=paragraphs[1].querySelector('a');const credit=sourceLink?.cloneNode(true);paragraphs[1].replaceChildren(document.createTextNode(context.disclaimer+' '));if(credit)paragraphs[1].append(credit);}
+  }
   if(config.id==='self-employment-tax'){
     const values=Object.fromEntries(new FormData(form)) as Values;
     for(const wrap of fieldset.querySelectorAll<HTMLElement>('[data-field]'))wrap.hidden=!embedFieldVisible(config.id,values,wrap.dataset.field!);

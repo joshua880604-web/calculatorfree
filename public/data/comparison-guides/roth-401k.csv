@@ -1,5 +1,5 @@
 Guide,Roth vs. Traditional 401(k): Compare Taxes and Equal Budgets
-Scope,"Rates of 22%, 12% and 32% are hypothetical flat-rate assumptions, not a completed tax-return calculation.","Year-end contributions earn the same 6% effective annual return; no fees, inflation, market volatility, employer match or early-withdrawal taxes are modeled.",The calculator presets reproduce growth before withdrawal tax. Qualified Roth treatment and the article’s after-tax adjustments are separate assumptions.
+Scope,"Rates of 22%, 12% and 32% are hypothetical flat-rate assumptions, not a completed tax-return calculation.","Year-end contributions earn the same 6% effective annual return; no fees, inflation, market volatility, employer match or early-withdrawal taxes are modeled.","The comparison mode models prospective employee contributions only, using qualified Roth treatment and flat tax assumptions. It excludes existing balances, employer money, outside-account investing and eligibility determinations."
 
 "Original annual contribution example; no match, fees or market volatility"
 Input / result,Traditional 401(k),Roth 401(k)

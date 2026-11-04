@@ -3235,7 +3235,8 @@
       "topic": "Retirement",
       "breadcrumb": "Roth vs Traditional 401(k)",
       "cardIntro": "Compare Roth and traditional 401(k) contributions using equal take-home budgets, tax-rate scenarios, employer-match limits and reproducible growth examples.",
-      "format": "Comparison & worked examples"
+      "format": "Comparison & worked examples",
+      "updatedOn": "2026-11-04"
     },
     "answer": "Roth and traditional 401(k) contributions mainly change when income tax is paid. Compare the same reduction in spendable pay, not only the same account contribution. The outcome depends on taxes when contributing and withdrawing, plan terms and how any current tax savings are used.",
     "intro": "Both alternatives in this guide are employer-plan 401(k) contributions. This is a different question from choosing a Roth IRA instead of a workplace plan. Our original examples hold returns and timing constant, vary hypothetical tax rates, and keep employer contributions separate. They are illustrations, not a forecast of your future tax bracket.",
@@ -3394,8 +3395,9 @@
         "id": "use",
         "title": "How to use the linked 401(k) calculator",
         "paragraphs": [
-          "The two presets reproduce the $10,000 and $7,800 annual growth streams with zero match and fixed salary. They check the account-growth arithmetic before withdrawal tax. The existing calculator does not split traditional and Roth balances into a complete tax-aware comparison; the after-tax table applies the separate hypothetical rates described here.",
-          "Change the growth inputs to test your own assumptions, and keep both scenarios consistent. Before acting, review the actual plan document, the tax year, whether distributions will qualify and the household cash needed to sustain contributions. A qualified professional can assess interactions that a flat-rate illustration omits."
+          "Open Roth vs Traditional mode in the 401(k) calculator. Choose Same take-home budget for the $7,800 example, or Same employee contribution for the $10,000 example. The result separately labels account balances, assumed after-tax values, annual contributions and take-home costs. The presets below restore the 12%, 22% and 32% withdrawal-tax cases directly.",
+          "Enter the annual allowance that applies to your circumstances. It defaults to the 2026 basic $24,500 employee limit and remains constant throughout the illustration. If an alternative exceeds it, the calculator asks you to change the inputs rather than silently cap one contribution and leave an unmodeled cash surplus. It does not determine catch-up eligibility, compensation limits, other-plan contributions or future legal allowances.",
+          "This mode starts with zero balances and excludes employer contributions. It assumes the eventual Roth withdrawal is qualified, without determining the age and five-tax-year requirements for you. Use the separate projection and matching modes for their stated purposes; do not treat their outputs as a complete combined tax-return or retirement-income model."
         ]
       }
     ],
@@ -3477,46 +3479,66 @@
     ],
     "presets": [
       {
-        "label": "Reproduce only the traditional $10,000 annual growth stream",
+        "label": "Equal $7,800 take-home budget; assumed 12% withdrawal tax",
         "path": "/401k-calculator",
-        "mode": "projection",
+        "mode": "roth-vs-traditional",
         "values": {
-          "age": 35,
-          "retire": 65,
-          "life": 90,
-          "salary": 100000,
-          "balance": 0,
-          "contribution": 10,
-          "match": 0,
-          "match_limit": 0,
-          "salary_growth": 0,
-          "inflation": 0,
-          "return": 6
+          "basis": "Same take-home budget",
+          "amount": 7800,
+          "years": 30,
+          "rate": 6,
+          "current_tax": 22,
+          "retirement_tax": 12,
+          "allowance": 24500
         }
       },
       {
-        "label": "Reproduce only the $7,800 annual growth stream used for Roth",
+        "label": "Equal $7,800 take-home budget; assumed 22% withdrawal tax",
         "path": "/401k-calculator",
-        "mode": "projection",
+        "mode": "roth-vs-traditional",
         "values": {
-          "age": 35,
-          "retire": 65,
-          "life": 90,
-          "salary": 100000,
-          "balance": 0,
-          "contribution": "7.8",
-          "match": 0,
-          "match_limit": 0,
-          "salary_growth": 0,
-          "inflation": 0,
-          "return": 6
+          "basis": "Same take-home budget",
+          "amount": 7800,
+          "years": 30,
+          "rate": 6,
+          "current_tax": 22,
+          "retirement_tax": 22,
+          "allowance": 24500
+        }
+      },
+      {
+        "label": "Equal $7,800 take-home budget; assumed 32% withdrawal tax",
+        "path": "/401k-calculator",
+        "mode": "roth-vs-traditional",
+        "values": {
+          "basis": "Same take-home budget",
+          "amount": 7800,
+          "years": 30,
+          "rate": 6,
+          "current_tax": 22,
+          "retirement_tax": 32,
+          "allowance": 24500
+        }
+      },
+      {
+        "label": "Equal $10,000 employee contributions; compare the unequal take-home costs",
+        "path": "/401k-calculator",
+        "mode": "roth-vs-traditional",
+        "values": {
+          "basis": "Same employee contribution",
+          "amount": 10000,
+          "years": 30,
+          "rate": 6,
+          "current_tax": 22,
+          "retirement_tax": 22,
+          "allowance": 24500
         }
       }
     ],
     "limitations": [
       "Rates of 22%, 12% and 32% are hypothetical flat-rate assumptions, not a completed tax-return calculation.",
       "Year-end contributions earn the same 6% effective annual return; no fees, inflation, market volatility, employer match or early-withdrawal taxes are modeled.",
-      "The calculator presets reproduce growth before withdrawal tax. Qualified Roth treatment and the article’s after-tax adjustments are separate assumptions."
+      "The comparison mode models prospective employee contributions only, using qualified Roth treatment and flat tax assumptions. It excludes existing balances, employer money, outside-account investing and eligibility determinations."
     ]
   },
   "lump-dca": {
@@ -4077,6 +4099,612 @@
       "Required debt minimums are counted as needs and extra principal as goals in these examples; alternative conventions must not be mixed.",
       "Payroll deductions already excluded from deposited income are tracked separately, not counted again as cash outflows.",
       "The percentages are an adjustable organizing guideline, not personalized financial advice or a guarantee that a household can meet every goal."
+    ]
+  },
+  "fha-conventional": {
+    "meta": {
+      "path": "/guides/fha-vs-conventional-loan/",
+      "title": "FHA vs Conventional Loan: Payments, MIP & Five-Year Costs",
+      "heading": "FHA vs. Conventional Loan: Compare the Same Home and Time Horizon",
+      "description": "Compare FHA and conventional loans using a matched five-year example, financed upfront MIP, monthly insurance, remaining balances and actual Loan Estimates.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "fha-loan",
+        "mortgage"
+      ],
+      "topic": "Housing & property",
+      "breadcrumb": "FHA vs. Conventional Loan",
+      "cardIntro": "Compare FHA and conventional loans using a matched five-year example, financed upfront MIP, monthly insurance, remaining balances and actual Loan Estimates.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "FHA and conventional loans can finance the same home with different eligibility, pricing and mortgage-insurance terms. Compare actual quotes at the same price, down payment and holding period. A lower interest rate or first monthly payment alone does not establish the less expensive loan.",
+    "intro": "This guide separates loan eligibility from the cost comparison. Its original example holds the home, cash down payment and 30-year term constant, then follows both loans through 60 monthly payments. It includes the FHA upfront premium in the debt balance and keeps mortgage insurance visible. No lender quote or approval is implied.",
+    "sections": [
+      {
+        "id": "differences",
+        "title": "What changes between the two loan types",
+        "paragraphs": [
+          "An FHA loan is made by a lender and insured by the Federal Housing Administration. A conventional loan is outside that federal insurance program. Conforming conventional loans follow applicable agency requirements; other conventional products can have different terms. Neither label tells you the rate, points or approval you will receive.",
+          "FHA financing can allow a down payment as low as 3.5% for eligible borrowers. Some conventional programs also allow low down payments, subject to their own requirements. A 20% down payment is not a universal entry requirement for a conventional purchase. Loan limits, credit history, debt obligations, occupancy, property condition and the actual program must be checked separately.",
+          "FHA mortgage insurance includes an upfront premium and annual MIP paid through monthly installments. Conventional borrower-paid PMI is a different product with quote-specific pricing and cancellation rules. The two insurance labels should not be combined into one assumed percentage."
+        ],
+        "table": {
+          "caption": "Questions to ask before comparing payments",
+          "headers": [
+            "Question",
+            "FHA quote",
+            "Conventional quote"
+          ],
+          "rows": [
+            [
+              "Eligibility and property",
+              "Confirm program, appraisal and local limits",
+              "Confirm program, underwriting and local limits"
+            ],
+            [
+              "Interest and points",
+              "Obtain rate, points and lender fees",
+              "Obtain rate, points and lender fees"
+            ],
+            [
+              "Mortgage insurance",
+              "Identify upfront premium, annual MIP and duration",
+              "Identify actual PMI premium and cancellation terms"
+            ],
+            [
+              "Cash needed",
+              "Separate down payment, fees and prepaids",
+              "Separate down payment, fees and prepaids"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "insurance",
+        "title": "FHA MIP does not follow conventional PMI cancellation",
+        "paragraphs": [
+          "For the ordinary FHA case used below, the assumed upfront premium is 1.75% of the base loan, financed into the balance. The annual MIP rate is 0.55% for this stated long-term, above-95%-LTV example. These are premium rules, separate from whether this borrower or property qualifies for financing.",
+          "Under the cited ordinary FHA duration rules, an original LTV above 90% generally carries annual MIP for the mortgage term; an original LTV of 90% or less generally has an 11-year duration for a sufficiently long loan. Extra payments do not turn FHA MIP into conventional 80%-LTV PMI cancellation. Historical case numbers and special programs require their own check.",
+          "For many covered conventional mortgages with borrower-paid PMI, an eligible borrower may request cancellation at 80% of original value, subject to conditions. Automatic termination generally uses the scheduled 78% point and current-payment requirements. Appreciation-based removal, lender-paid insurance and other exceptions need separate review. Our conventional preset uses the requested-80% illustration; neither case reaches that point during the five years shown."
+        ],
+        "links": [
+          {
+            "href": "/glossary/loan-to-value-ratio/",
+            "label": "Understand original loan-to-value ratio"
+          },
+          {
+            "href": "/guides/how-to-calculate-fha-loan-payments/",
+            "label": "See how the FHA payment model treats premiums"
+          }
+        ]
+      },
+      {
+        "id": "assumptions",
+        "title": "A matched purchase with two hypothetical quotes",
+        "paragraphs": [
+          "Assume a $350,000 purchase, appraisal at least equal to the purchase price, a $12,250 down payment (3.5%) and 360 monthly payments. Both base loans are $337,750. The FHA example uses a hypothetical 6.00% note rate; the conventional example uses 6.50%. These rates are chosen to illustrate a tradeoff, not current rates or a prediction of which product prices better.",
+          "The FHA upfront premium is rounded to $5,910.63 and financed, making its starting principal $343,660.63. We use 0.55% annual MIP over the stated term. The hypothetical conventional PMI quote is 0.60% annually on the original loan, or $168.875 a month before display rounding. Obtain a real quote instead of treating this input as a market average.",
+          "Property tax, homeowners insurance, HOA, maintenance, points, other closing costs, prepaids and escrow funding are set to zero for the financing comparison. They are real budgeting items. Add them from both Loan Estimates and the property budget before deciding what payment you can afford. There are no extra principal payments or refinancing assumptions."
+        ],
+        "table": {
+          "caption": "Original purchase example; financing components only",
+          "headers": [
+            "Input / initial result",
+            "FHA illustration",
+            "Conventional illustration"
+          ],
+          "rows": [
+            [
+              "Cash down payment",
+              "$12,250.00",
+              "$12,250.00"
+            ],
+            [
+              "Base loan",
+              "$337,750.00",
+              "$337,750.00"
+            ],
+            [
+              "Financed upfront premium",
+              "$5,910.63",
+              "$0.00 in this example"
+            ],
+            [
+              "Starting principal",
+              "$343,660.63",
+              "$337,750.00"
+            ],
+            [
+              "Note rate",
+              "6.00% assumed",
+              "6.50% assumed"
+            ],
+            [
+              "Monthly principal and interest",
+              "$2,060.42",
+              "$2,134.81"
+            ],
+            [
+              "First monthly mortgage insurance",
+              "$153.94",
+              "$168.88"
+            ],
+            [
+              "Initial P&I plus mortgage insurance",
+              "$2,214.36",
+              "$2,303.68"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "five-years",
+        "title": "Follow the loans through the same 60 payments",
+        "paragraphs": [
+          "The FHA illustration initially costs about $89.33 less per month for principal, interest and mortgage insurance. Its premium changes as the scheduled insurance balance declines. Multiplying the first payment by 60 would miss those changes. The table sums the actual modeled installments at full precision and rounds results for display.",
+          "At the five-year mark, the FHA balance is higher because it began with a financed premium. A fair exit comparison needs that outstanding debt as well as the payments already made. The borrowing-cost measure below adds the remaining balance to modeled payments and subtracts the common $337,750 base loan. It therefore includes interest, insurance and the financed upfront premium, without counting returned principal as a cost.",
+          "For these particular assumptions the FHA financing cost is about $1,988.79 lower over five years. This is an undiscounted illustration, excludes the other costs listed above, and does not establish a general winner. A different PMI quote, rate, points charge or holding period can change the result. If evaluating cash flows economically, discount both alternatives on a consistent basis too."
+        ],
+        "formula": "Five-year modeled borrowing cost = 60-payment P&I total + insurance paid + remaining principal − common base loan.",
+        "table": {
+          "caption": "After 60 payments; no sale proceeds or appreciation assumed",
+          "headers": [
+            "Five-year measure",
+            "FHA illustration",
+            "Conventional illustration"
+          ],
+          "rows": [
+            [
+              "P&I plus monthly insurance paid",
+              "$132,612.19",
+              "$138,221.08"
+            ],
+            [
+              "Monthly mortgage insurance within that total",
+              "$8,987.04",
+              "$10,132.50"
+            ],
+            [
+              "Remaining principal",
+              "$319,791.19",
+              "$316,171.08"
+            ],
+            [
+              "Modeled borrowing cost, including upfront premium",
+              "$114,653.38",
+              "$116,642.16"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "compare-quotes",
+        "title": "Replace the invented inputs with comparable Loan Estimates",
+        "paragraphs": [
+          "Request both products for the same property, down payment, term and lock period. Compare lender charges and points alongside the rate. Check whether a lower payment is being purchased with more cash at closing or an increased loan balance. Keep prepaid property costs separate from financing charges so the totals answer a consistent question.",
+          "Ask when each insurance charge can end and what action or eligibility is required. Use the period you expect to own the home or retain the loan, then test a shorter and a longer period. Do not assume a future refinance will be available, economical or approved.",
+          "Run each quote in the linked calculator, restore the omitted property expenses, and inspect the monthly schedule at the same month. The FHA preset uses explicit Manual premium terms to preserve this example; Automatic is available for the tool’s stated ordinary cases. Both calculators estimate payments, not underwriting, legal eligibility or the complete cash-to-close amount."
+        ],
+        "links": [
+          {
+            "href": "/guides/how-much-house-can-i-afford/",
+            "label": "Review home affordability and ownership costs"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is FHA only for first-time homebuyers?",
+        "answer": "No. The FHA label does not itself require you to be a first-time buyer. The particular loan and any assistance program can impose separate eligibility conditions. Verify the product with the lender."
+      },
+      {
+        "question": "Is a conventional loan always better with 20% down?",
+        "answer": "A qualifying conventional loan may avoid borrower-paid PMI at that down payment, but rates, fees, eligibility and other terms still need comparison. This guide does not rank products from the down-payment percentage alone."
+      },
+      {
+        "question": "Can I remove FHA MIP when my balance reaches 80%?",
+        "answer": "Do not apply conventional PMI rules to FHA MIP. The original terms, LTV, case date and applicable FHA program determine the insurance duration. Refinancing into another loan is a new financing decision with costs and approval requirements."
+      },
+      {
+        "question": "Does the example prove FHA is cheaper?",
+        "answer": "It proves only the arithmetic under the stated hypothetical rates, insurance and five-year horizon. Obtain actual Loan Estimates, restore omitted costs and compare both remaining debt and payments before choosing."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: FHA loans",
+        "url": "https://www.consumerfinance.gov/owning-a-home/fha-loans/",
+        "usedFor": "Government insurance, low-down-payment access and comparing lender quotes.",
+        "scope": "No approval decision, credit-score pricing or local loan-limit determination."
+      },
+      {
+        "title": "HUD: Mortgagee Letter 2023-05, ordinary FHA MIP terms",
+        "url": "https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf",
+        "usedFor": "Ordinary upfront premium and annual premium rate and duration structure.",
+        "scope": "The example is a 30-year, 96.5% base-LTV loan. Special programs and historical cases can differ; the letter is not a current county loan-limit table."
+      },
+      {
+        "title": "CFPB: removing private mortgage insurance",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/when-can-i-remove-private-mortgage-insurance-pmi-from-my-loan-en-202/",
+        "usedFor": "Borrower-requested 80% original-value cancellation and general scheduled 78% automatic termination, subject to conditions.",
+        "scope": "Conventional borrower-paid PMI rules are distinct from FHA MIP. The tool’s 80% option assumes a request is approved; it does not determine all statutory termination rules."
+      },
+      {
+        "title": "CFPB: comparing Loan Estimates",
+        "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "usedFor": "Using the lender’s itemized Loan Estimate to compare actual financing terms.",
+        "scope": "The rates, PMI quote and exclusions in our scenario are invented planning inputs, not lender offers."
+      }
+    ],
+    "related": [
+      {
+        "href": "/fha-loan-calculator",
+        "label": "FHA loan payment calculator"
+      },
+      {
+        "href": "/mortgage-calculator",
+        "label": "Conventional mortgage calculator"
+      },
+      {
+        "href": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "label": "Understand mortgage payment components"
+      },
+      {
+        "href": "/glossary/loan-to-value-ratio/",
+        "label": "Loan-to-value ratio"
+      }
+    ],
+    "presets": [
+      {
+        "label": "FHA example: 6% note rate, financed upfront MIP and stated annual MIP",
+        "path": "/fha-loan-calculator",
+        "mode": "monthly",
+        "values": {
+          "price": 350000,
+          "down": 3.5,
+          "down_unit": "Percent",
+          "years": 30,
+          "months": 0,
+          "start": "2026-11-01",
+          "tax": 0,
+          "insurance": 0,
+          "hoa": 0,
+          "other": 0,
+          "extra_monthly": 0,
+          "extra_yearly": 0,
+          "extra_once": 0,
+          "dated": "",
+          "appraised_value": "",
+          "rate": 6,
+          "mip_method": "Manual",
+          "upfront": 1.75,
+          "annual_mip": 0.55,
+          "mip_years": 30
+        }
+      },
+      {
+        "label": "Conventional example: 6.5% note rate and manual 0.60% PMI quote",
+        "path": "/mortgage-calculator",
+        "mode": "monthly",
+        "values": {
+          "price": 350000,
+          "down": 3.5,
+          "down_unit": "Percent",
+          "years": 30,
+          "months": 0,
+          "start": "2026-11-01",
+          "tax": 0,
+          "insurance": 0,
+          "hoa": 0,
+          "other": 0,
+          "extra_monthly": 0,
+          "extra_yearly": 0,
+          "extra_once": 0,
+          "dated": "",
+          "appraised_value": "",
+          "rate": 6.5,
+          "loan_basis": "Home price & down payment",
+          "pmi_method": "Manual",
+          "pmi": 0.6,
+          "pmi_unit": "Percent of loan",
+          "pmi_policy": "Cancel at 80% original LTV",
+          "pmi_years": 30
+        }
+      }
+    ],
+    "limitations": [
+      "All interest rates and the conventional PMI quote are hypothetical. No live offers, approval, credit-score pricing or local loan limits are determined.",
+      "The 60-month comparison excludes points, other closing costs, property expenses, taxes on deductions, sale costs and time-value discounting.",
+      "FHA MIP follows the stated ordinary premium assumptions and scheduled-balance method. Conventional 80% cancellation assumes an approved request; statutory 78% termination is not automatically determined by the tool."
+    ]
+  },
+  "irr-npv": {
+    "meta": {
+      "path": "/guides/irr-vs-npv/",
+      "title": "IRR vs NPV: Why Project Rankings Differ, With Examples",
+      "heading": "IRR vs. NPV: Compare Percentage Returns and Dollar Value",
+      "description": "See why IRR and NPV can rank projects differently. Reproduce a scale example, discount-rate sensitivity, two IRR roots and Excel timing formulas.",
+      "publishedOn": "2026-11-04",
+      "calculatorIds": [
+        "irr",
+        "present-value"
+      ],
+      "topic": "Saving & investing",
+      "breadcrumb": "IRR vs. NPV",
+      "cardIntro": "See why IRR and NPV can rank projects differently. Reproduce a scale example, discount-rate sensitivity, two IRR roots and Excel timing formulas.",
+      "format": "Comparison & worked examples"
+    },
+    "answer": "NPV estimates value in currency at a chosen discount rate. IRR is a rate that makes the same cash flows have zero NPV. They answer different questions: a higher percentage return can accompany a smaller dollar gain, and some cash-flow patterns have more than one IRR.",
+    "intro": "Use both measures with the same cash-flow boundary and timing. This guide uses original one-year projects to isolate the effect of project size, then a two-year example to show why an IRR result can be ambiguous. Cash flows are hypothetical, end-of-year amounts; no investment return or financing offer is predicted.",
+    "sections": [
+      {
+        "id": "meaning",
+        "title": "What each measure tells you",
+        "paragraphs": [
+          "Write every cash flow from one consistent viewpoint: money invested or paid is negative, money received is positive. Include the time-zero outlay and relevant later costs as well as receipts. An operating profit figure is not automatically an available cash distribution. Financing and project cash flows should not be mixed without deciding whose return is being measured.",
+          "NPV discounts each cash flow at a rate selected for the comparison. A positive result means value above that required return under the stated assumptions. It is measured in dollars or another currency and changes when the required return changes. The choice of discount rate therefore needs an economic rationale and sensitivity testing.",
+          "IRR solves for a break-even discount rate rather than accepting one as an input. With one initial outflow followed by nonnegative inflows, a unique economically relevant IRR often allows comparison with a hurdle rate. More complicated sign changes require closer inspection. Neither number captures every risk or constraint."
+        ],
+        "formula": "NPV(r) = CF₀ + CF₁/(1 + r) + … + CFₙ/(1 + r)ⁿ. An IRR is a value of r for which NPV(r) = 0.",
+        "table": {
+          "caption": "Different questions from the same cash flows",
+          "headers": [
+            "Measure",
+            "Unit",
+            "Main input / question"
+          ],
+          "rows": [
+            [
+              "NPV",
+              "Currency",
+              "What is the value above a chosen required return?"
+            ],
+            [
+              "IRR",
+              "Percent per cash-flow period",
+              "Which rate makes these cash flows break even?"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/glossary/net-present-value/",
+            "label": "Net present value definition"
+          },
+          {
+            "href": "/glossary/internal-rate-of-return/",
+            "label": "Internal rate of return definition"
+          }
+        ]
+      },
+      {
+        "id": "scale",
+        "title": "A higher IRR can create less dollar value",
+        "paragraphs": [
+          "Project A requires $1,000 today and returns $1,500 exactly one year later. Project B requires $10,000 today and returns $13,000 one year later. Assume the same 10% annual discount rate is appropriate for both and that these are the entire cash flows. The common horizon avoids introducing a project-life difference.",
+          "A produces the higher rate: 50% versus 30%. B produces the larger NPV: about $1,818.18 versus $363.64, because its lower percentage is applied to a much larger investment. Comparing percentages alone hides the amount of capital being committed.",
+          "If the projects are mutually exclusive, equally risky and otherwise comparable, and capital is available, NPV helps assess the larger modeled value. If you have only $1,000, B may be infeasible. Do not assume A can be replicated ten times or that idle capital earns nothing. Model those constraints and alternatives explicitly instead of declaring a universal winner."
+        ],
+        "table": {
+          "caption": "Original one-year projects at a 10% discount rate",
+          "headers": [
+            "Cash flow / measure",
+            "Project A",
+            "Project B"
+          ],
+          "rows": [
+            [
+              "Today’s cash flow",
+              "−$1,000.00",
+              "−$10,000.00"
+            ],
+            [
+              "Cash received at year 1",
+              "$1,500.00",
+              "$13,000.00"
+            ],
+            [
+              "Present value of year-1 receipt",
+              "$1,363.64",
+              "$11,818.18"
+            ],
+            [
+              "NPV after subtracting time-zero cost",
+              "$363.64",
+              "$1,818.18"
+            ],
+            [
+              "IRR",
+              "50.00%",
+              "30.00%"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "discount-rate",
+        "title": "Test the required return and the cash-flow timing",
+        "paragraphs": [
+          "For Project A, NPV is $500.00 at a 0% rate, $363.64 at 10%, zero at 50%, and negative above 50%. Its 50% IRR has not changed: the cash flows are unchanged. The NPV changes because you changed the return required from the investment.",
+          "This illustrates the distinction between an input and a solution. IRR is not the discount rate that every investor should use, and a high IRR does not make an arbitrary cash-flow forecast reliable. Test receipts, costs, delays and exit assumptions as well as the discount rate.",
+          "Keep units consistent. Annual flows need an annual period rate; monthly flows need a monthly rate. Compounding a periodic IRR to an annual equivalent requires the appropriate number of periods. Cash flows arriving on irregular calendar dates require a date-aware calculation such as XIRR or XNPV, not merely an unequal-amount annual list."
+        ]
+      },
+      {
+        "id": "multiple",
+        "title": "A cash-flow series can have two IRRs",
+        "paragraphs": [
+          "Consider −$100 at time zero, +$230 after one year and −$132 after two years. The final outflow could represent a cleanup obligation. This series changes sign twice. Both 10% and 20% make its NPV zero; neither can be presented as the single unambiguous return.",
+          "Multiplying the zero-NPV equation by (1 + r)² gives 100r² − 30r + 2 = 0, whose roots are 0.10 and 0.20. At a 15% discount rate the NPV is positive, while at 5% and 25% it is negative. The familiar single-root shortcut about accepting whenever IRR exceeds a hurdle rate does not apply safely to this pattern.",
+          "A solver may return one root depending on its search method or report ambiguity. Some cash flows have no usable IRR. Examine the signs, timing and NPV across plausible discount rates. An error message is not proof that the investment has no economic value, and one numerical root is not proof that no other root exists."
+        ],
+        "formula": "0 = −100 + 230/(1 + r) − 132/(1 + r)².",
+        "table": {
+          "caption": "NPV of the same two-year cash flows at several rates",
+          "headers": [
+            "Annual discount rate",
+            "NPV"
+          ],
+          "rows": [
+            [
+              "5%",
+              "-$0.68"
+            ],
+            [
+              "10%",
+              "$0.00"
+            ],
+            [
+              "15%",
+              "$0.19"
+            ],
+            [
+              "20%",
+              "$0.00"
+            ],
+            [
+              "25%",
+              "-$0.48"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "spreadsheet",
+        "title": "Reproduce periodic examples without shifting time zero",
+        "paragraphs": [
+          "In Excel, enter the initial outlay in A1 and future annual receipts in A2 onward. For Project A, A1 is −1000 and A2 is 1500. The periodic formulas are =NPV(10%,A2)+A1 and =IRR(A1:A2). The first formula discounts the future receipt once and then adds the time-zero outlay without discounting it.",
+          "Do not put a today outlay into the first future-period slot and assume timing is unchanged. Preserve explicit zero-flow periods rather than deleting them and pulling later receipts forward. A missing receipt in year 2 still occupies year 2.",
+          "The linked IRR calculator’s Unequal Annual Cash Flows mode accepts unequal amounts at equal annual intervals. The initial investment field is a positive cost, followed by the future annual amounts. It is not a dated XIRR tool. The present-value preset discounts the single future receipt; subtract the separately stated initial cost to obtain the NPV. That preset is not an arbitrary multi-flow NPV calculator."
+        ],
+        "links": [
+          {
+            "href": "/guides/how-to-calculate-irr/",
+            "label": "Review the IRR calculator’s inputs and limits"
+          },
+          {
+            "href": "/guides/how-to-calculate-present-value/",
+            "label": "Review present-value timing"
+          }
+        ]
+      },
+      {
+        "id": "decision",
+        "title": "Use the measures in a complete decision",
+        "paragraphs": [
+          "First establish which cash flows belong in the decision and whether the alternatives have comparable risk, duration and currency. Then choose a defensible required return and inspect NPV, IRR, funding needs and sensitivity together. For different project lives, use an explicit common-horizon or equivalent-value method rather than mechanically comparing percentages.",
+          "A project IRR is a mathematical summary of its modeled cash flows. It is not a promise that interim receipts can actually be reinvested at that rate, nor a forecast of market returns. If reinvestment and financing assumptions are central, state them separately; a modified IRR answers another, assumption-dependent question.",
+          "Finally, stress-test the items most likely to change: initial spending, delayed receipts, operating costs, terminal value and required return. The examples here isolate concepts. A real capital-budgeting decision also needs cash-flow evidence, liquidity planning and professional judgment."
+        ],
+        "links": [
+          {
+            "href": "/guides/how-to-calculate-mirr/",
+            "label": "Understand modified IRR and its extra assumptions"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is NPV better than IRR?",
+        "answer": "NPV directly measures modeled value at your chosen discount rate; IRR summarizes a break-even rate when a usable root exists. For mutually exclusive comparable projects with adequate capital, dollar value can be more informative than a percentage ranking. The assumptions and constraints still govern the decision."
+      },
+      {
+        "question": "Can NPV be positive when IRR is below the discount rate?",
+        "answer": "For a conventional series with one initial outflow followed only by nonnegative inflows and a unique IRR, that would conflict with the usual relationship. With later negative flows or multiple roots, the shortcut can fail. Inspect the actual cash-flow pattern rather than relying on the label."
+      },
+      {
+        "question": "Why do Excel and another calculator report different IRRs?",
+        "answer": "Check signs, whether time zero is included, blank versus zero periods, date handling, annualization and multiple roots. Iterative solvers can select different roots for a nonconventional series. Equal amounts are not required for periodic IRR, but equal time intervals are."
+      },
+      {
+        "question": "Does the present-value calculator return the NPV of every project?",
+        "answer": "No. The linked lump-sum example discounts one future receipt, and the initial cost is subtracted separately. The calculator’s annuity mode models its stated equal-payment structure. Arbitrary dated cash flows require an appropriate separate model."
+      }
+    ],
+    "sources": [
+      {
+        "title": "AFP: net present value versus internal rate of return",
+        "url": "https://www.financialprofessionals.org/training-resources/resources/articles/Details/net-present-value-vs.-internal-rate-of-return",
+        "usedFor": "The distinct roles of dollar-value and percentage-return measures in investment appraisal.",
+        "scope": "Our project amounts and cash-flow examples are original hypothetical cases, not AFP forecasts or recommendations."
+      },
+      {
+        "title": "Microsoft: NPV function",
+        "url": "https://support.microsoft.com/en-us/excel/functions/npv-function",
+        "usedFor": "End-of-period periodic cash flows and the separate treatment of a time-zero investment.",
+        "scope": "Spreadsheet syntax is not an economic forecast or a prescribed discount rate."
+      },
+      {
+        "title": "Microsoft: IRR function",
+        "url": "https://support.microsoft.com/en-us/excel/functions/irr-function",
+        "usedFor": "Regular-interval cash flows, signs, ordering and iterative root finding.",
+        "scope": "Unequal amounts still require equal time intervals. A computed root does not establish uniqueness or a realized reinvestment return."
+      }
+    ],
+    "related": [
+      {
+        "href": "/irr-calculator",
+        "label": "IRR calculator"
+      },
+      {
+        "href": "/present-value-calculator",
+        "label": "Present value calculator"
+      },
+      {
+        "href": "/guides/how-to-calculate-irr/",
+        "label": "Calculate periodic IRR"
+      },
+      {
+        "href": "/glossary/net-present-value/",
+        "label": "Net present value glossary"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Project A: calculate the one-year IRR",
+        "path": "/irr-calculator",
+        "mode": "irregular",
+        "values": {
+          "initial": 1000,
+          "flows": "1500"
+        }
+      },
+      {
+        "label": "Project B: calculate the one-year IRR",
+        "path": "/irr-calculator",
+        "mode": "irregular",
+        "values": {
+          "initial": 10000,
+          "flows": "13000"
+        }
+      },
+      {
+        "label": "Project A: discount the receipt, then subtract the initial cost separately",
+        "path": "/present-value-calculator",
+        "mode": "lump",
+        "values": {
+          "future": 1500,
+          "periods": 1,
+          "rate": 10
+        }
+      },
+      {
+        "label": "Project B: discount the receipt, then subtract the initial cost separately",
+        "path": "/present-value-calculator",
+        "mode": "lump",
+        "values": {
+          "future": 13000,
+          "periods": 1,
+          "rate": 10
+        }
+      }
+    ],
+    "limitations": [
+      "All cash flows are hypothetical and in nominal dollars; the 10% discount rate is an illustrative assumption. No risk, tax, financing or reinvestment forecast is provided.",
+      "The scale example uses equal one-year horizons and assumes its cash-flow list is complete. Real project constraints can change the appropriate comparison.",
+      "The two-root example is demonstrated algebraically and with the NPV sensitivity table. The calculator presets reproduce only the simpler one-year projects."
     ]
   }
 }

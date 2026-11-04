@@ -1,0 +1,6 @@
+.glossary-article .guide-table{max-width:100%;overflow-x:auto;margin:24px 0;border:1px solid var(--rule,#dce5eb);border-radius:8px;}
+.glossary-article .guide-table table{width:100%;min-width:420px;border-collapse:collapse;margin:0;background:transparent;color:inherit;line-height:1.6;}
+.glossary-article .guide-table caption{text-align:left;padding:12px;font-weight:600;}
+.glossary-article .guide-table th,.glossary-article .guide-table td{padding:12px;text-align:left;vertical-align:top;white-space:normal;border:0;border-top:1px solid var(--rule,#dce5eb);background:transparent;color:inherit;}
+.glossary-article .guide-table th[scope=row]{font-weight:500;}
+@media print{.glossary-article .guide-table{overflow:visible;}.glossary-article .guide-table table{min-width:0;}}

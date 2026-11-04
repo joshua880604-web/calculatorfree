@@ -15,6 +15,8 @@ export type GlossaryTerm = {
   sources:{title:string;url:string}[];checkedOn:string;scope?:string;
   guides?:{title:string;path:string}[];
   comparison?:{topic:"cap";heading:string;paragraphs:string[];questions:{question:string;answer:string}[];chart:string};
+  sections?:{id:string;title:string;paragraphs:string[];table?:{caption:string;headers:string[];rows:string[][]}}[];
+  questions?:{question:string;answer:string}[];
 };
 export const glossaryCategories=['Saving & investing','Retirement','Loans & debt','Housing & property','Tax & income','Business & pricing','Everyday money'];
 export const glossaryPath='/glossary/';

@@ -1,3 +1,4 @@
+import {roth401kComparisonMode} from './roth-401k-comparison';
 import {contributionTaxSavings} from '../401k-tax-savings';
 import { retirementIncome } from "../retirement-projection";
 import { employee401kLimit as limit401 } from "../retirement-limits";
@@ -304,6 +305,9 @@ const k401 = tool(
           ],
         };
       },
+    },
+    {
+      ...roth401kComparisonMode,
     },
     {
       id: "early",

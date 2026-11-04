@@ -1,6 +1,8 @@
 import type {Values} from './types';
+import {roth401kComparisonScope} from './roth-401k-scope';
 // Visible context belongs with the inputs and results, outside optional model notes.
-export function embedContext(id:string,values:Values){
+export function embedContext(id:string,values:Values,mode?:string){
+ if(id==='401k'&&mode==='roth-vs-traditional')return {label:'Roth vs traditional 401(k) · Qualified-withdrawal illustration',scope:roth401kComparisonScope,disclaimer:'Equal-contribution mode uses different take-home budgets. This is not a tax return or eligibility determination.'};
  if(id==='self-employment-tax'){
   const year=values.year==='2025'?'2025':'2026';
   return {label:`U.S. self-employment tax · Tax year ${year}`,scope:'Regular SE tax plus the self-employment portion of Additional Medicare tax. Excludes ordinary federal income tax, state tax and wage-only Additional Medicare tax. The quarterly reserve is not a required estimated-tax payment.',disclaimer:'Planning estimate, not a tax return or professional tax advice.'};

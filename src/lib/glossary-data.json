@@ -1207,7 +1207,7 @@
         "url": "https://openstax.org/books/principles-finance/pages/16-3-internal-rate-of-return-irr-method"
       }
     ],
-    "checkedOn": "2026-10-23",
+    "checkedOn": "2026-11-04",
     "scope": "General financial concept; examples are hypothetical.",
     "guides": [
       {
@@ -1217,6 +1217,10 @@
       {
         "title": "How to Calculate MIRR: Financing, Reinvestment and Periods",
         "path": "/guides/how-to-calculate-mirr/"
+      },
+      {
+        "title": "IRR versus NPV: scale, timing and multiple roots",
+        "path": "/guides/irr-vs-npv/"
       }
     ]
   },
@@ -1287,12 +1291,16 @@
         "url": "https://openstax.org/books/principles-finance/pages/16-2-net-present-value-npv-method"
       }
     ],
-    "checkedOn": "2026-11-01",
+    "checkedOn": "2026-11-04",
     "scope": "General financial concept; examples are hypothetical.",
     "guides": [
       {
         "path": "/guides/simple-and-discounted-payback/",
         "title": "Simple vs. Discounted Payback: Reading Recovery Time and NPV"
+      },
+      {
+        "title": "IRR versus NPV: scale, timing and multiple roots",
+        "path": "/guides/irr-vs-npv/"
       }
     ]
   },
@@ -3828,7 +3836,8 @@
     "related": [
       "depreciation",
       "apr",
-      "principal-and-interest"
+      "principal-and-interest",
+      "money-factor"
     ],
     "sources": [
       {
@@ -3840,7 +3849,7 @@
         "url": "https://openstax.org/books/contemporary-mathematics/pages/6-11-buying-or-leasing-a-car"
       }
     ],
-    "checkedOn": "2026-11-01",
+    "checkedOn": "2026-11-04",
     "scope": "General financial concept; examples are hypothetical.",
     "guides": [
       {
@@ -6329,6 +6338,181 @@
       {
         "title": "How to Calculate Stock Profit",
         "path": "/guides/how-to-calculate-stock-profit/"
+      }
+    ]
+  },
+  {
+    "slug": "money-factor",
+    "name": "Money Factor",
+    "title": "Money Factor: Rate Conversion and Lease Payment Example",
+    "description": "Convert a lease money factor to an approximate annual rate, calculate rent charges and compare two original lease examples with explicit assumptions.",
+    "category": "Loans & debt",
+    "aliases": [
+      "lease factor",
+      "lease money factor",
+      "lease rate factor"
+    ],
+    "definition": "A money factor is the decimal financing factor used in many vehicle leases to calculate the rent-charge portion of the payment. It is applied to the adjusted capitalized cost plus the residual value, not just to the amount of depreciation.",
+    "explanation": "Separate the charge for using up the vehicle’s value from the financing charge. In the simplified lease model, depreciation is the adjusted capitalized cost minus the residual, divided by the number of months. Monthly rent charge is the adjusted capitalized cost plus residual, multiplied by the money factor. Taxes and other charges then depend on the contract and jurisdiction.",
+    "formula": "Monthly rent charge = (adjusted capitalized cost + residual) × money factor. Approximate annual comparison rate in percent = money factor × 2,400.",
+    "formulaNote": "For the reverse conversion, divide a percentage number such as 6 by 2,400 to obtain 0.0025. The 2,400 convention is a rough annual interest comparison, not a fee-inclusive effective APR or a substitute for the lease disclosure. Do not multiply a money factor by 100 and treat it as an annual percentage rate.",
+    "scope": "A U.S. vehicle-lease illustration with level monthly payments. Contract terms, tax treatment, money due at signing, insurance, mileage and early termination can change the actual cost.",
+    "example": {
+      "title": "Example: a 0.0025 factor on a 36-month lease",
+      "intro": "Assume a $35,000 agreed vehicle price, a $3,000 cash capitalized-cost reduction, no trade-in or fees, a $21,000 residual and 36 months. The adjusted capitalized cost is $32,000. Sales tax is set to zero to isolate depreciation and rent.",
+      "steps": [
+        "Convert the factor for comparison: 0.0025 × 2,400 = 6.00%.",
+        "Calculate monthly depreciation: ($32,000 − $21,000) / 36 = $305.555… .",
+        "Calculate monthly rent: ($32,000 + $21,000) × 0.0025 = $132.50.",
+        "Add the two parts: $305.555… + $132.50 = $438.055… before taxes and excluded charges."
+      ],
+      "answer": "The modeled monthly payment is $438.06; total modeled lease cash outlay is $18,770.00 including the $3,000 down payment.",
+      "assumptions": "Hypothetical quote, constant factor, no acquisition fee, disposition fee, mileage charge, excess wear, tax or early termination. Total cash uses full-precision payments, not 36 times the rounded display. It does not include buying the vehicle at the residual.",
+      "calculator": {
+        "id": "auto-lease",
+        "mode": "payment",
+        "values": {
+          "price": 35000,
+          "residual": 21000,
+          "down": 3000,
+          "trade": 0,
+          "fees": 0,
+          "months": 36,
+          "rate": ".0025",
+          "rate_unit": "Money factor",
+          "tax": 0
+        },
+        "expected": [
+          {
+            "label": "Monthly lease payment",
+            "value": 438.05555555555554
+          },
+          {
+            "label": "Total lease cash outlay",
+            "value": 18770.0
+          }
+        ]
+      },
+      "calculationNote": "The lease example was checked independently using Python Decimal at 60-digit precision. The preset restores Money factor units directly."
+    },
+    "pitfall": {
+      "title": "A low factor does not establish a low total lease cost",
+      "text": "Two offers can differ in selling price, residual, fees, capitalized-cost reduction and mileage allowance. A larger upfront payment can reduce the monthly number while using more cash. Ask for the itemized contract and compare the same vehicle, term, mileage and cash due. These examples do not recommend a down payment or establish a universally good factor."
+    },
+    "tools": [
+      {
+        "id": "auto-lease",
+        "text": "Choose Money factor under the financing-rate units to model a stated decimal directly, or APR (%) for the tool’s 2,400-convention conversion. The result remains a simplified lease estimate."
+      }
+    ],
+    "related": [
+      "lease-residual-value",
+      "apr"
+    ],
+    "guides": [
+      {
+        "title": "Leasing versus buying a car",
+        "path": "/guides/leasing-vs-buying-a-car/"
+      },
+      {
+        "title": "How to calculate auto lease payments",
+        "path": "/guides/how-to-calculate-auto-lease-payments/"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Chase: understanding the lease money factor",
+        "url": "https://www.chase.com/personal/auto/education/leasing/what-is-the-lease-money-factor"
+      },
+      {
+        "title": "CFI: money factor and the 2,400 conversion",
+        "url": "https://corporatefinanceinstitute.com/resources/commercial-lending/money-factor/"
+      }
+    ],
+    "checkedOn": "2026-11-04",
+    "sections": [
+      {
+        "id": "conversion",
+        "title": "Money factor to annual-rate comparison table",
+        "paragraphs": [
+          "These are arithmetic conversions, not current lease offers. They hold no assumption about fees, credit approval or the availability of a particular factor. Enter the decimal exactly as quoted; 0.0025 and 0.025 differ by a factor of ten."
+        ],
+        "table": {
+          "caption": "Conventional conversion; approximate annual comparison only",
+          "headers": [
+            "Money factor",
+            "Approximate annual rate"
+          ],
+          "rows": [
+            [
+              "0.0010",
+              "2.40%"
+            ],
+            [
+              "0.0015",
+              "3.60%"
+            ],
+            [
+              "0.0020",
+              "4.80%"
+            ],
+            [
+              "0.0025",
+              "6.00%"
+            ],
+            [
+              "0.0030",
+              "7.20%"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "sensitivity",
+        "title": "What changing the factor does to the payment",
+        "paragraphs": [
+          "Keep every other example input unchanged and lower the factor from 0.0025 to 0.0020. Monthly rent falls from $132.50 to $106.00, while depreciation stays the same. The payment falls by $26.50 a month, or $954.00 across 36 payments before tax.",
+          "If a quote itemizes a level monthly rent charge, the same simplified formula can be rearranged: factor = monthly rent charge / (adjusted capitalized cost + residual). Do not divide the entire lease payment by that sum, since the payment also contains depreciation and potentially taxes. Confirm the contract’s calculation with the lessor."
+        ],
+        "table": {
+          "caption": "Matched hypothetical lease; only the factor changes",
+          "headers": [
+            "Measure",
+            "Factor 0.0025",
+            "Factor 0.0020"
+          ],
+          "rows": [
+            [
+              "Monthly rent",
+              "$132.50",
+              "$106.00"
+            ],
+            [
+              "Monthly payment before tax",
+              "$438.06",
+              "$411.56"
+            ],
+            [
+              "Modeled lease cash including $3,000 down",
+              "$18,770.00",
+              "$17,816.00"
+            ]
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is a good money factor?",
+        "answer": "There is no single current factor that is good for every vehicle and borrower. Compare quotes for the same term, mileage, credit tier, incentives and upfront cash, then inspect total cost. This page does not provide live lessor rate sheets."
+      },
+      {
+        "question": "Is money factor times 2,400 the actual APR?",
+        "answer": "It is a customary approximate annual interest comparison. It does not incorporate every contract fee or replicate a fee-inclusive effective borrowing rate. Use the signed disclosures and itemized cash flows for the actual agreement."
+      },
+      {
+        "question": "Can I calculate the factor from my monthly payment alone?",
+        "answer": "Not reliably. You also need the adjusted capitalized cost, residual and term, and must separate depreciation, rent, tax and other charges. Ask the lessor to identify those components instead of treating the whole payment as interest."
       }
     ]
   }
