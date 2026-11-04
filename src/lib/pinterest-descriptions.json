@@ -48,5 +48,13 @@
   "mortgage-recast": "Estimate the payment after a lump sum with the same rate and term.",
   "business-loan": "Separate the installment from fees and cash actually received.",
   "discount": "Find the sale price and savings without adding percentages.",
-  "salary": "Convert gross pay while keeping time-off assumptions visible."
+  "salary": "Convert gross pay while keeping time-off assumptions visible.",
+  "auto-loan": "Estimate the payment after a down payment, tax and fees.",
+  "personal-loan": "See the installment alongside fees and the cash you receive.",
+  "credit-card": "Explore payoff time and interest with a fixed monthly payment.",
+  "debt-consolidation": "Compare a proposed loan with modeled existing repayments.",
+  "retirement": "Estimate monthly saving toward a target under a constant return.",
+  "401k": "Explore savings growth with employee and employer contributions.",
+  "emergency-fund": "Set a reserve goal from your monthly essential expenses.",
+  "budget": "Separate monthly spending, savings allocations and money left over."
 }

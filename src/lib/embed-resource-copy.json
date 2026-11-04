@@ -78,5 +78,13 @@
   "sales-tax": "Add sales tax or recover a pre-tax amount from an entered rate; the tool does not determine local taxability.",
   "commission": "Estimate a sales commission using entered rates and calculation bases rather than inferring an employment contract.",
   "self-employment-tax": "Estimate 2025 or 2026 regular self-employment tax and the SE portion of Additional Medicare tax; excludes ordinary income and state taxes.",
-  "salary": "Convert gross salary across pay frequencies and work schedules before tax, payroll deductions and benefits."
+  "salary": "Convert gross salary across pay frequencies and work schedules before tax, payroll deductions and benefits.",
+  "auto-loan": "Estimate a vehicle payment or price using entered loan, trade-in, rebate, tax and fee assumptions; this is not a dealer quote.",
+  "personal-loan": "Compare loan installments, origination fees and net proceeds under the selected fee treatment, without assuming lender approval.",
+  "credit-card": "Estimate a single card payoff using fixed payments, a deadline or an editable minimum-payment rule; actual statements may differ.",
+  "debt-consolidation": "Compare existing debt payments with a proposed consolidation loan, including entered origination fees and financing choices.",
+  "retirement": "Explore retirement saving targets, contributions, withdrawals and longevity under constant return and inflation assumptions.",
+  "401k": "Explore 401(k) savings, employer matching and withdrawal scenarios; projection modes reuse 2026 limits rather than forecasting future rules.",
+  "emergency-fund": "Choose reserve months to estimate a cash target, savings gap or deposit schedule without assuming a universal reserve recommendation.",
+  "budget": "Normalize income, spending and savings allocations to monthly amounts using an entered flat tax percentage, not a paycheck tax calculation."
 }

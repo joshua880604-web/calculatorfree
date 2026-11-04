@@ -478,5 +478,53 @@
     "slug": "salary-calculator",
     "title": "Salary Calculator",
     "height": 800
+  },
+  {
+    "id": "auto-loan",
+    "slug": "auto-loan-calculator",
+    "title": "Auto Loan Calculator",
+    "height": 1200
+  },
+  {
+    "id": "personal-loan",
+    "slug": "personal-loan-calculator",
+    "title": "Personal Loan Calculator",
+    "height": 1000
+  },
+  {
+    "id": "credit-card",
+    "slug": "single-credit-card-payoff-calculator",
+    "title": "Credit Card Payoff Calculator",
+    "height": 1000
+  },
+  {
+    "id": "debt-consolidation",
+    "slug": "debt-consolidation-calculator",
+    "title": "Debt Consolidation Calculator",
+    "height": 1000
+  },
+  {
+    "id": "retirement",
+    "slug": "retirement-calculator",
+    "title": "Retirement Calculator",
+    "height": 1200
+  },
+  {
+    "id": "401k",
+    "slug": "401k-calculator",
+    "title": "401K Calculator",
+    "height": 1200
+  },
+  {
+    "id": "emergency-fund",
+    "slug": "emergency-fund-calculator",
+    "title": "Emergency Fund Calculator",
+    "height": 1000
+  },
+  {
+    "id": "budget",
+    "slug": "budget-calculator",
+    "title": "Budget Calculator",
+    "height": 1200
   }
 ]

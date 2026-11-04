@@ -302,5 +302,266 @@
         "value": "$56,400.00"
       }
     ]
+  },
+  {
+    "id": "auto-loan",
+    "mode": "payment",
+    "values": {
+      "tax_state": "Manual",
+      "purchase_year": "2026",
+      "price": "35000",
+      "months": "60",
+      "rate": "6",
+      "rebate": "0",
+      "down": "5000",
+      "trade": "0",
+      "owed": "0",
+      "tax": "7",
+      "fees": "500",
+      "trade_credit": "Yes",
+      "rebate_tax": "No",
+      "finance_fees": "Yes"
+    },
+    "metrics": [
+      {
+        "label": "Payment per period",
+        "value": "$637.02"
+      },
+      {
+        "label": "Total interest",
+        "value": "$5,270.95"
+      }
+    ]
+  },
+  {
+    "id": "personal-loan",
+    "mode": "repayment",
+    "values": {
+      "principal": "10000",
+      "years": "3",
+      "months": "0",
+      "rate": "12",
+      "origination": "3",
+      "documentation": "0",
+      "other_fee": "0",
+      "treatment": "Deducted from proceeds",
+      "insurance": "0"
+    },
+    "metrics": [
+      {
+        "label": "Payment per period",
+        "value": "$332.14"
+      },
+      {
+        "label": "Net proceeds after fees",
+        "value": "$9,700.00"
+      }
+    ]
+  },
+  {
+    "id": "credit-card",
+    "mode": "payment",
+    "values": {
+      "principal": "10000",
+      "rate": "20",
+      "payment": "300"
+    },
+    "metrics": [
+      {
+        "label": "Number of payments",
+        "value": "50"
+      },
+      {
+        "label": "Total interest",
+        "value": "$4,718.19"
+      }
+    ]
+  },
+  {
+    "id": "debt-consolidation",
+    "mode": "comparison",
+    "values": {
+      "debts": "Card A, 5000, 150, 22\nCard B, 3000, 100, 18",
+      "new_rate": "10",
+      "years": "5",
+      "fees": "3",
+      "finance": "Yes"
+    },
+    "metrics": [
+      {
+        "label": "Payment per period",
+        "value": "$175.08"
+      },
+      {
+        "label": "Interest and fee savings",
+        "value": "$1,231.71"
+      }
+    ]
+  },
+  {
+    "id": "retirement",
+    "mode": "saving",
+    "values": {
+      "age": "35",
+      "retire": "65",
+      "target": "1000000",
+      "balance": "100000",
+      "return": "5"
+    },
+    "metrics": [
+      {
+        "label": "Required monthly saving",
+        "value": "$696.37"
+      },
+      {
+        "label": "Current savings future value",
+        "value": "$432,194.24"
+      }
+    ]
+  },
+  {
+    "id": "401k",
+    "mode": "projection",
+    "values": {
+      "age": "35",
+      "retire": "65",
+      "life": "90",
+      "salary": "80000",
+      "balance": "100000",
+      "contribution": "10",
+      "match": "50",
+      "match_limit": "6",
+      "salary_growth": "0",
+      "return": "6",
+      "inflation": "2.5"
+    },
+    "metrics": [
+      {
+        "label": "Projected 401(k) balance",
+        "value": "$1,396,554.25"
+      },
+      {
+        "label": "Employer contributions",
+        "value": "$72,000.00"
+      }
+    ]
+  },
+  {
+    "id": "emergency-fund",
+    "mode": "goal",
+    "values": {
+      "expenses": "3000",
+      "months": "6",
+      "savings": "5000"
+    },
+    "metrics": [
+      {
+        "label": "Emergency fund target",
+        "value": "$18,000.00"
+      },
+      {
+        "label": "Remaining savings gap",
+        "value": "$13,000.00"
+      }
+    ]
+  },
+  {
+    "id": "budget",
+    "mode": "budget",
+    "values": {
+      "tax": "20",
+      "Income_0": "6000",
+      "Incomef0": "Monthly",
+      "Income_1": "0",
+      "Incomef1": "Monthly",
+      "Income_2": "0",
+      "Incomef2": "Monthly",
+      "Income_3": "0",
+      "Incomef3": "Monthly",
+      "Housing_0": "1500",
+      "Housingf0": "Monthly",
+      "Housing_1": "0",
+      "Housingf1": "Monthly",
+      "Housing_2": "0",
+      "Housingf2": "Monthly",
+      "Housing_3": "200",
+      "Housingf3": "Monthly",
+      "Housing_4": "0",
+      "Housingf4": "Monthly",
+      "Housing_5": "0",
+      "Housingf5": "Monthly",
+      "Housing_6": "0",
+      "Housingf6": "Monthly",
+      "Transportation_0": "300",
+      "Transportationf0": "Monthly",
+      "Transportation_1": "100",
+      "Transportationf1": "Monthly",
+      "Transportation_2": "150",
+      "Transportationf2": "Monthly",
+      "Transportation_3": "0",
+      "Transportationf3": "Monthly",
+      "Transportation_4": "0",
+      "Transportationf4": "Monthly",
+      "Transportation_5": "0",
+      "Transportationf5": "Monthly",
+      "Debt_0": "200",
+      "Debtf0": "Monthly",
+      "Debt_1": "0",
+      "Debtf1": "Monthly",
+      "Debt_2": "0",
+      "Debtf2": "Monthly",
+      "Living_0": "400",
+      "Livingf0": "Monthly",
+      "Living_1": "150",
+      "Livingf1": "Monthly",
+      "Living_2": "0",
+      "Livingf2": "Monthly",
+      "Living_3": "0",
+      "Livingf3": "Monthly",
+      "Living_4": "0",
+      "Livingf4": "Monthly",
+      "Health_0": "200",
+      "Healthf0": "Monthly",
+      "Health_1": "0",
+      "Healthf1": "Monthly",
+      "Children_0": "0",
+      "Childrenf0": "Monthly",
+      "Children_1": "0",
+      "Childrenf1": "Monthly",
+      "Children_2": "0",
+      "Childrenf2": "Monthly",
+      "Children_3": "0",
+      "Childrenf3": "Monthly",
+      "Savings_0": "300",
+      "Savingsf0": "Monthly",
+      "Savings_1": "500",
+      "Savingsf1": "Monthly",
+      "Savings_2": "200",
+      "Savingsf2": "Monthly",
+      "Savings_3": "0",
+      "Savingsf3": "Monthly",
+      "Miscellaneous_0": "100",
+      "Miscellaneousf0": "Monthly",
+      "Miscellaneous_1": "0",
+      "Miscellaneousf1": "Monthly",
+      "Miscellaneous_2": "0",
+      "Miscellaneousf2": "Monthly",
+      "Miscellaneous_3": "0",
+      "Miscellaneousf3": "Monthly",
+      "Miscellaneous_4": "0",
+      "Miscellaneousf4": "Monthly",
+      "Miscellaneous_5": "0",
+      "Miscellaneousf5": "Monthly"
+    },
+    "metrics": [
+      {
+        "label": "Monthly spending and saving",
+        "value": "$4,300.00"
+      },
+      {
+        "label": "Monthly surplus / deficit",
+        "value": "$500.00"
+      }
+    ]
   }
 ]

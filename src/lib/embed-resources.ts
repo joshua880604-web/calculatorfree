@@ -4,13 +4,13 @@ import {calculatorCategory} from './calculator-categories';
 import {hasBlogSnippetKit} from './blog-snippet-access';
 import {absoluteURL,siteConfig} from './site';
 export const embedResourcesPath='/embed-resources';
-export const embedResourcesReviewedOn='2026-11-02';
+export const embedResourcesReviewedOn='2026-11-04';
 export const embedResources=tools.map(tool=>({...tool,path:'/'+tool.slug,hasSnippetKit:hasBlogSnippetKit(tool.id),description:descriptions[tool.id as keyof typeof descriptions]}));
 export const embedResourceGroups=[
  {id:'fire-retirement',title:'FIRE & Retirement',category:'retirement'},
  {id:'property-mortgages',title:'Property & Mortgages',category:'mortgage-housing'},
- {id:'debt',title:'Debt',category:'loans-debt'},
- {id:'investing',title:'Investing',category:'saving-investing'},
+ {id:'debt',title:'Loans & Debt',category:'loans-debt'},
+ {id:'investing',title:'Savings, Investing & Budgeting',category:'saving-investing'},
  {id:'business',title:'Business',category:'business-finance'},
  {id:'sales-income',title:'Tax & Income',category:'tax-salary'},
  {id:'shopping',title:'Discounts',category:'everyday'},

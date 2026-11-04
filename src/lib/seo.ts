@@ -292,3 +292,6 @@ contentUpdatedOn['/guides/compound-interest-with-monthly-contributions/']='2026-
 // Four additional guides and reciprocal reading links, checked November 4.
 for(const id of ["break-even", "credit-card", "debt-consolidation", "heloc", "home-equity-loan", "ira", "margin", "markup", "personal-loan", "roth-conversion-ladder"])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-04';
 for(const path of ['/guides/','/retirement-calculators.html','/business-calculators.html','/real-estate-calculator.html','/loan-calculators.html'])contentUpdatedOn[path]='2026-11-04';
+
+// New embed controls and public Pinterest cover assets, November 4.
+for(const id of ["auto-loan", "personal-loan", "credit-card", "debt-consolidation", "retirement", "401k", "emergency-fund", "budget"])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-04';
