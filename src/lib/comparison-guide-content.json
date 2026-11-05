@@ -3549,13 +3549,16 @@
       "description": "Compare investing the same available cash immediately or in installments. Worked market-path examples separate idle-cash interest, timing and historical research.",
       "publishedOn": "2026-11-04",
       "calculatorIds": [
+        "dca",
+        "stock-average",
         "investment",
         "compound-interest"
       ],
       "topic": "Savings & investing",
       "breadcrumb": "Lump Sum vs Dollar-Cost Averaging",
       "cardIntro": "Compare investing the same available cash immediately or in installments. Worked market-path examples separate idle-cash interest, timing and historical research.",
-      "format": "Comparison & worked examples"
+      "format": "Comparison & worked examples",
+      "updatedOn": "2026-11-05"
     },
     "answer": "Lump-sum investing puts available cash into the chosen investment immediately. Dollar-cost averaging spreads purchases over a stated period. Compare the same initial cash and valuation date, including money still waiting to be invested; the market path and cash yield can change the outcome.",
     "intro": "The decision here concerns money you already have. Investing from future paychecks is a different cash-flow situation. Our original $12,000 examples use invented rising, flat and falling price paths, while a separate section explains the scope of published historical research. Neither the paths nor the historical result predicts the next year.",
@@ -3583,9 +3586,9 @@
         "id": "paths",
         "title": "Three transparent hypothetical price paths",
         "paragraphs": [
-          "Start the share price at $100. In each path it changes smoothly at a constant monthly compound rate to reach $112, $100 or $88 at month twelve. Prices are P(m) = $100 × (1 + g)^(m/12), where g is +12%, 0% or −12%, and m runs from zero through twelve. There are no dividends, trading fees, taxes or inflation.",
-          "The lump sum buys 120 shares at time zero. Installments buy $1,000 ÷ P(m) shares at months zero through eleven. Month twelve is only the valuation date, not an extra purchase. Fractional shares are allowed. The first table assumes the cash awaiting investment earns nothing and is fully used by the scheduled purchases.",
-          "On the rising path, investing immediately ends at $13,440.00, compared with $12,766.50 for the installments. On the falling path, installments end at $11,204.77, above the lump sum’s $10,560.00. Both falling-path results remain below the original $12,000; losing less is not the same as earning a positive return."
+          "Start the share price at $100. In each path it changes smoothly at a constant monthly compound rate to reach $112, $100 or $88 at month twelve. Prices are P(m) = $100 \u00d7 (1 + g)^(m/12), where g is +12%, 0% or \u221212%, and m runs from zero through twelve. There are no dividends, trading fees, taxes or inflation.",
+          "The lump sum buys 120 shares at time zero. Installments buy $1,000 \u00f7 P(m) shares at months zero through eleven. Month twelve is only the valuation date, not an extra purchase. Fractional shares are allowed. The first table assumes the cash awaiting investment earns nothing and is fully used by the scheduled purchases.",
+          "On the rising path, investing immediately ends at $13,440.00, compared with $12,766.50 for the installments. On the falling path, installments end at $11,204.77, above the lump sum\u2019s $10,560.00. Both falling-path results remain below the original $12,000; losing less is not the same as earning a positive return."
         ],
         "table": {
           "caption": "Original twelve-month paths; no idle-cash yield; not historical market returns",
@@ -3625,7 +3628,7 @@
         "id": "cash-yield",
         "title": "Count interest on the cash still waiting",
         "paragraphs": [
-          "Now leave the same $1,000 purchase schedule unchanged, but assume the uninvested cash earns a constant 3% effective annual yield, credited at the equivalent monthly rate. Interest stays in cash rather than increasing the scheduled share purchases. At each month’s start, withdraw the next $1,000 from cash; then credit that month’s interest. The final valuation includes any interest left in cash.",
+          "Now leave the same $1,000 purchase schedule unchanged, but assume the uninvested cash earns a constant 3% effective annual yield, credited at the equivalent monthly rate. Interest stays in cash rather than increasing the scheduled share purchases. At each month\u2019s start, withdraw the next $1,000 from cash; then credit that month\u2019s interest. The final valuation includes any interest left in cash.",
           "This produces $165.88 of ending cash interest. It is not $360, because the full $12,000 does not remain in cash for the whole year. The same cash schedule applies to all three stock paths, so the cash amount adds equally to each installment result in this controlled experiment.",
           "The 3% yield is hypothetical and not a bank offer. Taxes on interest, restrictions, variable yields or fees would alter the result. Compare the total wealth of both strategies, rather than putting idle-cash interest in one result while omitting idle cash itself from the other."
         ],
@@ -3663,7 +3666,7 @@
         "id": "history",
         "title": "What the historical research actually tested",
         "paragraphs": [
-          "Vanguard’s February 2023 research reported that immediate investment outperformed a three-installment strategy in 68% of rolling one-year comparisons using MSCI World Index returns for 1976–2022. That figure used a 100% equity allocation and no interest on the portion awaiting investment; purchases were a month apart.",
+          "Vanguard\u2019s February 2023 research reported that immediate investment outperformed a three-installment strategy in 68% of rolling one-year comparisons using MSCI World Index returns for 1976\u20132022. That figure used a 100% equity allocation and no interest on the portion awaiting investment; purchases were a month apart.",
           "That result describes that historical test, not a 68% probability of winning next year. Our twelve-purchase paths above are separate illustrations and do not reproduce the study. The paper also examines other allocations and scenarios. Review the original methodology rather than applying one headline percentage to every market, installment period or cash yield."
         ],
         "links": [
@@ -3678,8 +3681,62 @@
         "title": "A timing choice does not remove investment risk",
         "paragraphs": [
           "Spreading purchases temporarily leaves less money exposed to the investment. That can reduce an early loss if prices fall while cash is waiting, or miss gains if prices rise. After the schedule finishes, the purchased assets still carry their normal risks. There is no rule requiring the market to recover before you need the money.",
-          "A fixed schedule can also reduce repeated decisions about entry dates. That practical benefit depends on following the schedule: repeatedly delaying the final installments changes the plan. Compare a schedule you can actually sustain with the chosen investment’s risks, rather than assuming perfect knowledge of later prices.",
+          "A fixed schedule can also reduce repeated decisions about entry dates. That practical benefit depends on following the schedule: repeatedly delaying the final installments changes the plan. Compare a schedule you can actually sustain with the chosen investment\u2019s risks, rather than assuming perfect knowledge of later prices.",
           "Money needed for near-term expenses or emergencies presents a separate suitability question. The existence of an installment method does not turn a volatile asset into a cash reserve. The examples do not select securities, choose an asset allocation or determine an appropriate investing horizon for you."
+        ]
+      },
+      {
+        "id": "manual-prices",
+        "title": "Reproduce actual share arithmetic with a manual price sequence",
+        "paragraphs": [
+          "The DCA Calculator now provides a separate equal-dollar purchase worksheet. It accepts one manually entered positive price per purchase and a fixed budget including the purchase fee. It does not fetch prices or reproduce the Vanguard historical study. Use consistent prices for one asset and enter the final valuation price separately.",
+          "For three $120 purchases at $12, $10 and $8 with no fees, the purchases buy 10, 12 and 15 shares. Total shares are 37, average cost is $360 / 37 = $9.7297, and the final $8 value is $296. The $64 loss remains a loss even though the weighted purchase cost is below the simple $10 price average.",
+          "With a $3 fee included in each $120 budget, only $117 buys shares each time. Total shares fall to 36.075 and ending value to $288.60, a $71.40 loss on $360 committed. The equal-total-budget lump sum pays one $3 fee rather than three. This fee convention is part of the comparison, not an assumption that the strategies incur identical costs.",
+          "A rising $12, $14, $16 sequence instead gives the no-fee installments about $417.14, below the $480 lump-sum value at the same $16 final price. The three-price examples below are independent of the twelve-month smooth paths above; they do not include idle-cash interest, dividends, taxes or sale fees.",
+          "When reproducing the earlier constant-growth examples, use the growth presets. When checking a manually entered price sequence, use the DCA presets. Neither calculator models the guide\u2019s separate interest-bearing waiting-cash account automatically."
+        ],
+        "table": {
+          "caption": "Original three-purchase sequences; $120 budget per purchase; all $360 available at the start",
+          "headers": [
+            "Prices / fee per purchase",
+            "DCA shares",
+            "DCA ending value",
+            "DCA gain / loss",
+            "DCA minus lump-sum value"
+          ],
+          "rows": [
+            [
+              "$12, $10, $8 / $0",
+              "37.000000",
+              "$296.00",
+              "-$64.00",
+              "$56.00"
+            ],
+            [
+              "$12, $10, $8 / $3",
+              "36.075000",
+              "$288.60",
+              "-$71.40",
+              "$50.60"
+            ],
+            [
+              "$12, $14, $16 / $0",
+              "26.071429",
+              "$417.14",
+              "$57.14",
+              "-$62.86"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/dca-calculator",
+            "label": "DCA Calculator: equal-dollar purchases"
+          },
+          {
+            "href": "/stock-average-calculator",
+            "label": "Stock Average Calculator: unequal purchase quantities"
+          }
         ]
       },
       {
@@ -3711,11 +3768,19 @@
       {
         "question": "Can the growth calculator reproduce the historical result?",
         "answer": "No. The presets check only constant-growth lump-sum and deposit arithmetic. Historical returns, changing market paths and the separate waiting-cash account need the research or an explicitly specified independent worksheet."
+      },
+      {
+        "question": "Can I now reproduce a manual share-price sequence?",
+        "answer": "Yes. The DCA Calculator accepts equal purchase budgets, one manual price per purchase, a fixed fee and a final comparison price. It supports fractional shares and does not fetch historical data. The new three-purchase examples are separate from the smooth twelve-month paths and the historical study."
+      },
+      {
+        "question": "Does the DCA Calculator include the waiting-cash interest example?",
+        "answer": "No. Its equal-budget comparison assumes idle cash earns zero interest. The earlier guide section that adds cash interest is a separate reconciliation. Do not add that interest to a calculator output while claiming it was modeled automatically."
       }
     ],
     "sources": [
       {
-        "title": "Vanguard Research: Cost averaging — invest now or temporarily hold your cash?",
+        "title": "Vanguard Research: Cost averaging \u2014 invest now or temporarily hold your cash?",
         "url": "https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf",
         "usedFor": "The dated historical comparison and its three-installment, one-year assumptions.",
         "scope": "The 2023 study is separate from our twelve-purchase hypothetical paths and is not a forecast."
@@ -3728,6 +3793,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/dca-calculator",
+        "label": "DCA Calculator"
+      },
       {
         "href": "/investment-calculator",
         "label": "Investment Calculator"
@@ -3796,11 +3865,47 @@
           "tax": 0,
           "inflation": 0
         }
+      },
+      {
+        "label": "Reproduce 37 shares, $296 value and a $64 loss",
+        "path": "/dca-calculator",
+        "mode": "prices",
+        "values": {
+          "budget": 120,
+          "fee": 0,
+          "prices": "12\n10\n8",
+          "terminal": 8
+        },
+        "caseKey": "dca-falling"
+      },
+      {
+        "label": "Reproduce the three-purchase fee sensitivity",
+        "path": "/dca-calculator",
+        "mode": "prices",
+        "values": {
+          "budget": 120,
+          "fee": 3,
+          "prices": "12\n10\n8",
+          "terminal": 8
+        },
+        "caseKey": "dca-falling-fee"
+      },
+      {
+        "label": "Reproduce a rising-price path that favors the lump sum",
+        "path": "/dca-calculator",
+        "mode": "prices",
+        "values": {
+          "budget": 120,
+          "fee": 0,
+          "prices": "12\n14\n16",
+          "terminal": 16
+        },
+        "caseKey": "dca-rising"
       }
     ],
     "limitations": [
       "The price paths are invented, smooth, dividend-free illustrations with fractional shares and full-precision calculations.",
-      "All $12,000 is available initially. Twelve $1,000 purchases occur at months 0–11, and valuation is at month 12.",
+      "All $12,000 is available initially. Twelve $1,000 purchases occur at months 0\u201311, and valuation is at month 12.",
       "Waiting cash earns either 0% or a hypothetical constant 3% effective annual yield. Interest is retained in cash; taxes and fees are excluded.",
       "The cited historical study uses different purchase timing and historical data. The article does not label the hypothetical examples as a backtest."
     ]

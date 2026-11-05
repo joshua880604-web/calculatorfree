@@ -1,0 +1,14 @@
+"Original hypothetical exchanges; all use $200,000 adjusted basis; before special recapture or basis adjustments"
+Scenario,Realized gain,Recognized gain,Deferred gain
+No cash received,"$300,000.00",$0.00,"$300,000.00"
+"$25,000 cash received","$300,000.00","$25,000.00","$275,000.00"
+Net liability relief,"$275,000.00","$25,000.00","$250,000.00"
+Cash plus qualifying expense,"$295,000.00","$20,000.00","$275,000.00"
+
+Ordinary calendar-day illustration; actual due date and any extension must be confirmed
+Milestone,Date
+"Transfer, day zero","November 5, 2026"
+45th day,"December 20, 2026"
+180th day,"May 4, 2027"
+Earlier receipt date if tax due April 15,"April 15, 2027"
+Earlier receipt date if tax due October 15,"May 4, 2027"

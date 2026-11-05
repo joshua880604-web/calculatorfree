@@ -1,0 +1,16 @@
+Keep these illustrative categories distinct
+Category,How it is funded in the model,Avoid double-counting
+Routine work,Separate annual expense budget,Do not repeat it as a component
+Future one-time replacement,Pooled reserve plus monthly contributions,Do not also include it in a full replacement allowance
+Due now,"Existing reserve, then immediate extra cash",Future monthly deposits cannot pay a bill due today
+
+"Original two-deadline example; $6,000 opening reserve; $250 deposited monthly; zero interest"
+Year,Opening reserve,Contributions,Replacement paid,Ending reserve
+1,"$6,000.00","$3,000.00","$6,000.00","$3,000.00"
+2,"$3,000.00","$3,000.00","$6,000.00",$0.00
+
+"Different planning methods and facts; amounts are alternatives, not components to sum"
+Scenario,Monthly future reserve,Monthly routine costs,Combined monthly budget,Immediate extra cash
+"1% allowance on $400,000",Included in allowance,Included in allowance,$333.33,Not modeled
+"Two quoted deadlines and $6,000 reserve",$250.00,$100.00,$350.00,$0.00
+Repair due now plus one future item,$100.00,$100.00,$200.00,$500.00

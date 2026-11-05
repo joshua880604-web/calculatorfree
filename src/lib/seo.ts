@@ -323,3 +323,8 @@ for(const path of ["/guides/", "/glossary/", "/loan-calculators.html", "/real-es
 
 contentUpdatedOn['/stock-average-calculator.html']='2026-11-05';
 contentUpdatedOn['/retirement-withdrawal-calculator.html']='2026-11-05';
+
+// New companion articles and concept examples reviewed with their stated model scope.
+contentUpdatedOn[glossaryPath]='2026-11-05';
+contentUpdatedOn[guidesPath]='2026-11-05';
+for(const slug of ['1031-exchange','1031-exchange-boot','credit-utilization','rule-of-72','capital-gains','dollar-cost-averaging','vacancy-rate'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-05';

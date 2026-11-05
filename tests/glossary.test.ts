@@ -33,12 +33,12 @@ test('DCA illustration uses share-weighted cost and shows the ending loss',()=>{
  const prices=[12,10,8],deposit=120,shares=prices.reduce((n,price)=>n+deposit/price,0);
  assert.equal(shares,37);assert.equal((360/shares).toFixed(2),'9.73');assert.equal(shares*8,296);assert.equal(360-shares*8,64);
  const term=glossaryTerms.find(term=>term.slug==='dollar-cost-averaging')!;
- assert.equal(term.example.calculator,undefined);assert.match(term.pitfall.text,/does not replay share prices/);
+ assert.equal(term.example.calculator?.id,'dca');assert.equal(term.example.calculator?.mode,'prices');assert.equal(term.example.calculator?.values.prices,'12\n10\n8');assert.match(term.pitfall.text,/manual equal-dollar purchase prices/);
 });
 test('Glossary structured data and sitemap describe real visible pages without invented authority',()=>{
  const config={origin:'https://www.calculatorfree.io',indexable:true};
  const entries=sitemapEntries(config),hub=glossarySchema(undefined,config);
- assert.equal(glossaryTerms.length,89);assert.equal(new Set(glossaryTerms.map(term=>term.slug)).size,glossaryTerms.length);
+ assert.equal(glossaryTerms.length,94);assert.equal(new Set(glossaryTerms.map(term=>term.slug)).size,glossaryTerms.length);
  assert.equal(hub['@graph'][0]['@type'],'DefinedTermSet');
  for(const term of glossaryTerms){
   assert.ok(entries.some(entry=>entry.url===config.origin+glossaryTermPath(term.slug)));

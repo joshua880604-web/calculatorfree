@@ -6,7 +6,7 @@ Financial calculators are the site's primary focus. The links below are a curate
 
 Interactive calculations run in the browser and require JavaScript. Default inputs and results are illustrations; estimates depend on the entered values, selected mode, timing, and rounding conventions. Future return and inflation presets are editable assumptions. General financial mathematics is not a jurisdiction-specific tax model; tax and retirement rules apply only to the jurisdictions and years stated on each page. Currency conversion uses a dated bundled reference snapshot or a manually entered rate. Consult the methodology and each tool's scope before interpreting a result.
 
-Navigation links checked: November 4, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
+Navigation links checked: November 5, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
 
 ## Start here
 
@@ -406,3 +406,17 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 - [FHA versus conventional loan](https://www.calculatorfree.io/guides/fha-vs-conventional-loan/): Compare matched purchase assumptions, insurance and five-year financing costs.
 - [IRR versus NPV](https://www.calculatorfree.io/guides/irr-vs-npv/): Original scale, discount-rate and multiple-root examples.
 - [Money factor](https://www.calculatorfree.io/glossary/money-factor/): Lease rent charges and approximate annual-rate conversions.
+
+## Calculator companion explanations
+
+- [How Does a 1031 Exchange Work? Boot, Basis & Deadlines](https://www.calculatorfree.io/guides/how-does-a-1031-exchange-work/): Stated assumptions, reproducible examples and source scope.
+- [How Much to Budget for Home Maintenance: Allowances & Reserves](https://www.calculatorfree.io/guides/how-much-to-budget-for-home-maintenance/): Stated assumptions, reproducible examples and source scope.
+- [How to Calculate Rental Vacancy Rate: Units, Days & Lost Rent](https://www.calculatorfree.io/guides/how-to-calculate-rental-vacancy-rate/): Stated assumptions, reproducible examples and source scope.
+- [How to Calculate Credit Utilization Across Multiple Cards](https://www.calculatorfree.io/guides/how-to-calculate-credit-utilization/): Stated assumptions, reproducible examples and source scope.
+- [How to Calculate Capital Gains Tax: U.S. 2025 & 2026 Examples](https://www.calculatorfree.io/guides/how-to-calculate-capital-gains-tax/): Stated assumptions, reproducible examples and source scope.
+
+- [1031 exchange](https://www.calculatorfree.io/glossary/1031-exchange/): Definition, worked example and related calculator.
+- [Boot in a 1031 exchange](https://www.calculatorfree.io/glossary/1031-exchange-boot/): Definition, worked example and related calculator.
+- [Credit utilization](https://www.calculatorfree.io/glossary/credit-utilization/): Definition, worked example and related calculator.
+- [Rule of 72](https://www.calculatorfree.io/glossary/rule-of-72/): Definition, worked example and related calculator.
+- [Capital gains](https://www.calculatorfree.io/glossary/capital-gains/): Definition, worked example and related calculator.

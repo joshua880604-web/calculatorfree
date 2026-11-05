@@ -1,0 +1,13 @@
+One hypothetical property measured in two ways; equal rent is assumed only for the loss scenarios
+Measure,Numerator,Denominator,Vacancy
+Current snapshot,2 vacant units,10 offered units,20%
+Full-year operating history,365 vacant unit-days,"3,650 available unit-days",10%
+
+"Period example only; $180,000 scheduled rent, uniform rent per unit-day, no concessions or recoveries"
+Reconciliation,Amount
+Scheduled rent,"$180,000.00"
+Vacancy rent loss,"$18,000.00"
+Additional uncollected occupied-unit rent,"$2,000.00"
+Rent remaining,"$160,000.00"
+Physical vacancy,10%
+Modeled combined rental loss,11.1111%

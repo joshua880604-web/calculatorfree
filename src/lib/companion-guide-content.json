@@ -1,0 +1,1320 @@
+{
+  "exchange-1031": {
+    "meta": {
+      "path": "/guides/how-does-a-1031-exchange-work/",
+      "title": "How Does a 1031 Exchange Work? Boot, Basis & Deadlines",
+      "heading": "How Does a 1031 Exchange Work? Boot, Basis & Deadlines",
+      "description": "Understand 1031 exchange deferral, cash and debt boot, adjusted basis and ordinary deadlines with worked examples and calculator inputs.",
+      "publishedOn": "2026-11-05",
+      "calculatorIds": [
+        "1031-exchange",
+        "capital-gains-tax",
+        "closing-cost",
+        "rental-property"
+      ],
+      "topic": "Housing & property",
+      "breadcrumb": "How Does a 1031 Exchange Work? Boot, Basis & Deadlines",
+      "cardIntro": "Understand 1031 exchange deferral, cash and debt boot, adjusted basis and ordinary deadlines with worked examples and calculator inputs.",
+      "format": "Guide & worked examples"
+    },
+    "answer": "A qualifying 1031 exchange generally postpones recognition of eligible real-property gain rather than erasing it. Cash received and net liability relief can create recognized gain. Establish qualification and the transaction structure first, then reconcile gain, boot and replacement basis; a numerical worksheet cannot make an otherwise ineligible sale qualify.",
+    "intro": "This guide explains a simplified federal real-property exchange model and where it stops. It is useful for checking numbers before a conversation with a qualified intermediary or tax professional. It is not transaction instructions, a tax return or an eligibility opinion. The examples assume qualifying property and exclude special recapture, mixed-property, principal-residence and state adjustments.",
+    "sections": [
+      {
+        "id": "qualification",
+        "title": "Begin with qualification, before the arithmetic",
+        "paragraphs": [
+          "Like-kind treatment generally concerns real property held for investment or productive business use. Property held primarily for sale and personal-use property raise different issues. The phrase like-kind is a tax classification, not a promise that any two properties can be swapped tax-free. A home with mixed personal and rental use requires analysis outside this worksheet.",
+          "For a deferred exchange, the arrangement and control of proceeds matter. Receiving or controlling sale cash before the necessary exchange arrangement may jeopardize qualification of the transaction, rather than merely produce the boot amount shown by a calculator. A later purchase alone does not turn an ordinary completed sale into an eligible exchange.",
+          "The IRS instructions include related-party, property-classification and reporting rules beyond the simplified calculations below. Confirm the facts with a qualified intermediary and tax professional before transferring property. The calculator assumes those threshold requirements are met; it does not check them."
+        ],
+        "links": [
+          {
+            "href": "https://www.irs.gov/instructions/i8824",
+            "label": "IRS Form 8824 instructions and deferred-exchange requirements"
+          },
+          {
+            "href": "/glossary/1031-exchange/",
+            "label": "1031 exchange definition"
+          }
+        ]
+      },
+      {
+        "id": "basis",
+        "title": "Keep adjusted basis, property value and mortgage balance separate",
+        "paragraphs": [
+          "Adjusted basis is the tax starting point after applicable adjustments, including depreciation. It is not necessarily the original purchase price, current market value or remaining loan balance. Using debt payoff as basis can materially distort gain even when the closing statement balances.",
+          "Our first hypothetical exchange gives up property with a $200,000 adjusted basis, receives replacement real property worth $500,000, has $150,000 of old debt relieved and assumes $150,000 of replacement debt. No separate cash or exchange expenses are included. In this simplified case, realized gain is $300,000. With no boot and no special recapture adjustment, recognized gain is zero and $300,000 remains deferred.",
+          "The replacement basis is $200,000, calculated as $500,000 replacement value less $300,000 deferred gain. That carried basis is why deferral is different from permanent exemption. Later depreciation and dispositions require their own basis and tax analysis."
+        ],
+        "formula": "Simplified replacement basis = replacement fair market value − deferred gain; unrecognized loss instead increases basis.",
+        "links": [
+          {
+            "href": "/glossary/cost-basis/",
+            "label": "Cost basis and acquisition cost are different concepts"
+          }
+        ]
+      },
+      {
+        "id": "boot",
+        "title": "Reconcile cash boot and net liability relief",
+        "paragraphs": [
+          "Cash received and net liability relief are separate parts of the simplified boot calculation. Debt assumed and additional new cash paid can offset liability relief. Taking on more debt does not by itself cancel cash received. The worksheet supports cash as its only non-like-kind asset; other property requires a wider analysis.",
+          "In the cash example, replacement value is $475,000 and cash received is $25,000, with the same $200,000 basis and equal $150,000 old and new debt. Realized gain is still $300,000. The simplified recognized amount is $25,000 and deferred gain is $275,000.",
+          "For the liability example, replacement value is $450,000, old debt relieved is $200,000, replacement debt is $125,000 and additional new cash paid is $50,000. Net liability relief is $25,000. With no cash received, realized gain is $275,000 and the simplified recognized amount is $25,000.",
+          "The final row adds $5,000 of confirmed qualifying exchange expenses to the cash example. The worksheet uses those expenses against the $25,000 cash boot once, leaving $20,000 recognized and $275,000 deferred. Loan costs, prorations and deposits must not automatically be classified as qualifying exchange expenses."
+        ],
+        "formula": "Net liability relief = max(0, debt relieved − liabilities assumed − additional cash paid). Recognized gain before special adjustments = min(positive realized gain, net boot).",
+        "table": {
+          "caption": "Original hypothetical exchanges; all use $200,000 adjusted basis; before special recapture or basis adjustments",
+          "headers": [
+            "Scenario",
+            "Realized gain",
+            "Recognized gain",
+            "Deferred gain"
+          ],
+          "rows": [
+            [
+              "No cash received",
+              "$300,000.00",
+              "$0.00",
+              "$300,000.00"
+            ],
+            [
+              "$25,000 cash received",
+              "$300,000.00",
+              "$25,000.00",
+              "$275,000.00"
+            ],
+            [
+              "Net liability relief",
+              "$275,000.00",
+              "$25,000.00",
+              "$250,000.00"
+            ],
+            [
+              "Cash plus qualifying expense",
+              "$295,000.00",
+              "$20,000.00",
+              "$275,000.00"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/glossary/1031-exchange-boot/",
+            "label": "Cash boot and liability relief explained"
+          }
+        ]
+      },
+      {
+        "id": "deadlines",
+        "title": "Check the earlier receipt deadline, not only day 180",
+        "paragraphs": [
+          "For an ordinary deferred exchange, replacement property generally must be identified within 45 days after transfer. Receipt generally must occur by the earlier of 180 days after transfer or the applicable tax-return due date including extensions. The transfer date is day zero in the date illustration.",
+          "With a November 5, 2026 transfer, the 45th calendar day is December 20, 2026 and the 180th is May 4, 2027. If the applicable return due date entered is April 15, 2027, the illustrated receipt deadline is April 15. If an applicable extension makes the entered date October 15, the 180-day date of May 4 is earlier. These are conditional date examples, not a determination of anyone’s actual return due date.",
+          "Written identification, permitted identified properties, special relief and other requirements remain separate. The date tool does not automatically move weekends or holidays or determine disaster relief. Confirm the actual legal deadlines and documentation instead of treating the generated dates as an eligibility certification."
+        ],
+        "table": {
+          "caption": "Ordinary calendar-day illustration; actual due date and any extension must be confirmed",
+          "headers": [
+            "Milestone",
+            "Date"
+          ],
+          "rows": [
+            [
+              "Transfer, day zero",
+              "November 5, 2026"
+            ],
+            [
+              "45th day",
+              "December 20, 2026"
+            ],
+            [
+              "180th day",
+              "May 4, 2027"
+            ],
+            [
+              "Earlier receipt date if tax due April 15",
+              "April 15, 2027"
+            ],
+            [
+              "Earlier receipt date if tax due October 15",
+              "May 4, 2027"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/1031-exchange-calculator?mode=deadlines",
+            "label": "Open the separate deadline worksheet"
+          }
+        ]
+      },
+      {
+        "id": "review",
+        "title": "What to verify before relying on a result",
+        "paragraphs": [
+          "Ask the professional handling the transaction to reconcile adjusted basis, the real property included, liabilities assumed and relieved, cash outside the exchange and the classification of each expense. The simplified tool does not reconstruct a depreciation schedule or handle every Form 8824 line.",
+          "Additional ordinary-income recapture, section 1245/1250 classifications, related parties, mixed home use, non-like-kind assets, reverse or improvement exchanges, installment reporting and state conformity can change the result. A positive recognized gain is not automatically taxed at one long-term rate, and zero simplified boot is not proof of zero current tax.",
+          "The linked Capital Gains Tax Calculator is a separate general-capital-asset illustration. It does not extend this exchange model into a property-sale return or calculate depreciation recapture. Use each model within its stated boundary."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is a 1031 exchange permanently tax-free?",
+        "answer": "Generally it is a deferral mechanism for eligible gain. The replacement basis reflects deferred gain and can affect later depreciation and disposition. This guide does not calculate estate consequences or other ways a later event might change tax treatment."
+      },
+      {
+        "question": "Can I use a mortgage balance as my adjusted basis?",
+        "answer": "No. Debt and adjusted basis serve different roles. Use an advisor-confirmed adjusted basis after depreciation and other applicable adjustments, and enter liabilities separately."
+      },
+      {
+        "question": "Does taking out a bigger replacement loan eliminate cash boot?",
+        "answer": "Taking on debt can offset liability relief, but does not automatically offset separately received cash. Confirm the complete consideration and expense classification instead of netting all cash and debt into one number."
+      },
+      {
+        "question": "Does a qualified intermediary guarantee the exchange qualifies?",
+        "answer": "No numerical result or professional role alone establishes every legal requirement. Property, control of proceeds, identification, timing and reporting all need review. This guide cannot certify compliance."
+      },
+      {
+        "question": "What if I miss the 45-day or receipt deadline?",
+        "answer": "The consequences depend on the actual requirements and any applicable special relief. The ordinary date tool does not determine an exception or repair a missed requirement. Obtain qualified advice promptly rather than assuming the displayed tax estimate remains valid."
+      }
+    ],
+    "sources": [
+      {
+        "title": "IRS Form 8824 instructions",
+        "url": "https://www.irs.gov/instructions/i8824",
+        "usedFor": "Eligibility context, ordinary deferred-exchange dates, liability and cash treatment, and the scope of Form 8824.",
+        "scope": "Special rules and additional recapture can change the simplified examples."
+      },
+      {
+        "title": "IRS Publication 544",
+        "url": "https://www.irs.gov/publications/p544",
+        "usedFor": "Like-kind exchange concepts, recognized versus realized gain and replacement basis.",
+        "scope": "Publication guidance is broader than this one-property worksheet."
+      }
+    ],
+    "related": [
+      {
+        "href": "/1031-exchange-calculator",
+        "label": "1031 Exchange Calculator"
+      },
+      {
+        "href": "/glossary/1031-exchange/",
+        "label": "1031 exchange"
+      },
+      {
+        "href": "/glossary/1031-exchange-boot/",
+        "label": "Exchange boot"
+      },
+      {
+        "href": "/glossary/cost-basis/",
+        "label": "Adjusted basis context"
+      },
+      {
+        "href": "/guides/how-to-calculate-capital-gains-tax/",
+        "label": "Scope of the general capital-gains worksheet"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the no-cash simplified exchange",
+        "path": "/1031-exchange-calculator",
+        "mode": "exchange",
+        "values": {
+          "basis": 200000,
+          "replacement": 500000,
+          "cash_received": 0,
+          "debt_relieved": 150000,
+          "debt_assumed": 150000,
+          "cash_paid": 0,
+          "expenses": 0
+        },
+        "caseKey": "exchange-full"
+      },
+      {
+        "label": "Reproduce the $25,000 cash-boot example",
+        "path": "/1031-exchange-calculator",
+        "mode": "exchange",
+        "values": {
+          "basis": 200000,
+          "replacement": 475000,
+          "cash_received": 25000,
+          "debt_relieved": 150000,
+          "debt_assumed": 150000,
+          "cash_paid": 0,
+          "expenses": 0
+        },
+        "caseKey": "exchange-cash"
+      },
+      {
+        "label": "Reproduce net liability relief after additional cash",
+        "path": "/1031-exchange-calculator",
+        "mode": "exchange",
+        "values": {
+          "basis": 200000,
+          "replacement": 450000,
+          "cash_received": 0,
+          "debt_relieved": 200000,
+          "debt_assumed": 125000,
+          "cash_paid": 50000,
+          "expenses": 0
+        },
+        "caseKey": "exchange-debt"
+      },
+      {
+        "label": "Reproduce one qualifying expense allocation",
+        "path": "/1031-exchange-calculator",
+        "mode": "exchange",
+        "values": {
+          "basis": 200000,
+          "replacement": 475000,
+          "cash_received": 25000,
+          "debt_relieved": 150000,
+          "debt_assumed": 150000,
+          "cash_paid": 0,
+          "expenses": 5000
+        },
+        "caseKey": "exchange-expense"
+      },
+      {
+        "label": "Check only the November 5 transfer dates with an assumed October 15 return due date",
+        "path": "/1031-exchange-calculator",
+        "mode": "deadlines",
+        "values": {
+          "transfer": "2026-11-05",
+          "tax_due": "2027-10-15"
+        }
+      }
+    ],
+    "limitations": [
+      "Assumed qualifying real property, with cash as the only non-like-kind consideration. No eligibility or actual transaction structure is validated.",
+      "No special depreciation recapture, principal-residence exclusion, related-party, reverse-exchange, installment or state-tax calculation.",
+      "Qualifying expenses must be classified externally; a generated receipt date is not legal deadline advice."
+    ]
+  },
+  "maintenance-budget": {
+    "meta": {
+      "path": "/guides/how-much-to-budget-for-home-maintenance/",
+      "title": "How Much to Budget for Home Maintenance: Allowances & Reserves",
+      "heading": "How Much to Budget for Home Maintenance: Allowances & Reserves",
+      "description": "Compare a home-value maintenance allowance with a pooled replacement reserve. Separate routine costs, future quotes and repairs due now.",
+      "publishedOn": "2026-11-05",
+      "calculatorIds": [
+        "home-maintenance-cost",
+        "budget",
+        "emergency-fund",
+        "house-affordability"
+      ],
+      "topic": "Housing & property",
+      "breadcrumb": "How Much to Budget for Home Maintenance: Allowances & Reserves",
+      "cardIntro": "Compare a home-value maintenance allowance with a pooled replacement reserve. Separate routine costs, future quotes and repairs due now.",
+      "format": "Guide & worked examples"
+    },
+    "answer": "Build a maintenance budget by separating routine work, planned replacements and repairs that need cash now. A percentage of home value can be a starting allowance, while a component list with costs and deadlines supports a more specific reserve. Compare the methods as alternatives and avoid counting the same replacement in both.",
+    "intro": "This guide uses an illustrative $400,000 home and separate hypothetical repair quotes. None is a local contractor estimate or a prediction of useful life. The purpose is to make funding assumptions visible, so you can replace them with inspection findings, actual service history and quotes for your property.",
+    "sections": [
+      {
+        "id": "allowance",
+        "title": "Start with an allowance, then test its fit",
+        "paragraphs": [
+          "Fannie Mae presents a home-value percentage as a maintenance-and-repair budgeting rule of thumb. A rule can help create an initial savings category, but the value of land, location and market appreciation need not move with the cost of a roof or water heater. A percentage is not a property-specific estimate.",
+          "At a selected 1% allowance on $400,000, the first-year budget is $4,000, or $333.33 per month. A 2% scenario would be $8,000, or $666.67 per month. These are editable alternatives, not a range this guide recommends for every home.",
+          "The allowance mode can increase a budget after each completed year by an entered cost assumption. It does not forecast home appreciation or track reserve cash. If you instead use component quotes covering the same replacements, do not add their full savings requirements to an allowance that already includes them."
+        ],
+        "formula": "First-year annual allowance = home value used for budgeting × entered rate; monthly equivalent = annual allowance / 12."
+      },
+      {
+        "id": "categories",
+        "title": "Make three separate cost lists",
+        "paragraphs": [
+          "Routine maintenance covers recurring work you expect to pay from the current budget. Component replacements are larger one-time costs assigned future due years. Work due immediately is a cash requirement today, even if you wish you had saved for it gradually.",
+          "Keep property taxes, insurance, mortgage payments, utilities, HOA dues and discretionary remodeling in their own categories. An HOA assessment or insurance reimbursement can affect the amount you personally need, but the worksheet does not look up coverage or allocate costs between an owner and an association.",
+          "For each future component, enter the estimated amount at its due date and a whole number of years until payment. The component mode does not automatically inflate today’s quote or replace the same component repeatedly. A five-year estimate and a ten-year estimate therefore imply different funding deadlines, even when the dollar quotes match."
+        ],
+        "table": {
+          "caption": "Keep these illustrative categories distinct",
+          "headers": [
+            "Category",
+            "How it is funded in the model",
+            "Avoid double-counting"
+          ],
+          "rows": [
+            [
+              "Routine work",
+              "Separate annual expense budget",
+              "Do not repeat it as a component"
+            ],
+            [
+              "Future one-time replacement",
+              "Pooled reserve plus monthly contributions",
+              "Do not also include it in a full replacement allowance"
+            ],
+            [
+              "Due now",
+              "Existing reserve, then immediate extra cash",
+              "Future monthly deposits cannot pay a bill due today"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/glossary/capital-expenditure/",
+            "label": "Capital expenditure and operating costs"
+          }
+        ]
+      },
+      {
+        "id": "pooled",
+        "title": "A pooled reserve must meet every deadline",
+        "paragraphs": [
+          "Assume $6,000 is already reserved, one replacement costing $6,000 is due at the end of year one, and another $6,000 replacement is due at the end of year two. There is no interest or price increase, and each component is paid once.",
+          "The first deadline is already covered by the opening reserve. By the second deadline, total due costs are $12,000, leaving $6,000 to accumulate over 24 months. A constant $250 monthly contribution meets both deadlines. Dividing every component cost by its own years and adding the results would ignore the existing pooled cash.",
+          "At the end of year one, $6,000 opening cash plus $3,000 contributions less the first $6,000 payment leaves $3,000. A further $3,000 is added in year two and pays the second replacement. If routine costs are separately $1,200 per year, add $100 per month for them: the combined monthly budget is $350."
+        ],
+        "formula": "Required constant monthly reserve contribution = largest positive cumulative funding gap / months until the corresponding deadline.",
+        "table": {
+          "caption": "Original two-deadline example; $6,000 opening reserve; $250 deposited monthly; zero interest",
+          "headers": [
+            "Year",
+            "Opening reserve",
+            "Contributions",
+            "Replacement paid",
+            "Ending reserve"
+          ],
+          "rows": [
+            [
+              "1",
+              "$6,000.00",
+              "$3,000.00",
+              "$6,000.00",
+              "$3,000.00"
+            ],
+            [
+              "2",
+              "$3,000.00",
+              "$3,000.00",
+              "$6,000.00",
+              "$0.00"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/home-maintenance-cost-calculator?mode=components",
+            "label": "Try the pooled component reserve"
+          }
+        ]
+      },
+      {
+        "id": "immediate",
+        "title": "A repair due now needs a separate cash answer",
+        "paragraphs": [
+          "Consider a $1,000 repair due now with only $500 reserved. The immediate shortfall is $500. If another $1,200 item is due in one year, future saving for that item is $100 per month after the immediate shortage is separately funded.",
+          "With the same $1,200 annual routine budget, that second scenario requires $200 per month for future reserve contributions plus routine work, and $500 now. Calling it only a $200 monthly problem would leave today’s bill unfunded.",
+          "The calculator displays the immediate shortfall separately and begins the future reserve schedule after year-zero work is dealt with. It does not assume borrowing, a credit line, delayed repair or a reimbursement. Those alternatives require their own terms and risks."
+        ],
+        "table": {
+          "caption": "Different planning methods and facts; amounts are alternatives, not components to sum",
+          "headers": [
+            "Scenario",
+            "Monthly future reserve",
+            "Monthly routine costs",
+            "Combined monthly budget",
+            "Immediate extra cash"
+          ],
+          "rows": [
+            [
+              "1% allowance on $400,000",
+              "Included in allowance",
+              "Included in allowance",
+              "$333.33",
+              "Not modeled"
+            ],
+            [
+              "Two quoted deadlines and $6,000 reserve",
+              "$250.00",
+              "$100.00",
+              "$350.00",
+              "$0.00"
+            ],
+            [
+              "Repair due now plus one future item",
+              "$100.00",
+              "$100.00",
+              "$200.00",
+              "$500.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "update",
+        "title": "Update the plan with property-specific information",
+        "paragraphs": [
+          "Review inspection results, maintenance history, warranty terms and current quotes before choosing due dates. A model cannot infer the remaining useful life of an appliance from the home’s price. Keep a separately identified buffer for uncertainty if your own plan calls for one; no universal buffer is embedded here.",
+          "Revisit the schedule when you complete work, receive a new quote, change an assumed due year or use reserve cash for another purpose. A constant monthly contribution that worked before a surprise expense may no longer meet the remaining deadlines.",
+          "The allowance and component worksheets are budgeting tools. They do not determine tax deductions, depreciation, insured losses, homeowner obligations or a professional reserve-study conclusion."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is 1% of home value enough for maintenance?",
+        "answer": "Not for every property. It is an illustrative allowance, while actual needs depend on the building, existing components and local quotes. Test its fit against a cost list instead of treating it as a guarantee."
+      },
+      {
+        "question": "Should I add the allowance and replacement reserve together?",
+        "answer": "Only add distinct costs. A general allowance may already cover replacements. The component worksheet separately combines routine costs and quoted one-time replacements so the same item is not included twice."
+      },
+      {
+        "question": "Why does the pooled reserve use the largest deadline gap?",
+        "answer": "A constant contribution must leave enough cumulative cash at every due date, not only at the final horizon. The binding deadline is the one requiring the largest monthly deposit after accounting for available starting reserve."
+      },
+      {
+        "question": "Do future quotes rise automatically with inflation?",
+        "answer": "Not in component mode. Enter future dollar costs at their due years. Allowance mode can increase the allowance separately, but that does not also inflate component quotes."
+      },
+      {
+        "question": "Does reserve cash earn interest in the table?",
+        "answer": "No. These examples use zero interest and month-end contributions. Interest, taxes, uncertain investment returns and borrowing are outside the model."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Fannie Mae: building a maintenance and repair budget",
+        "url": "https://yourhome.fanniemae.com/own/how-build-your-maintenance-and-repair-budget",
+        "usedFor": "Context for a general maintenance allowance and cash reserves.",
+        "scope": "The property-specific amounts and pooled-reserve arithmetic are original scenarios, not Fannie Mae quotes."
+      },
+      {
+        "title": "Fannie Mae: regular home maintenance",
+        "url": "https://yourhome.fanniemae.com/own/regular-home-maintenance",
+        "usedFor": "Routine maintenance planning and keeping a schedule.",
+        "scope": "The source does not determine component costs or remaining useful lives for your property."
+      }
+    ],
+    "related": [
+      {
+        "href": "/home-maintenance-cost-calculator",
+        "label": "Home Maintenance Cost Calculator"
+      },
+      {
+        "href": "/glossary/capital-expenditure/",
+        "label": "Capital expenditure"
+      },
+      {
+        "href": "/budget-calculator",
+        "label": "Monthly Budget Calculator"
+      },
+      {
+        "href": "/guides/how-much-emergency-fund-should-i-have/",
+        "label": "Emergency cash is a separate planning question"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the $4,000 first-year allowance",
+        "path": "/home-maintenance-cost-calculator",
+        "mode": "allowance",
+        "values": {
+          "home_value": 400000,
+          "rate": 1,
+          "increase": 0,
+          "years": 1
+        },
+        "caseKey": "maintenance-percent"
+      },
+      {
+        "label": "Reproduce the $250 pooled reserve and $350 combined budget",
+        "path": "/home-maintenance-cost-calculator",
+        "mode": "components",
+        "values": {
+          "routine": 1200,
+          "reserve": 6000,
+          "components": "First replacement, 6000, 1\nSecond replacement, 6000, 2"
+        },
+        "caseKey": "maintenance-pool"
+      },
+      {
+        "label": "Reproduce the separate $500 immediate cash gap",
+        "path": "/home-maintenance-cost-calculator",
+        "mode": "components",
+        "values": {
+          "routine": 1200,
+          "reserve": 500,
+          "components": "Due now, 1000, 0\nDue next year, 1200, 1"
+        },
+        "caseKey": "maintenance-now"
+      }
+    ],
+    "limitations": [
+      "Hypothetical future quotes and whole-year deadlines; no local prices or inspections.",
+      "Routine costs are paid outside the replacement reserve; components are paid once; no interest or borrowing.",
+      "The allowance and component totals are alternative approaches when they cover the same work."
+    ]
+  },
+  "rental-vacancy": {
+    "meta": {
+      "path": "/guides/how-to-calculate-rental-vacancy-rate/",
+      "title": "How to Calculate Rental Vacancy Rate: Units, Days & Lost Rent",
+      "heading": "How to Calculate Rental Vacancy Rate: Units, Days & Lost Rent",
+      "description": "Calculate snapshot and unit-day rental vacancy, distinguish physical vacancy from revenue loss, and avoid counting unpaid rent twice.",
+      "publishedOn": "2026-11-05",
+      "calculatorIds": [
+        "vacancy-rate",
+        "noi",
+        "rental-property",
+        "cash-on-cash-return"
+      ],
+      "topic": "Housing & property",
+      "breadcrumb": "How to Calculate Rental Vacancy Rate: Units, Days & Lost Rent",
+      "cardIntro": "Calculate snapshot and unit-day rental vacancy, distinguish physical vacancy from revenue loss, and avoid counting unpaid rent twice.",
+      "format": "Guide & worked examples"
+    },
+    "answer": "For a snapshot, divide vacant units by offered units. For a period, divide vacant unit-days by available unit-days. Both are physical measures. A percentage of lost rent can differ when rents vary, occupied tenants do not pay, concessions apply or inventory definitions change.",
+    "intro": "The same ten-unit property can be 20% vacant today and have 10% physical vacancy across the year. Neither figure is automatically wrong; each describes a different denominator and time window. Start by naming what you measured before inserting a rate into an income or cash-flow forecast.",
+    "sections": [
+      {
+        "id": "snapshot",
+        "title": "A snapshot describes one point in time",
+        "paragraphs": [
+          "If two of ten offered units are vacant on the measurement date, snapshot vacancy is 20% and occupancy is 80%. Count units using one operating scope. Do not include a unit in the denominator while quietly excluding its vacancy from the numerator.",
+          "At a uniform scheduled rent of $1,500 per unit per month, the calculator’s snapshot scenario annualizes the two vacant units to $36,000 of lost rent. That is not a record of the year. It assumes the same fraction persists for twelve months and rent stays equal.",
+          "A current lease-up, seasonal turnover or a major renovation can make the snapshot a poor annual planning assumption. Use a period measure when you have the relevant occupancy history, and label any future vacancy input as an assumption."
+        ],
+        "formula": "Snapshot physical vacancy = vacant units / units offered at that date × 100%."
+      },
+      {
+        "id": "unit-days",
+        "title": "A period measure weights vacancies by time",
+        "paragraphs": [
+          "One unit available for one day contributes one unit-day. Ten included units available for 365 days provide 3,650 available unit-days. A total of 365 vacant unit-days is 10% vacancy, whether concentrated in one unit for a year or spread across shorter gaps.",
+          "This can coexist with two vacant units on the final date. The snapshot shows current conditions; the period ratio records the share of available capacity unused over the chosen period. Use the same period for the rent budget you compare with it.",
+          "If some units are unavailable for part of the year, define that treatment explicitly. Remove the same unit-days consistently from numerator and denominator when they fall outside your operating scope. This worksheet accepts your totals; it does not audit a rent roll or select a statistical inventory definition."
+        ],
+        "formula": "Period physical vacancy = vacant unit-days / available unit-days × 100%.",
+        "table": {
+          "caption": "One hypothetical property measured in two ways; equal rent is assumed only for the loss scenarios",
+          "headers": [
+            "Measure",
+            "Numerator",
+            "Denominator",
+            "Vacancy"
+          ],
+          "rows": [
+            [
+              "Current snapshot",
+              "2 vacant units",
+              "10 offered units",
+              "20%"
+            ],
+            [
+              "Full-year operating history",
+              "365 vacant unit-days",
+              "3,650 available unit-days",
+              "10%"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/glossary/vacancy-rate/",
+            "label": "Vacancy rate definition and period assumptions"
+          }
+        ]
+      },
+      {
+        "id": "loss",
+        "title": "Convert physical vacancy to rent loss carefully",
+        "paragraphs": [
+          "For the period example, full scheduled rent is $180,000. Under a uniform-rent assumption, 10% physical vacancy corresponds to $18,000 of vacancy rent loss. If an additional $2,000 of occupied-unit rent is uncollected, modeled rent after both losses is $160,000.",
+          "The combined $20,000 loss is 11.1111% of scheduled rent, even though physical vacancy is 10%. That economic loss rate in the worksheet covers only its two entered categories. It is not a complete economic-vacancy ledger including every concession, recovery or fee.",
+          "Unequal rents can produce a larger difference. If one of two units is vacant and its scheduled rent is $2,000 while the occupied unit rents for $1,000, physical vacancy is 50% but vacant-unit rent is two-thirds of the $3,000 schedule. The calculator’s uniform-rent conversion cannot reproduce that unequal-rent loss automatically; use the actual rent amounts for that separate analysis."
+        ],
+        "table": {
+          "caption": "Period example only; $180,000 scheduled rent, uniform rent per unit-day, no concessions or recoveries",
+          "headers": [
+            "Reconciliation",
+            "Amount"
+          ],
+          "rows": [
+            [
+              "Scheduled rent",
+              "$180,000.00"
+            ],
+            [
+              "Vacancy rent loss",
+              "$18,000.00"
+            ],
+            [
+              "Additional uncollected occupied-unit rent",
+              "$2,000.00"
+            ],
+            [
+              "Rent remaining",
+              "$160,000.00"
+            ],
+            [
+              "Physical vacancy",
+              "10%"
+            ],
+            [
+              "Modeled combined rental loss",
+              "11.1111%"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "double-count",
+        "title": "Count a vacancy or collection loss once",
+        "paragraphs": [
+          "Begin with potential scheduled rent before the losses modeled in your chosen tool. If you start with rent already reduced for vacant units and then apply the same vacancy percentage, you remove the vacancy twice. Similarly, occupied-unit bad debt should not include rent already excluded for vacancy.",
+          "After calculating rent after losses, subtract correctly classified operating expenses to reach NOI. Financing, capital replacements and owner income tax are separate measures. Rental Property, NOI and cash-on-cash tools can use different input conventions, so check the label rather than moving one percentage between them without adjustment.",
+          "For a prospective purchase, distinguish observed history from a future budget assumption. A regional rate can inform research but does not establish a specific property’s coming turnover or collection experience. Property type, rent levels, condition and local leasing conditions still matter."
+        ],
+        "links": [
+          {
+            "href": "/noi-calculator",
+            "label": "NOI Calculator"
+          },
+          {
+            "href": "/guides/how-to-calculate-rental-property-cash-flow/",
+            "label": "Continue from rental income to cash flow"
+          }
+        ]
+      },
+      {
+        "id": "market",
+        "title": "Keep market statistics in their own scope",
+        "paragraphs": [
+          "The Census rental-vacancy definition concerns a specified rental inventory and survey method. A landlord’s selected unit-day worksheet is not an official Census statistic, and a market figure is not a personalized loss forecast.",
+          "This guide cites the Census definitions for conceptual context only. It does not publish a current local or national vacancy rate. To compare a benchmark with your own measure, first check its date, geography, unit coverage and treatment of units awaiting occupancy or unavailable for rent."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Should I use vacant units or vacant days?",
+        "answer": "Use vacant units for a current snapshot and vacant unit-days for a reporting period. The numerator and denominator must use matching inventory and dates. A snapshot cannot silently stand in for a measured annual rate."
+      },
+      {
+        "question": "Do vacancies during renovations count?",
+        "answer": "That depends on the operating scope you are measuring. State whether the units and days are offered or unavailable, and treat them consistently in both counts. The calculator does not choose that accounting or survey definition for you."
+      },
+      {
+        "question": "Is economic vacancy equal to physical vacancy?",
+        "answer": "Not necessarily. Rent differences, concessions, occupied-unit bad debt and recoveries can change revenue losses. The calculator’s economic loss rate is limited to its uniform-rent vacancy estimate plus separately entered uncollected rent."
+      },
+      {
+        "question": "Where should unpaid rent be entered?",
+        "answer": "In period mode, enter additional uncollected rent on occupied units after the modeled vacancy loss. Do not include the same vacant-unit rent again, or the loss will be counted twice."
+      },
+      {
+        "question": "What is a good rental vacancy rate?",
+        "answer": "This worksheet does not establish a universal target. Review the property’s history, comparable inventory and local leasing conditions, and test more than one future assumption. A low snapshot rate does not guarantee annual cash flow."
+      }
+    ],
+    "sources": [
+      {
+        "title": "U.S. Census Bureau: housing vacancy definitions",
+        "url": "https://www.census.gov/housing/hvs/definitions.html",
+        "usedFor": "Inventory and statistical vacancy concepts.",
+        "scope": "Archived definition context, not a current local rate or a landlord unit-day survey."
+      },
+      {
+        "title": "St. Louis Fed FRED: rental vacancy series definition",
+        "url": "https://fred.stlouisfed.org/data/RRVRUSQ156N",
+        "usedFor": "The distinction between a population rental-inventory statistic and property-level assumptions.",
+        "scope": "No current rate from this series is asserted in the examples."
+      }
+    ],
+    "related": [
+      {
+        "href": "/vacancy-rate-calculator",
+        "label": "Vacancy Rate Calculator"
+      },
+      {
+        "href": "/glossary/vacancy-rate/",
+        "label": "Vacancy rate"
+      },
+      {
+        "href": "/glossary/net-operating-income/",
+        "label": "Net operating income"
+      },
+      {
+        "href": "/rental-property-calculator",
+        "label": "Rental Property Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the two-of-ten snapshot",
+        "path": "/vacancy-rate-calculator",
+        "mode": "snapshot",
+        "values": {
+          "units": 10,
+          "vacant": 2,
+          "rent": 1500
+        },
+        "caseKey": "vacancy-snapshot"
+      },
+      {
+        "label": "Reproduce unit-day vacancy and separate collection loss",
+        "path": "/vacancy-rate-calculator",
+        "mode": "period",
+        "values": {
+          "available_days": 3650,
+          "vacant_days": 365,
+          "scheduled_rent": 180000,
+          "uncollected": 2000
+        },
+        "caseKey": "vacancy-period"
+      }
+    ],
+    "limitations": [
+      "Uniform rent per unit or unit-day in the calculator’s vacancy-to-rent conversion.",
+      "Additional occupied-unit collection loss is separate; no concessions, recoveries, seasonality or local data lookup.",
+      "Current snapshots, historical period ratios and future loss allowances answer different questions."
+    ]
+  },
+  "credit-utilization": {
+    "meta": {
+      "path": "/guides/how-to-calculate-credit-utilization/",
+      "title": "How to Calculate Credit Utilization Across Multiple Cards",
+      "heading": "How to Calculate Credit Utilization Across Multiple Cards",
+      "description": "Calculate overall and per-card utilization, compare two payment targets, and distinguish balance arithmetic from credit score predictions.",
+      "publishedOn": "2026-11-05",
+      "calculatorIds": [
+        "credit-utilization",
+        "credit-card",
+        "balance-transfer",
+        "credit-card-minimum-payment"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "How to Calculate Credit Utilization Across Multiple Cards",
+      "cardIntro": "Calculate overall and per-card utilization, compare two payment targets, and distinguish balance arithmetic from credit score predictions.",
+      "format": "Guide & worked examples"
+    },
+    "answer": "Overall credit utilization is total included revolving balances divided by total included credit limits. It is weighted by limits, rather than a simple average of card percentages. Meeting an overall target does not mean every card meets that target, and no target percentage guarantees a credit score.",
+    "intro": "This guide uses invented balances on open revolving cards to explain the arithmetic. It does not access a credit report or predict the effect of a payment. Use balances and limits for a consistent reporting date, and keep paying obligations and interest-cost decisions separate from a ratio illustration.",
+    "sections": [
+      {
+        "id": "inputs",
+        "title": "Choose balances and limits for the same question",
+        "paragraphs": [
+          "For a reported-credit scenario, use balances and limits actually shown on the relevant reports or issuer reporting information. A current account balance, statement balance and reported balance can be different snapshots. This calculator does not know which date an issuer will report.",
+          "Enter revolving credit cards rather than mixing installment principal, mortgage balances and charge accounts into one denominator. Keep account numbers and other personal identifiers out of the worksheet; it needs only balances and limits.",
+          "A zero limit creates an undefined ratio for that card. The calculator keeps its entered balance in the combined arithmetic, but that is not a statement about how a scoring model classifies a closed, zero-limit or otherwise unusual account. Check the real account treatment separately."
+        ],
+        "formula": "Overall utilization = sum of reported revolving balances / sum of included credit limits × 100%."
+      },
+      {
+        "id": "weighted",
+        "title": "Do not average the individual percentages",
+        "paragraphs": [
+          "Card A has a $900 balance and a $1,000 limit, or 90% utilization. Card B has a $100 balance and a $9,000 limit, or about 1.1111%. Combined balances are $1,000 and combined limits are $10,000, giving 10% overall utilization.",
+          "The simple average of 90% and 1.1111% is about 45.5556%, which is not the overall ratio. That average gives the small-limit and large-limit accounts equal weight. Summing balances and limits first answers the aggregate question correctly.",
+          "The combined 10% also does not make Card A a 10%-used account. Displaying each row helps keep that distinction visible when comparing payment scenarios."
+        ],
+        "table": {
+          "caption": "Original two-card example; reported figures assumed to share one date",
+          "headers": [
+            "Card",
+            "Balance",
+            "Limit",
+            "Individual utilization"
+          ],
+          "rows": [
+            [
+              "A",
+              "$900.00",
+              "$1,000.00",
+              "90%"
+            ],
+            [
+              "B",
+              "$100.00",
+              "$9,000.00",
+              "1.1111%"
+            ],
+            [
+              "Combined",
+              "$1,000.00",
+              "$10,000.00",
+              "10%"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "targets",
+        "title": "Overall and per-card payment targets can differ",
+        "paragraphs": [
+          "At an illustrative 10% overall target, the two-card example needs no aggregate balance reduction: $1,000 already equals 10% of $10,000. To bring every card to 10%, however, Card A must fall to $100, requiring an $800 payment. Card B is already below its own $900 target balance.",
+          "The per-card total can therefore exceed the payment needed for the overall target. The aggregate result is a dollar requirement without an allocation recommendation. It does not say to move a balance, close an account, obtain a higher limit or prioritize one creditor over another.",
+          "For a second example, balances of $1,500 and $500 against two $5,000 limits produce 20% overall utilization. Bringing the combined balance to 10% requires $1,000. Paying $1,000 to the first card also brings each card to 10% in this particular example. Agreement in one example is not a general rule."
+        ],
+        "formula": "Overall target payment = max(0, total balance − total limit × target fraction). Per-card payment = sum of max(0, each balance − each limit × target fraction).",
+        "table": {
+          "caption": "No new spending, fees or interest; chosen 10% target is illustrative",
+          "headers": [
+            "Starting balances / limits",
+            "Overall ratio",
+            "Payment for overall target",
+            "Payment for every card target"
+          ],
+          "rows": [
+            [
+              "$900/$1,000 and $100/$9,000",
+              "10%",
+              "$0.00",
+              "$800.00"
+            ],
+            [
+              "$1,500/$5,000 and $500/$5,000",
+              "20%",
+              "$1,000.00",
+              "$1,000.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "score",
+        "title": "A percentage is not a score promise",
+        "paragraphs": [
+          "The CFPB advises keeping credit use low and notes commonly discussed percentage guidelines. Those are not a universal scoring switch. Credit scores reflect multiple factors, and a model may consider individual accounts differently from the combined number.",
+          "Carrying an interest-bearing balance is not necessary merely to demonstrate utilization. A selected ratio target does not replace paying on time, reviewing statements or understanding the interest and minimum-payment terms of an account.",
+          "This calculator does not estimate points gained or lost, lender approval or the date a payment reaches a report. Different reports, models, limits and future transactions can produce different observed results from the same payment."
+        ],
+        "links": [
+          {
+            "href": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-keep-a-good-credit-score-en-318/",
+            "label": "CFPB guidance on credit use and repayment"
+          },
+          {
+            "href": "/glossary/credit-utilization/",
+            "label": "Credit utilization terminology"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Separate ratio planning from debt repayment cost",
+        "paragraphs": [
+          "Paying enough to meet a ratio does not necessarily pay off the debt or stop interest. Use the payoff or minimum-payment tools to examine a repayment budget and borrowing costs. If comparing a balance transfer, include its fees and terms rather than assuming a lower displayed ratio makes the transfer beneficial.",
+          "New purchases, interest, fees and a changed limit can alter the ratio after the modeled payment. Recalculate with the numbers appropriate to the later date. Keep emergency cash and payment affordability in the wider household decision; the utilization calculation alone does not answer those questions."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is overall utilization the average of card percentages?",
+        "answer": "No. Add included balances and limits separately and divide the totals. A simple average gives accounts with very different limits equal weight and can materially misstate the overall ratio."
+      },
+      {
+        "question": "Why does the per-card target require a larger payment?",
+        "answer": "A combined target can be met using unused capacity elsewhere, while an individual target applies to each account. The $900/$1,000 example needs $800 on that card for a 10% individual target even though the combined ratio is already 10%."
+      },
+      {
+        "question": "Is 30% a guaranteed scoring cutoff?",
+        "answer": "No. It is a common guideline, not a universal score boundary or a recommendation to carry debt. The calculator’s target is editable and no score effect is predicted."
+      },
+      {
+        "question": "Will paying today change my reported ratio immediately?",
+        "answer": "The worksheet does not know reporting dates or account processing. Current and reported balances can differ. Confirm what was actually reported and when rather than treating a modeled payment as an immediate credit-report update."
+      },
+      {
+        "question": "Can a ratio exceed 100% or be undefined?",
+        "answer": "A balance above a positive limit can exceed 100%. A zero limit makes that card’s ratio undefined; a zero total limit makes the overall ratio undefined. Neither should be silently relabeled as zero usage."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: how to build and keep a good credit score",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-keep-a-good-credit-score-en-318/",
+        "usedFor": "Credit-use guidance, repayment history and the fact that carrying a balance is unnecessary.",
+        "scope": "No scoring threshold or points-change prediction is derived from the guidance."
+      },
+      {
+        "title": "myFICO: how credit scores look at card limits",
+        "url": "https://www.myfico.com/credit-education/credit-scores/fico-scores-credit-limit",
+        "usedFor": "Why account balances, limits and credit usage matter in score context.",
+        "scope": "Scoring behavior depends on the model and account facts; our examples are arithmetic only."
+      }
+    ],
+    "related": [
+      {
+        "href": "/credit-utilization-calculator",
+        "label": "Credit Utilization Calculator"
+      },
+      {
+        "href": "/glossary/credit-utilization/",
+        "label": "Credit utilization"
+      },
+      {
+        "href": "/single-credit-card-payoff-calculator",
+        "label": "Credit Card Payoff Calculator"
+      },
+      {
+        "href": "/guides/balance-transfer-vs-personal-loan/",
+        "label": "Compare borrowing costs separately"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce weighted utilization and the $800 per-card target",
+        "path": "/credit-utilization-calculator",
+        "mode": "cards",
+        "values": {
+          "cards": "900, 1000\n100, 9000",
+          "target": 10
+        },
+        "caseKey": "credit-weighted"
+      },
+      {
+        "label": "Reproduce the $1,000 overall target payment",
+        "path": "/credit-utilization-calculator",
+        "mode": "cards",
+        "values": {
+          "cards": "1500, 5000\n500, 5000",
+          "target": 10
+        },
+        "caseKey": "credit-payment"
+      }
+    ],
+    "limitations": [
+      "Entered open revolving balances and limits for one consistent date; no credit-report access.",
+      "No interest, new spending, reporting schedule, credit score or lender approval prediction.",
+      "Targets are illustrative percentages and aggregate payments are not an allocation recommendation."
+    ]
+  },
+  "capital-gains": {
+    "meta": {
+      "path": "/guides/how-to-calculate-capital-gains-tax/",
+      "title": "How to Calculate Capital Gains Tax: U.S. 2025 & 2026 Examples",
+      "heading": "How to Calculate Capital Gains Tax: U.S. 2025 & 2026 Examples",
+      "description": "Separate gain from sale proceeds, stack long-term gains above taxable income, and inspect incremental federal tax and NIIT with stated examples.",
+      "publishedOn": "2026-11-05",
+      "calculatorIds": [
+        "capital-gains-tax",
+        "income-tax",
+        "stock-profit",
+        "1031-exchange"
+      ],
+      "topic": "Tax & income",
+      "breadcrumb": "How to Calculate Capital Gains Tax: U.S. 2025 & 2026 Examples",
+      "cardIntro": "Separate gain from sale proceeds, stack long-term gains above taxable income, and inspect incremental federal tax and NIIT with stated examples.",
+      "format": "Guide & worked examples"
+    },
+    "answer": "For a general capital-asset sale, first calculate gain as proceeds minus selling fees and adjusted basis. The tax depends on holding-period classification and the rest of the tax picture. Long-term gains can span preferential bands; short-term gains add to ordinary taxable income. Compare tax before and after the sale rather than applying one percentage to gross proceeds.",
+    "intro": "This guide explains the limited U.S. individual scenario implemented in our 2025/2026 calculator. Its main numerical examples use 2026 Single status. Taxable-income inputs must already reflect applicable deductions and netting. The guide does not prepare a return or determine basis, exclusions, loss treatment or special-rate gains.",
+    "sections": [
+      {
+        "id": "gain",
+        "title": "Calculate the gain before estimating tax",
+        "paragraphs": [
+          "A sale for $30,000 with a $10,000 adjusted basis and no selling fees has a $20,000 gain. Selling fees reduce that modeled gain. The full $30,000 of proceeds is not the capital gain, and cash received can differ further when debt or other settlement obligations exist.",
+          "Adjusted basis is not always the original quoted purchase price. Reinvestments, gifts, inheritances, prior adjustments and other facts can require different treatment. The worksheet accepts an adjusted basis; it does not select tax lots, reconstruct records or determine allowable basis adjustments.",
+          "You also choose the applicable holding-period category. For the general scenario here, one year or less is short term and more than one year is long term. Special asset categories and exceptions can need different rules, so a transaction label alone does not establish treatment."
+        ],
+        "formula": "Modeled realized gain = gross sale proceeds − selling fees − adjusted basis of assets sold.",
+        "links": [
+          {
+            "href": "/glossary/capital-gains/",
+            "label": "Capital gains definition"
+          },
+          {
+            "href": "/glossary/cost-basis/",
+            "label": "Cost basis"
+          }
+        ]
+      },
+      {
+        "id": "bands",
+        "title": "Long-term gains stack above ordinary taxable income",
+        "paragraphs": [
+          "The preferential bands use total taxable income, not the gain alone and not MAGI. Enter ordinary taxable income after deductions but before this sale, excluding other preferential gains and qualified dividends entered in their separate field. Do not add the sale to either baseline input twice.",
+          "For 2026 Single status, the 0% ceiling is $49,450. With $40,000 ordinary taxable income and no existing preferential income, $9,450 of a $20,000 long-term gain fits the 0% band. The remaining $10,550 falls in the 15% band, producing $1,582.50 of additional regular federal tax.",
+          "At a higher level, $500,000 ordinary taxable income and a $60,000 general long-term gain leave $45,500 of room up to the Single 15% ceiling of $545,500. That part is taxed at 15% and the remaining $14,500 at 20%, for $9,725 of regular federal tax. NIIT is intentionally excluded from that separate band illustration.",
+          "The table gives 2026 upper taxable-income thresholds for the general preferential bands. Above the 15% ceiling, the general next rate is 20%. These are not deductions or thresholds that reset for each sale; existing preferential income can already occupy some of the space."
+        ],
+        "table": {
+          "caption": "2026 federal general long-term gain bands; excludes special-category rates and NIIT",
+          "headers": [
+            "Filing status",
+            "0% band ceiling",
+            "15% band ceiling"
+          ],
+          "rows": [
+            [
+              "Single",
+              "$49,450.00",
+              "$545,500.00"
+            ],
+            [
+              "Married filing jointly",
+              "$98,900.00",
+              "$613,700.00"
+            ],
+            [
+              "Head of household",
+              "$66,200.00",
+              "$579,600.00"
+            ],
+            [
+              "Married filing separately",
+              "$49,450.00",
+              "$306,850.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "short",
+        "title": "Short-term tax is an incremental ordinary-income calculation",
+        "paragraphs": [
+          "For a 2026 Single example with $60,000 ordinary taxable income and a $10,000 short-term gain, the additional income stays in the modeled 22% bracket. The regular federal increase is $2,200. A larger gain or another baseline could cross brackets rather than receive one rate throughout.",
+          "Short-term gain can also lift the ordinary-income layer underneath existing long-term gains and qualified dividends. That can move some existing preferential income into a higher band. The calculator’s before-and-after method includes that displacement within its regular federal estimate.",
+          "This still is not the same as rerunning an entire return. AMT, credits, deductions, QBI, benefit interactions and other phaseouts can change in real life and are outside this incremental worksheet."
+        ]
+      },
+      {
+        "id": "niit",
+        "title": "NIIT needs MAGI and net investment income, not just taxable income",
+        "paragraphs": [
+          "The optional NIIT scenario uses a separate before-and-after calculation. The 3.8% tax applies to the lesser of net investment income and MAGI above the relevant threshold, subject to eligibility and exclusions. The thresholds used here are $200,000 for Single or Head of household, $250,000 jointly, and $125,000 separately.",
+          "Assume Single status, $195,000 of MAGI before the sale, no other NII and a $20,000 positive gain that is subject to NIIT. After the sale, MAGI is $215,000 and the excess over $200,000 is $15,000. NIIT on this illustration is 3.8% of $15,000, or $570, rather than 3.8% of the entire $20,000 gain.",
+          "With $150,000 ordinary taxable income in this NIIT example and no existing preferential income, regular federal tax on the long-term gain is $3,000. Adding $570 NIIT gives $3,570 of modeled additional federal tax. The $150,000 taxable-income figure and $195,000 MAGI are separate supplied assumptions, not a deduction calculation performed by the tool.",
+          "If NIIT already applies before the sale, compare the tax before and after adding the gain. Do not charge the new sale for all NIIT attributable to pre-existing investment income. Confirm whether the actual gain is included in NII before selecting this scenario."
+        ],
+        "formula": "NIIT = 3.8% × min(net investment income, positive MAGI excess over the applicable threshold)."
+      },
+      {
+        "id": "compare",
+        "title": "Keep the example assumptions beside each tax result",
+        "paragraphs": [
+          "Each row below is a separate hypothetical case with no state/local tax, existing preferential income or excluded return interactions. The first row uses a $30,000 sale and $10,000 basis; the short-term row uses a $20,000 sale and $10,000 basis. The high-band row has $60,000 proceeds and zero entered basis.",
+          "The calculator can accept an assumed flat state/local marginal rate on positive gain. That is an editable scenario, not a state-law lookup. It does not calculate state exclusions, special rates or federal deduction effects. The displayed cash after modeled tax is also not a tax payment instruction."
+        ],
+        "table": {
+          "caption": "Separate 2026 Single examples; NIIT included only in the explicitly labeled row",
+          "headers": [
+            "Scenario",
+            "Positive gain",
+            "Regular federal tax",
+            "Additional NIIT",
+            "Modeled federal increase"
+          ],
+          "rows": [
+            [
+              "$40,000 ordinary income; long-term gain",
+              "$20,000.00",
+              "$1,582.50",
+              "$0.00",
+              "$1,582.50"
+            ],
+            [
+              "$60,000 ordinary income; short-term gain",
+              "$10,000.00",
+              "$2,200.00",
+              "$0.00",
+              "$2,200.00"
+            ],
+            [
+              "$150,000 ordinary income; $195,000 baseline MAGI",
+              "$20,000.00",
+              "$3,000.00",
+              "$570.00",
+              "$3,570.00"
+            ],
+            [
+              "$500,000 ordinary income; NIIT excluded",
+              "$60,000.00",
+              "$9,725.00",
+              "Excluded",
+              "$9,725.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "limits",
+        "title": "Losses and special sales need a fuller analysis",
+        "paragraphs": [
+          "A loss in this worksheet produces zero additional modeled tax and no assumed refund, deduction or carryforward. That does not mean losses never have tax effects. It means their netting and deduction rules are outside this positive-gain illustration.",
+          "Home-sale exclusions, rental-property depreciation recapture, collectibles and other special-rate gains, qualified small-business stock, wash sales, installment reporting, nonresident rules and 1031 exchanges need additional analysis. Do not treat the general 0%/15%/20% table as sufficient for those transactions.",
+          "Use the year and filing status relevant to your situation and review the original IRS guidance or a qualified tax professional. The tool supports verified 2025 and 2026 tables; it does not infer future law or establish that estimated payments are adequate."
+        ],
+        "links": [
+          {
+            "href": "/guides/how-does-a-1031-exchange-work/",
+            "label": "1031 gain deferral is a separate question"
+          },
+          {
+            "href": "/tax-calculator",
+            "label": "Explore the broader supported federal income-tax model"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is capital gains tax charged on the entire sale price?",
+        "answer": "Generally the starting question is the gain after applicable selling costs and adjusted basis, not the gross proceeds. Actual eligibility and basis adjustments can require records and professional review."
+      },
+      {
+        "question": "Does one long-term rate apply to the whole gain?",
+        "answer": "Not always. Preferential income stacks above ordinary taxable income and can cross the general 0%, 15% and 20% bands. Other preferential income may already fill part of a band."
+      },
+      {
+        "question": "Why are taxable income, MAGI and NII separate inputs?",
+        "answer": "The regular tax bands use taxable income, while NIIT uses MAGI and net investment income. They are different tax measures. This worksheet takes the baseline amounts you supply rather than deriving a full return."
+      },
+      {
+        "question": "Will a capital loss show a tax refund here?",
+        "answer": "No. This tool does not perform capital-loss netting, annual deductions, carryforwards or a full tax-before-and-after return. It shows no additional modeled tax for a loss and makes no claim about your ultimate refund."
+      },
+      {
+        "question": "Can the general example calculate tax on selling a rental home?",
+        "answer": "Rental property can involve depreciation recapture and other provisions outside the model. A principal residence may involve an exclusion, and a qualifying exchange can involve deferral. Review the transaction-specific rules rather than applying this general-asset estimate unchanged."
+      }
+    ],
+    "sources": [
+      {
+        "title": "IRS Topic 409: capital gains and losses",
+        "url": "https://www.irs.gov/taxtopics/tc409",
+        "usedFor": "General gain, loss and holding-period concepts.",
+        "scope": "Some published figures on the topic page concern a different year; this guide’s 2026 bands use the revenue procedure below."
+      },
+      {
+        "title": "IRS Revenue Procedure 2025-32, 2025-45 bulletin",
+        "url": "https://www.irs.gov/irb/2025-45_IRB",
+        "usedFor": "2026 preferential capital-gain thresholds and ordinary-income bands.",
+        "scope": "Only supported filing statuses and general rates are illustrated; special gains are excluded."
+      },
+      {
+        "title": "IRS Revenue Procedure 2024-40, 2024-45 bulletin",
+        "url": "https://www.irs.gov/irb/2024-45_IRB",
+        "usedFor": "The calculator’s separate 2025 general capital-gain thresholds.",
+        "scope": "Do not reuse 2026 thresholds on a 2025 return."
+      },
+      {
+        "title": "IRS: Net Investment Income Tax",
+        "url": "https://www.irs.gov/individuals/net-investment-income-tax",
+        "usedFor": "NIIT rate, lesser-of calculation and individual threshold amounts.",
+        "scope": "Eligibility and excluded income still require review."
+      }
+    ],
+    "related": [
+      {
+        "href": "/capital-gains-tax-calculator",
+        "label": "Capital Gains Tax Calculator"
+      },
+      {
+        "href": "/glossary/capital-gains/",
+        "label": "Capital gains"
+      },
+      {
+        "href": "/glossary/cost-basis/",
+        "label": "Adjusted basis"
+      },
+      {
+        "href": "/guides/how-to-calculate-stock-profit/",
+        "label": "Economic stock profit is different from a complete tax calculation"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the 0% / 15% long-term band example",
+        "path": "/capital-gains-tax-calculator",
+        "mode": "sale",
+        "values": {
+          "year": "2026",
+          "filing": "Single",
+          "holding": "Long term: more than one year",
+          "ordinary": 40000,
+          "preferential": 0,
+          "proceeds": 30000,
+          "basis": 10000,
+          "selling_fees": 0,
+          "magi": 60000,
+          "other_nii": 0,
+          "niit": "Include NIIT scenario",
+          "state": 0
+        },
+        "caseKey": "gain-long"
+      },
+      {
+        "label": "Reproduce the short-term ordinary-tax increase",
+        "path": "/capital-gains-tax-calculator",
+        "mode": "sale",
+        "values": {
+          "year": "2026",
+          "filing": "Single",
+          "holding": "Short term: one year or less",
+          "ordinary": 60000,
+          "preferential": 0,
+          "proceeds": 20000,
+          "basis": 10000,
+          "selling_fees": 0,
+          "magi": 80000,
+          "other_nii": 0,
+          "niit": "Include NIIT scenario",
+          "state": 0
+        },
+        "caseKey": "gain-short"
+      },
+      {
+        "label": "Reproduce the $570 incremental NIIT example",
+        "path": "/capital-gains-tax-calculator",
+        "mode": "sale",
+        "values": {
+          "year": "2026",
+          "filing": "Single",
+          "holding": "Long term: more than one year",
+          "ordinary": 150000,
+          "preferential": 0,
+          "proceeds": 30000,
+          "basis": 10000,
+          "selling_fees": 0,
+          "magi": 195000,
+          "other_nii": 0,
+          "niit": "Include NIIT scenario",
+          "state": 0
+        },
+        "caseKey": "gain-niit"
+      },
+      {
+        "label": "Reproduce the 15% / 20% split with NIIT excluded",
+        "path": "/capital-gains-tax-calculator",
+        "mode": "sale",
+        "values": {
+          "year": "2026",
+          "filing": "Single",
+          "holding": "Long term: more than one year",
+          "ordinary": 500000,
+          "preferential": 0,
+          "proceeds": 60000,
+          "basis": 0,
+          "selling_fees": 0,
+          "magi": 60000,
+          "other_nii": 0,
+          "niit": "Exclude NIIT scenario",
+          "state": 0
+        },
+        "caseKey": "gain-high"
+      }
+    ],
+    "limitations": [
+      "General capital-asset illustration, supported 2025/2026 individual filing cases; no complete return.",
+      "Baseline ordinary and preferential taxable income must already reflect applicable deductions and netting; do not include this sale twice.",
+      "No loss deduction, special-rate gains, recapture, exclusions, AMT, phaseouts, state-law lookup or estimated-payment determination."
+    ]
+  }
+}

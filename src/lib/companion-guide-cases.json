@@ -1,0 +1,364 @@
+[
+  {
+    "key": "exchange-full",
+    "topic": "exchange-1031",
+    "calculatorId": "1031-exchange",
+    "mode": "exchange",
+    "values": {
+      "basis": 200000,
+      "replacement": 500000,
+      "cash_received": 0,
+      "debt_relieved": 150000,
+      "debt_assumed": 150000,
+      "cash_paid": 0,
+      "expenses": 0
+    },
+    "metrics": {
+      "Realized gain / loss in modeled exchange": "300000",
+      "Gain recognized under simplified boot rules": "0",
+      "Deferred gain / unrecognized loss": "300000",
+      "Modeled replacement basis before special adjustments": "200000"
+    }
+  },
+  {
+    "key": "exchange-cash",
+    "topic": "exchange-1031",
+    "calculatorId": "1031-exchange",
+    "mode": "exchange",
+    "values": {
+      "basis": 200000,
+      "replacement": 475000,
+      "cash_received": 25000,
+      "debt_relieved": 150000,
+      "debt_assumed": 150000,
+      "cash_paid": 0,
+      "expenses": 0
+    },
+    "metrics": {
+      "Realized gain / loss in modeled exchange": "300000",
+      "Gain recognized under simplified boot rules": "25000",
+      "Deferred gain / unrecognized loss": "275000",
+      "Modeled replacement basis before special adjustments": "200000"
+    }
+  },
+  {
+    "key": "exchange-debt",
+    "topic": "exchange-1031",
+    "calculatorId": "1031-exchange",
+    "mode": "exchange",
+    "values": {
+      "basis": 200000,
+      "replacement": 450000,
+      "cash_received": 0,
+      "debt_relieved": 200000,
+      "debt_assumed": 125000,
+      "cash_paid": 50000,
+      "expenses": 0
+    },
+    "metrics": {
+      "Net liability relief treated as boot": "25000",
+      "Gain recognized under simplified boot rules": "25000",
+      "Realized gain / loss in modeled exchange": "275000",
+      "Deferred gain / unrecognized loss": "250000"
+    }
+  },
+  {
+    "key": "exchange-expense",
+    "topic": "exchange-1031",
+    "calculatorId": "1031-exchange",
+    "mode": "exchange",
+    "values": {
+      "basis": 200000,
+      "replacement": 475000,
+      "cash_received": 25000,
+      "debt_relieved": 150000,
+      "debt_assumed": 150000,
+      "cash_paid": 0,
+      "expenses": 5000
+    },
+    "metrics": {
+      "Net boot after qualifying exchange expenses": "20000",
+      "Realized gain / loss in modeled exchange": "295000",
+      "Gain recognized under simplified boot rules": "20000",
+      "Deferred gain / unrecognized loss": "275000"
+    }
+  },
+  {
+    "key": "maintenance-percent",
+    "topic": "maintenance-budget",
+    "calculatorId": "home-maintenance-cost",
+    "mode": "allowance",
+    "values": {
+      "home_value": 400000,
+      "rate": 1,
+      "increase": 0,
+      "years": 1
+    },
+    "metrics": {
+      "First-year annual maintenance allowance": "4000.00",
+      "First-year monthly maintenance allowance": "333.333333333333333333333333333333333333333333333333333333333"
+    }
+  },
+  {
+    "key": "maintenance-pool",
+    "topic": "maintenance-budget",
+    "calculatorId": "home-maintenance-cost",
+    "mode": "components",
+    "values": {
+      "routine": 1200,
+      "reserve": 6000,
+      "components": "First replacement, 6000, 1\nSecond replacement, 6000, 2"
+    },
+    "metrics": {
+      "Monthly contribution to replacement reserve": "250",
+      "Monthly budget including routine maintenance": "350",
+      "Ending replacement reserve in modeled horizon": "0"
+    }
+  },
+  {
+    "key": "maintenance-now",
+    "topic": "maintenance-budget",
+    "calculatorId": "home-maintenance-cost",
+    "mode": "components",
+    "values": {
+      "routine": 1200,
+      "reserve": 500,
+      "components": "Due now, 1000, 0\nDue next year, 1200, 1"
+    },
+    "metrics": {
+      "Immediate replacement cash shortfall": "500",
+      "Monthly contribution to replacement reserve": "100",
+      "Monthly budget including routine maintenance": "200"
+    }
+  },
+  {
+    "key": "vacancy-snapshot",
+    "topic": "rental-vacancy",
+    "calculatorId": "vacancy-rate",
+    "mode": "snapshot",
+    "values": {
+      "units": 10,
+      "vacant": 2,
+      "rent": 1500
+    },
+    "metrics": {
+      "Physical vacancy rate": "20.0",
+      "Annualized rent loss at snapshot vacancy": "36000"
+    }
+  },
+  {
+    "key": "vacancy-period",
+    "topic": "rental-vacancy",
+    "calculatorId": "vacancy-rate",
+    "mode": "period",
+    "values": {
+      "available_days": 3650,
+      "vacant_days": 365,
+      "scheduled_rent": 180000,
+      "uncollected": 2000
+    },
+    "metrics": {
+      "Physical vacancy rate": "10.0",
+      "Estimated vacancy rent loss for period": "18000",
+      "Rent after vacancy and collection loss": "160000",
+      "Modeled economic rental loss rate": "11.1111111111111111111111111111111111111111111111111111111111"
+    }
+  },
+  {
+    "key": "credit-weighted",
+    "topic": "credit-utilization",
+    "calculatorId": "credit-utilization",
+    "mode": "cards",
+    "values": {
+      "cards": "900, 1000\n100, 9000",
+      "target": 10
+    },
+    "metrics": {
+      "Overall credit utilization": "10.0",
+      "Payment to reach overall target": "0",
+      "Payments to bring every card to target": "800.00"
+    }
+  },
+  {
+    "key": "credit-payment",
+    "topic": "credit-utilization",
+    "calculatorId": "credit-utilization",
+    "mode": "cards",
+    "values": {
+      "cards": "1500, 5000\n500, 5000",
+      "target": 10
+    },
+    "metrics": {
+      "Overall credit utilization": "20.0",
+      "Payment to reach overall target": "1000.00",
+      "Payments to bring every card to target": "1000.00"
+    }
+  },
+  {
+    "key": "gain-long",
+    "topic": "capital-gains",
+    "calculatorId": "capital-gains-tax",
+    "mode": "sale",
+    "values": {
+      "year": "2026",
+      "filing": "Single",
+      "holding": "Long term: more than one year",
+      "ordinary": 40000,
+      "preferential": 0,
+      "proceeds": 30000,
+      "basis": 10000,
+      "selling_fees": 0,
+      "magi": 60000,
+      "other_nii": 0,
+      "niit": "Include NIIT scenario",
+      "state": 0
+    },
+    "metrics": {
+      "Realized capital gain / loss": "20000",
+      "Additional regular federal income tax": "1582.50",
+      "Estimated additional tax from the sale": "1582.50"
+    }
+  },
+  {
+    "key": "gain-short",
+    "topic": "capital-gains",
+    "calculatorId": "capital-gains-tax",
+    "mode": "sale",
+    "values": {
+      "year": "2026",
+      "filing": "Single",
+      "holding": "Short term: one year or less",
+      "ordinary": 60000,
+      "preferential": 0,
+      "proceeds": 20000,
+      "basis": 10000,
+      "selling_fees": 0,
+      "magi": 80000,
+      "other_nii": 0,
+      "niit": "Include NIIT scenario",
+      "state": 0
+    },
+    "metrics": {
+      "Additional regular federal income tax": "2200.00",
+      "Estimated additional tax from the sale": "2200"
+    }
+  },
+  {
+    "key": "gain-niit",
+    "topic": "capital-gains",
+    "calculatorId": "capital-gains-tax",
+    "mode": "sale",
+    "values": {
+      "year": "2026",
+      "filing": "Single",
+      "holding": "Long term: more than one year",
+      "ordinary": 150000,
+      "preferential": 0,
+      "proceeds": 30000,
+      "basis": 10000,
+      "selling_fees": 0,
+      "magi": 195000,
+      "other_nii": 0,
+      "niit": "Include NIIT scenario",
+      "state": 0
+    },
+    "metrics": {
+      "Additional regular federal income tax": "3000.00",
+      "Additional net investment income tax": "570.000",
+      "Estimated additional tax from the sale": "3570"
+    }
+  },
+  {
+    "key": "gain-high",
+    "topic": "capital-gains",
+    "calculatorId": "capital-gains-tax",
+    "mode": "sale",
+    "values": {
+      "year": "2026",
+      "filing": "Single",
+      "holding": "Long term: more than one year",
+      "ordinary": 500000,
+      "preferential": 0,
+      "proceeds": 60000,
+      "basis": 0,
+      "selling_fees": 0,
+      "magi": 60000,
+      "other_nii": 0,
+      "niit": "Exclude NIIT scenario",
+      "state": 0
+    },
+    "metrics": {
+      "Additional regular federal income tax": "9725.00"
+    }
+  },
+  {
+    "key": "dca-falling",
+    "topic": "lump-dca",
+    "calculatorId": "dca",
+    "mode": "prices",
+    "values": {
+      "budget": 120,
+      "fee": 0,
+      "prices": "12\n10\n8",
+      "terminal": 8
+    },
+    "metrics": {
+      "Total shares purchased": "37",
+      "Average cost per share including fees": "9.72972972972972972972972972972972972972972972972972972972973",
+      "Market value at comparison price": "296",
+      "Unrealized DCA gain / loss before sale fees and tax": "-64",
+      "DCA value minus lump-sum value": "56"
+    }
+  },
+  {
+    "key": "dca-falling-fee",
+    "topic": "lump-dca",
+    "calculatorId": "dca",
+    "mode": "prices",
+    "values": {
+      "budget": 120,
+      "fee": 3,
+      "prices": "12\n10\n8",
+      "terminal": 8
+    },
+    "metrics": {
+      "Total shares purchased": "36.075",
+      "Average cost per share including fees": "9.97920997920997920997920997920997920997920997920997920997921",
+      "Market value at comparison price": "288.600",
+      "Unrealized DCA gain / loss before sale fees and tax": "-71.400",
+      "DCA value minus lump-sum value": "50.600"
+    }
+  },
+  {
+    "key": "dca-rising",
+    "topic": "lump-dca",
+    "calculatorId": "dca",
+    "mode": "prices",
+    "values": {
+      "budget": 120,
+      "fee": 0,
+      "prices": "12\n14\n16",
+      "terminal": 16
+    },
+    "metrics": {
+      "Total shares purchased": "26.0714285714285714285714285714285714285714285714285714285714",
+      "Average cost per share including fees": "13.8082191780821917808219178082191780821917808219178082191781",
+      "Market value at comparison price": "417.142857142857142857142857142857142857142857142857142857142",
+      "Unrealized DCA gain / loss before sale fees and tax": "57.142857142857142857142857142857142857142857142857142857142",
+      "DCA value minus lump-sum value": "-62.857142857142857142857142857142857142857142857142857142858"
+    }
+  },
+  {
+    "key": "rule72-eight",
+    "topic": "rule-72-term",
+    "calculatorId": "rule-of-72",
+    "mode": "time",
+    "values": {
+      "rate": 8
+    },
+    "metrics": {
+      "Exact doubling time": "9.00646834200059560001680050226779740262053179623711318795751",
+      "Rule of 72 doubling-time approximation": "9"
+    }
+  }
+]

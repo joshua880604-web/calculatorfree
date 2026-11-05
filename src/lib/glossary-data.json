@@ -9,16 +9,16 @@
       "Compounding"
     ],
     "definition": "Compound interest is interest calculated on both the original principal and interest already added to the balance.",
-    "explanation": "When earnings stay invested, they become part of the amount earning the next period’s return. At a fixed positive rate, the interest earned each period grows even when you add no new money. The compounding frequency tells you how often interest is added; monthly and annual nominal rates need equivalent-rate conversion before comparison.",
-    "formula": "Future value = principal × (1 + annual nominal rate / periods per year)^(periods per year × years)",
+    "explanation": "When earnings stay invested, they become part of the amount earning the next period\u2019s return. At a fixed positive rate, the interest earned each period grows even when you add no new money. The compounding frequency tells you how often interest is added; monthly and annual nominal rates need equivalent-rate conversion before comparison.",
+    "formula": "Future value = principal \u00d7 (1 + annual nominal rate / periods per year)^(periods per year \u00d7 years)",
     "formulaNote": "Use rates as decimals: 4% is 0.04. This formula assumes a constant rate, no extra deposits or withdrawals, and no taxes or fees.",
     "example": {
       "title": "$1,500 growing at 4% for three years",
       "intro": "Start with $1,500 and compound once each year at a hypothetical 4% annual rate.",
       "steps": [
-        "Year 1: $1,500 × 1.04 = $1,560; interest is $60.",
-        "Year 2: $1,560 × 1.04 = $1,622.40; interest is $62.40.",
-        "Year 3: $1,622.40 × 1.04 = $1,687.296, displayed as $1,687.30."
+        "Year 1: $1,500 \u00d7 1.04 = $1,560; interest is $60.",
+        "Year 2: $1,560 \u00d7 1.04 = $1,622.40; interest is $62.40.",
+        "Year 3: $1,622.40 \u00d7 1.04 = $1,687.296, displayed as $1,687.30."
       ],
       "answer": "Total interest is $187.30, versus $180 with simple interest on the original $1,500.",
       "assumptions": "Annual compounding; no contributions, withdrawals, taxes or fees. Carry full precision until the displayed result.",
@@ -75,7 +75,8 @@
       "simple-interest",
       "apy",
       "cagr",
-      "dollar-cost-averaging"
+      "dollar-cost-averaging",
+      "rule-of-72"
     ],
     "sources": [
       {
@@ -364,13 +365,55 @@
         "Third purchase at $8 per share: $120 / $8 = 15 shares."
       ],
       "answer": "You invest $360 and own 37 shares, at an average cost of about $9.73 each. At the final $8 price, those shares are worth $296: a $64 loss.",
-      "assumptions": "Three purchases; fractional shares allowed; no fees or dividends. Prices are hypothetical and are not a forecast."
+      "assumptions": "Three purchases; fractional shares allowed; no fees or dividends. Prices are hypothetical and are not a forecast.",
+      "calculator": {
+        "id": "dca",
+        "mode": "prices",
+        "values": {
+          "budget": 120,
+          "fee": 0,
+          "prices": "12\n10\n8",
+          "terminal": 8
+        },
+        "expected": [
+          {
+            "label": "Total shares purchased",
+            "value": 37.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Average cost per share including fees",
+            "value": 9.72972972972973,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Market value at comparison price",
+            "value": 296.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Unrealized DCA gain / loss before sale fees and tax",
+            "value": -64.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "DCA value minus lump-sum value",
+            "value": 56.0,
+            "tolerance": 1e-05
+          }
+        ]
+      },
+      "calculationNote": "The DCA Calculator restores this exact three-price illustration. Its comparison assumes the full $360 is available at the start and waiting cash earns zero interest."
     },
     "pitfall": {
       "title": "Buying more shares at lower prices does not guarantee a profit",
-      "text": "Losses remain possible, as the example shows. Phasing in a lump sum can also trail investing it immediately when prices rise. Our Investment Calculator estimates regular-contribution growth at an assumed constant return; it does not replay share prices or calculate the share-weighted cost shown above."
+      "text": "Losses remain possible, as the example shows. Phasing in already available cash can also trail investing immediately when prices rise. The DCA Calculator replays your manual equal-dollar purchase prices; Investment Calculator separately estimates constant-return contribution growth. Neither fetches historical prices or guarantees a recovery."
     },
     "tools": [
+      {
+        "id": "dca",
+        "text": "Calculate equal-dollar share purchases using a manual price sequence and compare equal-total-cash strategies."
+      },
       {
         "id": "investment",
         "text": "Estimate balances from regular contributions using a hypothetical constant return. This is a contribution projection, not a share-price DCA backtest."
@@ -382,17 +425,16 @@
       {
         "id": "stock-average",
         "mode": "purchases",
-        "label": "Stock Average Calculator"
-      },
-      {
-        "id": "dca",
-        "text": "Calculate equal-dollar share purchases using a manual price sequence and compare equal-total-cash strategies."
+        "label": "Stock Average Calculator",
+        "text": "Check share-weighted cost for purchases with different quantities and fixed fees."
       }
     ],
     "related": [
       "mutual-funds-and-etfs",
       "arithmetic-vs-geometric-return",
-      "cagr"
+      "cagr",
+      "rule-of-72",
+      "cost-basis"
     ],
     "sources": [
       {
@@ -404,7 +446,14 @@
         "url": "https://syndication.finra.org/content/benefits-and-limitations-dollar-cost-averaging"
       }
     ],
-    "checkedOn": "2026-10-22"
+    "checkedOn": "2026-11-05",
+    "scope": "Equal-dollar manual purchase examples with fractional shares. No live quotes, historical backtest, guarantee, dividend, tax or idle-cash yield model.",
+    "guides": [
+      {
+        "path": "/guides/lump-sum-vs-dollar-cost-averaging/",
+        "title": "Compare Lump Sum and Dollar-Cost Averaging"
+      }
+    ]
   },
   {
     "slug": "401k",
@@ -2336,17 +2385,17 @@
     ],
     "definition": "DTI compares required monthly debt payments with gross monthly income, using a consistent definition of included obligations.",
     "explanation": "A housing ratio focuses on housing obligations; a total debt ratio includes other qualifying debt payments. The denominator is usually gross income rather than take-home pay. Loan programs differ in income documentation, included costs and acceptable ratios.",
-    "formula": "DTI = qualifying monthly debt payments / gross monthly income × 100%",
+    "formula": "DTI = qualifying monthly debt payments / gross monthly income \u00d7 100%",
     "formulaNote": "Convert annual, weekly and other payment amounts to the same monthly basis. Do not use outstanding debt balances as the numerator.",
     "example": {
       "title": "$1,800 of debt payments on $6,000 gross monthly income",
       "intro": "Assume all listed payments qualify for the total ratio.",
       "steps": [
         "Monthly payment total: $1,400 housing + $400 other debt = $1,800.",
-        "DTI: $1,800/$6,000 × 100% = 30%."
+        "DTI: $1,800/$6,000 \u00d7 100% = 30%."
       ],
       "answer": "Total DTI is 30% under these definitions.",
-      "assumptions": "Gross income, monthly amounts; expenses not included in a lender’s DTI may still affect affordability.",
+      "assumptions": "Gross income, monthly amounts; expenses not included in a lender\u2019s DTI may still affect affordability.",
       "calculationNote": "The worked example uses the assumptions above. Related tools may model a different scope; check their descriptions before comparing results."
     },
     "pitfall": {
@@ -2370,7 +2419,8 @@
     "related": [
       "gross-vs-net-pay",
       "budget-and-savings-rate",
-      "principal-and-interest"
+      "principal-and-interest",
+      "credit-utilization"
     ],
     "sources": [
       {
@@ -5754,27 +5804,27 @@
     "slug": "cost-basis",
     "name": "Cost basis",
     "title": "What Is Cost Basis? Stock Purchases, Fees & DRIP Example",
-    "description": "Cost basis is the amount used to measure an asset’s gain or loss for tax purposes; for purchased stock it generally begins with purchase cost and allowable acquisition costs, then changes for applicable adjustments.",
+    "description": "Cost basis is the amount used to measure an asset\u2019s gain or loss for tax purposes; for purchased stock it generally begins with purchase cost and allowable acquisition costs, then changes for applicable adjustments.",
     "category": "Saving & investing",
     "aliases": [
       "Investment cost basis",
       "Stock cost basis",
       "Adjusted basis"
     ],
-    "definition": "Cost basis is the amount used to measure an asset’s gain or loss for tax purposes; for purchased stock it generally begins with purchase cost and allowable acquisition costs, then changes for applicable adjustments.",
-    "explanation": "Broker records may track several tax lots of the same investment. Reinvesting a dividend purchases another lot; it does not make that purchase cost zero. Splits, return of capital, wash-sale adjustments, gifts and inherited property can require different treatment. A portfolio’s average acquisition cost is useful for a planning comparison, but it is not automatically an allowed tax-basis method for every security or sale.",
-    "formula": "Simple purchased-stock starting basis = shares × purchase price + included acquisition costs; realized gain or loss = net sale proceeds − adjusted basis of the shares sold",
+    "definition": "Cost basis is the amount used to measure an asset\u2019s gain or loss for tax purposes; for purchased stock it generally begins with purchase cost and allowable acquisition costs, then changes for applicable adjustments.",
+    "explanation": "Broker records may track several tax lots of the same investment. Reinvesting a dividend purchases another lot; it does not make that purchase cost zero. Splits, return of capital, wash-sale adjustments, gifts and inherited property can require different treatment. A portfolio\u2019s average acquisition cost is useful for a planning comparison, but it is not automatically an allowed tax-basis method for every security or sale.",
+    "formula": "Simple purchased-stock starting basis = shares \u00d7 purchase price + included acquisition costs; realized gain or loss = net sale proceeds \u2212 adjusted basis of the shares sold",
     "formulaNote": "This formula is limited to a simple purchase. Apply the correct lot identification, adjustments, holding period and jurisdiction for an actual sale. Selling costs reduce proceeds in this example; they are not also added to purchase basis.",
     "example": {
       "title": "A stock purchase plus a dividend reinvestment creates two lots",
       "intro": "Buy 100 shares at $20 and pay a $10 acquisition commission. Later, reinvest a $50 cash dividend at $25 per share with no additional purchase charge.",
       "steps": [
-        "Original lot basis = 100 × $20 + $10 = $2,010.",
+        "Original lot basis = 100 \u00d7 $20 + $10 = $2,010.",
         "The $50 reinvestment buys 2 additional shares and creates $50 of additional basis. Total holdings are 102 shares with $2,060 combined basis.",
-        "Combined average acquisition cost is $2,060 / 102 ≈ $20.1961 per share. If only the original 100-share lot is sold for $2,500 with a $10 selling charge, net proceeds are $2,490 and its gain is $2,490 − $2,010 = $480."
+        "Combined average acquisition cost is $2,060 / 102 \u2248 $20.1961 per share. If only the original 100-share lot is sold for $2,500 with a $10 selling charge, net proceeds are $2,490 and its gain is $2,490 \u2212 $2,010 = $480."
       ],
       "answer": "Combined basis is $2,060 across 102 shares; the separately identified original lot has a $480 hypothetical realized gain on the stated sale.",
-      "assumptions": "Taxable purchased-stock example in USD; no wash sale, corporate action, return of capital or other adjustment. The dividend’s income-tax treatment is separate from the basis created by reinvestment. No gain tax is calculated.",
+      "assumptions": "Taxable purchased-stock example in USD; no wash sale, corporate action, return of capital or other adjustment. The dividend\u2019s income-tax treatment is separate from the basis created by reinvestment. No gain tax is calculated.",
       "calculationNote": "Stock Average Calculator shows a planning average, not a complete tax-lot ledger. Stock Profit Calculator uses its stated entered costs; DRIP Calculator projects shares but does not track every tax-basis adjustment."
     },
     "pitfall": {
@@ -5806,7 +5856,10 @@
     "related": [
       "dividend-reinvestment-plan",
       "return-on-investment",
-      "covered-call"
+      "covered-call",
+      "1031-exchange",
+      "1031-exchange-boot",
+      "capital-gains"
     ],
     "sources": [
       {
@@ -5832,6 +5885,14 @@
       {
         "title": "Should You Reinvest Dividends?",
         "path": "/guides/should-you-reinvest-dividends/"
+      },
+      {
+        "path": "/guides/how-does-a-1031-exchange-work/",
+        "title": "How a Simplified Exchange Carries Basis"
+      },
+      {
+        "path": "/guides/how-to-calculate-capital-gains-tax/",
+        "title": "From Adjusted Basis to a General Sale Gain"
       }
     ]
   },
@@ -6107,23 +6168,45 @@
       "Physical vacancy"
     ],
     "definition": "A vacancy rate measures the share of rental capacity that is unoccupied, using a specified unit count or time period; a rent-loss allowance is a separate budgeting assumption.",
-    "explanation": "For a property over time, define available unit-months or unit-days and the unoccupied portion. A market statistic can instead use rental units at a point in time. For example, the Census rental vacancy measure uses vacant-for-rent units relative to the relevant rental inventory; it is not a forecast of one landlord’s losses. Physical vacancy also differs from economic rent loss caused by concessions, bad debt or unequal rents.",
-    "formula": "Property vacancy percentage = vacant unit-months / available unit-months × 100%; modeled rent after a loss allowance = scheduled rent × (1 − entered loss fraction)",
-    "formulaNote": "Use matching periods and state whether unavailable units are included. A simple percentage applied to rent is appropriate only for the stated budget model. The site’s vacancy/loss inputs may combine more than physical vacancy; check each tool’s definition.",
+    "explanation": "For a property over time, define available unit-months or unit-days and the unoccupied portion. A market statistic can instead use rental units at a point in time. For example, the Census rental vacancy measure uses vacant-for-rent units relative to the relevant rental inventory; it is not a forecast of one landlord\u2019s losses. Physical vacancy also differs from economic rent loss caused by concessions, bad debt or unequal rents.",
+    "formula": "Property vacancy percentage = vacant unit-months / available unit-months \u00d7 100%; modeled rent after a loss allowance = scheduled rent \u00d7 (1 \u2212 entered loss fraction)",
+    "formulaNote": "Use matching periods and state whether unavailable units are included. A simple percentage applied to rent is appropriate only for the stated budget model. The site\u2019s vacancy/loss inputs may combine more than physical vacancy; check each tool\u2019s definition.",
     "example": {
       "title": "Three vacant unit-months in a five-unit property",
       "intro": "Assume five identical rental units are available for all 12 months, each at $1,000 monthly rent. Across the year, three unit-months are unoccupied.",
       "steps": [
-        "Available capacity = 5 × 12 = 60 unit-months. Vacancy = 3 / 60 = 5%.",
-        "Full scheduled annual rent = 5 × $1,000 × 12 = $60,000.",
+        "Available capacity = 5 \u00d7 12 = 60 unit-months. Vacancy = 3 / 60 = 5%.",
+        "Full scheduled annual rent = 5 \u00d7 $1,000 \u00d7 12 = $60,000.",
         "With identical rent and no other losses, three vacant unit-months forgo $3,000, leaving $57,000 before expenses."
       ],
       "answer": "Physical vacancy is 5% and the simplified lost rent is $3,000; those percentages need not agree when rents or other losses differ.",
-      "assumptions": "Hypothetical property history, equal rents, no unavailable units, concessions, nonpayment or other income. Reusing 5% as a future budget allowance would be an assumption, not a prediction of next year’s vacancy.",
-      "calculationNote": "NOI, Rental Property and House Hacking tools apply their entered loss conventions; they do not estimate market vacancy or predict a tenant’s payment history."
+      "assumptions": "Hypothetical property history, equal rents, no unavailable units, concessions, nonpayment or other income. Reusing 5% as a future budget allowance would be an assumption, not a prediction of next year\u2019s vacancy.",
+      "calculationNote": "The existing unit-month illustration converts consistently to 1,800 available and 90 vacant unit-days using a uniform 30-day month convention. This is a model conversion, not an actual calendar occupancy record.",
+      "calculator": {
+        "id": "vacancy-rate",
+        "mode": "period",
+        "values": {
+          "available_days": 1800,
+          "vacant_days": 90,
+          "scheduled_rent": 60000,
+          "uncollected": 0
+        },
+        "expected": [
+          {
+            "label": "Physical vacancy rate",
+            "value": 5,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Rent after vacancy and collection loss",
+            "value": 57000,
+            "tolerance": 1e-05
+          }
+        ]
+      }
     },
     "pitfall": {
-      "title": "A regional vacancy statistic is not your property’s loss forecast",
+      "title": "A regional vacancy statistic is not your property\u2019s loss forecast",
       "text": "A few expensive units being vacant can create greater revenue loss than their share of unit count. Separately consider turnover, collection losses and rent concessions. Avoid deducting the same loss through both reduced rent and another vacancy allowance."
     },
     "tools": [
@@ -6137,7 +6220,7 @@
       },
       {
         "id": "house-hacking",
-        "text": "Keep the owner’s occupied space outside the rental list and test tenant-rent loss."
+        "text": "Keep the owner\u2019s occupied space outside the rental list and test tenant-rent loss."
       },
       {
         "id": "vacancy-rate",
@@ -6155,9 +6238,13 @@
         "url": "https://www.census.gov/housing/hvs/definitions.html"
       }
     ],
-    "checkedOn": "2026-11-01",
+    "checkedOn": "2026-11-05",
     "scope": "Property-budget and statistical concept. The Census page is cited for definitions, not as a current rate or a directly comparable unit-month survey.",
     "guides": [
+      {
+        "path": "/guides/how-to-calculate-rental-vacancy-rate/",
+        "title": "Snapshot Vacancy, Unit-Days and Rent Loss"
+      },
       {
         "title": "How to Calculate Net Operating Income",
         "path": "/guides/how-to-calculate-net-operating-income/"
@@ -6169,6 +6256,16 @@
       {
         "title": "What Is House Hacking?",
         "path": "/guides/what-is-house-hacking/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why can snapshot and period vacancy disagree?",
+        "answer": "A snapshot counts vacant units on one date, while a period measure weights vacancy by unit-days or unit-months. Both can be valid when labeled with consistent inventory and dates."
+      },
+      {
+        "question": "Does equal physical vacancy mean equal lost rent?",
+        "answer": "Only under a matching uniform-rent assumption with no other losses. Vacant expensive units, concessions and unpaid occupied-unit rent can make the revenue-loss percentage differ."
       }
     ]
   },
@@ -6184,20 +6281,20 @@
       "Capital improvements"
     ],
     "definition": "A capital expenditure is spending to acquire or improve a long-lived asset, distinct from routine operating costs; in property analysis, major replacements must be considered separately from NOI.",
-    "explanation": "A capital project uses cash even when it is excluded from the operating-income measure. Accounting and tax treatment can spread an eligible asset’s cost across later periods rather than deducting all of it immediately. A replacement reserve is a budgeting provision for future capital needs; it is not proof that a repair has occurred or that money has been paid to a contractor. Keep estimated reserves separate from actual project spending.",
-    "formula": "Simplified cash after a capital project = NOI − debt-service cash payments − actual capital-project cash paid",
+    "explanation": "A capital project uses cash even when it is excluded from the operating-income measure. Accounting and tax treatment can spread an eligible asset\u2019s cost across later periods rather than deducting all of it immediately. A replacement reserve is a budgeting provision for future capital needs; it is not proof that a repair has occurred or that money has been paid to a contractor. Keep estimated reserves separate from actual project spending.",
+    "formula": "Simplified cash after a capital project = NOI \u2212 debt-service cash payments \u2212 actual capital-project cash paid",
     "formulaNote": "The classification of a repair or improvement depends on the facts and applicable rules. Use a consistent NOI definition. If reserve transfers and later project payments come from the same funds, reconcile the reserve account rather than treating both as new economic costs.",
     "example": {
       "title": "Positive NOI can coexist with a year of negative cash flow",
       "intro": "Assume annual NOI is $18,000, annual debt payments are $12,000 and a $15,000 roof project is treated as capital expenditure for this illustration.",
       "steps": [
-        "Cash after debt service but before the project = $18,000 − $12,000 = $6,000.",
-        "After paying the capital project, cash = $6,000 − $15,000 = −$9,000.",
+        "Cash after debt service but before the project = $18,000 \u2212 $12,000 = $6,000.",
+        "After paying the capital project, cash = $6,000 \u2212 $15,000 = \u2212$9,000.",
         "NOI remains $18,000 under this operating definition; the project is shown separately rather than deducted twice."
       ],
       "answer": "This example has $18,000 of NOI but a $9,000 cash shortfall after debt service and the capital project.",
       "assumptions": "USD, one reporting year, no other cash flows, income tax, depreciation, prior reserve draw or additional borrowing. The project is assumed to be capital spending; the example does not determine its tax classification or deduction.",
-      "calculationNote": "The site’s rental tools differ in their use of a reserve allowance and actual project costs. Read each model’s boundary before substituting a capital-budget amount for an operating expense."
+      "calculationNote": "The site\u2019s rental tools differ in their use of a reserve allowance and actual project costs. Read each model\u2019s boundary before substituting a capital-budget amount for an operating expense."
     },
     "pitfall": {
       "title": "A reserve allowance is not the same transaction as a capital purchase",
@@ -6247,6 +6344,10 @@
       {
         "title": "BRRRR refinance cash-flow analysis",
         "path": "/guides/brrrr-refinance-cash-flow-analysis/"
+      },
+      {
+        "path": "/guides/how-much-to-budget-for-home-maintenance/",
+        "title": "Routine Maintenance and a Replacement Reserve"
       }
     ]
   },

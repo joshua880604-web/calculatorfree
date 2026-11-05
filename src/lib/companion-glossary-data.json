@@ -1,0 +1,554 @@
+[
+  {
+    "slug": "1031-exchange",
+    "name": "1031 exchange",
+    "title": "What Is a 1031 Exchange? Deferral, Basis & Example",
+    "description": "A 1031 exchange can defer eligible real-property gain. Understand why deferral differs from exemption, with a worked basis example and deadlines.",
+    "category": "Housing & property",
+    "aliases": [
+      "Like-kind real-property exchange",
+      "Tax-deferred real estate exchange"
+    ],
+    "definition": "A 1031 exchange is a transaction that can defer recognition of eligible gain when qualifying real property held for investment or business use is exchanged under the applicable federal rules. It is a deferral framework, not a blanket exemption for selling one property and later buying another.",
+    "explanation": "Qualification concerns the property, transaction structure, control of proceeds and other requirements before the gain calculation begins. In a simplified qualifying exchange without cash, net liability boot or special recapture, realized gain can remain deferred and be reflected in the replacement basis. Adjusted basis and mortgage debt are different inputs. Later depreciation and disposition require separate analysis.",
+    "formula": "Simplified replacement basis = replacement fair market value − deferred gain; unrecognized loss increases basis instead.",
+    "formulaNote": "This identity is a limited reconciliation after qualification and special adjustments have been considered. It does not determine eligibility or calculate tax due. The companion calculator assumes qualifying real property and excludes additional recapture and several complex exchange types.",
+    "example": {
+      "title": "A $300,000 gain remains deferred in a simplified exchange",
+      "intro": "Assume $200,000 adjusted basis, $500,000 replacement value, equal $150,000 old and new debt, no cash received and no exchange expenses.",
+      "steps": [
+        "Equal debt leaves no net liability relief, and there is no cash boot.",
+        "Realized gain in the simplified exchange is $500,000 − $200,000 = $300,000.",
+        "Recognized gain before special adjustments is $0; $300,000 remains deferred.",
+        "Replacement basis = $500,000 − $300,000 = $200,000."
+      ],
+      "answer": "The modeled replacement basis is $200,000. A $500,000 replacement value does not make its tax basis $500,000.",
+      "assumptions": "Hypothetical qualifying real property; cash is the only supported non-like-kind consideration; no special recapture, personal-residence, related-party or state adjustments.",
+      "calculator": {
+        "id": "1031-exchange",
+        "mode": "exchange",
+        "values": {
+          "basis": 200000,
+          "replacement": 500000,
+          "cash_received": 0,
+          "debt_relieved": 150000,
+          "debt_assumed": 150000,
+          "cash_paid": 0,
+          "expenses": 0
+        },
+        "expected": [
+          {
+            "label": "Realized gain / loss in modeled exchange",
+            "value": 300000.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Gain recognized under simplified boot rules",
+            "value": 0.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Deferred gain / unrecognized loss",
+            "value": 300000.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Modeled replacement basis before special adjustments",
+            "value": 200000.0,
+            "tolerance": 1e-05
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Deferral does not establish qualification",
+      "text": "A later property purchase or a zero-boot result cannot validate a transaction that fails the exchange requirements. Receiving or controlling proceeds outside the proper arrangement can create a different outcome from this assumed-qualified worksheet. Confirm the structure and deadlines before transferring property."
+    },
+    "tools": [
+      {
+        "id": "1031-exchange",
+        "text": "Reconcile simplified gain, boot and replacement basis; check ordinary calendar milestones in a separate mode."
+      },
+      {
+        "id": "capital-gains-tax",
+        "text": "Use only for a separate general capital-asset scenario; it does not add 1031 or recapture rules."
+      }
+    ],
+    "related": [
+      "1031-exchange-boot",
+      "cost-basis",
+      "capital-gains"
+    ],
+    "sources": [
+      {
+        "title": "IRS Form 8824 instructions",
+        "url": "https://www.irs.gov/instructions/i8824"
+      },
+      {
+        "title": "IRS Publication 544: sales and exchanges",
+        "url": "https://www.irs.gov/publications/p544"
+      }
+    ],
+    "checkedOn": "2026-11-05",
+    "scope": "U.S. federal qualifying real-property concept. Eligibility, additional recapture, related parties, mixed use, reverse exchanges and state conformity require review beyond the example.",
+    "guides": [
+      {
+        "path": "/guides/how-does-a-1031-exchange-work/",
+        "title": "1031 Exchange: Boot, Basis and Deadlines"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is a 1031 exchange the same as permanently tax-free profit?",
+        "answer": "No. Eligible gain may be deferred and reflected in replacement basis. That is different from excluding gain permanently, and later events need their own analysis."
+      },
+      {
+        "question": "Are the 45-day and 180-day dates the only requirements?",
+        "answer": "No. Ordinary deferred exchanges have identification and receipt timing rules alongside property, written identification, transaction-control and reporting requirements. Receipt generally uses the earlier of 180 days or the applicable return due date including extensions; special relief is outside the date illustration."
+      },
+      {
+        "question": "Does this term cover exchanging a personal home?",
+        "answer": "The example assumes qualifying investment or business real property. Personal use, home-sale exclusions and mixed-use property involve additional provisions and are not established by this glossary page."
+      }
+    ]
+  },
+  {
+    "slug": "1031-exchange-boot",
+    "name": "Boot in a 1031 exchange",
+    "title": "What Is Boot in a 1031 Exchange? Cash & Debt Examples",
+    "description": "Boot describes non-like-kind consideration that can trigger recognized gain. Distinguish received cash from net liability relief in a limited example.",
+    "category": "Housing & property",
+    "aliases": [
+      "1031 boot",
+      "Cash boot",
+      "Net liability relief"
+    ],
+    "definition": "Boot is an informal exchange term for non-like-kind consideration, such as cash or certain net liability relief, that can cause gain to be recognized in an otherwise qualifying like-kind exchange. It is not itself a tax rate or a determination that the transaction qualifies.",
+    "explanation": "Cash received and net liability relief must be tracked separately. Under the simplified worksheet, liabilities assumed and additional cash paid can offset liability relief, but assuming more debt does not by itself erase cash received. Qualifying exchange expenses can reduce boot, with any remaining expense handled once in basis rather than deducted twice.",
+    "formula": "Simplified gross boot = cash received + max(0, liabilities relieved − liabilities assumed − additional cash paid).",
+    "formulaNote": "Qualifying expenses then reduce gross boot without taking it below zero. Recognized gain is generally limited to positive realized gain under the simplified rules before additional recapture. Other non-like-kind assets and special provisions are excluded.",
+    "example": {
+      "title": "Cash received creates $25,000 of simplified recognized gain",
+      "intro": "Assume $200,000 adjusted basis, $475,000 replacement value, $25,000 cash received and equal $150,000 old and new debt, with no expenses.",
+      "steps": [
+        "Equal old and replacement debt produces no net liability boot.",
+        "Cash boot is $25,000.",
+        "Realized gain = $475,000 + $25,000 − $200,000 = $300,000.",
+        "Simplified recognized gain = $25,000; deferred gain = $275,000."
+      ],
+      "answer": "The $25,000 recognized amount is gain, not the dollar tax bill. Replacement basis remains $200,000 in this scenario.",
+      "assumptions": "Assumed qualifying real property, no additional recapture, no non-cash non-like-kind property and no special exclusions or state adjustments.",
+      "calculator": {
+        "id": "1031-exchange",
+        "mode": "exchange",
+        "values": {
+          "basis": 200000,
+          "replacement": 475000,
+          "cash_received": 25000,
+          "debt_relieved": 150000,
+          "debt_assumed": 150000,
+          "cash_paid": 0,
+          "expenses": 0
+        },
+        "expected": [
+          {
+            "label": "Realized gain / loss in modeled exchange",
+            "value": 300000.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Gain recognized under simplified boot rules",
+            "value": 25000.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Deferred gain / unrecognized loss",
+            "value": 275000.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Modeled replacement basis before special adjustments",
+            "value": 200000.0,
+            "tolerance": 1e-05
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "More debt does not automatically cancel cash received",
+      "text": "Cash and liability items do not have identical offset rules. For example, debt relief of $200,000, replacement debt of $125,000 and $50,000 additional cash paid leaves $25,000 net liability relief. That is a different reconciliation from receiving $25,000 cash. Expense classification and special recapture can also change the tax reporting."
+    },
+    "tools": [
+      {
+        "id": "1031-exchange",
+        "text": "Inspect cash, net liabilities and qualifying expense allocation before special tax adjustments."
+      }
+    ],
+    "related": [
+      "1031-exchange",
+      "cost-basis",
+      "capital-gains"
+    ],
+    "sources": [
+      {
+        "title": "IRS Form 8824 instructions: lines 15–20",
+        "url": "https://www.irs.gov/instructions/i8824"
+      },
+      {
+        "title": "IRS Publication 544: partially nontaxable exchanges",
+        "url": "https://www.irs.gov/publications/p544"
+      }
+    ],
+    "checkedOn": "2026-11-05",
+    "scope": "Simplified federal real-property exchange vocabulary. The tool supports cash as its only non-like-kind asset and does not classify settlement expenses or establish current tax liability.",
+    "guides": [
+      {
+        "path": "/guides/how-does-a-1031-exchange-work/",
+        "title": "How Cash and Liability Boot Affect a 1031 Exchange"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is every dollar of boot necessarily taxable gain?",
+        "answer": "The simplified recognized amount is capped by positive realized gain, before special recapture provisions. Boot and gain are related measures but should not be treated as identical in every transaction."
+      },
+      {
+        "question": "Can exchange expenses reduce boot?",
+        "answer": "Qualifying exchange expenses can reduce the simplified amount, but not every closing charge qualifies. Have the settlement items classified and count each expense once. The calculator does not make that classification."
+      },
+      {
+        "question": "Can the boot amount be multiplied by 15% to find the actual tax?",
+        "answer": "Not reliably. Applicable gain character, recapture, other income, NIIT and state treatment can change the tax. The exchange tool deliberately does not turn its recognized-gain estimate into a flat tax bill."
+      }
+    ]
+  },
+  {
+    "slug": "credit-utilization",
+    "name": "Credit utilization",
+    "title": "What Is Credit Utilization? Overall & Per-Card Examples",
+    "description": "Credit utilization compares revolving balances with credit limits. See weighted overall utilization and why a per-card payment target can differ.",
+    "category": "Loans & debt",
+    "aliases": [
+      "Credit usage ratio",
+      "Revolving utilization",
+      "Credit card utilization"
+    ],
+    "definition": "Credit utilization is the share of an included revolving credit limit being used by a balance. An overall ratio divides the sum of included balances by the sum of limits, while an individual ratio applies to one account.",
+    "explanation": "Use balances and limits for a consistent reporting date. The overall ratio is not the simple average of card percentages because the accounts can have different limits. A combined target can therefore be met while one smaller account remains highly used. This arithmetic is separate from predicting a score or the date a payment will be reported.",
+    "formula": "Overall utilization = sum of included balances / sum of included credit limits × 100%.",
+    "formulaNote": "Per-card utilization uses that account’s own limit. A zero denominator is undefined. The calculator accepts over-limit balances, so a positive-limit ratio can exceed 100%. Its treatment of a zero-limit balance in aggregate arithmetic does not establish how a scoring model handles that account.",
+    "example": {
+      "title": "10% overall can coexist with a 90%-used card",
+      "intro": "Card A has a $900 balance and $1,000 limit. Card B has a $100 balance and $9,000 limit. The chosen target is 10%.",
+      "steps": [
+        "Card A utilization = $900 / $1,000 = 90%.",
+        "Card B utilization = $100 / $9,000 ≈ 1.1111%.",
+        "Overall utilization = $1,000 / $10,000 = 10%, not the average of those percentages.",
+        "Bringing Card A to its own $100 target balance requires $800, even though the overall target needs $0."
+      ],
+      "answer": "The overall ratio is 10%; the sum needed to bring every card to 10% is $800.",
+      "assumptions": "Invented open revolving accounts at one date. No new spending, fees, interest, reporting-delay or score-change model. The 10% target is illustrative.",
+      "calculator": {
+        "id": "credit-utilization",
+        "mode": "cards",
+        "values": {
+          "cards": "900, 1000\n100, 9000",
+          "target": 10
+        },
+        "expected": [
+          {
+            "label": "Overall credit utilization",
+            "value": 10.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Payment to reach overall target",
+            "value": 0.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Payments to bring every card to target",
+            "value": 800.0,
+            "tolerance": 1e-05
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "A target ratio is not a score guarantee",
+      "text": "The CFPB discusses keeping usage low, but no percentage in this worksheet is a universal scoring switch. You do not need to carry interest-bearing debt merely to demonstrate credit use. Credit reports, account treatment and scoring models can differ; the tool does not predict points or approval."
+    },
+    "tools": [
+      {
+        "id": "credit-utilization",
+        "text": "Calculate overall and per-card ratios and two separate payment-target totals."
+      },
+      {
+        "id": "credit-card",
+        "text": "Inspect a separate debt repayment and interest-cost scenario."
+      },
+      {
+        "id": "balance-transfer",
+        "text": "Compare borrowing costs and fees separately from utilization."
+      }
+    ],
+    "related": [
+      "debt-to-income-ratio",
+      "debt-consolidation",
+      "gross-vs-net-pay"
+    ],
+    "sources": [
+      {
+        "title": "CFPB: getting and keeping a good credit score",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-keep-a-good-credit-score-en-318/"
+      },
+      {
+        "title": "myFICO: how scores look at credit card limits",
+        "url": "https://www.myfico.com/credit-education/credit-scores/fico-scores-credit-limit"
+      }
+    ],
+    "checkedOn": "2026-11-05",
+    "scope": "Revolving-card arithmetic using user-entered figures. No credit-report access, account classification opinion, reporting calendar, score prediction or lending decision.",
+    "guides": [
+      {
+        "path": "/guides/how-to-calculate-credit-utilization/",
+        "title": "Calculate Utilization Across Multiple Cards"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is credit utilization the same as debt-to-income?",
+        "answer": "No. Utilization compares revolving balances with credit limits; DTI compares debt payments with income under its own definitions. Neither denominator can be substituted for the other."
+      },
+      {
+        "question": "Does the overall target tell me which card to pay?",
+        "answer": "No. It is an aggregate dollar requirement without an allocation recommendation. The per-card table separately shows amounts needed for each account to reach the same chosen target."
+      },
+      {
+        "question": "Should I enter a current or reported balance?",
+        "answer": "Use the snapshot relevant to your question, and keep the figures consistent. For reported-credit analysis, confirm what was actually reported rather than assuming today’s online balance is already on a report."
+      }
+    ]
+  },
+  {
+    "slug": "rule-of-72",
+    "name": "Rule of 72",
+    "title": "What Is the Rule of 72? Doubling Time & Exact Comparison",
+    "description": "The Rule of 72 approximates compound-growth doubling time. Compare its estimate with exact annual compounding and understand its limits.",
+    "category": "Saving & investing",
+    "aliases": [
+      "Doubling-time shortcut",
+      "72 divided by interest rate"
+    ],
+    "definition": "The Rule of 72 estimates how many years an unchanged amount takes to double under a constant positive compound return by dividing 72 by the annual percentage rate.",
+    "explanation": "The shortcut approximates a logarithmic relationship. Its error changes with the rate, so a convenient result is not an exact growth calculation. It also assumes no deposits or withdrawals: doubling an account through new contributions is different from doubling the original money through returns.",
+    "formula": "Approximate years = 72 / rate (%); exact fractional years = ln(2) / ln(1 + rate / 100).",
+    "formulaNote": "Use an effective annual growth rate, rather than a nominal APR with unspecified compounding. The exact fractional-year result interpolates the annual factor; a balance observed only at year-end first crosses at the next whole year. Taxes, fees and inflation are excluded unless already handled consistently in your assumption.",
+    "example": {
+      "title": "An 8% return takes slightly more than nine exact years",
+      "intro": "Assume a constant 8% effective annual return, no new money and no fees or taxes.",
+      "steps": [
+        "Rule estimate = 72 / 8 = 9 years.",
+        "Exact time = ln(2) / ln(1.08) ≈ 9.006468 years.",
+        "A year-end-only observation first doubles at the end of year 10; that differs from the fractional-year interpolation."
+      ],
+      "answer": "The shortcut gives nine years; exact fractional-year compounding gives about 9.0065 years.",
+      "assumptions": "Hypothetical constant effective annual return; no deposits, withdrawals, fees, taxes or changing returns. This is not a rate forecast.",
+      "calculator": {
+        "id": "rule-of-72",
+        "mode": "time",
+        "values": {
+          "rate": 8
+        },
+        "expected": [
+          {
+            "label": "Exact doubling time",
+            "value": 9.006468342000595,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Rule of 72 doubling-time approximation",
+            "value": 9.0,
+            "tolerance": 1e-05
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "A required return is not an available investment",
+      "text": "Reversing the formula can estimate a return needed to double over a chosen horizon. It does not show that an asset can deliver that return safely or consistently. Zero and negative constant returns do not double an unchanged positive principal."
+    },
+    "tools": [
+      {
+        "id": "rule-of-72",
+        "text": "Compare the shortcut with exact doubling time or solve a constant effective return target."
+      },
+      {
+        "id": "compound-interest",
+        "text": "Model a separate balance projection including deposits and compounding settings."
+      }
+    ],
+    "related": [
+      "compound-interest",
+      "apy",
+      "inflation"
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: compound interest and Rule of 72",
+        "url": "https://www.investor.gov/additional-resources/information/youth/teachers-classroom-resources/what-compound-interest"
+      },
+      {
+        "title": "Dallas Fed: Building Wealth, save and invest",
+        "url": "https://www.dallasfed.org/-/media/microsites/cd/wealth/online/ch3.html"
+      }
+    ],
+    "checkedOn": "2026-11-05",
+    "scope": "A mathematical shortcut for constant effective annual compounding. No asset selection, promised return, fee or tax estimate.",
+    "guides": [
+      {
+        "path": "/guides/simple-interest-vs-compound-interest/",
+        "title": "Simple Interest vs. Compound Interest"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What happens at a 0% or negative return?",
+        "answer": "The original amount never doubles without other cash flows at a nonpositive constant return. An answer of zero or negative years would be misleading."
+      },
+      {
+        "question": "Can I use the rule with monthly saving?",
+        "answer": "The shortcut assumes no additional deposits. Use a contribution projection when new money changes the account balance; otherwise you can confuse savings with investment growth."
+      },
+      {
+        "question": "Can the same shortcut describe inflation?",
+        "answer": "For constant inflation, the same compounding relationship gives an approximation of purchasing-power halving. It is not a calculation of the real return of an investment, which requires comparing both growth and inflation."
+      }
+    ]
+  },
+  {
+    "slug": "capital-gains",
+    "name": "Capital gains",
+    "title": "What Are Capital Gains? Basis, Holding Period & Tax Example",
+    "description": "A capital gain generally compares sale proceeds after eligible selling costs with adjusted basis. See realization, holding period and a tax-band example.",
+    "category": "Tax & income",
+    "aliases": [
+      "Capital gain",
+      "Realized capital gain",
+      "Long-term and short-term gain"
+    ],
+    "definition": "A capital gain generally arises when the amount realized from disposing of a capital asset exceeds its adjusted basis. Gross sale proceeds, economic investment profit and taxable gain are related but distinct measures.",
+    "explanation": "A price increase while you still hold an asset is commonly described as unrealized gain; a disposition can create a realized gain with tax consequences under applicable rules. Adjusted basis may reflect more than the original purchase price. For a general U.S. individual sale, holding-period classification and the rest of taxable income can affect the rate; exclusions and special categories require their own analysis.",
+    "formula": "Modeled sale gain = gross sale proceeds − eligible selling fees − adjusted basis of assets sold.",
+    "formulaNote": "This is the starting arithmetic for the general-asset worksheet, not a complete tax return. It does not select lots, determine wash-sale adjustments, apply home-sale exclusions, calculate recapture or perform capital-loss netting.",
+    "example": {
+      "title": "A $20,000 long-term gain spans the 0% and 15% bands",
+      "intro": "Assume 2026 Single status, $40,000 ordinary taxable income, no other preferential income, $30,000 proceeds, $10,000 basis and no selling fees.",
+      "steps": [
+        "Realized gain = $30,000 − $10,000 = $20,000.",
+        "The 2026 Single 0% ceiling leaves $49,450 − $40,000 = $9,450 of room.",
+        "The remaining $10,550 is in the 15% band: $10,550 × 15% = $1,582.50."
+      ],
+      "answer": "The example produces $1,582.50 additional regular federal tax, with no modeled NIIT or state tax.",
+      "assumptions": "General capital asset held more than one year; baseline MAGI $60,000 and no other NII; no special-rate gain, loss netting, deduction changes, AMT, credits or other return interactions.",
+      "calculator": {
+        "id": "capital-gains-tax",
+        "mode": "sale",
+        "values": {
+          "year": "2026",
+          "filing": "Single",
+          "holding": "Long term: more than one year",
+          "ordinary": 40000,
+          "preferential": 0,
+          "proceeds": 30000,
+          "basis": 10000,
+          "selling_fees": 0,
+          "magi": 60000,
+          "other_nii": 0,
+          "niit": "Include NIIT scenario",
+          "state": 0
+        },
+        "expected": [
+          {
+            "label": "Realized capital gain / loss",
+            "value": 20000.0,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Additional regular federal income tax",
+            "value": 1582.5,
+            "tolerance": 1e-05
+          },
+          {
+            "label": "Estimated additional tax from the sale",
+            "value": 1582.5,
+            "tolerance": 1e-05
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "The gain does not necessarily receive one flat rate",
+      "text": "Long-term gain can cross preferential bands above ordinary taxable income. Short-term gain adds to ordinary taxable income and can also displace existing preferential income into a higher band. A loss, property sale or special asset can require rules that the general positive-gain worksheet excludes."
+    },
+    "tools": [
+      {
+        "id": "capital-gains-tax",
+        "text": "Inspect a supported 2025/2026 incremental general-asset tax scenario, optional NIIT and a user-entered state-rate assumption."
+      },
+      {
+        "id": "stock-profit",
+        "text": "Separate economic trade profit from the tax classification and basis analysis."
+      },
+      {
+        "id": "1031-exchange",
+        "text": "Explore an assumed qualifying real-property exchange; not a general sale tax calculation."
+      }
+    ],
+    "related": [
+      "cost-basis",
+      "marginal-vs-effective-tax-rate",
+      "1031-exchange"
+    ],
+    "sources": [
+      {
+        "title": "IRS Topic 409: capital gains and losses",
+        "url": "https://www.irs.gov/taxtopics/tc409"
+      },
+      {
+        "title": "IRS Revenue Procedure 2025-32: 2026 preferential bands",
+        "url": "https://www.irs.gov/irb/2025-45_IRB"
+      },
+      {
+        "title": "IRS Publication 550: investment income and expenses",
+        "url": "https://www.irs.gov/publications/p550"
+      }
+    ],
+    "checkedOn": "2026-11-05",
+    "scope": "General U.S. individual capital-asset concepts. The linked tool supports 2025/2026 limited incremental scenarios, not every sale, exclusion or loss rule.",
+    "guides": [
+      {
+        "path": "/guides/how-to-calculate-capital-gains-tax/",
+        "title": "U.S. Capital Gains Tax: Bands and NIIT"
+      },
+      {
+        "path": "/guides/how-to-calculate-stock-profit/",
+        "title": "Economic Stock Profit and Trading Fees"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is an unrealized price gain automatically this year’s taxable gain?",
+        "answer": "A price change while holding an asset and a tax realization event are different concepts. Disposition and other applicable tax rules determine the treatment; the worksheet models a sale rather than every possible recognition event."
+      },
+      {
+        "question": "Are long-term gains always taxed at 15%?",
+        "answer": "No. General preferential rates can be 0%, 15% or 20% depending on total taxable income and filing status. NIIT and special gain categories can add further considerations."
+      },
+      {
+        "question": "Does a displayed loss mean the calculator will show a refund?",
+        "answer": "No. The general-asset tool does not apply capital-loss deductions, netting or carryovers. It shows no additional modeled tax at a loss without deciding its ultimate effect on a return."
+      }
+    ]
+  }
+]
