@@ -35,7 +35,7 @@ for(const id of ids){
 
 test('Expansion pages have complete guides, unique categories, search ownership and canonical sitemap entries',()=>{
  const entries=sitemapEntries({origin:'https://www.calculatorfree.io',indexable:true});
- for(const id of ids){assert.equal(calculators.filter(c=>c.id===id).length,1);assert.ok(calculatorCategory(id));assert.equal(guides[id].questions.length,7);assert.ok(guides[id].examples.length>=3);assert.ok(guides[id].sources.length>=2);assert.equal(guides[id].checkedOn,'2026-11-05');assert.equal(directorySearch(catalog,calc(id).title)[0]?.tool.id,id);assert.equal(entries.filter(x=>x.url==='https://www.calculatorfree.io/'+id+'-calculator').length,1);}
+ for(const id of ids){assert.equal(calculators.filter(c=>c.id===id).length,1);assert.ok(calculatorCategory(id));assert.equal(guides[id].questions.length,id==='retirement-withdrawal'?11:7);assert.ok(guides[id].examples.length>=3);assert.ok(guides[id].sources.length>=2);assert.equal(guides[id].checkedOn,'2026-11-05');assert.equal(directorySearch(catalog,calc(id).title)[0]?.tool.id,id);assert.equal(entries.filter(x=>x.url==='https://www.calculatorfree.io/'+id+'-calculator').length,1);}
  for(const [query,id,mode] of [['DSCR loan calculator','dscr','rental-loan'],['seller closing cost calculator','closing-cost','seller'],['retirement withdrawal calculator','retirement-withdrawal','longevity']] as const){const found=directorySearch(catalog,query)[0];assert.equal(found.tool.id,id);if(mode==='seller')assert.match(found.href,/mode=seller/);}
 });
 

@@ -230,3 +230,13 @@ for(const guide of editorialGuides){
  if(guide.calculatorIds.includes('noi')||guide.path==='/guides/how-to-estimate-rental-property-cash-flow/')additions.push('dscr');
  if(additions.length)guide.calculatorIds=[...new Set([...guide.calculatorIds,...additions])];
 }
+
+for(const guide of editorialGuides){
+ const additions:string[]=[];
+ if(guide.path==='/guides/lump-sum-vs-dollar-cost-averaging/')additions.push('dca');
+ if(guide.path==='/guides/simple-interest-vs-compound-interest/')additions.push('rule-of-72');
+ if(guide.path==='/guides/balance-transfer-vs-personal-loan/')additions.push('credit-utilization');
+ if(guide.path==='/guides/how-to-calculate-stock-profit/')additions.push('capital-gains-tax');
+ if(guide.calculatorIds.includes('rental-property'))additions.push('1031-exchange','home-maintenance-cost','vacancy-rate');
+ if(additions.length)guide.calculatorIds=[...new Set([...guide.calculatorIds,...additions])];
+}

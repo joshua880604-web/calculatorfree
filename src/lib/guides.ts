@@ -1,4 +1,6 @@
 import expansionFiveContent from './expansion-five-content.json';
+import remainingToolContent from './remaining-tool-content.json';
+import remainingModeContent from './remaining-mode-content.json';
 import calculatorDepthContent from './calculator-depth-content.json';
 import semrushFollowupFiveFaq from './semrush-followup-five-faq-content.json';
 import semrushRefinanceFaq from './semrush-refinance-faq-content.json';
@@ -976,3 +978,35 @@ relatedCalculatorIds['mortgage']=[...new Set(['closing-cost',...(relatedCalculat
 relatedCalculatorIds['house-affordability']=[...new Set(['closing-cost',...(relatedCalculatorIds['house-affordability']??[])])].slice(0,8);
 relatedCalculatorIds['fix-and-flip']=[...new Set(['closing-cost',...(relatedCalculatorIds['fix-and-flip']??[])])].slice(0,8);
 relatedCalculatorIds['seller-financing']=[...new Set(['closing-cost',...(relatedCalculatorIds['seller-financing']??[])])].slice(0,8);
+
+Object.assign(guides,remainingToolContent as unknown as Record<string,Guide>);
+for(const [id,extra] of Object.entries(remainingModeContent as unknown as Record<string,Pick<Guide,"questions"|"examples">>)){guides[id].questions.push(...extra.questions);guides[id].examples.push(...extra.examples);guides[id].checkedOn="2026-11-05";}
+Object.assign(relatedCalculatorIds,{"1031-exchange": ["closing-cost", "capital-gains-tax", "rental-property", "stock-profit"], "home-maintenance-cost": ["budget", "emergency-fund", "rental-property", "house-affordability"], "vacancy-rate": ["noi", "rental-property", "cap-rate", "cash-on-cash-return"], "credit-utilization": ["credit-card", "credit-card-minimum-payment", "balance-transfer", "debt-payoff"], "dca": ["stock-average", "stock-profit", "drip", "investment"], "rule-of-72": ["compound-interest", "simple-interest", "investment", "inflation"], "capital-gains-tax": ["income-tax", "stock-profit", "1031-exchange", "tax-equivalent-yield"]});
+relatedCalculatorIds["closing-cost"]=[...new Set([...(relatedCalculatorIds["closing-cost"]??[]),"1031-exchange"])];
+relatedCalculatorIds["capital-gains-tax"]=[...new Set([...(relatedCalculatorIds["capital-gains-tax"]??[]),"1031-exchange"])];
+relatedCalculatorIds["rental-property"]=[...new Set([...(relatedCalculatorIds["rental-property"]??[]),"1031-exchange"])];
+relatedCalculatorIds["stock-profit"]=[...new Set([...(relatedCalculatorIds["stock-profit"]??[]),"1031-exchange"])];
+relatedCalculatorIds["budget"]=[...new Set([...(relatedCalculatorIds["budget"]??[]),"home-maintenance-cost"])];
+relatedCalculatorIds["emergency-fund"]=[...new Set([...(relatedCalculatorIds["emergency-fund"]??[]),"home-maintenance-cost"])];
+relatedCalculatorIds["rental-property"]=[...new Set([...(relatedCalculatorIds["rental-property"]??[]),"home-maintenance-cost"])];
+relatedCalculatorIds["house-affordability"]=[...new Set([...(relatedCalculatorIds["house-affordability"]??[]),"home-maintenance-cost"])];
+relatedCalculatorIds["noi"]=[...new Set([...(relatedCalculatorIds["noi"]??[]),"vacancy-rate"])];
+relatedCalculatorIds["rental-property"]=[...new Set([...(relatedCalculatorIds["rental-property"]??[]),"vacancy-rate"])];
+relatedCalculatorIds["cap-rate"]=[...new Set([...(relatedCalculatorIds["cap-rate"]??[]),"vacancy-rate"])];
+relatedCalculatorIds["cash-on-cash-return"]=[...new Set([...(relatedCalculatorIds["cash-on-cash-return"]??[]),"vacancy-rate"])];
+relatedCalculatorIds["credit-card"]=[...new Set([...(relatedCalculatorIds["credit-card"]??[]),"credit-utilization"])];
+relatedCalculatorIds["credit-card-minimum-payment"]=[...new Set([...(relatedCalculatorIds["credit-card-minimum-payment"]??[]),"credit-utilization"])];
+relatedCalculatorIds["balance-transfer"]=[...new Set([...(relatedCalculatorIds["balance-transfer"]??[]),"credit-utilization"])];
+relatedCalculatorIds["debt-payoff"]=[...new Set([...(relatedCalculatorIds["debt-payoff"]??[]),"credit-utilization"])];
+relatedCalculatorIds["stock-average"]=[...new Set([...(relatedCalculatorIds["stock-average"]??[]),"dca"])];
+relatedCalculatorIds["stock-profit"]=[...new Set([...(relatedCalculatorIds["stock-profit"]??[]),"dca"])];
+relatedCalculatorIds["drip"]=[...new Set([...(relatedCalculatorIds["drip"]??[]),"dca"])];
+relatedCalculatorIds["investment"]=[...new Set([...(relatedCalculatorIds["investment"]??[]),"dca"])];
+relatedCalculatorIds["compound-interest"]=[...new Set([...(relatedCalculatorIds["compound-interest"]??[]),"rule-of-72"])];
+relatedCalculatorIds["simple-interest"]=[...new Set([...(relatedCalculatorIds["simple-interest"]??[]),"rule-of-72"])];
+relatedCalculatorIds["investment"]=[...new Set([...(relatedCalculatorIds["investment"]??[]),"rule-of-72"])];
+relatedCalculatorIds["inflation"]=[...new Set([...(relatedCalculatorIds["inflation"]??[]),"rule-of-72"])];
+relatedCalculatorIds["income-tax"]=[...new Set([...(relatedCalculatorIds["income-tax"]??[]),"capital-gains-tax"])];
+relatedCalculatorIds["stock-profit"]=[...new Set([...(relatedCalculatorIds["stock-profit"]??[]),"capital-gains-tax"])];
+relatedCalculatorIds["1031-exchange"]=[...new Set([...(relatedCalculatorIds["1031-exchange"]??[]),"capital-gains-tax"])];
+relatedCalculatorIds["tax-equivalent-yield"]=[...new Set([...(relatedCalculatorIds["tax-equivalent-yield"]??[]),"capital-gains-tax"])];

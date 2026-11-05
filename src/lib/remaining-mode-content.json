@@ -1,0 +1,189 @@
+{
+  "retirement-withdrawal": {
+    "questions": [
+      {
+        "question": "Does Withdrawal Rate Scenario calculate a safe withdrawal rate?",
+        "answer": "No. It converts your selected first-year annual rate into an initial gross monthly withdrawal, adds other income available now, and tests the resulting inflation-adjusted spending path. No asset allocation, historical sequence or success probability is supplied. A funded constant-return scenario does not establish that a rate is safe."
+      },
+      {
+        "question": "Is the selected withdrawal percentage reapplied to the remaining balance every year?",
+        "answer": "No. This mode sets the first-year withdrawal from the starting portfolio. Subsequent spending increases with the entered inflation assumption and is reduced by other income when available. A fixed percentage of each later balance is a different spending strategy and is not modeled here."
+      },
+      {
+        "question": "How is the retirement nest egg target calculated?",
+        "answer": "The target discounts every monthly gross portfolio withdrawal needed to fill the positive spending gap after other income. It uses the same constant net return, inflation, flat withdrawal tax and month-end timing as the drawdown model. Retirement starts now; the target can run down to zero after the last modeled payment."
+      },
+      {
+        "question": "Does the Nest Egg table use my entered balance or the solved target?",
+        "answer": "It illustrates the solved starting nest egg. Your entered current retirement assets are used to show a surplus or additional assets needed now. This separates a required-capital calculation from testing your existing balance. Use How Long Will Savings Last to run your entered balance, or Retirement Calculator for pre-retirement saving."
+      }
+    ],
+    "examples": [
+      {
+        "title": "A 10% initial rate on 12,000 sets a 100 monthly withdrawal",
+        "mode": "rate",
+        "values": {
+          "balance": 12000,
+          "years": 1,
+          "return": 0,
+          "fee": 0,
+          "inflation": 0,
+          "income": 0,
+          "income_start": 0,
+          "tax": 0,
+          "withdrawal_rate": 10
+        },
+        "inputs": "Starting portfolio 12,000; rate 10%; one year; no growth, fees, income, inflation or withdrawal tax.",
+        "steps": [
+          "Initial annual withdrawal = 12,000 × 10% = 1,200.",
+          "Monthly gross withdrawal = 1,200 / 12 = 100."
+        ],
+        "answer": "The selected rate creates a 100 initial monthly portfolio withdrawal, without asserting that the rate is safe.",
+        "expected": {
+          "label": "Initial monthly portfolio withdrawal before tax",
+          "value": 100,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "A zero-return one-year nest egg funds twelve payments",
+        "mode": "nest-egg",
+        "values": {
+          "balance": 10000,
+          "years": 1,
+          "return": 0,
+          "fee": 0,
+          "inflation": 0,
+          "income": 0,
+          "income_start": 0,
+          "tax": 0,
+          "spending": 1000
+        },
+        "inputs": "Twelve monthly payments of 1,000; zero net return, inflation, other income and tax.",
+        "steps": [
+          "Every monthly discounted withdrawal is 1,000 at zero return.",
+          "Required starting assets = 12 × 1,000 = 12,000; 10,000 current assets leave a 2,000 gap."
+        ],
+        "answer": "The required starting nest egg is 12,000.",
+        "expected": {
+          "label": "Required starting retirement nest egg",
+          "value": 12000,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "Flat withdrawal tax changes the gross nest egg need",
+        "mode": "nest-egg",
+        "values": {
+          "balance": 0,
+          "years": 1,
+          "return": 0,
+          "fee": 0,
+          "inflation": 0,
+          "income": 0,
+          "income_start": 0,
+          "tax": 20,
+          "spending": 800
+        },
+        "inputs": "Monthly spending 800; 20% flat withdrawal tax; no return, inflation or other income; one year.",
+        "steps": [
+          "Each 800 net payment requires 800 / 0.8 = 1,000 gross.",
+          "Twelve gross payments require 12,000 starting assets."
+        ],
+        "answer": "The modeled starting nest egg is 12,000, not the 9,600 after-tax spending sum.",
+        "expected": {
+          "label": "Required starting retirement nest egg",
+          "value": 12000,
+          "tolerance": 0.01
+        }
+      }
+    ]
+  },
+  "stock-average": {
+    "questions": [
+      {
+        "question": "How many shares do I need to buy to reach an average-down target?",
+        "answer": "Use Average Down to a Target. When the current average exceeds the target and the new price is below it, additional shares equal [held shares × (current average − target) + new fixed order fee] / (target − new price). Enter a current average that already includes past purchase fees. Whole-share mode rounds the solved quantity upward."
+      },
+      {
+        "question": "Why can an average-down target be impossible?",
+        "answer": "If your current average is above the target, a new price at or above that target cannot bring the combined average to it with any finite purchase. The new order fee makes the requirement larger. The calculator shows that condition instead of returning a negative or infinite share count."
+      },
+      {
+        "question": "Does a lower average cost recover my current loss?",
+        "answer": "Not by itself. At an unchanged market price, buying more of the same security adds capital at risk; a lower displayed average does not create a price recovery. This worksheet calculates purchase arithmetic without forecasting a future price, recommending a trade or establishing the position’s tax basis."
+      }
+    ],
+    "examples": [
+      {
+        "title": "Include one new order fee in an average-down target",
+        "mode": "average-down",
+        "values": {
+          "held": 100,
+          "average": 50,
+          "purchase_price": 30,
+          "target": 40,
+          "fee": 10,
+          "share_unit": "Fractional shares"
+        },
+        "inputs": "100 shares averaging 50; new price 30; target 40; new fixed fee 10.",
+        "steps": [
+          "Required shares = [100 × (50 − 40) + 10] / (40 − 30) = 101.",
+          "New cash = 101 × 30 + 10 = 3,040; combined cost 8,040 / 201 shares = 40."
+        ],
+        "answer": "101 additional shares reach the modeled target.",
+        "expected": {
+          "label": "Additional shares needed",
+          "value": 101,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "Whole-share mode rounds the target quantity upward",
+        "mode": "average-down",
+        "values": {
+          "held": 100,
+          "average": 50,
+          "purchase_price": 33,
+          "target": 40,
+          "fee": 5,
+          "share_unit": "Whole shares"
+        },
+        "inputs": "100 shares at average 50; new price 33; target 40; fixed fee 5; whole shares.",
+        "steps": [
+          "Fractional requirement = 1,005 / 7 = 143.5714 shares.",
+          "Round up to 144 whole shares, producing a combined average slightly below 40."
+        ],
+        "answer": "The whole-share requirement is 144 shares.",
+        "expected": {
+          "label": "Additional shares needed",
+          "value": 144,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "An already met target does not create a new order",
+        "mode": "average-down",
+        "values": {
+          "held": 100,
+          "average": 35,
+          "purchase_price": 30,
+          "target": 40,
+          "fee": 10,
+          "share_unit": "Whole shares"
+        },
+        "inputs": "Current average 35; target ceiling 40.",
+        "steps": [
+          "35 is already at or below 40.",
+          "No additional order is required and no new fee is charged."
+        ],
+        "answer": "Additional modeled cash needed is zero.",
+        "expected": {
+          "label": "Additional cash needed including purchase fee",
+          "value": 0,
+          "tolerance": 0.01
+        }
+      }
+    ]
+  }
+}

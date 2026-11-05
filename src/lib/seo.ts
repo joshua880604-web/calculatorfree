@@ -64,6 +64,14 @@ export function calculatorMetadata(calc: Calculator, config = siteConfig()) {
 }
 // Dates record reviewed content changes, never the current build time.
 export const contentUpdatedOn: Record<string, string> = {
+ '/1031-exchange-calculator.html':'2026-11-05',
+ '/home-maintenance-cost-calculator.html':'2026-11-05',
+ '/vacancy-rate-calculator.html':'2026-11-05',
+ '/credit-utilization-calculator.html':'2026-11-05',
+ '/dca-calculator.html':'2026-11-05',
+ '/rule-of-72-calculator.html':'2026-11-05',
+ '/capital-gains-tax-calculator.html':'2026-11-05',
+
  '/retirement-withdrawal-calculator.html':'2026-11-05',
  '/balance-transfer-calculator.html':'2026-11-05',
  '/dscr-calculator.html':'2026-11-05',
@@ -312,3 +320,6 @@ for(const path of ["/guides/how-to-calculate-auto-loan-payments/", "/guides/how-
 // Roth comparison mode, matched-loan guide, IRR/NPV guide and lease definition.
 for(const id of ["401k","fha-loan","mortgage","irr","present-value","auto-lease"])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]="2026-11-04";
 for(const path of ["/guides/", "/glossary/", "/loan-calculators.html", "/real-estate-calculator.html", "/savings-investment-calculators.html", "/guides/fha-vs-conventional-loan/", "/guides/irr-vs-npv/", "/glossary/money-factor/", "/glossary/lease-residual-value/", "/glossary/net-present-value/", "/glossary/internal-rate-of-return/", "/guides/how-to-calculate-fha-loan-payments/", "/guides/how-to-calculate-monthly-mortgage-payment/", "/guides/how-to-calculate-irr/", "/guides/how-to-calculate-present-value/", "/guides/how-to-calculate-auto-lease-payments/"])contentUpdatedOn[path]="2026-11-04";
+
+contentUpdatedOn['/stock-average-calculator.html']='2026-11-05';
+contentUpdatedOn['/retirement-withdrawal-calculator.html']='2026-11-05';

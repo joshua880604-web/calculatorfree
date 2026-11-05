@@ -1,8 +1,8 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {calculators}from'../src/lib/calculators';import{editorialGuides}from'../src/lib/editorial-guides';
 import content from'../src/lib/practical-guide-content.json';import cases from'../src/lib/remaining-tool-cases.json';
-test('Financial guide completion covers all 115 financial/business tools without adding utility guide pages',()=>{
- const covered=new Set(editorialGuides.flatMap(g=>g.calculatorIds));const financial=calculators.filter(c=>c.modes.some(m=>m.fields.length)&&c.category!=='Everyday Tools');assert.equal(financial.length,115);assert.deepEqual(financial.filter(c=>!covered.has(c.id)).map(c=>c.id),[]);assert.equal(content.length,24);assert.equal(Object.keys(cases).length,34);assert.equal(editorialGuides.length,113);
+test('Financial guide completion covers all 122 financial/business tools without adding utility guide pages',()=>{
+ const covered=new Set(editorialGuides.flatMap(g=>g.calculatorIds));const financial=calculators.filter(c=>c.modes.some(m=>m.fields.length)&&c.category!=='Everyday Tools');assert.equal(financial.length,122);assert.deepEqual(financial.filter(c=>!covered.has(c.id)).map(c=>c.id),[]);assert.equal(content.length,24);assert.equal(Object.keys(cases).length,34);assert.equal(editorialGuides.length,113);
 });
 test('New grouped guides have distinct topics, complete preset inputs, matching data units and honest verification wording',()=>{
  assert.equal(new Set(content.map(g=>g.slug)).size,24);

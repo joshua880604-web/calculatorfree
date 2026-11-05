@@ -70,7 +70,7 @@ export function ordinaryTax(
       : rules.federal_income_tax.brackets[filing],
   );
 }
-function gainsTax(
+export function gainsTax(
   gains: number,
   ordinary: number,
   filing: Filing,

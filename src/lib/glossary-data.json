@@ -65,6 +65,10 @@
       {
         "id": "drip",
         "text": "Compare dividend reinvestment with retained cash."
+      },
+      {
+        "id": "rule-of-72",
+        "text": "Compare the doubling-time shortcut with exact constant annual compound growth."
       }
     ],
     "related": [
@@ -379,6 +383,10 @@
         "id": "stock-average",
         "mode": "purchases",
         "label": "Stock Average Calculator"
+      },
+      {
+        "id": "dca",
+        "text": "Calculate equal-dollar share purchases using a manual price sequence and compare equal-total-cash strategies."
       }
     ],
     "related": [
@@ -2353,6 +2361,10 @@
       {
         "id": "house-affordability",
         "text": "Explore an affordability estimate with explicitly entered ratio assumptions."
+      },
+      {
+        "id": "credit-utilization",
+        "text": "Compare a distinct balance-to-credit-limit measure; utilization is not debt-to-income."
       }
     ],
     "related": [
@@ -5781,6 +5793,14 @@
       {
         "id": "drip",
         "text": "Project dividend reinvestment while recognizing that the projection is not a tax-lot ledger."
+      },
+      {
+        "id": "1031-exchange",
+        "text": "Reconcile adjusted basis and modeled replacement basis in a simplified real-property exchange."
+      },
+      {
+        "id": "capital-gains-tax",
+        "text": "Estimate incremental general-asset sale tax using an entered adjusted basis."
       }
     ],
     "related": [
@@ -6118,6 +6138,10 @@
       {
         "id": "house-hacking",
         "text": "Keep the owner’s occupied space outside the rental list and test tenant-rent loss."
+      },
+      {
+        "id": "vacancy-rate",
+        "text": "Calculate vacancy from unit counts or unit-days and distinguish it from rent loss."
       }
     ],
     "related": [
@@ -6191,6 +6215,10 @@
       {
         "id": "brrrr",
         "text": "Distinguish initial rehabilitation funding from the separate ongoing capital reserve."
+      },
+      {
+        "id": "home-maintenance-cost",
+        "text": "Separate routine maintenance from a pooled reserve for one-time component replacements."
       }
     ],
     "related": [

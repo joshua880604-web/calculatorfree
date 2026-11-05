@@ -10,7 +10,14 @@ export function directoryGroup(id:string,_category?:string){
  return group.id;
 }
 const toolAliases:Record<string,string[]>={
- 'retirement-withdrawal':['retirement drawdown','retirement distribution','retirement savings withdrawal'],
+ "1031-exchange":["like kind exchange", "tax deferred exchange", "1031 boot", "1031 exchange deadline"],
+ "home-maintenance-cost":["home maintenance budget", "home repair reserve", "replacement reserve"],
+ "vacancy-rate":["rental vacancy", "occupancy rate", "vacant unit days", "economic vacancy"],
+ "credit-utilization":["credit card utilization", "credit usage", "credit utilization payment target"],
+ "dca":["dollar cost averaging", "dollar-cost averaging", "equal dollar investing"],
+ "rule-of-72":["rule of 72", "doubling time", "years to double"],
+ "capital-gains-tax":["capital gains", "long term capital gains", "short term capital gains", "niit"],
+ 'retirement-withdrawal':['safe withdrawal rate','nest egg','retirement nest egg','retirement drawdown','retirement distribution','retirement savings withdrawal'],
  'balance-transfer':['credit card balance transfer','balance transfer fee','balance transfer savings'],
  dscr:['debt service coverage ratio','dscr loan','rental property dscr'],
  fsa:['health fsa','flexible spending account','fsa tax savings','fsa contribution'],

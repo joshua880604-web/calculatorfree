@@ -730,5 +730,47 @@
     "title": "Closing Cost Calculator",
     "category": "Mortgage and Real Estate",
     "local_route": "/closing-cost-calculator.html"
+  },
+  {
+    "id": "1031-exchange",
+    "title": "1031 Exchange Calculator",
+    "category": "Mortgage and Real Estate",
+    "local_route": "/1031-exchange-calculator.html"
+  },
+  {
+    "id": "home-maintenance-cost",
+    "title": "Home Maintenance Cost Calculator",
+    "category": "Mortgage and Real Estate",
+    "local_route": "/home-maintenance-cost-calculator.html"
+  },
+  {
+    "id": "vacancy-rate",
+    "title": "Vacancy Rate Calculator",
+    "category": "Mortgage and Real Estate",
+    "local_route": "/vacancy-rate-calculator.html"
+  },
+  {
+    "id": "credit-utilization",
+    "title": "Credit Utilization Calculator",
+    "category": "Other",
+    "local_route": "/credit-utilization-calculator.html"
+  },
+  {
+    "id": "dca",
+    "title": "DCA Calculator",
+    "category": "Investment",
+    "local_route": "/dca-calculator.html"
+  },
+  {
+    "id": "rule-of-72",
+    "title": "Rule of 72 Calculator",
+    "category": "Investment",
+    "local_route": "/rule-of-72-calculator.html"
+  },
+  {
+    "id": "capital-gains-tax",
+    "title": "Capital Gains Tax Calculator",
+    "category": "Tax and Salary",
+    "local_route": "/capital-gains-tax-calculator.html"
   }
 ]

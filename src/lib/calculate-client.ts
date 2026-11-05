@@ -11,6 +11,13 @@ const loaders: Record<string, () => Promise<Calculator[]>> = {
 const businessTools = () => import('./calculators/business-tools').then(m => m.businessTools);
 const strategyTools=()=>import('./calculators/debt-strategies').then(m=>[m.debtSnowball,m.debtAvalanche]);
 const dataTools: Record<string, () => Promise<Calculator[]>> = {
+  '1031-exchange':()=>import('./calculators/1031-exchange').then(m=>[m.exchangeCalculator]),
+  'home-maintenance-cost':()=>import('./calculators/home-maintenance-cost').then(m=>[m.maintenanceCalculator]),
+  'vacancy-rate':()=>import('./calculators/vacancy-rate').then(m=>[m.vacancyCalculator]),
+  'credit-utilization':()=>import('./calculators/credit-utilization').then(m=>[m.creditUtilizationCalculator]),
+  'dca':()=>import('./calculators/dca').then(m=>[m.dcaCalculator]),
+  'rule-of-72':()=>import('./calculators/rule-of-72').then(m=>[m.rule72Calculator]),
+  'capital-gains-tax':()=>import('./calculators/capital-gains-tax').then(m=>[m.capitalGainsCalculator]),
   'retirement-withdrawal':()=>import('./calculators/retirement-withdrawal').then(m=>[m.retirementWithdrawalCalculator]),
   'balance-transfer':()=>import('./calculators/balance-transfer').then(m=>[m.balanceTransferCalculator]),
   dscr:()=>import('./calculators/dscr').then(m=>[m.dscrCalculator]),

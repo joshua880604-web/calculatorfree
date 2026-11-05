@@ -1,3 +1,4 @@
+import {remainingCalculators} from './remaining-tools';
 import {retirementWithdrawalCalculator} from './retirement-withdrawal';
 import {balanceTransferCalculator} from './balance-transfer';
 import {dscrCalculator} from './dscr';
@@ -38,6 +39,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  ...remainingCalculators,
   retirementWithdrawalCalculator,balanceTransferCalculator,dscrCalculator,fsaCalculator,closingCostCalculator,
   stockProfitCalculator,stockAverageCalculator,sellerFinancingCalculator,fixFlipCalculator,capRateCalculator, cardMinimumCalculator, rothLadderCalculator, dripCalculator, coveredCallCalculator, houseHackingCalculator,mortgageInvestCalculator,cashOnCashCalculator,brrrrCalculator,baristaFireCalculator,selfEmploymentTaxCalculator,hsaCalculator,debtSnowball,debtAvalanche,leanFireCalculator,fatFireCalculator,noiCalculator,fireCalculator,mirrCalculator,
   coastFire,

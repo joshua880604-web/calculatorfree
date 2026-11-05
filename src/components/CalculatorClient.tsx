@@ -558,7 +558,7 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
               )}
             </>
           )}
-          {!prominentTables && <ResultTables tables={result.additionalTables?.filter((_, index) => !['coast-fire','lean-fire','fat-fire','debt-snowball','debt-avalanche'].includes(id) && (id !== "mortgage-recast" || index !== 0))??[]} onDownload={download} label={id==='coast-fire'?'Download comparison CSV':id==='balance-transfer'?'Download repayment CSV':'Download retirement CSV'}/>}
+          {!prominentTables && <ResultTables tables={result.additionalTables?.filter((_, index) => !['coast-fire','lean-fire','fat-fire','debt-snowball','debt-avalanche'].includes(id) && (id !== "mortgage-recast" || index !== 0))??[]} onDownload={download} label={id==='coast-fire'?'Download comparison CSV':id==='balance-transfer'?'Download repayment CSV':['1031-exchange','home-maintenance-cost','vacancy-rate','credit-utilization','dca','rule-of-72','capital-gains-tax'].includes(id)?'Download comparison CSV':'Download retirement CSV'}/>}
 
           </CalculationDetails>
   );

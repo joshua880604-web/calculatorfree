@@ -1,0 +1,791 @@
+{
+  "credit-utilization": {
+    "checkedOn": "2026-11-05",
+    "summary": "Credit utilization compares reported revolving balances with their credit limits. Add balances and limits before dividing to get the overall ratio; averaging the individual percentages can give a different answer. This worksheet also separates two payment questions: how much brings the combined balance to a chosen target, and how much would bring every card individually to that target. The second amount can be larger even when the overall ratio already meets the target.",
+    "scope": "Use open revolving cards and figures from the same reporting date. The entered target is an arithmetic scenario, not a scoring boundary or a reason to carry interest-bearing debt. No account details, credit reports, score predictions, issuer reporting schedule or future interest charges are retrieved. Zero-limit accounts need separate interpretation; an undefined card ratio is not a zero-percent utilization result.",
+    "examples": [
+      {
+        "title": "Two equal-limit cards produce 20% overall utilization",
+        "mode": "cards",
+        "values": {
+          "cards": "1500, 5000\n500, 5000",
+          "target": 30
+        },
+        "inputs": "Balances 1,500 and 500; each limit 5,000; target 30%.",
+        "steps": [
+          "Total balance = 1,500 + 500 = 2,000.",
+          "Total limit = 10,000; utilization = 2,000 / 10,000 × 100 = 20%."
+        ],
+        "answer": "The combined utilization is 20%, and both cards are already at or below 30%.",
+        "expected": {
+          "label": "Overall credit utilization",
+          "value": 20,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "A low overall ratio can hide one highly used card",
+        "mode": "cards",
+        "values": {
+          "cards": "900, 1000\n100, 9000",
+          "target": 10
+        },
+        "inputs": "Card 1: 900 / 1,000; card 2: 100 / 9,000; target 10%.",
+        "steps": [
+          "Overall utilization = 1,000 / 10,000 = 10%.",
+          "Card 1 must fall from 900 to 100 to meet its own 10% target."
+        ],
+        "answer": "No aggregate reduction is needed, but bringing every card to 10% requires 800 on card 1.",
+        "expected": {
+          "label": "Payments to bring every card to target",
+          "value": 800,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "An over-limit balance needs more than the over-limit amount paid",
+        "mode": "cards",
+        "values": {
+          "cards": "1500, 1000",
+          "target": 30
+        },
+        "inputs": "One balance 1,500; limit 1,000; target 30%.",
+        "steps": [
+          "Target balance = 1,000 × 0.30 = 300.",
+          "Required payment = 1,500 − 300 = 1,200."
+        ],
+        "answer": "The target payment is 1,200; paying only the 500 over the limit would still leave 100% utilization.",
+        "expected": {
+          "label": "Payment to reach overall target",
+          "value": 1200,
+          "tolerance": 0.01
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do I calculate credit utilization across multiple cards?",
+        "answer": "Add all included reported balances, add all included credit limits, then divide the first total by the second and multiply by 100. Do not average card percentages when limits differ. The table shows both the combined ratio and each card’s ratio so a large unused limit does not hide a highly used smaller account."
+      },
+      {
+        "question": "How much should I pay to reach a utilization target?",
+        "answer": "For the combined target, calculate max(0, total balance − total limit × target percentage). That does not tell you which card receives the payment. To bring each card to the same target, calculate that amount separately for every card and add the positive amounts. The worksheet shows both results."
+      },
+      {
+        "question": "Is 30% a guaranteed credit score cutoff?",
+        "answer": "No. The default is an editable illustration. Scoring models consider multiple factors and may treat overall and individual account usage differently. A ratio below 30% does not guarantee approval or a particular score. You do not need to carry a balance or pay interest merely to demonstrate credit use."
+      },
+      {
+        "question": "Should I enter my statement balance or current balance?",
+        "answer": "Use the balance relevant to the question and keep the reporting date consistent. For a credit-report scenario, use balances and limits actually reported by issuers. A current online balance can differ from the statement balance or reported amount. This calculator does not know when a payment will appear on a credit report."
+      },
+      {
+        "question": "Can utilization be over 100%?",
+        "answer": "Yes. A balance of 1,500 against a limit of 1,000 is 150%. The worksheet allows an over-limit balance and does not silently cap the ratio at 100%. Fees, accrued interest, new transactions or a lowered limit can affect the real account; verify the numbers and treatment with your issuer."
+      },
+      {
+        "question": "What happens when a credit limit is zero?",
+        "answer": "That card’s ratio is undefined. The row remains visible, and overall arithmetic still uses all entered balances and limits if the total limit is positive. When the total limit is zero, the combined ratio is also undefined. Do not infer a scoring model’s treatment of closed or zero-limit accounts from this arithmetic."
+      },
+      {
+        "question": "Does paying down utilization remove interest or predict my credit score?",
+        "answer": "The calculator solves a balance-to-limit relationship only. It does not calculate a payoff schedule, statement interest, minimum payments or score changes. Use the credit-card payoff tools for repayment costs, and confirm actual reported balances and due dates before making account decisions."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: building and maintaining a good credit score",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-keep-a-good-credit-score-en-318/"
+      },
+      {
+        "title": "myFICO: how scores consider credit card limits",
+        "url": "https://www.myfico.com/credit-education/credit-scores/fico-scores-credit-limit"
+      }
+    ]
+  },
+  "dca": {
+    "checkedOn": "2026-11-05",
+    "summary": "Dollar-cost averaging uses an equal cash budget for a series of purchases. A lower price buys more shares and a higher price buys fewer shares, so average acquisition cost is total money committed divided by total shares, rather than the simple average of prices. Enter your own price sequence here to inspect that arithmetic and compare it with investing the same total available cash at the first price. Both favorable and unfavorable price paths can be tested.",
+    "scope": "One asset and currency, equal purchase budgets, fractional shares and one fixed fee per purchase. The budget includes that fee. Prices are entered manually; this is not a historical backtest or return forecast. The lump-sum comparison assumes all cash is available at the beginning, while unspent DCA cash earns no interest. Dividends, sale fees, taxes, corporate actions and inflation are excluded.",
+    "examples": [
+      {
+        "title": "Equal dollars buy more shares at lower prices",
+        "mode": "prices",
+        "values": {
+          "budget": 1000,
+          "fee": 0,
+          "prices": "100\n50\n100\n50",
+          "terminal": 75
+        },
+        "inputs": "Four purchases of 1,000; prices 100, 50, 100 and 50; comparison price 75.",
+        "steps": [
+          "Shares = 10 + 20 + 10 + 20 = 60.",
+          "Average cost = 4,000 / 60 = 66.6667, rather than the arithmetic price average of 75."
+        ],
+        "answer": "The fee-inclusive average cost is about 66.67 per share.",
+        "expected": {
+          "label": "Average cost per share including fees",
+          "value": 66.66666666666667,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "A fixed fee reduces shares bought from each budget",
+        "mode": "prices",
+        "values": {
+          "budget": 500,
+          "fee": 5,
+          "prices": "10\n20",
+          "terminal": 20
+        },
+        "inputs": "Two budgets of 500 including a 5 fee each; prices 10 and 20.",
+        "steps": [
+          "Each purchase invests 495 into shares.",
+          "Shares = 495 / 10 + 495 / 20 = 49.5 + 24.75 = 74.25."
+        ],
+        "answer": "The purchases acquire 74.25 shares, while the full committed cash remains 1,000.",
+        "expected": {
+          "label": "Total shares purchased",
+          "value": 74.25,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "A rising price path can favor the lump-sum comparison",
+        "mode": "prices",
+        "values": {
+          "budget": 1000,
+          "fee": 0,
+          "prices": "50\n100",
+          "terminal": 100
+        },
+        "inputs": "Two 1,000 purchases at 50 and 100; final price 100; lump sum has 2,000 available initially.",
+        "steps": [
+          "DCA buys 20 + 10 = 30 shares worth 3,000.",
+          "The equal-budget lump sum buys 40 shares at 50, worth 4,000."
+        ],
+        "answer": "DCA value is 1,000 below the lump-sum value on this entered path.",
+        "expected": {
+          "label": "DCA value minus lump-sum value",
+          "value": -1000,
+          "tolerance": 0.01
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How is average cost calculated for dollar-cost averaging?",
+        "answer": "Subtract the fixed fee from each equal purchase budget, divide by that purchase’s price, and sum the shares. Then divide all cash committed, including buy fees, by total shares. Equal-dollar purchases do not give equal weights to prices: cheaper purchases add more shares."
+      },
+      {
+        "question": "Does the purchase amount include the fee?",
+        "answer": "Yes. A 500 budget with a 5 fee invests 495 into shares and counts the full 500 as acquisition cost. The fee must be smaller than the budget. This keeps the DCA and lump-sum comparisons on the same total-cash basis while showing that repeated orders may incur more fees."
+      },
+      {
+        "question": "Is the lump-sum comparison fair when I invest from each paycheck?",
+        "answer": "The comparison assumes the entire combined budget was available at the first purchase. That differs from investing new wages as they arrive. If the later money did not exist initially, the lump-sum path is not an available alternative. Use the comparison to understand an already available cash allocation, not to imply you could invest future income earlier."
+      },
+      {
+        "question": "Does DCA always beat lump-sum investing?",
+        "answer": "No. Results depend on the prices, fees, cash returns and final valuation date. A rising sequence can favor the earlier lump sum; other paths can favor later purchases. DCA does not guarantee a profit or protect every loss. The worksheet shows only the path you entered."
+      },
+      {
+        "question": "Where do the prices come from?",
+        "answer": "You supply one positive price per line, without dates or thousands separators. There is no ticker lookup, price download or market-data feed. Keep all prices on a consistent basis for one asset. Splits, distributions and adjusted historical data may need separate treatment before entering a sequence."
+      },
+      {
+        "question": "Can I model unequal purchases or whole-share trading?",
+        "answer": "This page models equal budgets and fractional shares. It does not round to whole shares or carry unspent rounding cash. For purchases with different share quantities or different fees, use Stock Average Calculator. No borrowing, short positions or sale-tax accounting is included."
+      },
+      {
+        "question": "Are dividends, taxes and idle cash interest included?",
+        "answer": "No. The comparison values the final shares at your entered price before sale fees and income tax. Unspent DCA cash earns zero interest and is fully used by the final purchase. Reinvested dividends, cash distributions, spreads and custody fees can change a real comparison; use DRIP Calculator for a separate reinvestment scenario."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: dollar-cost averaging",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/dollar-cost-averaging"
+      },
+      {
+        "title": "FINRA: benefits and limitations of dollar-cost averaging",
+        "url": "https://syndication.finra.org/content/benefits-and-limitations-dollar-cost-averaging"
+      }
+    ]
+  },
+  "rule-of-72": {
+    "checkedOn": "2026-11-05",
+    "summary": "The Rule of 72 is a quick estimate of compound-growth doubling time: divide 72 by the annual percentage rate. The exact constant-rate answer instead divides the natural logarithm of two by the logarithm of one plus the decimal return. Comparing those two answers shows where the shortcut helps and how much error it introduces. The return-needed mode reverses the problem to find the effective annual return that doubles an amount over a chosen horizon.",
+    "scope": "Constant effective annual compounding, no deposits or withdrawals. Fractional-year exact results interpolate the annual growth factor; an account checked only at year end crosses at the next whole year. No investment, fee, tax, inflation or return forecast is inferred. A nonpositive return cannot double a positive unchanged principal, and very short target horizons can imply impractically large required returns.",
+    "examples": [
+      {
+        "title": "An 8% return gives a nine-year rule estimate",
+        "mode": "time",
+        "values": {
+          "rate": 8
+        },
+        "inputs": "Effective annual return 8%.",
+        "steps": [
+          "Rule estimate = 72 / 8 = 9 years.",
+          "Exact time = ln(2) / ln(1.08), about 9.0065 years."
+        ],
+        "answer": "Nine years is the shortcut result, slightly below the exact fractional-year result.",
+        "expected": {
+          "label": "Rule of 72 doubling-time approximation",
+          "value": 9,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "A 100% annual return doubles exactly in one year",
+        "mode": "time",
+        "values": {
+          "rate": 100
+        },
+        "inputs": "Constant effective annual return 100%.",
+        "steps": [
+          "One annual growth factor is 1 + 1 = 2.",
+          "Exact time = ln(2) / ln(2) = 1 year, while the rule estimates 0.72 years."
+        ],
+        "answer": "At this high return the approximation is visibly different from the exact one-year doubling time.",
+        "expected": {
+          "label": "Exact doubling time",
+          "value": 1,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "Doubling in ten years requires about 7.1773%",
+        "mode": "return",
+        "values": {
+          "years": 10
+        },
+        "inputs": "Target doubling horizon 10 years.",
+        "steps": [
+          "Solve (1 + r)^10 = 2.",
+          "r = 2^(1/10) − 1, or about 7.177346%."
+        ],
+        "answer": "The exact required effective annual return is about 7.1773%; the rule estimates 7.2%.",
+        "expected": {
+          "label": "Exact effective annual return required",
+          "value": 7.177346253629313,
+          "tolerance": 0.01
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the Rule of 72 formula?",
+        "answer": "Approximate years to double = 72 divided by the effective annual percentage return. Enter 8 for 8%, giving 9 years. The constant-compounding exact formula is ln(2) / ln(1 + rate/100). This calculator shows both so the shortcut’s error remains visible."
+      },
+      {
+        "question": "Why is the exact doubling time different?",
+        "answer": "The Rule of 72 replaces a logarithmic relationship with a convenient approximation. Its accuracy varies with the rate. For an 8% effective annual return the exact answer is about 9.0065 years, while at a 100% return the exact answer is one year and the shortcut gives 0.72 years."
+      },
+      {
+        "question": "What annual return doubles money in a chosen number of years?",
+        "answer": "Use Return Needed to Double. The exact rate is [2^(1/years) − 1] × 100%. The rule approximation is 72 / years. Both assume a constant return with all growth retained. A required rate is a mathematical target, not evidence that an investment offering it is available or safe."
+      },
+      {
+        "question": "What happens at zero or negative returns?",
+        "answer": "A zero return keeps an unchanged principal constant, and a negative return reduces it. Neither doubles the amount without additional deposits. The page therefore shows no doubling at a nonpositive return rather than a misleading negative time or a zero-year answer."
+      },
+      {
+        "question": "Should I enter APR or APY?",
+        "answer": "Use the effective annual growth rate after compounding, similar in concept to APY, rather than a nominal APR with an unspecified compounding frequency. The model applies one annual growth factor. Fees and taxes are not automatically deducted; they require a consistent return assumption or a separate model."
+      },
+      {
+        "question": "Does the rule work for inflation?",
+        "answer": "With constant inflation, the same exact mathematics gives the time for purchasing power to halve, and 72 / inflation percent is an approximation. That is a purchasing-power calculation rather than nominal investment growth. This page does not combine inflation with investment returns or fetch historical CPI."
+      },
+      {
+        "question": "Can I use this result with monthly contributions?",
+        "answer": "The doubling formulas assume an unchanged starting principal and no additional cash flows. Deposits can make an account balance double sooner without doubling the original money through returns. Use Compound Interest or Investment Calculator when the plan includes recurring deposits or withdrawals."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: compound interest and the Rule of 72",
+        "url": "https://www.investor.gov/additional-resources/information/youth/teachers-classroom-resources/what-compound-interest"
+      },
+      {
+        "title": "Dallas Fed: Building Wealth, save and invest",
+        "url": "https://www.dallasfed.org/-/media/microsites/cd/wealth/online/ch3.html"
+      }
+    ]
+  },
+  "vacancy-rate": {
+    "checkedOn": "2026-11-05",
+    "summary": "A vacancy rate needs a clearly defined numerator and denominator. A snapshot divides currently vacant units by units offered at that moment. A period calculation instead divides vacant unit-days by all available unit-days, so a short vacancy and a year-long vacancy receive different weights. This calculator supports both and keeps physical vacancy separate from a dollar-loss estimate, including an optional additional loss from uncollected rent on occupied units.",
+    "scope": "Property-management arithmetic using your chosen inventory scope and reporting period. The rent-loss illustration assumes equal rent per unit or unit-day, so it is not a rent-weighted ledger for apartments with different rents. Renovation days, concessions, bad debt and market-statistics definitions must be handled consistently. No local occupancy data, market target, lender qualification or future vacancy forecast is supplied.",
+    "examples": [
+      {
+        "title": "Two vacant units out of ten mean 20% snapshot vacancy",
+        "mode": "snapshot",
+        "values": {
+          "units": 10,
+          "vacant": 2,
+          "rent": 1500
+        },
+        "inputs": "Ten offered units; two vacant; uniform monthly scheduled rent 1,500.",
+        "steps": [
+          "Vacancy = 2 / 10 × 100 = 20%.",
+          "Annualized loss at an unchanged snapshot = 2 × 1,500 × 12 = 36,000."
+        ],
+        "answer": "Physical vacancy is 20%; the annualized loss is only a constant-snapshot scenario.",
+        "expected": {
+          "label": "Physical vacancy rate",
+          "value": 20,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "Unit-day vacancy and bad debt produce separate losses",
+        "mode": "period",
+        "values": {
+          "available_days": 3650,
+          "vacant_days": 365,
+          "scheduled_rent": 180000,
+          "uncollected": 2000
+        },
+        "inputs": "3,650 available unit-days; 365 vacant; scheduled period rent 180,000; other uncollected rent 2,000.",
+        "steps": [
+          "Physical vacancy = 365 / 3,650 = 10%.",
+          "Uniform-rent vacancy loss = 18,000; rent remaining = 180,000 − 18,000 − 2,000."
+        ],
+        "answer": "Rent after the two modeled losses is 160,000.",
+        "expected": {
+          "label": "Rent after vacancy and collection loss",
+          "value": 160000,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "A completely vacant single unit has zero occupied rent",
+        "mode": "snapshot",
+        "values": {
+          "units": 1,
+          "vacant": 1,
+          "rent": 1000
+        },
+        "inputs": "One offered unit, vacant, scheduled rent 1,000 per month.",
+        "steps": [
+          "Vacancy = 1 / 1 = 100%.",
+          "All 12,000 of scheduled annual rent is removed in the constant-snapshot scenario."
+        ],
+        "answer": "Modeled rent after vacancy is zero, without implying that the real unit will stay vacant for a year.",
+        "expected": {
+          "label": "Rent after vacancy and collection loss",
+          "value": 0,
+          "tolerance": 0.01
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do I calculate a rental property vacancy rate?",
+        "answer": "For a point-in-time view, divide vacant units by offered units. For a reporting period, divide vacant unit-days by available unit-days. Choose inventory consistently: the denominator must cover the same units and dates as the numerator. These measures answer different questions and should not be compared without checking their definitions."
+      },
+      {
+        "question": "What is a unit-day?",
+        "answer": "One rental unit available for one day contributes one unit-day. Ten included units over 30 days provide 300 available unit-days. If two of them are vacant for 15 days each, they contribute 30 vacant unit-days and period vacancy is 10%. Days excluded from inventory must be excluded consistently."
+      },
+      {
+        "question": "Is physical vacancy the same as economic vacancy?",
+        "answer": "No. Physical vacancy measures units or time, while economic loss measures money. Different rents, concessions, delinquency and recoveries can make the percentages differ. This worksheet estimates vacancy rent loss from a uniform-rent assumption, then adds separately entered uncollected rent. It does not calculate every form of economic vacancy."
+      },
+      {
+        "question": "How is the vacancy rent loss estimated?",
+        "answer": "Scheduled rent is multiplied by the physical vacancy fraction. Snapshot mode annualizes uniform monthly rent over 12 months at an unchanged vacancy fraction. Period mode uses the potential scheduled rent you enter for the same unit-day period. For unequal rents or seasonal pricing, compare this estimate with actual rent-roll losses."
+      },
+      {
+        "question": "Where do I enter unpaid rent on occupied units?",
+        "answer": "Use Additional Uncollected Occupied-Unit Rent in period mode. It is deducted after the modeled vacancy loss and cannot exceed the occupied scheduled rent remaining. Do not enter the same vacant-unit rent again as bad debt. This prevents the worksheet from removing one loss twice."
+      },
+      {
+        "question": "Does the calculator show the vacancy rate in my city?",
+        "answer": "No. It uses your property inputs without a market-data lookup. Census rental-vacancy measures use specific inventory classifications and survey methods; this worksheet is not an official market statistic. A benchmark also depends on property type, location, reporting period and which units count as available."
+      },
+      {
+        "question": "What vacancy rate should I assume in a rental analysis?",
+        "answer": "There is no universal rate established by this calculator. Review your rent roll, turnover history, local comparable properties and operating plan. Test more than one assumption in the rental cash-flow tools. A snapshot with no vacancies today does not establish a zero annual turnover or collection-loss allowance."
+      }
+    ],
+    "sources": [
+      {
+        "title": "U.S. Census Bureau: housing vacancy definitions",
+        "url": "https://www.census.gov/housing/hvs/definitions.html"
+      },
+      {
+        "title": "St. Louis Fed FRED: rental vacancy data and source definition",
+        "url": "https://fred.stlouisfed.org/data/RRVRUSQ156N"
+      }
+    ]
+  },
+  "home-maintenance-cost": {
+    "checkedOn": "2026-11-05",
+    "summary": "A maintenance budget can start with a general allowance, but a replacement reserve answers a different question. The allowance mode applies your selected percentage to a home value and increases that budget at your entered annual cost assumption. Component mode uses your own future quotes and deadlines to solve a pooled monthly reserve contribution, while keeping routine annual maintenance outside that reserve. Costs due now appear separately so they are not disguised as savings that can wait.",
+    "scope": "USD planning scenarios, not a property inspection, contractor estimate or professional reserve study. Home value can include land and need not track repair costs. Component quotes are assumed to be costs at the entered due year, with one replacement per component, no investment return and no automatic cost inflation. Existing reserves fund immediate work first; uncovered immediate work requires cash now. Mortgage payments, taxes, insurance, utilities, HOA dues and remodels are outside the model.",
+    "examples": [
+      {
+        "title": "A 1% allowance on a 400,000 home is 4,000 per year",
+        "mode": "allowance",
+        "values": {
+          "home_value": 400000,
+          "rate": 1,
+          "increase": 0,
+          "years": 1
+        },
+        "inputs": "Budget base 400,000; annual allowance 1%; no increase; one year.",
+        "steps": [
+          "Annual allowance = 400,000 × 0.01 = 4,000.",
+          "Monthly equivalent = 4,000 / 12 = 333.33."
+        ],
+        "answer": "The first-year allowance is 4,000, before checking actual property-specific costs.",
+        "expected": {
+          "label": "First-year annual maintenance allowance",
+          "value": 4000,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "A two-year roof reserve plus routine maintenance",
+        "mode": "components",
+        "values": {
+          "routine": 1200,
+          "reserve": 0,
+          "components": "Roof, 12000, 2"
+        },
+        "inputs": "Roof quote 12,000 due in two years; zero reserve; routine costs 1,200 per year.",
+        "steps": [
+          "Replacement contribution = 12,000 / 24 = 500 per month.",
+          "Routine budget = 1,200 / 12 = 100 per month, outside the reserve."
+        ],
+        "answer": "The combined monthly budget is 600.",
+        "expected": {
+          "label": "Monthly budget including routine maintenance",
+          "value": 600,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "Work due now is an immediate cash need",
+        "mode": "components",
+        "values": {
+          "routine": 0,
+          "reserve": 500,
+          "components": "Urgent repair, 1000, 0\nFuture item, 1200, 1"
+        },
+        "inputs": "Existing reserve 500; work costing 1,000 due now; another item 1,200 in one year.",
+        "steps": [
+          "The current 500 reserve leaves an immediate 500 shortfall.",
+          "After current work is separately funded, 1,200 / 12 = 100 per month funds the future item."
+        ],
+        "answer": "The 500 immediate gap is separate from the future monthly contribution.",
+        "expected": {
+          "label": "Immediate replacement cash shortfall",
+          "value": 500,
+          "tolerance": 0.01
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How much should I budget for home maintenance?",
+        "answer": "Use the allowance mode as a first budgeting scenario, then replace broad assumptions with your home’s inspection history and local quotes. A home-value percentage does not determine actual repair costs. Age, construction, condition, location and the land portion of home value can all affect whether that rule is useful."
+      },
+      {
+        "question": "Are the allowance and component results meant to be added?",
+        "answer": "They are alternative planning approaches. Do not add an allowance covering repairs and replacements to a component reserve covering the same work. Within component mode, routine maintenance is deliberately separate from one-time replacement quotes, and the combined monthly budget includes each of those two distinct categories once."
+      },
+      {
+        "question": "How does the pooled replacement reserve work?",
+        "answer": "Existing reserve cash is available across all entered components. The model chooses the smallest constant monthly contribution that can meet cumulative due costs at every deadline, assuming zero interest. A later large replacement may set the contribution even when earlier work is already covered. Summing separate component savings amounts can give a different result."
+      },
+      {
+        "question": "What does year zero mean for a component?",
+        "answer": "Year zero means the cost is due now. Existing reserve cash pays those costs first. Any shortage is shown as immediate cash needed, and future contributions start after that shortage is separately funded. Spreading today’s repair cost over later months would not make the bill payable today."
+      },
+      {
+        "question": "Should component costs be today’s quote or a future estimate?",
+        "answer": "Enter the amount you expect to pay at the due year. Component mode does not inflate a quote automatically. If you start with today’s quote, adjust it outside the worksheet using an assumption you can review. In allowance mode, the entered annual increase applies only to the allowance after each completed year."
+      },
+      {
+        "question": "Does the reserve earn interest or replace components repeatedly?",
+        "answer": "No. The reserve earns zero interest, receives constant month-end contributions and pays each entered component once at the end of its whole due year. The table ends at the latest entered deadline, with a one-year minimum. Recurring replacements, investment risk and midyear work need a more detailed plan."
+      },
+      {
+        "question": "Are property tax, insurance, HOA dues and renovations included?",
+        "answer": "No. They are separate ownership expenses. Routine maintenance and the entered replacement components are the only costs in this worksheet. A remodel that upgrades a property can differ from maintenance, and tax treatment is not determined. Use the housing and rental tools to combine broader ownership costs without counting the same repair twice."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Fannie Mae: building a maintenance and repair budget",
+        "url": "https://yourhome.fanniemae.com/own/how-build-your-maintenance-and-repair-budget"
+      },
+      {
+        "title": "Fannie Mae: regular home maintenance",
+        "url": "https://yourhome.fanniemae.com/own/regular-home-maintenance"
+      }
+    ]
+  },
+  "1031-exchange": {
+    "checkedOn": "2026-11-05",
+    "summary": "A 1031 exchange can defer qualifying gain, but the mortgage balance, cash received, adjusted basis and replacement value play different roles. This worksheet follows a simplified reconciliation of Form 8824 lines 15–20 and replacement basis before special adjustments. It distinguishes cash boot from net liability relief and allocates qualifying exchange expenses once. A separate date mode illustrates the ordinary 45-day identification and earlier-of-180-days-or-tax-due-date receipt rules.",
+    "scope": "One qualifying U.S. real-property exchange, with cash as the only non-like-kind consideration and no special recapture or home-sale exclusion. This worksheet assumes eligibility rather than establishing it. It calculates modeled gain and basis, not a tax bill or tax savings. A qualified intermediary and tax professional must confirm constructive receipt, property classification, debt and expense treatment, depreciation recapture, deadlines and state reporting. Deadline illustrations exclude special relief and do not automatically move weekends or holidays.",
+    "examples": [
+      {
+        "title": "Cash received remains boot despite taking on more debt",
+        "mode": "exchange",
+        "values": {
+          "basis": 100000,
+          "replacement": 250000,
+          "cash_received": 40000,
+          "debt_relieved": 80000,
+          "debt_assumed": 150000,
+          "cash_paid": 0,
+          "expenses": 0
+        },
+        "inputs": "Adjusted basis 100,000; replacement value 250,000; cash received 40,000; debt relieved 80,000; debt assumed 150,000.",
+        "steps": [
+          "Net liability boot is zero; cash boot remains 40,000.",
+          "Basis plus net amount paid = 100,000 + 70,000 = 170,000.",
+          "Realized gain = 40,000 + 250,000 − 170,000 = 120,000; recognized gain = min(120,000, 40,000)."
+        ],
+        "answer": "The simplified recognized gain is 40,000, before special recapture rules.",
+        "expected": {
+          "label": "Gain recognized under simplified boot rules",
+          "value": 40000,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "New cash offsets liability relief in the simplified worksheet",
+        "mode": "exchange",
+        "values": {
+          "basis": 175000,
+          "replacement": 220000,
+          "cash_received": 0,
+          "debt_relieved": 150000,
+          "debt_assumed": 80000,
+          "cash_paid": 40000,
+          "expenses": 0
+        },
+        "inputs": "Adjusted basis 175,000; replacement value 220,000; debt relieved 150,000; new debt 80,000; additional cash 40,000.",
+        "steps": [
+          "Net liability boot = 150,000 − 80,000 − 40,000 = 30,000.",
+          "Realized gain = 30,000 + 220,000 − 175,000 = 75,000."
+        ],
+        "answer": "Recognized gain is limited to 30,000 under the simplified boot calculation.",
+        "expected": {
+          "label": "Gain recognized under simplified boot rules",
+          "value": 30000,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "Qualifying exchange expenses reduce boot once",
+        "mode": "exchange",
+        "values": {
+          "basis": 100000,
+          "replacement": 250000,
+          "cash_received": 40000,
+          "debt_relieved": 80000,
+          "debt_assumed": 150000,
+          "cash_paid": 0,
+          "expenses": 5000
+        },
+        "inputs": "Same cash-and-debt scenario, with 5,000 confirmed qualifying exchange expenses.",
+        "steps": [
+          "Gross boot is 40,000.",
+          "The 5,000 expense is applied against boot, leaving 35,000; it is not also added to the basis calculation."
+        ],
+        "answer": "Net boot after the expense allocation is 35,000.",
+        "expected": {
+          "label": "Net boot after qualifying exchange expenses",
+          "value": 35000,
+          "tolerance": 0.01
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "What does a 1031 exchange calculator actually estimate?",
+        "answer": "This page estimates simplified recognized gain, deferred gain or unrecognized loss, and replacement basis from entered exchange consideration. It does not determine whether your transaction is eligible or calculate a tax bill. Gain recognition and the tax rate applied to that gain are different questions, especially when depreciation recapture or state rules apply."
+      },
+      {
+        "question": "What is boot in a like-kind exchange?",
+        "answer": "Boot is a common term for non-like-kind consideration that can trigger gain recognition. This worksheet includes cash received and positive net liability relief, after eligible expense allocation. It does not support other non-like-kind property. Recognized gain is generally capped at positive realized gain under this simplified calculation, before special recapture provisions."
+      },
+      {
+        "question": "Can additional debt erase cash boot?",
+        "answer": "Not in this worksheet’s simplified Form 8824 treatment. Debt assumed and additional cash paid can offset liability relief, but cash received remains in the boot calculation. For example, receiving 40,000 cash while assuming more debt can still leave 40,000 cash boot. Confirm how every cash and liability item is classified rather than treating all cash movements as interchangeable."
+      },
+      {
+        "question": "Should I enter original purchase price or adjusted basis?",
+        "answer": "Enter adjusted basis after depreciation and other applicable basis adjustments. The original price, current mortgage balance and adjusted tax basis are different numbers. This worksheet does not reconstruct depreciation schedules or determine allowable basis. Obtain an accurate adjusted basis before using the modeled gain and replacement-basis results."
+      },
+      {
+        "question": "Which exchange expenses can I include?",
+        "answer": "Only include costs confirmed as qualifying exchange expenses for this calculation. Loan fees, prorated taxes, security deposits and other settlement items can require different handling. The worksheet applies qualifying expenses against boot first and then uses any remaining amount in basis, so a cost is counted once. It does not classify settlement line items for you."
+      },
+      {
+        "question": "Are 45 days and 180 days always the complete deadline rules?",
+        "answer": "For an ordinary deferred exchange, identification generally occurs within 45 days after transfer, and receipt by the earlier of 180 days or the applicable tax-return due date including extensions. The transfer is day zero. Written identification, permitted properties, special relief and other legal requirements still matter. Enter an advisor-confirmed tax due date and verify the actual legal deadlines."
+      },
+      {
+        "question": "Does deferred gain disappear, and can I deduct an exchange loss?",
+        "answer": "Deferral is different from permanent exclusion. In this simplified worksheet, replacement basis reflects deferred gain, or is increased for unrecognized loss. A current deduction for the displayed exchange loss is not calculated. Later dispositions, recapture, related parties and basis adjustments can change reporting, so a tax professional should review the complete transaction."
+      }
+    ],
+    "sources": [
+      {
+        "title": "IRS: Form 8824 instructions, liabilities, gain and deadlines",
+        "url": "https://www.irs.gov/instructions/i8824"
+      },
+      {
+        "title": "IRS Publication 544: like-kind exchanges",
+        "url": "https://www.irs.gov/publications/p544"
+      }
+    ]
+  },
+  "capital-gains-tax": {
+    "checkedOn": "2026-11-05",
+    "summary": "Capital gains tax is generally based on gain rather than gross sale proceeds. This calculator subtracts selling fees and adjusted basis, then estimates the additional tax caused by a positive gain. Long-term gains stack above ordinary taxable income in the selected year’s preferential bands; short-term gains add to ordinary income. The before-and-after calculation can also show extra tax on existing preferential income pushed into a higher band, optional additional NIIT, and an entered state-rate scenario.",
+    "scope": "U.S. individual federal scenarios for 2025 or 2026, limited to a general capital-asset sale. Ordinary taxable income and existing preferential income must already reflect applicable deductions and netting, before this sale. Baseline MAGI and other net investment income are separate NIIT inputs. Loss deductions, carryovers, special-rate gains, depreciation recapture, home-sale exclusions, AMT, state law and a full tax return are outside the model. A loss produces no modeled additional tax or assumed tax refund.",
+    "examples": [
+      {
+        "title": "A long-term gain can straddle the 0% and 15% bands",
+        "mode": "sale",
+        "values": {
+          "year": "2026",
+          "filing": "Single",
+          "holding": "Long term: more than one year",
+          "ordinary": 40000,
+          "preferential": 0,
+          "proceeds": 30000,
+          "basis": 10000,
+          "selling_fees": 0,
+          "magi": 60000,
+          "other_nii": 0,
+          "niit": "Include NIIT scenario",
+          "state": 0
+        },
+        "inputs": "2026 Single; ordinary taxable income 40,000; long-term gain 20,000; no existing preferential income.",
+        "steps": [
+          "The 2026 Single 0% band ends at total taxable income 49,450.",
+          "9,450 of gain fits the 0% band; the remaining 10,550 is taxed at 15%."
+        ],
+        "answer": "Additional regular federal tax is 1,582.50, before any excluded interactions.",
+        "expected": {
+          "label": "Additional regular federal income tax",
+          "value": 1582.5,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "Short-term gains use the ordinary-income tax difference",
+        "mode": "sale",
+        "values": {
+          "year": "2026",
+          "filing": "Single",
+          "holding": "Short term: one year or less",
+          "ordinary": 60000,
+          "preferential": 0,
+          "proceeds": 20000,
+          "basis": 10000,
+          "selling_fees": 0,
+          "magi": 80000,
+          "other_nii": 0,
+          "niit": "Exclude NIIT scenario",
+          "state": 0
+        },
+        "inputs": "2026 Single; ordinary taxable income 60,000; short-term gain 10,000.",
+        "steps": [
+          "The positive gain moves ordinary taxable income from 60,000 to 70,000.",
+          "The entire additional 10,000 lies in the modeled 22% ordinary bracket."
+        ],
+        "answer": "Additional regular federal income tax is 2,200.",
+        "expected": {
+          "label": "Additional regular federal income tax",
+          "value": 2200,
+          "tolerance": 0.01
+        }
+      },
+      {
+        "title": "NIIT applies only to the modeled excess subject to the lesser-of test",
+        "mode": "sale",
+        "values": {
+          "year": "2026",
+          "filing": "Single",
+          "holding": "Long term: more than one year",
+          "ordinary": 150000,
+          "preferential": 0,
+          "proceeds": 30000,
+          "basis": 10000,
+          "selling_fees": 0,
+          "magi": 195000,
+          "other_nii": 0,
+          "niit": "Include NIIT scenario",
+          "state": 0
+        },
+        "inputs": "Single; baseline MAGI 195,000; no other NII; positive gain 20,000 subject to NIIT.",
+        "steps": [
+          "MAGI after sale = 215,000; excess over the 200,000 threshold is 15,000.",
+          "Additional NIIT = 3.8% × min(20,000, 15,000) = 570."
+        ],
+        "answer": "Additional NIIT is 570, separately from regular capital-gains tax.",
+        "expected": {
+          "label": "Additional net investment income tax",
+          "value": 570,
+          "tolerance": 0.01
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do I calculate a capital gain from a sale?",
+        "answer": "Subtract eligible selling fees and the adjusted basis of the asset sold from gross sale proceeds. Adjusted basis can differ from the original cash purchase price because of prior adjustments. Enter the basis appropriate to the assets actually sold; this page does not select lots, reconstruct inherited or gifted basis, or determine wash-sale adjustments."
+      },
+      {
+        "question": "What is the difference between short-term and long-term gains?",
+        "answer": "For the general asset scenario here, the holding-period choices are one year or less for short term and more than one year for long term. You select the correct classification; the tool does not count acquisition dates. Short-term gains use ordinary-income rates, while ordinary long-term gains can receive the preferential 0%, 15% or 20% bands."
+      },
+      {
+        "question": "Why does my other income affect the long-term capital gains rate?",
+        "answer": "Preferential income stacks above ordinary taxable income. A gain can therefore cross more than one band rather than receiving one rate on the whole amount. Enter ordinary taxable income after deductions, excluding the preferential income entered separately. The page supports the verified 2025 and 2026 tables, with filing-status-specific thresholds."
+      },
+      {
+        "question": "Can a short-term gain increase tax on other long-term gains?",
+        "answer": "Yes in the simplified stacking calculation. Adding short-term gain can raise ordinary taxable income beneath existing long-term gains and qualified dividends, moving some of that existing preferential income into a higher band. The calculator compares baseline regular tax with tax after adding the sale, rather than taxing the short-term gain in isolation."
+      },
+      {
+        "question": "How is the 3.8% NIIT estimate calculated?",
+        "answer": "The optional calculation compares NIIT before and after the sale using baseline MAGI and other NII that you enter. NIIT is 3.8% of the lesser of NII and MAGI above the applicable filing-status threshold. This assumes the positive sale gain is NIIT-eligible; taxable income, MAGI and NII are not interchangeable inputs."
+      },
+      {
+        "question": "Does the calculator apply state taxes or capital-loss deductions?",
+        "answer": "State/local tax is only a user-entered flat assumption on a positive gain, without selecting a state or modeling federal deduction effects. A sale loss shows zero additional modeled tax, with no inferred refund, deduction, netting against other gains or carryforward. Use a complete tax calculation for those interactions."
+      },
+      {
+        "question": "Can I use this for selling a home, rental property or collectibles?",
+        "answer": "Those sales can involve exclusions, depreciation recapture or special-rate categories that this general-asset worksheet excludes. It also excludes 1031 deferral, installment sales, AMT and several credit or deduction interactions. Use it only when the general-asset assumptions apply and obtain professional advice for property and special-category reporting."
+      }
+    ],
+    "sources": [
+      {
+        "title": "IRS Revenue Procedure 2025-32: 2026 capital-gain and ordinary-income bands",
+        "url": "https://www.irs.gov/irb/2025-45_IRB"
+      },
+      {
+        "title": "IRS Revenue Procedure 2024-40: 2025 capital-gain bands",
+        "url": "https://www.irs.gov/irb/2024-45_IRB"
+      },
+      {
+        "title": "IRS: Net Investment Income Tax",
+        "url": "https://www.irs.gov/individuals/net-investment-income-tax"
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "tested_at": "2026-11-05T10:03:18.957Z",
+  "tested_at": "2026-11-05T12:53:33.986Z",
   "passed": true,
-  "scanned_text_files": 1852,
+  "scanned_text_files": 1880,
   "scope": "Complete public export including HTML, JavaScript, JSON, RSC text, XML, CSS, maps and SVG",
   "violations": []
 }
