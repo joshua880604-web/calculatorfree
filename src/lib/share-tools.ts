@@ -16,7 +16,19 @@ export const shareOpenEvent="calculator-share-open";
 export function hasPinterest(id:string){return (pinterestToolIds as readonly string[]).includes(id);}
 export function hasEmbed(id:string){return embedTools.some(tool=>tool.id===id);}
 export const shareTabNames=["Share","Embed","Cite","Export"] as const;
+export type ShareTab=typeof shareTabNames[number];
 export function shareTabs(id:string){return shareTabNames.filter(tab=>tab!=="Embed"||hasEmbed(id));}
+export function shareTabFor(id:string,requested?:string):ShareTab{
+ return shareTabs(id).find(tab=>tab===requested)??'Share';
+}
+export function shareActionHash(tab:'Embed'|'Cite'){
+ return tab==='Embed'?'#embed-code':'#cite-calculator';
+}
+export function shareTabFromHash(id:string,hash:string):ShareTab|null{
+ if(!hasShareTools(id))return null;
+ if(hash===shareActionHash('Embed'))return hasEmbed(id)?'Embed':null;
+ return hash===shareActionHash('Cite')?'Cite':null;
+}
 
 const retirementSharingIds=["retirement", "401k", "pension", "social-security", "annuity", "annuity-payout", "roth-ira", "ira", "rmd", "coast-fire", "fire", "fat-fire", "lean-fire", "hsa", "barista-fire"] as readonly string[];
 const taxSharingIds=["income-tax", "salary", "marriage-tax", "estate-tax", "take-home-paycheck", "sales-tax", "commission", "self-employment-tax"] as readonly string[];

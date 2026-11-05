@@ -63,3 +63,13 @@ body:has(>.calculator-share-dialog[open]){overflow:hidden;}
 .embed-resource-group{scroll-margin-top:20px;margin-top:28px;}.embed-resource-group>h3{font-size:21px;}
 .embed-resource-snippet{margin-top:12px;border-top:1px solid var(--control);padding-top:10px;font-size:13px;}
 .embed-resource-snippet span{display:inline-block;color:var(--muted);margin-right:12px;}
+.embed-resource-actions,.embed-help-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin:16px 0 6px;}
+.embed-resource-actions .embed-primary-action,.embed-help-actions a{box-sizing:border-box;min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border:1px solid var(--control);border-radius:10px;background:var(--surface);color:var(--link);font-size:14px;font-weight:650;text-decoration:none;}
+.embed-resource-actions .embed-primary-action{background:var(--link);border-color:var(--link);color:var(--surface);}
+.embed-resource-actions a:focus-visible,.embed-help-actions a:focus-visible{outline:3px solid var(--link);outline-offset:3px;}
+.embed-code-dialog .share-dialog-header>div{min-width:0;overflow-wrap:anywhere;}
+.embed-code-dialog .share-dialog-header h2:focus{outline:none;}
+.embed-citation-help .embed-default-label{display:block;margin:12px 0 6px;font-weight:650;}
+.embed-citation-help textarea{box-sizing:border-box;width:100%;max-width:100%;min-height:120px;padding:10px 12px;border:1px solid var(--control);border-radius:10px;background:var(--surface);color:var(--ink);font:13px/1.6 monospace;resize:vertical;}
+.share-dialog-panel .embed-quick-actions{position:sticky;top:0;z-index:2;background:var(--surface);padding:8px 0;margin:0 0 12px;}
+@media print{.embed-resource-actions,.embed-help-actions{display:none;}}

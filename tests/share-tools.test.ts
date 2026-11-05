@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {shareToolIds,expandedShareToolIds,pinterestToolIds,hasPinterest,hasEmbed,shareTabs,hasShareTools,shareToolPaths} from '../src/lib/share-tools';
+import {shareToolIds,expandedShareToolIds,pinterestToolIds,hasPinterest,hasEmbed,shareTabs,hasShareTools,shareToolPaths,shareTabFor,shareTabFromHash} from '../src/lib/share-tools';
 import tools from '../src/lib/embed-tools.json';
 import {canonicalCitationURL,citationText,resultTables,spreadsheetCell,tableText,socialShareURL} from '../src/lib/share-formats';
 import {calculators,defaults,runCalculation,routeFor} from '../src/lib/calculators';
@@ -17,6 +17,11 @@ test('Citations use canonical page URLs with no calculation or tracking payload'
  assert.equal(canonicalCitationURL('/coast-fire-calculator.html?balance=999#calc=secret'),'https://www.calculatorfree.io/coast-fire-calculator');
  const t=citationText('coast-fire','Coast FIRE Calculator','/coast-fire-calculator.html','2026-10-29','plain');assert.match(t,/Accessed 2026-10-29/);assert.doesNotMatch(t,/published|updated|balance=|share_version/);
  assert.throws(()=>canonicalCitationURL('https://evil.example/tool'));assert.throws(()=>canonicalCitationURL('javascript:alert(1)'));
+});
+test('Direct sharing entries respect embed availability and preserve calculation fragments',()=>{
+ for(const tool of tools){assert.equal(shareTabFromHash(tool.id,'#embed-code'),'Embed');assert.equal(shareTabFor(tool.id,'Embed'),'Embed');}
+ for(const id of shareToolIds){assert.equal(shareTabFromHash(id,'#cite-calculator'),'Cite');assert.equal(shareTabFromHash(id,'#calc=share_version=1&mode=projection'),null);assert.equal(shareTabFromHash(id,'#embed-and-cite'),null);assert.equal(shareTabFor(id,'invalid'),'Share');}
+ assert.equal(shareTabFromHash('income-tax','#embed-code'),null);assert.equal(shareTabFor('income-tax','Embed'),'Share');assert.equal(shareTabFromHash('unknown','#cite-calculator'),null);
 });
 test('Citations safely format HTML and BibTeX without invented publication metadata',()=>{
  const h=citationText('roi','A < B & "C"','/roi-calculator.html','2026-10-29','html');assert.match(h,/A &lt; B &amp; &quot;C&quot;/);assert.doesNotMatch(h,/< B/);

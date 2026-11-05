@@ -2,7 +2,7 @@
 import {useEffect,useRef,useState,type KeyboardEvent} from 'react';
 import {createPortal,flushSync} from 'react-dom';
 import dynamic from 'next/dynamic';
-import {hasPinterest,shareTabs,shareTabNames,shareScenarioHelp,isEverydayShareTool} from '@/lib/share-tools';
+import {hasPinterest,shareTabs,shareTabNames,shareTabFor,shareActionHash,shareScenarioHelp,isEverydayShareTool,type ShareTab} from '@/lib/share-tools';
 import BlogSnippetLink from './BlogSnippetLink';
 import {hasBlogSnippetKit} from '@/lib/blog-snippet-access';
 import {pinterestCoverPath,pinterestShareURL} from '@/lib/pinterest';
@@ -11,16 +11,22 @@ import {calculationLink,formatMetric,summaryText,modeCaption} from '@/lib/sharin
 import {canonicalCitationURL,citationText,resultTables,socialShareURL,tableText,markdownTable,type CitationFormat} from '@/lib/share-formats';
 const EmbedPanel=dynamic(()=>import('./EmbedPanel'));
 type Tab=typeof shareTabNames[number];
-type Props={id:string;title:string;path:string;mode:Mode;values:Values;result:Result|null;fields:Field[];onClose:()=>void};
+type Props={id:string;title:string;path:string;mode:Mode;values:Values;result:Result|null;fields:Field[];onClose:()=>void;initialTab?:ShareTab};
 function download(blob:Blob,name:string){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-export default function ShareToolsDialog({id,title,path,mode,values,result,fields,onClose}:Props){
+export default function ShareToolsDialog({id,title,path,mode,values,result,fields,onClose,initialTab}:Props){
  const tabs=shareTabs(id),pinterest=hasPinterest(id);
- const [tab,setTab]=useState<Tab>('Share'),[include,setInclude]=useState(false),[status,setStatus]=useState(''),[manual,setManual]=useState(''),[format,setFormat]=useState<CitationFormat>('plain'),[tableKey,setTableKey]=useState('main'),[inputs,setInputs]=useState(false),[busy,setBusy]=useState(false),[printing,setPrinting]=useState(false);
+ const [tab,setTab]=useState<Tab>(()=>shareTabFor(id,initialTab)),[include,setInclude]=useState(false),[status,setStatus]=useState(''),[manual,setManual]=useState(''),[format,setFormat]=useState<CitationFormat>('plain'),[tableKey,setTableKey]=useState('main'),[inputs,setInputs]=useState(false),[busy,setBusy]=useState(false),[printing,setPrinting]=useState(false);
  const [pngLayout,setPngLayout]=useState<'summary'|'detailed'>('summary');
  const [printData,setPrintData]=useState<Awaited<ReturnType<typeof import('@/lib/result-export').resultExportData>>|null>(null);
  const dialog=useRef<HTMLDialogElement>(null),copyField=useRef<HTMLTextAreaElement>(null),tabRefs=useRef<(HTMLButtonElement|null)[]>([]);
  const [origin]=useState(()=>location.origin),[accessed]=useState(()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;});
- useEffect(()=>{const prior=document.activeElement as HTMLElement|null;dialog.current?.showModal();return()=>{document.body.classList.remove('calculator-share-printing');prior?.focus();};},[]);
+ useEffect(()=>{
+  const prior=document.activeElement as HTMLElement|null;
+  const fallback=initialTab==='Embed'||initialTab==='Cite'?document.querySelector<HTMLElement>('#embed-and-cite a[href="'+shareActionHash(initialTab)+'"]'):null;
+  const returnTo=prior&&prior.tabIndex>=0?prior:fallback;
+  dialog.current?.showModal();
+  return()=>{document.body.classList.remove('calculator-share-printing');returnTo?.focus();};
+ },[]);
  useEffect(()=>{if(manual){copyField.current?.focus();copyField.current?.select();}},[manual]);
  useEffect(()=>{const after=()=>{document.body.classList.remove('calculator-share-printing');setPrinting(false);};window.addEventListener('afterprint',after);return()=>window.removeEventListener('afterprint',after);},[]);
  let link='',linkError='';try{link=calculationLink(origin,path,mode,values,include&&Boolean(result));}catch(e){linkError=(e as Error).message;}

@@ -4,7 +4,7 @@ import {calculatorCategory} from './calculator-categories';
 import {hasBlogSnippetKit} from './blog-snippet-access';
 import {absoluteURL,siteConfig} from './site';
 export const embedResourcesPath='/embed-resources';
-export const embedResourcesReviewedOn='2026-11-04';
+export const embedResourcesReviewedOn='2026-11-05';
 export const embedResources=tools.map(tool=>({...tool,path:'/'+tool.slug,hasSnippetKit:hasBlogSnippetKit(tool.id),description:descriptions[tool.id as keyof typeof descriptions]}));
 export const embedResourceGroups=[
  {id:'fire-retirement',title:'FIRE & Retirement',category:'retirement'},

@@ -38,7 +38,7 @@ const FireBudgetReport=dynamic(()=>import('./FireBudgetPlan').then(m=>m.FireBudg
 const DebtStrategyReport=dynamic(()=>import('./DebtStrategyReport'));
 import ResultShare from "./ResultShare";
 import {motherPageCopy} from "@/lib/mother-page-ui";
-import {hasShareTools,shareOpenEvent} from "@/lib/share-tools";
+import {hasShareTools,shareOpenEvent,shareTabFor,shareTabFromHash,type ShareTab} from "@/lib/share-tools";
 const ShareToolsDialog=dynamic(()=>import("./ShareToolsDialog"),{ssr:false});
 import RecastComparison from "./RecastComparison";
 import {inputHint,resultContext} from "@/lib/result-context";
@@ -91,14 +91,21 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
   const id = calc.id;
   const enhancedSharing=hasShareTools(id);
   const motherCopy=motherPageCopy[id];
-  const [shareOpen,setShareOpen]=useState(false);
+  const [shareTab,setShareTab]=useState<ShareTab|null>(null);
   const [showResultShare,setShowResultShare]=useState(false);
   useEffect(()=>{
     if(!enhancedSharing)return;
-    const open=(event:Event)=>{if((event as CustomEvent<{id:string}>).detail?.id===id)setShareOpen(true);};
+    const open=(event:Event)=>{const detail=(event as CustomEvent<{id:string;tab?:string}>).detail;if(detail?.id===id)setShareTab(shareTabFor(id,detail.tab));};
+    const followAction=()=>{const tab=shareTabFromHash(id,location.hash);if(tab)setShareTab(tab);};
     window.addEventListener(shareOpenEvent,open);
-    return()=>window.removeEventListener(shareOpenEvent,open);
+    window.addEventListener('hashchange',followAction);
+    followAction();
+    return()=>{window.removeEventListener(shareOpenEvent,open);window.removeEventListener('hashchange',followAction);};
   },[id,enhancedSharing]);
+  function closeShare(){
+    setShareTab(null);
+    if(shareTabFromHash(id,location.hash))history.replaceState(history.state,'',location.pathname+location.search);
+  }
   const runCalculation = (_id: string, mode: string, values: Values) => runClientCalculation(calc.id, calc.category, mode, values);
   const [sharedReviewValues,setSharedReviewValues]=useState<Values|null>(null);
   const [coastSharedRates,setCoastSharedRates]=useState<Values|null>(null);
@@ -571,8 +578,8 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
   const reviewGroups=inputReviewGroups(id,mode.id,visible,advanced);
   return (
     <>
-      <div className={"calculator-intro-row"+(motherCopy?" mother-page-intro":"")}><p className="intro">{motherCopy?.intro??calc.intro}</p>{enhancedSharing?<div className="calculator-utility-actions enhanced-sharing-actions"><FavoriteButton id={id}/><button type="button" className="calculator-share-launch" aria-haspopup="dialog" onClick={()=>setShareOpen(true)}>Share / Export</button></div>:<FavoriteButton id={id}/>}</div>
-      {shareOpen&&enhancedSharing&&<ShareToolsDialog id={id} title={calc.title} path={routeFor(id)} mode={mode} values={values} result={result} fields={visible} onClose={()=>setShareOpen(false)}/>}
+      <div className={"calculator-intro-row"+(motherCopy?" mother-page-intro":"")}><p className="intro">{motherCopy?.intro??calc.intro}</p>{enhancedSharing?<div className="calculator-utility-actions enhanced-sharing-actions"><FavoriteButton id={id}/><button type="button" className="calculator-share-launch" aria-haspopup="dialog" onClick={()=>setShareTab('Share')}>Share / Export</button></div>:<FavoriteButton id={id}/>}</div>
+      {shareTab&&enhancedSharing&&<ShareToolsDialog key={shareTab} initialTab={shareTab} id={id} title={calc.title} path={routeFor(id)} mode={mode} values={values} result={result} fields={visible} onClose={closeShare}/>}
       {id !== "mortgage" && !motherCopy && shortcuts.length > 0 && <nav className="task-shortcuts" aria-label="Calculation shortcuts">{shortcuts.map(task=><button type="button" key={task.keyword} onClick={()=>switchMode(task.mode)}>{task.keyword}</button>)}</nav>}
       {calc.modes.length > 1 && (
         <div className={"mode-tabs" + (compactModes ? " compact-mode-tabs" : "") + (id === "mortgage" ? " mortgage-mode-tabs" : "")} role="tablist" aria-label="Calculation mode">
@@ -693,7 +700,7 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
       {hasWorkspace && !result && <div className="workspace-empty"><h2>Your result</h2><p>{calculating ? "Calculating your updated result…" : "Enter your values and select Calculate to see the result here."}</p></div>}
       {result && (
         <div ref={resultRef} className="result" aria-live="polite" tabIndex={-1}>
-          {enhancedSharing?<div className="result-heading-row"><h2>Result</h2>{showResultShare&&<button type="button" className="calculator-share-launch result-share-prompt" aria-haspopup="dialog" onClick={()=>setShareOpen(true)}>Share your results</button>}</div>:<h2>Result</h2>}
+          {enhancedSharing?<div className="result-heading-row"><h2>Result</h2>{showResultShare&&<button type="button" className="calculator-share-launch result-share-prompt" aria-haspopup="dialog" onClick={()=>setShareTab('Share')}>Share your results</button>}</div>:<h2>Result</h2>}
           {id === "irr" && result.metrics.length > 1 && <p className="notice" role="status">Multiple IRRs detected. There is no single unambiguous rate for these cash flows; the first result is not a recommended return.</p>}
           <div className="result-main">
             <div className="metrics">
@@ -783,7 +790,7 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
             {summary.details.map(m => <div className="metric" key={m.label}><span>{m.label}</span><strong>{formatMetric(m)}</strong></div>)}
           </details>}
           <div className="result-actions">
-            {enhancedSharing?(!showResultShare&&<button type="button" onClick={()=>setShareOpen(true)}>Share / Export</button>):<button onClick={() => window.print()}>Print</button>}
+            {enhancedSharing?(!showResultShare&&<button type="button" onClick={()=>setShareTab('Share')}>Share / Export</button>):<button onClick={() => window.print()}>Print</button>}
             {result.rows && !wideReports && !enhancedSharing && <button onClick={() => download()}>Download CSV</button>}
           </div>
           {!wideReports && calculationDetails}
