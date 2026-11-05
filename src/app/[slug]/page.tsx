@@ -199,6 +199,7 @@ export default async function Page({
         ) : c ? (
           <>
             <CalculatorClient calc={JSON.parse(JSON.stringify(c))} initialResult={initialResult} shortcuts={(searchTasks[c.id] ?? []).map(({keyword, mode}) => ({keyword, mode}))} />
+            <span className="calculator-end-marker" data-calculator-end aria-hidden="true" />
             <CalculatorDisclaimer id={c.id}/>
             <BlogSnippetKit id={c.id} title={c.title} path={routeFor(c.id)}/>
             <SearchTasks id={c.id} />

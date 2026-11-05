@@ -1,0 +1,6 @@
+.back-to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;display:grid;place-items:center;box-sizing:border-box;width:44px;height:44px;padding:0;border:1px solid var(--control);border-radius:12px;background:var(--surface);color:var(--ink);box-shadow:0 3px 12px #0002;cursor:pointer;}
+.back-to-top[hidden]{display:none;}
+.back-to-top:hover{color:var(--link);border-color:var(--link);}
+.back-to-top:focus-visible{outline:3px solid var(--link);outline-offset:3px;}
+.calculator-end-marker{display:block;height:0;pointer-events:none;}
+@media print{.back-to-top{display:none!important;}}

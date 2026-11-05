@@ -2,8 +2,10 @@
 import SiteLink from "@/components/SiteLink";
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/Shell";
+import BackToTop from '@/components/BackToTop';
 import "./globals.css";
 import "./visual-theme.css";
+import './back-to-top.css';
 import {themeScript} from "@/lib/theme";
 import { siteConfig,siteName } from "@/lib/site";
 import { browserSupportScript } from "@/lib/browser-support";
@@ -52,6 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Header />
         {children}
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
