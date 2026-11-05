@@ -3,10 +3,15 @@ import pageIntents from "./page-intents.json";
 import catalog from "./catalog-data.json";
 export type SearchTask={keyword:string;mode:string;description:string;aliases?:string[];values?:Record<string,string>};
 export const searchTasks: Record<string, SearchTask[]> = {
+ 'retirement-withdrawal':[{keyword:'Retirement withdrawal calculator',mode:'longevity',description:'Estimate how long retirement savings fund a spending gap with inflation, fees, other income and an optional flat withdrawal-tax assumption.'},{keyword:'Retirement withdrawal monthly budget',mode:'budget',description:'Solve a monthly spending budget for a selected constant-return retirement scenario.'}],
+ 'balance-transfer':[{keyword:'Credit card balance transfer calculator',mode:'transfer',description:'Compare transfer fees, promotional APR, remaining balances and total borrowing costs under the same monthly payment.'},{keyword:'Compare balance transfer offers',mode:'offers',description:'Compare two transfer offers with the same balance and repayment budget.'}],
+ dscr:[{keyword:'DSCR loan calculator',mode:'rental-loan',description:'Calculate rental-loan DSCR, required rent and maximum loan principal from your target ratio.'},{keyword:'NOI debt service coverage ratio',mode:'noi',description:'Calculate annual NOI-based DSCR from your operating income and debt service.'}],
+ fsa:[{keyword:'FSA tax savings calculator',mode:'health',description:'Budget Health FSA expenses, employee contributions, tax savings, paycheck deductions and unused funds for 2025 or 2026.'}],
+ 'closing-cost':[{keyword:'Buyer closing cost calculator',mode:'buyer',description:'Itemize buyer closing costs and cash to close after deposits, previous payments and applied credits.'},{keyword:'Seller closing cost calculator',mode:'seller',description:'Estimate seller costs and net sale cash after loan payoff, negotiated commission and buyer credits.'}],
  'mortgage-payoff':[{keyword:'Mortgage calculator with extra payments',mode:'remaining-extra',description:'Use your current balance and regular payment to compare extra monthly, annual or one-time payments. Review interest saved and time to payoff.'}],
  mortgage:[{keyword:'Mortgage calculator with taxes and insurance',mode:'monthly',description:'Estimate principal and interest alongside property tax, homeowners insurance and other entered ownership costs. These costs can change independently of the loan payment.'}],
  amortization:[{keyword:'Amortization calculator with extra payments',mode:'schedule',description:'Build a period-by-period schedule showing interest, principal and the remaining balance after extra payments.'}],
- retirement:[{keyword:'Retirement savings calculator',mode:'saving',description:'Find how much you need to save each month to reach a retirement target. The assumed return is not a guarantee.'},{keyword:'Retirement withdrawal calculator',mode:'withdrawal',description:'Estimate monthly withdrawals over a selected retirement horizon. Use Savings Longevity to explore how long an entered withdrawal can last.'}],
+ retirement:[{keyword:'Retirement savings calculator',mode:'saving',description:'Find how much you need to save each month to reach a retirement target. The assumed return is not a guarantee.'},{keyword:'Monthly retirement income estimate',mode:'withdrawal',description:'Estimate monthly withdrawals over a selected retirement horizon. Use Savings Longevity to explore how long an entered withdrawal can last.'}],
  savings:[{keyword:'Savings goal calculator',mode:'goal-contribution',description:'Enter a target amount, current savings and deadline to calculate the monthly deposit needed. Switch to Time Needed to solve for the first whole month reaching your target.'},{keyword:'Savings calculator with monthly deposits',mode:'accumulation',description:'Project a balance from recurring deposits, the chosen compounding frequency and contribution timing.'}],
  '401k':[{keyword:'401k growth calculator',mode:'projection',description:'Project annual account growth with salary increases, employee contributions and employer matching under the documented annual limits.'},{keyword:'401k contribution calculator',mode:'projection',description:'Review each year’s employee contribution separately from employer additions and account growth. Starting balance is shown separately from new employee contributions.'},{keyword:'401k employer match calculator',mode:'match',description:'Explore matching tiers using the Maximize Employer Match form. Eligibility and plan-specific rules must be checked separately.'}],
  repayment:[{keyword:'Loan payoff calculator with extra payments',mode:'extra-payments',description:'Compare a fixed monthly loan payment with additional principal payments. Review months saved, interest saved and the full repayment schedule.'}],
@@ -331,3 +336,16 @@ searchTasks['interest-rate'][0].description = 'Use this free interest rate calcu
 // Discount intent: sale-price arithmetic first, without creating another canonical URL.
 keywordTitles.discount = 'Discount Calculator - Percent Off & Sale Price (Free)';
 searchTasks.discount.unshift({keyword:'Percent off calculator',mode:'percent',description:'Use this free discount calculator to find sale price, savings and percent off. Recover the original price or calculate two stacked discounts.'});
+
+// One primary owner for the newly independent retirement drawdown intent.
+for(const task of searchTasks.retirement){
+ if(task.keyword.toLowerCase()==='retirement withdrawal calculator')task.keyword='Retirement monthly income illustration';
+ if(task.aliases)task.aliases=task.aliases.filter(alias=>alias.toLowerCase()!=='retirement withdrawal calculator');
+}
+Object.assign(keywordTitles,{
+ 'retirement-withdrawal':'Retirement Withdrawal Calculator - Income & Savings Longevity',
+ 'balance-transfer':'Balance Transfer Calculator - Fees, Savings & Payoff',
+ dscr:'DSCR Calculator - Rental Loan, Required Rent & Loan Amount',
+ fsa:'FSA Calculator - Health FSA Contributions & Tax Savings',
+ 'closing-cost':'Closing Cost Calculator - Buyer Cash & Seller Proceeds',
+});

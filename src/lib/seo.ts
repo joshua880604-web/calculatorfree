@@ -64,6 +64,12 @@ export function calculatorMetadata(calc: Calculator, config = siteConfig()) {
 }
 // Dates record reviewed content changes, never the current build time.
 export const contentUpdatedOn: Record<string, string> = {
+ '/retirement-withdrawal-calculator.html':'2026-11-05',
+ '/balance-transfer-calculator.html':'2026-11-05',
+ '/dscr-calculator.html':'2026-11-05',
+ '/fsa-calculator.html':'2026-11-05',
+ '/closing-cost-calculator.html':'2026-11-05',
+
  '/stock-profit-calculator.html':'2026-10-31',
  '/stock-average-calculator.html':'2026-10-31',
   '/seller-financing-calculator.html':'2026-10-31',

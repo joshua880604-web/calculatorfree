@@ -219,3 +219,14 @@ export function editorialSchema(article:boolean|EditorialGuide=false,config=site
  ]});
  return {'@context':'https://schema.org','@graph':graph};
 }
+
+// Contextual reading for the five new tasks; preserve article case ownership.
+for(const guide of editorialGuides){
+ const additions:string[]=[];
+ if(guide.path==='/guides/4-percent-rule/')additions.push('retirement-withdrawal');
+ if(guide.path==='/guides/balance-transfer-vs-personal-loan/')additions.push('balance-transfer');
+ if(guide.path==='/guides/hsa-vs-fsa/')additions.push('fsa');
+ if(guide.path==='/guides/down-payment-and-closing-cost-cash/')additions.push('closing-cost');
+ if(guide.calculatorIds.includes('noi')||guide.path==='/guides/how-to-estimate-rental-property-cash-flow/')additions.push('dscr');
+ if(additions.length)guide.calculatorIds=[...new Set([...guide.calculatorIds,...additions])];
+}

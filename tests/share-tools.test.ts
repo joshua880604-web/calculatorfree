@@ -6,9 +6,9 @@ import {canonicalCitationURL,citationText,resultTables,spreadsheetCell,tableText
 import {calculators,defaults,runCalculation,routeFor} from '../src/lib/calculators';
 import {runClientCalculation} from '../src/lib/calculate-client';
 import {embedCode} from '../src/lib/embed-code';
-test('Enhanced sharing covers all 115 calculators while Embed and Pinterest remain capability gated',()=>{
- assert.equal(shareToolIds.length,115);assert.equal(new Set(shareToolIds).size,115);assert.equal(expandedShareToolIds.length,12);assert.equal(pinterestToolIds.length,58);assert.equal(hasShareTools('covered-call'),true);assert.equal(hasShareTools('roi'),true);assert.equal(tools.length,88);
- assert.equal(Object.keys(shareToolPaths).length,115);
+test('Enhanced sharing covers all 120 calculators while Embed and Pinterest remain capability gated',()=>{
+ assert.equal(shareToolIds.length,120);assert.equal(new Set(shareToolIds).size,120);assert.equal(expandedShareToolIds.length,12);assert.equal(pinterestToolIds.length,58);assert.equal(hasShareTools('covered-call'),true);assert.equal(hasShareTools('roi'),true);assert.equal(tools.length,88);
+ assert.equal(Object.keys(shareToolPaths).length,120);
  for(const id of shareToolIds){assert.equal(shareToolPaths[routeFor(id).slice(0,-5)],id);assert.ok(hasShareTools(id));const tool=tools.find(t=>t.id===id);assert.equal(hasEmbed(id),Boolean(tool));assert.deepEqual(shareTabs(id),tool?['Share','Embed','Cite','Export']:['Share','Cite','Export']);if(tool){assert.equal('/'+tool.slug,routeFor(id).slice(0,-5));assert.match(embedCode(id,'light',800),/rel="nofollow noopener"/);}}
  for(const id of expandedShareToolIds)assert.equal(hasPinterest(id),(pinterestToolIds as readonly string[]).includes(id));
  for(const id of pinterestToolIds)assert.equal(hasPinterest(id),true);

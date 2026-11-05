@@ -1,3 +1,4 @@
+import expansionFiveContent from './expansion-five-content.json';
 import calculatorDepthContent from './calculator-depth-content.json';
 import semrushFollowupFiveFaq from './semrush-followup-five-faq-content.json';
 import semrushRefinanceFaq from './semrush-refinance-faq-content.json';
@@ -947,3 +948,31 @@ guides['401k'].scope += ' Roth vs Traditional mode starts from zero and excludes
 guides['401k'].checkedOn='2026-11-04';
 guides['401k'].examples.push({title:'Compare one year with the same take-home budget',mode:'roth-vs-traditional',values:{basis:'Same take-home budget',amount:7800,years:1,rate:6,current_tax:22,retirement_tax:22,allowance:24500},inputs:'Annual spendable-pay budget $7,800; assumed current and qualified-withdrawal tax rates both 22%; one year-end contribution; no existing balance or employer money.',steps:['Traditional contribution = 7,800 / (1 − 22%) = 10,000. Roth contribution = 7,800.','The contribution arrives at year end, so it earns no return in this one-year example.','Traditional after the assumed tax = 10,000 × (1 − 22%) = 7,800; the assumed qualified Roth amount is also 7,800.'],answer:'Both alternatives have $7,800 of modeled after-tax value and the same $7,800 take-home cost.',expected:{label:'Traditional after-tax value',value:7800,tolerance:0.000001}});
 guides['401k'].questions.push({question:'How do I compare Roth and traditional 401(k) contributions fairly?',anchor:'use-roth-vs-traditional',answer:'Choose Roth vs Traditional mode and select the comparison basis. Same take-home budget allows a larger traditional contribution under the entered tax-saving assumption; Same employee contribution uses different take-home costs. The model assumes qualified Roth withdrawal and flat tax rates, starts from zero and excludes employer money and outside-account tax savings. It does not determine eligibility or a complete tax return.',links:[{id:'401k',mode:'roth-vs-traditional',label:'Try the equal take-home budget comparison',values:{basis:'Same take-home budget',amount:'7800',years:'30',rate:'6',current_tax:'22',retirement_tax:'22',allowance:'24500'}}]});
+
+// Five distinct calculator tasks researched from the November 5 US keyword exports.
+Object.assign(guides,expansionFiveContent as unknown as Record<string,Guide>);
+Object.assign(relatedCalculatorIds,{"retirement-withdrawal": ["retirement", "social-security", "pension", "annuity-payout", "fire"], "balance-transfer": ["credit-card", "credit-card-minimum-payment", "debt-consolidation", "personal-loan", "debt-payoff"], "dscr": ["noi", "rental-property", "cap-rate", "brrrr", "cash-on-cash-return"], "fsa": ["hsa", "take-home-paycheck", "income-tax", "budget"], "closing-cost": ["down-payment", "mortgage", "house-affordability", "fix-and-flip", "seller-financing"]});
+relatedCalculatorIds['retirement']=[...new Set(['retirement-withdrawal',...(relatedCalculatorIds['retirement']??[])])].slice(0,8);
+relatedCalculatorIds['social-security']=[...new Set(['retirement-withdrawal',...(relatedCalculatorIds['social-security']??[])])].slice(0,8);
+relatedCalculatorIds['pension']=[...new Set(['retirement-withdrawal',...(relatedCalculatorIds['pension']??[])])].slice(0,8);
+relatedCalculatorIds['annuity-payout']=[...new Set(['retirement-withdrawal',...(relatedCalculatorIds['annuity-payout']??[])])].slice(0,8);
+relatedCalculatorIds['fire']=[...new Set(['retirement-withdrawal',...(relatedCalculatorIds['fire']??[])])].slice(0,8);
+relatedCalculatorIds['credit-card']=[...new Set(['balance-transfer',...(relatedCalculatorIds['credit-card']??[])])].slice(0,8);
+relatedCalculatorIds['credit-card-minimum-payment']=[...new Set(['balance-transfer',...(relatedCalculatorIds['credit-card-minimum-payment']??[])])].slice(0,8);
+relatedCalculatorIds['debt-consolidation']=[...new Set(['balance-transfer',...(relatedCalculatorIds['debt-consolidation']??[])])].slice(0,8);
+relatedCalculatorIds['personal-loan']=[...new Set(['balance-transfer',...(relatedCalculatorIds['personal-loan']??[])])].slice(0,8);
+relatedCalculatorIds['debt-payoff']=[...new Set(['balance-transfer',...(relatedCalculatorIds['debt-payoff']??[])])].slice(0,8);
+relatedCalculatorIds['noi']=[...new Set(['dscr',...(relatedCalculatorIds['noi']??[])])].slice(0,8);
+relatedCalculatorIds['rental-property']=[...new Set(['dscr',...(relatedCalculatorIds['rental-property']??[])])].slice(0,8);
+relatedCalculatorIds['cap-rate']=[...new Set(['dscr',...(relatedCalculatorIds['cap-rate']??[])])].slice(0,8);
+relatedCalculatorIds['brrrr']=[...new Set(['dscr',...(relatedCalculatorIds['brrrr']??[])])].slice(0,8);
+relatedCalculatorIds['cash-on-cash-return']=[...new Set(['dscr',...(relatedCalculatorIds['cash-on-cash-return']??[])])].slice(0,8);
+relatedCalculatorIds['hsa']=[...new Set(['fsa',...(relatedCalculatorIds['hsa']??[])])].slice(0,8);
+relatedCalculatorIds['take-home-paycheck']=[...new Set(['fsa',...(relatedCalculatorIds['take-home-paycheck']??[])])].slice(0,8);
+relatedCalculatorIds['income-tax']=[...new Set(['fsa',...(relatedCalculatorIds['income-tax']??[])])].slice(0,8);
+relatedCalculatorIds['budget']=[...new Set(['fsa',...(relatedCalculatorIds['budget']??[])])].slice(0,8);
+relatedCalculatorIds['down-payment']=[...new Set(['closing-cost',...(relatedCalculatorIds['down-payment']??[])])].slice(0,8);
+relatedCalculatorIds['mortgage']=[...new Set(['closing-cost',...(relatedCalculatorIds['mortgage']??[])])].slice(0,8);
+relatedCalculatorIds['house-affordability']=[...new Set(['closing-cost',...(relatedCalculatorIds['house-affordability']??[])])].slice(0,8);
+relatedCalculatorIds['fix-and-flip']=[...new Set(['closing-cost',...(relatedCalculatorIds['fix-and-flip']??[])])].slice(0,8);
+relatedCalculatorIds['seller-financing']=[...new Set(['closing-cost',...(relatedCalculatorIds['seller-financing']??[])])].slice(0,8);

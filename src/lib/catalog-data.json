@@ -700,5 +700,35 @@
     "category": "Investment",
     "title": "Stock Average Calculator",
     "local_route": "/stock-average-calculator.html"
+  },
+  {
+    "id": "retirement-withdrawal",
+    "title": "Retirement Withdrawal Calculator",
+    "category": "Retirement",
+    "local_route": "/retirement-withdrawal-calculator.html"
+  },
+  {
+    "id": "balance-transfer",
+    "title": "Balance Transfer Calculator",
+    "category": "Other",
+    "local_route": "/balance-transfer-calculator.html"
+  },
+  {
+    "id": "dscr",
+    "title": "DSCR Calculator",
+    "category": "Mortgage and Real Estate",
+    "local_route": "/dscr-calculator.html"
+  },
+  {
+    "id": "fsa",
+    "title": "FSA Calculator",
+    "category": "Tax and Salary",
+    "local_route": "/fsa-calculator.html"
+  },
+  {
+    "id": "closing-cost",
+    "title": "Closing Cost Calculator",
+    "category": "Mortgage and Real Estate",
+    "local_route": "/closing-cost-calculator.html"
   }
 ]

@@ -10,6 +10,11 @@ export function directoryGroup(id:string,_category?:string){
  return group.id;
 }
 const toolAliases:Record<string,string[]>={
+ 'retirement-withdrawal':['retirement drawdown','retirement distribution','retirement savings withdrawal'],
+ 'balance-transfer':['credit card balance transfer','balance transfer fee','balance transfer savings'],
+ dscr:['debt service coverage ratio','dscr loan','rental property dscr'],
+ fsa:['health fsa','flexible spending account','fsa tax savings','fsa contribution'],
+ 'closing-cost':['closing costs','buyer closing costs','seller closing costs','cash to close','net seller proceeds'],
  'tax-equivalent-yield':['taxable equivalent yield','tax equivalent yield','municipal bond tax equivalent yield'],
  'treasury-bill':['t bill','t-bill','tbill','us treasury bill','treasury bill interest'],
  'mortgage-recast':['recast mortgage','recast mortgage calculator','recast calculator','mortgage recasting','loan recast'],

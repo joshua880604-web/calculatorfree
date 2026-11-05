@@ -1978,6 +1978,10 @@
     },
     "tools": [
       {
+        "id": "retirement-withdrawal",
+        "text": "Project monthly retirement spending and inspect unfunded amounts."
+      },
+      {
         "id": "retirement",
         "text": "Model income and savings with an explicit life expectancy."
       },
@@ -2117,6 +2121,10 @@
       "text": "Taxes, insurance and some other costs may be outside APR. An adjustable-rate disclosure also does not guarantee the future rate path. Compare the term, included charges, repayment pattern and likely holding period."
     },
     "tools": [
+      {
+        "id": "balance-transfer",
+        "text": "Compare the promotional and subsequent APR with one-time fees."
+      },
       {
         "id": "apr",
         "text": "Estimate borrowing APR under the tool’s stated fee and timing assumptions."
@@ -2845,6 +2853,10 @@
     },
     "tools": [
       {
+        "id": "closing-cost",
+        "text": "Separate initial escrow funding, prepaid amounts and cash due at closing."
+      },
+      {
         "id": "mortgage",
         "text": "Separate principal and interest from entered ownership costs."
       },
@@ -3192,6 +3204,10 @@
       "text": "Payroll taxes and benefit phaseouts can also affect additional take-home income. Withholding is a payment toward tax and need not equal final liability or an effective rate."
     },
     "tools": [
+      {
+        "id": "fsa",
+        "text": "Estimate Health FSA tax savings with entered marginal rates; distinguish them from a whole-return effective tax rate."
+      },
       {
         "id": "income-tax",
         "text": "Use the explicitly supported tax year and filing assumptions."
@@ -6238,6 +6254,10 @@
       "text": "A reserve-adjusted numerator can differ from NOI; a debt denominator may include other required payments. Adding property taxes and insurance to a denominator after already deducting them in NOI can also distort an intended NOI/P&I comparison. Follow the actual program definition rather than relabeling one tool’s output as an approval result."
     },
     "tools": [
+      {
+        "id": "dscr",
+        "text": "Choose annual NOI-based or monthly rental-loan coverage."
+      },
       {
         "id": "brrrr",
         "text": "Inspect the explicitly labeled NOI/P&I coverage under the deal’s entered assumptions."

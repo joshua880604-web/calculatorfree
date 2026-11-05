@@ -1,0 +1,683 @@
+{
+  "retirement-withdrawal": {
+    "summary": "Retirement withdrawals start with a spending gap: the amount your budget needs after other spendable income. This calculator follows that gap month by month, increasing spending and other income with your inflation assumption and applying investment growth before each withdrawal. A separate budget mode solves how much initial monthly spending the entered portfolio and other income can fund through a chosen horizon. Read the annual table as a scenario: it separates spending, other income, investment growth, gross withdrawals, assumed withdrawal tax and unfunded expenses. Reaching a modeled end date does not establish a safe real-world withdrawal rate.",
+    "scope": "USD drawdown starting now, for 1\u2013100 whole years. Monthly withdrawals occur at month end. The nominal effective annual return and proportional annual fee determine monthly net growth. Spending and combined other spendable income rise once a year by the same inflation rate; other income can start after a selected number of full years. Surplus income is not reinvested. The optional flat tax applies only to portfolio withdrawals. Historical return paths, Monte Carlo probabilities, benefit entitlement, tax brackets, account ordering, RMD enforcement and unexpected expenses are excluded.",
+    "sources": [
+      {
+        "title": "SEC Investor.gov: investment fees and expenses",
+        "url": "https://www.investor.gov/introduction-investing/getting-started/understanding-fees"
+      },
+      {
+        "title": "Morningstar: withdrawal-rate research and return-sequence risk",
+        "url": "https://www.morningstar.com/retirement/morningstars-retirement-income-research-finding-your-safe-withdrawal-rate"
+      },
+      {
+        "title": "The 4 percent rule: initial withdrawals, inflation and risk",
+        "url": "/guides/4-percent-rule/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "How long will my retirement savings last?",
+        "answer": "Enter your starting portfolio, spending and other income in How Long Will Savings Last. The first funding-shortfall month is the first month the portfolio and entered income cannot fully meet spending. The annual table continues to the chosen horizon. If no shortfall occurs, the result says the selected period is funded under the assumptions; it does not claim that savings last forever."
+      },
+      {
+        "question": "How much can I withdraw each month?",
+        "answer": "Find a Monthly Spending Budget solves the largest initial monthly spending budget that remains funded through the selected horizon. Portfolio withdrawals cover only the positive gap after other spendable income. The displayed spending budget and the gross portfolio withdrawal therefore differ. Both depend on your return, fee, inflation, income and flat-tax assumptions."
+      },
+      {
+        "question": "Does the retirement withdrawal calculator account for inflation?",
+        "answer": "Yes. Spending and other spendable income increase once after every completed year at the entered inflation rate. The initial monthly amount is the first-year budget; later nominal payments can be higher. Other income quoted here is a first-year-dollar amount even if its start is delayed. Income that grows differently needs a separate scenario."
+      },
+      {
+        "question": "How do Social Security and pension income affect withdrawals?",
+        "answer": "Combine their spendable monthly amounts in Other monthly spendable income and choose when that combined income begins. The model subtracts it from spending before grossing up any portfolio withdrawal for the entered tax assumption. It does not estimate Social Security benefits or pension entitlement, and it does not recalculate their taxes."
+      },
+      {
+        "question": "What happens if investment returns are poor early in retirement?",
+        "answer": "Losses early in retirement can leave fewer assets to recover while withdrawals continue. This is sequence-of-returns risk. The calculator uses a constant return, so its result is not a historical backtest or success probability. Compare lower-return and higher-spending assumptions and read the linked 4 percent rule guide rather than interpreting the solved budget as guaranteed."
+      },
+      {
+        "question": "Are taxes and investment fees included?",
+        "answer": "You can enter an annual proportional asset fee and a flat tax assumption on gross portfolio withdrawals. A 20% withdrawal tax means a $800 spending gap requires $1,000 from the portfolio. The fee convention is stated in the formula notes. No tax brackets, taxable-account cost basis, RMDs, early-withdrawal penalties or account-specific withdrawal ordering are calculated."
+      },
+      {
+        "question": "Is a 4% withdrawal rate guaranteed to be safe?",
+        "answer": "No. An initial withdrawal rate is the first-year gross portfolio withdrawal divided by starting assets. A safe-rate assessment also depends on retirement length, asset allocation, market paths, inflation, spending flexibility and the definition of success. This tool reports a selected or solved constant-return scenario and makes no guarantee of retirement safety."
+      }
+    ],
+    "examples": [
+      {
+        "title": "A one-year portfolio spent exactly",
+        "mode": "longevity",
+        "values": {
+          "balance": 12000,
+          "years": 1,
+          "spending": 1000,
+          "income": 0,
+          "income_start": 0,
+          "return": 0,
+          "fee": 0,
+          "inflation": 0,
+          "tax": 0
+        },
+        "inputs": "Start with $12,000 and spend $1,000 at each month end for one year, with zero return, fee, inflation, other income and withdrawal tax.",
+        "steps": [
+          "Twelve withdrawals of $1,000 total $12,000.",
+          "The final month is fully funded and leaves a zero balance; a zero ending balance alone is not an unfunded payment."
+        ],
+        "answer": "The portfolio ends at $0 after funding all twelve months.",
+        "expected": {
+          "label": "Portfolio balance at horizon",
+          "value": 0,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "A shortfall starts after six complete months",
+        "mode": "longevity",
+        "values": {
+          "balance": 12000,
+          "years": 1,
+          "spending": 2000,
+          "income": 0,
+          "income_start": 0,
+          "return": 0,
+          "fee": 0,
+          "inflation": 0,
+          "tax": 0
+        },
+        "inputs": "$12,000 starting assets, $2,000 monthly spending, one year and no returns, fees, inflation, other income or tax.",
+        "steps": [
+          "Six full withdrawals consume $12,000.",
+          "Month seven is the first unfunded month; the remaining six months require $12,000 that the portfolio cannot supply."
+        ],
+        "answer": "The first funding shortfall is month 7.",
+        "expected": {
+          "label": "First funding shortfall month",
+          "value": 7,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Gross up withdrawals for a flat tax assumption",
+        "mode": "budget",
+        "values": {
+          "balance": 12000,
+          "years": 1,
+          "income": 0,
+          "income_start": 0,
+          "tax": 20,
+          "return": 0,
+          "fee": 0,
+          "inflation": 0
+        },
+        "inputs": "$12,000 starting assets over one year; 20% flat tax on portfolio withdrawals; no growth, fees, inflation or other income.",
+        "steps": [
+          "The portfolio can provide $1,000 gross at each month end.",
+          "After the assumed 20% tax, that provides $800 of monthly spending."
+        ],
+        "answer": "The solved initial spending budget is approximately $800 per month.",
+        "expected": {
+          "label": "Initial monthly spending budget",
+          "value": 800,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "checkedOn": "2026-11-05"
+  },
+  "balance-transfer": {
+    "summary": "A balance transfer can lower interest while adding a fee and a deadline. This calculator compares keeping a full balance on its original card with transferring it to a new offer, or compares two transfer offers directly. Every path uses the same fixed monthly repayment budget. The results separate fees, interest, payoff timing and the balance left at the end of a promotion. A 0% introductory APR can still cost more than staying put when the fee exceeds the avoided interest. Read the remaining balances alongside any cost comparison, especially if your payment does not repay a path within the projection limit.",
+    "scope": "One complete USD balance transferred at time zero. Monthly APR/12 interest is added before the fixed month-end payment, and fractional cents are retained internally. The transfer fee can be financed or paid separately. The introductory rate lasts the selected number of whole monthly periods, followed by the entered subsequent rate. No new spending, late fees, issuer-specific payment allocation, daily-balance interest, partial transfers, rewards, credit-score forecast or product eligibility is modeled. Projections stop at payoff or 1,200 months.",
+    "sources": [
+      {
+        "title": "CFPB: balance-transfer fees on introductory-rate offers",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-balance-transfer-fee-can-a-balance-transfer-fee-be-charged-on-a-zero-percent-interest-rate-offer-en-53/"
+      },
+      {
+        "title": "Education First FCU: balance-transfer comparison factors",
+        "url": "https://www.educationfirstfcu.org/personal/credit-card/calculators/balance-transfer-calculator"
+      },
+      {
+        "title": "Balance transfer vs. personal loan: fees and payoff examples",
+        "url": "/guides/balance-transfer-vs-personal-loan/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is a balance transfer worth the fee?",
+        "answer": "Compare the interest avoided with the new card\u2019s interest plus its one-time fee under the same repayment budget. Positive modeled savings favors offer A; negative savings means it costs more. Lifetime savings is shown only when both paths are repaid within 1,200 months. Approval, convenience, credit effects and the value of upfront cash are outside this comparison."
+      },
+      {
+        "question": "How is a balance transfer fee calculated?",
+        "answer": "The fee is the greater of the transferred balance multiplied by the entered fee percentage and the entered minimum fee. No fee is charged for a zero transfer in this model. A $1,000 transfer with a 3% fee and a $5 minimum costs $30. Choose whether that fee increases the new balance or is paid separately."
+      },
+      {
+        "question": "How much must I pay each month to clear the balance before the promotion ends?",
+        "answer": "The required payment amortizes the transferred balance and any financed fee over the selected promotional months at the promotional APR. At 0%, divide that starting balance by the number of months. A separately paid fee is extra upfront cash. If there is no promotional period, no promotional-payment target is reported."
+      },
+      {
+        "question": "What happens when the promotional APR ends?",
+        "answer": "After exactly the selected number of monthly periods, the subsequent APR applies to the remaining modeled balance. It is not applied retroactively to previous months. An introductory-rate balance transfer and a deferred-interest purchase promotion are different arrangements. Check the actual card\u2019s agreement and the conditions for keeping its promotional rate."
+      },
+      {
+        "question": "How can I compare two balance transfer offers?",
+        "answer": "Select Compare Two Transfer Offers and enter each fee, introductory APR, promotional duration and subsequent APR. Both offers use the same transferred amount and monthly payment. Review total borrowing cost, payoff timing and remaining balances. If one fee is paid separately, its cash outlay is additional to the common monthly repayment budget."
+      },
+      {
+        "question": "Can a transfer cost more even with a 0% introductory APR?",
+        "answer": "Yes. For example, a balance that would repay quickly on the existing card may incur little interest, while a transfer fee is charged immediately. Compare the full fee with avoided interest rather than treating a 0% headline rate as a zero-cost offer. Interest after the promotion can also reduce or reverse savings."
+      },
+      {
+        "question": "Does the calculator include new purchases or changes in my credit score?",
+        "answer": "No. It models a single transferred balance with no new purchases and no credit-score prediction. New purchases can have a different APR, grace-period treatment and payment-allocation rules. A real issuer may also require a higher minimum payment than the fixed budget entered here."
+      }
+    ],
+    "examples": [
+      {
+        "title": "A 0% transfer is not automatically cheaper",
+        "mode": "transfer",
+        "values": {
+          "balance": 600,
+          "payment": 300,
+          "current_apr": 12,
+          "a_fee_rate": 3,
+          "a_fee_min": 0,
+          "a_intro": 0,
+          "a_months": 12,
+          "a_after": 24,
+          "a_fee_payment": "Added to balance"
+        },
+        "inputs": "$600 balance, $300 monthly repayment, original APR 12%; transfer fee 3%, financed, with twelve 0% months.",
+        "steps": [
+          "Original-card interest is $6, then $3.06, then $0.0906, totaling $9.1506.",
+          "The new card charges an $18 fee and no interest before payoff.",
+          "Savings = $9.1506 \u2212 $18 = \u2212$8.8494."
+        ],
+        "answer": "The transfer costs approximately $8.85 more.",
+        "expected": {
+          "label": "Total borrowing-cost savings from transfer",
+          "value": -8.8494,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Include a financed fee in the promotional payment",
+        "mode": "transfer",
+        "values": {
+          "balance": 1000,
+          "payment": 100,
+          "current_apr": 24,
+          "a_fee_rate": 3,
+          "a_fee_min": 0,
+          "a_intro": 0,
+          "a_months": 12,
+          "a_after": 24,
+          "a_fee_payment": "Added to balance"
+        },
+        "inputs": "$1,000 transfer, financed 3% fee and twelve 0% monthly periods.",
+        "steps": [
+          "The new opening balance is $1,000 + $30 = $1,030.",
+          "Required equal monthly payment = $1,030 / 12 = $85.833333\u2026 ."
+        ],
+        "answer": "The promotion-clearing monthly payment is about $85.83 before statement rounding.",
+        "expected": {
+          "label": "Monthly payment to clear offer A during promotion",
+          "value": 85.83333333333333,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Compare two zero-interest offers with different fees",
+        "mode": "offers",
+        "values": {
+          "balance": 1000,
+          "payment": 100,
+          "a_fee_rate": 0,
+          "a_fee_min": 0,
+          "a_intro": 0,
+          "a_months": 24,
+          "a_after": 0,
+          "a_fee_payment": "Added to balance",
+          "b_fee_rate": 3,
+          "b_fee_min": 0,
+          "b_intro": 0,
+          "b_months": 24,
+          "b_after": 0,
+          "b_fee_payment": "Added to balance"
+        },
+        "inputs": "Both offers have 0% APR and a $100 monthly payment; A has no fee and B has a 3% financed fee.",
+        "steps": [
+          "A borrowing cost is $0.",
+          "B borrowing cost is its $30 fee, counted once even though financed."
+        ],
+        "answer": "Offer A saves $30 of total modeled borrowing cost.",
+        "expected": {
+          "label": "Total borrowing-cost savings: A vs B",
+          "value": 30,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "checkedOn": "2026-11-05"
+  },
+  "dscr": {
+    "summary": "DSCR compares a defined income measure with a defined debt-payment measure. The definition matters: an annual commercial-property NOI ratio is different from the monthly rent-to-PITIA ratio used by some rental-loan programs. Choose the mode that matches the numbers you have. The rental-loan mode builds principal and interest from a note rate and term, adds property taxes, insurance and association charges, and estimates the rent or loan principal consistent with your chosen target. The annual mode uses your already calculated NOI and debt service. Neither mode determines lender approval, property value or investment profitability.",
+    "scope": "USD property analysis with two separate definitions. Rental Loan uses monthly gross rent divided by entered taxes, insurance and HOA plus calculated P&I. Annual NOI mode divides your supplied annual NOI by supplied annual debt service. Amortizing payments use nominal annual note rate/12; interest-only payments cover interest only. The maximum principal result is constrained by the entered DSCR target alone. Appraisal, LTV, credit, reserves, underwriting adjustments, later interest-only resets, balloon repayment, fees and approval requirements are excluded.",
+    "sources": [
+      {
+        "title": "Angel Oak: rental-loan DSCR and PITIA payment scenarios",
+        "url": "https://angeloakms.com/dscr-loan-calculator/"
+      },
+      {
+        "title": "Fannie Mae: debt service coverage ratio examples",
+        "url": "https://www.fanniemae.com/media/document/pdf/dscrprimerpdf"
+      },
+      {
+        "title": "NOI Calculator: separate operating income and financing",
+        "url": "/noi-calculator"
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do you calculate DSCR?",
+        "answer": "Divide the income measure by the corresponding debt-service measure for the same period. Annual NOI-based DSCR uses annual NOI divided by annual debt service. The rental-loan mode uses monthly rent divided by monthly PITIA. Identify the lender\u2019s actual definition before comparing results; these ratios are not interchangeable."
+      },
+      {
+        "question": "How is DSCR calculated for a rental property?",
+        "answer": "In Rental Loan mode, enter monthly rent, loan principal, note rate, term, property taxes, insurance and HOA charges. The model calculates P&I and adds the other charges to form PITIA. Divide rent by that total. This mode does not separately subtract operating expenses from rent; choose the annual NOI mode for a different operating-income definition."
+      },
+      {
+        "question": "What is the difference between NOI-based DSCR and rent-to-PITIA DSCR?",
+        "answer": "NOI is income after operating expenses and before financing; its denominator is debt service under the selected accounting definition. Rent-to-PITIA starts with a gross-rent measure and includes taxes, insurance and association charges in its denominator. Deducting the same costs from income and then adding them again to the denominator would mix definitions and can understate coverage."
+      },
+      {
+        "question": "How do interest-only payments change DSCR?",
+        "answer": "During the modeled interest-only period, monthly P&I is principal multiplied by note rate/12, with no principal repayment. It can produce higher coverage than an amortizing payment on the same principal. This calculation does not project a later payment reset or balloon, so the interest-only ratio cannot establish coverage after that period ends."
+      },
+      {
+        "question": "How can I estimate the maximum loan amount from a target DSCR?",
+        "answer": "First calculate allowed monthly P&I as rent divided by target DSCR, minus taxes, insurance and HOA. Floor negative capacity at zero, then divide by the monthly payment for each borrowed dollar at your rate and term. This gives a DSCR-only principal limit. LTV, appraisal and other lender constraints may produce a lower permitted amount."
+      },
+      {
+        "question": "How much rent is needed to reach my target DSCR?",
+        "answer": "In Rental Loan mode, required monthly rent is target DSCR multiplied by monthly PITIA. In the annual mode, required annual NOI is target DSCR multiplied by annual debt service. The target is your assumption, not a universal minimum. Zero debt service makes the actual ratio undefined rather than automatically assigning an infinite score."
+      },
+      {
+        "question": "Does meeting a target DSCR mean my loan will be approved?",
+        "answer": "No. A lender can apply its own income adjustments, accepted-rent definition, minimum ratio, credit, LTV, reserve and property requirements. This calculator does not retrieve a program or issue a loan offer. A positive coverage ratio also does not include every capital expense, tax or investment risk."
+      }
+    ],
+    "examples": [
+      {
+        "title": "Annual income exactly meets a 1.25 target",
+        "mode": "noi",
+        "values": {
+          "noi": 120000,
+          "debt": 96000,
+          "target": 1.25
+        },
+        "inputs": "$120,000 annual NOI and $96,000 annual debt service; target DSCR 1.25.",
+        "steps": [
+          "DSCR = 120,000 / 96,000 = 1.25.",
+          "Maximum debt service at this target = 120,000 / 1.25 = $96,000."
+        ],
+        "answer": "NOI-based DSCR is 1.25.",
+        "expected": {
+          "label": "NOI-based DSCR",
+          "value": 1.25,
+          "tolerance": 1e-06
+        }
+      },
+      {
+        "title": "Zero-interest amortization still repays principal",
+        "mode": "rental-loan",
+        "values": {
+          "rent": 2500,
+          "loan": 120000,
+          "rate": 0,
+          "years": 10,
+          "repayment": "Amortizing",
+          "taxes": 100,
+          "insurance": 100,
+          "hoa": 50,
+          "target": 1.25
+        },
+        "inputs": "$2,500 monthly rent; $120,000 ten-year zero-interest amortizing loan; $250 monthly taxes, insurance and HOA combined.",
+        "steps": [
+          "P&I = 120,000 / 120 = $1,000; PITIA = $1,250.",
+          "Coverage = 2,500 / 1,250 = 2.",
+          "Allowed P&I at 1.25 = 2,500 / 1.25 \u2212 250 = $1,750; principal capacity is $210,000."
+        ],
+        "answer": "The DSCR-only maximum principal is $210,000.",
+        "expected": {
+          "label": "Maximum loan principal from DSCR only",
+          "value": 210000,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Interest-only coverage is a separate payment scenario",
+        "mode": "rental-loan",
+        "values": {
+          "rent": 3000,
+          "loan": 200000,
+          "rate": 6,
+          "years": 30,
+          "repayment": "Interest only",
+          "taxes": 300,
+          "insurance": 150,
+          "hoa": 50,
+          "target": 1.25
+        },
+        "inputs": "$3,000 rent; $200,000 loan at 6% interest only; $500 monthly other PITIA charges.",
+        "steps": [
+          "Interest-only payment = 200,000 \u00d7 6% / 12 = $1,000.",
+          "PITIA = $1,500; rent-to-PITIA DSCR = 3,000 / 1,500 = 2."
+        ],
+        "answer": "The modeled interest-only DSCR is 2.00.",
+        "expected": {
+          "label": "Rent-to-PITIA DSCR",
+          "value": 2,
+          "tolerance": 1e-06
+        }
+      }
+    ],
+    "checkedOn": "2026-11-05"
+  },
+  "fsa": {
+    "summary": "A Health FSA election works best as an expense budget, not simply an attempt to reach a contribution maximum. Start with eligible medical, prescription, dental and vision expenses that will not be reimbursed elsewhere. Enter an employee salary-reduction election and your employer\u2019s applicable plan rules to compare tax savings, paycheck deductions and possible unused-funds loss. This calculator supports the documented 2025 and 2026 Health FSA reference limits. The estimated tax benefit uses rates you enter; it does not determine a tax bracket or enrollment eligibility. Dependent Care FSA, transit and student-loan uses of the abbreviation FSA require different tools.",
+    "scope": "U.S. full-year employee Health FSA planning for a plan year beginning in 2025 or 2026. The lower of the selected IRS salary-reduction cap and entered employer employee limit applies. No prior carryover, employer-funded money, midyear employment changes, claim timing or eligibility determination is included. Income and payroll tax-saving rates are editable assumptions; state treatment, wage caps, deductions and credit interactions are not automatically recalculated. The unused-funds scenario selects forfeiture, permitted carryover or a grace period, with no simultaneous carryover and grace period.",
+    "sources": [
+      {
+        "title": "IRS Revenue Procedure 2025-32: 2026 Health FSA salary-reduction and carryover limits",
+        "url": "https://www.irs.gov/irb/2025-45_IRB"
+      },
+      {
+        "title": "IRS Publication 969: Health FSA eligibility, expenses and unused-funds rules",
+        "url": "https://www.irs.gov/publications/p969"
+      },
+      {
+        "title": "IRS Revenue Procedure 2024-40: 2025 inflation-adjusted Health FSA limits",
+        "url": "https://www.irs.gov/irb/2024-45_IRB"
+      },
+      {
+        "title": "FSAFEDS: Health FSA expense and payroll budget example",
+        "url": "https://www.fsafeds.gov/support/savingscalculators/hcfsa"
+      },
+      {
+        "title": "HSA vs FSA: eligibility and carryover",
+        "url": "/guides/hsa-vs-fsa/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "How much should I contribute to a health FSA?",
+        "answer": "Add eligible expenses you reasonably expect within the plan year, then compare that budget with your employer\u2019s employee limit and the selected year\u2019s IRS cap. The expense-based target is a starting reference, not a personal recommendation. Uncertain expenses, plan participation, other coverage and possible forfeiture can change a suitable election."
+      },
+      {
+        "question": "How are estimated FSA tax savings calculated?",
+        "answer": "Multiply your employee contribution by the sum of your entered applicable federal, state/local and payroll tax-saving rates. For example, a $2,000 election at a combined 22% assumed rate saves $440 before any modeled forfeiture. This is an estimate: state rules, wage caps, other deductions and tax credits can change the actual tax difference."
+      },
+      {
+        "question": "How much will be deducted from each paycheck?",
+        "answer": "The employee election is divided by the entered number of deduction periods. A $2,000 annual election over 20 periods is a $100 salary deduction per period. The estimated reduction in take-home pay is smaller when a tax saving applies. Actual payroll rounding, enrollment dates and deduction schedules can differ."
+      },
+      {
+        "question": "What happens to money I do not use?",
+        "answer": "Choose your employer\u2019s actual rule. The model can forfeit unused funds, retain a permitted carryover subject to the entered plan and IRS caps, or reimburse additional eligible expenses incurred during a selected grace period. A grace period is different from a claims-submission run-out period. Carryover is retained plan value, not a cash refund, and is not guaranteed to be used later."
+      },
+      {
+        "question": "Can I use both an HSA and an FSA?",
+        "answer": "General-purpose Health FSA coverage can affect HSA contribution eligibility. A limited-purpose FSA that covers specified dental or vision expenses can have different eligibility treatment. This calculator does not test your coverage or determine HSA eligibility; use the linked HSA versus FSA guide and confirm the actual plan before electing benefits."
+      },
+      {
+        "question": "Does this calculator cover a dependent care FSA?",
+        "answer": "No. The election and carryover limits used here are for employee Health FSA salary reductions. Dependent Care FSA has different eligibility, household, reimbursement and tax-credit interactions. Do not enter childcare costs here merely because the account also uses the abbreviation FSA."
+      },
+      {
+        "question": "Which plan-year limit and employer rules does the calculator use?",
+        "answer": "For 2025 it uses a $3,300 employee salary-reduction cap and up to $660 carryover if permitted; for 2026, $3,400 and up to $680. A lower employer limit applies. The plan year is the year in which the plan begins. Future years are not extrapolated, and employer-funded money or prior carryover is not included in this election budget."
+      }
+    ],
+    "examples": [
+      {
+        "title": "A tax saving can be reduced by unused funds",
+        "mode": "health",
+        "values": {
+          "year": "2026",
+          "plan_limit": 3400,
+          "medical": 1800,
+          "prescriptions": 0,
+          "dental": 0,
+          "vision": 0,
+          "other": 0,
+          "contribution": 2000,
+          "pay_periods": 20,
+          "federal": 22,
+          "state": 0,
+          "payroll": 0,
+          "unused_rule": "Forfeit unused funds"
+        },
+        "inputs": "$1,800 eligible plan-year expenses; $2,000 employee election; 22% assumed tax saving; no carryover or grace period.",
+        "steps": [
+          "Tax saving = 2,000 \u00d7 22% = $440.",
+          "Unused and forfeited funds = 2,000 \u2212 1,800 = $200.",
+          "Tax saving less modeled forfeiture = 440 \u2212 200 = $240."
+        ],
+        "answer": "Tax saving less modeled forfeiture is $240.",
+        "expected": {
+          "label": "Tax saving less modeled forfeiture",
+          "value": 240,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "A lower employer carryover cap applies",
+        "mode": "health",
+        "values": {
+          "year": "2026",
+          "plan_limit": 3400,
+          "medical": 1800,
+          "prescriptions": 0,
+          "dental": 0,
+          "vision": 0,
+          "other": 0,
+          "contribution": 2000,
+          "pay_periods": 20,
+          "federal": 22,
+          "state": 0,
+          "payroll": 0,
+          "unused_rule": "Carryover",
+          "carry_limit": 100
+        },
+        "inputs": "$200 remains after plan-year expenses; employer permits only $100 of carryover.",
+        "steps": [
+          "Carryover is the smallest of $200 unused, $100 employer cap and $680 IRS cap.",
+          "The remaining $100 is modeled as forfeited; $440 tax saving minus $100 gives $340."
+        ],
+        "answer": "Estimated retained carryover is $100.",
+        "expected": {
+          "label": "Estimated carryover to next year",
+          "value": 100,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Additional grace-period expenses are counted once",
+        "mode": "health",
+        "values": {
+          "year": "2026",
+          "plan_limit": 3400,
+          "medical": 1800,
+          "prescriptions": 0,
+          "dental": 0,
+          "vision": 0,
+          "other": 0,
+          "contribution": 2000,
+          "pay_periods": 20,
+          "federal": 22,
+          "state": 0,
+          "payroll": 0,
+          "unused_rule": "Grace period",
+          "grace_expenses": 150
+        },
+        "inputs": "$200 unused at plan-year end; $150 additional eligible spending during the employer\u2019s allowed grace period.",
+        "steps": [
+          "The additional $150 is reimbursed from the unused $200.",
+          "No carryover is added; modeled forfeiture is $50."
+        ],
+        "answer": "The modeled forfeiture is $50.",
+        "expected": {
+          "label": "Modeled forfeiture",
+          "value": 50,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "checkedOn": "2026-11-05"
+  },
+  "closing-cost": {
+    "summary": "Closing costs and settlement cash answer different questions. A buyer pays transaction costs in addition to a down payment, while previously paid fees, earnest money and applicable credits change the amount still needed at closing. A seller starts with a sale price and subtracts payoff, negotiated commission, other costs and any buyer credit to estimate remaining cash. This calculator provides separate buyer and seller worksheets so these amounts are not mixed. Enter your own itemized quotes, local charges and payoff figures. The output is a transparent cash reconciliation rather than a location-based price quote, legal settlement statement or capital-gains tax estimate.",
+    "scope": "USD purchase or sale with user-entered costs and adjustments. Buyer mode calculates an unfinanced purchase loan as price minus down payment; points are a percentage of that principal. Applied seller/lender credits are capped at total itemized costs for this worksheet. Seller mode includes negotiated commission, combined lien payoff, costs and buyer credit. No fee financing, actual credit eligibility, local rate lookup, legal allocation, tax deductions, home-sale exclusion, depreciation recapture or capital-gains tax is determined. Negative settlement amounts remain visible as estimated refunds or additional seller cash required.",
+    "sources": [
+      {
+        "title": "CFPB: Loan Estimate costs and estimated cash to close",
+        "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
+      },
+      {
+        "title": "CFPB: Closing Disclosure reconciliation",
+        "url": "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/"
+      },
+      {
+        "title": "How to calculate a house down payment and closing costs",
+        "url": "/guides/down-payment-and-closing-cost-cash/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "How are buyer closing costs calculated?",
+        "answer": "Add your entered loan origination, appraisal/services, title/settlement, government, prepaid, escrow and other costs, plus points calculated on the purchase loan principal. Enter each cost once. The down payment is separate from that total. Use actual quotes and the lender\u2019s disclosures because location, provider and loan terms can change each item."
+      },
+      {
+        "question": "How are seller closing costs and net proceeds calculated?",
+        "answer": "Start with the agreed sale price and subtract total mortgage/lien payoff, the combined negotiated commission, entered seller costs and the credit given toward buyer costs. A negative net result means additional seller cash would be required under the inputs. The commission is your negotiated amount, not a mandatory rate."
+      },
+      {
+        "question": "Are closing costs the same as cash to close?",
+        "answer": "No. In this worksheet, buyer cash due equals down payment plus itemized closing costs, minus itemized costs already paid, applied credits and earnest money. The deposit and previously paid fees change the remaining settlement cash without being new discounts. Total buyer cash outlay adds earlier payments back once."
+      },
+      {
+        "question": "Is the down payment included in closing costs?",
+        "answer": "The calculator keeps it separate. Closing costs are the itemized transaction charges, including the entered prepaids and initial escrow deposit. Cash to close then includes the down payment and subtracts applicable previous payments and credits. Entering the down payment again in Other costs would double count it."
+      },
+      {
+        "question": "How do seller credits and lender credits affect the estimate?",
+        "answer": "Both can reduce the buyer\u2019s itemized costs under the selected assumptions. This worksheet applies them only up to total itemized closing costs and reports excess credits separately; it does not let credits fund the down payment. Actual eligible fees, program limits and contract terms require lender and settlement confirmation."
+      },
+      {
+        "question": "Why do closing costs vary by state and county?",
+        "answer": "Government charges, transfer taxes, recording rules, title/settlement prices and negotiated allocations can vary. This tool does not retrieve local rates or claim that a generic percentage is your quote. Enter the local estimates from your lender, title company, attorney or settlement provider and use Other costs for separately identified adjustments."
+      },
+      {
+        "question": "Are prepaid expenses and escrow deposits included?",
+        "answer": "Yes, as separate entered categories. Prepaids can cover interest or insurance paid in advance; an initial escrow deposit funds a reserve for later bills. Keep them separate from recurring ownership costs and from fees already paid. Seller net cash is also different from taxable gain; this tool does not determine capital-gains tax."
+      }
+    ],
+    "examples": [
+      {
+        "title": "Reconcile buyer cash without double-counting deposits",
+        "mode": "buyer",
+        "values": {
+          "price": 100000,
+          "down_unit": "Percent",
+          "down": 20,
+          "points": 0,
+          "origination": 1000,
+          "appraisal": 0,
+          "title": 500,
+          "government": 500,
+          "prepaids": 300,
+          "escrow": 700,
+          "other": 0,
+          "paid_costs": 500,
+          "deposit": 5000,
+          "seller_credit": 1000,
+          "lender_credit": 0
+        },
+        "inputs": "$100,000 price, 20% down, $3,000 itemized costs, $500 fees already paid, $5,000 earnest money and a $1,000 seller credit.",
+        "steps": [
+          "Down payment is $20,000 and purchase loan principal is $80,000.",
+          "Cash due = 20,000 + 3,000 \u2212 500 \u2212 1,000 \u2212 5,000 = $16,500.",
+          "Adding prior payments back once gives total buyer cash outlay of $22,000."
+        ],
+        "answer": "Estimated remaining cash due is $16,500.",
+        "expected": {
+          "label": "Estimated cash due / refund at closing",
+          "value": 16500,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Points use loan principal rather than purchase price",
+        "mode": "buyer",
+        "values": {
+          "price": 100000,
+          "down_unit": "Percent",
+          "down": 20,
+          "points": 1,
+          "origination": 0,
+          "appraisal": 0,
+          "title": 0,
+          "government": 0,
+          "prepaids": 0,
+          "escrow": 0,
+          "other": 0,
+          "paid_costs": 0,
+          "deposit": 0,
+          "seller_credit": 0,
+          "lender_credit": 0
+        },
+        "inputs": "$100,000 purchase with 20% down and one point; no other entered costs.",
+        "steps": [
+          "Loan principal = 100,000 \u2212 20,000 = $80,000.",
+          "One point = 1% of $80,000 = $800."
+        ],
+        "answer": "Points cost $800, separate from the down payment.",
+        "expected": {
+          "label": "Points cost",
+          "value": 800,
+          "tolerance": 0.005
+        }
+      },
+      {
+        "title": "Seller net cash is not taxable gain",
+        "mode": "seller",
+        "values": {
+          "price": 100000,
+          "payoff": 90000,
+          "commission_unit": "Percent",
+          "commission": 5,
+          "title": 500,
+          "government": 300,
+          "other": 200,
+          "buyer_credit": 1000
+        },
+        "inputs": "$100,000 sale, $90,000 lien payoff, 5% negotiated combined commission, $1,000 other closing charges and $1,000 buyer credit.",
+        "steps": [
+          "Commission is $5,000.",
+          "Net sale cash = 100,000 \u2212 90,000 \u2212 5,000 \u2212 1,000 \u2212 1,000 = $3,000.",
+          "No purchase basis or tax exclusion has been calculated."
+        ],
+        "answer": "Estimated net sale cash is $3,000.",
+        "expected": {
+          "label": "Estimated net sale proceeds / cash required",
+          "value": 3000,
+          "tolerance": 0.005
+        }
+      }
+    ],
+    "checkedOn": "2026-11-05"
+  }
+}

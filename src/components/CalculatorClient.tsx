@@ -13,6 +13,7 @@ import InputReviewSummary from './InputReviewSummary';
 import {inputReviewGroups,inputReviewLabel,inputReviewPreview,inputReviewValue} from '@/lib/input-review';
 import {coastAssumptionLabel} from '@/lib/coast-assumption-ui';
 import {coastFieldVisible} from '@/lib/coast-household';
+import {expansionFieldVisible} from '@/lib/expansion-field-visibility';
 const FhaLoanFields=dynamic(()=>import('./FhaLoanFields'));
 const FhaMonthlyBreakdown=dynamic(()=>import('./FhaLoanFields').then(m=>m.FhaMonthlyBreakdown));
 const CoastFields=dynamic(()=>import('./CoastPlan'));
@@ -557,13 +558,13 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
               )}
             </>
           )}
-          {!prominentTables && <ResultTables tables={result.additionalTables?.filter((_, index) => !['coast-fire','lean-fire','fat-fire','debt-snowball','debt-avalanche'].includes(id) && (id !== "mortgage-recast" || index !== 0))??[]} onDownload={download} label={id==='coast-fire'?'Download comparison CSV':'Download retirement CSV'}/>}
+          {!prominentTables && <ResultTables tables={result.additionalTables?.filter((_, index) => !['coast-fire','lean-fire','fat-fire','debt-snowball','debt-avalanche'].includes(id) && (id !== "mortgage-recast" || index !== 0))??[]} onDownload={download} label={id==='coast-fire'?'Download comparison CSV':id==='balance-transfer'?'Download repayment CSV':'Download retirement CSV'}/>}
 
           </CalculationDetails>
   );
   const progressive = progressiveInputGroups(id,mode.id)!==null;
-  const simple = mode.fields.length <= 14,
-    visible = mode.fields.filter((f) => f.key !== "verified_rate" &&
+  const simple = ['retirement-withdrawal','balance-transfer','dscr','fsa','closing-cost'].includes(id) || mode.fields.length <= 14,
+    visible = mode.fields.filter((f) => f.key !== "verified_rate" && expansionFieldVisible(id,values,f.key) &&
       !(id==='fix-and-flip' && values.financing==='Cash' && ['loan','rate','points'].includes(f.key)) &&
       !(id === 'coast-fire' && !coastFieldVisible(values,f.key)) &&
       !(["mfs_lived_apart", "mfs_spouse_itemizes"].includes(f.key) && (values.filing ?? values.file_status) !== "Married filing separately") &&
