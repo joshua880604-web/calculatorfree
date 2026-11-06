@@ -5,6 +5,7 @@ import { Header, Footer } from "@/components/Shell";
 import BackToTop from '@/components/BackToTop';
 import "./globals.css";
 import "./visual-theme.css";
+import "./classic-blue.css";
 import './back-to-top.css';
 import {themeScript} from "@/lib/theme";
 import { siteConfig,siteName } from "@/lib/site";

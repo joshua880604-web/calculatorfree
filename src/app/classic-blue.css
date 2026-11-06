@@ -1,0 +1,95 @@
+/* A separate palette inspired by traditional calculator sites; layout and math stay shared. */
+.theme-choices {flex-wrap:wrap;}
+.theme-choices button {flex:1 1 90px;}
+.theme-swatch-classic {background:linear-gradient(135deg,#003366 0 50%,#4c7b25 50%);}
+html[data-theme="classic-blue"] [data-theme-choice="classic-blue"] {outline:2px solid #003366;outline-offset:-2px;}
+@media screen {
+html[data-theme="classic-blue"] {
+ color-scheme:light;
+ --navy:#003366;--ink:#262626;--link:#006699;--green:#4c7b25;--muted:#4b5563;
+ --surface:#eee;--paper:#fff;--rule:#ccc;--module-border:#ccc;--border:#ccc;--control:#8a8a8a;
+}
+html[data-theme="classic-blue"] body {background:#fff;color:#262626;}
+html[data-theme="classic-blue"] :is(h1,h2,h3,h4) {color:#003366;}
+html[data-theme="classic-blue"] a {color:#006699;}
+html[data-theme="classic-blue"] :is(button,a,input,select,textarea,summary):focus-visible {outline-color:#003366;}
+html[data-theme="classic-blue"] input {accent-color:#4c7b25;}
+html[data-theme="classic-blue"] .site-header {background:#003366;color:#fff;box-shadow:none;}
+html[data-theme="classic-blue"] .brand {color:#fff;}
+html[data-theme="classic-blue"] .brand-free {color:#c5d8eb;}
+html[data-theme="classic-blue"] .brand-domain {color:#fff;}
+html[data-theme="classic-blue"] .calculator-mark > rect:first-child {fill:#fff;}
+html[data-theme="classic-blue"] .calculator-mark [fill="#003b66"] {fill:#003366;}
+html[data-theme="classic-blue"] .calculator-mark [stroke="#003b66"] {stroke:#003366;}
+html[data-theme="classic-blue"] .calculator-mark [fill="#ffda78"] {fill:#aec0d3;}
+html[data-theme="classic-blue"] .top-nav {background:#336699;border-color:#003366;}
+html[data-theme="classic-blue"] .top-nav :is(a,a:first-child,.nav-menu>summary) {color:#fff;border-color:#668aaf;}
+html[data-theme="classic-blue"] .top-nav :is(a:hover,a.selected,.nav-menu[open]>summary,.nav-menu>summary:hover) {background:#4c7b25;color:#fff;}
+html[data-theme="classic-blue"] .top-nav .nav-menu {--nav-panel-bg:#fff;--nav-hover-bg:#e8eff5;}
+html[data-theme="classic-blue"] .top-nav .nav-panel a {background:#fff;color:#003366;}
+html[data-theme="classic-blue"] .top-nav .nav-panel a:hover {background:#e8eff5;color:#003366;}
+html[data-theme="classic-blue"] .top-nav .nav-menu>summary:focus-visible {outline-color:#fff;}
+html[data-theme="classic-blue"] .site-header :is(.theme-menu>summary,.favorites-menu>summary,.mobile-menu>summary) {background:#fff;color:#003366;border-color:#aec0d3;}
+html[data-theme="classic-blue"] .site-header :is(.theme-menu,.favorites-menu) {color:#262626;}
+html[data-theme="classic-blue"] .theme-panel {background:#fff;border-color:#aaa;box-shadow:0 6px 20px #0002;}
+html[data-theme="classic-blue"] .theme-choices button {background:#eee;color:#003366;border-color:#aaa;}
+html[data-theme="classic-blue"] :is(.theme-panel small,.mobile-theme small) {color:#4b5563;}
+html[data-theme="classic-blue"] .mobile-theme {color:#003366;border-color:#ccc;}
+html[data-theme="classic-blue"] .mobile-menu nav {background:#fff;border-color:#ccc;}
+html[data-theme="classic-blue"] .mobile-menu nav a {color:#006699;}
+html[data-theme="classic-blue"] .mobile-menu nav a:hover {background:#e8eff5;}
+html[data-theme="classic-blue"] :is(.free-badge,.header-description) {color:#003366;}
+html[data-theme="classic-blue"] :is(.intro,.mode-description,.breadcrumb) {color:#4b5563;}
+html[data-theme="classic-blue"] :is(.calculator-form,.quick-calculator,.credit-card-entry) {background:#eee;border-color:#ccc;box-shadow:none;}
+html[data-theme="classic-blue"] :is(.result,.workspace-report,.calculator-guide,.side-group,.sidebar-search,.featured-grid>a,.directory-grid section,.estate-categories .category-subgroup) {background:#fff;border-color:#ccc;box-shadow:none;}
+html[data-theme="classic-blue"] :is(.side-heading,.side-heading a,.directory-grid h3,.sidebar-search>label,.category-subgroup h4) {color:#003366;}
+html[data-theme="classic-blue"] :is(.side-group-secondary .side-heading,.side-group-secondary .side-links a,.side-note,.side-note h3) {color:#4b5563;}
+html[data-theme="classic-blue"] :is(.field-row>label,.mortgage-basis legend,.credit-card-entry>legend,.credit-card-editor>legend) {color:#262626;}
+html[data-theme="classic-blue"] :is(.field-entry,.field-control input,.field-control select,.field-control textarea,.directory-search-field input,.quick-calculator-body input,.quick-angle select,.credit-card-input input) {background:#fff;border-color:#8a8a8a;color:#262626;}
+html[data-theme="classic-blue"] .field-entry :is(input,select,textarea) {background:transparent;color:#262626;}
+html[data-theme="classic-blue"] .field-entry:focus-within {outline-color:#003366;box-shadow:0 0 0 3px #33669920;}
+html[data-theme="classic-blue"] :is(.unit,.field-control small,.assumption-help,.mortgage-input-help,.mortgage-options summary small,.credit-card-editor-help) {color:#4b5563;}
+html[data-theme="classic-blue"] :is(.mode-tabs,.mortgage-options,.advanced) {border-color:#ccc;}
+html[data-theme="classic-blue"] :is(.mode-tabs button,.quick-modes button) {background:#eee;border-color:#aaa;color:#003366;}
+html[data-theme="classic-blue"] :is(.mode-tabs button.active,.mode-tabs button[aria-selected="true"],.quick-modes button[aria-pressed="true"]) {background:#336699;border-color:#003366;color:#fff;}
+html[data-theme="classic-blue"] :is(.mode-tabs button:hover,.quick-modes button:hover) {background:#e8eff5;color:#003366;}
+html[data-theme="classic-blue"] :is(.calculate,.directory-search-submit,.sidebar-search button[type="submit"],.quick-equals,.quick-keys button.quick-equals) {background:#4c7b25;border-color:#416b20;color:#fff;box-shadow:none;}
+html[data-theme="classic-blue"] :is(.calculate:hover:not(:disabled),.directory-search-submit:hover,.sidebar-search button[type="submit"]:hover,.quick-equals:hover,.quick-keys button.quick-equals:hover) {background:#3b621b;border-color:#345817;color:#fff;}
+html[data-theme="classic-blue"] :is(.clear,.result-actions button,.show-rows,.share-panel button,.credit-card-editor .credit-card-add) {background:#eee;border-color:#aaa;color:#003366;box-shadow:none;}
+html[data-theme="classic-blue"] :is(.clear:hover,.result-actions button:hover,.credit-card-editor .credit-card-add:hover) {background:#e8eff5;border-color:#336699;}
+html[data-theme="classic-blue"] .metric.primary {background:#4c7b25;border-color:transparent;box-shadow:none;}
+html[data-theme="classic-blue"] .metric.primary :is(span,strong,dt,dd) {color:#fff;}
+html[data-theme="classic-blue"] :is(.workspace-key-figures>div,.workspace-key-figures dd,.workspace-report-details,.workspace-output .result h2,.quick-calculator>h2) {color:#003366;}
+html[data-theme="classic-blue"] :is(.metric,.workspace-key-figures>div,.result h2,.side-heading,.directory-grid h3) {border-color:#ccc;}
+html[data-theme="classic-blue"] :is(.workspace-key-figures dt,.metric>span,.calculator-workspace summary) {color:#4b5563;}
+html[data-theme="classic-blue"] .metric.primary>span {color:#fff;}
+html[data-theme="classic-blue"] :is(.result-context,.result-note,.formula,.worked-example) {background:#eee;border-color:#ccc;color:#3c4650;}
+html[data-theme="classic-blue"] .mortgage-scope {background:transparent;}
+html[data-theme="classic-blue"] :is(.workspace-report .table-scroll,.guide-table,.model-reference) {border-color:#aaa;}
+html[data-theme="classic-blue"] :is(.workspace-report th,.table-scroll th,.editorial-article table thead th) {background:#336699;border-color:#aec0d3;color:#fff;}
+html[data-theme="classic-blue"] :is(.workspace-report td,.table-scroll td) {background:#fff;border-color:#ccc;color:#262626;}
+html[data-theme="classic-blue"] :is(.workspace-report tr:nth-child(even) td,.table-scroll tr:nth-child(even) td) {background:#f4f4f4;}
+html[data-theme="classic-blue"] .workspace-report .table-scroll tbody tr:nth-child(even) td:first-child {background:#f4f4f4;}
+html[data-theme="classic-blue"] .recast-comparison tbody th {background:#eee;color:#003366;}
+html[data-theme="classic-blue"] :is(.quick-keys button,.directory-categories a) {background:#fff;border-color:#aaa;color:#003366;}
+html[data-theme="classic-blue"] :is(.quick-keys button:hover,.directory-categories a:hover,.featured-grid>a:hover) {background:#e8eff5;border-color:#336699;color:#003366;}
+html[data-theme="classic-blue"] :is(.quick-answer,.featured-grid strong) {color:#003366;}
+html[data-theme="classic-blue"] .benefit-icon {background:#e8eff5;border-color:#aec0d3;color:#336699;box-shadow:none;}
+html[data-theme="classic-blue"] :is(.benefits-list li,.result-trend figcaption,.trend-legend strong) {color:#003366;}
+html[data-theme="classic-blue"] :is(.trend-legend li,.trend-help) {color:#4b5563;}
+html[data-theme="classic-blue"] .trend-balance {stroke:#336699;}
+html[data-theme="classic-blue"] .trend-end {fill:#336699;}
+html[data-theme="classic-blue"] .trend-key.balance-key {background:#336699;border-color:#336699;}
+html[data-theme="classic-blue"] .trend-grid {stroke:#d7d7d7;}
+html[data-theme="classic-blue"] .result-trend svg text {fill:#4b5563;}
+html[data-theme="classic-blue"] .calculator-disclaimer {background:#fff;border-color:#ccc;color:#4b5563;}
+html[data-theme="classic-blue"] .calculator-disclaimer h2 {color:#003366;}
+html[data-theme="classic-blue"] .share-dialog-social span {background:#336699;color:#fff;}
+html[data-theme="classic-blue"] .calculator-share-dialog {background:#fff;border-color:#aaa;color:#262626;}
+html[data-theme="classic-blue"] footer {background:#eee;border-color:#ccc;color:#4b5563;}
+}
+@media screen {
+html[data-theme="classic-blue"] .top-nav :is(a,summary):focus-visible,
+html[data-theme="classic-blue"] .site-header .brand:focus-visible {outline-color:#fff;}
+html[data-theme="classic-blue"] .top-nav .nav-panel a:focus-visible {outline-color:#003366;background:#e8eff5;color:#003366;}
+}

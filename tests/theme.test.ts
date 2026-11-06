@@ -1,0 +1,20 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import {themeScript} from '../src/lib/theme';
+function boot(saved:string|null=null,search='',blocked=false){
+ const attrs=new Map<string,string>(),classes=new Set<string>(),buttons=['default','dark-pro','classic-blue'].map(value=>({value,pressed:'',getAttribute:(key:string)=>key==='data-theme-choice'?value:null,setAttribute(_key:string,v:string){this.pressed=v;}})),events:Record<string,((e:any)=>void)[]>={},windowEvents:Record<string,(e:any)=>void>={};let stored=saved;const location={search,href:'https://example.test/calculator'+search+'#calc=keep'};const history={state:{test:true},replaceState(_state:unknown,_title:string,url:string){const next=new URL(url,'https://example.test');location.href=next.href;location.search=next.search;}};
+ const root={classList:{toggle:(v:string,on:boolean)=>on?classes.add(v):classes.delete(v)},setAttribute:(k:string,v:string)=>attrs.set(k,v),removeAttribute:(k:string)=>attrs.delete(k),getAttribute:(k:string)=>attrs.get(k)??null};
+ const document={documentElement:root,querySelectorAll:(selector:string)=>selector==='[data-theme-choice]'?buttons:[],addEventListener:(name:string,fn:(e:any)=>void)=>(events[name]??=[]).push(fn)};
+ const localStorage={getItem:()=>{if(blocked)throw Error('blocked');return stored;},setItem:(_key:string,v:string)=>{if(blocked)throw Error('blocked');stored=v;}};
+ vm.runInNewContext(themeScript,{document,localStorage,location,history,URL,URLSearchParams,window:{addEventListener:(name:string,fn:(e:any)=>void)=>windowEvents[name]=fn}});
+ return {attrs,classes,buttons,location,stored:()=>stored,select:(value:string)=>events.click[0]({target:{closest:(s:string)=>s==='[data-theme-choice]'?{getAttribute:()=>value}:null}}),storage:(value:string|null)=>windowEvents.storage({key:'calculatorfree.theme',newValue:value})};
+}
+test('No saved choice preserves Default; invalid stored themes fall back',()=>{for(const saved of [null,'unknown']){const r=boot(saved);assert.equal(r.attrs.has('data-theme'),false);assert.equal(r.buttons[0].pressed,'true');assert.equal(r.classes.has('dark'),false);}});
+for(const theme of ['dark-pro','classic-blue'])test(`Restore stored theme ${theme}`,()=>{const r=boot(theme);assert.equal(r.attrs.get('data-theme'),theme);assert.equal(r.classes.has('dark'),theme==='dark-pro');assert.equal(r.buttons.find(b=>b.value===theme)!.pressed,'true');});
+test('Selecting Classic Blue persists locally and clears Dark Pro class',()=>{const r=boot('dark-pro');r.select('classic-blue');assert.equal(r.stored(),'classic-blue');assert.equal(r.attrs.get('data-theme'),'classic-blue');assert.equal(r.classes.has('dark'),false);r.select('default');assert.equal(r.attrs.has('data-theme'),false);assert.equal(r.stored(),'default');});
+test('Valid preview query selects a theme; invalid query preserves preference',()=>{const r=boot('dark-pro','?mode=504&theme=classic-blue');assert.equal(r.attrs.get('data-theme'),'classic-blue');assert.equal(r.stored(),'classic-blue');assert.equal(boot('dark-pro','?theme=invalid').attrs.get('data-theme'),'dark-pro');});
+test('Blocked local storage still allows query preview and button switching',()=>{const r=boot(null,'?theme=classic-blue',true);assert.equal(r.attrs.get('data-theme'),'classic-blue');r.select('dark-pro');assert.equal(r.attrs.get('data-theme'),'dark-pro');assert.equal(boot(null,'',true).attrs.has('data-theme'),false);});
+test('Cross-tab updates and cleared preferences stay synchronized',()=>{const r=boot('classic-blue');r.storage('dark-pro');assert.equal(r.classes.has('dark'),true);r.storage('classic-blue');assert.equal(r.attrs.get('data-theme'),'classic-blue');r.storage(null);assert.equal(r.attrs.has('data-theme'),false);assert.equal(r.buttons[0].pressed,'true');});
+
+test('An explicit selection replaces preview preference and preserves other URL state',()=>{const r=boot(null,'?mode=504&theme=classic-blue');r.select('default');assert.equal(r.location.search,'?mode=504');assert.ok(r.location.href.endsWith('#calc=keep'));assert.equal(boot(r.stored(),r.location.search).attrs.has('data-theme'),false);});
