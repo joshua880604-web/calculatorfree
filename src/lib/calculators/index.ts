@@ -1,3 +1,5 @@
+import {inventoryTurnoverCalculator} from './inventory-turnover';
+import {sbaLoanCalculator} from './sba-loan';
 import {cdLadderCalculator} from './cd-ladder';
 import {npvCalculator} from './npv';
 import {leaseVsBuyCarCalculator} from './lease-vs-buy-car';
@@ -43,6 +45,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  inventoryTurnoverCalculator,sbaLoanCalculator,
   cdLadderCalculator,npvCalculator,leaseVsBuyCarCalculator,mortgageComparisonCalculator,
   ...remainingCalculators,
   retirementWithdrawalCalculator,balanceTransferCalculator,dscrCalculator,fsaCalculator,closingCostCalculator,

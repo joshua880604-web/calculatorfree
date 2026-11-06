@@ -796,5 +796,17 @@
   "category": "Mortgage and Real Estate",
   "title": "Mortgage Comparison Calculator",
   "local_route": "/mortgage-comparison-calculator.html"
+},
+{
+  "id": "inventory-turnover",
+  "category": "Other",
+  "title": "Inventory Turnover Calculator",
+  "local_route": "/inventory-turnover-calculator.html"
+},
+{
+  "id": "sba-loan",
+  "category": "Other",
+  "title": "SBA Loan Calculator",
+  "local_route": "/sba-loan-calculator.html"
 }
 ]

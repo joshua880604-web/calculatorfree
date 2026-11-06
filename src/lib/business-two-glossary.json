@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "inventory-turnover",
+    "name": "Inventory turnover",
+    "title": "Inventory Turnover and DIO: Formula, Periods & Example",
+    "description": "Understand cost-based inventory turnover, average stock and days inventory outstanding with matched-period examples and interpretation limits.",
+    "category": "Business & pricing",
+    "aliases": [
+      "Inventory turns",
+      "Stock turnover",
+      "Days inventory outstanding",
+      "DIO"
+    ],
+    "definition": "Inventory turnover measures how many times period cost of goods sold covers average inventory valued at cost. Days inventory outstanding converts that ratio into a holding-period measure using the days in the same reporting period.",
+    "explanation": "The ratio is based on costs rather than sales revenue. A simple average uses opening and closing stock; seasonal changes can require a more representative prepared average. A high turnover can reflect efficient replenishment or understocking, so it is not an automatic quality score.",
+    "formula": "Turns = COGS / average inventory. DIO = period days / turns.",
+    "formulaNote": "Use the same business, cost basis and period. Zero average inventory makes turns undefined; zero COGS does not produce finite DIO.",
+    "example": {
+      "title": "Four annual turns imply 91.25 inventory days",
+      "intro": "Use $500,000 annual COGS, $100,000 opening stock and $150,000 closing stock, all valued at cost.",
+      "steps": [
+        "Average inventory = ($100,000 + $150,000) / 2 = $125,000.",
+        "Turns = $500,000 / $125,000 = 4.",
+        "DIO = 365 / 4 = 91.25 days."
+      ],
+      "answer": "Four turns in the 365-day period correspond to 91.25 DIO.",
+      "assumptions": "Same currency, entity and cost scope; a two-point average and 365-day year; no seasonality adjustment.",
+      "calculator": {
+        "id": "inventory-turnover",
+        "mode": "ratio",
+        "values": {},
+        "expected": [
+          {
+            "label": "Inventory turns in selected period",
+            "value": 4
+          },
+          {
+            "label": "Days inventory outstanding",
+            "value": 91.25
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Do not mix sales value with cost inventory",
+      "text": "Revenue includes markup. Substituting it for COGS changes the measure; using 365 with quarterly COGS also changes the implied holding time."
+    },
+    "tools": [
+      {
+        "id": "inventory-turnover",
+        "text": "Calculate matched-period turns, DIO or an entered target average."
+      },
+      {
+        "id": "current-ratio",
+        "text": "Compare a point-in-time current-asset balance with current liabilities."
+      },
+      {
+        "id": "quick-ratio",
+        "text": "Review liquidity with inventory excluded from quick assets."
+      }
+    ],
+    "related": [
+      "current-ratio",
+      "quick-ratio",
+      "landed-cost"
+    ],
+    "sources": [
+      {
+        "title": "Intuit: Inventory turnover formulas",
+        "url": "https://quickbooks.intuit.com/learn-support/en-ca/help-article/inventory-management/use-inventory-turnover-report-quickbooks-2024/L6nNqyuvy_CA_en_CA"
+      },
+      {
+        "title": "Corporate Finance Institute: Inventory turnover",
+        "url": "https://corporatefinanceinstitute.com/resources/accounting/inventory-turnover/"
+      }
+    ],
+    "checkedOn": "2026-11-06",
+    "scope": "Use one consistent currency and cost-based accounting scope. COGS covers the same period as the average inventory and selected days. The opening/closing mode uses a two-point mean; the known-average mode accepts your prepared average. Targets and 365-day extrapolations are arithmetic scenarios, not industry benchmarks, purchasing instructions or cash-release forecasts.",
+    "guides": [
+      {
+        "title": "How to Calculate Inventory Turnover: COGS, DIO & Examples",
+        "path": "/guides/how-to-calculate-inventory-turnover/"
+      }
+    ]
+  },
+  {
+    "slug": "sba-guaranty-fee",
+    "name": "SBA guaranty fee",
+    "title": "SBA Guaranty Fee: Gross Loan, Guaranteed Portion & FY2027",
+    "description": "Distinguish an SBA upfront guaranty fee from the full borrower debt, lender annual service fee and usable project proceeds.",
+    "category": "Business & pricing",
+    "aliases": [
+      "SBA guarantee fee",
+      "7(a) upfront fee"
+    ],
+    "definition": "The SBA upfront guaranty fee is a program charge on a guaranteed loan that a lender may pass to the borrower under applicable rules. Its calculation depends on the approval-year schedule, loan type, gross amount, maturity and applicable relief; it does not reduce the borrower’s debt.",
+    "explanation": "For a standard 7(a) loan, the fee schedule uses a gross-approval bracket and the applicable guaranteed portion. That guaranteed portion is lender credit protection, while repayment still covers the full approved gross loan. The lender annual service fee is a different charge and cannot be passed to the borrower.",
+    "formula": "Supported FY2027 standard example: upfront fee = $250,000 gross × 75% guaranteed × 3% fee = $5,625.",
+    "formulaNote": "This is a specific example, not a universal fee rate. Manual lender-confirmed fees are required for relief, specialized programs, related 90-day loans and unsupported fiscal years.",
+    "example": {
+      "title": "A $250,000 standard approval uses a $187,500 fee base",
+      "intro": "Assume one standard 7(a) approval on November 6, 2026, with a 120-month term and no relief or related loans.",
+      "steps": [
+        "Ordinary guaranteed portion = $250,000 × 75% = $187,500.",
+        "The applicable FY2027 standard upfront fee is 3% of that portion.",
+        "Fee = $187,500 × 3% = $5,625; the borrower still repays $250,000 principal."
+      ],
+      "answer": "The upfront fee is $5,625 under these specific assumptions.",
+      "assumptions": "Single standard FY2027 7(a) loan; no exception or eligibility inference. A guaranty is not a grant.",
+      "calculator": {
+        "id": "sba-loan",
+        "mode": "7a",
+        "values": {},
+        "expected": [
+          {
+            "label": "Upfront SBA guaranty fee used",
+            "value": 5625
+          },
+          {
+            "label": "SBA-guaranteed portion used for fee",
+            "value": 187500
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Do not add an already financed fee to gross approval twice",
+      "text": "If the entered gross approval already funds fees, those fees reduce usable project proceeds. Also keep the lender annual service fee out of borrower charges."
+    },
+    "tools": [
+      {
+        "id": "sba-loan",
+        "text": "Estimate supported FY2027 standard or confirmed manual fees and inspect usable proceeds."
+      },
+      {
+        "id": "business-loan",
+        "text": "Compare general entered loan fees and repayment assumptions."
+      }
+    ],
+    "related": [
+      "apr",
+      "amortization",
+      "debt-service-coverage-ratio"
+    ],
+    "sources": [
+      {
+        "title": "SBA: FY2027 7(a) fee notice",
+        "url": "https://legacy.sba.gov/document/information-notice-5000-881797-fy-2027-7a-program-fees"
+      },
+      {
+        "title": "SBA: Terms, guaranteed portions and fee restrictions",
+        "url": "https://legacy.sba.gov/partners/lenders/7a-loan-program/terms-conditions-eligibility"
+      }
+    ],
+    "checkedOn": "2026-11-06",
+    "scope": "U.S. planning estimates in USD. Automatic 7(a) fees cover FY2027 approvals for one standard loan with no fee relief or related 90-day loans. Manual fees handle confirmed quotes without inferring eligibility. All note rates are entered and held constant. The 504 mode uses entered fee amounts and separate amortizing bank/CDC loans; it does not supply a current CDC rate, approval, program-limit certification or refinancing guarantee.",
+    "guides": [
+      {
+        "title": "SBA 7(a) vs 504 Payments: Fees, Equity & Examples",
+        "path": "/guides/sba-7a-vs-504-loan-payments/"
+      }
+    ]
+  }
+]

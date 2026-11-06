@@ -427,3 +427,10 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 - [NPV and XNPV Calculator](https://www.calculatorfree.io/npv-calculator): Signed USD cash flows and an entered effective annual discount rate. Periodic mode includes time zero; actual-date XNPV sorts dates and uses actual days / 365. No IRR, investment recommendation or automatic cash-flow assumptions.
 - [Lease vs Buy Car Calculator](https://www.calculatorfree.io/lease-vs-buy-car-calculator): One quoted vehicle lease term compared with buying and selling at the same month. Entered costs, operating allowances, resale value and purchase loan; no automatic incentives, residual forecast, lease buyout or repeat lease.
 - [Mortgage Comparison Calculator](https://www.calculatorfree.io/mortgage-comparison-calculator): Two fixed-rate amortizing USD mortgages with the same base property funding. Entered points and upfront or financed fees, optional extra principal and one holding period. Annual-rate estimate is not a certified disclosure APR; escrow, insurance and approval are excluded.
+
+## Inventory and SBA financing
+
+- [Inventory Turnover Calculator](https://www.calculatorfree.io/inventory-turnover-calculator): Cost-based turnover, matched-period DIO and entered turnover targets.
+- [SBA Loan Calculator](https://www.calculatorfree.io/sba-loan-calculator): Standard FY2027 7(a) guaranty-fee scenarios or lender-confirmed fees; separate bank and CDC 504 financing. No approval or live rate quotes.
+- [Inventory turnover guide](https://www.calculatorfree.io/guides/how-to-calculate-inventory-turnover/): COGS, average inventory, seasonal limitations and worked period comparisons.
+- [SBA 7(a) and 504 payment guide](https://www.calculatorfree.io/guides/sba-7a-vs-504-loan-payments/): Gross approvals, borrower fees, project allocation and bank maturity balances.

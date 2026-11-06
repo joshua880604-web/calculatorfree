@@ -4,6 +4,9 @@ import {roth401kComparisonScope} from './roth-401k-scope';
 // Scope labels describe implemented rules, not a promise of worldwide tax support.
 export function calculatorScope(id: string, mode: string, values: Values): string | undefined {
   switch (id) {
+    case 'inventory-turnover': return "Cost-based inventory arithmetic for a matched reporting period. No industry benchmark, sales forecast, inventory valuation election or automatic cash-release estimate.";
+    case 'sba-loan': return mode==='504'?"U.S. 504 permanent-financing scenario with entered project allocation, separate note rates and fees, and a bank maturity balance. No eligibility, live CDC quote or certified APR.":values.fee_method==='FY2027 standard schedule'?"U.S. standard 7(a), FY2027 approval (October 1, 2026–September 30, 2027), one loan without fee relief or related 90-day loans. Gross approval includes financed fees; constant note rate, no approval or current-rate quote.":"U.S. 7(a) constant-rate amortization with a lender-confirmed fee entered manually. No automatic guaranty percentage, fee relief, approval or current-rate determination.";
+
     case "cd-ladder": return "USD CD ladder with entered initial APYs and assumed renewal terms and APY. Monthly-equivalent APY accrual, interest released only at maturity; retained cash earns zero. No taxes, penalties, live rates or deposit-insurance verification.";
     case "npv": return "Signed USD cash flows and an entered effective annual discount rate. Periodic mode includes time zero; actual-date XNPV sorts dates and uses actual days / 365. No IRR, investment recommendation or automatic cash-flow assumptions.";
     case "lease-vs-buy-car": return "One quoted vehicle lease term compared with buying and selling at the same month. Entered costs, operating allowances, resale value and purchase loan; no automatic incentives, residual forecast, lease buyout or repeat lease.";

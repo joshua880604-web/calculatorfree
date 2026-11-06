@@ -1,3 +1,4 @@
+import businessTwoContent from './business-two-content.json';
 import fourComparisonContent from './four-comparison-content.json';
 import expansionFiveContent from './expansion-five-content.json';
 import remainingToolContent from './remaining-tool-content.json';
@@ -1015,3 +1016,7 @@ relatedCalculatorIds["tax-equivalent-yield"]=[...new Set([...(relatedCalculatorI
 Object.assign(guides,fourComparisonContent as unknown as Record<string,Guide>);
 Object.assign(relatedCalculatorIds,{"cd-ladder": ["cd", "savings", "treasury-bill"], "npv": ["irr", "mirr", "present-value", "payback-period"], "lease-vs-buy-car": ["auto-lease", "auto-loan", "cash-back-or-low-interest"], "mortgage-comparison": ["mortgage", "apr", "discount-points", "closing-cost", "mortgage-payoff"]});
 for(const [id,links] of Object.entries({"cd-ladder": ["cd", "savings", "treasury-bill"], "npv": ["irr", "mirr", "present-value", "payback-period"], "lease-vs-buy-car": ["auto-lease", "auto-loan", "cash-back-or-low-interest"], "mortgage-comparison": ["mortgage", "apr", "discount-points", "closing-cost", "mortgage-payoff"]}))for(const linked of links)relatedCalculatorIds[linked]=[...new Set([...(relatedCalculatorIds[linked]??[]),id])];
+
+Object.assign(guides,businessTwoContent as unknown as Record<string,Guide>);
+Object.assign(relatedCalculatorIds,{"inventory-turnover": ["current-ratio", "quick-ratio", "landed-cost", "margin"], "sba-loan": ["business-loan", "apr", "dscr"]});
+for(const [id,links] of Object.entries({"inventory-turnover": ["current-ratio", "quick-ratio", "landed-cost", "margin"], "sba-loan": ["business-loan", "apr", "dscr"]}))for(const linked of links)relatedCalculatorIds[linked]=[...new Set([...(relatedCalculatorIds[linked]??[]),id])];

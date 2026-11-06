@@ -1,0 +1,22 @@
+One annual example
+Measure,Amount
+COGS during year,"$500,000"
+Opening inventory at cost,"$100,000"
+Closing inventory at cost,"$150,000"
+Two-point average,"$125,000"
+Turns in year,4.00
+DIO for 365 days,91.25 days
+
+Equal turns across unequal periods
+Scenario,Period COGS,Average stock,Period days,Period turns,DIO
+Annual example,"$500,000","$125,000",365,4.00,91.25
+Quarterly example,"$120,000","$30,000",90,4.00,22.50
+
+Entered target scenario
+Measure,Value
+Period COGS,"$500,000"
+Selected period turns,4.00
+Implied average inventory,"$125,000"
+Entered average inventory,"$150,000"
+Entered average minus target,"$25,000"
+

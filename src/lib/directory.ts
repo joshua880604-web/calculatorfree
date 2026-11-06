@@ -10,6 +10,8 @@ export function directoryGroup(id:string,_category?:string){
  return group.id;
 }
 const toolAliases:Record<string,string[]>={
+ 'inventory-turnover':['inventory turnover ratio','inventory turns','days inventory outstanding','DIO','stock turnover','average inventory'],
+ 'sba-loan':['SBA loan payment','SBA 7a','SBA 7(a)','SBA 504','CDC loan','SBA guaranty fee','small business administration loan'],
 "cd-ladder":["5 year cd ladder", "certificate of deposit ladder", "cd ladder interest"],
 "npv":["net present value", "xnpv", "discounted cash flows", "monthly npv"],
 "lease-vs-buy-car":["car lease vs buy", "leasing versus buying a car", "lease vs finance a car"],

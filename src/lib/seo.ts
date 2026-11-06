@@ -335,3 +335,8 @@ contentUpdatedOn['/npv-calculator.html']='2026-11-06';
 contentUpdatedOn['/lease-vs-buy-car-calculator.html']='2026-11-06';
 contentUpdatedOn['/mortgage-comparison-calculator.html']='2026-11-06';
 for(const path of ['/financial-calculator.html','/savings-investment-calculators.html','/real-estate-calculator.html','/loan-calculators.html','/guides/cd-ladder/','/guides/irr-vs-npv/','/guides/leasing-vs-buying-a-car/','/guides/15-vs-30-year-mortgage/','/glossary/certificate-of-deposit/','/glossary/net-present-value/','/glossary/lease-residual-value/','/glossary/apr/','/glossary/mortgage-points/'])contentUpdatedOn[path]='2026-11-06';
+
+// New business models, original guides and glossary review.
+contentUpdatedOn['/inventory-turnover-calculator.html']='2026-11-06';
+contentUpdatedOn['/sba-loan-calculator.html']='2026-11-06';
+for(const path of ['/business-calculators.html','/financial-calculator.html','/guides/','/glossary/','/glossary/inventory-turnover/','/glossary/sba-guaranty-fee/'])contentUpdatedOn[path]='2026-11-06';

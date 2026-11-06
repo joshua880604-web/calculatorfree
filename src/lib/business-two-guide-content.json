@@ -1,0 +1,603 @@
+{
+  "inventory-turnover": {
+    "meta": {
+      "path": "/guides/how-to-calculate-inventory-turnover/",
+      "title": "How to Calculate Inventory Turnover: COGS, DIO & Examples",
+      "heading": "How to Calculate Inventory Turnover and Days in Inventory",
+      "description": "Calculate cost-based inventory turnover and DIO with matched-period examples, average-inventory choices, zero-value cases and target-stock limits.",
+      "publishedOn": "2026-11-06",
+      "calculatorIds": [
+        "inventory-turnover",
+        "current-ratio",
+        "quick-ratio",
+        "landed-cost"
+      ],
+      "topic": "Business finance",
+      "breadcrumb": "Inventory turnover",
+      "cardIntro": "Use matched costs and periods to calculate turns, compare inventory days and understand what a chosen stock target does and does not imply.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "An annual income statement and a closing inventory balance do not automatically form a meaningful efficiency comparison. The cost basis, reporting period and averaging method all matter. The examples below use hypothetical cost figures and reconcile directly with the Inventory Turnover Calculator.",
+    "answer": "Inventory turnover equals period cost of goods sold divided by average inventory at cost. Days inventory outstanding equals the days in that same period divided by its turnover. Neither measure is a profit margin or a guarantee that stock can be converted immediately into cash.",
+    "sections": [
+      {
+        "id": "cost-basis",
+        "title": "Keep the numerator and denominator on the same cost basis",
+        "paragraphs": [
+          "COGS records the cost associated with goods sold during the period. Inventory is stock held at cost under the accounting basis used in the records. Combining sales revenue, which includes markup, with inventory at cost produces a different ratio. It should not be labeled standard cost-based inventory turnover.",
+          "Check that both figures describe the same business, product scope and accounting period. An inventory balance from one entity and COGS from a consolidated group are not a matched pair. Returns, write-downs or negative adjustment totals may require accounting analysis beyond a positive-cost worksheet."
+        ],
+        "formula": "Inventory turns = period COGS / average inventory at cost.",
+        "links": [
+          {
+            "href": "/inventory-turnover-calculator",
+            "label": "Open the Inventory Turnover Calculator"
+          }
+        ]
+      },
+      {
+        "id": "average",
+        "title": "Choose an average that represents the reporting period",
+        "paragraphs": [
+          "The simple two-point method adds opening and closing inventory and divides by two. With opening stock of $100,000 and closing stock of $150,000, the average is $125,000. This is a practical approximation rather than a measurement of every day’s stock.",
+          "A seasonal business may hold much more stock between those dates. If consistent daily balances or representative monthly observations are available, a prepared average can be more useful. A time-weighted average requires the timing as well as the balances. Use Known Average Inventory to supply that prepared result; the calculator does not reconstruct it from one snapshot."
+        ],
+        "table": {
+          "caption": "One annual example",
+          "headers": [
+            "Measure",
+            "Amount"
+          ],
+          "rows": [
+            [
+              "COGS during year",
+              "$500,000"
+            ],
+            [
+              "Opening inventory at cost",
+              "$100,000"
+            ],
+            [
+              "Closing inventory at cost",
+              "$150,000"
+            ],
+            [
+              "Two-point average",
+              "$125,000"
+            ],
+            [
+              "Turns in year",
+              "4.00"
+            ],
+            [
+              "DIO for 365 days",
+              "91.25 days"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "periods",
+        "title": "Match the days to the COGS period",
+        "paragraphs": [
+          "Four turns in a quarter and four turns in a year describe different speeds. DIO puts the ratio on a day basis, but only if the number of days matches the period of COGS. A 90-day period uses 90, not an automatic 365.",
+          "The calculator also reports a labeled 365-day equivalent. That scales observed period turns by 365 / period days. It is a proportional extrapolation that assumes the shorter period represents the longer one; it is not observed annual turnover and does not remove seasonality."
+        ],
+        "formula": "DIO = period days / turns = average inventory / period COGS × period days.",
+        "table": {
+          "caption": "Equal turns across unequal periods",
+          "headers": [
+            "Scenario",
+            "Period COGS",
+            "Average stock",
+            "Period days",
+            "Period turns",
+            "DIO"
+          ],
+          "rows": [
+            [
+              "Annual example",
+              "$500,000",
+              "$125,000",
+              "365",
+              "4.00",
+              "91.25"
+            ],
+            [
+              "Quarterly example",
+              "$120,000",
+              "$30,000",
+              "90",
+              "4.00",
+              "22.50"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "target",
+        "title": "Reverse the formula without promising cash savings",
+        "paragraphs": [
+          "Suppose a business has $500,000 period COGS and chooses a target of four turns for that period. The implied average stock is $125,000. If its entered average is $150,000, the difference is $25,000.",
+          "That difference does not establish that $25,000 can be withdrawn from operations. Safety stock, lead times, order minimums, customer service, obsolete items and changing demand affect an actual purchasing plan. A reduction in average accounting stock is not automatically a same-day cash receipt or additional profit."
+        ],
+        "formula": "Average inventory implied by target = period COGS / selected target turns.",
+        "table": {
+          "caption": "Entered target scenario",
+          "headers": [
+            "Measure",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Period COGS",
+              "$500,000"
+            ],
+            [
+              "Selected period turns",
+              "4.00"
+            ],
+            [
+              "Implied average inventory",
+              "$125,000"
+            ],
+            [
+              "Entered average inventory",
+              "$150,000"
+            ],
+            [
+              "Entered average minus target",
+              "$25,000"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "interpretation",
+        "title": "Interpret the ratio with stock availability and accounting context",
+        "paragraphs": [
+          "A higher ratio can accompany efficient replenishment, but it can also accompany understocking and lost sales. A lower ratio can accompany planned seasonal stock or long production cycles. Compare consistent periods, product mixes and valuation methods before judging a change.",
+          "Zero average inventory makes turnover undefined. Positive inventory with zero COGS produces zero turns and no finite DIO. A zero or undefined result is a prompt to review the inputs and period, not an automatic best-in-class score. Current and quick ratios answer a different question about a balance-sheet snapshot."
+        ],
+        "links": [
+          {
+            "href": "/current-ratio-calculator",
+            "label": "Current Ratio Calculator"
+          },
+          {
+            "href": "/quick-ratio-calculator",
+            "label": "Quick Ratio Calculator"
+          },
+          {
+            "href": "/glossary/inventory-turnover/",
+            "label": "Inventory turnover and DIO definition"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why is COGS used instead of sales?",
+        "answer": "COGS and inventory use a cost basis. Sales includes markup, so substituting revenue changes the meaning of the ratio. Obtain a matched COGS amount rather than silently using revenue."
+      },
+      {
+        "question": "Can beginning and ending stock miss seasonal inventory?",
+        "answer": "Yes. A two-point mean can miss stock accumulated between the dates. Use a consistently prepared average covering the full period when the two snapshots are unrepresentative."
+      },
+      {
+        "question": "Should a quarterly calculation use 365 days?",
+        "answer": "Use the actual days covered by quarterly COGS to calculate DIO. A 365-day equivalent can be reported separately as an extrapolation, with its seasonal limitations stated."
+      },
+      {
+        "question": "Does a $25,000 target difference mean $25,000 cash savings?",
+        "answer": "No. It is a difference between average inventory levels at cost. Real cash effects depend on purchases, supplier terms, sales, stock availability and implementation."
+      },
+      {
+        "question": "Is there one good turnover ratio for every business?",
+        "answer": "No universal target is supplied here. Product shelf life, production cycle, stockout costs, industry and accounting methods affect useful comparisons."
+      },
+      {
+        "question": "Do I need both financial statements?",
+        "answer": "COGS normally comes from income-statement or inventory accounting records, while stock balances come from balance sheets or inventory records. A closing balance sheet by itself generally does not supply all the inputs."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Intuit: Inventory Turnover report formulas",
+        "url": "https://quickbooks.intuit.com/learn-support/en-ca/help-article/inventory-management/use-inventory-turnover-report-quickbooks-2024/L6nNqyuvy_CA_en_CA",
+        "usedFor": "COGS, average stock and matched-period DIO definitions.",
+        "scope": "General cost-based ratio, not an industry benchmark."
+      },
+      {
+        "title": "Corporate Finance Institute: Inventory turnover",
+        "url": "https://corporatefinanceinstitute.com/resources/accounting/inventory-turnover/",
+        "usedFor": "Interpretation and comparison context.",
+        "scope": "Educational explanation, not a prescription for stock levels."
+      }
+    ],
+    "related": [
+      {
+        "href": "/inventory-turnover-calculator",
+        "label": "Inventory Turnover Calculator"
+      },
+      {
+        "href": "/landed-cost-calculator",
+        "label": "Landed Cost Calculator"
+      },
+      {
+        "href": "/glossary/inventory-turnover/",
+        "label": "Inventory turnover glossary"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the annual four-turn example",
+        "path": "/inventory-turnover-calculator.html",
+        "mode": "ratio",
+        "values": {}
+      },
+      {
+        "label": "Reproduce four turns over 90 days",
+        "path": "/inventory-turnover-calculator.html",
+        "mode": "average",
+        "values": {
+          "cogs": 120000,
+          "average": 30000,
+          "days": 90
+        }
+      },
+      {
+        "label": "Reproduce the entered inventory target",
+        "path": "/inventory-turnover-calculator.html",
+        "mode": "target",
+        "values": {}
+      }
+    ],
+    "limitations": [
+      "No live bookkeeping connection, inventory valuation election or industry benchmark.",
+      "No demand forecast, reorder plan, margin calculation or guaranteed release of cash.",
+      "Use one currency and matched cost periods; unusual negative accounting adjustments need separate review."
+    ]
+  },
+  "sba-loan": {
+    "meta": {
+      "path": "/guides/sba-7a-vs-504-loan-payments/",
+      "title": "SBA 7(a) vs 504 Payments: Fees, Equity & Examples",
+      "heading": "SBA 7(a) and 504 Loan Payments: Fees, Funding, and Maturity Balances",
+      "description": "Compare SBA 7(a) gross approvals and FY2027 borrower fees with two-loan 504 financing, equity contributions and bank maturity balances.",
+      "publishedOn": "2026-11-06",
+      "calculatorIds": [
+        "sba-loan",
+        "business-loan",
+        "apr",
+        "dscr"
+      ],
+      "topic": "Business finance",
+      "breadcrumb": "SBA loan payments",
+      "cardIntro": "Separate gross loan amounts, project cash, borrower fees and the bank/CDC structure before comparing SBA financing estimates.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "A payment calculation can be arithmetically correct while describing the wrong financing structure. This guide uses one standard FY2027 7(a) example and simplified 504 examples to distinguish the debt you repay from project proceeds, equity and fees. All rates and amounts in the examples are assumptions, not lender offers.",
+    "answer": "A 7(a) repayment estimate starts with the approved gross loan and entered note rate. A 504 project requires separate bank and CDC loan calculations plus borrower equity. In either case, distinguish borrower fees from principal, and check whether a bank loan matures before its amortization ends.",
+    "sections": [
+      {
+        "id": "gross",
+        "title": "Start a 7(a) calculation with the gross approval",
+        "paragraphs": [
+          "The gross loan is the principal on which repayment is modeled. If the approval already includes financed fees, do not calculate a fee on a smaller cash request and then add it again without reconciling the final gross approval. The worksheet accepts the approved gross amount rather than solving that circular net-funding problem.",
+          "In the standard example, a $250,000 gross loan has a $5,625 upfront guaranty fee and $1,000 of other entered borrower fees. Deducting $6,625 leaves $243,375 for the project. Paying those fees separately preserves $250,000 in loan proceeds but requires $6,625 outside cash. Monthly principal and interest are based on the same $250,000 in both cases."
+        ],
+        "table": {
+          "caption": "Same gross loan, different fee payment",
+          "headers": [
+            "Measure",
+            "Fees deducted",
+            "Fees paid separately"
+          ],
+          "rows": [
+            [
+              "Approved gross loan",
+              "$250,000",
+              "$250,000"
+            ],
+            [
+              "Upfront guaranty fee",
+              "$5,625",
+              "$5,625"
+            ],
+            [
+              "Other entered fees",
+              "$1,000",
+              "$1,000"
+            ],
+            [
+              "Usable project proceeds",
+              "$243,375",
+              "$250,000"
+            ],
+            [
+              "Outside cash for fees",
+              "$0",
+              "$6,625"
+            ],
+            [
+              "P&I at 10% note rate, 120 months",
+              "$3,303.77",
+              "$3,303.77"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/sba-loan-calculator",
+            "label": "Open the SBA Loan Calculator"
+          }
+        ]
+      },
+      {
+        "id": "fy2027",
+        "title": "Use the fee schedule for the approval date and supported case",
+        "paragraphs": [
+          "Automatic fees in this tool cover one standard 7(a) loan approved from October 1, 2026 through September 30, 2027, without relief or related 90-day loans. The ordinary guaranteed portion is 85% for gross loans up to $150,000 and 75% above that threshold. Repayment still applies to the whole loan; the guarantee protects the lender rather than forgiving part of the borrower debt.",
+          "The FY2027 notice applies different fee percentages by gross approval size and maturity, but the amount charged is based on the applicable guaranteed portion. The default $250,000 example uses 75% × $250,000 = $187,500 as that base, then 3% × $187,500 = $5,625. The notice also sets a short-term fee and contains relief and related-loan rules.",
+          "For manufacturing, food-supply-chain or rural relief, veteran-owned Express, WCP/EWCP, loans related within 90 days, increases, extensions or another fiscal year, use the lender-confirmed manual fee. A confirmed waived fee can be zero. The lender annual service fee cannot be passed on as a borrower charge and is excluded."
+        ],
+        "links": [
+          {
+            "href": "https://legacy.sba.gov/document/information-notice-5000-881797-fy-2027-7a-program-fees",
+            "label": "Read SBA Notice 5000-881797"
+          },
+          {
+            "href": "/glossary/sba-guaranty-fee/",
+            "label": "Upfront guaranty fee definition"
+          }
+        ]
+      },
+      {
+        "id": "rates",
+        "title": "A constant-rate illustration is not a future payment guarantee",
+        "paragraphs": [
+          "The note rate determines interest in the monthly schedule. It is different from a fee-inclusive annual-rate estimate, which depends on net funding and fees as well as payments. Enter a note rate rather than substituting a fee-inclusive APR and adding those fees again.",
+          "The worksheet holds the entered rate constant. An actual variable-rate loan can reset under its agreement; sensitivity rows show separate constant-rate scenarios rather than a predicted reset path. The modeled annual-rate estimate is not a legally certified disclosure APR, and neither a payment nor a ratio establishes approval."
+        ]
+      },
+      {
+        "id": "504",
+        "title": "Keep the bank, CDC and borrower contributions separate",
+        "paragraphs": [
+          "For the hypothetical $1 million project, allocate $500,000 to the bank, $400,000 to the CDC and $100,000 to borrower equity. Project cost excludes the financing fees entered separately. Other allocations or higher equity can be required in a real transaction; the tool does not determine the applicable requirement.",
+          "Each loan has its own note rate, amortization and fee assumptions. A quoted CDC effective financing rate may already include charges; entering it as a note rate and then adding those charges again can double count them. The tool instead accepts a note rate excluding fees and separate entered fees, including a constant recurring-fee allowance."
+        ],
+        "table": {
+          "caption": "Illustrative permanent project allocation",
+          "headers": [
+            "Funding source",
+            "Share",
+            "Project funding"
+          ],
+          "rows": [
+            [
+              "Bank",
+              "50%",
+              "$500,000"
+            ],
+            [
+              "CDC",
+              "40%",
+              "$400,000"
+            ],
+            [
+              "Borrower equity",
+              "10%",
+              "$100,000"
+            ],
+            [
+              "Total",
+              "100%",
+              "$1,000,000"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "https://www.sba.gov/loans/504-loans/",
+            "label": "SBA 504 program overview"
+          }
+        ]
+      },
+      {
+        "id": "maturity",
+        "title": "Amortization and maturity can create different cash needs",
+        "paragraphs": [
+          "To isolate principal timing, assume zero interest and no fees in this example. A $500,000 bank loan amortized over 300 months pays $1,666.67 per month before rounding. If it matures after 120 months, scheduled installments repay $200,000 and leave $300,000 principal due. The final bank month includes both the regular installment and that additional maturity balance.",
+          "The $400,000 CDC loan amortized over 300 months pays $1,333.33 monthly before rounding and continues after the bank has been settled. No refinance is assumed to cover the bank maturity balance. At positive rates, the remaining balance must be calculated from the actual amortization rather than linearly from elapsed months."
+        ],
+        "table": {
+          "caption": "Zero-rate timing example; fractions retained internally",
+          "headers": [
+            "Measure",
+            "Bank",
+            "CDC"
+          ],
+          "rows": [
+            [
+              "Starting project principal",
+              "$500,000",
+              "$400,000"
+            ],
+            [
+              "Amortization",
+              "300 months",
+              "300 months"
+            ],
+            [
+              "Modeled maturity",
+              "120 months",
+              "300 months"
+            ],
+            [
+              "Scheduled monthly P&I",
+              "$1,666.67",
+              "$1,333.33"
+            ],
+            [
+              "Additional balance at bank maturity",
+              "$300,000",
+              "Not due then"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "fee-cost",
+        "title": "Count financed and recurring fees once",
+        "paragraphs": [
+          "A second zero-rate 504 scenario keeps the $1 million project allocation but adds $2,000 upfront bank fees, $8,000 CDC-financed fees and a $50 monthly CDC fee allowance for 300 months. CDC repayment principal becomes $408,000. Its $8,000 financed fee is a cost once, even though it is repaid through principal installments.",
+          "Total borrowing cost is $25,000: $10,000 one-time fees plus $15,000 recurring fees, with zero interest by assumption. Initial borrower cash is $102,000: $100,000 equity plus $2,000 upfront bank fees. Full financing cash is $1,025,000, including equity, loan repayments and fees. Equity and loan principal are cash uses but are not interest expenses."
+        ],
+        "table": {
+          "caption": "Zero-rate fee reconciliation",
+          "headers": [
+            "Measure",
+            "Value"
+          ],
+          "rows": [
+            [
+              "CDC project funding",
+              "$400,000"
+            ],
+            [
+              "CDC financed fee",
+              "$8,000"
+            ],
+            [
+              "CDC repayment principal",
+              "$408,000"
+            ],
+            [
+              "Upfront bank fees",
+              "$2,000"
+            ],
+            [
+              "Recurring CDC allowance over 300 months",
+              "$15,000"
+            ],
+            [
+              "Total borrowing cost",
+              "$25,000"
+            ],
+            [
+              "Initial equity plus upfront fees",
+              "$102,000"
+            ]
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why can the gross loan exceed usable project cash?",
+        "answer": "An approved gross loan may fund borrower fees as well as the project. Deduct those fees from gross proceeds to find usable cash; do not silently increase principal again."
+      },
+      {
+        "question": "Does the SBA guarantee pay part of my monthly installment?",
+        "answer": "No. It is credit protection for the lender. The borrower payment is calculated on the whole approved loan, even when the guaranty fee uses only the guaranteed portion."
+      },
+      {
+        "question": "Which approval dates use the automatic fee calculation?",
+        "answer": "Only FY2027 standard approvals from October 1, 2026 through September 30, 2027, within the stated single-loan/no-relief scope. Use a lender-confirmed fee for unsupported dates and exceptions."
+      },
+      {
+        "question": "Can I treat a 504 project as one loan with one rate?",
+        "answer": "That can hide different terms and a bank maturity balance. Model the bank and CDC separately, and include borrower equity outside their debt balances."
+      },
+      {
+        "question": "Is the recurring CDC fee an official fee forecast?",
+        "answer": "No. It is a constant dollar amount entered for the scenario. Actual servicing charges can depend on balances and program-specific terms; obtain the note and fee details from the lender or CDC."
+      },
+      {
+        "question": "What does the calculator leave for the lender to determine?",
+        "answer": "Eligibility, permitted costs, applicable program limits, equity requirements, current rates, exact fees and actual closing/payment terms remain outside the model. A computed payment does not establish approval."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SBA: FY2027 7(a) program fees",
+        "url": "https://legacy.sba.gov/document/information-notice-5000-881797-fy-2027-7a-program-fees",
+        "usedFor": "Approval-date range, upfront fee brackets, exceptions and 90-day rules.",
+        "scope": "Automatic mode supports one standard loan without relief; other cases use a confirmed fee."
+      },
+      {
+        "title": "SBA: 7(a) terms and eligibility",
+        "url": "https://legacy.sba.gov/partners/lenders/7a-loan-program/terms-conditions-eligibility",
+        "usedFor": "Ordinary guaranteed portions, note-rate context and restriction on passing the annual service fee to borrowers.",
+        "scope": "No eligibility or current-rate certification."
+      },
+      {
+        "title": "SBA: 504 loans",
+        "url": "https://www.sba.gov/loans/504-loans/",
+        "usedFor": "CDC financing and program scope.",
+        "scope": "No program-specific approval or limit determination."
+      },
+      {
+        "title": "SBA: Become an SBA lender",
+        "url": "https://legacy.sba.gov/partners/lenders/become-sba-lender",
+        "usedFor": "Senior bank, CDC and borrower project financing structure.",
+        "scope": "Entered allocations are scenarios rather than qualification checks."
+      }
+    ],
+    "related": [
+      {
+        "href": "/sba-loan-calculator",
+        "label": "SBA Loan Calculator"
+      },
+      {
+        "href": "/business-loan-calculator",
+        "label": "Business Loan Calculator"
+      },
+      {
+        "href": "/apr-calculator",
+        "label": "APR Calculator"
+      },
+      {
+        "href": "/glossary/sba-guaranty-fee/",
+        "label": "SBA guaranty fee glossary"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce the standard FY2027 7(a) fee example",
+        "path": "/sba-loan-calculator.html",
+        "mode": "7a",
+        "values": {}
+      },
+      {
+        "label": "Reproduce the zero-rate 504 bank maturity example",
+        "path": "/sba-loan-calculator.html",
+        "mode": "504",
+        "values": {
+          "bank_rate": 0,
+          "cdc_rate": 0,
+          "bank_fees": 0,
+          "cdc_fees": 0,
+          "cdc_monthly_fee": 0
+        }
+      },
+      {
+        "label": "Reproduce the 504 financed-fee reconciliation",
+        "path": "/sba-loan-calculator.html",
+        "mode": "504",
+        "values": {
+          "bank_rate": 0,
+          "cdc_rate": 0
+        }
+      }
+    ],
+    "limitations": [
+      "No live note rates, loan approval, fee-relief eligibility or borrower maximum funding calculation.",
+      "Automatic 7(a) fees are versioned to the stated FY2027 standard case, not every SBA program.",
+      "504 recurring fees are a flat entered allowance; real charges and quotes may use other conventions.",
+      "No construction/bridge interest, future refinancing, prepayment charges or tax consequences are assumed."
+    ]
+  }
+}

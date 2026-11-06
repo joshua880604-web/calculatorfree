@@ -1,0 +1,20 @@
+{
+  "7a_payment": 3303.7684220440415,
+  "7a_total_interest": 146452.21064528497,
+  "7a_fee": 5625,
+  "7a_net": 243375,
+  "inventory_turns": 4,
+  "inventory_dio": 91.25,
+  "quarterly_dio": 22.5,
+  "target_average": 125000,
+  "504_zero_bank_balloon": 300000,
+  "504_zero_monthly": 3000,
+  "504_financed_fee_monthly": 3076.6666666666665,
+  "504_financed_total_cost": 25000,
+  "504_bank_payment": 3376.035806738198,
+  "504_bank_balloon": 387556.7973857911,
+  "504_bank_interest": 292681.09419437486,
+  "504_cdc_payment": 2628.749718060875,
+  "504_cdc_interest": 380624.9154182625,
+  "504_total_cost": 698306.0096126373
+}
