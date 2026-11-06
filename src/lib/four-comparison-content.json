@@ -1,0 +1,496 @@
+{
+  "cd-ladder": {
+    "checkedOn": "2026-11-06",
+    "summary": "A CD ladder divides one savings budget among certificates that mature at different times. This worksheet follows each rung, separates cash from accrued CD assets, and compares the result with a single longer CD using a matched horizon. You supply both current APYs and the assumptions for future renewals; the result is a cash-timing scenario rather than a rate forecast.",
+    "scope": "Amounts are USD. Enter one initial CD per row as amount, whole-month term and effective APY. Each CD accrues at the equivalent monthly APY factor and releases interest only at maturity. Renewals use one entered term and APY. Retained cash earns zero; taxes, early exits, callable features and deposit-insurance eligibility are outside the model.",
+    "examples": [
+      {
+        "title": "Five equal rungs with a constant APY",
+        "mode": "ladder",
+        "values": {},
+        "inputs": "$50,000 split into five $10,000 CDs with 12, 24, 36, 48 and 60 month maturities; all initial and renewal APYs 4%; 60-month horizon; reinvest.",
+        "steps": [
+          "All invested balances grow at the same effective 4% annual rate.",
+          "Reinvested maturities keep earning the same rate, so aggregate wealth is 50,000 × 1.04^5.",
+          "Only a CD actually maturing in month 60 becomes cash at that date; the rest remains in CDs."
+        ],
+        "answer": "Ending wealth is $60,832.65. The matched single-CD comparison has the same wealth, but a different maturity schedule.",
+        "expected": {
+          "label": "Ending ladder wealth",
+          "value": 60832.64512,
+          "tolerance": 0.02
+        }
+      },
+      {
+        "title": "One CD maturing at the horizon",
+        "mode": "ladder",
+        "values": {
+          "rungs": "1000, 12, 5",
+          "horizon": 12,
+          "renewal_term": 12,
+          "renewal_apy": 5,
+          "single_apy": 5
+        },
+        "inputs": "$1,000 for 12 months at 5% APY; horizon 12 months.",
+        "steps": [
+          "Maturity value = 1,000 × 1.05 = 1,050.",
+          "Because maturity equals the horizon, all proceeds are retained as cash rather than renewed."
+        ],
+        "answer": "Cash at the horizon is $1,050 and accrued assets still locked in CDs are zero.",
+        "expected": {
+          "label": "Retained cash at horizon",
+          "value": 1050,
+          "tolerance": 0.02
+        }
+      },
+      {
+        "title": "Withdraw interest at each annual maturity",
+        "mode": "ladder",
+        "values": {
+          "rungs": "1000, 12, 10",
+          "horizon": 24,
+          "renewal_term": 12,
+          "renewal_apy": 10,
+          "interest": "Withdraw interest at maturity",
+          "single_apy": 10
+        },
+        "inputs": "$1,000 in a one-year CD at 10% APY, renewed once at 10%; withdraw interest; 24-month horizon.",
+        "steps": [
+          "At month 12, retain $100 interest in cash and renew the $1,000 principal.",
+          "At month 24, retain $1,100 maturity proceeds. The earlier $100 cash has earned nothing."
+        ],
+        "answer": "Ending wealth is $1,200, compared with $1,210 if both years of interest were reinvested.",
+        "expected": {
+          "label": "Ending ladder wealth",
+          "value": 1200,
+          "tolerance": 0.02
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do I build a five-year CD ladder?",
+        "answer": "One common starting structure is five CDs maturing in one, two, three, four and five years. The default splits $50,000 equally among those terms. When an early rung matures, the worksheet renews it for the entered renewal term, often five years. The initial ladder has several maturities each year; it does not instantly have five fully aged five-year CDs. Adjust the rows and renewal assumptions to match the contracts you are considering."
+      },
+      {
+        "question": "How much should I put in each CD?",
+        "answer": "Equal allocations make the initial ladder easy to inspect, but they are not required. Each row accepts its own amount, and the tool sums them into the initial principal. Check that this total matches the money you intend to commit. Money needed before a rung matures should be evaluated separately; the calculator does not decide your emergency-cash requirement."
+      },
+      {
+        "question": "Should I enter an interest rate or APY?",
+        "answer": "Enter the effective annual percentage yield, which includes the effect of compounding. A 4% APY is converted to a monthly growth factor of 1.04^(1/12), rather than dividing 4% by 12. A bank may credit interest on a different schedule, so intermediate accrued balances can differ from a statement even when the full-year APY matches."
+      },
+      {
+        "question": "What happens when a CD matures?",
+        "answer": "Before the comparison horizon, its proceeds renew for the chosen term at the assumed renewal APY. With reinvestment, principal and interest become the next CD principal. With withdrawal, earned interest goes into retained cash and only the principal renews. A maturity exactly at the horizon is all cash. These actions are modeling rules; they do not change a bank account or authorize auto-renewal."
+      },
+      {
+        "question": "What is the difference between withdrawing and reinvesting interest?",
+        "answer": "Reinvesting lets matured interest earn subsequent CD returns. Withdrawing moves that interest into a separate cash bucket earning zero in this worksheet. Interest is withdrawn at maturity, not every month. If a real CD distributes monthly interest or you spend those distributions, use a model and cash budget that match those terms."
+      },
+      {
+        "question": "What APY should I use for future renewals?",
+        "answer": "Use an explicit scenario you want to test, such as a lower, unchanged or higher APY. The calculator applies that one rate to each renewal after the initial CD matures. It does not look up bank offers or predict future rates. Changing renewal APY can affect a short initial rung sooner than a long one."
+      },
+      {
+        "question": "Can I withdraw the displayed CD assets before maturity?",
+        "answer": "The accrued-assets figure is not a penalty-free withdrawal quote. Access, early-withdrawal penalties, callable provisions and sale prices for brokered CDs depend on the contract. Those effects are excluded here. Review the maturity table to distinguish proceeds already in cash from value still inside an unexpired CD."
+      },
+      {
+        "question": "How does the single-CD comparison work?",
+        "answer": "It invests the same initial total for the longest original rung term, using the separate single-CD APY input. Both paths have the same horizon, renewal term, renewal APY and interest-handling rule. A higher ending value does not by itself resolve access needs, insurance coverage or reinvestment risk. Compare the maturity timing as well as the total."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Fidelity: CD ladders and reinvestment structure",
+        "url": "https://www.fidelity.com/fixed-income-bonds/cd-ladders"
+      },
+      {
+        "title": "Investor.gov: Certificates of deposit",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/certificates-deposit-cds"
+      }
+    ]
+  },
+  "npv": {
+    "checkedOn": "2026-11-06",
+    "summary": "Net present value puts receipts and outlays on the same starting-date basis. A dollar arriving later is discounted using the rate you enter; the signed discounted amounts are then added. Use periodic mode for evenly spaced flows and actual-date XNPV for uneven timing. The first listed periodic flow is today, so an initial investment is included once without a separate hidden deduction.",
+    "scope": "Signed USD cash flows, up to 500 rows, and an effective annual discount rate from −99% to 1,000%. Periodic timing is annual, quarterly or monthly. Actual-date mode sorts valid dates and uses a fixed 365-day year. No return forecast, risk adjustment, tax calculation or investor-specific discount-rate selection is supplied.",
+    "examples": [
+      {
+        "title": "Three annual receipts after an initial investment",
+        "mode": "periodic",
+        "values": {},
+        "inputs": "Pay $10,000 today; receive $4,000 at each of the next three year ends; discount at 10% effective annual.",
+        "steps": [
+          "Time-zero outlay is −10,000.",
+          "Discount the receipts by 1.1, 1.1² and 1.1³.",
+          "NPV = −10,000 + 3,636.3636 + 3,305.7851 + 3,005.2592."
+        ],
+        "answer": "NPV is −$52.59. The receipts fall slightly short of the chosen 10% discount-rate benchmark.",
+        "expected": {
+          "label": "Net present value",
+          "value": -52.592036063113,
+          "tolerance": 0.02
+        }
+      },
+      {
+        "title": "Monthly flows with an effective annual rate",
+        "mode": "periodic",
+        "values": {
+          "flows": "-1000\n1100",
+          "frequency": "Monthly",
+          "rate": 12.68250301319698
+        },
+        "inputs": "Pay $1,000 today and receive $1,100 in one month; effective annual discount rate 12.682503%.",
+        "steps": [
+          "The monthly rate is (1 + 0.1268250301)^(1/12) − 1 = 1%.",
+          "NPV = −1,000 + 1,100 / 1.01."
+        ],
+        "answer": "NPV is $89.11. Dividing the effective annual rate by 12 would use a different convention.",
+        "expected": {
+          "label": "Net present value",
+          "value": 89.10891089108918,
+          "tolerance": 0.02
+        }
+      },
+      {
+        "title": "Actual dates across a leap year",
+        "mode": "dated",
+        "values": {
+          "flows": "2028-01-01, -1000\n2028-12-31, 1100",
+          "rate": 10
+        },
+        "inputs": "Pay $1,000 on January 1, 2028 and receive $1,100 on December 31, 2028; discount at 10%.",
+        "steps": [
+          "There are 365 actual days between these dates, even though 2028 is a leap year.",
+          "ACT/365 exponent = 365 / 365 = 1.",
+          "XNPV = −1,000 + 1,100 / 1.1."
+        ],
+        "answer": "XNPV is $0.00 under the fixed 365-day convention.",
+        "expected": {
+          "label": "Net present value",
+          "value": 0,
+          "tolerance": 0.02
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do I calculate net present value from cash flows?",
+        "answer": "List each outlay as negative and each receipt as positive. Select the spacing of later flows and enter a consistent effective annual discount rate. The worksheet discounts each amount to time zero and sums the results. You can inspect each present value in the table, including later negative costs and any terminal sale proceeds you entered."
+      },
+      {
+        "question": "Do I include the initial investment in the NPV calculation?",
+        "answer": "Yes. In periodic mode, put the initial signed cash flow on the first line. That line is time zero and is not discounted. Do not subtract the investment again elsewhere. If there is no transaction today, enter zero on the first line so that the next line still represents the first future period."
+      },
+      {
+        "question": "Can I enter different cash flows or later negative amounts?",
+        "answer": "Yes. Amounts can vary and can change sign more than once. Enter repairs, follow-on investment, disposal costs or other outlays in the period when they occur. No initial or terminal amount is automatically invented. Multiple sign changes can make IRR ambiguous, but NPV at a specified discount rate remains a direct sum."
+      },
+      {
+        "question": "What does a negative NPV mean?",
+        "answer": "It means the present value of modeled outflows exceeds the present value of modeled inflows at the discount rate you supplied. It is a shortfall relative to that rate and cash-flow scenario, not necessarily an undiscounted cash loss. Review timing, omitted costs and the rate assumption before interpreting the number."
+      },
+      {
+        "question": "How should I choose a discount rate for NPV?",
+        "answer": "Use a rate appropriate to the risk, timing, currency and valuation purpose of your cash flows. Keep nominal flows with a nominal rate and real flows with a real rate, and align pre-tax or after-tax treatment. This calculator cannot select a suitable rate for your situation. The sensitivity table shows what two percentage points either side of your assumption would change."
+      },
+      {
+        "question": "How do I calculate NPV for monthly cash flows?",
+        "answer": "Choose Monthly and continue to enter an effective annual discount rate. The tool uses years = period number / 12, which is equivalent to a monthly rate of (1 + annual rate)^(1/12) − 1. A quoted nominal annual rate divided by 12 is a different input convention; convert it to an effective annual rate first if that is your starting assumption."
+      },
+      {
+        "question": "What is the difference between NPV and XNPV?",
+        "answer": "Periodic NPV assumes equal intervals after the time-zero flow. XNPV discounts using actual dates, so a delayed receipt has a different weight even if the amount is unchanged. Actual-date mode sorts your entries, uses the earliest date as the base, and divides every day difference by 365, including across leap years. Same-date flows have the same discount factor."
+      },
+      {
+        "question": "How can I match this result in Excel?",
+        "answer": "For periodic flows, add the first time-zero amount to Excel NPV(period rate, later flows). Do not put that first amount inside the NPV range, since Excel treats the range as future period-end flows. Convert the effective annual rate to your selected period rate first. For actual dates, use XNPV(annual rate, amounts, dates), placing the earliest date first; retain full precision when comparing."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Microsoft: Excel NPV function and time-zero convention",
+        "url": "https://support.microsoft.com/en-us/excel/functions/npv-function"
+      },
+      {
+        "title": "Microsoft: Excel XNPV function and 365-day discounting",
+        "url": "https://support.microsoft.com/en-us/excel/functions/xnpv-function"
+      }
+    ]
+  },
+  "lease-vs-buy-car": {
+    "checkedOn": "2026-11-06",
+    "summary": "A lease payment and a purchase loan payment buy different outcomes. At lease expiry you usually return the car; after buying, you own a vehicle that may have resale value and an unpaid loan. This comparison matches both paths to one lease term and reconciles the purchase sale proceeds with the remaining debt. Quoted payments, mileage and operating allowances remain explicit inputs.",
+    "scope": "One quoted lease compared with a cash or fixed-rate financed purchase sold at the same month. Amounts are USD. Lease payments include recurring tax; purchase taxes and fees are separate. No lease renewal, buyout, refundable deposits, tax deduction, automatic incentive or resale forecast is modeled.",
+    "examples": [
+      {
+        "title": "Compare cash purchase with a simple two-year lease",
+        "mode": "comparison",
+        "values": {
+          "months": 24,
+          "lease_payment": 400,
+          "lease_upfront": 1000,
+          "lease_end": 0,
+          "lease_operating": 0,
+          "annual_miles": 10000,
+          "allowed_miles": 10000,
+          "price": 30000,
+          "buy_fees": 0,
+          "loan": 0,
+          "resale": 22000,
+          "buy_operating": 0
+        },
+        "inputs": "A 24-month lease costs $400 a month plus $1,000 non-monthly initial charges. Buy for $30,000 cash and sell for $22,000; other costs zero.",
+        "steps": [
+          "Lease cost = 1,000 + 24 × 400 = 10,600.",
+          "Cash-purchase cost = 30,000 − 22,000 = 8,000."
+        ],
+        "answer": "Buying and selling costs $8,000, which is $2,600 less under these assumptions.",
+        "expected": {
+          "label": "Net cost: buy and sell",
+          "value": 8000,
+          "tolerance": 0.02
+        }
+      },
+      {
+        "title": "Reconcile a remaining purchase loan",
+        "mode": "comparison",
+        "values": {
+          "months": 36,
+          "price": 35000,
+          "buy_fees": 3000,
+          "loan": 30000,
+          "rate": 0,
+          "term": 60,
+          "resale": 23000,
+          "buy_operating": 200
+        },
+        "inputs": "Buy for $35,000 plus $3,000 fees; finance $30,000 over 60 months at 0%; sell after 36 months for $23,000; operating allowance $200/month.",
+        "steps": [
+          "Initial cash is $38,000 − $30,000 = $8,000.",
+          "Loan payment is $500; 36 payments total $18,000 and leave $12,000 debt.",
+          "Net sale equity is $23,000 − $12,000 = $11,000.",
+          "Net cost = $8,000 + $18,000 + $7,200 − $11,000."
+        ],
+        "answer": "Purchase net cost is $22,200. The remaining loan is repaid out of the sale rather than ignored.",
+        "expected": {
+          "label": "Net cost: buy and sell",
+          "value": 22200,
+          "tolerance": 0.02
+        }
+      },
+      {
+        "title": "Include excess mileage once over the full term",
+        "mode": "comparison",
+        "values": {
+          "months": 36,
+          "lease_payment": 450,
+          "lease_upfront": 2000,
+          "lease_end": 350,
+          "lease_operating": 180,
+          "annual_miles": 12000,
+          "allowed_miles": 10000,
+          "per_mile": 0.25
+        },
+        "inputs": "Three-year lease, $450/month, $2,000 initial non-monthly charges, $350 end charge and $180/month operating cost. Drive 12,000 versus 10,000 allowed miles annually at $0.25/excess mile.",
+        "steps": [
+          "Total excess miles = (12,000 − 10,000) × 3 = 6,000.",
+          "Mileage charge = 6,000 × $0.25 = $1,500.",
+          "Lease cost = $2,000 + $16,200 + $350 + $6,480 + $1,500."
+        ],
+        "answer": "The modeled lease cost is $26,530 over 36 months.",
+        "expected": {
+          "label": "Net cost: lease",
+          "value": 26530,
+          "tolerance": 0.02
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How does this calculator compare leasing and buying over the same period?",
+        "answer": "The selected number of months is both one lease term and the purchase holding period. The lease ends with the entered end charges. The purchase ends with a sale at your estimated resale value and repayment of the remaining loan. This matches the dates without assuming free use after a lease ends or inventing terms for a second lease."
+      },
+      {
+        "question": "Is the lower monthly payment always the cheaper option?",
+        "answer": "No. Initial charges, mileage, operating costs and the value remaining in a purchased car can change the answer. A longer purchase loan may lower the installment while leaving more debt at sale. Review the net total cost and the cash required, not just the scheduled monthly payment."
+      },
+      {
+        "question": "How are resale value and the remaining loan included?",
+        "answer": "Net sale equity equals entered resale value minus the purchase loan balance at the comparison date. That equity reduces purchase cost. If the balance exceeds resale value, negative equity increases the cost because more cash is needed to clear the loan. Resale is an assumption you supply, not a price prediction."
+      },
+      {
+        "question": "How do I avoid counting the first lease payment twice?",
+        "answer": "Enter only non-monthly initial charges in the initial-charges field. The quoted monthly payment multiplied by the term already includes all installments, including the first one due at signing. For example, if drive-off cash includes a $450 first payment, subtract that $450 before entering the remaining non-monthly initial amount. Refundable deposits are excluded from modeled costs."
+      },
+      {
+        "question": "How are mileage and end-of-lease charges calculated?",
+        "answer": "The tool prorates the annual mileage difference over the full term and multiplies positive excess miles by the per-mile price. Enter disposition, wear or other expected non-refundable end charges separately. Confirm the actual contract because mileage allowances, waivers and early-termination charges can differ from this simplified estimate."
+      },
+      {
+        "question": "Where do insurance, maintenance and taxes go?",
+        "answer": "Use each path’s monthly operating allowance for the insurance and maintenance costs you want to compare. The lease payment should already include recurring tax. Enter purchase tax and one-time purchase fees in the separate buy field. Avoid including the same charge in both an initial amount and an operating allowance; there is no local tax lookup."
+      },
+      {
+        "question": "What happens after the lease or purchase loan ends?",
+        "answer": "The comparison stops at the entered lease end. It does not assume a lease buyout or continued access to the returned car. A purchase loan that pays off sooner has zero payments thereafter, while the entered operating allowance continues through the comparison month. To compare another term, obtain a quote for that term and change the resale assumption accordingly."
+      },
+      {
+        "question": "Are rebates, EV credits and business tax deductions included?",
+        "answer": "Only effects already reflected in your actual entered quote or purchase costs are included. Eligibility and tax treatment are not determined. Apply a confirmed incentive once, and avoid subtracting it again if a dealer has already built it into the payment or price. Opportunity-cost investment returns and tax deductions are excluded from both paths."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: What should I know about leasing versus buying a car?",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-leasing-versus-buying-a-car-en-815/"
+      },
+      {
+        "title": "FTC: Financing or leasing a car",
+        "url": "https://consumer.ftc.gov/articles/financing-or-leasing-car"
+      }
+    ]
+  },
+  "mortgage-comparison": {
+    "checkedOn": "2026-11-06",
+    "summary": "Mortgage quotes trade monthly interest against upfront costs, and different loan terms repay principal at different speeds. This worksheet compares two fixed-rate offers using the same base property funding and one holding period. It reports both cash paid and the balance still owed, so paying down more principal is not mistakenly treated as a higher financing expense.",
+    "scope": "Fixed-rate USD loans with monthly end-of-period payments, entered points and included fees paid upfront or financed. Optional extra monthly principal is shared across offers. The fee-adjusted annual rate is a modeled nominal annualization of a monthly discount rate, not a certified TILA APR. Escrow, PMI and other property costs are excluded.",
+    "examples": [
+      {
+        "title": "Different terms with no interest or fees",
+        "mode": "offers",
+        "values": {
+          "loan": 120000,
+          "horizon": 24,
+          "extra": 0,
+          "a_rate": 0,
+          "a_term": 120,
+          "a_points": 0,
+          "a_fees": 0,
+          "b_rate": 0,
+          "b_term": 60,
+          "b_points": 0,
+          "b_fees": 0
+        },
+        "inputs": "$120,000 base loan, 0% rates and no fees. Compare a 120-month term with 60 months after 24 payments.",
+        "steps": [
+          "Offer A pays $1,000/month and leaves $96,000.",
+          "Offer B pays $2,000/month and leaves $72,000.",
+          "For both: payments + remaining balance − base funding = zero."
+        ],
+        "answer": "Both have zero borrowing cost; the higher payment simply repays principal faster.",
+        "expected": {
+          "label": "Borrowing cost through horizon: A",
+          "value": 0,
+          "tolerance": 0.02
+        }
+      },
+      {
+        "title": "Upfront fees and financed fees at zero interest",
+        "mode": "offers",
+        "values": {
+          "loan": 120000,
+          "horizon": 24,
+          "extra": 0,
+          "a_rate": 0,
+          "a_term": 120,
+          "a_points": 0,
+          "a_fees": 6000,
+          "a_fee_payment": "Paid upfront",
+          "b_rate": 0,
+          "b_term": 120,
+          "b_points": 0,
+          "b_fees": 6000,
+          "b_fee_payment": "Financed"
+        },
+        "inputs": "$120,000 property funding, $6,000 included fees, 0% note rates and 120-month terms. A pays fees upfront; B finances them.",
+        "steps": [
+          "A pays $6,000 initially, $24,000 in installments, and owes $96,000.",
+          "B starts with $126,000 debt, pays $25,200, and owes $100,800.",
+          "Subtract the same $120,000 base funding from each cash-plus-balance total."
+        ],
+        "answer": "Both borrowing costs are $6,000 at this horizon. Fee financing changes payment timing and debt even with a zero note rate.",
+        "expected": {
+          "label": "Borrowing cost through horizon: B",
+          "value": 6000,
+          "tolerance": 0.02
+        }
+      },
+      {
+        "title": "Extra principal reduces balance without becoming an expense",
+        "mode": "offers",
+        "values": {
+          "loan": 120000,
+          "horizon": 24,
+          "extra": 250,
+          "a_rate": 0,
+          "a_term": 120,
+          "a_points": 0,
+          "a_fees": 0,
+          "b_rate": 0,
+          "b_term": 120,
+          "b_points": 0,
+          "b_fees": 0
+        },
+        "inputs": "A $120,000 loan at 0% over 120 months, with $250 extra principal each month; compare after 24 months.",
+        "steps": [
+          "Contractual payment is $1,000; actual monthly cash payment is $1,250.",
+          "Total principal repaid = 24 × $1,250 = $30,000.",
+          "Remaining balance = $120,000 − $30,000."
+        ],
+        "answer": "The balance is $90,000 and borrowing cost remains zero.",
+        "expected": {
+          "label": "Remaining balance: A",
+          "value": 90000,
+          "tolerance": 0.02
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do I compare mortgage offers on the same basis?",
+        "answer": "Use the same base loan amount intended to fund the property and the same comparison month. Enter each quote’s rate, term, points and other included fees. If fees are financed, the model increases that offer’s repayment principal while keeping base property funding equal. Compare the official Loan Estimates as well as these modeled results."
+      },
+      {
+        "question": "What is the difference between the note rate and the annual-rate estimate?",
+        "answer": "The note rate determines monthly interest on the loan balance. The fee-adjusted estimate discounts the full contractual payment stream to modeled net proceeds, solves a monthly rate and multiplies it by 12. It is not APY and is not a certified disclosure APR: legal fee classifications, dates and lender conventions may differ. Use the lender’s official APR disclosure for regulated comparisons."
+      },
+      {
+        "question": "How do points and closing fees affect the comparison?",
+        "answer": "Points are calculated as a percentage of the common base loan amount; other included loan fees are entered in dollars. Upfront fees require cash immediately. Financed fees increase debt and may earn interest. A lower rate can offset higher fees over time, so compare borrowing cost at the month you expect to sell, refinance or reassess, rather than assuming a full-term advantage."
+      },
+      {
+        "question": "How can I compare a 15-year mortgage with a 30-year mortgage?",
+        "answer": "Enter terms of 180 and 360 months with their respective quotes. The shorter loan generally pays down principal faster, which increases monthly cash needs but also reduces the remaining balance. Holding-period borrowing cost subtracts the shared base funding after adding payments and remaining debt, so principal repayment is not confused with interest expense."
+      },
+      {
+        "question": "What if I sell or refinance before the loan is paid off?",
+        "answer": "Set the horizon to the expected number of monthly payments before that event. The remaining principal is included in the comparison because it still needs repayment. Sale proceeds, a new refinance transaction and any future replacement loan are outside this tool. The fee-adjusted annual-rate estimate still describes the original full contractual schedule, not a realized holding-period return."
+      },
+      {
+        "question": "Are property taxes, insurance and PMI included?",
+        "answer": "No. This compares loan financing costs: interest plus the points and fees you explicitly include. Taxes, insurance, HOA charges, escrow funding, PMI and non-loan purchase expenses require separate review, especially when offers use different loan programs. Those amounts are not silently inferred from the note rate or principal."
+      },
+      {
+        "question": "Can I compare extra principal payments?",
+        "answer": "Yes. The common extra monthly amount is applied to principal with each installment and capped at payoff. Schedules show the resulting payments, interest and balances for both offers. Voluntary extra payments do not change the contractual annual-rate estimate. For a more detailed one-loan payoff plan, use the Mortgage Payoff Calculator linked below."
+      },
+      {
+        "question": "Does the result identify the best loan or guarantee approval?",
+        "answer": "It identifies the lower modeled borrowing cost under the entered fixed-rate assumptions. It does not evaluate credit approval, affordability, adjustable-rate resets, balloon terms, lender credits, prepayment penalties or live market quotes. A cost advantage may come with different upfront cash or monthly commitments; review those alongside the total before deciding."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: Compare and negotiate your loan offers",
+        "url": "https://www.consumerfinance.gov/owning-a-home/compare/compare-loan-estimates/"
+      },
+      {
+        "title": "CFPB: Loan Estimate explainer",
+        "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
+      }
+    ]
+  }
+}

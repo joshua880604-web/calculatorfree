@@ -6,7 +6,7 @@ Financial calculators are the site's primary focus. The links below are a curate
 
 Interactive calculations run in the browser and require JavaScript. Default inputs and results are illustrations; estimates depend on the entered values, selected mode, timing, and rounding conventions. Future return and inflation presets are editable assumptions. General financial mathematics is not a jurisdiction-specific tax model; tax and retirement rules apply only to the jurisdictions and years stated on each page. Currency conversion uses a dated bundled reference snapshot or a manually entered rate. Consult the methodology and each tool's scope before interpreting a result.
 
-Navigation links checked: November 5, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
+Navigation links checked: November 6, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
 
 ## Start here
 
@@ -420,3 +420,10 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 - [Credit utilization](https://www.calculatorfree.io/glossary/credit-utilization/): Definition, worked example and related calculator.
 - [Rule of 72](https://www.calculatorfree.io/glossary/rule-of-72/): Definition, worked example and related calculator.
 - [Capital gains](https://www.calculatorfree.io/glossary/capital-gains/): Definition, worked example and related calculator.
+
+## Additional comparison tools
+
+- [CD Ladder Calculator](https://www.calculatorfree.io/cd-ladder-calculator): USD CD ladder with entered initial APYs and assumed renewal terms and APY. Monthly-equivalent APY accrual, interest released only at maturity; retained cash earns zero. No taxes, penalties, live rates or deposit-insurance verification.
+- [NPV and XNPV Calculator](https://www.calculatorfree.io/npv-calculator): Signed USD cash flows and an entered effective annual discount rate. Periodic mode includes time zero; actual-date XNPV sorts dates and uses actual days / 365. No IRR, investment recommendation or automatic cash-flow assumptions.
+- [Lease vs Buy Car Calculator](https://www.calculatorfree.io/lease-vs-buy-car-calculator): One quoted vehicle lease term compared with buying and selling at the same month. Entered costs, operating allowances, resale value and purchase loan; no automatic incentives, residual forecast, lease buyout or repeat lease.
+- [Mortgage Comparison Calculator](https://www.calculatorfree.io/mortgage-comparison-calculator): Two fixed-rate amortizing USD mortgages with the same base property funding. Entered points and upfront or financed fees, optional extra principal and one holding period. Annual-rate estimate is not a certified disclosure APR; escrow, insurance and approval are excluded.

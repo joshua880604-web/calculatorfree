@@ -22,6 +22,14 @@ export type GlossaryTerm = {
 export const glossaryCategories=['Saving & investing','Retirement','Loans & debt','Housing & property','Tax & income','Business & pricing','Everyday money'];
 export const glossaryPath='/glossary/';
 export const glossaryTerms=[...data,...companionTerms] as GlossaryTerm[];
+const newToolGlossaryLinks:Record<string,{id:string;text:string}[]>={
+ 'certificate-of-deposit':[{id:'cd-ladder',text:'Build staggered maturities and compare reinvestment with retained cash.'}],
+ 'net-present-value':[{id:'npv',text:'Discount periodic or actual-date signed cash flows, including the time-zero investment.'}],
+ 'lease-residual-value':[{id:'lease-vs-buy-car',text:'Compare a quoted lease with purchase resale equity over the same term.'}],
+ 'apr':[{id:'mortgage-comparison',text:'Compare fixed-rate offers, fees and a modeled annual-rate estimate.'}],
+ 'mortgage-points':[{id:'mortgage-comparison',text:'Compare points, payments and borrowing costs over your holding period.'}]
+};
+for(const term of glossaryTerms)if(newToolGlossaryLinks[term.slug]){term.tools=[...term.tools,...newToolGlossaryLinks[term.slug]];term.checkedOn='2026-11-06';}
 export const expandedGlossarySlugs=['health-savings-account','brrrr-method','sequence-of-returns-risk','return-on-ad-spend','landed-cost','cost-basis','house-hacking','loan-seasoning','cash-out-refinance','withdrawal-rate','after-repair-value','vacancy-rate','capital-expenditure','debt-service-coverage-ratio','dividend-yield'];
 expandedGlossarySlugs.push('dollar-cost-averaging',...companionTerms.map(term=>term.slug));
 export const glossaryTermPath=(slug:string)=>`${glossaryPath}${slug}/`;

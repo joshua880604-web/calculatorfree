@@ -328,3 +328,10 @@ contentUpdatedOn['/retirement-withdrawal-calculator.html']='2026-11-05';
 contentUpdatedOn[glossaryPath]='2026-11-05';
 contentUpdatedOn[guidesPath]='2026-11-05';
 for(const slug of ['1031-exchange','1031-exchange-boot','credit-utilization','rule-of-72','capital-gains','dollar-cost-averaging','vacancy-rate'])contentUpdatedOn[glossaryTermPath(slug)]='2026-11-05';
+
+// Four new comparison tools: original model and content review.
+contentUpdatedOn['/cd-ladder-calculator.html']='2026-11-06';
+contentUpdatedOn['/npv-calculator.html']='2026-11-06';
+contentUpdatedOn['/lease-vs-buy-car-calculator.html']='2026-11-06';
+contentUpdatedOn['/mortgage-comparison-calculator.html']='2026-11-06';
+for(const path of ['/financial-calculator.html','/savings-investment-calculators.html','/real-estate-calculator.html','/loan-calculators.html','/guides/cd-ladder/','/guides/irr-vs-npv/','/guides/leasing-vs-buying-a-car/','/guides/15-vs-30-year-mortgage/','/glossary/certificate-of-deposit/','/glossary/net-present-value/','/glossary/lease-residual-value/','/glossary/apr/','/glossary/mortgage-points/'])contentUpdatedOn[path]='2026-11-06';

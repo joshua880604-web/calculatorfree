@@ -558,12 +558,12 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
               )}
             </>
           )}
-          {!prominentTables && <ResultTables tables={result.additionalTables?.filter((_, index) => !['coast-fire','lean-fire','fat-fire','debt-snowball','debt-avalanche'].includes(id) && (id !== "mortgage-recast" || index !== 0))??[]} onDownload={download} label={id==='coast-fire'?'Download comparison CSV':id==='balance-transfer'?'Download repayment CSV':['1031-exchange','home-maintenance-cost','vacancy-rate','credit-utilization','dca','rule-of-72','capital-gains-tax'].includes(id)?'Download comparison CSV':'Download retirement CSV'}/>}
+          {!prominentTables && <ResultTables tables={result.additionalTables?.filter((_, index) => !['coast-fire','lean-fire','fat-fire','debt-snowball','debt-avalanche'].includes(id) && (id !== "mortgage-recast" || index !== 0))??[]} onDownload={download} label={id==='coast-fire'?'Download comparison CSV':id==='balance-transfer'?'Download repayment CSV':['cd-ladder','npv','lease-vs-buy-car','mortgage-comparison','1031-exchange','home-maintenance-cost','vacancy-rate','credit-utilization','dca','rule-of-72','capital-gains-tax'].includes(id)?'Download comparison CSV':'Download retirement CSV'}/>}
 
           </CalculationDetails>
   );
   const progressive = progressiveInputGroups(id,mode.id)!==null;
-  const simple = ['retirement-withdrawal','balance-transfer','dscr','fsa','closing-cost'].includes(id) || mode.fields.length <= 14,
+  const simple = ['lease-vs-buy-car','mortgage-comparison','retirement-withdrawal','balance-transfer','dscr','fsa','closing-cost'].includes(id) || mode.fields.length <= 14,
     visible = mode.fields.filter((f) => f.key !== "verified_rate" && expansionFieldVisible(id,values,f.key) &&
       !(id==='fix-and-flip' && values.financing==='Cash' && ['loan','rate','points'].includes(f.key)) &&
       !(id === 'coast-fire' && !coastFieldVisible(values,f.key)) &&

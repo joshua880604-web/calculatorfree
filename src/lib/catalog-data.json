@@ -772,5 +772,29 @@
     "title": "Capital Gains Tax Calculator",
     "category": "Tax and Salary",
     "local_route": "/capital-gains-tax-calculator.html"
-  }
+  },
+{
+  "id": "cd-ladder",
+  "category": "Investment",
+  "title": "CD Ladder Calculator",
+  "local_route": "/cd-ladder-calculator.html"
+},
+{
+  "id": "npv",
+  "category": "Investment",
+  "title": "NPV Calculator",
+  "local_route": "/npv-calculator.html"
+},
+{
+  "id": "lease-vs-buy-car",
+  "category": "Auto",
+  "title": "Lease vs Buy Car Calculator",
+  "local_route": "/lease-vs-buy-car-calculator.html"
+},
+{
+  "id": "mortgage-comparison",
+  "category": "Mortgage and Real Estate",
+  "title": "Mortgage Comparison Calculator",
+  "local_route": "/mortgage-comparison-calculator.html"
+}
 ]

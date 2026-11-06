@@ -1,3 +1,4 @@
+import fourComparisonContent from './four-comparison-content.json';
 import expansionFiveContent from './expansion-five-content.json';
 import remainingToolContent from './remaining-tool-content.json';
 import remainingModeContent from './remaining-mode-content.json';
@@ -1010,3 +1011,7 @@ relatedCalculatorIds["income-tax"]=[...new Set([...(relatedCalculatorIds["income
 relatedCalculatorIds["stock-profit"]=[...new Set([...(relatedCalculatorIds["stock-profit"]??[]),"capital-gains-tax"])];
 relatedCalculatorIds["1031-exchange"]=[...new Set([...(relatedCalculatorIds["1031-exchange"]??[]),"capital-gains-tax"])];
 relatedCalculatorIds["tax-equivalent-yield"]=[...new Set([...(relatedCalculatorIds["tax-equivalent-yield"]??[]),"capital-gains-tax"])];
+
+Object.assign(guides,fourComparisonContent as unknown as Record<string,Guide>);
+Object.assign(relatedCalculatorIds,{"cd-ladder": ["cd", "savings", "treasury-bill"], "npv": ["irr", "mirr", "present-value", "payback-period"], "lease-vs-buy-car": ["auto-lease", "auto-loan", "cash-back-or-low-interest"], "mortgage-comparison": ["mortgage", "apr", "discount-points", "closing-cost", "mortgage-payoff"]});
+for(const [id,links] of Object.entries({"cd-ladder": ["cd", "savings", "treasury-bill"], "npv": ["irr", "mirr", "present-value", "payback-period"], "lease-vs-buy-car": ["auto-lease", "auto-loan", "cash-back-or-low-interest"], "mortgage-comparison": ["mortgage", "apr", "discount-points", "closing-cost", "mortgage-payoff"]}))for(const linked of links)relatedCalculatorIds[linked]=[...new Set([...(relatedCalculatorIds[linked]??[]),id])];

@@ -364,3 +364,9 @@ searchTasks['stock-average'].push({keyword:'Stock average down target calculator
 const averageDownTask=searchTasks['stock-average'].find(t=>t.mode==='average-down')!;
 averageDownTask.aliases=['Stock average down calculator','Average down stock calculator'];
 for(const task of searchTasks['stock-average'].filter(t=>t.mode!=='average-down'))task.aliases=task.aliases?.filter(a=>!averageDownTask.aliases!.includes(a));
+
+keywordTitles["cd-ladder"]="CD Ladder Calculator - Maturities & Renewal Scenarios";
+keywordTitles["npv"]="NPV Calculator - Net Present Value & XNPV";
+keywordTitles["lease-vs-buy-car"]="Lease vs Buy Car Calculator - Compare Total Costs";
+keywordTitles["mortgage-comparison"]="Mortgage Comparison Calculator - Points & Closing Fees";
+Object.assign(searchTasks,{"cd-ladder": [{"keyword": "5 year CD ladder calculator", "mode": "ladder", "description": "Build five initial annual rungs with explicit renewal assumptions."}], "npv": [{"keyword": "Net present value calculator", "mode": "periodic", "description": "Discount regular signed cash flows including time zero."}, {"keyword": "XNPV calculator", "mode": "dated", "description": "Discount irregular cash flows with ACT/365 dates."}], "lease-vs-buy-car": [{"keyword": "Car lease vs buy calculator", "mode": "comparison", "description": "Compare one lease term with buying and selling over the same period."}], "mortgage-comparison": [{"keyword": "Mortgage comparison calculator with points", "mode": "offers", "description": "Compare fixed-rate quotes including points, closing fees and remaining balances."}]});

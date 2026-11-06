@@ -11,6 +11,11 @@ const loaders: Record<string, () => Promise<Calculator[]>> = {
 const businessTools = () => import('./calculators/business-tools').then(m => m.businessTools);
 const strategyTools=()=>import('./calculators/debt-strategies').then(m=>[m.debtSnowball,m.debtAvalanche]);
 const dataTools: Record<string, () => Promise<Calculator[]>> = {
+  'cd-ladder':()=>import('./calculators/cd-ladder').then(m=>[m.cdLadderCalculator]),
+  'npv':()=>import('./calculators/npv').then(m=>[m.npvCalculator]),
+  'lease-vs-buy-car':()=>import('./calculators/lease-vs-buy-car').then(m=>[m.leaseVsBuyCarCalculator]),
+  'mortgage-comparison':()=>import('./calculators/mortgage-comparison').then(m=>[m.mortgageComparisonCalculator]),
+
   '1031-exchange':()=>import('./calculators/1031-exchange').then(m=>[m.exchangeCalculator]),
   'home-maintenance-cost':()=>import('./calculators/home-maintenance-cost').then(m=>[m.maintenanceCalculator]),
   'vacancy-rate':()=>import('./calculators/vacancy-rate').then(m=>[m.vacancyCalculator]),

@@ -4,6 +4,11 @@ import {roth401kComparisonScope} from './roth-401k-scope';
 // Scope labels describe implemented rules, not a promise of worldwide tax support.
 export function calculatorScope(id: string, mode: string, values: Values): string | undefined {
   switch (id) {
+    case "cd-ladder": return "USD CD ladder with entered initial APYs and assumed renewal terms and APY. Monthly-equivalent APY accrual, interest released only at maturity; retained cash earns zero. No taxes, penalties, live rates or deposit-insurance verification.";
+    case "npv": return "Signed USD cash flows and an entered effective annual discount rate. Periodic mode includes time zero; actual-date XNPV sorts dates and uses actual days / 365. No IRR, investment recommendation or automatic cash-flow assumptions.";
+    case "lease-vs-buy-car": return "One quoted vehicle lease term compared with buying and selling at the same month. Entered costs, operating allowances, resale value and purchase loan; no automatic incentives, residual forecast, lease buyout or repeat lease.";
+    case "mortgage-comparison": return "Two fixed-rate amortizing USD mortgages with the same base property funding. Entered points and upfront or financed fees, optional extra principal and one holding period. Annual-rate estimate is not a certified disclosure APR; escrow, insurance and approval are excluded.";
+
     case "1031-exchange": return "Simplified U.S. qualifying real-property exchange before special recapture and basis adjustments; no eligibility determination or tax amount. Deadline mode uses entered calendar dates and excludes special relief.";
     case "home-maintenance-cost": return "USD budgeting scenarios using entered allowance rates or one-time component quotes. No local cost lookup, property inspection, investment returns or professional reserve study.";
     case "vacancy-rate": return "Property-level unit or unit-day arithmetic and uniform-rent loss estimates, distinct from rent-weighted actual losses and Census market statistics.";

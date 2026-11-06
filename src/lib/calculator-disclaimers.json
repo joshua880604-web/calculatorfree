@@ -126,5 +126,9 @@
   "credit-utilization": "Entered revolving-card balances and limits at one date. Overall and per-card targets are separate arithmetic; no credit report access, score prediction or reporting-date guarantee.",
   "dca": "One USD asset with equal purchase budgets and manually entered prices; fractional shares and fixed fees. Equal-total-budget lump-sum comparison assumes all cash available initially, with idle cash earning zero interest.",
   "rule-of-72": "Constant effective annual compound returns without deposits, fees or taxes. Rule of 72 is approximate; exact fractional-year doubling differs from a year-end-only first crossing.",
-  "capital-gains-tax": "U.S. 2025/2026 incremental tax scenario for a general capital-asset sale. Explicit taxable-income, MAGI and NIIT inputs; no loss-netting, special gains, recapture, AMT or complete tax return."
+  "capital-gains-tax": "U.S. 2025/2026 incremental tax scenario for a general capital-asset sale. Explicit taxable-income, MAGI and NIIT inputs; no loss-netting, special gains, recapture, AMT or complete tax return.",
+  "cd-ladder": "USD CD ladder with entered initial APYs and assumed renewal terms and APY. Monthly-equivalent APY accrual, interest released only at maturity; retained cash earns zero. No taxes, penalties, live rates or deposit-insurance verification.",
+  "npv": "Signed USD cash flows and an entered effective annual discount rate. Periodic mode includes time zero; actual-date XNPV sorts dates and uses actual days / 365. No IRR, investment recommendation or automatic cash-flow assumptions.",
+  "lease-vs-buy-car": "One quoted vehicle lease term compared with buying and selling at the same month. Entered costs, operating allowances, resale value and purchase loan; no automatic incentives, residual forecast, lease buyout or repeat lease.",
+  "mortgage-comparison": "Two fixed-rate amortizing USD mortgages with the same base property funding. Entered points and upfront or financed fees, optional extra principal and one holding period. Annual-rate estimate is not a certified disclosure APR; escrow, insurance and approval are excluded."
 }

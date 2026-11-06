@@ -10,6 +10,11 @@ export function directoryGroup(id:string,_category?:string){
  return group.id;
 }
 const toolAliases:Record<string,string[]>={
+"cd-ladder":["5 year cd ladder", "certificate of deposit ladder", "cd ladder interest"],
+"npv":["net present value", "xnpv", "discounted cash flows", "monthly npv"],
+"lease-vs-buy-car":["car lease vs buy", "leasing versus buying a car", "lease vs finance a car"],
+"mortgage-comparison":["compare mortgage offers", "mortgage comparison with points", "mortgage comparison with closing costs"],
+
  "1031-exchange":["like kind exchange", "tax deferred exchange", "1031 boot", "1031 exchange deadline"],
  "home-maintenance-cost":["home maintenance budget", "home repair reserve", "replacement reserve"],
  "vacancy-rate":["rental vacancy", "occupancy rate", "vacant unit days", "economic vacancy"],

@@ -28,13 +28,13 @@ test('Articles and Guides collection describe the same visible entries without i
 
 test('Substantive question updates preserve original publication and advance reviewed sitemap dates',()=>{
  const updated=editorialGuides.filter(g=>g.updatedOn);
- assert.equal(updated.length,41);
+ assert.equal(updated.length,45);
  const november4Updates=new Set(["/guides/how-are-heloc-payments-calculated/", "/guides/how-to-calculate-home-equity-loan-payments/", "/guides/how-to-calculate-personal-loan-payments/", "/guides/how-to-compare-debt-consolidation-loans/", "/guides/roth-conversion-ladder/"]);
  for(const path of ["/guides/how-to-calculate-auto-loan-payments/", "/guides/how-to-calculate-auto-lease-payments/", "/guides/how-401k-matching-works/", "/guides/compound-interest-with-monthly-contributions/", "/guides/how-to-calculate-monthly-budget/", "/guides/401k-vs-roth-ira/"])november4Updates.add(path);
  for(const path of ["/guides/roth-vs-traditional-401k/","/guides/how-to-calculate-fha-loan-payments/","/guides/how-to-calculate-monthly-mortgage-payment/","/guides/how-to-calculate-irr/","/guides/how-to-calculate-present-value/"])november4Updates.add(path);
  const novemberUpdates=new Set(['/guides/how-to-calculate-monthly-mortgage-payment/','/guides/compound-interest-with-monthly-contributions/','/guides/how-long-will-retirement-savings-last/','/guides/how-does-an-hsa-work/','/guides/how-401k-matching-works/','/guides/how-to-calculate-cap-rate/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/how-are-heloc-payments-calculated/','/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-simple-interest/','/guides/how-much-house-can-i-afford/','/guides/how-to-calculate-rental-property-cash-flow/','/guides/should-you-reinvest-dividends/','/guides/is-refinancing-worth-it/']);
  for(const guide of updated){
-  assert.equal(guide.updatedOn,guide.path==='/guides/lump-sum-vs-dollar-cost-averaging/'?'2026-11-05':november4Updates.has(guide.path)?'2026-11-04':novemberUpdates.has(guide.path)?'2026-11-03':['/guides/compound-interest-with-monthly-contributions/','/guides/biweekly-vs-monthly-mortgage-payments/'].includes(guide.path)?'2026-11-01':guide.path==='/guides/how-to-calculate-coast-fire/'?'2026-10-31':'2026-10-30');
+  assert.equal(guide.updatedOn,['/guides/cd-ladder/','/guides/irr-vs-npv/','/guides/leasing-vs-buying-a-car/','/guides/15-vs-30-year-mortgage/'].includes(guide.path)?'2026-11-06':guide.path==='/guides/lump-sum-vs-dollar-cost-averaging/'?'2026-11-05':november4Updates.has(guide.path)?'2026-11-04':novemberUpdates.has(guide.path)?'2026-11-03':['/guides/compound-interest-with-monthly-contributions/','/guides/biweekly-vs-monthly-mortgage-payments/'].includes(guide.path)?'2026-11-01':guide.path==='/guides/how-to-calculate-coast-fire/'?'2026-10-31':'2026-10-30');
   assert.ok(guide.publishedOn<=guide.updatedOn!);
   const entry=sitemapEntries(config).find(e=>e.url===config.origin+guide.path)!;
   assert.equal(entry.lastModified,guide.updatedOn);
