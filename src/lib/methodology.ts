@@ -9,15 +9,15 @@ import {absoluteURL,siteConfig,type SiteConfig} from './site';
 
 export const methodologyPath='/methodology.html';
 export const methodologyCheckedOn='2026-10-25';
-export const projectURL='https://github.com/joshua880604-web/codex-test';
+export const projectURL='https://github.com/joshua880604-web/calculatorfree';
 export const sourceURL=projectURL+'/blob/static-preview-20261021/';
 export const assumptionSpecs=[
- {id:'retirement',mode:'required',key:'inflation',source:'retirement.ts',basis:'An editable illustration of constant future price growth. It is not a BLS forecast, a Federal Reserve target or an estimate of your personal spending inflation.'},
- {id:'retirement',mode:'required',key:'return',source:'retirement.ts',basis:'A hypothetical constant effective annual return. No historical-average return series, asset allocation or personal risk assessment is used to derive this preset.'},
+ {id:'retirement',mode:'required',key:'inflation',source:'retirement-core.ts',basis:'An editable illustration of constant future price growth. It is not a BLS forecast, a Federal Reserve target or an estimate of your personal spending inflation.'},
+ {id:'retirement',mode:'required',key:'return',source:'retirement-core.ts',basis:'A hypothetical constant effective annual return. No historical-average return series, asset allocation or personal risk assessment is used to derive this preset.'},
  {id:'investment',mode:'end',key:'rate',source:'investment.ts',basis:'A hypothetical annual rate with the compounding frequency selected in the form. It is not a current savings offer or a forecast of market returns.'},
  {id:'investment-fee',mode:'impact',key:'rate',source:'evergreen.ts',basis:'An illustrative annual return for comparing fees. The form separately specifies whether that return is before or after fund fees; it is not a recommended portfolio return.'},
- {id:'401k',mode:'projection',key:'return',source:'retirement.ts',basis:'A constant annual investment-return illustration. The model does not select investments or estimate returns from the assets in your plan.'},
- {id:'401k',mode:'projection',key:'inflation',source:'retirement.ts',basis:'A constant future-inflation illustration used to express purchasing power. This preset is separate from the historical CPI dataset.'},
+ {id:'401k',mode:'projection',key:'return',source:'retirement-core.ts',basis:'A constant annual investment-return illustration. The model does not select investments or estimate returns from the assets in your plan.'},
+ {id:'401k',mode:'projection',key:'inflation',source:'retirement-core.ts',basis:'A constant future-inflation illustration used to express purchasing power. This preset is separate from the historical CPI dataset.'},
  {id:'real-return',mode:'rate',key:'inflation',source:'evergreen.ts',basis:'An illustrative annual inflation input for the exact nominal-to-real conversion. Different tools can have different starting values; this is not a site-wide forecast.'},
  {id:'emergency-fund',mode:'goal',key:'months',source:'evergreen.ts',basis:'A sample reserve target chosen for illustration. Your appropriate reserve depends on expenses, income stability and access to funds; the tool does not assess those circumstances.'},
  {id:'loan',mode:'amortized',key:'rate',source:'other.ts',basis:'A hypothetical borrowing rate, not a lender quote. Select the actual compounding and payment frequency and include applicable fees when comparing borrowing costs.'},

@@ -1,4 +1,5 @@
-import {publisherName,aboutPublisherSchema,contactEmail,correctionsEmailHref} from '@/lib/content-transparency';
+import ContactEmail from './ContactEmail';
+import {publisherName,aboutPublisherSchema} from '@/lib/content-transparency';
 import {serializeSchema} from '@/lib/site';
 import SiteLink from './SiteLink';
 import {siteName} from '@/lib/site';
@@ -18,9 +19,9 @@ export default function About() {
     <p>Starting rates, prices and investment returns are editable illustrations. They are not current lender offers or forecasts. Currency conversion uses a manually entered rate or a bundled, dated reference snapshot rather than a live exchange-rate feed.</p>
     <h2>Calculation methods and sources</h2>
     <p>Our <SiteLink href="/methodology.html">calculation methodology</SiteLink> describes model checks, data versions, rounding and known limitations. Individual pages link to relevant sources, including IRS, TreasuryDirect, SSA, HUD, VA and BLS where applicable. Mathematical checks and worked examples help make the assumptions inspectable; they do not establish coverage of every financial product, tax exception or personal circumstance.</p>
-    <p>You can also inspect the <SiteLink href="https://github.com/joshua880604-web/codex-test/tree/static-preview-20261021">public implementation and tests</SiteLink>. When comparing a result, record the calculator, mode and inputs, then check its assumptions against your statement, contract or official guidance.</p>
+    <p>You can also inspect the <SiteLink href="https://github.com/joshua880604-web/calculatorfree/tree/static-preview-20261021">public implementation and tests</SiteLink>. When comparing a result, record the calculator, mode and inputs, then check its assumptions against your statement, contract or official guidance.</p>
     <section aria-labelledby="contact"><h2 id="contact">Contact &amp; corrections</h2>
-    <p>Questions, broken tools or a result that looks wrong? Email <a className="publisher-contact" href={correctionsEmailHref}>{contactEmail}</a>. You do not need a GitHub account to contact us.</p>
+    <p>Questions, broken tools or a result that looks wrong? Email <ContactEmail/>. You do not need a GitHub account to contact us.</p>
     <p>Include the page URL, calculator mode, non-sensitive example inputs, the result you received and the result you expected. For a rule or formula correction, include the supporting source; for a display problem, include your browser and device. See our <SiteLink href="/methodology#corrections">correction process</SiteLink>.</p>
     <p>Please do not send account numbers, Social Security numbers, tax returns or other sensitive financial records. The email link opens your email application; nothing is sent automatically. This channel is for website feedback, not personal financial advice.</p></section>
     <h2>Your inputs and sharing choices</h2>

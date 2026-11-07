@@ -722,13 +722,13 @@
     "sources": [
       {
         "title": "U.S. Census Bureau: housing vacancy definitions",
-        "url": "https://www.census.gov/housing/hvs/definitions.html",
+        "url": "https://www.census.gov/housing/hvs/definitions.pdf",
         "usedFor": "Inventory and statistical vacancy concepts.",
-        "scope": "Archived definition context, not a current local rate or a landlord unit-day survey."
+        "scope": "Census inventory definitions, not a current local rate or a landlord unit-day survey."
       },
       {
         "title": "St. Louis Fed FRED: rental vacancy series definition",
-        "url": "https://fred.stlouisfed.org/data/RRVRUSQ156N",
+        "url": "https://fred.stlouisfed.org/series/RRVRUSQ156N",
         "usedFor": "The distinction between a population rental-inventory statistic and property-level assumptions.",
         "scope": "No current rate from this series is asserted in the examples."
       }

@@ -1,4 +1,5 @@
-import {editorialPolicyUpdatedOn,contactEmail,correctionsEmailHref} from '@/lib/content-transparency';
+import ContactEmail from './ContactEmail';
+import {editorialPolicyUpdatedOn} from '@/lib/content-transparency';
 import { calculatorPresetHref } from '@/lib/preset-links';
 
 import SiteLink from "@/components/SiteLink";
@@ -64,7 +65,7 @@ export default function Methodology(){
   </section>
   <section aria-labelledby="corrections"><h2 id="corrections">Corrections and reporting a calculation issue</h2>
    <p>For a useful report, include the calculator name and mode, non-sensitive sample inputs, the actual result, the expected result and its formula or source. Browser/device details help with display problems. Avoid posting account numbers or personal tax records.</p>
-   <p>Email <a className="publisher-contact" href={correctionsEmailHref}>{contactEmail}</a> to ask a site question or report an error. The link opens your email application; no report is sent automatically. No GitHub account is required.</p>
+   <p>Email <ContactEmail/> to ask a site question or report an error. The link opens your email application; no report is sent automatically. No GitHub account is required.</p>
    <p>Alternatively, <SiteLink href={projectURL+'/issues/new'}>report an issue on GitHub <span aria-hidden="true">↗</span></SiteLink> (sign-in may be required). GitHub issues are public; use only non-sensitive examples in either channel.</p>
    <p>When a correction is made, the change history and any associated tests provide a record. Dataset and documentation dates change when the relevant records are checked or revised; they are not automatically advanced with the calendar. You can inspect the <SiteLink href={projectURL+'/commits/static-preview-20261021/'}>public change history</SiteLink>.</p>
   </section>

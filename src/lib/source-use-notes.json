@@ -1,6 +1,11 @@
 {
   "updatedOn": "2026-11-02",
   "entries": {
+    "https://www.frbdiscountwindow.org/~/media/documents/inscope_fileformatspecificationsanddefinitions.pdf#page=38": {
+      "role": "method",
+      "usedFor": "Annual NOI divided by annual debt service, with numerator and denominator covering the same period (September 2026 reporting definitions, page 38).",
+      "scope": "Federal Reserve collateral-reporting context, not rental-loan rent/PITIA underwriting, a universal DSCR threshold or a claim of loan approval."
+    },
     "https://www.irs.gov/irb/2025-45_IRB": {
       "role": "rule",
       "usedFor": "Selected 2026 federal brackets, deductions and other inflation-adjusted parameters.",
@@ -487,7 +492,7 @@
       "usedFor": "Product, freight, insurance, duties, taxes and other shipment-cost components.",
       "scope": "This is commercial costing context, not a tariff lookup. Verify classification, origin, tax recoverability and responsibility for each charge."
     },
-    "https://github.com/joshua880604-web/codex-test/blob/static-preview-20261021/src/lib/calculators/evergreen.ts": {
+    "https://github.com/joshua880604-web/calculatorfree/blob/static-preview-20261021/src/lib/calculators/evergreen.ts": {
       "role": "site",
       "usedFor": "The published implementation and equations used by this site.",
       "scope": "This is the publisher’s own source code, not an independent audit, a regulator’s method or a named professional review.",
@@ -573,10 +578,10 @@
       "usedFor": "ARV as an estimate of a completed property’s market value.",
       "scope": "Renovation spending need not equal value added. The site does not perform an appraisal or determine the lender’s accepted value."
     },
-    "https://www.census.gov/housing/hvs/definitions.html": {
+    "https://www.census.gov/housing/hvs/definitions.pdf": {
       "role": "background",
       "usedFor": "The Census rental-inventory definition underlying a market vacancy statistic.",
-      "scope": "This archived definition is not a current vacancy rate or a forecast of this property’s losses; a unit-month model uses a different time basis."
+      "scope": "These inventory definitions are not a current vacancy rate or a forecast of this property’s losses; a unit-month model uses a different time basis."
     },
     "https://www.chase.com/business/knowledge-center/manage/how-to-calculate-debt-service-coverage-ratio-dscr": {
       "role": "method",
@@ -1550,6 +1555,18 @@
     }
   },
   "pages": {
+    "calculator:dscr": {
+      "updatedOn": "2026-11-07",
+      "note": "The rental-loan reference explains rent/PITIA, while the Federal Reserve reporting definitions support annual NOI/debt service. These are separate definitions; neither reference establishes approval or a universal target ratio."
+    },
+    "calculator:vacancy-rate": {
+      "updatedOn": "2026-11-07",
+      "note": "Census definitions and FRED series notes describe rental-inventory statistics. They do not supply a live local vacancy input or a forecast for the property scenarios in this calculator."
+    },
+    "guide:/guides/how-to-calculate-rental-vacancy-rate/": {
+      "updatedOn": "2026-11-07",
+      "note": "References distinguish Census rental-inventory statistics from snapshot and unit-day property worksheets. Example amounts remain hypothetical; no current local vacancy rate is asserted."
+    },
     "calculator:income-tax": {
       "note": "Official references support selected tax rules. Results remain this site’s limited calculations, not a complete tax return or payroll withholding service."
     },
@@ -1976,6 +1993,7 @@
       "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
     },
     "glossary:vacancy-rate": {
+      "updatedOn": "2026-11-07",
       "note": "These sources explain the definition and its boundaries. The worked example is hypothetical, and related calculators model only the assumptions and exclusions they state."
     },
     "glossary:capital-expenditure": {
