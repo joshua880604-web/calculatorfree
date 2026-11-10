@@ -29,6 +29,14 @@ const titles: Record<string, string> = {
     "Compound Interest Calculator - Growth & Contributions",
   interest: "Interest Calculator - Savings Growth & Contributions",
 };
+// Page summaries describe the supported task without changing search-mode labels.
+const descriptions: Record<string,string> = {
+ 'capital-gains-tax':'Use the Capital Gains Tax Calculator to estimate incremental 2025 or 2026 U.S. federal tax on a sale, including optional NIIT. See scope and exclusions.',
+ 'credit-utilization':'Use the Credit Utilization Calculator to compare overall and per-card ratios and estimate payments to chosen targets. No credit-score prediction.',
+ 'auto-lease':'Use the Auto Lease Calculator to estimate payments from price, residual value, money factor and entered monthly tax. Compare modeled cash outlay.',
+ 'present-value':'Use the Present Value Calculator to discount a future lump sum or regular payments. Match the discount rate to each cash-flow period.',
+ 'annuity':'Use the Annuity Calculator to estimate future value from starting principal and regular contributions. Compare deposit timing under an assumed return.',
+};
 export function pageMetadata(
   path: string,
   title: string,
@@ -58,7 +66,7 @@ export function calculatorMetadata(calc: Calculator, config = siteConfig()) {
   return pageMetadata(
     catalog.find((c) => c.id === calc.id)!.local_route,
     keywordTitles[calc.id] ?? titles[calc.id] ?? calc.title,
-    searchTasks[calc.id]?.[0].description ?? calc.intro,
+    descriptions[calc.id] ?? searchTasks[calc.id]?.[0].description ?? calc.intro,
     config,
   );
 }
@@ -340,3 +348,11 @@ for(const path of ['/financial-calculator.html','/savings-investment-calculators
 contentUpdatedOn['/inventory-turnover-calculator.html']='2026-11-06';
 contentUpdatedOn['/sba-loan-calculator.html']='2026-11-06';
 for(const path of ['/business-calculators.html','/financial-calculator.html','/guides/','/glossary/','/glossary/inventory-turnover/','/glossary/sba-guaranty-fee/'])contentUpdatedOn[path]='2026-11-06';
+
+// Content wording dates are separate from definition/example arithmetic checks.
+for(const id of ['capital-gains-tax','credit-utilization','auto-lease','present-value','annuity'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-10';
+for(const term of glossaryTerms)if(term.updatedOn){
+ contentUpdatedOn[glossaryTermPath(term.slug)]=term.updatedOn;
+ for(const tool of term.tools)contentUpdatedOn[catalog.find(c=>c.id===tool.id)!.local_route]=term.updatedOn;
+ contentUpdatedOn[glossaryPath]=term.updatedOn;
+}

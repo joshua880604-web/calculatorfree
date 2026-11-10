@@ -39,6 +39,7 @@ export default async function TermPage({params}:{params:Promise<{term:string}>})
   {entry.guides?.length&&<section><h2>Put the concept into practice</h2><ul>{entry.guides.map(guide=><li key={guide.path}><SiteLink href={guide.path}>{guide.title}</SiteLink></li>)}</ul></section>}
   {entry.related.length>0&&<nav className="glossary-related" aria-label="Related terms"><h2>Related terms</h2><ul>{entry.related.map(slug=><li key={slug}><SiteLink href={glossaryTermPath(slug)}>{glossaryTerm(slug)!.name}</SiteLink></li>)}</ul></nav>}
   <section className="glossary-sources" aria-labelledby="sources"><h2 id="sources">Sources and checks</h2><SourceReferences context={'glossary:'+entry.slug} sources={entry.sources}/>
+   {entry.updatedOn&&<p className="content-date">Wording updated <time dateTime={entry.updatedOn}>{new Date(entry.updatedOn+'T12:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'})}</time>. The example-check date is listed separately below.</p>}
    <p className="content-date">Definition and example arithmetic checked <time dateTime={entry.checkedOn}>{new Date(entry.checkedOn+'T12:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'})}</time>. Sources explain the concepts; numerical examples use the assumptions stated above.</p>
    <p><SiteLink href="/methodology.html">Calculation methodology and review status</SiteLink> · <SiteLink href={glossaryPath}>All glossary terms</SiteLink></p>
   </section>

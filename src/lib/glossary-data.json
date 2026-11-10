@@ -854,10 +854,10 @@
       "Annual percentage yield",
       "Effective annual yield"
     ],
-    "definition": "APY is a deposit’s annual percentage yield, expressing one year of interest growth with compounding under stated assumptions.",
-    "explanation": "A nominal rate alone does not specify the effect of compounding. Reinvesting interest more frequently raises the effective annual yield at the same positive nominal rate. U.S. disclosed APY follows Truth in Savings conventions, including timing assumptions; it is not an after-tax or inflation-adjusted return.",
+    "definition": "APY stands for annual percentage yield. It shows a deposit’s annual interest growth, including interest earned on earlier interest.",
+    "explanation": "When interest stays in the account, it can earn more interest. This is compounding. At the same positive nominal rate, more frequent compounding produces a higher effective annual yield. A disclosed U.S. APY uses Truth in Savings timing rules. It does not show your return after tax or inflation.",
     "formula": "Effective annual yield = (1 + nominal annual rate / compounding periods per year)^periods per year − 1",
-    "formulaNote": "This regular-period formula assumes a constant rate and reinvested interest. Actual disclosures may use exact days; fees and withdrawals can change what you earn.",
+    "formulaNote": "This formula assumes a constant rate, equal compounding periods and interest left on deposit. Actual disclosures may use exact days. Fees and withdrawals can change what you earn.",
     "example": {
       "title": "5% nominal interest compounded monthly",
       "intro": "Keep interest on deposit for one year.",
@@ -915,7 +915,8 @@
         "path": "/guides/how-to-calculate-savings-goal/",
         "title": "How to Calculate a Savings Goal: Monthly Deposits and Time Needed"
       }
-    ]
+    ],
+    "updatedOn": "2026-11-10"
   },
   {
     "slug": "inflation",
@@ -1194,14 +1195,14 @@
     "slug": "internal-rate-of-return",
     "name": "Internal rate of return (IRR)",
     "title": "Internal rate of return (IRR): Definition, Formula and Example",
-    "description": "IRR is a discount rate that makes the net present value of a specified series of cash flows equal to zero.",
+    "description": "Internal rate of return (IRR) is a discount rate that makes modeled NPV zero. See an example, timing assumptions and why IRR alone can mislead.",
     "category": "Saving & investing",
     "aliases": [
       "IRR",
       "Money-weighted return"
     ],
-    "definition": "IRR is a discount rate that makes the net present value of a specified series of cash flows equal to zero.",
-    "explanation": "IRR incorporates the size and timing of contributions and distributions. Periodic IRR assumes equally spaced cash flows; a dated calculation needs an explicit day-count convention. The root may be absent or nonunique when cash flows change sign more than once.",
+    "definition": "Internal rate of return (IRR) is a discount rate that makes the net present value of a cash-flow stream equal to zero.",
+    "explanation": "IRR is a break-even discount rate for the cash-flow stream. At that rate, the discounted money received equals the discounted money paid. Timing matters. Some cash-flow patterns have no IRR; others have more than one.",
     "formula": "0 = Σ[cash flow at period t / (1 + IRR)^t], including the initial cash flow at t = 0",
     "formulaNote": "Use signed cash flows from one consistent viewpoint. A periodic IRR is a rate per cash-flow period unless explicitly annualized.",
     "example": {
@@ -1279,20 +1280,51 @@
         "title": "IRR versus NPV: scale, timing and multiple roots",
         "path": "/guides/irr-vs-npv/"
       }
-    ]
+    ],
+    "sections": [
+      {
+        "id": "irr-roi-cagr",
+        "title": "IRR, ROI and CAGR answer different questions",
+        "paragraphs": [
+          "Use the measure that fits the information you have. A periodic IRR is a rate per cash-flow period unless the result is explicitly annualized."
+        ],
+        "table": {
+          "caption": "Choosing a return measure",
+          "headers": [
+            "Measure",
+            "What it describes"
+          ],
+          "rows": [
+            [
+              "IRR",
+              "A rate that makes modeled NPV zero, using the timing of cash flows."
+            ],
+            [
+              "ROI",
+              "Gain or loss relative to investment cost over a stated period; not automatically an annual rate."
+            ],
+            [
+              "CAGR",
+              "A constant annual growth rate between starting and ending values; it does not account for intermediate deposits or withdrawals."
+            ]
+          ]
+        }
+      }
+    ],
+    "updatedOn": "2026-11-10"
   },
   {
     "slug": "net-present-value",
     "name": "Net present value (NPV)",
     "title": "Net present value (NPV): Definition, Formula and Example",
-    "description": "NPV is the sum of cash inflows and outflows discounted to one valuation date using a stated discount rate.",
+    "description": "Net present value (NPV) discounts modeled cash flows to one date. Learn the formula, initial-cost treatment and a worked example; then try the calculator.",
     "category": "Saving & investing",
     "aliases": [
       "NPV",
       "Discounted net value"
     ],
-    "definition": "NPV is the sum of cash inflows and outflows discounted to one valuation date using a stated discount rate.",
-    "explanation": "A positive NPV means the modeled cash flows exceed the return represented by the discount rate. It depends on the amounts, timing and chosen rate; it is not a guaranteed profit. Include the initial outlay and any terminal value once, with consistent signs.",
+    "definition": "Net present value (NPV) is the total value of modeled cash inflows and outflows after discounting them to one date.",
+    "explanation": "Discounting converts future money to its value at a chosen starting date. The discount rate is the return used for that comparison. Count the initial cost and any sale or terminal value once, with consistent positive and negative signs.",
     "formula": "NPV = Σ[cash flow at period t / (1 + discount rate)^t]",
     "formulaNote": "Use a rate per cash-flow period and consistent nominal or real amounts. The t = 0 cash flow is not discounted.",
     "example": {
@@ -1359,7 +1391,38 @@
         "title": "IRR versus NPV: scale, timing and multiple roots",
         "path": "/guides/irr-vs-npv/"
       }
-    ]
+    ],
+    "sections": [
+      {
+        "id": "npv-sign",
+        "title": "What does positive or negative NPV mean?",
+        "paragraphs": [
+          "Read the result using the cash flows and discount rate you entered. Changing either can change the sign. A positive result is not a guarantee of profit."
+        ],
+        "table": {
+          "caption": "Reading NPV at the entered discount rate",
+          "headers": [
+            "Result",
+            "Meaning within the model"
+          ],
+          "rows": [
+            [
+              "Positive NPV",
+              "The modeled cash flows exceed the return represented by the discount rate."
+            ],
+            [
+              "Zero NPV",
+              "The modeled cash flows exactly meet that return."
+            ],
+            [
+              "Negative NPV",
+              "The modeled cash flows fall short of that return."
+            ]
+          ]
+        }
+      }
+    ],
+    "updatedOn": "2026-11-10"
   },
   {
     "slug": "payback-period",
@@ -3371,14 +3434,14 @@
     "slug": "gross-vs-net-pay",
     "name": "Gross pay vs. net pay",
     "title": "Gross pay vs. net pay: Definition, Formula and Example",
-    "description": "Gross pay is earnings before paycheck deductions; net pay is the amount remaining after the deductions applied to that paycheck.",
+    "description": "Compare gross vs. net pay with a paycheck example. See how deductions affect take-home pay and why withholding differs from final annual tax.",
     "category": "Tax & income",
     "aliases": [
       "Take-home pay",
       "Paycheck deductions"
     ],
-    "definition": "Gross pay is earnings before paycheck deductions; net pay is the amount remaining after the deductions applied to that paycheck.",
-    "explanation": "Deductions can include income-tax withholding, payroll taxes, retirement deferrals and insurance. Pretax and after-tax items can affect different tax bases. Annual salary, pay frequency and taxable wages are related but not interchangeable.",
+    "definition": "Gross pay is what you earn before paycheck deductions. Net pay is the amount left after those deductions and withheld taxes.",
+    "explanation": "A paycheck can subtract tax withholding, payroll taxes, retirement contributions and insurance. Some deductions reduce taxable wages; others do not. Annual salary, taxable wages and the cash deposited in your bank account are different figures.",
     "formula": "Net pay = gross pay − employee deductions − withheld taxes",
     "formulaNote": "Use the same pay period and avoid deducting an item twice. Employer-paid benefits are not automatically employee paycheck deductions.",
     "example": {
@@ -3394,7 +3457,7 @@
     },
     "pitfall": {
       "title": "Withholding and final tax liability are different",
-      "text": "A refund can result when payments and refundable credits exceed the annual liability. Also, biweekly pay usually has 26 periods per year, whereas twice-monthly pay has 24; they are not the same frequency."
+      "text": "Withholding is tax paid during the year. Your final tax liability is determined separately. A refund can result when payments and refundable credits exceed that liability."
     },
     "tools": [
       {
@@ -3428,7 +3491,18 @@
         "path": "/guides/hourly-to-salary-and-paid-time-off/",
         "title": "Hourly to Salary: Work Hours, Paid Time Off and Annual Pay"
       }
-    ]
+    ],
+    "sections": [
+      {
+        "id": "matching-pay-periods",
+        "title": "Compare the same pay period",
+        "paragraphs": [
+          "Use gross pay, deductions and net pay for the same week, month or year. A monthly gross amount cannot be compared directly with a biweekly net paycheck.",
+          "Biweekly pay usually has 26 pay periods in a year. Twice-monthly pay has 24. Check the actual payroll calendar before converting a paycheck to an annual amount."
+        ]
+      }
+    ],
+    "updatedOn": "2026-11-10"
   },
   {
     "slug": "sales-tax-vs-vat",
@@ -5348,8 +5422,8 @@
       "Conversion five-year clock",
       "Roth qualified-distribution holding period"
     ],
-    "definition": "Roth IRA rules use different five-tax-year periods for qualified distributions and for certain early distributions attributable to conversion amounts; the two clocks answer different questions.",
-    "explanation": "IRS Publication 590-B describes a separate period for each conversion and a distinct qualified-distribution test. Regular contribution basis, converted amounts and earnings are different sources. Actual distribution ordering and possible exceptions depend on records and circumstances, not simply a five-year anniversary.",
+    "definition": "Roth IRAs have more than one five-year rule. One helps determine whether a withdrawal is qualified; another can apply to converted money withdrawn early.",
+    "explanation": "Keep regular contributions, conversion amounts and investment earnings separate. A conversion can start its own five-tax-year period. That period is different from the holding-period test for a qualified distribution. Dates alone do not settle the tax treatment; the IRS withdrawal order and any exceptions also matter.",
     "formula": "Calendar-year conversion in Y: five-tax-year date = January 1 of Y + 5",
     "formulaNote": "This date concerns the conversion period. Qualified earnings also require the applicable Roth holding period and a qualifying condition, commonly age 59½; it is not a general withdrawal permission.",
     "example": {
@@ -5390,7 +5464,37 @@
         "path": "/guides/roth-conversion-ladder/",
         "title": "Conversion timeline and bridge examples"
       }
-    ]
+    ],
+    "sections": [
+      {
+        "id": "two-five-year-tests",
+        "title": "Keep the two five-year tests separate",
+        "paragraphs": [
+          "Use the IRS rules for the type of money being withdrawn. A conversion date does not establish that every dollar in the account can be withdrawn without tax."
+        ],
+        "table": {
+          "caption": "Two Roth IRA five-year tests",
+          "headers": [
+            "Test",
+            "What it helps determine",
+            "Other conditions matter"
+          ],
+          "rows": [
+            [
+              "Qualified-distribution holding period",
+              "Whether a withdrawal, including earnings, is qualified.",
+              "A qualifying condition is also required, commonly reaching age 59½."
+            ],
+            [
+              "Conversion early-distribution period",
+              "Whether certain early withdrawals of taxable converted amounts may face the 10% additional tax.",
+              "Each conversion has its own period; withdrawal ordering and exceptions can change the treatment."
+            ]
+          ]
+        }
+      }
+    ],
+    "updatedOn": "2026-11-10"
   },
   {
     "slug": "covered-call",

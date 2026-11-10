@@ -14,7 +14,7 @@ export type GlossaryTerm = {
   definition:string;explanation:string;formula:string;formulaNote:string;
   example:{title:string;intro:string;steps:string[];answer:string;assumptions:string;calculator?:GlossaryExampleCalculation;calculationNote?:string};
   pitfall:{title:string;text:string};tools:{id:string;text:string}[];related:string[];
-  sources:{title:string;url:string}[];checkedOn:string;scope?:string;
+  sources:{title:string;url:string}[];checkedOn:string;updatedOn?:string;scope?:string;
   guides?:{title:string;path:string}[];
   comparison?:{topic:"cap";heading:string;paragraphs:string[];questions:{question:string;answer:string}[];chart:string};
   sections?:{id:string;title:string;paragraphs:string[];table?:{caption:string;headers:string[];rows:string[][]}}[];
