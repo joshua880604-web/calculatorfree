@@ -31,6 +31,7 @@ const titles: Record<string, string> = {
 };
 // Page summaries describe the supported task without changing search-mode labels.
 const descriptions: Record<string,string> = {
+ 'down-payment':'Calculate a home down payment plus entered closing costs. Or use available cash to solve for a home price or down-payment percentage.',
  'capital-gains-tax':'Use the Capital Gains Tax Calculator to estimate incremental 2025 or 2026 U.S. federal tax on a sale, including optional NIIT. See scope and exclusions.',
  'credit-utilization':'Use the Credit Utilization Calculator to compare overall and per-card ratios and estimate payments to chosen targets. No credit-score prediction.',
  'auto-lease':'Use the Auto Lease Calculator to estimate payments from price, residual value, money factor and entered monthly tax. Compare modeled cash outlay.',
@@ -350,9 +351,12 @@ contentUpdatedOn['/sba-loan-calculator.html']='2026-11-06';
 for(const path of ['/business-calculators.html','/financial-calculator.html','/guides/','/glossary/','/glossary/inventory-turnover/','/glossary/sba-guaranty-fee/'])contentUpdatedOn[path]='2026-11-06';
 
 // Content wording dates are separate from definition/example arithmetic checks.
+function recordWordingUpdate(path:string,date:string){
+ if(!contentUpdatedOn[path]||date>contentUpdatedOn[path])contentUpdatedOn[path]=date;
+}
 for(const id of ['capital-gains-tax','credit-utilization','auto-lease','present-value','annuity'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-10';
 for(const term of glossaryTerms)if(term.updatedOn){
- contentUpdatedOn[glossaryTermPath(term.slug)]=term.updatedOn;
- for(const tool of term.tools)contentUpdatedOn[catalog.find(c=>c.id===tool.id)!.local_route]=term.updatedOn;
- contentUpdatedOn[glossaryPath]=term.updatedOn;
+ recordWordingUpdate(glossaryTermPath(term.slug),term.updatedOn);
+ for(const tool of term.tools)recordWordingUpdate(catalog.find(c=>c.id===tool.id)!.local_route,term.updatedOn);
+ recordWordingUpdate(glossaryPath,term.updatedOn);
 }

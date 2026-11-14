@@ -3226,16 +3226,16 @@
   {
     "slug": "down-payment",
     "name": "Down payment",
-    "title": "Down payment: Definition, Formula and Example",
-    "description": "A down payment is the portion of a purchase price paid upfront rather than funded by the base purchase loan.",
+    "title": "Down Payment: Meaning, Formula and Closing Costs",
+    "description": "Learn what a down payment is, calculate it as price times percentage, and see why closing costs add to the cash needed to buy a home.",
     "category": "Housing & property",
     "aliases": [
       "Buyer’s upfront purchase contribution"
     ],
-    "definition": "A down payment is the portion of a purchase price paid upfront rather than funded by the base purchase loan.",
+    "definition": "A down payment is the upfront portion of a purchase price that you pay rather than borrow through the base purchase loan.",
     "explanation": "A larger payment generally reduces the starting loan amount, but cash needed at closing can also include fees, prepaid items and reserves. Required minimums depend on program and eligibility; a down payment is not a universal guarantee of approval or affordability.",
-    "formula": "Down payment = purchase price × down-payment fraction; base loan = price − down payment",
-    "formulaNote": "Financed fees or program-specific mortgage insurance can raise the final loan above this simplified base amount.",
+    "formula": "Down payment = purchase price × (down-payment percentage ÷ 100); base loan = purchase price − down payment",
+    "formulaNote": "For 15% down, use 15 ÷ 100 = 0.15. Cash needed for the purchase also includes closing costs paid upfront. Financed fees or program-specific mortgage insurance can raise the final loan above this simplified base amount.",
     "example": {
       "title": "15% down on a $300,000 purchase",
       "intro": "Ignore financed fees for this first step.",
@@ -3246,16 +3246,33 @@
       ],
       "answer": "The down payment is $45,000 and the base loan is $255,000, before any financed charges.",
       "assumptions": "Purchase price equals the value basis; no other liens, closing costs or reserves included.",
-      "calculationNote": "The worked example uses the assumptions above. Related tools may model a different scope; check their descriptions before comparing results."
+      "calculationNote": "The example link sets closing costs to zero to reproduce the down payment and base loan above. Enter your own closing costs in the calculator to compare the total purchase cash needed. The linked mortgage rate and term are hypothetical and do not affect these two amounts.",
+      "calculator": {
+        "id": "down-payment",
+        "mode": "cash",
+        "values": {
+          "price": 300000,
+          "down": 15,
+          "closing": 0,
+          "closing_unit": "Dollars",
+          "rate": 6,
+          "years": 30
+        },
+        "expected": [
+          { "label": "Down payment", "value": 45000 },
+          { "label": "Loan amount", "value": 255000 },
+          { "label": "Cash needed", "value": 45000 }
+        ]
+      }
     },
     "pitfall": {
       "title": "Down payment is not the same as all cash needed to buy",
-      "text": "Closing costs and ownership reserves are separate. Using all available savings upfront can leave less for emergencies. For auto financing, taxes, fees, rebates and trade-in equity also affect the financed amount."
+      "text": "Closing costs and ownership reserves are separate. With a $300,000 home and 15% down, adding an illustrative $9,000 of closing costs paid upfront brings purchase cash to $54,000: $45,000 down plus $9,000 costs. That is before moving expenses or reserves. The $9,000 is an example, not a quote or required fee. For auto financing, taxes, fees, rebates and trade-in equity also affect the financed amount."
     },
     "tools": [
       {
         "id": "down-payment",
-        "text": "Compare down-payment and base-loan amounts."
+        "text": "Enter a home price and down-payment percentage, then add closing costs to estimate purchase cash. You can also solve for a home price or percentage from available cash."
       },
       {
         "id": "mortgage",
@@ -3282,8 +3299,13 @@
       }
     ],
     "checkedOn": "2026-10-29",
+    "updatedOn": "2026-11-14",
     "scope": "General financial concept; examples are hypothetical.",
     "guides": [
+      {
+        "title": "Down Payment and Closing Costs: Calculate Cash Needed to Buy",
+        "path": "/guides/down-payment-and-closing-cost-cash/"
+      },
       {
         "title": "How Much House Can I Afford? Income, Debt and Ownership Costs",
         "path": "/guides/how-much-house-can-i-afford/"
