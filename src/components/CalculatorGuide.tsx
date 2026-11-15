@@ -7,6 +7,7 @@ import LoanCostReference,{loanCostComparisonTitle} from './LoanCostReference';
 import HouseIncomeReference from './HouseIncomeReference';
 import ContentReviewNotice from './ContentReviewNotice';
 import BlogSnippetLink from './BlogSnippetLink';
+import BorrowingPaths from './BorrowingPaths';
 import {hasBlogSnippetKit} from '@/lib/blog-snippet-access';
 import {motherPageCopy} from '@/lib/mother-page-ui';
 import RmdReference from './RmdReference';
@@ -60,6 +61,7 @@ export default function CalculatorGuide({
           <ContentReviewNotice/>
           <h2>Understanding this calculation</h2>
           <p>{insight?.answer ?? guide.summary}</p>
+          <BorrowingPaths id={calculator.id}/>
           <GlossaryLinks id={calculator.id}/>
           {insight && <>
             <h2 id="reading-results">Reading your result</h2>

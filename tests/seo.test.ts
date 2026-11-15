@@ -26,6 +26,7 @@ import { calculators, defaults, runCalculation } from "../src/lib/calculators";
 const wordingReviewDates:Record<string,string>={
  ...Object.fromEntries(['/capital-gains-tax-calculator.html','/credit-utilization-calculator.html','/auto-lease-calculator.html','/present-value-calculator.html','/annuity-calculator.html','/glossary/apy/','/compound-interest-calculator.html','/cd-calculator.html','/glossary/internal-rate-of-return/','/irr-calculator.html','/rental-property-calculator.html','/mirr-calculator.html','/glossary/net-present-value/','/payback-period-calculator.html','/npv-calculator.html','/glossary/gross-vs-net-pay/','/salary-calculator.html','/paycheck-calculator.html','/budget-calculator.html','/glossary/roth-ira-five-year-rules/','/roth-conversion-ladder-calculator.html'].map(path=>[path,'2026-11-10'])),
  ...Object.fromEntries(['/glossary/','/glossary/down-payment/','/down-payment-calculator.html','/mortgage-calculator.html','/auto-loan-calculator.html','/house-hacking-calculator.html'].map(path=>[path,'2026-11-14'])),
+ ...Object.fromEntries(['/credit-card-minimum-payment-calculator.html','/boat-loan-calculator.html'].map(path=>[path,'2026-11-15'])),
 };
 function assertContentDate(path:string,historicalDate:string){
  assert.equal(contentUpdatedOn[path],wordingReviewDates[path]??historicalDate,path);

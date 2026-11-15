@@ -31,6 +31,8 @@ const titles: Record<string, string> = {
 };
 // Page summaries describe the supported task without changing search-mode labels.
 const descriptions: Record<string,string> = {
+ 'credit-card-minimum-payment':'Estimate a changing credit card minimum, payoff time and interest from your rule. Compare minimum-only payments with extra above each minimum.',
+ 'boat-loan':'Estimate boat loan payments, total interest and an amortization schedule. Include down payment, trade-in and entered taxes or fees; rates are assumed.',
  'down-payment':'Calculate a home down payment plus entered closing costs. Or use available cash to solve for a home price or down-payment percentage.',
  'capital-gains-tax':'Use the Capital Gains Tax Calculator to estimate incremental 2025 or 2026 U.S. federal tax on a sale, including optional NIIT. See scope and exclusions.',
  'credit-utilization':'Use the Credit Utilization Calculator to compare overall and per-card ratios and estimate payments to chosen targets. No credit-score prediction.',
@@ -354,6 +356,7 @@ for(const path of ['/business-calculators.html','/financial-calculator.html','/g
 function recordWordingUpdate(path:string,date:string){
  if(!contentUpdatedOn[path]||date>contentUpdatedOn[path])contentUpdatedOn[path]=date;
 }
+for(const id of ['credit-card-minimum-payment','boat-loan'])recordWordingUpdate(catalog.find(c=>c.id===id)!.local_route,'2026-11-15');
 for(const id of ['capital-gains-tax','credit-utilization','auto-lease','present-value','annuity'])contentUpdatedOn[catalog.find(c=>c.id===id)!.local_route]='2026-11-10';
 for(const term of glossaryTerms)if(term.updatedOn){
  recordWordingUpdate(glossaryTermPath(term.slug),term.updatedOn);
