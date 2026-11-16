@@ -11,6 +11,7 @@ function loadSearch() {
 }
 
 export default function CalculatorSearch({id,tools=calculators,compact=false,minimal=false}:{id:string;tools?:typeof calculators;compact?:boolean;minimal?:boolean}) {
+  const calculatorCount=tools.filter(tool=>tool.id!=='real-estate').length;
   const [query,setQuery]=useState("");
   const [engine,setEngine]=useState<SearchEngine|null>(null),[loadError,setLoadError]=useState(false);
   const [open,setOpen]=useState(false),[active,setActive]=useState(-1),[expanded,setExpanded]=useState(false);
@@ -72,14 +73,14 @@ export default function CalculatorSearch({id,tools=calculators,compact=false,min
       <button type="submit" className="directory-search-submit">Search</button>
       {showing&&<div className="directory-suggestions">
         <ul id={listId} role="listbox" aria-label="Matching calculators">
-          {visible.map(({tool,href},i)=><li key={tool.id} role="presentation"><SiteLink id={optionId(i)} href={href} role="option" aria-selected={i===active} tabIndex={-1} onMouseDown={e=>e.preventDefault()}>{tool.title}</SiteLink></li>)}
+          {visible.map(({tool,href},i)=><li key={tool.id} role="presentation"><SiteLink id={optionId(i)} href={href} role="option" aria-selected={i===active} tabIndex={-1} onMouseDown={e=>e.preventDefault()}>{tool.id==='real-estate'?'Real Estate calculators (category)':tool.title}</SiteLink></li>)}
         </ul>
         {loading&&<p>Loading calculator search…</p>}
         {loadError&&<p>Search could not load. Try again or browse the calculator categories.</p>}
         {!loading&&!loadError&&!results.length&&<p>No calculators found. Try “loan”, “tax”, or “interest”.</p>}
-        {!expanded&&results.length>visible.length&&<button type="button" className="directory-search-more" onClick={()=>{setExpanded(true);input.current?.focus();}}>Show all {results.length} matching calculators</button>}
+        {!expanded&&results.length>visible.length&&<button type="button" className="directory-search-more" onClick={()=>{setExpanded(true);input.current?.focus();}}>Show all {results.length} matching results</button>}
       </div>}
     </div>
-    <span role="status" aria-live="polite">{search?(loading?"Loading calculator search…":loadError?"Search unavailable. Browse the calculator categories.":`${results.length} ${results.length===1?'calculator':'calculators'} found`):compact?'':`${tools.length} tools available`}</span>
+    <span role="status" aria-live="polite">{search?(loading?"Loading calculator search…":loadError?"Search unavailable. Browse the calculator categories.":`${results.length} ${results.length===1?'result':'results'} found`):compact?'':`${calculatorCount} ${calculatorCount===1?'calculator':'calculators'} available`}</span>
   </form>;
 }

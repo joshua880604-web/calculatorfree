@@ -367,3 +367,5 @@ for(const guide of editorialGuides)if(guide.linksUpdatedOn){
  recordWordingUpdate(guide.path,guide.linksUpdatedOn);
  recordWordingUpdate(guidesPath,guide.linksUpdatedOn);
 }
+// Directory search counts describe functional calculators separately from category entries.
+recordWordingUpdate('/financial-calculator.html','2026-11-16');
