@@ -1552,6 +1552,26 @@
       "role": "context",
       "usedFor": "The customary 2,400 money-factor conversion and simplified lease financing formula.",
       "scope": "A comparison convention, not an itemized fee-inclusive effective APR calculation."
+    },
+    "https://openstax.org/books/principles-finance-2e/pages/17-3-calculating-the-weighted-average-cost-of-capital": {
+      "role": "method",
+      "usedFor": "The financing-weighted WACC equation, separate debt/common/preferred costs, and the assumed debt interest tax adjustment.",
+      "scope": "Textbook financing model; does not supply current company market values, a usable marginal deduction, live capital costs or a suitable rate for a particular project."
+    },
+    "https://openstax.org/books/principles-finance-2e/pages/15-3-the-capital-asset-pricing-model-capm": {
+      "role": "method",
+      "usedFor": "The CAPM relationship between risk-free return, benchmark beta and the market risk premium.",
+      "scope": "A theoretical required-return model; does not supply current rates, estimate beta, establish all possible equity-risk premiums or predict realized stock returns."
+    },
+    "https://www.finra.org/investors/insights/bonds-interest-rate-changes-duration": {
+      "role": "background",
+      "usedFor": "The meaning of duration and how fixed-bond prices respond to interest-rate changes.",
+      "scope": "Investor education, not a settlement-price engine or callable-bond model. Our coupon-date formulas, convexity convention and numerical examples are stated on the page and checked separately."
+    },
+    "https://www.bmo.com/business/pdf/burnratecalculator.pdf": {
+      "role": "background",
+      "usedFor": "A worked cash-burn worksheet and the distinction between cash resources and cash consumption.",
+      "scope": "Not an accounting-classification rule or cash-flow forecast. Our gross/net definitions, signed financing/non-operating adjustments and reserve threshold are explicitly stated model choices."
     }
   },
   "pages": {
@@ -3254,6 +3274,171 @@
           "role": "context",
           "usedFor": "The customary 2,400 money-factor conversion and simplified lease financing formula.",
           "scope": "A comparison convention, not an itemized fee-inclusive effective APR calculation."
+        }
+      }
+    },
+    "calculator:wacc": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/17-3-calculating-the-weighted-average-cost-of-capital": {
+          "role": "method",
+          "usedFor": "The financing-weighted WACC equation, separate debt/common/preferred costs, and the assumed debt interest tax adjustment.",
+          "scope": "Textbook financing model; does not supply current company market values, a usable marginal deduction, live capital costs or a suitable rate for a particular project."
+        }
+      }
+    },
+    "guide:/guides/how-to-calculate-wacc/": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/17-3-calculating-the-weighted-average-cost-of-capital": {
+          "role": "method",
+          "usedFor": "The financing-weighted WACC equation, separate debt/common/preferred costs, and the assumed debt interest tax adjustment.",
+          "scope": "Textbook financing model; does not supply current company market values, a usable marginal deduction, live capital costs or a suitable rate for a particular project."
+        }
+      }
+    },
+    "glossary:weighted-average-cost-of-capital": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/17-3-calculating-the-weighted-average-cost-of-capital": {
+          "role": "method",
+          "usedFor": "The financing-weighted WACC equation, separate debt/common/preferred costs, and the assumed debt interest tax adjustment.",
+          "scope": "Textbook financing model; does not supply current company market values, a usable marginal deduction, live capital costs or a suitable rate for a particular project."
+        }
+      }
+    },
+    "calculator:capm": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/15-3-the-capital-asset-pricing-model-capm": {
+          "role": "method",
+          "usedFor": "The CAPM relationship between risk-free return, benchmark beta and the market risk premium.",
+          "scope": "A theoretical required-return model; does not supply current rates, estimate beta, establish all possible equity-risk premiums or predict realized stock returns."
+        }
+      }
+    },
+    "guide:/guides/capm-cost-of-equity-and-market-risk-premium/": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/15-3-the-capital-asset-pricing-model-capm": {
+          "role": "method",
+          "usedFor": "The CAPM relationship between risk-free return, benchmark beta and the market risk premium.",
+          "scope": "A theoretical required-return model; does not supply current rates, estimate beta, establish all possible equity-risk premiums or predict realized stock returns."
+        }
+      }
+    },
+    "glossary:capital-asset-pricing-model": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/15-3-the-capital-asset-pricing-model-capm": {
+          "role": "method",
+          "usedFor": "The CAPM relationship between risk-free return, benchmark beta and the market risk premium.",
+          "scope": "A theoretical required-return model; does not supply current rates, estimate beta, establish all possible equity-risk premiums or predict realized stock returns."
+        }
+      }
+    },
+    "calculator:bond-duration": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://www.finra.org/investors/insights/bonds-interest-rate-changes-duration": {
+          "role": "background",
+          "usedFor": "The meaning of duration and how fixed-bond prices respond to interest-rate changes.",
+          "scope": "Investor education, not a settlement-price engine or callable-bond model. Our coupon-date formulas, convexity convention and numerical examples are stated on the page and checked separately."
+        }
+      }
+    },
+    "guide:/guides/macaulay-vs-modified-duration/": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://www.finra.org/investors/insights/bonds-interest-rate-changes-duration": {
+          "role": "background",
+          "usedFor": "The meaning of duration and how fixed-bond prices respond to interest-rate changes.",
+          "scope": "Investor education, not a settlement-price engine or callable-bond model. Our coupon-date formulas, convexity convention and numerical examples are stated on the page and checked separately."
+        }
+      }
+    },
+    "glossary:bond-duration": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://www.finra.org/investors/insights/bonds-interest-rate-changes-duration": {
+          "role": "background",
+          "usedFor": "The meaning of duration and how fixed-bond prices respond to interest-rate changes.",
+          "scope": "Investor education, not a settlement-price engine or callable-bond model. Our coupon-date formulas, convexity convention and numerical examples are stated on the page and checked separately."
+        }
+      }
+    },
+    "calculator:cd-early-withdrawal-penalty": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-certificate-of-deposit-cd-en-917/": {
+          "role": "background",
+          "usedFor": "CD maturity, access restrictions and the need to check early-withdrawal terms.",
+          "scope": "Does not prescribe a universal penalty formula, a current bank policy, a particular note rate or the tax treatment of a withdrawal. The days/months arithmetic uses explicitly entered contract assumptions."
+        }
+      }
+    },
+    "guide:/guides/how-to-calculate-cd-early-withdrawal-penalty/": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-certificate-of-deposit-cd-en-917/": {
+          "role": "background",
+          "usedFor": "CD maturity, access restrictions and the need to check early-withdrawal terms.",
+          "scope": "Does not prescribe a universal penalty formula, a current bank policy, a particular note rate or the tax treatment of a withdrawal. The days/months arithmetic uses explicitly entered contract assumptions."
+        }
+      }
+    },
+    "glossary:cd-early-withdrawal-penalty": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-certificate-of-deposit-cd-en-917/": {
+          "role": "background",
+          "usedFor": "CD maturity, access restrictions and the need to check early-withdrawal terms.",
+          "scope": "Does not prescribe a universal penalty formula, a current bank policy, a particular note rate or the tax treatment of a withdrawal. The days/months arithmetic uses explicitly entered contract assumptions."
+        }
+      }
+    },
+    "calculator:burn-rate": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://www.bmo.com/business/pdf/burnratecalculator.pdf": {
+          "role": "background",
+          "usedFor": "A worked cash-burn worksheet and the distinction between cash resources and cash consumption.",
+          "scope": "Not an accounting-classification rule or cash-flow forecast. Our gross/net definitions, signed financing/non-operating adjustments and reserve threshold are explicitly stated model choices."
+        }
+      }
+    },
+    "guide:/guides/gross-vs-net-burn-rate-and-cash-runway/": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://www.bmo.com/business/pdf/burnratecalculator.pdf": {
+          "role": "background",
+          "usedFor": "A worked cash-burn worksheet and the distinction between cash resources and cash consumption.",
+          "scope": "Not an accounting-classification rule or cash-flow forecast. Our gross/net definitions, signed financing/non-operating adjustments and reserve threshold are explicitly stated model choices."
+        }
+      }
+    },
+    "glossary:burn-rate": {
+      "note": "References support the definitions within the scope shown below. Hypothetical example amounts are our own model calculations, cross-checked with 60-digit Python Decimal arithmetic; no independent professional review or source endorsement is claimed.",
+      "updatedOn": "2026-11-16",
+      "overrides": {
+        "https://www.bmo.com/business/pdf/burnratecalculator.pdf": {
+          "role": "background",
+          "usedFor": "A worked cash-burn worksheet and the distinction between cash resources and cash consumption.",
+          "scope": "Not an accounting-classification rule or cash-flow forecast. Our gross/net definitions, signed financing/non-operating adjustments and reserve threshold are explicitly stated model choices."
         }
       }
     }

@@ -33,3 +33,24 @@ test('tax liability and refund are separate: 2025 single wages-only fixture',()=
 test('unknown metric contract adds no invented interpretation; hints are mode-specific',()=>{
  assert.equal(resultContext('mortgage','monthly',{}, {metrics:[]}),null);assert.equal(inputHint('loan','bond','pay'),undefined);assert.match(inputHint('loan','amortized','pay')!,/frequency/);
 });
+test('Capital-cost explanations follow edited assumptions and retain the distinction from forecasts',()=>{
+ const a=run('wacc','standard',{equity_cost:'12'});assert.match(a.context!,/9\.0000%/);assert.match(a.context!,/4\.5000%/);assert.match(a.context!,/not a guaranteed return/);
+ const b=run('capm','market',{beta:'-.5'});assert.match(b.context!,/1\.5000%/);assert.match(b.context!,/expected market return minus/);
+ const c=run('capm','premium');assert.match(c.context!,/not reduced a second time/);assert.match(c.context!,/not a forecast/);
+});
+test('CD interpretation distinguishes principal loss from a penalty covered by unpaid interest',()=>{
+ const a=run('cd-early-withdrawal-penalty','days',{accrued:'20'});assert.match(a.context!,/\$9,909\.04/);assert.match(a.context!,/reduces the returned principal by \$90\.96/);
+ const b=run('cd-early-withdrawal-penalty','dollars');assert.match(b.context!,/does not reduce principal/);assert.match(b.context!,/not a current bank-policy lookup/);
+});
+test('Runway explanation handles cash generation, an already reached reserve and history scope',()=>{
+ const a=run('burn-rate','monthly',{inflows:'30000'});assert.match(a.context!,/generate \$5,000\.00/);assert.match(a.context!,/no finite modeled depletion/);assert.ok(!/generate -|Infinity/.test(a.context!));
+ const b=run('burn-rate','monthly',{cash:'5000',inflows:'30000'});assert.match(b.context!,/already at or below/);assert.ok(!b.context!.includes('no finite'));
+ const c=run('burn-rate','history');assert.match(c.context!,/\$15,000\.00/);assert.match(c.context!,/cannot be inferred from two balances/);
+});
+test('Bond interpretation preserves price, timing and fixed-cash-flow model boundaries',()=>{
+ const a=run('bond-duration','fixed');assert.match(a.context!,/\$925\.61/);assert.match(a.context!,/7\.8950 years/);assert.match(a.context!,/7\.6650 years/);assert.match(a.context!,/does not model callable-bond effective duration/);
+});
+test('Five new explanations stay absent when the required metric contract is missing',()=>{
+ for(const id of ['wacc','capm','bond-duration','cd-early-withdrawal-penalty','burn-rate'])assert.equal(resultContext(id,'unknown',{}, {metrics:[]}),null);
+ const partial={metrics:[{label:'CAPM required annual return / cost of equity',value:10},{label:'Market risk premium used',value:5}]};assert.equal(resultContext('capm','market',{},partial),null);
+});

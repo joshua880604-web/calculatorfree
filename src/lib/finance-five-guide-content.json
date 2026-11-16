@@ -18,7 +18,7 @@
       "format": "Worked guide & calculator"
     },
     "intro": "Enter compatible annual costs and same-date market values. Debt interest deductibility is an assumption, not a tax determination. This is a static financing worksheet; it does not fetch company data or choose a discount rate for a project.",
-    "answer": "WACC is the annual cost of a financing mix, weighted by the market values of debt, common equity and optional preferred stock. This worksheet makes each weight and weighted contribution visible, including the assumed debt tax shield.",
+    "answer": "Calculate WACC by weighting each annual capital cost by its share of total financing market value. For debt and common equity: WACC = E/V × Re + D/V × Rd × (1 − T). In the hypothetical $600,000 equity / $400,000 debt example, costs of 10% and 6% with an assumed 25% debt tax shield produce a 7.8% annual WACC.",
     "sections": [
       {
         "id": "weights",
@@ -151,7 +151,8 @@
     "limitations": [
       "Enter compatible annual costs and same-date market values. Debt interest deductibility is an assumption, not a tax determination. This is a static financing worksheet; it does not fetch company data or choose a discount rate for a project.",
       "Examples use hypothetical assumptions rather than market quotes, customer outcomes or investment recommendations."
-    ]
+    ],
+    "featuredBeforeIntro": true
   },
   "capm": {
     "meta": {
@@ -171,7 +172,7 @@
       "format": "Worked guide & calculator"
     },
     "intro": "Annual assumptions only; no price-history beta regression or live market inputs. The output is one model of equity cost, not a forecast or investment recommendation. Negative beta and negative premiums are accepted within the stated input limits.",
-    "answer": "CAPM estimates a required return by adding a beta-scaled market risk premium to a compatible risk-free rate. You can supply expected market return or a premium that has already had the risk-free rate removed.",
+    "answer": "CAPM cost of equity = risk-free rate + beta × market risk premium. The premium equals expected market return minus the risk-free rate. In the hypothetical example, 4% + 1.2 × (9% − 4%) = 10%. If you already know the 5% premium, enter it directly rather than subtracting the risk-free rate again.",
     "sections": [
       {
         "id": "premium",
@@ -308,7 +309,8 @@
     "limitations": [
       "Annual assumptions only; no price-history beta regression or live market inputs. The output is one model of equity cost, not a forecast or investment recommendation. Negative beta and negative premiums are accepted within the stated input limits.",
       "Examples use hypothetical assumptions rather than market quotes, customer outcomes or investment recommendations."
-    ]
+    ],
+    "featuredBeforeIntro": true
   },
   "bond-duration": {
     "meta": {
@@ -328,7 +330,7 @@
       "format": "Worked guide & calculator"
     },
     "intro": "Regular remaining coupon periods with settlement on a coupon date; nominal annual yield compounded at the coupon frequency. No accrued interest, irregular coupons, default or embedded-option model. Effective duration for rate-dependent cash flows is outside this worksheet.",
-    "answer": "Macaulay duration is the present-value-weighted time to receive a bond’s cash flows. Modified duration expresses first-order price sensitivity to yield. This fixed-cash-flow worksheet also calculates convexity and DV01, and checks a yield-shock approximation against exact repricing.",
+    "answer": "Macaulay duration is the present-value-weighted time to a bond’s payments. Modified duration = Macaulay duration / (1 + annual nominal yield / coupon frequency). For the hypothetical ten-year, semiannual 5% coupon bond yielding 6%, the values are 7.8950 and 7.6650 years. Modified duration estimates price sensitivity; it is not the remaining maturity or an embedded-option model.",
     "sections": [
       {
         "id": "cash-flows",
@@ -457,7 +459,8 @@
     "limitations": [
       "Regular remaining coupon periods with settlement on a coupon date; nominal annual yield compounded at the coupon frequency. No accrued interest, irregular coupons, default or embedded-option model. Effective duration for rate-dependent cash flows is outside this worksheet.",
       "Examples use hypothetical assumptions rather than market quotes, customer outcomes or investment recommendations."
-    ]
+    ],
+    "featuredBeforeIntro": true
   },
   "cd-early-withdrawal-penalty": {
     "meta": {
@@ -478,7 +481,7 @@
       "format": "Worked guide & calculator"
     },
     "intro": "User-entered contract parameters; no current bank-policy database or APY-to-contract-rate conversion. Accrued interest includes only interest paid with this withdrawal. Actual minimums, compound-interest rules, exceptions and partial-withdrawal policies need confirmation with the bank.",
-    "answer": "A CD penalty can be quoted in dollars or as days or months of interest. This worksheet applies your specified simple-interest rule, subtracts the penalty from principal plus unpaid accrued interest and shows whether the charge reaches principal.",
+    "answer": "For a contract expressed in simple-interest days, CD penalty = principal × contract annual rate × penalty days / contract day basis. A hypothetical $10,000 CD at 4.5%, with 90 penalty days and a 365-day basis, has a $110.96 penalty. Add unpaid accrued interest and subtract the penalty to estimate proceeds; confirm your bank’s actual rule.",
     "sections": [
       {
         "id": "contract",
@@ -639,7 +642,8 @@
     "limitations": [
       "User-entered contract parameters; no current bank-policy database or APY-to-contract-rate conversion. Accrued interest includes only interest paid with this withdrawal. Actual minimums, compound-interest rules, exceptions and partial-withdrawal policies need confirmation with the bank.",
       "Examples use hypothetical assumptions rather than market quotes, customer outcomes or investment recommendations."
-    ]
+    ],
+    "featuredBeforeIntro": true
   },
   "burn-rate": {
     "meta": {
@@ -660,7 +664,7 @@
       "format": "Worked guide & calculator"
     },
     "intro": "Use available cash and consistent operating cash-flow classifications. Balance-history mode requires removal of financing and all other excluded non-operating movements. It infers net operating burn only; gross outflows are not identifiable from two balances.",
-    "answer": "Gross cash burn is operating cash paid during a period. Net cash burn subtracts operating cash received. Dividing available cash above a reserve by positive monthly net burn gives a constant-flow runway estimate, distinct from profit or revenue growth.",
+    "answer": "Gross operating burn is monthly cash paid. Net operating burn = cash paid − operating cash received. With $25,000 paid and $10,000 received, net burn is $15,000 per month. In the hypothetical case of $100,000 available cash and a $10,000 reserve, runway to the reserve is ($100,000 − $10,000) / $15,000 = 6 months, assuming constant flows.",
     "sections": [
       {
         "id": "cash-not-revenue",
@@ -790,6 +794,7 @@
     "limitations": [
       "Use available cash and consistent operating cash-flow classifications. Balance-history mode requires removal of financing and all other excluded non-operating movements. It infers net operating burn only; gross outflows are not identifiable from two balances.",
       "Examples use hypothetical assumptions rather than market quotes, customer outcomes or investment recommendations."
-    ]
+    ],
+    "featuredBeforeIntro": true
   }
 }
