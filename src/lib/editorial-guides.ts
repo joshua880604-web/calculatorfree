@@ -7,7 +7,8 @@ import {decisionGuideList} from './decision-guides';
 import {modelStudyGuides} from './model-study-meta';
 import {absoluteURL,directoryPath,siteConfig} from './site';
 export const guidesPath='/guides/';
-export type EditorialGuide={path:string;title:string;heading:string;description:string;publishedOn:string;updatedOn?:string;calculatorIds:string[];topic:string;breadcrumb:string;cardIntro:string;format?:string};
+export type EditorialGuide={path:string;title:string;heading:string;description:string;publishedOn:string;updatedOn?:string;linksUpdatedOn?:string;calculatorIds:string[];topic:string;breadcrumb:string;cardIntro:string;format?:string};
+export function guideContentDate(guide:EditorialGuide){return [guide.publishedOn,guide.updatedOn??'',guide.linksUpdatedOn??''].sort().at(-1)!;}
 export const recastGuide:EditorialGuide={
  path:'/guides/mortgage-recast-vs-refinance/',
  title:'Mortgage Recast vs. Refinance: Payments, Costs & Extra Principal',
@@ -207,7 +208,7 @@ export function editorialSchema(article:boolean|EditorialGuide=false,config=site
  const url=absoluteURL(entry?entry.path:guidesPath,config);
  const graph:Record<string,unknown>[]=[entry?{
   '@type':'Article',headline:entry.heading,description:entry.description,
-  datePublished:entry.publishedOn,dateModified:entry.updatedOn??entry.publishedOn,
+  datePublished:entry.publishedOn,dateModified:guideContentDate(entry),
   author:publisherIdentity(config),
   publisher:publisherIdentity(config),inLanguage:'en-US',
   ...(url?{'@id':url+'#article',url,mainEntityOfPage:url}:{}),

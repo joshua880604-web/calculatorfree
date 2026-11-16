@@ -1,7 +1,7 @@
 import {publisherIdentity} from './content-transparency';
 import {embedResourcesPath,embedResourcesReviewedOn} from './embed-resources';
 import {motherPageIds,motherPageReviewedOn} from './mother-page-ui';
-import {guidesPath,editorialGuides} from './editorial-guides';
+import {guidesPath,editorialGuides,guideContentDate} from './editorial-guides';
 import {categoryPages,type CategoryPage} from './category-pages';
 import {calculatorCategories,calculatorCategory,categoryPaths} from './calculator-categories';
 import guideInsights from "./guide-insights.json";
@@ -100,7 +100,7 @@ export const contentUpdatedOn: Record<string, string> = {
   "/privacy.html":"2026-10-29",
   [embedResourcesPath]:embedResourcesReviewedOn,
   [guidesPath]:'2026-10-31',
-  ...Object.fromEntries(editorialGuides.map(guide=>[guide.path,guide.updatedOn??guide.publishedOn])),
+  ...Object.fromEntries(editorialGuides.map(guide=>[guide.path,guideContentDate(guide)])),
   "/tax-equivalent-yield-calculator.html": "2026-10-27",
   "/treasury-bill-calculator.html": "2026-10-27",
   "/mortgage-recast-calculator.html": "2026-10-26",
@@ -362,4 +362,8 @@ for(const term of glossaryTerms)if(term.updatedOn){
  recordWordingUpdate(glossaryTermPath(term.slug),term.updatedOn);
  for(const tool of term.tools)recordWordingUpdate(catalog.find(c=>c.id===tool.id)!.local_route,term.updatedOn);
  recordWordingUpdate(glossaryPath,term.updatedOn);
+}
+for(const guide of editorialGuides)if(guide.linksUpdatedOn){
+ recordWordingUpdate(guide.path,guide.linksUpdatedOn);
+ recordWordingUpdate(guidesPath,guide.linksUpdatedOn);
 }

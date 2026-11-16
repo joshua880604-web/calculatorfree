@@ -180,7 +180,8 @@
       "breadcrumb": "Compound growth with monthly deposits",
       "cardIntro": "Four matched scenarios separate money you contribute from earnings and show the effect of deposit timing.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-04",
+      "linksUpdatedOn": "2026-11-16"
     },
     "calculatorPath": "/compound-interest-calculator",
     "calculatorLabel": "Compound Interest Calculator",
