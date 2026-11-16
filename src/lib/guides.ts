@@ -1,3 +1,4 @@
+import financeFiveContent from './finance-five-content.json';
 import businessTwoContent from './business-two-content.json';
 import fourComparisonContent from './four-comparison-content.json';
 import expansionFiveContent from './expansion-five-content.json';
@@ -1020,3 +1021,7 @@ for(const [id,links] of Object.entries({"cd-ladder": ["cd", "savings", "treasury
 Object.assign(guides,businessTwoContent as unknown as Record<string,Guide>);
 Object.assign(relatedCalculatorIds,{"inventory-turnover": ["current-ratio", "quick-ratio", "landed-cost", "margin"], "sba-loan": ["business-loan", "apr", "dscr"]});
 for(const [id,links] of Object.entries({"inventory-turnover": ["current-ratio", "quick-ratio", "landed-cost", "margin"], "sba-loan": ["business-loan", "apr", "dscr"]}))for(const linked of links)relatedCalculatorIds[linked]=[...new Set([...(relatedCalculatorIds[linked]??[]),id])];
+
+Object.assign(guides,financeFiveContent as unknown as Record<string,Guide>);
+const financeFiveRelated:Record<string,string[]>={"wacc": ["capm", "npv", "irr", "business-loan"], "capm": ["wacc", "investment", "average-return"], "cd-early-withdrawal-penalty": ["cd", "cd-ladder", "savings", "emergency-fund"], "burn-rate": ["current-ratio", "quick-ratio", "inventory-turnover", "business-loan"], "bond-duration": ["bond", "treasury-bill", "present-value"]};
+for(const [id,links] of Object.entries(financeFiveRelated)){relatedCalculatorIds[id]=links;for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])].slice(0,8);}

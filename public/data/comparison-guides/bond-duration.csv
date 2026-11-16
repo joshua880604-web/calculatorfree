@@ -1,0 +1,3 @@
+Case,Mode,Complete input assumptions,Output metric,Independently checked value,Checked on
+A ten-year semiannual 5% coupon bond,fixed,"{""coupon"": 5, ""face"": 1000, ""frequency"": ""2"", ""periods"": 20, ""shift"": 1, ""yield"": 6}",Modified duration (years),7.66504596134208,2026-11-16
+Zero-coupon Macaulay duration equals remaining maturity,fixed,"{""coupon"": 0, ""face"": 1000, ""frequency"": ""2"", ""periods"": 20, ""shift"": 1, ""yield"": 6}",Macaulay duration (years),10.0,2026-11-16

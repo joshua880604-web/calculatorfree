@@ -4,6 +4,11 @@ import {roth401kComparisonScope} from './roth-401k-scope';
 // Scope labels describe implemented rules, not a promise of worldwide tax support.
 export function calculatorScope(id: string, mode: string, values: Values): string | undefined {
   switch (id) {
+    case 'wacc': return 'Annual capital costs weighted by entered market values; debt deductibility and tax rate are assumptions. No live company valuation or project recommendation.';
+    case 'capm': return 'Manual annual risk and market assumptions; CAPM is one required-return model, not a realized-return forecast or estimate of beta from prices.';
+    case 'bond-duration': return 'Fixed promised cash flows, full coupon periods and nominal annual yield at the coupon frequency. No accrued interest, embedded options, default or effective-duration valuation.';
+    case 'cd-early-withdrawal-penalty': return 'User-confirmed dollar penalty or an illustrative contract simple-interest rule. No bank policy lookup, APY conversion, tax or remaining partial-withdrawal balance.';
+    case 'burn-rate': return 'Operating cash flows within a consistent scope; history requires adjustment for all excluded non-operating movements. Constant-flow runway is not a cash-flow forecast.';
     case 'inventory-turnover': return "Cost-based inventory arithmetic for a matched reporting period. No industry benchmark, sales forecast, inventory valuation election or automatic cash-release estimate.";
     case 'sba-loan': return mode==='504'?"U.S. 504 permanent-financing scenario with entered project allocation, separate note rates and fees, and a bank maturity balance. No eligibility, live CDC quote or certified APR.":values.fee_method==='FY2027 standard schedule'?"U.S. standard 7(a), FY2027 approval (October 1, 2026–September 30, 2027), one loan without fee relief or related 90-day loans. Gross approval includes financed fees; constant note rate, no approval or current-rate quote.":"U.S. 7(a) constant-rate amortization with a lender-confirmed fee entered manually. No automatic guaranty percentage, fee relief, approval or current-rate determination.";
 

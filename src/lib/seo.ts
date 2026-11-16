@@ -369,3 +369,8 @@ for(const guide of editorialGuides)if(guide.linksUpdatedOn){
 }
 // Directory search counts describe functional calculators separately from category entries.
 recordWordingUpdate('/financial-calculator.html','2026-11-16');
+
+// New capital-cost, CD penalty, cash burn and fixed-bond methods with checked examples.
+for(const path of ["/wacc-calculator.html", "/capm-calculator.html", "/cd-early-withdrawal-penalty-calculator.html", "/burn-rate-calculator.html", "/bond-duration-calculator.html", "/business-calculators.html", "/savings-investment-calculators.html", "/financial-calculator.html", "/guides/", "/glossary/"])recordWordingUpdate(path,'2026-11-16');
+
+for(const slug of ['weighted-average-cost-of-capital','capital-asset-pricing-model','bond-duration','cd-early-withdrawal-penalty','burn-rate'])recordWordingUpdate(glossaryTermPath(slug),'2026-11-16');

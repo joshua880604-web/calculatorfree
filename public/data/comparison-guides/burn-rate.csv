@@ -1,0 +1,3 @@
+Case,Mode,Complete input assumptions,Output metric,Independently checked value,Checked on
+A cash reserve shortens usable runway,monthly,"{""cash"": 100000, ""inflows"": 10000, ""outflows"": 25000, ""reserve"": 10000}",Months until entered cash reserve,6.0,2026-11-16
+Financing cannot conceal operating cash consumption,history,"{""end_cash"": 80000, ""excluded"": 10000, ""months"": 2, ""reserve"": 10000, ""start_cash"": 100000}",Monthly net operating cash burn,15000.0,2026-11-16

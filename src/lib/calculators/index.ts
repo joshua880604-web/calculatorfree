@@ -1,3 +1,8 @@
+import {waccCalculator} from './wacc';
+import {capmCalculator} from './capm';
+import {cdPenaltyCalculator} from './cd-penalty';
+import {burnRateCalculator} from './burn-rate';
+import {bondDurationCalculator} from './bond-duration';
 import {inventoryTurnoverCalculator} from './inventory-turnover';
 import {sbaLoanCalculator} from './sba-loan';
 import {cdLadderCalculator} from './cd-ladder';
@@ -45,6 +50,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  waccCalculator,capmCalculator,cdPenaltyCalculator,burnRateCalculator,bondDurationCalculator,
   inventoryTurnoverCalculator,sbaLoanCalculator,
   cdLadderCalculator,npvCalculator,leaseVsBuyCarCalculator,mortgageComparisonCalculator,
   ...remainingCalculators,

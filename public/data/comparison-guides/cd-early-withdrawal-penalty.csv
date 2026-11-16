@@ -1,0 +1,5 @@
+Case,Mode,Complete input assumptions,Output metric,Independently checked value,Checked on
+90 days of contract interest on a 365-day basis,days,"{""accrued"": 200, ""day_basis"": ""365"", ""penalty_days"": 90, ""principal"": 10000, ""rate"": 4.5}",Estimated net proceeds after penalty,10089.04109589041,2026-11-16
+Three months of interest differs from 90 actual days,months,"{""accrued"": 200, ""penalty_months"": 3, ""principal"": 10000, ""rate"": 4.5}",Early withdrawal penalty,112.5,2026-11-16
+A known bank penalty can be entered directly,dollars,"{""accrued"": 200, ""penalty"": 112.5, ""principal"": 10000}",Estimated net proceeds after penalty,10087.5,2026-11-16
+A penalty can reduce the returned principal,days,"{""accrued"": 20, ""day_basis"": ""365"", ""penalty_days"": 90, ""principal"": 10000, ""rate"": 4.5}",Principal reduction after accrued interest,90.95890410958904,2026-11-16

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {publisherIdentity,aboutPublisherSchema} from '../src/lib/content-transparency';
 import {calculatorSchema} from '../src/lib/seo';
-import {editorialGuides,editorialSchema} from '../src/lib/editorial-guides';
+import {editorialGuides,editorialSchema,guideContentDate} from '../src/lib/editorial-guides';
 import {calculators} from '../src/lib/calculators';
 const config={origin:'https://www.calculatorfree.io',indexable:true};
 test('All calculator and guide publisher references resolve to the real About identity',()=>{
@@ -15,7 +15,7 @@ test('All calculator and guide publisher references resolve to the real About id
  for(const guide of editorialGuides){
   const article=editorialSchema(guide,config)['@graph'][0] as any;
   assert.deepEqual(article.author,publisher);assert.deepEqual(article.publisher,publisher);
-  assert.equal(article.datePublished,guide.publishedOn);assert.equal(article.dateModified,guide.updatedOn??guide.publishedOn);
+  assert.equal(article.datePublished,guide.publishedOn);assert.equal(article.dateModified,guideContentDate(guide));
   assert.ok(!('reviewedBy' in article));
  }
 });

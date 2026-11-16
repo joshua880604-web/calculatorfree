@@ -1,0 +1,3 @@
+Case,Mode,Complete input assumptions,Output metric,Independently checked value,Checked on
+Debt and equity produce a 7.8% WACC,standard,"{""debt"": 400000, ""debt_cost"": 6, ""equity"": 600000, ""equity_cost"": 10, ""tax"": 25}",Weighted average cost of capital,7.8,2026-11-16
+Preferred stock has a separate financing weight,preferred,"{""debt"": 300000, ""debt_cost"": 6, ""equity"": 500000, ""equity_cost"": 10, ""preferred"": 200000, ""preferred_cost"": 7, ""tax"": 25}",Weighted average cost of capital,7.75,2026-11-16

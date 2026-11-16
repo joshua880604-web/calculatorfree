@@ -1,0 +1,430 @@
+[
+  {
+    "slug": "weighted-average-cost-of-capital",
+    "name": "Weighted average cost of capital",
+    "title": "Weighted average cost of capital: Formula, Example & Limits",
+    "description": "WACC is the annual cost of a financing mix, weighted by the market values of debt, common equity and optional preferred stock.",
+    "category": "Business & pricing",
+    "aliases": [
+      "WACC"
+    ],
+    "definition": "WACC is the annual cost of a financing mix, weighted by the market values of debt, common equity and optional preferred stock.",
+    "explanation": "Record the common-equity, debt and preferred-stock market values used on the same date. The denominator is the combined financing value, not revenue or total operating assets. With $600,000 equity and $400,000 debt, the weights are 60% and 40%. Using the financing amounts as percentages without dividing by the total would not produce weights.",
+    "formula": "E/V + D/V + P/V = 1",
+    "formulaNote": "Enter compatible annual costs and same-date market values. Debt interest deductibility is an assumption, not a tax determination. This is a static financing worksheet; it does not fetch company data or choose a discount rate for a project.",
+    "example": {
+      "title": "Debt and equity produce a 7.8% WACC",
+      "intro": "Common equity $600,000 at 10%; debt $400,000 at 6%; assumed marginal tax rate 25%.",
+      "steps": [
+        "Total financing = $1,000,000; equity weight 60%, debt weight 40%.",
+        "After-tax debt cost = 6% × (1 − 25%) = 4.5%.",
+        "WACC = 60% × 10% + 40% × 4.5% = 7.8%."
+      ],
+      "answer": "The common-equity contribution is 6 percentage points and the debt contribution is 1.8 points.",
+      "assumptions": "Enter compatible annual costs and same-date market values. Debt interest deductibility is an assumption, not a tax determination. This is a static financing worksheet; it does not fetch company data or choose a discount rate for a project.",
+      "calculator": {
+        "id": "wacc",
+        "mode": "standard",
+        "values": {
+          "equity": 600000,
+          "debt": 400000,
+          "equity_cost": 10,
+          "debt_cost": 6,
+          "tax": 25
+        },
+        "expected": [
+          {
+            "label": "Weighted average cost of capital",
+            "value": 7.8,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Does a larger debt share always reduce WACC?",
+      "text": "No. This static table holds component costs fixed. Actual debt and equity costs can change when leverage and risk change. The calculator does not optimize capital structure or establish a usable tax deduction."
+    },
+    "tools": [
+      {
+        "id": "wacc",
+        "text": "Reproduce the stated example and inspect the model assumptions."
+      },
+      {
+        "id": "capm",
+        "text": "Explore the related calculation with its own inputs and assumptions."
+      }
+    ],
+    "related": [
+      "capital-asset-pricing-model",
+      "net-present-value"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: Calculating the weighted average cost of capital",
+        "url": "https://openstax.org/books/principles-finance-2e/pages/17-3-calculating-the-weighted-average-cost-of-capital"
+      }
+    ],
+    "checkedOn": "2026-11-16",
+    "scope": "Enter compatible annual costs and same-date market values. Debt interest deductibility is an assumption, not a tax determination. This is a static financing worksheet; it does not fetch company data or choose a discount rate for a project.",
+    "guides": [
+      {
+        "title": "How to Calculate WACC: Weights, Tax Shield & Preferred Stock",
+        "path": "/guides/how-to-calculate-wacc/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do I calculate WACC without debt?",
+        "answer": "With positive common equity and no other financing, its weight is 100% and WACC equals the entered common-equity cost. With preferred stock as well, both equity classes still need their own weights and costs. A zero total financing value cannot determine weights."
+      },
+      {
+        "question": "Should I use market value or book value?",
+        "answer": "This model uses entered market values. Book debt can sometimes be used as an explicitly justified approximation; it is not automatically a market estimate. Common-equity market value is not the same as balance-sheet equity. Keep the valuation date and currency consistent."
+      }
+    ]
+  },
+  {
+    "slug": "capital-asset-pricing-model",
+    "name": "Capital asset pricing model",
+    "title": "Capital asset pricing model: Formula, Example & Limits",
+    "description": "CAPM estimates a required return by adding a beta-scaled market risk premium to a compatible risk-free rate.",
+    "category": "Saving & investing",
+    "aliases": [
+      "CAPM",
+      "CAPM cost of equity"
+    ],
+    "definition": "CAPM estimates a required return by adding a beta-scaled market risk premium to a compatible risk-free rate.",
+    "explanation": "Suppose expected annual market return is 9% and the annual risk-free assumption is 4%. Their difference is a 5-percentage-point market risk premium. A beta of 1.2 scales that premium to 6 points. Adding the 4% risk-free component produces a 10% required-return estimate.",
+    "formula": "ERP = Rm − Rf",
+    "formulaNote": "Annual assumptions only; no price-history beta regression or live market inputs. The output is one model of equity cost, not a forecast or investment recommendation. Negative beta and negative premiums are accepted within the stated input limits.",
+    "example": {
+      "title": "Market return of 9% gives a 5-point premium",
+      "intro": "Risk-free annual rate 4%; expected market return 9%; beta 1.2.",
+      "steps": [
+        "Market risk premium = 9% − 4% = 5 percentage points.",
+        "Beta contribution = 1.2 × 5% = 6 percentage points.",
+        "Required return = 4% + 6% = 10%."
+      ],
+      "answer": "CAPM required annual return is 10%.",
+      "assumptions": "Annual assumptions only; no price-history beta regression or live market inputs. The output is one model of equity cost, not a forecast or investment recommendation. Negative beta and negative premiums are accepted within the stated input limits.",
+      "calculator": {
+        "id": "capm",
+        "mode": "market",
+        "values": {
+          "risk_free": 4,
+          "beta": 1.2,
+          "market_return": 9
+        },
+        "expected": [
+          {
+            "label": "CAPM required annual return / cost of equity",
+            "value": 10.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Is this every possible cost-of-equity model?",
+      "text": "No. CAPM is one approach. It does not automatically add size, country, liquidity or company-specific premiums, nor does it implement a dividend-discount model. Required return and future realized return are different quantities."
+    },
+    "tools": [
+      {
+        "id": "capm",
+        "text": "Reproduce the stated example and inspect the model assumptions."
+      },
+      {
+        "id": "wacc",
+        "text": "Explore the related calculation with its own inputs and assumptions."
+      }
+    ],
+    "related": [
+      "weighted-average-cost-of-capital",
+      "return-on-investment"
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: The capital asset pricing model",
+        "url": "https://openstax.org/books/principles-finance-2e/pages/15-3-the-capital-asset-pricing-model-capm"
+      }
+    ],
+    "checkedOn": "2026-11-16",
+    "scope": "Annual assumptions only; no price-history beta regression or live market inputs. The output is one model of equity cost, not a forecast or investment recommendation. Negative beta and negative premiums are accepted within the stated input limits.",
+    "guides": [
+      {
+        "title": "CAPM Cost of Equity: Market Return vs. Risk Premium",
+        "path": "/guides/capm-cost-of-equity-and-market-risk-premium/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the CAPM formula?",
+        "answer": "Required return = risk-free rate + beta × (expected market return − risk-free rate). If you already know the market risk premium, use required return = risk-free rate + beta × premium. The two forms are equivalent for matching inputs."
+      },
+      {
+        "question": "What happens when beta is zero?",
+        "answer": "The beta-scaled contribution is zero and required return equals the risk-free rate. This is a property of CAPM, not a claim that the asset has no other risk."
+      }
+    ]
+  },
+  {
+    "slug": "bond-duration",
+    "name": "Bond duration",
+    "title": "Bond duration: Formula, Example & Limits",
+    "description": "Macaulay duration is the present-value-weighted time to receive a bond’s cash flows.",
+    "category": "Saving & investing",
+    "aliases": [
+      "Macaulay duration",
+      "Modified duration",
+      "DV01"
+    ],
+    "definition": "Macaulay duration is the present-value-weighted time to receive a bond’s cash flows.",
+    "explanation": "A $1,000 face-value bond with a 5% annual coupon pays $25 each half-year. Twenty remaining full semiannual periods mean ten years; the final period includes both the last $25 coupon and $1,000 principal. At 6% nominal annual yield, each period is discounted at 3%. The resulting price is $925.6126256977.",
+    "formula": "P = Σ CFᵢ / (1 + y/m)^i",
+    "formulaNote": "Regular remaining coupon periods with settlement on a coupon date; nominal annual yield compounded at the coupon frequency. No accrued interest, irregular coupons, default or embedded-option model. Effective duration for rate-dependent cash flows is outside this worksheet.",
+    "example": {
+      "title": "A ten-year semiannual 5% coupon bond",
+      "intro": "Face $1,000; coupon 5%; nominal annual yield 6%; two coupons per year; 20 remaining periods; +1 percentage-point yield shock.",
+      "steps": [
+        "Each regular coupon is $25; the final payment adds $1,000 principal.",
+        "Discount each payment by 1.03 raised to its coupon-period number. The price is $925.6126256977.",
+        "Weight each payment time by its share of price. Macaulay duration is 7.8949973402 years; divide by 1.03 for modified duration."
+      ],
+      "answer": "Modified duration is 7.6650459613 years, convexity is 71.7853980129 years squared and DV01 is about $0.709486 per $1,000 face.",
+      "assumptions": "Regular remaining coupon periods with settlement on a coupon date; nominal annual yield compounded at the coupon frequency. No accrued interest, irregular coupons, default or embedded-option model. Effective duration for rate-dependent cash flows is outside this worksheet.",
+      "calculator": {
+        "id": "bond-duration",
+        "mode": "fixed",
+        "values": {
+          "face": 1000,
+          "coupon": 5,
+          "frequency": "2",
+          "periods": 20,
+          "shift": 1,
+          "yield": 6
+        },
+        "expected": [
+          {
+            "label": "Modified duration (years)",
+            "value": 7.66504596134208,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Can I use this for callable bonds or effective duration?",
+      "text": "Not as an embedded-option model. Callable and mortgage-related cash flows can change with rates. Effective duration requires appropriate up/down valuations including those changing cash flows; relabeling modified duration does not provide that model."
+    },
+    "tools": [
+      {
+        "id": "bond-duration",
+        "text": "Reproduce the stated example and inspect the model assumptions."
+      },
+      {
+        "id": "bond",
+        "text": "Explore the related calculation with its own inputs and assumptions."
+      }
+    ],
+    "related": [
+      "bond-yield"
+    ],
+    "sources": [
+      {
+        "title": "FINRA: Bonds, interest-rate changes and duration",
+        "url": "https://www.finra.org/investors/insights/bonds-interest-rate-changes-duration"
+      }
+    ],
+    "checkedOn": "2026-11-16",
+    "scope": "Regular remaining coupon periods with settlement on a coupon date; nominal annual yield compounded at the coupon frequency. No accrued interest, irregular coupons, default or embedded-option model. Effective duration for rate-dependent cash flows is outside this worksheet.",
+    "guides": [
+      {
+        "title": "Macaulay vs. Modified Duration: Convexity & DV01 Examples",
+        "path": "/guides/macaulay-vs-modified-duration/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "How are Macaulay and modified duration different?",
+        "answer": "Macaulay duration averages payment times using present-value weights. Modified duration divides that average by 1 + periodic yield and measures local price sensitivity to the annual nominal yield used here. Both need the same yield convention."
+      },
+      {
+        "question": "How does convexity improve the price-change estimate?",
+        "answer": "The duration-only relative change is −modified duration × decimal yield change. Add one-half × convexity × yield change squared for a second-order estimate. The exact comparison reprices the unchanged cash flows; approximation accuracy deteriorates for large shocks."
+      }
+    ]
+  },
+  {
+    "slug": "cd-early-withdrawal-penalty",
+    "name": "CD early withdrawal penalty",
+    "title": "CD early withdrawal penalty: Formula, Example & Limits",
+    "description": "A CD penalty can be quoted in dollars or as days or months of interest.",
+    "category": "Saving & investing",
+    "aliases": [
+      "CD penalty",
+      "Certificate of deposit withdrawal penalty"
+    ],
+    "definition": "A CD penalty can be quoted in dollars or as days or months of interest.",
+    "explanation": "Find the contract’s penalty base, annual interest rate, number of penalty days or months, and applicable day basis. Check minimum charges, remaining-term limitations and any exception with the bank. A headline APY describes compounding-based earnings; it is not automatically the rate named in the penalty clause.",
+    "formula": "Days: B × r × d / day basis; months: B × r × n / 12",
+    "formulaNote": "User-entered contract parameters; no current bank-policy database or APY-to-contract-rate conversion. Accrued interest includes only interest paid with this withdrawal. Actual minimums, compound-interest rules, exceptions and partial-withdrawal policies need confirmation with the bank.",
+    "example": {
+      "title": "90 days of contract interest on a 365-day basis",
+      "intro": "Principal $10,000; unpaid accrued interest $200; contract annual rate 4.5%; 90 penalty days; 365-day basis.",
+      "steps": [
+        "Penalty = $10,000 × 0.045 × 90 / 365 = $110.9589041096.",
+        "Net proceeds = $10,000 + $200 − $110.9589041096."
+      ],
+      "answer": "Net proceeds are $10,089.04 before any other charges or tax withholding.",
+      "assumptions": "User-entered contract parameters; no current bank-policy database or APY-to-contract-rate conversion. Accrued interest includes only interest paid with this withdrawal. Actual minimums, compound-interest rules, exceptions and partial-withdrawal policies need confirmation with the bank.",
+      "calculator": {
+        "id": "cd-early-withdrawal-penalty",
+        "mode": "days",
+        "values": {
+          "principal": 10000,
+          "accrued": 200,
+          "rate": 4.5,
+          "penalty_days": 90,
+          "day_basis": "365"
+        },
+        "expected": [
+          {
+            "label": "Estimated net proceeds after penalty",
+            "value": 10089.04109589041,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Will this tell me whether to break my CD?",
+      "text": "No. Net proceeds are only one part of that decision. Compare remaining maturity, alternative returns, access needs, taxes and all contract charges separately. The tool does not select banks, fetch current terms or determine tax deductibility."
+    },
+    "tools": [
+      {
+        "id": "cd-early-withdrawal-penalty",
+        "text": "Reproduce the stated example and inspect the model assumptions."
+      },
+      {
+        "id": "cd",
+        "text": "Explore the related calculation with its own inputs and assumptions."
+      }
+    ],
+    "related": [
+      "certificate-of-deposit",
+      "apy"
+    ],
+    "sources": [
+      {
+        "title": "CFPB: What is a certificate of deposit?",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-certificate-of-deposit-cd-en-917/"
+      }
+    ],
+    "checkedOn": "2026-11-16",
+    "scope": "User-entered contract parameters; no current bank-policy database or APY-to-contract-rate conversion. Accrued interest includes only interest paid with this withdrawal. Actual minimums, compound-interest rules, exceptions and partial-withdrawal policies need confirmation with the bank.",
+    "guides": [
+      {
+        "title": "How to Calculate a CD Early Withdrawal Penalty",
+        "path": "/guides/how-to-calculate-cd-early-withdrawal-penalty/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can I use APY as the penalty interest rate?",
+        "answer": "Use the rate named in your contract’s penalty formula. APY includes compounding effects and is not automatically the contract annual interest rate. This worksheet does not derive a note rate from APY without the relevant compounding and contract rules."
+      },
+      {
+        "question": "Is the penalty limited to interest I earned?",
+        "answer": "Not necessarily in the rule you enter. The tool deliberately shows principal reduction when the charge exceeds unpaid accrued interest. Confirm whether your actual contract applies a cap, minimum or exception."
+      }
+    ]
+  },
+  {
+    "slug": "burn-rate",
+    "name": "Burn rate",
+    "title": "Burn rate: Formula, Example & Limits",
+    "description": "Gross cash burn is operating cash paid during a period.",
+    "category": "Business & pricing",
+    "aliases": [
+      "Cash burn",
+      "Gross burn",
+      "Net burn",
+      "Cash runway"
+    ],
+    "definition": "Gross cash burn is operating cash paid during a period.",
+    "explanation": "A business paying $25,000 and receiving $10,000 in one month has gross operating burn of $25,000 and net burn of $15,000. The calculation uses cash movements, not invoiced revenue or accounting expenses. A large receivable can make revenue and cash receipts diverge.",
+    "formula": "Gross burn = operating outflow; net burn = outflow − inflow",
+    "formulaNote": "Use available cash and consistent operating cash-flow classifications. Balance-history mode requires removal of financing and all other excluded non-operating movements. It infers net operating burn only; gross outflows are not identifiable from two balances.",
+    "example": {
+      "title": "A cash reserve shortens usable runway",
+      "intro": "Available cash $100,000; reserve $10,000; monthly operating outflows $25,000 and inflows $10,000.",
+      "steps": [
+        "Gross burn = $25,000 per month. Net burn = $25,000 − $10,000 = $15,000.",
+        "Cash above reserve = $100,000 − $10,000 = $90,000.",
+        "Runway to reserve = $90,000 / $15,000 = 6 months; runway to zero = 6.666667 months."
+      ],
+      "answer": "The reserve is reached after six modeled months, before cash reaches zero.",
+      "assumptions": "Use available cash and consistent operating cash-flow classifications. Balance-history mode requires removal of financing and all other excluded non-operating movements. It infers net operating burn only; gross outflows are not identifiable from two balances.",
+      "calculator": {
+        "id": "burn-rate",
+        "mode": "monthly",
+        "values": {
+          "cash": 100000,
+          "reserve": 10000,
+          "outflows": 25000,
+          "inflows": 10000
+        },
+        "expected": [
+          {
+            "label": "Months until entered cash reserve",
+            "value": 6.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Is burn multiple the same as burn rate?",
+      "text": "No. Burn multiple compares net cash burn with another growth measure such as net new annual recurring revenue, using additional definitions. This tool measures operating cash usage and runway; it does not calculate that efficiency ratio or infer a good/bad threshold."
+    },
+    "tools": [
+      {
+        "id": "burn-rate",
+        "text": "Reproduce the stated example and inspect the model assumptions."
+      },
+      {
+        "id": "current-ratio",
+        "text": "Explore the related calculation with its own inputs and assumptions."
+      }
+    ],
+    "related": [
+      "current-ratio",
+      "quick-ratio"
+    ],
+    "sources": [
+      {
+        "title": "BMO: Cash burn rate calculator worksheet",
+        "url": "https://www.bmo.com/business/pdf/burnratecalculator.pdf"
+      }
+    ],
+    "checkedOn": "2026-11-16",
+    "scope": "Use available cash and consistent operating cash-flow classifications. Balance-history mode requires removal of financing and all other excluded non-operating movements. It infers net operating burn only; gross outflows are not identifiable from two balances.",
+    "guides": [
+      {
+        "title": "Gross vs. Net Burn Rate: Cash Runway and Funding Adjustments",
+        "path": "/guides/gross-vs-net-burn-rate-and-cash-runway/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the difference between gross and net burn?",
+        "answer": "Gross burn is operating cash outflow. Net burn is operating outflow minus operating inflow for the same period and scope. A business paying $25,000 and receiving $10,000 has $25,000 gross burn and $15,000 net burn. Neither is automatically accounting net loss."
+      },
+      {
+        "question": "Why adjust history for fundraising?",
+        "answer": "A funding inflow increases ending cash without reducing operating consumption. Add net excluded inflows back when reconciling start and end balances; excluded outflows use a negative sign. Include all relevant non-operating movements, not just the most recent financing round."
+      }
+    ]
+  }
+]

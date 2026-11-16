@@ -10,6 +10,11 @@ export function directoryGroup(id:string,_category?:string){
  return group.id;
 }
 const toolAliases:Record<string,string[]>={
+ 'wacc':['weighted average cost of capital','after-tax cost of debt','preferred stock WACC'],
+ 'capm':['capital asset pricing model','cost of equity','market risk premium','beta required return'],
+ 'bond-duration':['Macaulay duration','modified duration','bond convexity','DV01','interest rate sensitivity'],
+ 'cd-early-withdrawal-penalty':['CD penalty','certificate of deposit penalty','CD early withdrawal','days of interest penalty'],
+ 'burn-rate':['cash burn','gross burn','net burn','cash runway','startup runway'],
  'inventory-turnover':['inventory turnover ratio','inventory turns','days inventory outstanding','DIO','stock turnover','average inventory'],
  'sba-loan':['SBA loan payment','SBA 7a','SBA 7(a)','SBA 504','CDC loan','SBA guaranty fee','small business administration loan'],
 "cd-ladder":["5 year cd ladder", "certificate of deposit ladder", "cd ladder interest"],

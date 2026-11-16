@@ -1,0 +1,4 @@
+Case,Mode,Complete input assumptions,Output metric,Independently checked value,Checked on
+Market return of 9% gives a 5-point premium,market,"{""beta"": 1.2, ""market_return"": 9, ""risk_free"": 4}",CAPM required annual return / cost of equity,10.0,2026-11-16
+Enter a known 5% premium directly,premium,"{""beta"": 1.2, ""premium"": 5, ""risk_free"": 4}",CAPM required annual return / cost of equity,10.0,2026-11-16
+Negative beta can imply a return below the risk-free rate,market,"{""beta"": -0.5, ""market_return"": 9, ""risk_free"": 4}",CAPM required annual return / cost of equity,1.5,2026-11-16

@@ -808,5 +808,10 @@
   "category": "Other",
   "title": "SBA Loan Calculator",
   "local_route": "/sba-loan-calculator.html"
-}
+},
+  {"id": "wacc", "category": "Other", "title": "WACC Calculator", "local_route": "/wacc-calculator.html"},
+  {"id": "capm", "category": "Investment", "title": "CAPM Calculator", "local_route": "/capm-calculator.html"},
+  {"id": "cd-early-withdrawal-penalty", "category": "Investment", "title": "CD Early Withdrawal Penalty Calculator", "local_route": "/cd-early-withdrawal-penalty-calculator.html"},
+  {"id": "burn-rate", "category": "Other", "title": "Burn Rate & Cash Runway Calculator", "local_route": "/burn-rate-calculator.html"},
+  {"id": "bond-duration", "category": "Investment", "title": "Bond Duration Calculator", "local_route": "/bond-duration-calculator.html"}
 ]

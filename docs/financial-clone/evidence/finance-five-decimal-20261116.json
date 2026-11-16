@@ -1,0 +1,229 @@
+{
+  "precision": 60,
+  "checkedOn": "2026-11-16",
+  "status": "13 published hypothetical cases verified; numerical cross-check, not an external professional review",
+  "cases": [
+    {
+      "calculator": "wacc",
+      "mode": "standard",
+      "case": "Debt and equity produce a 7.8% WACC",
+      "inputs": {
+        "equity": 600000,
+        "debt": 400000,
+        "equity_cost": 10,
+        "debt_cost": 6,
+        "tax": 25
+      },
+      "decimalResults": {
+        "Weighted average cost of capital": "7.80"
+      },
+      "publishedFocusDifference": "0.00"
+    },
+    {
+      "calculator": "wacc",
+      "mode": "preferred",
+      "case": "Preferred stock has a separate financing weight",
+      "inputs": {
+        "equity": 500000,
+        "debt": 300000,
+        "equity_cost": 10,
+        "debt_cost": 6,
+        "tax": 25,
+        "preferred": 200000,
+        "preferred_cost": 7
+      },
+      "decimalResults": {
+        "Weighted average cost of capital": "7.75"
+      },
+      "publishedFocusDifference": "0.00"
+    },
+    {
+      "calculator": "capm",
+      "mode": "market",
+      "case": "Market return of 9% gives a 5-point premium",
+      "inputs": {
+        "risk_free": 4,
+        "beta": 1.2,
+        "market_return": 9
+      },
+      "decimalResults": {
+        "CAPM required annual return / cost of equity": "10.0"
+      },
+      "publishedFocusDifference": "0.0"
+    },
+    {
+      "calculator": "capm",
+      "mode": "premium",
+      "case": "Enter a known 5% premium directly",
+      "inputs": {
+        "risk_free": 4,
+        "beta": 1.2,
+        "premium": 5
+      },
+      "decimalResults": {
+        "CAPM required annual return / cost of equity": "10.0"
+      },
+      "publishedFocusDifference": "0.0"
+    },
+    {
+      "calculator": "capm",
+      "mode": "market",
+      "case": "Negative beta can imply a return below the risk-free rate",
+      "inputs": {
+        "risk_free": 4,
+        "beta": -0.5,
+        "market_return": 9
+      },
+      "decimalResults": {
+        "CAPM required annual return / cost of equity": "1.5"
+      },
+      "publishedFocusDifference": "0.0"
+    },
+    {
+      "calculator": "bond-duration",
+      "mode": "fixed",
+      "case": "A ten-year semiannual 5% coupon bond",
+      "inputs": {
+        "face": 1000,
+        "coupon": 5,
+        "frequency": "2",
+        "periods": 20,
+        "shift": 1,
+        "yield": 6
+      },
+      "decimalResults": {
+        "Macaulay duration (years)": "7.89499734018234247051156615460382141996948182286748569367266",
+        "Modified duration (years)": "7.66504596134208006845783121806196254365969109016260746958511",
+        "Modeled bond price": "925.612625697722465868208757649383505658386806344138071874846",
+        "Convexity (years squared)": "71.7853980129000402869566946158226311872508236645137271123391",
+        "DV01: first-order value of one basis point": "0.709486331837156602426618370057127911414789694391863710306546"
+      },
+      "publishedFocusDifference": "6.845783121806196254365969109016260746958511E-17"
+    },
+    {
+      "calculator": "bond-duration",
+      "mode": "fixed",
+      "case": "Zero-coupon Macaulay duration equals remaining maturity",
+      "inputs": {
+        "face": 1000,
+        "coupon": 0,
+        "frequency": "2",
+        "periods": 20,
+        "shift": 1,
+        "yield": 6
+      },
+      "decimalResults": {
+        "Macaulay duration (years)": "1E+1",
+        "Modified duration (years)": "9.70873786407766990291262135922330097087378640776699029126214",
+        "Modeled bond price": "553.675754186334795209252545896301033950320838064828431249080",
+        "Convexity (years squared)": "98.9725704590442077481383730794608351399754925063625223866528",
+        "DV01: first-order value of one basis point": "0.537549275909062907970148102811942751408078483558085855581631"
+      },
+      "publishedFocusDifference": "0.0"
+    },
+    {
+      "calculator": "cd-early-withdrawal-penalty",
+      "mode": "days",
+      "case": "90 days of contract interest on a 365-day basis",
+      "inputs": {
+        "principal": 10000,
+        "accrued": 200,
+        "rate": 4.5,
+        "penalty_days": 90,
+        "day_basis": "365"
+      },
+      "decimalResults": {
+        "Early withdrawal penalty": "110.958904109589041095890410958904109589041095890410958904110",
+        "Estimated net proceeds after penalty": "10089.0410958904109589041095890410958904109589041095890410959",
+        "Principal reduction after accrued interest": "0"
+      },
+      "publishedFocusDifference": "9.589041095890410958904109589041095890410959E-13"
+    },
+    {
+      "calculator": "cd-early-withdrawal-penalty",
+      "mode": "months",
+      "case": "Three months of interest differs from 90 actual days",
+      "inputs": {
+        "principal": 10000,
+        "accrued": 200,
+        "rate": 4.5,
+        "penalty_months": 3
+      },
+      "decimalResults": {
+        "Early withdrawal penalty": "112.500",
+        "Estimated net proceeds after penalty": "10087.500",
+        "Principal reduction after accrued interest": "0"
+      },
+      "publishedFocusDifference": "0.000"
+    },
+    {
+      "calculator": "cd-early-withdrawal-penalty",
+      "mode": "dollars",
+      "case": "A known bank penalty can be entered directly",
+      "inputs": {
+        "principal": 10000,
+        "accrued": 200,
+        "penalty": 112.5
+      },
+      "decimalResults": {
+        "Early withdrawal penalty": "112.5",
+        "Estimated net proceeds after penalty": "10087.5",
+        "Principal reduction after accrued interest": "0"
+      },
+      "publishedFocusDifference": "0.0"
+    },
+    {
+      "calculator": "cd-early-withdrawal-penalty",
+      "mode": "days",
+      "case": "A penalty can reduce the returned principal",
+      "inputs": {
+        "principal": 10000,
+        "accrued": 20,
+        "rate": 4.5,
+        "penalty_days": 90,
+        "day_basis": "365"
+      },
+      "decimalResults": {
+        "Early withdrawal penalty": "110.958904109589041095890410958904109589041095890410958904110",
+        "Estimated net proceeds after penalty": "9909.04109589041095890410958904109589041095890410958904109589",
+        "Principal reduction after accrued interest": "90.958904109589041095890410958904109589041095890410958904110"
+      },
+      "publishedFocusDifference": "1.095890410958904109589041095890410958904110E-15"
+    },
+    {
+      "calculator": "burn-rate",
+      "mode": "monthly",
+      "case": "A cash reserve shortens usable runway",
+      "inputs": {
+        "cash": 100000,
+        "reserve": 10000,
+        "outflows": 25000,
+        "inflows": 10000
+      },
+      "decimalResults": {
+        "Monthly net operating cash burn": "15000",
+        "Months until entered cash reserve": "6",
+        "Months until zero cash": "6.66666666666666666666666666666666666666666666666666666666667"
+      },
+      "publishedFocusDifference": "0.0"
+    },
+    {
+      "calculator": "burn-rate",
+      "mode": "history",
+      "case": "Financing cannot conceal operating cash consumption",
+      "inputs": {
+        "start_cash": 100000,
+        "end_cash": 80000,
+        "excluded": 10000,
+        "months": 2,
+        "reserve": 10000
+      },
+      "decimalResults": {
+        "Monthly net operating cash burn": "15000",
+        "Months until entered cash reserve": "4.66666666666666666666666666666666666666666666666666666666667",
+        "Months until zero cash": "5.33333333333333333333333333333333333333333333333333333333333"
+      },
+      "publishedFocusDifference": "0.0"
+    }
+  ]
+}
