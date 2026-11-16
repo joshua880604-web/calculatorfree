@@ -4563,7 +4563,9 @@
       "topic": "Saving & investing",
       "breadcrumb": "IRR vs. NPV",
       "cardIntro": "See why IRR and NPV can rank projects differently. Reproduce a scale example, discount-rate sensitivity, two IRR roots and Excel timing formulas.",
-      "format": "Comparison & worked examples"
+      "format": "Comparison & worked examples",
+      "updatedOn": "2026-11-16",
+      "linksUpdatedOn": "2026-11-16"
     },
     "answer": "NPV estimates value in currency at a chosen discount rate. IRR is a rate that makes the same cash flows have zero NPV. They answer different questions: a higher percentage return can accompany a smaller dollar gain, and some cash-flow patterns have more than one IRR.",
     "intro": "Use both measures with the same cash-flow boundary and timing. This guide uses original one-year projects to isolate the effect of project size, then a two-year example to show why an IRR result can be ambiguous. Cash flows are hypothetical, end-of-year amounts; no investment return or financing offer is predicted.",
@@ -4706,7 +4708,8 @@
         "paragraphs": [
           "In Excel, enter the initial outlay in A1 and future annual receipts in A2 onward. For Project A, A1 is −1000 and A2 is 1500. The periodic formulas are =NPV(10%,A2)+A1 and =IRR(A1:A2). The first formula discounts the future receipt once and then adds the time-zero outlay without discounting it.",
           "Do not put a today outlay into the first future-period slot and assume timing is unchanged. Preserve explicit zero-flow periods rather than deleting them and pulling later receipts forward. A missing receipt in year 2 still occupies year 2.",
-          "The linked IRR calculator’s Unequal Annual Cash Flows mode accepts unequal amounts at equal annual intervals. The initial investment field is a positive cost, followed by the future annual amounts. It is not a dated XIRR tool. The present-value preset discounts the single future receipt; subtract the separately stated initial cost to obtain the NPV. That preset is not an arbitrary multi-flow NPV calculator."
+          "The NPV Calculator accepts the entire signed series, including the initial investment on its first, time-zero row. Select Annual spacing and a 10% effective annual discount rate for these one-year projects. The linked IRR calculator’s Unequal Annual Cash Flows mode still uses equal annual intervals; enter its initial investment as a positive cost and later amounts in their annual slots. This differs from the NPV tool’s signed list. That IRR mode is not a dated XIRR tool. For irregular dates, the NPV Calculator has a separate ACT/365 XNPV mode, which does not calculate a dated IRR.",
+          "The earlier Present Value Calculator links remain a separate arithmetic check: discount the future receipt and subtract the initial cost yourself. When using the NPV Calculator presets, that initial negative cash flow is already included, so do not subtract it a second time."
         ],
         "links": [
           {
@@ -4750,7 +4753,7 @@
       },
       {
         "question": "Does the present-value calculator return the NPV of every project?",
-        "answer": "No. The linked lump-sum example discounts one future receipt, and the initial cost is subtracted separately. The calculator’s annuity mode models its stated equal-payment structure. Arbitrary dated cash flows require an appropriate separate model."
+        "answer": "No. That lump-sum preset discounts one future receipt, with the initial cost subtracted separately. Use the NPV Calculator to include the initial investment and later signed cash flows in one result. Its periodic and actual-date modes have different timing conventions; select the one matching your inputs."
       }
     ],
     "sources": [
@@ -4792,6 +4795,27 @@
       }
     ],
     "presets": [
+      {
+        "label": "Project A: calculate NPV including the initial investment",
+        "path": "/npv-calculator",
+        "mode": "periodic",
+        "values": {
+          "flows": "-1000\n1500",
+          "frequency": "Annual",
+          "rate": 10
+        },
+        "featured": true
+      },
+      {
+        "label": "Project B: calculate NPV including the initial investment",
+        "path": "/npv-calculator",
+        "mode": "periodic",
+        "values": {
+          "flows": "-10000\n13000",
+          "frequency": "Annual",
+          "rate": 10
+        }
+      },
       {
         "label": "Project A: calculate the one-year IRR",
         "path": "/irr-calculator",
