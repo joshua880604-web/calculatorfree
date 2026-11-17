@@ -2,6 +2,7 @@ import type { Metric, Result } from "./types";
 
 // Complex tax forms, multi-debt entry sheets and the 401(k) story keep their wider flow.
 export const workspaceIds = [
+  "mortgage-buydown","cash-secured-put","profitability-index","return-on-equity","72t",
   "wacc","capm","cd-early-withdrawal-penalty","burn-rate","bond-duration",
   'stock-profit','stock-average',
   'seller-financing','fix-and-flip',
@@ -27,6 +28,10 @@ export function workspaceLayout(id: string, mode: string): "split" | "stacked" |
 }
 
 const priorities: Record<string, string[]> = {
+  'mortgage-buydown': ['First-year borrower monthly P&I','Contract monthly P&I at note rate','Total temporary subsidy funding','Monthly P&I after buydown'],
+  'cash-secured-put': ['Modeled expiration profit / loss','Cash secured at strike × shares','Expiration breakeven per share','Maximum expiration loss at zero stock price'],
+  '72t': ['Estimated first-year annual SEPP amount','Annual amount / 12 for budgeting','Earliest general duration milestone'],
+  'return-on-equity:dupont': ['Return on equity','Net profit margin','Asset turnover','Equity multiplier'],
  'stock-profit':['Net profit / loss before income tax','Net return on purchase cost','Break-even sale price per share','Total trading fees'],
  'stock-average':['Average cost per share including buy fees','Total shares held','Total purchase cost including fees','Unrealized gain / loss before sale fees and tax'],
  'seller-financing':['Regular monthly payment','Balloon principal after final installment','Total due in final month','Total interest through maturity'],

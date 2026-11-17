@@ -10,6 +10,12 @@ export function directoryGroup(id:string,_category?:string){
  return group.id;
 }
 const toolAliases:Record<string,string[]>={
+"mortgage-buydown":["2-1 buydown calculator", "3-2-1 buydown calculator", "1-0 buydown", "1-1 buydown", "temporary interest rate buydown"],
+"cash-secured-put":["cash secured put calculator", "CSP calculator", "short put breakeven", "cash secured put return"],
+"profitability-index":["profitability index calculator", "PI calculator", "profitability index vs NPV", "discounted cash flow ratio"],
+"return-on-equity":["ROE calculator", "return on shareholders equity", "DuPont calculator", "three factor DuPont analysis"],
+"72t":["72t calculator", "72(t) calculator", "SEPP calculator", "substantially equal periodic payments", "fixed annuitization calculator"],
+
  'wacc':['weighted average cost of capital','after-tax cost of debt','preferred stock WACC'],
  'capm':['capital asset pricing model','cost of equity','market risk premium','beta required return'],
  'bond-duration':['Macaulay duration','modified duration','bond convexity','DV01','interest rate sensitivity'],

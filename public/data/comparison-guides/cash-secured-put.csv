@@ -1,0 +1,2 @@
+Case,Mode,Input assumptions,Result label,Expected value
+Expiration stock 0,expiration,strike = 50; premium = 2.5; contracts = 2; multiplier = 100; fees = 4; stock = 0,Modeled expiration profit / loss,-9504.0

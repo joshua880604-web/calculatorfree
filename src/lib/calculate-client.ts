@@ -11,6 +11,12 @@ const loaders: Record<string, () => Promise<Calculator[]>> = {
 const businessTools = () => import('./calculators/business-tools').then(m => m.businessTools);
 const strategyTools=()=>import('./calculators/debt-strategies').then(m=>[m.debtSnowball,m.debtAvalanche]);
 const dataTools: Record<string, () => Promise<Calculator[]>> = {
+  'mortgage-buydown':()=>import('./calculators/mortgage-buydown').then(m=>[m.mortgageBuydownCalculator]),
+  'cash-secured-put':()=>import('./calculators/cash-secured-put').then(m=>[m.cashSecuredPutCalculator]),
+  'profitability-index':()=>import('./calculators/profitability-index').then(m=>[m.profitabilityIndexCalculator]),
+  'return-on-equity':()=>import('./calculators/return-on-equity').then(m=>[m.returnOnEquityCalculator]),
+  '72t':()=>import('./calculators/sepp').then(m=>[m.seppCalculator]),
+
   'wacc':()=>import('./calculators/wacc').then(m=>[m.waccCalculator]),
   'capm':()=>import('./calculators/capm').then(m=>[m.capmCalculator]),
   'cd-early-withdrawal-penalty':()=>import('./calculators/cd-penalty').then(m=>[m.cdPenaltyCalculator]),

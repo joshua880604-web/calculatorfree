@@ -813,5 +813,10 @@
   {"id": "capm", "category": "Investment", "title": "CAPM Calculator", "local_route": "/capm-calculator.html"},
   {"id": "cd-early-withdrawal-penalty", "category": "Investment", "title": "CD Early Withdrawal Penalty Calculator", "local_route": "/cd-early-withdrawal-penalty-calculator.html"},
   {"id": "burn-rate", "category": "Other", "title": "Burn Rate & Cash Runway Calculator", "local_route": "/burn-rate-calculator.html"},
-  {"id": "bond-duration", "category": "Investment", "title": "Bond Duration Calculator", "local_route": "/bond-duration-calculator.html"}
+  {"id": "bond-duration", "category": "Investment", "title": "Bond Duration Calculator", "local_route": "/bond-duration-calculator.html"},
+  {"id": "mortgage-buydown", "category": "Mortgage and Real Estate", "title": "Mortgage Buydown Calculator", "local_route": "/mortgage-buydown-calculator.html"},
+  {"id": "cash-secured-put", "category": "Investment", "title": "Cash-Secured Put Calculator", "local_route": "/cash-secured-put-calculator.html"},
+  {"id": "profitability-index", "category": "Investment", "title": "Profitability Index Calculator", "local_route": "/profitability-index-calculator.html"},
+  {"id": "return-on-equity", "category": "Other", "title": "Return on Equity Calculator", "local_route": "/return-on-equity-calculator.html"},
+  {"id": "72t", "category": "Retirement", "title": "72(t) / SEPP Calculator", "local_route": "/72t-calculator.html"}
 ]

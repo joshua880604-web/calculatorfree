@@ -1,3 +1,4 @@
+import financeNextFiveTerms from './finance-next-five-glossary.json';
 import financeFiveTerms from './finance-five-glossary.json';
 import businessTerms from './business-two-glossary.json';
 import { calculatorPresetHref } from './preset-links';
@@ -23,7 +24,7 @@ export type GlossaryTerm = {
 };
 export const glossaryCategories=['Saving & investing','Retirement','Loans & debt','Housing & property','Tax & income','Business & pricing','Everyday money'];
 export const glossaryPath='/glossary/';
-export const glossaryTerms=[...data,...companionTerms,...businessTerms,...financeFiveTerms] as GlossaryTerm[];
+export const glossaryTerms=[...data,...companionTerms,...businessTerms,...financeFiveTerms,...financeNextFiveTerms] as GlossaryTerm[];
 const newToolGlossaryLinks:Record<string,{id:string;text:string}[]>={
  'certificate-of-deposit':[{id:'cd-ladder',text:'Build staggered maturities and compare reinvestment with retained cash.'}],
  'net-present-value':[{id:'npv',text:'Discount periodic or actual-date signed cash flows, including the time-zero investment.'}],
@@ -33,7 +34,7 @@ const newToolGlossaryLinks:Record<string,{id:string;text:string}[]>={
 };
 for(const term of glossaryTerms)if(newToolGlossaryLinks[term.slug]){term.tools=[...term.tools,...newToolGlossaryLinks[term.slug]];term.checkedOn='2026-11-06';}
 export const expandedGlossarySlugs=['health-savings-account','brrrr-method','sequence-of-returns-risk','return-on-ad-spend','landed-cost','cost-basis','house-hacking','loan-seasoning','cash-out-refinance','withdrawal-rate','after-repair-value','vacancy-rate','capital-expenditure','debt-service-coverage-ratio','dividend-yield'];
-expandedGlossarySlugs.push(...financeFiveTerms.map(term=>term.slug),...businessTerms.map(term=>term.slug),'dollar-cost-averaging',...companionTerms.map(term=>term.slug));
+expandedGlossarySlugs.push(...financeNextFiveTerms.map(term=>term.slug),...financeFiveTerms.map(term=>term.slug),...businessTerms.map(term=>term.slug),'dollar-cost-averaging',...companionTerms.map(term=>term.slug));
 export const glossaryTermPath=(slug:string)=>`${glossaryPath}${slug}/`;
 export const glossaryTerm=(slug:string)=>glossaryTerms.find(term=>term.slug===slug);
 export const glossaryForCalculator=(id:string)=>glossaryTerms.filter(term=>term.tools.some(tool=>tool.id===id));

@@ -1,0 +1,428 @@
+{
+  "precision": 60,
+  "generatedOn": "2026-11-17",
+  "method": "Independent Python Decimal; mortgage PV sum; SEPP annuity backward recursion; IRS rounded example reconciliation",
+  "tableSHA256": "80cb07163e1a2e1546b81dced2f462cf47e2ff7fcbcd4cc5fd4bb76053837812",
+  "fixtures": [
+    {
+      "id": "mortgage-buydown",
+      "mode": "2-1",
+      "values": {
+        "principal": 300000,
+        "rate": 7,
+        "months": 360
+      },
+      "expected": {
+        "First-year borrower monthly P&I": "1610.46486903641695448547773733766358041451957055147461380003",
+        "Contract monthly P&I at note rate": "1995.90748553754944064134569378947468174314656465412273215914",
+        "Total temporary subsidy funding": "6992.38231896509691627395903025429645552774397521007816049052"
+      },
+      "title": "2-1 payments at original principal and term"
+    },
+    {
+      "id": "mortgage-buydown",
+      "mode": "3-2-1",
+      "values": {
+        "principal": 300000,
+        "rate": 7,
+        "months": 360
+      },
+      "expected": {
+        "First-year borrower monthly P&I": "1432.24588639637847713406463223277117064581103612799859933892",
+        "Contract monthly P&I at note rate": "1995.90748553754944064134569378947468174314656465412273215914",
+        "Total temporary subsidy funding": "13756.3215086591484783613317689347385886957703175235677543332"
+      },
+      "title": "3-2-1 payments at original principal and term"
+    },
+    {
+      "id": "mortgage-buydown",
+      "mode": "1-0",
+      "values": {
+        "principal": 300000,
+        "rate": 7,
+        "months": 360
+      },
+      "expected": {
+        "First-year borrower monthly P&I": "1798.65157545825718377438373105342774511112822748926433714404",
+        "Contract monthly P&I at note rate": "1995.90748553754944064134569378947468174314656465412273215914",
+        "Total temporary subsidy funding": "2367.07092095150708240354355283256323958422004597830074018120"
+      },
+      "title": "1-0 payments at original principal and term"
+    },
+    {
+      "id": "mortgage-buydown",
+      "mode": "1-1",
+      "values": {
+        "principal": 300000,
+        "rate": 7,
+        "months": 360
+      },
+      "expected": {
+        "First-year borrower monthly P&I": "1798.65157545825718377438373105342774511112822748926433714404",
+        "Contract monthly P&I at note rate": "1995.90748553754944064134569378947468174314656465412273215914",
+        "Total temporary subsidy funding": "4734.14184190301416480708710566512647916844009195660148036240"
+      },
+      "title": "1-1 payments at original principal and term"
+    },
+    {
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 0
+      },
+      "expected": {
+        "Modeled expiration profit / loss": "-9504.0",
+        "Expiration breakeven per share": "47.52",
+        "Maximum expiration loss at zero stock price": "9504.0"
+      },
+      "title": "Expiration stock 0"
+    },
+    {
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 45
+      },
+      "expected": {
+        "Modeled expiration profit / loss": "-504.0",
+        "Expiration breakeven per share": "47.52",
+        "Maximum expiration loss at zero stock price": "9504.0"
+      },
+      "title": "Expiration stock 45"
+    },
+    {
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 50
+      },
+      "expected": {
+        "Modeled expiration profit / loss": "496.0",
+        "Expiration breakeven per share": "47.52",
+        "Maximum expiration loss at zero stock price": "9504.0"
+      },
+      "title": "Expiration stock 50"
+    },
+    {
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 60
+      },
+      "expected": {
+        "Modeled expiration profit / loss": "496.0",
+        "Expiration breakeven per share": "47.52",
+        "Maximum expiration loss at zero stock price": "9504.0"
+      },
+      "title": "Expiration stock 60"
+    },
+    {
+      "id": "profitability-index",
+      "mode": "known-pv",
+      "values": {
+        "initial": 10000,
+        "pv": 12000
+      },
+      "expected": {
+        "Profitability index": "1.2",
+        "Net present value": "2000"
+      },
+      "title": "Already discounted future PV"
+    },
+    {
+      "id": "profitability-index",
+      "mode": "periodic",
+      "values": {
+        "initial": 10000,
+        "flows": "4000\n4000\n4000",
+        "frequency": "Annual",
+        "rate": 10
+      },
+      "expected": {
+        "Profitability index": "0.994740796393688955672426746806912096168294515401953418482344",
+        "Net present value": "-52.59203606311044327573253193087903831705484598046581517656"
+      },
+      "title": "Annual future flows start after time zero"
+    },
+    {
+      "id": "profitability-index",
+      "mode": "periodic",
+      "values": {
+        "initial": 10000,
+        "flows": "4000\n4000\n4000",
+        "frequency": "Quarterly",
+        "rate": 10
+      },
+      "expected": {
+        "Profitability index": "1.14437164941765028210109580160744676182780296847383281847263",
+        "Net present value": "1443.7164941765028210109580160744676182780296847383281847263"
+      },
+      "title": "Quarterly future flows start after time zero"
+    },
+    {
+      "id": "profitability-index",
+      "mode": "periodic",
+      "values": {
+        "initial": 10000,
+        "flows": "4000\n4000\n4000",
+        "frequency": "Monthly",
+        "rate": 10
+      },
+      "expected": {
+        "Profitability index": "1.18111340193322732361975853943295958807963637700907945577984",
+        "Net present value": "1811.1340193322732361975853943295958807963637700907945577984"
+      },
+      "title": "Monthly future flows start after time zero"
+    },
+    {
+      "id": "profitability-index",
+      "mode": "periodic",
+      "values": {
+        "initial": 1000,
+        "flows": "1500",
+        "frequency": "Annual",
+        "rate": 10
+      },
+      "expected": {
+        "Profitability index": "1.36363636363636363636363636363636363636363636363636363636364",
+        "Net present value": "363.63636363636363636363636363636363636363636363636363636364"
+      },
+      "title": "Project size 1000"
+    },
+    {
+      "id": "profitability-index",
+      "mode": "periodic",
+      "values": {
+        "initial": 10000,
+        "flows": "13000",
+        "frequency": "Annual",
+        "rate": 10
+      },
+      "expected": {
+        "Profitability index": "1.18181818181818181818181818181818181818181818181818181818182",
+        "Net present value": "1818.1818181818181818181818181818181818181818181818181818182"
+      },
+      "title": "Project size 10000"
+    },
+    {
+      "id": "return-on-equity",
+      "mode": "average",
+      "values": {
+        "income": 200000,
+        "equity": 1250000
+      },
+      "expected": {
+        "Return on equity": "16.00"
+      },
+      "title": "average income 200000"
+    },
+    {
+      "id": "return-on-equity",
+      "mode": "average",
+      "values": {
+        "income": -200000,
+        "equity": 1250000
+      },
+      "expected": {
+        "Return on equity": "-16.00"
+      },
+      "title": "average income -200000"
+    },
+    {
+      "id": "return-on-equity",
+      "mode": "balances",
+      "values": {
+        "income": 200000,
+        "begin_equity": 1000000,
+        "end_equity": 1500000
+      },
+      "expected": {
+        "Return on equity": "16.00"
+      },
+      "title": "balances income 200000"
+    },
+    {
+      "id": "return-on-equity",
+      "mode": "balances",
+      "values": {
+        "income": -200000,
+        "begin_equity": 1000000,
+        "end_equity": 1500000
+      },
+      "expected": {
+        "Return on equity": "-16.00"
+      },
+      "title": "balances income -200000"
+    },
+    {
+      "id": "return-on-equity",
+      "mode": "dupont",
+      "values": {
+        "income": 200000,
+        "equity": 1250000,
+        "sales": 2000000,
+        "assets": 2500000
+      },
+      "expected": {
+        "Return on equity": "16.00"
+      },
+      "title": "dupont income 200000"
+    },
+    {
+      "id": "return-on-equity",
+      "mode": "dupont",
+      "values": {
+        "income": -200000,
+        "equity": 1250000,
+        "sales": 2000000,
+        "assets": 2500000
+      },
+      "expected": {
+        "Return on equity": "-16.00"
+      },
+      "title": "dupont income -200000"
+    },
+    {
+      "id": "72t",
+      "mode": "rmd",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000
+      },
+      "expected": {
+        "Estimated first-year annual SEPP amount": "11049.7237569060773480662983425414364640883977900552486187845"
+      },
+      "title": "IRS age-50 first-year RMD method"
+    },
+    {
+      "id": "72t",
+      "mode": "amortization",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000,
+        "rate": 0.0,
+        "afr_prior": 0,
+        "afr_second": 0
+      },
+      "expected": {
+        "Estimated first-year annual SEPP amount": "11049.7237569060773480662983425414364640883977900552486187845",
+        "Calculation divisor / annuity factor": "36.2"
+      },
+      "title": "Fixed amortization rate 0"
+    },
+    {
+      "id": "72t",
+      "mode": "annuitization",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000,
+        "rate": 0.0,
+        "afr_prior": 0,
+        "afr_second": 0
+      },
+      "expected": {
+        "Estimated first-year annual SEPP amount": "11194.1002659126858541831168235734109821643577244720319418505",
+        "Calculation divisor / annuity factor": "35.7331085570178156068195762166786678531663770126594503222122"
+      },
+      "title": "Mortality annuity-immediate rate 0"
+    },
+    {
+      "id": "72t",
+      "mode": "amortization",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000,
+        "rate": 4.0,
+        "afr_prior": 0,
+        "afr_second": 0
+      },
+      "expected": {
+        "Estimated first-year annual SEPP amount": "21101.6325300052330775362806113696121582734461947688497385321",
+        "Calculation divisor / annuity factor": "18.9558793345123616562985478875382470701674870276548303215570"
+      },
+      "title": "Fixed amortization rate 0.04"
+    },
+    {
+      "id": "72t",
+      "mode": "annuitization",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000,
+        "rate": 4.0,
+        "afr_prior": 0,
+        "afr_second": 0
+      },
+      "expected": {
+        "Estimated first-year annual SEPP amount": "22030.3272400791418387356299204035846958821744921464880933234",
+        "Calculation divisor / annuity factor": "18.1567888502487373103976067418317107203159705314796600545237"
+      },
+      "title": "Mortality annuity-immediate rate 0.04"
+    },
+    {
+      "id": "72t",
+      "mode": "amortization",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000,
+        "rate": 5.0,
+        "afr_prior": 0,
+        "afr_second": 0
+      },
+      "expected": {
+        "Estimated first-year annual SEPP amount": "24124.8939403561125081055941494028419511071251738711315777989",
+        "Calculation divisor / annuity factor": "16.5803837724185873850706231995672812503806772371738488580371"
+      },
+      "title": "Fixed amortization rate 0.05"
+    },
+    {
+      "id": "72t",
+      "mode": "annuitization",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000,
+        "rate": 5.0,
+        "afr_prior": 0,
+        "afr_second": 0
+      },
+      "expected": {
+        "Estimated first-year annual SEPP amount": "25218.3325101116876813408857313452449555764015386528979622369",
+        "Calculation divisor / annuity factor": "15.8614769568770535818446353616847541590067019729997651650044"
+      },
+      "title": "Mortality annuity-immediate rate 0.05"
+    }
+  ]
+}

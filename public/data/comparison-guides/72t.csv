@@ -1,0 +1,4 @@
+Case,Mode,Input assumptions,Result label,Expected value
+IRS age-50 first-year RMD method,rmd,birth = 1973-08-15; start = 2023-12-01; valuation = 2022-12-31; balance = 400000,Estimated first-year annual SEPP amount,11049.723756906078
+Fixed amortization rate 0.04,amortization,birth = 1973-08-15; start = 2023-12-01; valuation = 2022-12-31; balance = 400000; rate = 4.0; afr prior = 0; afr second = 0,Estimated first-year annual SEPP amount,21101.632530005234
+Mortality annuity-immediate rate 0.04,annuitization,birth = 1973-08-15; start = 2023-12-01; valuation = 2022-12-31; balance = 400000; rate = 4.0; afr prior = 0; afr second = 0,Estimated first-year annual SEPP amount,22030.327240079143

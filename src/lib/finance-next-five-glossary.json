@@ -1,0 +1,428 @@
+[
+  {
+    "slug": "temporary-mortgage-buydown",
+    "name": "Temporary mortgage buydown",
+    "title": "Temporary mortgage buydown: Formula, Example & Limits",
+    "description": "Compare 2-1 and 3-2-1 temporary mortgage subsidies, borrower payments and the unchanged note-rate loan balance.",
+    "category": "Housing & property",
+    "aliases": [
+      "2-1 buydown calculator",
+      "3-2-1 buydown calculator"
+    ],
+    "definition": "A temporary mortgage buydown uses subsidy funds to cover part of the early principal-and-interest payments. A 2-1 plan illustrates two years of reduced borrower payments; a 3-2-1 plan illustrates three. The mortgage note rate and lender payment remain unchanged.",
+    "explanation": "Separate three amounts: the borrower’s payment, the subsidy draw and the full payment credited to the loan. The note specifies the full obligation. A temporary agreement directs subsidy money to make up the difference during the introductory years. Calling the lower illustration a new contract interest rate gives the wrong balance and interest schedule.",
+    "formula": "Subsidy = full note-rate P&I − reduced borrower P&I",
+    "formulaNote": "Fixed-rate, monthly amortizing loans only. Tax, insurance, mortgage insurance and closing charges are excluded. No eligibility, approval, source-of-funds limits or unused subsidy refund is determined.",
+    "example": {
+      "title": "2-1 payments at original principal and term",
+      "intro": "principal = 300000; rate = 7; months = 360",
+      "steps": [
+        "Subsidy = full note-rate P&I − reduced borrower P&I.",
+        "With the stated assumptions, first-year borrower monthly p&i = 1,610.46."
+      ],
+      "answer": "First-year borrower monthly P&I: $1,610.46.",
+      "assumptions": "Fixed-rate, monthly amortizing loans only. Tax, insurance, mortgage insurance and closing charges are excluded. No eligibility, approval, source-of-funds limits or unused subsidy refund is determined.",
+      "calculator": {
+        "id": "mortgage-buydown",
+        "mode": "2-1",
+        "values": {
+          "principal": 300000,
+          "rate": 7,
+          "months": 360
+        },
+        "expected": [
+          {
+            "label": "First-year borrower monthly P&I",
+            "value": 1610.464869036417,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Is total subsidy the same as interest saved?",
+      "text": "No. It is funding used to cover part of the borrower’s payments. Contractual interest continues at the unchanged note rate."
+    },
+    "tools": [
+      {
+        "id": "mortgage-buydown",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      },
+      {
+        "id": "mortgage",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      }
+    ],
+    "related": [
+      "mortgage-points",
+      "amortization"
+    ],
+    "sources": [
+      {
+        "title": "Fannie Mae: Temporary interest rate buydowns",
+        "url": "https://selling-guide.fanniemae.com/sel/b2-1.4-04/temporary-interest-rate-buydowns"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "Fixed-rate, monthly amortizing loans only. Tax, insurance, mortgage insurance and closing charges are excluded. No eligibility, approval, source-of-funds limits or unused subsidy refund is determined.",
+    "guides": [
+      {
+        "title": "2-1 vs. 3-2-1 Buydown: Payments, Subsidy & Note Rate",
+        "path": "/guides/2-1-vs-3-2-1-mortgage-buydown/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does a 2-1 buydown reduce my loan balance faster?",
+        "answer": "Not in this model. Borrower money plus subsidy makes the same full lender payment, so the balance follows the original note-rate amortization."
+      },
+      {
+        "question": "Does the subsidy include property tax and insurance?",
+        "answer": "No. The tool calculates principal and interest only. Add escrow and other housing expenses separately."
+      }
+    ]
+  },
+  {
+    "slug": "cash-secured-put",
+    "name": "Cash-secured put",
+    "title": "Cash-secured put: Formula, Example & Limits",
+    "description": "Compare cash-secured puts with covered calls using explicit funding, fees, breakeven and expiration downside assumptions.",
+    "category": "Saving & investing",
+    "aliases": [
+      "cash secured put calculator",
+      "CSP calculator"
+    ],
+    "definition": "A cash-secured put combines a short put with cash available to buy the contract shares if assigned. Premium is limited; a large stock-price decline can produce a much larger loss. This worksheet isolates expiration outcomes and makes its cash denominator explicit.",
+    "explanation": "The cash-secured-put worksheet defines secured cash as strike price multiplied by total contract shares, before premium credit. At a $50 strike and 200 shares, that is $10,000. A broker may handle the premium, fees and buying power differently; this transparent denominator is not a margin requirement quote.",
+    "formula": "Expiration P&L = net premium − max(strike − stock price, 0) × shares",
+    "formulaNote": "Manual, standard share-delivery puts held to expiration. No live option chain, fair-value pricing, early-close model, assignment probability or tax calculation. Broker collateral rules can differ.",
+    "example": {
+      "title": "Expiration stock 0",
+      "intro": "strike = 50; premium = 2.5; contracts = 2; multiplier = 100; fees = 4; stock = 0",
+      "steps": [
+        "Expiration P&L = net premium − max(strike − stock price, 0) × shares.",
+        "With the stated assumptions, modeled expiration profit / loss = -9,504.00."
+      ],
+      "answer": "Modeled expiration profit / loss: $-9,504.00.",
+      "assumptions": "Manual, standard share-delivery puts held to expiration. No live option chain, fair-value pricing, early-close model, assignment probability or tax calculation. Broker collateral rules can differ.",
+      "calculator": {
+        "id": "cash-secured-put",
+        "mode": "expiration",
+        "values": {
+          "strike": 50,
+          "premium": 2.5,
+          "contracts": 2,
+          "multiplier": 100,
+          "fees": 4,
+          "stock": 0
+        },
+        "expected": [
+          {
+            "label": "Modeled expiration profit / loss",
+            "value": -9504.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Does the calculator use live option prices?",
+      "text": "No. Enter your own premium and scenario price. No real-time quote or valuation model is provided."
+    },
+    "tools": [
+      {
+        "id": "cash-secured-put",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      },
+      {
+        "id": "covered-call",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      }
+    ],
+    "related": [
+      "cost-basis",
+      "dividend-yield"
+    ],
+    "sources": [
+      {
+        "title": "Options Industry Council: Cash-secured put",
+        "url": "https://www.optionseducation.org/strategies/all-strategies/cash-secured-put"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "Manual, standard share-delivery puts held to expiration. No live option chain, fair-value pricing, early-close model, assignment probability or tax calculation. Broker collateral rules can differ.",
+    "guides": [
+      {
+        "title": "Cash-Secured Put vs. Covered Call: Funding & Expiration Payoff",
+        "path": "/guides/cash-secured-put-vs-covered-call/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the maximum loss on a cash-secured put?",
+        "answer": "In this expiration model, strike × total shares minus net premium, assuming the stock goes to zero. Fees reduce net premium and increase that loss."
+      },
+      {
+        "question": "Is secured cash the same as naked-put margin?",
+        "answer": "No. This worksheet uses the full strike-based share purchase amount before premium credit. Broker margin and buying power are separate."
+      }
+    ]
+  },
+  {
+    "slug": "profitability-index",
+    "name": "Profitability index",
+    "title": "Profitability index: Formula, Example & Limits",
+    "description": "Calculate PI alongside NPV, separate time-zero investment from future flows and see why project size can reverse rankings.",
+    "category": "Saving & investing",
+    "aliases": [
+      "profitability index calculator",
+      "PI calculator"
+    ],
+    "definition": "Profitability index expresses future net cash-flow present value per dollar of initial investment. NPV expresses the difference in dollars. Keeping the time-zero outlay separate makes the two measures reconcile and avoids counting the initial investment twice.",
+    "explanation": "Enter the initial outlay as a positive denominator in its own field. In periodic mode, the first listed future cash flow occurs at the end of period one. Do not insert the initial outlay again as the first negative row. That would reduce the numerator and shift the intended timing of every flow.",
+    "formula": "PI = PV(future net cash flows) / initial outlay = 1 + NPV / initial outlay",
+    "formulaNote": "One positive initial outlay and manually entered future net flows or a known discounted PV. Periodic flows start at the end of period 1. This is not the alternative ratio of positive inflows to all outflows.",
+    "example": {
+      "title": "Already discounted future PV",
+      "intro": "initial = 10000; pv = 12000",
+      "steps": [
+        "PI = PV(future net cash flows) / initial outlay = 1 + NPV / initial outlay.",
+        "With the stated assumptions, profitability index = 1.200000."
+      ],
+      "answer": "Profitability index: 1.200000×.",
+      "assumptions": "One positive initial outlay and manually entered future net flows or a known discounted PV. Periodic flows start at the end of period 1. This is not the alternative ratio of positive inflows to all outflows.",
+      "calculator": {
+        "id": "profitability-index",
+        "mode": "known-pv",
+        "values": {
+          "initial": 10000,
+          "pv": 12000
+        },
+        "expected": [
+          {
+            "label": "Profitability index",
+            "value": 1.2,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Can I enter negative later cash flows?",
+      "text": "Yes. They stay in the numerator as future net flows. Do not confuse this definition with a ratio that moves every outflow into the denominator."
+    },
+    "tools": [
+      {
+        "id": "profitability-index",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      },
+      {
+        "id": "npv",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      }
+    ],
+    "related": [
+      "net-present-value",
+      "internal-rate-of-return"
+    ],
+    "sources": [
+      {
+        "title": "Corporate Finance Institute: Profitability index",
+        "url": "https://corporatefinanceinstitute.com/resources/accounting/profitability-index/"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "One positive initial outlay and manually entered future net flows or a known discounted PV. Periodic flows start at the end of period 1. This is not the alternative ratio of positive inflows to all outflows.",
+    "guides": [
+      {
+        "title": "Profitability Index vs. NPV: Formula, Timing & Project Size",
+        "path": "/guides/profitability-index-vs-npv/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What does PI equal to 1 mean?",
+        "answer": "Under this definition, future PV equals the initial outlay and NPV is zero. That is a model threshold, not a guarantee of a suitable investment."
+      },
+      {
+        "question": "Should I include the initial investment in the future cash-flow list?",
+        "answer": "No. Enter it once as a positive initial outlay. The list starts with the first future period-end flow."
+      }
+    ]
+  },
+  {
+    "slug": "return-on-equity",
+    "name": "Return on equity",
+    "title": "Return on equity: Formula, Example & Limits",
+    "description": "Calculate corporate ROE and three-factor DuPont using average equity, matched periods and clear treatment of invalid denominators.",
+    "category": "Business & pricing",
+    "aliases": [
+      "ROE calculator",
+      "return on shareholders equity"
+    ],
+    "definition": "Corporate return on equity compares period net income with average book equity. The three-factor DuPont identity separates the same ratio into profitability, asset turnover and leverage. Numerator, denominator and period must describe the same ownership scope.",
+    "explanation": "Use average book equity for the same period as income. If you only know beginning and ending equity, their arithmetic mean is a simple estimate. A large capital raise, buyback or restructuring during the period can make a time-weighted average more representative than the two endpoints.",
+    "formula": "ROE = net income / average equity; DuPont = margin × asset turnover × equity multiplier",
+    "formulaNote": "Manual corporate accounting ratios. No financial-statement retrieval, equity valuation or property cash-yield model. Nonpositive equity and equity crossings do not receive a healthy performance score.",
+    "example": {
+      "title": "average income 200000",
+      "intro": "income = 200000; equity = 1250000",
+      "steps": [
+        "ROE = net income / average equity; DuPont = margin × asset turnover × equity multiplier.",
+        "With the stated assumptions, return on equity = 16.00."
+      ],
+      "answer": "Return on equity: 16.00%.",
+      "assumptions": "Manual corporate accounting ratios. No financial-statement retrieval, equity valuation or property cash-yield model. Nonpositive equity and equity crossings do not receive a healthy performance score.",
+      "calculator": {
+        "id": "return-on-equity",
+        "mode": "average",
+        "values": {
+          "income": 200000,
+          "equity": 1250000
+        },
+        "expected": [
+          {
+            "label": "Return on equity",
+            "value": 16.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Is this a real estate return-on-equity calculator?",
+      "text": "No. It models corporate net income and average book equity, not property cash flow divided by current sale equity."
+    },
+    "tools": [
+      {
+        "id": "return-on-equity",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      },
+      {
+        "id": "roi",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      }
+    ],
+    "related": [
+      "return-on-investment",
+      "current-ratio"
+    ],
+    "sources": [
+      {
+        "title": "Harvard Business School Online: Return on equity",
+        "url": "https://online.hbs.edu/blog/post/return-on-equity-formula"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "Manual corporate accounting ratios. No financial-statement retrieval, equity valuation or property cash-yield model. Nonpositive equity and equity crossings do not receive a healthy performance score.",
+    "guides": [
+      {
+        "title": "ROE & DuPont Analysis: Average Equity, Margin & Leverage",
+        "path": "/guides/roe-dupont-analysis/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Should I use beginning, ending or average equity?",
+        "answer": "Use a representative average for the income period. The two-point mode averages beginning and ending balances; it may miss material changes during the period."
+      },
+      {
+        "question": "Can ROE be negative?",
+        "answer": "Yes. A loss divided by positive average equity gives negative ROE. Nonpositive equity needs a different interpretation and is flagged here."
+      }
+    ]
+  },
+  {
+    "slug": "substantially-equal-periodic-payments",
+    "name": "Substantially equal periodic payments (SEPP)",
+    "title": "Substantially equal periodic payments (SEPP): Formula, Example & Limits",
+    "description": "Compare three first-year SEPP methods with the IRS age-50 example, interest-rate ceiling, duration and single-life IRA scope.",
+    "category": "Retirement",
+    "aliases": [
+      "72t calculator",
+      "72(t) calculator"
+    ],
+    "definition": "A substantially equal periodic payment series may qualify for an exception to the 10% additional tax on early retirement distributions if its requirements are satisfied. Notice 2022-6 describes three calculation methods. The amount alone does not establish or qualify a series.",
+    "explanation": "The RMD method divides the relevant account balance by a permitted life-expectancy factor for the distribution year. In this single-life worksheet, age means age on the owner’s birthday in that calendar year. The first estimate uses the prior December 31 balance; later annual amounts require new balances and age factors rather than freezing the first output.",
+    "formula": "RMD: balance / expectancy; amortization: balance / level-payment factor; annuitization: balance / mortality annuity factor",
+    "formulaNote": "First-year estimates for a new single-life traditional IRA series starting from 2023 onward under the rules checked here. No joint lives, inherited accounts, pre-2023 transition, first-year proration, tax eligibility, recapture calculation or installment administration.",
+    "example": {
+      "title": "IRS age-50 first-year RMD method",
+      "intro": "birth = 1973-08-15; start = 2023-12-01; valuation = 2022-12-31; balance = 400000",
+      "steps": [
+        "RMD: balance / expectancy; amortization: balance / level-payment factor; annuitization: balance / mortality annuity factor.",
+        "Age on the 2023 birthday is 50; use Single Life expectancy 36.2. Fixed methods use a selected annual rate of 4%.",
+        "With the stated assumptions, estimated first-year annual sepp amount = 11,049.72."
+      ],
+      "answer": "Estimated first-year annual SEPP amount: $11,049.72.",
+      "assumptions": "First-year estimates for a new single-life traditional IRA series starting from 2023 onward under the rules checked here. No joint lives, inherited accounts, pre-2023 transition, first-year proration, tax eligibility, recapture calculation or installment administration.",
+      "calculator": {
+        "id": "72t",
+        "mode": "rmd",
+        "values": {
+          "birth": "1973-08-15",
+          "start": "2023-12-01",
+          "valuation": "2022-12-31",
+          "balance": 400000
+        },
+        "expected": [
+          {
+            "label": "Estimated first-year annual SEPP amount",
+            "value": 11049.723756906078,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Are the payments automatically tax-free?",
+      "text": "No. An exception may address the 10% additional tax; ordinary income tax and other requirements can still apply. The tool does not determine eligibility."
+    },
+    "tools": [
+      {
+        "id": "72t",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      },
+      {
+        "id": "ira",
+        "text": "Inspect the inputs, result and stated assumptions for this related task."
+      }
+    ],
+    "related": [
+      "withdrawal-rate",
+      "sequence-of-returns-risk"
+    ],
+    "sources": [
+      {
+        "title": "IRS: Notice 2022-6",
+        "url": "https://www.irs.gov/pub/irs-drop/n-22-06.pdf"
+      },
+      {
+        "title": "eCFR: 26 CFR 1.401(a)(9)-9",
+        "url": "https://www.ecfr.gov/current/title-26/section-1.401(a)(9)-9"
+      },
+      {
+        "title": "IRS: Substantially equal periodic payments",
+        "url": "https://www.irs.gov/retirement-plans/substantially-equal-periodic-payments"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "First-year estimates for a new single-life traditional IRA series starting from 2023 onward under the rules checked here. No joint lives, inherited accounts, pre-2023 transition, first-year proration, tax eligibility, recapture calculation or installment administration.",
+    "guides": [
+      {
+        "title": "72(t) / SEPP Methods: Annual Amounts, Rates & Duration",
+        "path": "/guides/72t-sepp-methods-and-rules/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is 72(t) the same as SEPP?",
+        "answer": "SEPP is a substantially equal periodic payment series associated with an exception under Section 72(t). This page groups the related calculator task and compares three methods."
+      },
+      {
+        "question": "Does the RMD method mean I already owe an age-based RMD?",
+        "answer": "No. SEPP can use an RMD calculation method before the age for ordinary owner RMD obligations. The tasks and applicable rules differ."
+      }
+    ]
+  }
+]

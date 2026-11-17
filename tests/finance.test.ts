@@ -78,10 +78,10 @@ test("debt avalanche zero-rate independent fixture", () => {
   close(result.metrics[2].value, 1500);
 });
 test("scope preserves financial entries, evergreen tools and four mortgage decision tools", () => {
-  assert.equal(calculators.filter(c=>c.category!=="Everyday Tools").length,134);
-  assert.equal(calculators.length, 139);
-  assert.equal(new Set(calculators.map((c) => c.id)).size, 139);
-  assert.equal(new Set(calculators.map((c) => routeFor(c.id))).size, 139);
+  assert.equal(calculators.filter(c=>c.category!=="Everyday Tools").length,139);
+  assert.equal(calculators.length, 144);
+  assert.equal(new Set(calculators.map((c) => c.id)).size, 144);
+  assert.equal(new Set(calculators.map((c) => routeFor(c.id))).size, 144);
   assert.equal(calculators.filter((c) => c.directory).length, 1);
   assert.equal(routeFor("income-tax"), "/tax-calculator.html");
   assert.equal(routeFor("debt-to-income-ratio"), "/debt-ratio-calculator.html");

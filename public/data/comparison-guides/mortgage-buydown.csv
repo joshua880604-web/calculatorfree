@@ -1,0 +1,5 @@
+Case,Mode,Input assumptions,Result label,Expected value
+2-1 payments at original principal and term,2-1,principal = 300000; rate = 7; months = 360,First-year borrower monthly P&I,1610.464869036417
+3-2-1 payments at original principal and term,3-2-1,principal = 300000; rate = 7; months = 360,First-year borrower monthly P&I,1432.2458863963784
+1-0 payments at original principal and term,1-0,principal = 300000; rate = 7; months = 360,First-year borrower monthly P&I,1798.6515754582572
+1-1 payments at original principal and term,1-1,principal = 300000; rate = 7; months = 360,First-year borrower monthly P&I,1798.6515754582572

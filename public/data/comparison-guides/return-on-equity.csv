@@ -1,0 +1,4 @@
+Case,Mode,Input assumptions,Result label,Expected value
+average income 200000,average,income = 200000; equity = 1250000,Return on equity,16.0
+balances income 200000,balances,income = 200000; begin equity = 1000000; end equity = 1500000,Return on equity,16.0
+dupont income 200000,dupont,income = 200000; equity = 1250000; sales = 2000000; assets = 2500000,Return on equity,16.0

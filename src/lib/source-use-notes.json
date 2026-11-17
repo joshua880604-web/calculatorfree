@@ -1572,6 +1572,41 @@
       "role": "background",
       "usedFor": "A worked cash-burn worksheet and the distinction between cash resources and cash consumption.",
       "scope": "Not an accounting-classification rule or cash-flow forecast. Our gross/net definitions, signed financing/non-operating adjustments and reserve threshold are explicitly stated model choices."
+    },
+    "https://selling-guide.fanniemae.com/sel/b2-1.4-04/temporary-interest-rate-buydowns": {
+      "role": "method",
+      "usedFor": "Note terms, subsidy agreements and qualifying within its loan-program scope.",
+      "scope": "Its requirements do not establish universal loan eligibility or seller-credit limits."
+    },
+    "https://www.optionseducation.org/strategies/all-strategies/cash-secured-put": {
+      "role": "method",
+      "usedFor": "Strategy mechanics, assignment, breakeven and limited-premium/substantial-downside structure.",
+      "scope": "Our fees, denominator and scenario amounts are explicit worksheet assumptions, not broker quotes."
+    },
+    "https://corporatefinanceinstitute.com/resources/accounting/profitability-index/": {
+      "role": "method",
+      "usedFor": "The PV-to-initial-investment definition, interpretation and relationship to NPV.",
+      "scope": "Our periodic timing, negative-flow convention and project examples are stated separately."
+    },
+    "https://online.hbs.edu/blog/post/return-on-equity-formula": {
+      "role": "method",
+      "usedFor": "Average-equity ROE and the profitability, turnover and leverage components.",
+      "scope": "Not a stock valuation, universal performance benchmark or validation of user financial statements."
+    },
+    "https://www.irs.gov/pub/irs-drop/n-22-06.pdf": {
+      "role": "rule",
+      "usedFor": "Methods, applicable periods, rate limits, account valuation and permitted one-time method change.",
+      "scope": "New-series single-life worksheet only; other permitted tables and individual tax facts are outside scope."
+    },
+    "https://www.ecfr.gov/current/title-26/section-1.401(a)(9)-9": {
+      "role": "rule",
+      "usedFor": "Single Life factors in Table 1 and mortality probabilities in Table 4.",
+      "scope": "Annual annuity-immediate sum through terminal age 120 is a disclosed numerical horizon; joint lives are unsupported."
+    },
+    "https://www.irs.gov/retirement-plans/substantially-equal-periodic-payments": {
+      "role": "rule",
+      "usedFor": "Official rounded age-50 examples, general duration and installment explanations.",
+      "scope": "FAQ is general information and is not legal authority; consult the notice and applicable law."
     }
   },
   "pages": {
@@ -3439,6 +3474,201 @@
           "role": "background",
           "usedFor": "A worked cash-burn worksheet and the distinction between cash resources and cash consumption.",
           "scope": "Not an accounting-classification rule or cash-flow forecast. Our gross/net definitions, signed financing/non-operating adjustments and reserve threshold are explicitly stated model choices."
+        }
+      }
+    },
+    "calculator:mortgage-buydown": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://selling-guide.fanniemae.com/sel/b2-1.4-04/temporary-interest-rate-buydowns": {
+          "role": "method",
+          "usedFor": "Note terms, subsidy agreements and qualifying within its loan-program scope.",
+          "scope": "Its requirements do not establish universal loan eligibility or seller-credit limits."
+        }
+      }
+    },
+    "guide:/guides/2-1-vs-3-2-1-mortgage-buydown/": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://selling-guide.fanniemae.com/sel/b2-1.4-04/temporary-interest-rate-buydowns": {
+          "role": "method",
+          "usedFor": "Note terms, subsidy agreements and qualifying within its loan-program scope.",
+          "scope": "Its requirements do not establish universal loan eligibility or seller-credit limits."
+        }
+      }
+    },
+    "glossary:temporary-mortgage-buydown": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://selling-guide.fanniemae.com/sel/b2-1.4-04/temporary-interest-rate-buydowns": {
+          "role": "method",
+          "usedFor": "Note terms, subsidy agreements and qualifying within its loan-program scope.",
+          "scope": "Its requirements do not establish universal loan eligibility or seller-credit limits."
+        }
+      }
+    },
+    "calculator:cash-secured-put": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.optionseducation.org/strategies/all-strategies/cash-secured-put": {
+          "role": "method",
+          "usedFor": "Strategy mechanics, assignment, breakeven and limited-premium/substantial-downside structure.",
+          "scope": "Our fees, denominator and scenario amounts are explicit worksheet assumptions, not broker quotes."
+        }
+      }
+    },
+    "guide:/guides/cash-secured-put-vs-covered-call/": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.optionseducation.org/strategies/all-strategies/cash-secured-put": {
+          "role": "method",
+          "usedFor": "Strategy mechanics, assignment, breakeven and limited-premium/substantial-downside structure.",
+          "scope": "Our fees, denominator and scenario amounts are explicit worksheet assumptions, not broker quotes."
+        }
+      }
+    },
+    "glossary:cash-secured-put": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.optionseducation.org/strategies/all-strategies/cash-secured-put": {
+          "role": "method",
+          "usedFor": "Strategy mechanics, assignment, breakeven and limited-premium/substantial-downside structure.",
+          "scope": "Our fees, denominator and scenario amounts are explicit worksheet assumptions, not broker quotes."
+        }
+      }
+    },
+    "calculator:profitability-index": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://corporatefinanceinstitute.com/resources/accounting/profitability-index/": {
+          "role": "method",
+          "usedFor": "The PV-to-initial-investment definition, interpretation and relationship to NPV.",
+          "scope": "Our periodic timing, negative-flow convention and project examples are stated separately."
+        }
+      }
+    },
+    "guide:/guides/profitability-index-vs-npv/": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://corporatefinanceinstitute.com/resources/accounting/profitability-index/": {
+          "role": "method",
+          "usedFor": "The PV-to-initial-investment definition, interpretation and relationship to NPV.",
+          "scope": "Our periodic timing, negative-flow convention and project examples are stated separately."
+        }
+      }
+    },
+    "glossary:profitability-index": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://corporatefinanceinstitute.com/resources/accounting/profitability-index/": {
+          "role": "method",
+          "usedFor": "The PV-to-initial-investment definition, interpretation and relationship to NPV.",
+          "scope": "Our periodic timing, negative-flow convention and project examples are stated separately."
+        }
+      }
+    },
+    "calculator:return-on-equity": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://online.hbs.edu/blog/post/return-on-equity-formula": {
+          "role": "method",
+          "usedFor": "Average-equity ROE and the profitability, turnover and leverage components.",
+          "scope": "Not a stock valuation, universal performance benchmark or validation of user financial statements."
+        }
+      }
+    },
+    "guide:/guides/roe-dupont-analysis/": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://online.hbs.edu/blog/post/return-on-equity-formula": {
+          "role": "method",
+          "usedFor": "Average-equity ROE and the profitability, turnover and leverage components.",
+          "scope": "Not a stock valuation, universal performance benchmark or validation of user financial statements."
+        }
+      }
+    },
+    "glossary:return-on-equity": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://online.hbs.edu/blog/post/return-on-equity-formula": {
+          "role": "method",
+          "usedFor": "Average-equity ROE and the profitability, turnover and leverage components.",
+          "scope": "Not a stock valuation, universal performance benchmark or validation of user financial statements."
+        }
+      }
+    },
+    "calculator:72t": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.irs.gov/pub/irs-drop/n-22-06.pdf": {
+          "role": "rule",
+          "usedFor": "Methods, applicable periods, rate limits, account valuation and permitted one-time method change.",
+          "scope": "New-series single-life worksheet only; other permitted tables and individual tax facts are outside scope."
+        },
+        "https://www.ecfr.gov/current/title-26/section-1.401(a)(9)-9": {
+          "role": "rule",
+          "usedFor": "Single Life factors in Table 1 and mortality probabilities in Table 4.",
+          "scope": "Annual annuity-immediate sum through terminal age 120 is a disclosed numerical horizon; joint lives are unsupported."
+        },
+        "https://www.irs.gov/retirement-plans/substantially-equal-periodic-payments": {
+          "role": "rule",
+          "usedFor": "Official rounded age-50 examples, general duration and installment explanations.",
+          "scope": "FAQ is general information and is not legal authority; consult the notice and applicable law."
+        }
+      }
+    },
+    "guide:/guides/72t-sepp-methods-and-rules/": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.irs.gov/pub/irs-drop/n-22-06.pdf": {
+          "role": "rule",
+          "usedFor": "Methods, applicable periods, rate limits, account valuation and permitted one-time method change.",
+          "scope": "New-series single-life worksheet only; other permitted tables and individual tax facts are outside scope."
+        },
+        "https://www.ecfr.gov/current/title-26/section-1.401(a)(9)-9": {
+          "role": "rule",
+          "usedFor": "Single Life factors in Table 1 and mortality probabilities in Table 4.",
+          "scope": "Annual annuity-immediate sum through terminal age 120 is a disclosed numerical horizon; joint lives are unsupported."
+        },
+        "https://www.irs.gov/retirement-plans/substantially-equal-periodic-payments": {
+          "role": "rule",
+          "usedFor": "Official rounded age-50 examples, general duration and installment explanations.",
+          "scope": "FAQ is general information and is not legal authority; consult the notice and applicable law."
+        }
+      }
+    },
+    "glossary:substantially-equal-periodic-payments": {
+      "updatedOn": "2026-11-17",
+      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.irs.gov/pub/irs-drop/n-22-06.pdf": {
+          "role": "rule",
+          "usedFor": "Methods, applicable periods, rate limits, account valuation and permitted one-time method change.",
+          "scope": "New-series single-life worksheet only; other permitted tables and individual tax facts are outside scope."
+        },
+        "https://www.ecfr.gov/current/title-26/section-1.401(a)(9)-9": {
+          "role": "rule",
+          "usedFor": "Single Life factors in Table 1 and mortality probabilities in Table 4.",
+          "scope": "Annual annuity-immediate sum through terminal age 120 is a disclosed numerical horizon; joint lives are unsupported."
+        },
+        "https://www.irs.gov/retirement-plans/substantially-equal-periodic-payments": {
+          "role": "rule",
+          "usedFor": "Official rounded age-50 examples, general duration and installment explanations.",
+          "scope": "FAQ is general information and is not legal authority; consult the notice and applicable law."
         }
       }
     }

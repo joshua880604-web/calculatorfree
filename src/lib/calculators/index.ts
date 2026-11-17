@@ -1,3 +1,8 @@
+import {mortgageBuydownCalculator} from './mortgage-buydown';
+import {cashSecuredPutCalculator} from './cash-secured-put';
+import {profitabilityIndexCalculator} from './profitability-index';
+import {returnOnEquityCalculator} from './return-on-equity';
+import {seppCalculator} from './sepp';
 import {waccCalculator} from './wacc';
 import {capmCalculator} from './capm';
 import {cdPenaltyCalculator} from './cd-penalty';
@@ -50,6 +55,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  mortgageBuydownCalculator,cashSecuredPutCalculator,profitabilityIndexCalculator,returnOnEquityCalculator,seppCalculator,
   waccCalculator,capmCalculator,cdPenaltyCalculator,burnRateCalculator,bondDurationCalculator,
   inventoryTurnoverCalculator,sbaLoanCalculator,
   cdLadderCalculator,npvCalculator,leaseVsBuyCarCalculator,mortgageComparisonCalculator,

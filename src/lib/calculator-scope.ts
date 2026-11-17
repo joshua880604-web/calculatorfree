@@ -4,6 +4,11 @@ import {roth401kComparisonScope} from './roth-401k-scope';
 // Scope labels describe implemented rules, not a promise of worldwide tax support.
 export function calculatorScope(id: string, mode: string, values: Values): string | undefined {
   switch (id) {
+    case "mortgage-buydown": return "Fixed-rate, monthly amortizing loans only. Tax, insurance, mortgage insurance and closing charges are excluded. No eligibility, approval, source-of-funds limits or unused subsidy refund is determined.";
+    case "cash-secured-put": return "Manual, standard share-delivery puts held to expiration. No live option chain, fair-value pricing, early-close model, assignment probability or tax calculation. Broker collateral rules can differ.";
+    case "profitability-index": return "One positive initial outlay and manually entered future net flows or a known discounted PV. Periodic flows start at the end of period 1. This is not the alternative ratio of positive inflows to all outflows.";
+    case "return-on-equity": return "Manual corporate accounting ratios. No financial-statement retrieval, equity valuation or property cash-yield model. Nonpositive equity and equity crossings do not receive a healthy performance score.";
+    case "72t": return "First-year estimates for a new single-life traditional IRA series starting from 2023 onward under the rules checked here. No joint lives, inherited accounts, pre-2023 transition, first-year proration, tax eligibility, recapture calculation or installment administration.";
     case 'wacc': return 'Annual capital costs weighted by entered market values; debt deductibility and tax rate are assumptions. No live company valuation or project recommendation.';
     case 'capm': return 'Manual annual risk and market assumptions; CAPM is one required-return model, not a realized-return forecast or estimate of beta from prices.';
     case 'bond-duration': return 'Fixed promised cash flows, full coupon periods and nominal annual yield at the coupon frequency. No accrued interest, embedded options, default or effective-duration valuation.';

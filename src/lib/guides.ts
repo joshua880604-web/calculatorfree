@@ -1,3 +1,4 @@
+import financeNextFiveContent from './finance-next-five-content.json';
 import financeFiveContent from './finance-five-content.json';
 import businessTwoContent from './business-two-content.json';
 import fourComparisonContent from './four-comparison-content.json';
@@ -1025,3 +1026,7 @@ for(const [id,links] of Object.entries({"inventory-turnover": ["current-ratio", 
 Object.assign(guides,financeFiveContent as unknown as Record<string,Guide>);
 const financeFiveRelated:Record<string,string[]>={"wacc": ["capm", "npv", "irr", "business-loan"], "capm": ["wacc", "investment", "average-return"], "cd-early-withdrawal-penalty": ["cd", "cd-ladder", "savings", "emergency-fund"], "burn-rate": ["current-ratio", "quick-ratio", "inventory-turnover", "business-loan"], "bond-duration": ["bond", "treasury-bill", "present-value"]};
 for(const [id,links] of Object.entries(financeFiveRelated)){relatedCalculatorIds[id]=links;for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])].slice(0,8);}
+
+Object.assign(guides,financeNextFiveContent as unknown as Record<string,Guide>);
+const nextFiveRelated:Record<string,string[]>={"mortgage-buydown": ["mortgage", "discount-points", "mortgage-comparison", "closing-cost"], "cash-secured-put": ["covered-call", "stock-profit", "stock-average"], "profitability-index": ["npv", "irr", "mirr", "payback-period"], "return-on-equity": ["roi", "current-ratio", "wacc"], "72t": ["ira", "retirement-withdrawal", "rmd", "roth-conversion-ladder"]};
+for(const [id,links] of Object.entries(nextFiveRelated)){relatedCalculatorIds[id]=links;for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])].slice(0,8);}
