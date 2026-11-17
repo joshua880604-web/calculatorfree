@@ -1,0 +1,4 @@
+Case,Mode,Input assumptions,Result label,Expected value
+purchases 365 days,purchases,days = 365; average ap = 50000; purchases = 500000,Days payable outstanding,36.5
+balances 365 days,balances,days = 365; begin ap = 40000; end ap = 60000; purchases = 500000,Days payable outstanding,36.5
+cogs 365 days,cogs,days = 365; average ap = 50000; cogs = 400000,Days payable outstanding,45.625

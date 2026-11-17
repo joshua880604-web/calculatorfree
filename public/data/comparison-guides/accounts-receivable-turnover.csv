@@ -1,0 +1,3 @@
+Case,Mode,Input assumptions,Result label,Expected value
+average 365 days,average,days = 365; credit sales = 300000; average ar = 25000,Receivables turnover in selected period,12.0
+balances 365 days,balances,days = 365; credit sales = 300000; begin ar = 20000; end ar = 30000,Receivables turnover in selected period,12.0

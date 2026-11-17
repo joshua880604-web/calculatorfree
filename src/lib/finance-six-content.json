@@ -1,0 +1,536 @@
+{
+  "credit-card-rewards": {
+    "checkedOn": "2026-11-17",
+    "summary": "Credit card reward value depends on eligible spending, earn rates, caps, redemption assumptions and fees. This worksheet separates recurring annual net value from a first-year bonus and compares two manual plans using the same spending budget.",
+    "scope": "Manual eligible-spending assumptions only. No issuer catalogue, live offer, automatic point valuation, approval or tax determination. Results are before unentered interest and other costs; all spending caps here are annual.",
+    "examples": [
+      {
+        "title": "Annual cash back cap 0",
+        "mode": "cashback",
+        "values": {
+          "spend_period": "Annual",
+          "categories": "12000, 3, 0\n18000, 1.5, 0",
+          "fallback": 1.5,
+          "annual_fee": 95,
+          "usable_credits": 0,
+          "bonus": 200
+        },
+        "inputs": "spend period = Annual; categories = 12000, 3, 0 / 18000, 1.5, 0; fallback = 1.5; annual fee = 95; usable credits = 0; bonus = 200",
+        "steps": [
+          "Recurring net = annual gross reward value + usable net credits − annual fee; points value = points × cents per point / 100.",
+          "With these inputs, gross modeled annual reward value = $630.00."
+        ],
+        "answer": "Gross modeled annual reward value: $630.00.",
+        "expected": {
+          "label": "Gross modeled annual reward value",
+          "value": 630.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Points at cents value 1",
+        "mode": "points",
+        "values": {
+          "spend_period": "Annual",
+          "categories": "30000, 2, 0",
+          "fallback": 1,
+          "cents_per_point": 1.0,
+          "annual_fee": 95,
+          "usable_credits": 0,
+          "bonus": 20000
+        },
+        "inputs": "spend period = Annual; categories = 30000, 2, 0; fallback = 1; cents per point = 1.0; annual fee = 95; usable credits = 0; bonus = 20000",
+        "steps": [
+          "Recurring net = annual gross reward value + usable net credits − annual fee; points value = points × cents per point / 100.",
+          "With these inputs, annual points / miles earned = $60,000.00."
+        ],
+        "answer": "Annual points / miles earned: $60,000.00.",
+        "expected": {
+          "label": "Annual points / miles earned",
+          "value": 60000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Flat plan rate A 2",
+        "mode": "compare",
+        "values": {
+          "spend": 30000,
+          "rate_a": 2,
+          "fee_a": 95,
+          "credits_a": 0,
+          "rate_b": 1,
+          "fee_b": 0,
+          "credits_b": 0
+        },
+        "inputs": "spend = 30000; rate a = 2; fee a = 95; credits a = 0; rate b = 1; fee b = 0; credits b = 0",
+        "steps": [
+          "Recurring net = annual gross reward value + usable net credits − annual fee; points value = points × cents per point / 100.",
+          "With these inputs, recurring annual net advantage (a minus b) = $205.00."
+        ],
+        "answer": "Recurring annual net advantage (A minus B): $205.00.",
+        "expected": {
+          "label": "Recurring annual net advantage (A minus B)",
+          "value": 205.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Are points worth one dollar each?",
+        "answer": "No. The input is cents per point. At 1 cent each, 60,000 points have an assumed value of $600. Actual redemption terms can differ."
+      },
+      {
+        "question": "Are category caps monthly or annual here?",
+        "answer": "Annual spend caps only. Monthly spending is annualized, but monthly and quarterly cap resets are not simulated."
+      },
+      {
+        "question": "Does the calculator recommend a bank card?",
+        "answer": "No. It evaluates your manually entered reward rules and fees without a bank catalogue, live offer or approval check."
+      },
+      {
+        "question": "Does the first-year bonus repeat in annual results?",
+        "answer": "No. The recurring result excludes the bonus. The first-year result adds only the one-time amount you assumed is earned."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Chase: Guide to credit card rewards programs",
+        "url": "https://www.chase.com/personal/credit-cards/education/rewards-benefits/quick-guide-to-credit-card-rewards-programs"
+      }
+    ]
+  },
+  "accounts-receivable-turnover": {
+    "checkedOn": "2026-11-17",
+    "summary": "Receivables turnover compares period net credit sales with representative average trade receivables. Using the same definitions, average-balance DSO converts that turnover into collection days. Reporting-period days and the balance method are part of the result.",
+    "scope": "Matched-period net credit sales and trade receivables only. The two-point average may miss seasonality. DSO uses average balances here; no closing-balance, countback, aging, bad-debt or customer-credit analysis is provided.",
+    "examples": [
+      {
+        "title": "average 365 days",
+        "mode": "average",
+        "values": {
+          "days": 365,
+          "credit_sales": 300000,
+          "average_ar": 25000
+        },
+        "inputs": "days = 365; credit sales = 300000; average ar = 25000",
+        "steps": [
+          "Turnover = net credit sales / average trade AR; average-balance DSO = reporting days × average AR / net credit sales.",
+          "With these inputs, receivables turnover in selected period = 12.000000."
+        ],
+        "answer": "Receivables turnover in selected period: 12.000000.",
+        "expected": {
+          "label": "Receivables turnover in selected period",
+          "value": 12.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "balances 365 days",
+        "mode": "balances",
+        "values": {
+          "days": 365,
+          "credit_sales": 300000,
+          "begin_ar": 20000,
+          "end_ar": 30000
+        },
+        "inputs": "days = 365; credit sales = 300000; begin ar = 20000; end ar = 30000",
+        "steps": [
+          "Turnover = net credit sales / average trade AR; average-balance DSO = reporting days × average AR / net credit sales.",
+          "With these inputs, receivables turnover in selected period = 12.000000."
+        ],
+        "answer": "Receivables turnover in selected period: 12.000000.",
+        "expected": {
+          "label": "Receivables turnover in selected period",
+          "value": 12.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can I use total revenue instead of net credit sales?",
+        "answer": "Only if it represents the credit sales corresponding to the selected receivables. Cash sales and unrelated revenue should not be silently included."
+      },
+      {
+        "question": "Is the turnover result annualized?",
+        "answer": "No. It is turnover for the selected reporting period. The DSO calculation uses the day count you enter."
+      },
+      {
+        "question": "Why is my published DSO different?",
+        "answer": "A company may use closing balances, another receivables population or a countback method. This tool uses a representative average and matching net credit sales."
+      },
+      {
+        "question": "What happens when the denominator is zero?",
+        "answer": "Turnover and DSO are checked separately. Undefined results are labeled explicitly rather than displayed as infinity or a real zero multiple."
+      }
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: Operating efficiency ratios",
+        "url": "https://openstax.org/books/principles-finance-2e/pages/6-2-operating-efficiency-ratios"
+      }
+    ]
+  },
+  "days-payable-outstanding": {
+    "checkedOn": "2026-11-17",
+    "summary": "Days payable outstanding converts a matched-period trade-payables balance into an estimated payment period. Purchase-based and COGS-proxy versions can give different answers. This worksheet names the denominator and reports payables turnover alongside the days measure.",
+    "scope": "Manual trade payables and matched credit purchases or a named COGS proxy. No inferred credit-purchase share, full inventory roll-forward, supplier aging, contract-term approval or cash-solvency decision.",
+    "examples": [
+      {
+        "title": "purchases 365 days",
+        "mode": "purchases",
+        "values": {
+          "days": 365,
+          "average_ap": 50000,
+          "purchases": 500000
+        },
+        "inputs": "days = 365; average ap = 50000; purchases = 500000",
+        "steps": [
+          "Purchase-based DPO = reporting days × average trade AP / net credit purchases; proxy DPO explicitly substitutes COGS.",
+          "With these inputs, days payable outstanding = 36.500000."
+        ],
+        "answer": "Days payable outstanding: 36.500000.",
+        "expected": {
+          "label": "Days payable outstanding",
+          "value": 36.5,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "balances 365 days",
+        "mode": "balances",
+        "values": {
+          "days": 365,
+          "begin_ap": 40000,
+          "end_ap": 60000,
+          "purchases": 500000
+        },
+        "inputs": "days = 365; begin ap = 40000; end ap = 60000; purchases = 500000",
+        "steps": [
+          "Purchase-based DPO = reporting days × average trade AP / net credit purchases; proxy DPO explicitly substitutes COGS.",
+          "With these inputs, days payable outstanding = 36.500000."
+        ],
+        "answer": "Days payable outstanding: 36.500000.",
+        "expected": {
+          "label": "Days payable outstanding",
+          "value": 36.5,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "cogs 365 days",
+        "mode": "cogs",
+        "values": {
+          "days": 365,
+          "average_ap": 50000,
+          "cogs": 400000
+        },
+        "inputs": "days = 365; average ap = 50000; cogs = 400000",
+        "steps": [
+          "Purchase-based DPO = reporting days × average trade AP / net credit purchases; proxy DPO explicitly substitutes COGS.",
+          "With these inputs, days payable outstanding = 45.625000."
+        ],
+        "answer": "Days payable outstanding: 45.625000.",
+        "expected": {
+          "label": "Days payable outstanding",
+          "value": 45.625,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is COGS exactly the same as credit purchases?",
+        "answer": "No. Inventory changes, cash purchases and accounting adjustments can make them differ. The COGS mode is an explicit proxy."
+      },
+      {
+        "question": "What goes into average accounts payable?",
+        "answer": "A representative trade-payables balance for the same purchase or cost period. Beginning/end mode uses the two-point arithmetic mean."
+      },
+      {
+        "question": "Can I calculate a quarter’s DPO?",
+        "answer": "Yes. Enter that quarter’s purchases or selected cost, average trade payables and actual reporting days."
+      },
+      {
+        "question": "Does a longer DPO mean bills should be delayed?",
+        "answer": "No. The ratio does not determine supplier terms or whether payments are overdue or appropriate."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Omni: DPO and purchases-based calculation",
+        "url": "https://www.omnicalculator.com/finance/days-payable-outstanding"
+      },
+      {
+        "title": "Wall Street Prep: DPO",
+        "url": "https://www.wallstreetprep.com/knowledge/days-payable-outstanding-dpo/"
+      }
+    ]
+  },
+  "cash-conversion-cycle": {
+    "checkedOn": "2026-11-17",
+    "summary": "The cash conversion cycle combines inventory days and collection days, then subtracts payables days. The operating cycle stops before that subtraction. Keeping all three components on compatible definitions allows a meaningful comparison between known-days and financial-input calculations.",
+    "scope": "Manual, matched-period balance ratios or supplied component days. Purchase-based and COGS-proxy payables are separate modes. This is not a cash-balance forecast, liquidity guarantee or supplier-payment instruction.",
+    "examples": [
+      {
+        "title": "Component days (45, 30, 60)",
+        "mode": "days",
+        "values": {
+          "dio": 45,
+          "dso": 30,
+          "dpo": 60
+        },
+        "inputs": "dio = 45; dso = 30; dpo = 60",
+        "steps": [
+          "CCC = DIO + DSO − DPO; operating cycle = DIO + DSO.",
+          "With these inputs, cash conversion cycle (days) = 15.000000."
+        ],
+        "answer": "Cash conversion cycle (days): 15.000000.",
+        "expected": {
+          "label": "Cash conversion cycle (days)",
+          "value": 15.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "purchases 365 days",
+        "mode": "purchases",
+        "values": {
+          "days": 365,
+          "inventory": 80000,
+          "cogs": 400000,
+          "average_ar": 25000,
+          "credit_sales": 600000,
+          "average_ap": 50000,
+          "purchases": 500000
+        },
+        "inputs": "days = 365; inventory = 80000; cogs = 400000; average ar = 25000; credit sales = 600000; average ap = 50000; purchases = 500000",
+        "steps": [
+          "CCC = DIO + DSO − DPO; operating cycle = DIO + DSO.",
+          "With these inputs, cash conversion cycle (days) = 51.708333."
+        ],
+        "answer": "Cash conversion cycle (days): 51.708333.",
+        "expected": {
+          "label": "Cash conversion cycle (days)",
+          "value": 51.708333333333336,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "cogs 365 days",
+        "mode": "cogs",
+        "values": {
+          "days": 365,
+          "inventory": 80000,
+          "cogs": 400000,
+          "average_ar": 25000,
+          "credit_sales": 600000,
+          "average_ap": 50000
+        },
+        "inputs": "days = 365; inventory = 80000; cogs = 400000; average ar = 25000; credit sales = 600000; average ap = 50000",
+        "steps": [
+          "CCC = DIO + DSO − DPO; operating cycle = DIO + DSO.",
+          "With these inputs, cash conversion cycle (days) = 42.583333."
+        ],
+        "answer": "Cash conversion cycle (days): 42.583333.",
+        "expected": {
+          "label": "Cash conversion cycle (days)",
+          "value": 42.583333333333336,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can the cash conversion cycle be negative?",
+        "answer": "Yes. A negative result can indicate that modeled collections occur before supplier payments. It is retained and explained."
+      },
+      {
+        "question": "Is operating cycle another name for CCC?",
+        "answer": "No. Operating cycle equals DIO plus DSO. CCC subtracts DPO as well."
+      },
+      {
+        "question": "Why do two calculators give different CCC values?",
+        "answer": "They may use different balance averages, credit-sales scope, periods or purchase-versus-COGS payables denominators. Compare each component and input definition."
+      },
+      {
+        "question": "Does CCC predict when the business will run out of cash?",
+        "answer": "No. That requires available cash and cash-flow assumptions. CCC summarizes working-capital timing ratios."
+      }
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: Working capital and cash cycles",
+        "url": "https://openstax.org/books/principles-finance-2e/pages/19-1-what-is-working-capital"
+      }
+    ]
+  },
+  "roic": {
+    "checkedOn": "2026-11-17",
+    "summary": "ROIC compares annual after-tax operating profit with representative average invested capital. It differs from accounting net-income ROE and a general profit-to-cost ROI. The numerator, capital definition, tax assumptions and reporting period must describe the same operating scope.",
+    "scope": "Annual manual operating-profit and invested-capital assumptions only. No live financial statements, balance-sheet reconstruction, intangible-capital adjustment or stock valuation. Loss tax benefits are not presumed unless explicitly selected.",
+    "examples": [
+      {
+        "title": "nopat annual operating model",
+        "mode": "nopat",
+        "values": {
+          "nopat": 150000,
+          "capital": 1250000,
+          "wacc": 8
+        },
+        "inputs": "nopat = 150000; capital = 1250000; wacc = 8",
+        "steps": [
+          "ROIC = annual NOPAT / average invested capital; simplified economic profit = NOPAT − WACC × matching average capital.",
+          "With these inputs, annual return on invested capital = 12.00%."
+        ],
+        "answer": "Annual return on invested capital: 12.00%.",
+        "expected": {
+          "label": "Annual return on invested capital",
+          "value": 12.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "ebit annual operating model",
+        "mode": "ebit",
+        "values": {
+          "ebit": 200000,
+          "tax_rate": 25,
+          "loss_tax": "No assumed tax benefit on a loss",
+          "capital": 1250000,
+          "wacc": 8
+        },
+        "inputs": "ebit = 200000; tax rate = 25; loss tax = No assumed tax benefit on a loss; capital = 1250000; wacc = 8",
+        "steps": [
+          "ROIC = annual NOPAT / average invested capital; simplified economic profit = NOPAT − WACC × matching average capital.",
+          "With these inputs, annual return on invested capital = 12.00%."
+        ],
+        "answer": "Annual return on invested capital: 12.00%.",
+        "expected": {
+          "label": "Annual return on invested capital",
+          "value": 12.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "balances annual operating model",
+        "mode": "balances",
+        "values": {
+          "nopat": 150000,
+          "begin_capital": 1000000,
+          "end_capital": 1500000,
+          "wacc": 8
+        },
+        "inputs": "nopat = 150000; begin capital = 1000000; end capital = 1500000; wacc = 8",
+        "steps": [
+          "ROIC = annual NOPAT / average invested capital; simplified economic profit = NOPAT − WACC × matching average capital.",
+          "With these inputs, annual return on invested capital = 12.00%."
+        ],
+        "answer": "Annual return on invested capital: 12.00%.",
+        "expected": {
+          "label": "Annual return on invested capital",
+          "value": 12.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can I use net income instead of NOPAT?",
+        "answer": "Not silently. NOPAT is operating profit after tax; net income can include financing and non-operating items. Match the earnings and capital scope."
+      },
+      {
+        "question": "Does a loss automatically create a tax benefit here?",
+        "answer": "No. The default EBIT mode assumes no tax benefit on an operating loss. Applying the simplified tax rate requires an explicit selection."
+      },
+      {
+        "question": "What is the difference between a percent return and a percentage-point spread?",
+        "answer": "ROIC 12% minus WACC 8% is a 4-percentage-point spread. It is not a 4% relative increase in return."
+      },
+      {
+        "question": "Is invested capital always the market value of debt and equity?",
+        "answer": "No. Operating/book definitions and adjustments vary. The tool asks for a consistently defined average and does not reconstruct it from market prices."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Morgan Stanley: Return on invested capital",
+        "url": "https://www.morganstanley.com/im/publication/insights/articles/article_returnoninvestedcapital.pdf"
+      }
+    ]
+  },
+  "interest-coverage-ratio": {
+    "checkedOn": "2026-11-17",
+    "summary": "Interest coverage, also called times interest earned, compares EBIT with same-period interest expense. It measures an earnings-to-interest relationship rather than full principal-and-interest debt service. The selected target is a scenario input, not a universal safe threshold.",
+    "scope": "Manual matched-period EBIT and borrowing-interest expenses, or a simple signed net-income/tax bridge. No EBITDA model, cash-flow forecast, lender approval, default probability or universal covenant threshold.",
+    "examples": [
+      {
+        "title": "ebit EBIT 100000",
+        "mode": "ebit",
+        "values": {
+          "ebit": 100000,
+          "interest": 25000,
+          "target": 3
+        },
+        "inputs": "ebit = 100000; interest = 25000; target = 3",
+        "steps": [
+          "ICR / TIE = EBIT / interest expense; required EBIT = selected coverage target × same-period interest expense.",
+          "With these inputs, ebit interest coverage (times) = 4.000000."
+        ],
+        "answer": "EBIT interest coverage (times): 4.000000.",
+        "expected": {
+          "label": "EBIT interest coverage (times)",
+          "value": 4.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "bridge EBIT 100000",
+        "mode": "bridge",
+        "values": {
+          "net_income": 56000,
+          "income_tax": 14000,
+          "interest": 30000,
+          "target": 3
+        },
+        "inputs": "net income = 56000; income tax = 14000; interest = 30000; target = 3",
+        "steps": [
+          "ICR / TIE = EBIT / interest expense; required EBIT = selected coverage target × same-period interest expense.",
+          "With these inputs, ebit interest coverage (times) = 3.333333."
+        ],
+        "answer": "EBIT interest coverage (times): 3.333333.",
+        "expected": {
+          "label": "EBIT interest coverage (times)",
+          "value": 3.3333333333333335,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is interest coverage the same as DSCR?",
+        "answer": "No. This ratio uses EBIT and interest expense only. DSCR has its own income definition and debt-service denominator, typically including principal."
+      },
+      {
+        "question": "What if interest expense is zero?",
+        "answer": "The ratio has no defined denominator. The tool labels it explicitly and does not print infinity or a real zero multiple."
+      },
+      {
+        "question": "Can the coverage ratio be negative?",
+        "answer": "Yes. Negative EBIT divided by positive interest produces a negative multiple."
+      },
+      {
+        "question": "Is the target multiple a recommended safe minimum?",
+        "answer": "No. It is a user-selected scenario. The tool does not read covenants, select a lending threshold or predict default."
+      }
+    ],
+    "sources": [
+      {
+        "title": "OpenStax: Solvency ratios",
+        "url": "https://openstax.org/books/principles-finance-2e/pages/6-4-solvency-ratios"
+      }
+    ]
+  }
+}

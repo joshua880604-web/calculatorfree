@@ -1,0 +1,26 @@
+import {tool} from './helpers';
+import {metric,num,type Values,type Result} from '../types';
+import {usd,value} from './expansion-common';
+import {periodDays,periodDaysField,balanceDays} from './working-capital-common';
+export function cashConversionCycle(v:Values,mode:'days'|'purchases'|'cogs'='days'):Result{
+ let dio:number,dso:number,dpo:number,basis='Supplied DPO days';
+ if(mode==='days'){
+  dio=value(v,'dio',0,36500);dso=value(v,'dso',0,36500);dpo=value(v,'dpo',0,36500);
+ }else{
+  const days=periodDays(v),cogs=value(v,'cogs',.01),sales=value(v,'credit_sales',.01),cost=mode==='cogs'?cogs:value(v,'purchases',.01);
+  dio=balanceDays(cogs,value(v,'inventory'),days)!;dso=balanceDays(sales,value(v,'average_ar'),days)!;dpo=balanceDays(cost,value(v,'average_ap'),days)!;basis=mode==='cogs'?'Explicit COGS proxy':'Net credit purchases';
+ }
+ const operating=dio+dso,ccc=operating-dpo;
+ return {metrics:[metric('Cash conversion cycle (days)',ccc),metric('Operating cycle before payables (days)',operating),metric('Inventory days (DIO)',dio),metric('Average-balance collection days (DSO)',dso),metric('Payables days (DPO)',dpo),{...metric('Payables denominator basis',0),displayValue:basis}],columns:['Component','Days added to the cash cycle'],rows:[['Inventory days',dio],['Receivables collection days',dso],['Subtract payables days',-dpo],['Cash conversion cycle',ccc]],additionalTables:[{title:'Change one component by five days; hold all others fixed',columns:['Scenario','DIO','DSO','DPO','CCC days'],rows:[['Entered case',dio,dso,dpo,ccc],['Inventory period five days shorter',Math.max(0,dio-5),dso,dpo,Math.max(0,dio-5)+dso-dpo],['Collection period five days shorter',dio,Math.max(0,dso-5),dpo,dio+Math.max(0,dso-5)-dpo],['Payables period five days longer',dio,dso,dpo+5,ccc-5]]}],notes:[
+ 'CCC = inventory days + receivables collection days − payables days. Operating cycle = inventory days + collection days before subtracting payables. Negative CCC is retained: it indicates collection before the modeled supplier payment point, not negative inventory or an invalid answer.',
+ mode==='days'?'All three supplied day measures must use compatible periods, averaging and definitions. The calculator cannot authenticate the basis of manually entered days.':'Financial-input modes use one reporting-day count and representative average balances. DIO = days × average inventory / COGS; DSO = days × average trade AR / net credit sales. Positive COGS, credit sales and the selected payables denominator are required to define every component.',
+ mode==='cogs'?'The payables component explicitly uses COGS as a proxy. This convention matches the DPO tool’s COGS mode and may differ from credit-purchase-based DPO.':mode==='purchases'?'The payables component uses net credit purchases, matching the DPO tool’s credit-purchases mode. COGS remains the inventory denominator; it is not silently substituted for purchases.':'Use the DPO tool to inspect whether purchase-based or COGS-proxy days fit your inputs.',
+ 'Use the same business, reporting period, trade balances and accounting definitions throughout. Cash sales are excluded from the net-credit-sales denominator used here. Seasonal balances, write-offs, inventory adjustments and collection timing can make a simple average-based ratio incomplete.',
+ 'The sensitivity table changes one day measure while holding the others fixed. It does not forecast cash balances or recommend delaying bills beyond agreed terms. CCC is not the business’s cash runway, borrowing capacity, or a universal financial-health score.']};
+}
+const financial=()=>[periodDaysField(),usd('inventory','Average inventory at cost',80000),usd('cogs','Cost of goods sold for this period',400000),usd('average_ar','Average trade receivables',25000),usd('credit_sales','Net credit sales for this period',600000),usd('average_ap','Average trade accounts payable',50000)];
+export const cashConversionCycleCalculator=tool('cash-conversion-cycle',[
+ {id:'days',title:'Known Component Days',description:'Combine existing DIO, DSO and DPO measures with compatible definitions.',fields:[{...num('dio','Inventory days (DIO)',45,'days'),max:36500},{...num('dso','Collection days (DSO)',30,'days'),max:36500},{...num('dpo','Payables days (DPO)',60,'days'),max:36500}],formula:'CCC = DIO + DSO − DPO; operating cycle = DIO + DSO.',calculate:v=>cashConversionCycle(v)},
+ {id:'purchases',title:'Financial Inputs: Credit Purchases',description:'Derive every component from matched-period averages and explicit credit purchases.',fields:[...financial(),usd('purchases','Net credit purchases for this period',500000)],formula:'CCC = days × [average inventory/COGS + average AR/credit sales − average AP/credit purchases].',calculate:v=>cashConversionCycle(v,'purchases')},
+ {id:'cogs',title:'Financial Inputs: COGS Proxy',description:'Use COGS as the explicitly disclosed proxy for the payables denominator.',fields:financial(),formula:'COGS-proxy CCC = days × [average inventory/COGS + average AR/credit sales − average AP/COGS].',calculate:v=>cashConversionCycle(v,'cogs')}
+], 'Calculate the cash conversion cycle and operating cycle from known day measures or matched financial inputs. Compare purchase-based and explicit COGS-proxy payables assumptions.');

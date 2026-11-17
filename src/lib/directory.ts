@@ -10,6 +10,13 @@ export function directoryGroup(id:string,_category?:string){
  return group.id;
 }
 const toolAliases:Record<string,string[]>={
+"credit-card-rewards":["credit card rewards calculator", "cash back credit card calculator", "points and miles value calculator", "credit card annual fee break even"],
+"accounts-receivable-turnover":["accounts receivable turnover calculator", "receivables turnover ratio", "days sales outstanding calculator", "average collection period"],
+"days-payable-outstanding":["days payable outstanding calculator", "DPO calculator", "accounts payable turnover calculator", "payables turnover ratio"],
+"cash-conversion-cycle":["cash conversion cycle calculator", "cash cycle calculator", "operating cycle calculator", "working capital cycle"],
+"roic":["roic calculator", "return on invested capital calculator", "NOPAT calculator", "ROIC vs WACC"],
+"interest-coverage-ratio":["interest coverage ratio calculator", "times interest earned calculator", "interest coverage calculator", "EBIT interest coverage"],
+
 "mortgage-buydown":["2-1 buydown calculator", "3-2-1 buydown calculator", "1-0 buydown", "1-1 buydown", "temporary interest rate buydown"],
 "cash-secured-put":["cash secured put calculator", "CSP calculator", "short put breakeven", "cash secured put return"],
 "profitability-index":["profitability index calculator", "PI calculator", "profitability index vs NPV", "discounted cash flow ratio"],

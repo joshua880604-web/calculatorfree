@@ -1,0 +1,4 @@
+Case,Mode,Input assumptions,Result label,Expected value
+Annual cash back cap 0,cashback,"spend period = Annual; categories = 12000, 3, 0 / 18000, 1.5, 0; fallback = 1.5; annual fee = 95; usable credits = 0; bonus = 200",Gross modeled annual reward value,630.0
+Points at cents value 1,points,"spend period = Annual; categories = 30000, 2, 0; fallback = 1; cents per point = 1.0; annual fee = 95; usable credits = 0; bonus = 20000",Annual points / miles earned,60000.0
+Flat plan rate A 2,compare,spend = 30000; rate a = 2; fee a = 95; credits a = 0; rate b = 1; fee b = 0; credits b = 0,Recurring annual net advantage (A minus B),205.0

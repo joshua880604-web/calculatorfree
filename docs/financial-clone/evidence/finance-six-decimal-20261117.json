@@ -1,0 +1,503 @@
+{
+  "precision": 60,
+  "generatedOn": "2026-11-17",
+  "method": "Independent Python Decimal arithmetic; no production calculator imported",
+  "fixtures": [
+    {
+      "id": "credit-card-rewards",
+      "mode": "cashback",
+      "values": {
+        "spend_period": "Annual",
+        "categories": "12000, 3, 0\n18000, 1.5, 0",
+        "fallback": 1.5,
+        "annual_fee": 95,
+        "usable_credits": 0,
+        "bonus": 200
+      },
+      "expected": {
+        "Gross modeled annual reward value": "630.000",
+        "Recurring annual net rewards before card interest": "535.000",
+        "First-year net including assumed one-time bonus": "735.000"
+      },
+      "title": "Annual cash back cap 0"
+    },
+    {
+      "id": "credit-card-rewards",
+      "mode": "cashback",
+      "values": {
+        "spend_period": "Monthly",
+        "categories": "1000, 3, 6000",
+        "fallback": 1.5,
+        "annual_fee": 95,
+        "usable_credits": 0,
+        "bonus": 200
+      },
+      "expected": {
+        "Gross modeled annual reward value": "270.000",
+        "Recurring annual net rewards before card interest": "175.000",
+        "First-year net including assumed one-time bonus": "375.000"
+      },
+      "title": "Monthly cap conversion"
+    },
+    {
+      "id": "credit-card-rewards",
+      "mode": "cashback",
+      "values": {
+        "spend_period": "Annual",
+        "categories": "12000, 3, 6000",
+        "fallback": 1.5,
+        "annual_fee": 95,
+        "usable_credits": 0,
+        "bonus": 200
+      },
+      "expected": {
+        "Gross modeled annual reward value": "270.000",
+        "Recurring annual net rewards before card interest": "175.000",
+        "First-year net including assumed one-time bonus": "375.000"
+      },
+      "title": "Annual cash back cap 6000"
+    },
+    {
+      "id": "credit-card-rewards",
+      "mode": "points",
+      "values": {
+        "spend_period": "Annual",
+        "categories": "30000, 2, 0",
+        "fallback": 1,
+        "cents_per_point": 1.0,
+        "annual_fee": 95,
+        "usable_credits": 0,
+        "bonus": 20000
+      },
+      "expected": {
+        "Annual points / miles earned": "60000",
+        "Gross modeled annual reward value": "600",
+        "Recurring annual net rewards before card interest": "505",
+        "First-year net including assumed one-time bonus": "705"
+      },
+      "title": "Points at cents value 1"
+    },
+    {
+      "id": "credit-card-rewards",
+      "mode": "points",
+      "values": {
+        "spend_period": "Annual",
+        "categories": "12000, 3, 6000",
+        "fallback": 1,
+        "cents_per_point": 1.2,
+        "annual_fee": 95,
+        "usable_credits": 0,
+        "bonus": 20000
+      },
+      "expected": {
+        "Annual points / miles earned": "24000",
+        "Gross modeled annual reward value": "288.0",
+        "Recurring annual net rewards before card interest": "193.0",
+        "First-year net including assumed one-time bonus": "433.0"
+      },
+      "title": "Points at cents value 1.2"
+    },
+    {
+      "id": "credit-card-rewards",
+      "mode": "compare",
+      "values": {
+        "spend": 30000,
+        "rate_a": 2,
+        "fee_a": 95,
+        "credits_a": 0,
+        "rate_b": 1,
+        "fee_b": 0,
+        "credits_b": 0
+      },
+      "expected": {
+        "Recurring annual net advantage (A minus B)": "205",
+        "Plan A annual net before interest": "505",
+        "Plan B annual net before interest": "300",
+        "Annual spend where recurring net rewards match": "9.5E+3"
+      },
+      "title": "Flat plan rate A 2"
+    },
+    {
+      "id": "credit-card-rewards",
+      "mode": "compare",
+      "values": {
+        "spend": 30000,
+        "rate_a": 1,
+        "fee_a": 0,
+        "credits_a": 0,
+        "rate_b": 2,
+        "fee_b": 95,
+        "credits_b": 0
+      },
+      "expected": {
+        "Recurring annual net advantage (A minus B)": "-205",
+        "Plan A annual net before interest": "300",
+        "Plan B annual net before interest": "505",
+        "Annual spend where recurring net rewards match": "9.5E+3"
+      },
+      "title": "Flat plan rate A 1"
+    },
+    {
+      "id": "accounts-receivable-turnover",
+      "mode": "average",
+      "values": {
+        "days": 365,
+        "credit_sales": 300000,
+        "average_ar": 25000
+      },
+      "expected": {
+        "Receivables turnover in selected period": "12",
+        "Average-balance DSO / collection days": "30.4166666666666666666666666666666666666666666666666666666667"
+      },
+      "title": "average 365 days"
+    },
+    {
+      "id": "accounts-receivable-turnover",
+      "mode": "balances",
+      "values": {
+        "days": 365,
+        "credit_sales": 300000,
+        "begin_ar": 20000,
+        "end_ar": 30000
+      },
+      "expected": {
+        "Receivables turnover in selected period": "12",
+        "Average-balance DSO / collection days": "30.4166666666666666666666666666666666666666666666666666666667"
+      },
+      "title": "balances 365 days"
+    },
+    {
+      "id": "accounts-receivable-turnover",
+      "mode": "average",
+      "values": {
+        "days": 90,
+        "credit_sales": 90000,
+        "average_ar": 15000
+      },
+      "expected": {
+        "Receivables turnover in selected period": "6",
+        "Average-balance DSO / collection days": "15"
+      },
+      "title": "average 90 days"
+    },
+    {
+      "id": "accounts-receivable-turnover",
+      "mode": "average",
+      "values": {
+        "days": 366,
+        "credit_sales": 300000,
+        "average_ar": 25000
+      },
+      "expected": {
+        "Receivables turnover in selected period": "12",
+        "Average-balance DSO / collection days": "30.5"
+      },
+      "title": "average 366 days"
+    },
+    {
+      "id": "days-payable-outstanding",
+      "mode": "purchases",
+      "values": {
+        "days": 365,
+        "average_ap": 50000,
+        "purchases": 500000
+      },
+      "expected": {
+        "Days payable outstanding": "36.5",
+        "Payables turnover in selected period": "10"
+      },
+      "title": "purchases 365 days"
+    },
+    {
+      "id": "days-payable-outstanding",
+      "mode": "balances",
+      "values": {
+        "days": 365,
+        "begin_ap": 40000,
+        "end_ap": 60000,
+        "purchases": 500000
+      },
+      "expected": {
+        "Days payable outstanding": "36.5",
+        "Payables turnover in selected period": "10"
+      },
+      "title": "balances 365 days"
+    },
+    {
+      "id": "days-payable-outstanding",
+      "mode": "cogs",
+      "values": {
+        "days": 365,
+        "average_ap": 50000,
+        "cogs": 400000
+      },
+      "expected": {
+        "Days payable outstanding": "45.625",
+        "Payables turnover in selected period": "8"
+      },
+      "title": "cogs 365 days"
+    },
+    {
+      "id": "days-payable-outstanding",
+      "mode": "purchases",
+      "values": {
+        "days": 90,
+        "average_ap": 10000,
+        "purchases": 90000
+      },
+      "expected": {
+        "Days payable outstanding": "10",
+        "Payables turnover in selected period": "9"
+      },
+      "title": "purchases 90 days"
+    },
+    {
+      "id": "cash-conversion-cycle",
+      "mode": "days",
+      "values": {
+        "dio": 45,
+        "dso": 30,
+        "dpo": 60
+      },
+      "expected": {
+        "Cash conversion cycle (days)": "15",
+        "Operating cycle before payables (days)": "75"
+      },
+      "title": "Component days (45, 30, 60)"
+    },
+    {
+      "id": "cash-conversion-cycle",
+      "mode": "days",
+      "values": {
+        "dio": 20,
+        "dso": 5,
+        "dpo": 40
+      },
+      "expected": {
+        "Cash conversion cycle (days)": "-15",
+        "Operating cycle before payables (days)": "25"
+      },
+      "title": "Component days (20, 5, 40)"
+    },
+    {
+      "id": "cash-conversion-cycle",
+      "mode": "purchases",
+      "values": {
+        "days": 365,
+        "inventory": 80000,
+        "cogs": 400000,
+        "average_ar": 25000,
+        "credit_sales": 600000,
+        "average_ap": 50000,
+        "purchases": 500000
+      },
+      "expected": {
+        "Cash conversion cycle (days)": "51.7083333333333333333333333333333333333333333333333333333333",
+        "Operating cycle before payables (days)": "88.2083333333333333333333333333333333333333333333333333333333",
+        "Inventory days (DIO)": "73",
+        "Average-balance collection days (DSO)": "15.2083333333333333333333333333333333333333333333333333333333",
+        "Payables days (DPO)": "36.5"
+      },
+      "title": "purchases 365 days"
+    },
+    {
+      "id": "cash-conversion-cycle",
+      "mode": "cogs",
+      "values": {
+        "days": 365,
+        "inventory": 80000,
+        "cogs": 400000,
+        "average_ar": 25000,
+        "credit_sales": 600000,
+        "average_ap": 50000
+      },
+      "expected": {
+        "Cash conversion cycle (days)": "42.5833333333333333333333333333333333333333333333333333333333",
+        "Operating cycle before payables (days)": "88.2083333333333333333333333333333333333333333333333333333333",
+        "Inventory days (DIO)": "73",
+        "Average-balance collection days (DSO)": "15.2083333333333333333333333333333333333333333333333333333333",
+        "Payables days (DPO)": "45.625"
+      },
+      "title": "cogs 365 days"
+    },
+    {
+      "id": "cash-conversion-cycle",
+      "mode": "purchases",
+      "values": {
+        "days": 90,
+        "inventory": 80000,
+        "cogs": 400000,
+        "average_ar": 25000,
+        "credit_sales": 600000,
+        "average_ap": 50000,
+        "purchases": 500000
+      },
+      "expected": {
+        "Cash conversion cycle (days)": "12.75",
+        "Operating cycle before payables (days)": "21.75",
+        "Inventory days (DIO)": "18",
+        "Average-balance collection days (DSO)": "3.75",
+        "Payables days (DPO)": "9"
+      },
+      "title": "purchases 90 days"
+    },
+    {
+      "id": "roic",
+      "mode": "nopat",
+      "values": {
+        "nopat": 150000,
+        "capital": 1250000,
+        "wacc": 8
+      },
+      "expected": {
+        "Annual return on invested capital": "12.00",
+        "Annual NOPAT used": "150000",
+        "ROIC minus WACC (percentage points)": "4.00",
+        "Simplified annual economic profit": "50000.00"
+      },
+      "title": "nopat annual operating model"
+    },
+    {
+      "id": "roic",
+      "mode": "ebit",
+      "values": {
+        "ebit": 200000,
+        "tax_rate": 25,
+        "loss_tax": "No assumed tax benefit on a loss",
+        "capital": 1250000,
+        "wacc": 8
+      },
+      "expected": {
+        "Annual return on invested capital": "12.00",
+        "Annual NOPAT used": "150000",
+        "ROIC minus WACC (percentage points)": "4.00",
+        "Simplified annual economic profit": "50000.00"
+      },
+      "title": "ebit annual operating model"
+    },
+    {
+      "id": "roic",
+      "mode": "balances",
+      "values": {
+        "nopat": 150000,
+        "begin_capital": 1000000,
+        "end_capital": 1500000,
+        "wacc": 8
+      },
+      "expected": {
+        "Annual return on invested capital": "12.00",
+        "Annual NOPAT used": "150000",
+        "ROIC minus WACC (percentage points)": "4.00",
+        "Simplified annual economic profit": "50000.00"
+      },
+      "title": "balances annual operating model"
+    },
+    {
+      "id": "roic",
+      "mode": "nopat",
+      "values": {
+        "nopat": -50000,
+        "capital": 1250000,
+        "wacc": 8
+      },
+      "expected": {
+        "Annual return on invested capital": "-4",
+        "Simplified annual economic profit": "-150000"
+      },
+      "title": "Known negative NOPAT"
+    },
+    {
+      "id": "roic",
+      "mode": "ebit",
+      "values": {
+        "ebit": -50000,
+        "tax_rate": 25,
+        "loss_tax": "No assumed tax benefit on a loss",
+        "capital": 1250000,
+        "wacc": 8
+      },
+      "expected": {
+        "Annual NOPAT used": "-50000",
+        "Annual return on invested capital": "-4.00"
+      },
+      "title": "No assumed tax benefit on a loss"
+    },
+    {
+      "id": "roic",
+      "mode": "ebit",
+      "values": {
+        "ebit": -50000,
+        "tax_rate": 25,
+        "loss_tax": "Apply simplified tax rate to a loss",
+        "capital": 1250000,
+        "wacc": 8
+      },
+      "expected": {
+        "Annual NOPAT used": "-37500",
+        "Annual return on invested capital": "-3.00"
+      },
+      "title": "Apply simplified tax rate to a loss"
+    },
+    {
+      "id": "interest-coverage-ratio",
+      "mode": "ebit",
+      "values": {
+        "ebit": 100000,
+        "interest": 25000,
+        "target": 3
+      },
+      "expected": {
+        "EBIT interest coverage (times)": "4",
+        "EBIT needed for selected target coverage": "75000",
+        "EBIT headroom / shortfall against target": "25000"
+      },
+      "title": "ebit EBIT 100000"
+    },
+    {
+      "id": "interest-coverage-ratio",
+      "mode": "bridge",
+      "values": {
+        "net_income": 56000,
+        "income_tax": 14000,
+        "interest": 30000,
+        "target": 3
+      },
+      "expected": {
+        "EBIT interest coverage (times)": "3.33333333333333333333333333333333333333333333333333333333333",
+        "EBIT needed for selected target coverage": "90000",
+        "EBIT headroom / shortfall against target": "10000"
+      },
+      "title": "bridge EBIT 100000"
+    },
+    {
+      "id": "interest-coverage-ratio",
+      "mode": "ebit",
+      "values": {
+        "ebit": -10000,
+        "interest": 25000,
+        "target": 3
+      },
+      "expected": {
+        "EBIT interest coverage (times)": "-0.4",
+        "EBIT needed for selected target coverage": "75000",
+        "EBIT headroom / shortfall against target": "-85000"
+      },
+      "title": "ebit EBIT -10000"
+    },
+    {
+      "id": "interest-coverage-ratio",
+      "mode": "ebit",
+      "values": {
+        "ebit": 0,
+        "interest": 25000,
+        "target": 3
+      },
+      "expected": {
+        "EBIT interest coverage (times)": "0",
+        "EBIT needed for selected target coverage": "75000",
+        "EBIT headroom / shortfall against target": "-75000"
+      },
+      "title": "ebit EBIT 0"
+    }
+  ]
+}

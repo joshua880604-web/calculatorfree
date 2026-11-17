@@ -1607,6 +1607,41 @@
       "role": "rule",
       "usedFor": "Official rounded age-50 examples, general duration and installment explanations.",
       "scope": "FAQ is general information and is not legal authority; consult the notice and applicable law."
+    },
+    "https://www.chase.com/personal/credit-cards/education/rewards-benefits/quick-guide-to-credit-card-rewards-programs": {
+      "role": "method",
+      "usedFor": "General reward forms, purchase eligibility and redemption conditions.",
+      "scope": "Issuer education, not a current offer database or a universal point valuation. Arithmetic, category caps and hypothetical plans here are our stated assumptions."
+    },
+    "https://openstax.org/books/principles-finance-2e/pages/6-2-operating-efficiency-ratios": {
+      "role": "method",
+      "usedFor": "The net-credit-sales and average-receivables turnover definition.",
+      "scope": "Reference for standard ratio concepts. Examples and explanations here are original; no textbook text, images or datasets are reproduced."
+    },
+    "https://www.omnicalculator.com/finance/days-payable-outstanding": {
+      "role": "method",
+      "usedFor": "A purchases-denominator convention and the distinction between cost and inventory changes.",
+      "scope": "Method comparison only. Our inputs require net credit purchases; the tool does not assume total purchases are all on credit."
+    },
+    "https://www.wallstreetprep.com/knowledge/days-payable-outstanding-dpo/": {
+      "role": "method",
+      "usedFor": "The commonly used COGS-proxy convention.",
+      "scope": "A convention reference, not a unique definition for every company. Our figures are independently calculated without copying rounded examples."
+    },
+    "https://openstax.org/books/principles-finance-2e/pages/19-1-what-is-working-capital": {
+      "role": "method",
+      "usedFor": "The operating-cycle and cash-cycle component relationship.",
+      "scope": "Concept reference only. Our purchase-basis option, controlled scenarios and high-precision hypothetical examples are independently specified; no textbook material is reproduced."
+    },
+    "https://www.morganstanley.com/im/publication/insights/articles/article_returnoninvestedcapital.pdf": {
+      "role": "method",
+      "usedFor": "NOPAT, invested-capital definitions, average balances and the economic-profit relationship.",
+      "scope": "Method reference, not a company valuation or industry threshold. Examples, simplified tax policy and model bounds here are independently stated."
+    },
+    "https://openstax.org/books/principles-finance-2e/pages/6-4-solvency-ratios": {
+      "role": "method",
+      "usedFor": "The EBIT/interest-expense definition of times interest earned.",
+      "scope": "Concept reference only. Our hypothetical cases and target sensitivity are independently calculated; no textbook example, recommendation or material is reproduced."
     }
   },
   "pages": {
@@ -3669,6 +3704,219 @@
           "role": "rule",
           "usedFor": "Official rounded age-50 examples, general duration and installment explanations.",
           "scope": "FAQ is general information and is not legal authority; consult the notice and applicable law."
+        }
+      }
+    },
+    "calculator:credit-card-rewards": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.chase.com/personal/credit-cards/education/rewards-benefits/quick-guide-to-credit-card-rewards-programs": {
+          "role": "method",
+          "usedFor": "General reward forms, purchase eligibility and redemption conditions.",
+          "scope": "Issuer education, not a current offer database or a universal point valuation. Arithmetic, category caps and hypothetical plans here are our stated assumptions."
+        }
+      }
+    },
+    "guide:/guides/cash-back-vs-points-and-annual-fees/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.chase.com/personal/credit-cards/education/rewards-benefits/quick-guide-to-credit-card-rewards-programs": {
+          "role": "method",
+          "usedFor": "General reward forms, purchase eligibility and redemption conditions.",
+          "scope": "Issuer education, not a current offer database or a universal point valuation. Arithmetic, category caps and hypothetical plans here are our stated assumptions."
+        }
+      }
+    },
+    "glossary:credit-card-rewards": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.chase.com/personal/credit-cards/education/rewards-benefits/quick-guide-to-credit-card-rewards-programs": {
+          "role": "method",
+          "usedFor": "General reward forms, purchase eligibility and redemption conditions.",
+          "scope": "Issuer education, not a current offer database or a universal point valuation. Arithmetic, category caps and hypothetical plans here are our stated assumptions."
+        }
+      }
+    },
+    "calculator:accounts-receivable-turnover": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/6-2-operating-efficiency-ratios": {
+          "role": "method",
+          "usedFor": "The net-credit-sales and average-receivables turnover definition.",
+          "scope": "Reference for standard ratio concepts. Examples and explanations here are original; no textbook text, images or datasets are reproduced."
+        }
+      }
+    },
+    "guide:/guides/receivables-turnover-vs-dso/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/6-2-operating-efficiency-ratios": {
+          "role": "method",
+          "usedFor": "The net-credit-sales and average-receivables turnover definition.",
+          "scope": "Reference for standard ratio concepts. Examples and explanations here are original; no textbook text, images or datasets are reproduced."
+        }
+      }
+    },
+    "glossary:accounts-receivable-turnover": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/6-2-operating-efficiency-ratios": {
+          "role": "method",
+          "usedFor": "The net-credit-sales and average-receivables turnover definition.",
+          "scope": "Reference for standard ratio concepts. Examples and explanations here are original; no textbook text, images or datasets are reproduced."
+        }
+      }
+    },
+    "calculator:days-payable-outstanding": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.omnicalculator.com/finance/days-payable-outstanding": {
+          "role": "method",
+          "usedFor": "A purchases-denominator convention and the distinction between cost and inventory changes.",
+          "scope": "Method comparison only. Our inputs require net credit purchases; the tool does not assume total purchases are all on credit."
+        },
+        "https://www.wallstreetprep.com/knowledge/days-payable-outstanding-dpo/": {
+          "role": "method",
+          "usedFor": "The commonly used COGS-proxy convention.",
+          "scope": "A convention reference, not a unique definition for every company. Our figures are independently calculated without copying rounded examples."
+        }
+      }
+    },
+    "guide:/guides/dpo-credit-purchases-vs-cogs/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.omnicalculator.com/finance/days-payable-outstanding": {
+          "role": "method",
+          "usedFor": "A purchases-denominator convention and the distinction between cost and inventory changes.",
+          "scope": "Method comparison only. Our inputs require net credit purchases; the tool does not assume total purchases are all on credit."
+        },
+        "https://www.wallstreetprep.com/knowledge/days-payable-outstanding-dpo/": {
+          "role": "method",
+          "usedFor": "The commonly used COGS-proxy convention.",
+          "scope": "A convention reference, not a unique definition for every company. Our figures are independently calculated without copying rounded examples."
+        }
+      }
+    },
+    "glossary:days-payable-outstanding": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.omnicalculator.com/finance/days-payable-outstanding": {
+          "role": "method",
+          "usedFor": "A purchases-denominator convention and the distinction between cost and inventory changes.",
+          "scope": "Method comparison only. Our inputs require net credit purchases; the tool does not assume total purchases are all on credit."
+        },
+        "https://www.wallstreetprep.com/knowledge/days-payable-outstanding-dpo/": {
+          "role": "method",
+          "usedFor": "The commonly used COGS-proxy convention.",
+          "scope": "A convention reference, not a unique definition for every company. Our figures are independently calculated without copying rounded examples."
+        }
+      }
+    },
+    "calculator:cash-conversion-cycle": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/19-1-what-is-working-capital": {
+          "role": "method",
+          "usedFor": "The operating-cycle and cash-cycle component relationship.",
+          "scope": "Concept reference only. Our purchase-basis option, controlled scenarios and high-precision hypothetical examples are independently specified; no textbook material is reproduced."
+        }
+      }
+    },
+    "guide:/guides/cash-conversion-cycle-vs-operating-cycle/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/19-1-what-is-working-capital": {
+          "role": "method",
+          "usedFor": "The operating-cycle and cash-cycle component relationship.",
+          "scope": "Concept reference only. Our purchase-basis option, controlled scenarios and high-precision hypothetical examples are independently specified; no textbook material is reproduced."
+        }
+      }
+    },
+    "glossary:cash-conversion-cycle": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/19-1-what-is-working-capital": {
+          "role": "method",
+          "usedFor": "The operating-cycle and cash-cycle component relationship.",
+          "scope": "Concept reference only. Our purchase-basis option, controlled scenarios and high-precision hypothetical examples are independently specified; no textbook material is reproduced."
+        }
+      }
+    },
+    "calculator:roic": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.morganstanley.com/im/publication/insights/articles/article_returnoninvestedcapital.pdf": {
+          "role": "method",
+          "usedFor": "NOPAT, invested-capital definitions, average balances and the economic-profit relationship.",
+          "scope": "Method reference, not a company valuation or industry threshold. Examples, simplified tax policy and model bounds here are independently stated."
+        }
+      }
+    },
+    "guide:/guides/roic-vs-roe-roi-and-wacc/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.morganstanley.com/im/publication/insights/articles/article_returnoninvestedcapital.pdf": {
+          "role": "method",
+          "usedFor": "NOPAT, invested-capital definitions, average balances and the economic-profit relationship.",
+          "scope": "Method reference, not a company valuation or industry threshold. Examples, simplified tax policy and model bounds here are independently stated."
+        }
+      }
+    },
+    "glossary:return-on-invested-capital": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.morganstanley.com/im/publication/insights/articles/article_returnoninvestedcapital.pdf": {
+          "role": "method",
+          "usedFor": "NOPAT, invested-capital definitions, average balances and the economic-profit relationship.",
+          "scope": "Method reference, not a company valuation or industry threshold. Examples, simplified tax policy and model bounds here are independently stated."
+        }
+      }
+    },
+    "calculator:interest-coverage-ratio": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/6-4-solvency-ratios": {
+          "role": "method",
+          "usedFor": "The EBIT/interest-expense definition of times interest earned.",
+          "scope": "Concept reference only. Our hypothetical cases and target sensitivity are independently calculated; no textbook example, recommendation or material is reproduced."
+        }
+      }
+    },
+    "guide:/guides/interest-coverage-vs-dscr/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/6-4-solvency-ratios": {
+          "role": "method",
+          "usedFor": "The EBIT/interest-expense definition of times interest earned.",
+          "scope": "Concept reference only. Our hypothetical cases and target sensitivity are independently calculated; no textbook example, recommendation or material is reproduced."
+        }
+      }
+    },
+    "glossary:interest-coverage-ratio": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://openstax.org/books/principles-finance-2e/pages/6-4-solvency-ratios": {
+          "role": "method",
+          "usedFor": "The EBIT/interest-expense definition of times interest earned.",
+          "scope": "Concept reference only. Our hypothetical cases and target sensitivity are independently calculated; no textbook example, recommendation or material is reproduced."
         }
       }
     }

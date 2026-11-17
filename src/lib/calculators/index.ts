@@ -1,3 +1,9 @@
+import {creditCardRewardsCalculator} from './credit-card-rewards';
+import {receivablesTurnoverCalculator} from './receivables-turnover';
+import {daysPayableOutstandingCalculator} from './days-payable-outstanding';
+import {cashConversionCycleCalculator} from './cash-conversion-cycle';
+import {roicCalculator} from './roic';
+import {interestCoverageCalculator} from './interest-coverage-ratio';
 import {mortgageBuydownCalculator} from './mortgage-buydown';
 import {cashSecuredPutCalculator} from './cash-secured-put';
 import {profitabilityIndexCalculator} from './profitability-index';
@@ -55,6 +61,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  creditCardRewardsCalculator,receivablesTurnoverCalculator,daysPayableOutstandingCalculator,cashConversionCycleCalculator,roicCalculator,interestCoverageCalculator,
   mortgageBuydownCalculator,cashSecuredPutCalculator,profitabilityIndexCalculator,returnOnEquityCalculator,seppCalculator,
   waccCalculator,capmCalculator,cdPenaltyCalculator,burnRateCalculator,bondDurationCalculator,
   inventoryTurnoverCalculator,sbaLoanCalculator,

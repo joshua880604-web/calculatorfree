@@ -11,6 +11,13 @@ const loaders: Record<string, () => Promise<Calculator[]>> = {
 const businessTools = () => import('./calculators/business-tools').then(m => m.businessTools);
 const strategyTools=()=>import('./calculators/debt-strategies').then(m=>[m.debtSnowball,m.debtAvalanche]);
 const dataTools: Record<string, () => Promise<Calculator[]>> = {
+  'credit-card-rewards':()=>import('./calculators/credit-card-rewards').then(m=>[m.creditCardRewardsCalculator]),
+  'accounts-receivable-turnover':()=>import('./calculators/receivables-turnover').then(m=>[m.receivablesTurnoverCalculator]),
+  'days-payable-outstanding':()=>import('./calculators/days-payable-outstanding').then(m=>[m.daysPayableOutstandingCalculator]),
+  'cash-conversion-cycle':()=>import('./calculators/cash-conversion-cycle').then(m=>[m.cashConversionCycleCalculator]),
+  'roic':()=>import('./calculators/roic').then(m=>[m.roicCalculator]),
+  'interest-coverage-ratio':()=>import('./calculators/interest-coverage-ratio').then(m=>[m.interestCoverageCalculator]),
+
   'mortgage-buydown':()=>import('./calculators/mortgage-buydown').then(m=>[m.mortgageBuydownCalculator]),
   'cash-secured-put':()=>import('./calculators/cash-secured-put').then(m=>[m.cashSecuredPutCalculator]),
   'profitability-index':()=>import('./calculators/profitability-index').then(m=>[m.profitabilityIndexCalculator]),

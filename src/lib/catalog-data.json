@@ -818,5 +818,11 @@
   {"id": "cash-secured-put", "category": "Investment", "title": "Cash-Secured Put Calculator", "local_route": "/cash-secured-put-calculator.html"},
   {"id": "profitability-index", "category": "Investment", "title": "Profitability Index Calculator", "local_route": "/profitability-index-calculator.html"},
   {"id": "return-on-equity", "category": "Other", "title": "Return on Equity Calculator", "local_route": "/return-on-equity-calculator.html"},
-  {"id": "72t", "category": "Retirement", "title": "72(t) / SEPP Calculator", "local_route": "/72t-calculator.html"}
+  {"id": "72t", "category": "Retirement", "title": "72(t) / SEPP Calculator", "local_route": "/72t-calculator.html"},
+  {"id": "credit-card-rewards", "category": "Other", "title": "Credit Card Rewards Calculator", "local_route": "/credit-card-rewards-calculator.html"},
+  {"id": "accounts-receivable-turnover", "category": "Other", "title": "Accounts Receivable Turnover Calculator", "local_route": "/accounts-receivable-turnover-calculator.html"},
+  {"id": "days-payable-outstanding", "category": "Other", "title": "Days Payable Outstanding Calculator", "local_route": "/days-payable-outstanding-calculator.html"},
+  {"id": "cash-conversion-cycle", "category": "Other", "title": "Cash Conversion Cycle Calculator", "local_route": "/cash-conversion-cycle-calculator.html"},
+  {"id": "roic", "category": "Other", "title": "ROIC Calculator", "local_route": "/roic-calculator.html"},
+  {"id": "interest-coverage-ratio", "category": "Other", "title": "Interest Coverage Ratio Calculator", "local_route": "/interest-coverage-ratio-calculator.html"}
 ]

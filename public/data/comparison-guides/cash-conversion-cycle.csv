@@ -1,0 +1,4 @@
+Case,Mode,Input assumptions,Result label,Expected value
+"Component days (45, 30, 60)",days,dio = 45; dso = 30; dpo = 60,Cash conversion cycle (days),15.0
+purchases 365 days,purchases,days = 365; inventory = 80000; cogs = 400000; average ar = 25000; credit sales = 600000; average ap = 50000; purchases = 500000,Cash conversion cycle (days),51.708333333333336
+cogs 365 days,cogs,days = 365; inventory = 80000; cogs = 400000; average ar = 25000; credit sales = 600000; average ap = 50000,Cash conversion cycle (days),42.583333333333336

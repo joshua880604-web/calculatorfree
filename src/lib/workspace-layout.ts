@@ -2,6 +2,7 @@ import type { Metric, Result } from "./types";
 
 // Complex tax forms, multi-debt entry sheets and the 401(k) story keep their wider flow.
 export const workspaceIds = [
+  "credit-card-rewards","accounts-receivable-turnover","days-payable-outstanding","cash-conversion-cycle","roic","interest-coverage-ratio",
   "mortgage-buydown","cash-secured-put","profitability-index","return-on-equity","72t",
   "wacc","capm","cd-early-withdrawal-penalty","burn-rate","bond-duration",
   'stock-profit','stock-average',
@@ -24,10 +25,17 @@ export const workspaceIds = [
 export function hasCalculatorWorkspace(id: string): boolean { return (workspaceIds as readonly string[]).includes(id); }
 export function workspaceLayout(id: string, mode: string): "split" | "stacked" | null {
   if (!hasCalculatorWorkspace(id)) return null;
-  return id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
+  return id === 'credit-card-rewards' || id === 'cash-conversion-cycle' && mode!=='days' || id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
 }
 
 const priorities: Record<string, string[]> = {
+  'credit-card-rewards': ['Recurring annual net rewards before card interest','Gross modeled annual reward value','Annual fee entered','First-year net including assumed one-time bonus'],
+  'credit-card-rewards:compare': ['Recurring annual net advantage (A minus B)','Plan A annual net before interest','Plan B annual net before interest','Annual spend where recurring net rewards match'],
+  'accounts-receivable-turnover': ['Receivables turnover in selected period','Average-balance DSO / collection days','Days in reporting period'],
+  'days-payable-outstanding': ['Days payable outstanding','Payables turnover in selected period','Payables denominator basis'],
+  'cash-conversion-cycle': ['Cash conversion cycle (days)','Operating cycle before payables (days)','Payables denominator basis'],
+  'roic': ['Annual return on invested capital','Annual NOPAT used','Average invested capital used','ROIC minus WACC (percentage points)'],
+  'interest-coverage-ratio': ['EBIT interest coverage (times)','Period EBIT used','Period interest expense used','EBIT headroom / shortfall against target'],
   'mortgage-buydown': ['First-year borrower monthly P&I','Contract monthly P&I at note rate','Total temporary subsidy funding','Monthly P&I after buydown'],
   'cash-secured-put': ['Modeled expiration profit / loss','Cash secured at strike × shares','Expiration breakeven per share','Maximum expiration loss at zero stock price'],
   '72t': ['Estimated first-year annual SEPP amount','Annual amount / 12 for budgeting','Earliest general duration milestone'],
