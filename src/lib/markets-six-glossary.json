@@ -1,0 +1,516 @@
+[
+  {
+    "slug": "stock-split",
+    "name": "Stock split",
+    "title": "Stock split: Formula, Example & Limits",
+    "description": "Calculate forward, reverse and sequential stock splits. Follow theoretical share counts, proportional prices and unchanged total acquisition cost.",
+    "category": "Saving & investing",
+    "aliases": [
+      "stock split calculator",
+      "reverse stock split calculator"
+    ],
+    "definition": "A proportional stock split changes share quantity and per-share reference amounts by reciprocal factors. Forward and reverse splits use the same new-for-old convention. The calculation preserves the intact holding’s reference value and total acquisition cost; actual market prices and broker treatment of fractions require separate information.",
+    "explanation": "Read the ratio as new shares for old shares. Three new for two old gives a factor of 1.5; one new for ten old gives 0.1. Multiply initial quantity by that factor and divide each initial per-share reference amount by it. The same convention handles either direction without a separate formula.",
+    "formula": "Factor = new shares / old shares; quantity after = quantity before × factor; reference price and average cost per share divide by factor",
+    "formulaNote": "Manual proportional changes to an intact position. Theoretical fractional shares are retained. No cash-in-lieu, broker rounding, market quotation, lot-level tax reporting, sale or corporate-action eligibility is inferred.",
+    "example": {
+      "title": "Forward",
+      "intro": "shares = 120; price = 45; average cost = 30; new shares = 3; old shares = 2",
+      "steps": [
+        "Factor = new shares / old shares; quantity after = quantity before × factor; reference price and average cost per share divide by factor.",
+        "With these inputs, theoretical shares after splits = 180.000000."
+      ],
+      "answer": "Theoretical shares after splits: 180.000000.",
+      "assumptions": "Manual proportional changes to an intact position. Theoretical fractional shares are retained. No cash-in-lieu, broker rounding, market quotation, lot-level tax reporting, sale or corporate-action eligibility is inferred.",
+      "calculator": {
+        "id": "stock-split",
+        "mode": "single",
+        "values": {
+          "shares": "120",
+          "price": "45",
+          "average_cost": "30",
+          "new_shares": "3",
+          "old_shares": "2"
+        },
+        "expected": [
+          {
+            "label": "Theoretical shares after splits",
+            "value": 180.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Is adjusted average acquisition cost a completed tax record?",
+      "text": "No. It is an allocation for an intact position. Tax lots, settlements, fees and other corporate actions can require additional records."
+    },
+    "tools": [
+      {
+        "id": "stock-split",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      },
+      {
+        "id": "stock-average",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      }
+    ],
+    "related": [
+      "cost-basis",
+      "return-on-equity"
+    ],
+    "sources": [
+      {
+        "title": "Investor.gov: Stock Split",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-split"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "Manual proportional changes to an intact position. Theoretical fractional shares are retained. No cash-in-lieu, broker rounding, market quotation, lot-level tax reporting, sale or corporate-action eligibility is inferred.",
+    "guides": [
+      {
+        "title": "Stock Split vs. Reverse Split: Shares, Price & Acquisition Cost",
+        "path": "/guides/stock-split-vs-reverse-stock-split/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does a 2-for-1 split double my investment value?",
+        "answer": "It doubles theoretical shares and halves the proportional reference price. That action alone leaves reference value unchanged; market trading can still change prices."
+      },
+      {
+        "question": "How do I enter a 1-for-10 reverse split?",
+        "answer": "Enter 1 new share and 10 old shares. The factor is 0.1, so 103 old shares give 10.3 theoretical new shares."
+      }
+    ]
+  },
+  {
+    "slug": "customer-acquisition-cost",
+    "name": "Customer acquisition cost",
+    "title": "Customer acquisition cost: Formula, Example & Limits",
+    "description": "Calculate CAC using matched acquisition costs and unique new customers. Compare the denominator, cost scope and limitations with ROAS.",
+    "category": "Business & pricing",
+    "aliases": [
+      "customer acquisition cost calculator",
+      "CAC calculator"
+    ],
+    "definition": "Customer acquisition cost divides the costs included in a defined acquisition effort by unique new customers attributed to that same scope. The customer definition, period and cost allocation are essential inputs. CAC measures cost per new customer; ROAS measures attributed revenue per advertising dollar.",
+    "explanation": "Count each customer once when first acquired under your stated definition. A lead, trial sign-up, order and repeat purchase can all represent different events. Choose the customer event and the population before dividing cost. The worksheet asks for whole unique new customers rather than silently treating orders as people or accounts.",
+    "formula": "CAC = nonoverlapping acquisition costs / unique new customers in the matching period and scope",
+    "formulaNote": "Manual costs and unique-new-customer counts for a user-defined matching scope. No CRM connection, automatic attribution, customer lifetime value, universal good-CAC threshold or budget recommendation.",
+    "example": {
+      "title": "Itemized",
+      "intro": "customers = 100; advertising = 12000; people = 8000; agency = 0; software = 0; other = 5000",
+      "steps": [
+        "CAC = nonoverlapping acquisition costs / unique new customers in the matching period and scope.",
+        "With these inputs, acquisition cost per unique new customer = $250.000000."
+      ],
+      "answer": "Acquisition cost per unique new customer: $250.000000.",
+      "assumptions": "Manual costs and unique-new-customer counts for a user-defined matching scope. No CRM connection, automatic attribution, customer lifetime value, universal good-CAC threshold or budget recommendation.",
+      "calculator": {
+        "id": "customer-acquisition-cost",
+        "mode": "itemized",
+        "values": {
+          "customers": "100",
+          "advertising": "12000",
+          "people": "8000",
+          "agency": "0",
+          "software": "0",
+          "other": "5000"
+        },
+        "expected": [
+          {
+            "label": "Acquisition cost per unique new customer",
+            "value": 250.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Does a low CAC prove the business is profitable?",
+      "text": "No. Customer revenue, product costs, retention, overhead and future behavior remain separate. The calculator does not apply a universal healthy-CAC threshold."
+    },
+    "tools": [
+      {
+        "id": "customer-acquisition-cost",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      },
+      {
+        "id": "roas",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      }
+    ],
+    "related": [
+      "contribution-margin"
+    ],
+    "sources": [
+      {
+        "title": "Tremendous: CAC calculator",
+        "url": "https://www.tremendous.com/tools/customer-acquisition-cost-calculator/"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "Manual costs and unique-new-customer counts for a user-defined matching scope. No CRM connection, automatic attribution, customer lifetime value, universal good-CAC threshold or budget recommendation.",
+    "guides": [
+      {
+        "title": "CAC vs. ROAS: New Customers, Cost Scope & Attribution",
+        "path": "/guides/customer-acquisition-cost-vs-roas/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can I use orders instead of customers?",
+        "answer": "Only if you intend to calculate cost per order and label it that way. CAC here requires unique new customers in the selected scope."
+      },
+      {
+        "question": "What if no new customers were acquired?",
+        "answer": "CAC is undefined because its denominator is zero. The calculator identifies that state instead of reporting a real zero cost."
+      }
+    ]
+  },
+  {
+    "slug": "dividend-discount-model",
+    "name": "Dividend discount model",
+    "title": "Dividend discount model: Formula, Example & Limits",
+    "description": "Compare dividend-discount valuation with reinvestment projections. Inspect D0/D1 timing, required-return assumptions and two-stage terminal value.",
+    "category": "Saving & investing",
+    "aliases": [
+      "dividend discount model calculator",
+      "Gordon growth model calculator"
+    ],
+    "definition": "A dividend discount model values assumed future equity distributions at an entered required return. Stable-growth value uses the next annual dividend divided by required return minus perpetual growth. A two-stage model discounts early dividends separately from a later stable-growth terminal value.",
+    "explanation": "D0 denotes the latest annual dividend, while D1 denotes the next expected annual dividend. In stable-growth mode, D0 is multiplied once by one plus growth. A known D1 is used directly. Applying growth to an already forward dividend shifts the entire perpetual stream and overstates its value under the chosen assumptions.",
+    "formula": "Stable value = D1 / (r − g); two-stage value = PV of early dividends + PV of terminal price at year N",
+    "formulaNote": "Manual annual end-period dividend assumptions and one annual required equity return. Stable-stage return must exceed growth. No dividend lookup, trading recommendation, automatic growth forecast or tax calculation.",
+    "example": {
+      "title": "Latest dividend",
+      "intro": "dividend = 2; growth = 4.0; required return = 10.0; dividend basis = Latest annual dividend (D0)",
+      "steps": [
+        "Stable value = D1 / (r − g); two-stage value = PV of early dividends + PV of terminal price at year N.",
+        "With these inputs, modeled dividend-discount value per share = $34.666667."
+      ],
+      "answer": "Modeled dividend-discount value per share: $34.666667.",
+      "assumptions": "Manual annual end-period dividend assumptions and one annual required equity return. Stable-stage return must exceed growth. No dividend lookup, trading recommendation, automatic growth forecast or tax calculation.",
+      "calculator": {
+        "id": "dividend-discount-model",
+        "mode": "stable",
+        "values": {
+          "dividend": "2",
+          "growth": "4.0",
+          "required_return": "10.0",
+          "dividend_basis": "Latest annual dividend (D0)"
+        },
+        "expected": [
+          {
+            "label": "Modeled dividend-discount value per share",
+            "value": 34.666666666666664,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Is the result a predicted trading price?",
+      "text": "No. It is an assumption-based dividend valuation. The worksheet does not validate growth, fetch prices or recommend a trade."
+    },
+    "tools": [
+      {
+        "id": "dividend-discount-model",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      },
+      {
+        "id": "drip",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      }
+    ],
+    "related": [
+      "capital-asset-pricing-model"
+    ],
+    "sources": [
+      {
+        "title": "Good Calculators: DDM",
+        "url": "https://goodcalculators.com/dividend-discount-model-ddm-calculator/"
+      },
+      {
+        "title": "BuyUpside: Two-stage DDM",
+        "url": "https://www.buyupside.com/dividends/dividenddiscountmodeltwostagev1.php"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "Manual annual end-period dividend assumptions and one annual required equity return. Stable-stage return must exceed growth. No dividend lookup, trading recommendation, automatic growth forecast or tax calculation.",
+    "guides": [
+      {
+        "title": "Dividend Discount Model vs. Reinvestment: Value, D0/D1 & Growth",
+        "path": "/guides/dividend-discount-model-vs-dividend-reinvestment/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Do I grow a dividend already entered as D1?",
+        "answer": "No. D1 is already the next annual dividend. Only a latest dividend entered as D0 is grown once in stable mode."
+      },
+      {
+        "question": "Can perpetual growth equal required return?",
+        "answer": "Not in this convergent Gordon worksheet. It requires return greater than growth and rejects a zero or negative spread."
+      }
+    ]
+  },
+  {
+    "slug": "earnings-per-share",
+    "name": "Earnings per share",
+    "title": "Earnings per share: Formula, Example & Limits",
+    "description": "Calculate basic EPS from common earnings and weighted shares. Inspect day-weighted share schedules and the separate rules behind diluted EPS.",
+    "category": "Saving & investing",
+    "aliases": [
+      "earnings per share calculator",
+      "EPS calculator"
+    ],
+    "definition": "Basic earnings per share divides period earnings available to common shareholders by weighted average common shares for the same period. Preferred earnings adjustments and the share denominator need a consistent accounting scope. Diluted EPS adds distinct numerator, denominator and anti-dilution considerations.",
+    "explanation": "Match the income period and ownership scope with the shares in the denominator. This simplified worksheet starts from net income and subtracts a preferred earnings adjustment that you have already checked. That adjustment is not a request for every dividend paid; ordinary common-share dividends do not reduce the earnings numerator in this step.",
+    "formula": "Basic EPS = (net income − entered preferred earnings adjustment) / weighted average common shares",
+    "formulaNote": "A simplified basic-EPS worksheet using an already-checked preferred earnings adjustment and a supplied average or complete share/day schedule. No automatic diluted EPS, corporate-action restatement or complete reporting compliance.",
+    "example": {
+      "title": "Known average",
+      "intro": "net income = 1000000; preferred adjustment = 100000; average shares = 300000",
+      "steps": [
+        "Basic EPS = (net income − entered preferred earnings adjustment) / weighted average common shares.",
+        "With these inputs, basic earnings per common share = $3.000000."
+      ],
+      "answer": "Basic earnings per common share: $3.000000.",
+      "assumptions": "A simplified basic-EPS worksheet using an already-checked preferred earnings adjustment and a supplied average or complete share/day schedule. No automatic diluted EPS, corporate-action restatement or complete reporting compliance.",
+      "calculator": {
+        "id": "earnings-per-share",
+        "mode": "known-average",
+        "values": {
+          "net_income": "1000000",
+          "preferred_adjustment": "100000",
+          "average_shares": "300000"
+        },
+        "expected": [
+          {
+            "label": "Basic earnings per common share",
+            "value": 3.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Does this automatically calculate diluted EPS?",
+      "text": "No. Diluted numerator, denominator and anti-dilution rules require separate analysis. This page provides a simplified basic-EPS worksheet."
+    },
+    "tools": [
+      {
+        "id": "earnings-per-share",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      },
+      {
+        "id": "return-on-equity",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      }
+    ],
+    "related": [
+      "return-on-equity",
+      "return-on-invested-capital"
+    ],
+    "sources": [
+      {
+        "title": "IFRS Foundation: IAS 33 overview",
+        "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-33-earnings-per-share/"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "A simplified basic-EPS worksheet using an already-checked preferred earnings adjustment and a supplied average or complete share/day schedule. No automatic diluted EPS, corporate-action restatement or complete reporting compliance.",
+    "guides": [
+      {
+        "title": "Basic EPS vs. Diluted EPS: Earnings Scope & Weighted Shares",
+        "path": "/guides/basic-eps-vs-diluted-eps/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can I subtract ordinary common dividends from net income here?",
+        "answer": "No. The adjustment field is for an already-checked preferred earnings adjustment, not ordinary common-share dividends."
+      },
+      {
+        "question": "Can I enter shares issued instead of shares outstanding in each schedule row?",
+        "answer": "No. Enter the common shares outstanding for that segment and its day count. Segment days must cover the full reporting period."
+      }
+    ]
+  },
+  {
+    "slug": "sharpe-ratio",
+    "name": "Sharpe ratio",
+    "title": "Sharpe ratio: Formula, Example & Limits",
+    "description": "Calculate Sharpe ratio from matching-period statistics or return observations. Inspect sample volatility, negative results and annualization assumptions.",
+    "category": "Saving & investing",
+    "aliases": [
+      "sharpe ratio calculator",
+      "sharpe measure calculator"
+    ],
+    "definition": "Sharpe ratio compares arithmetic mean excess return with the standard deviation of those excess returns. The return period and benchmark convention are part of the measure. This worksheet accepts matching-period statistics or a simple return series with a constant same-period risk-free return.",
+    "explanation": "Sharpe ratio uses a differential or excess return, rather than the investment return alone. With a constant risk-free return for each observation, subtracting that constant changes the mean but not the standard deviation. If the benchmark varies, the volatility must describe the actual excess-return series.",
+    "formula": "Period Sharpe = mean(excess return) / standard deviation(excess return); assumed annual Sharpe = period Sharpe × sqrt(periods per year)",
+    "formulaNote": "Manual equally spaced simple returns or matched statistics. Series mode uses sample standard deviation (n−1), a fixed same-period risk-free return and an explicit annualization count. No market-price feed, portfolio optimization or performance guarantee.",
+    "example": {
+      "title": "Known annual",
+      "intro": "risk free = 4.0; periods per year = 1; mean return = 12.0; std dev = 16.0",
+      "steps": [
+        "Period Sharpe = mean(excess return) / standard deviation(excess return); assumed annual Sharpe = period Sharpe × sqrt(periods per year).",
+        "With these inputs, sharpe ratio for one observation period = 0.500000."
+      ],
+      "answer": "Sharpe ratio for one observation period: 0.500000.",
+      "assumptions": "Manual equally spaced simple returns or matched statistics. Series mode uses sample standard deviation (n−1), a fixed same-period risk-free return and an explicit annualization count. No market-price feed, portfolio optimization or performance guarantee.",
+      "calculator": {
+        "id": "sharpe-ratio",
+        "mode": "statistics",
+        "values": {
+          "risk_free": "4.0",
+          "periods_per_year": "1",
+          "mean_return": "12.0",
+          "std_dev": "16.0"
+        },
+        "expected": [
+          {
+            "label": "Sharpe ratio for one observation period",
+            "value": 0.5,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Is multiplying by sqrt(12) always exact?",
+      "text": "No. It is an annualization convention with assumptions about aggregation and serial correlation. It is not an exact compounded-return rule."
+    },
+    "tools": [
+      {
+        "id": "sharpe-ratio",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      },
+      {
+        "id": "average-return",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      }
+    ],
+    "related": [
+      "capital-asset-pricing-model"
+    ],
+    "sources": [
+      {
+        "title": "William F. Sharpe: The Sharpe Ratio",
+        "url": "https://web.stanford.edu/~wfsharpe/art/sr/sr.htm"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "Manual equally spaced simple returns or matched statistics. Series mode uses sample standard deviation (n−1), a fixed same-period risk-free return and an explicit annualization count. No market-price feed, portfolio optimization or performance guarantee.",
+    "guides": [
+      {
+        "title": "Sharpe Ratio vs. Total Return: Excess Returns, Volatility & Time",
+        "path": "/guides/sharpe-ratio-vs-total-return/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Are Sharpe measure and Sharpe ratio different calculators?",
+        "answer": "They refer to the same measure on this page. The inputs still need matching periods and a stated benchmark convention."
+      },
+      {
+        "question": "Can I use CAGR as the mean return input?",
+        "answer": "Not as an automatic substitute. Sharpe uses arithmetic mean observation-period excess return; CAGR is a geometric endpoint measure."
+      }
+    ]
+  },
+  {
+    "slug": "black-scholes-model",
+    "name": "Black-Scholes-Merton model",
+    "title": "Black-Scholes-Merton model: Formula, Example & Limits",
+    "description": "Calculate European option model values with explicit volatility, continuous rates and dividend yield. Distinguish theoretical value from expiration profit.",
+    "category": "Saving & investing",
+    "aliases": [
+      "black scholes calculator",
+      "Black Scholes Merton calculator"
+    ],
+    "definition": "The Black-Scholes-Merton model values European call and put options using entered spot, strike, time, annual volatility and continuous interest and dividend rates. Theoretical value before expiry is different from a contract’s expiration payoff or a trader’s net profit.",
+    "explanation": "Spot and strike are dollars per share. Volatility is annualized and entered as a percentage. The risk-free rate and dividend yield are annual continuously compounded rates: enter 5 for 5%, which becomes 0.05 internally. An effective annual return or a simple borrowing APR is not automatically the same rate.",
+    "formula": "C = S exp(−qT)N(d1) − K exp(−rT)N(d2); C − P = S exp(−qT) − K exp(−rT)",
+    "formulaNote": "European exercise with constant annual volatility and continuous rates. Per-share theory values only; no American early exercise, discrete cash dividends, real-time quotes, implied-volatility estimation or employee-option accounting determination.",
+    "example": {
+      "title": "Classic no dividend",
+      "intro": "spot = 100; strike = 100; risk free = 5.0; dividend yield = 0.0; volatility = 20.0; time unit = Years; time = 1",
+      "steps": [
+        "C = S exp(−qT)N(d1) − K exp(−rT)N(d2); C − P = S exp(−qT) − K exp(−rT).",
+        "With these inputs, european call theoretical value per share = $10.450584."
+      ],
+      "answer": "European call theoretical value per share: $10.450584.",
+      "assumptions": "European exercise with constant annual volatility and continuous rates. Per-share theory values only; no American early exercise, discrete cash dividends, real-time quotes, implied-volatility estimation or employee-option accounting determination.",
+      "calculator": {
+        "id": "black-scholes",
+        "mode": "european",
+        "values": {
+          "spot": "100",
+          "strike": "100",
+          "risk_free": "5.0",
+          "dividend_yield": "0.0",
+          "volatility": "20.0",
+          "time_unit": "Years",
+          "time": "1"
+        },
+        "expected": [
+          {
+            "label": "European call theoretical value per share",
+            "value": 10.450583572185566,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Does it value American early exercise?",
+      "text": "No. It values European exercise under a constant continuous-dividend-yield assumption. American exercise and dated cash dividends require other treatment."
+    },
+    "tools": [
+      {
+        "id": "black-scholes",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      },
+      {
+        "id": "covered-call",
+        "text": "Inspect the entered assumptions and results for this related financial task."
+      }
+    ],
+    "related": [
+      "cash-secured-put",
+      "covered-call"
+    ],
+    "sources": [
+      {
+        "title": "Columbia: Options calculator",
+        "url": "https://www.math.columbia.edu/~smirnov/options13.html"
+      },
+      {
+        "title": "Ivey Business School: Black-Scholes options calculator",
+        "url": "https://www.ivey.uwo.ca/bengrahaminvesting/resources/financial-databases-tools/black-scholes-options-calculator/"
+      }
+    ],
+    "checkedOn": "2026-11-17",
+    "scope": "European exercise with constant annual volatility and continuous rates. Per-share theory values only; no American early exercise, discrete cash dividends, real-time quotes, implied-volatility estimation or employee-option accounting determination.",
+    "guides": [
+      {
+        "title": "Option Theoretical Value vs. Expiration Payoff: Black-Scholes Inputs",
+        "path": "/guides/option-theoretical-value-vs-expiration-payoff/"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Are the results per share or per option contract?",
+        "answer": "Per share. The worksheet does not assume a contract multiplier or contract count, and its model price is not trading profit."
+      },
+      {
+        "question": "Can I enter a negative risk-free rate?",
+        "answer": "Yes, within the displayed input range. It must be an annual continuously compounded rate consistent with the model."
+      }
+    ]
+  }
+]

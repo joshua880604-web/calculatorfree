@@ -1642,6 +1642,46 @@
       "role": "method",
       "usedFor": "The EBIT/interest-expense definition of times interest earned.",
       "scope": "Concept reference only. Our hypothetical cases and target sensitivity are independently calculated; no textbook example, recommendation or material is reproduced."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-split": {
+      "role": "method",
+      "usedFor": "The proportional stock-split concept.",
+      "scope": "No issuer-specific fractional settlement, market quote or tax-basis determination is supplied by this reference."
+    },
+    "https://www.tremendous.com/tools/customer-acquisition-cost-calculator/": {
+      "role": "method",
+      "usedFor": "Sales/marketing costs and new-customer inputs for a CAC worksheet.",
+      "scope": "Method and input-context reference only. Our examples count unique new customers; purchases are not silently substituted, and no general LTV ratio recommendation is adopted."
+    },
+    "https://goodcalculators.com/dividend-discount-model-ddm-calculator/": {
+      "role": "method",
+      "usedFor": "The stable-growth relationship among next dividend, equity return and growth.",
+      "scope": "Method context only; our inputs are manual and no implied growth forecast, product endorsement or investment recommendation is adopted."
+    },
+    "https://www.buyupside.com/dividends/dividenddiscountmodeltwostagev1.php": {
+      "role": "method",
+      "usedFor": "An explicit early-dividend stage plus the present value of a stable terminal price.",
+      "scope": "Our examples and one-return convention are independently stated; no source example or forecast is reproduced."
+    },
+    "https://www.ifrs.org/issued-standards/list-of-standards/ias-33-earnings-per-share/": {
+      "role": "method",
+      "usedFor": "Common-holder earnings, weighted average shares, and the distinction between basic and diluted EPS.",
+      "scope": "Concept reference only; the worksheet does not infer compliance with US GAAP or complete IFRS reporting, preferred rights or dilution rules."
+    },
+    "https://web.stanford.edu/~wfsharpe/art/sr/sr.htm": {
+      "role": "method",
+      "usedFor": "Differential-return mean and standard deviation, naming, and limitations of time scaling.",
+      "scope": "Theoretical reference, not a market forecast. Our hypothetical observations and 80-digit reference calculations are independently prepared."
+    },
+    "https://www.math.columbia.edu/~smirnov/options13.html": {
+      "role": "method",
+      "usedFor": "Continuous dividend-yield inputs and the distinction between European Black-Scholes prices and American tree calculations.",
+      "scope": "Academic tool context only. Our Gaussian-tail quadrature and independent high-precision reference cases are separate implementations."
+    },
+    "https://www.ivey.uwo.ca/bengrahaminvesting/resources/financial-databases-tools/black-scholes-options-calculator/": {
+      "role": "method",
+      "usedFor": "European call/put valuation with dividends.",
+      "scope": "Method-scope reference only. The source Excel model was not executed as our benchmark, and no accounting fair-value compliance is claimed."
     }
   },
   "pages": {
@@ -3917,6 +3957,234 @@
           "role": "method",
           "usedFor": "The EBIT/interest-expense definition of times interest earned.",
           "scope": "Concept reference only. Our hypothetical cases and target sensitivity are independently calculated; no textbook example, recommendation or material is reproduced."
+        }
+      }
+    },
+    "calculator:stock-split": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-split": {
+          "role": "method",
+          "usedFor": "The proportional stock-split concept.",
+          "scope": "No issuer-specific fractional settlement, market quote or tax-basis determination is supplied by this reference."
+        }
+      }
+    },
+    "guide:/guides/stock-split-vs-reverse-stock-split/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-split": {
+          "role": "method",
+          "usedFor": "The proportional stock-split concept.",
+          "scope": "No issuer-specific fractional settlement, market quote or tax-basis determination is supplied by this reference."
+        }
+      }
+    },
+    "glossary:stock-split": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-split": {
+          "role": "method",
+          "usedFor": "The proportional stock-split concept.",
+          "scope": "No issuer-specific fractional settlement, market quote or tax-basis determination is supplied by this reference."
+        }
+      }
+    },
+    "calculator:customer-acquisition-cost": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.tremendous.com/tools/customer-acquisition-cost-calculator/": {
+          "role": "method",
+          "usedFor": "Sales/marketing costs and new-customer inputs for a CAC worksheet.",
+          "scope": "Method and input-context reference only. Our examples count unique new customers; purchases are not silently substituted, and no general LTV ratio recommendation is adopted."
+        }
+      }
+    },
+    "guide:/guides/customer-acquisition-cost-vs-roas/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.tremendous.com/tools/customer-acquisition-cost-calculator/": {
+          "role": "method",
+          "usedFor": "Sales/marketing costs and new-customer inputs for a CAC worksheet.",
+          "scope": "Method and input-context reference only. Our examples count unique new customers; purchases are not silently substituted, and no general LTV ratio recommendation is adopted."
+        }
+      }
+    },
+    "glossary:customer-acquisition-cost": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.tremendous.com/tools/customer-acquisition-cost-calculator/": {
+          "role": "method",
+          "usedFor": "Sales/marketing costs and new-customer inputs for a CAC worksheet.",
+          "scope": "Method and input-context reference only. Our examples count unique new customers; purchases are not silently substituted, and no general LTV ratio recommendation is adopted."
+        }
+      }
+    },
+    "calculator:dividend-discount-model": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://goodcalculators.com/dividend-discount-model-ddm-calculator/": {
+          "role": "method",
+          "usedFor": "The stable-growth relationship among next dividend, equity return and growth.",
+          "scope": "Method context only; our inputs are manual and no implied growth forecast, product endorsement or investment recommendation is adopted."
+        },
+        "https://www.buyupside.com/dividends/dividenddiscountmodeltwostagev1.php": {
+          "role": "method",
+          "usedFor": "An explicit early-dividend stage plus the present value of a stable terminal price.",
+          "scope": "Our examples and one-return convention are independently stated; no source example or forecast is reproduced."
+        }
+      }
+    },
+    "guide:/guides/dividend-discount-model-vs-dividend-reinvestment/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://goodcalculators.com/dividend-discount-model-ddm-calculator/": {
+          "role": "method",
+          "usedFor": "The stable-growth relationship among next dividend, equity return and growth.",
+          "scope": "Method context only; our inputs are manual and no implied growth forecast, product endorsement or investment recommendation is adopted."
+        },
+        "https://www.buyupside.com/dividends/dividenddiscountmodeltwostagev1.php": {
+          "role": "method",
+          "usedFor": "An explicit early-dividend stage plus the present value of a stable terminal price.",
+          "scope": "Our examples and one-return convention are independently stated; no source example or forecast is reproduced."
+        }
+      }
+    },
+    "glossary:dividend-discount-model": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://goodcalculators.com/dividend-discount-model-ddm-calculator/": {
+          "role": "method",
+          "usedFor": "The stable-growth relationship among next dividend, equity return and growth.",
+          "scope": "Method context only; our inputs are manual and no implied growth forecast, product endorsement or investment recommendation is adopted."
+        },
+        "https://www.buyupside.com/dividends/dividenddiscountmodeltwostagev1.php": {
+          "role": "method",
+          "usedFor": "An explicit early-dividend stage plus the present value of a stable terminal price.",
+          "scope": "Our examples and one-return convention are independently stated; no source example or forecast is reproduced."
+        }
+      }
+    },
+    "calculator:earnings-per-share": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.ifrs.org/issued-standards/list-of-standards/ias-33-earnings-per-share/": {
+          "role": "method",
+          "usedFor": "Common-holder earnings, weighted average shares, and the distinction between basic and diluted EPS.",
+          "scope": "Concept reference only; the worksheet does not infer compliance with US GAAP or complete IFRS reporting, preferred rights or dilution rules."
+        }
+      }
+    },
+    "guide:/guides/basic-eps-vs-diluted-eps/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.ifrs.org/issued-standards/list-of-standards/ias-33-earnings-per-share/": {
+          "role": "method",
+          "usedFor": "Common-holder earnings, weighted average shares, and the distinction between basic and diluted EPS.",
+          "scope": "Concept reference only; the worksheet does not infer compliance with US GAAP or complete IFRS reporting, preferred rights or dilution rules."
+        }
+      }
+    },
+    "glossary:earnings-per-share": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.ifrs.org/issued-standards/list-of-standards/ias-33-earnings-per-share/": {
+          "role": "method",
+          "usedFor": "Common-holder earnings, weighted average shares, and the distinction between basic and diluted EPS.",
+          "scope": "Concept reference only; the worksheet does not infer compliance with US GAAP or complete IFRS reporting, preferred rights or dilution rules."
+        }
+      }
+    },
+    "calculator:sharpe-ratio": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://web.stanford.edu/~wfsharpe/art/sr/sr.htm": {
+          "role": "method",
+          "usedFor": "Differential-return mean and standard deviation, naming, and limitations of time scaling.",
+          "scope": "Theoretical reference, not a market forecast. Our hypothetical observations and 80-digit reference calculations are independently prepared."
+        }
+      }
+    },
+    "guide:/guides/sharpe-ratio-vs-total-return/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://web.stanford.edu/~wfsharpe/art/sr/sr.htm": {
+          "role": "method",
+          "usedFor": "Differential-return mean and standard deviation, naming, and limitations of time scaling.",
+          "scope": "Theoretical reference, not a market forecast. Our hypothetical observations and 80-digit reference calculations are independently prepared."
+        }
+      }
+    },
+    "glossary:sharpe-ratio": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://web.stanford.edu/~wfsharpe/art/sr/sr.htm": {
+          "role": "method",
+          "usedFor": "Differential-return mean and standard deviation, naming, and limitations of time scaling.",
+          "scope": "Theoretical reference, not a market forecast. Our hypothetical observations and 80-digit reference calculations are independently prepared."
+        }
+      }
+    },
+    "calculator:black-scholes": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.math.columbia.edu/~smirnov/options13.html": {
+          "role": "method",
+          "usedFor": "Continuous dividend-yield inputs and the distinction between European Black-Scholes prices and American tree calculations.",
+          "scope": "Academic tool context only. Our Gaussian-tail quadrature and independent high-precision reference cases are separate implementations."
+        },
+        "https://www.ivey.uwo.ca/bengrahaminvesting/resources/financial-databases-tools/black-scholes-options-calculator/": {
+          "role": "method",
+          "usedFor": "European call/put valuation with dividends.",
+          "scope": "Method-scope reference only. The source Excel model was not executed as our benchmark, and no accounting fair-value compliance is claimed."
+        }
+      }
+    },
+    "guide:/guides/option-theoretical-value-vs-expiration-payoff/": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.math.columbia.edu/~smirnov/options13.html": {
+          "role": "method",
+          "usedFor": "Continuous dividend-yield inputs and the distinction between European Black-Scholes prices and American tree calculations.",
+          "scope": "Academic tool context only. Our Gaussian-tail quadrature and independent high-precision reference cases are separate implementations."
+        },
+        "https://www.ivey.uwo.ca/bengrahaminvesting/resources/financial-databases-tools/black-scholes-options-calculator/": {
+          "role": "method",
+          "usedFor": "European call/put valuation with dividends.",
+          "scope": "Method-scope reference only. The source Excel model was not executed as our benchmark, and no accounting fair-value compliance is claimed."
+        }
+      }
+    },
+    "glossary:black-scholes-model": {
+      "updatedOn": "2026-11-17",
+      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "overrides": {
+        "https://www.math.columbia.edu/~smirnov/options13.html": {
+          "role": "method",
+          "usedFor": "Continuous dividend-yield inputs and the distinction between European Black-Scholes prices and American tree calculations.",
+          "scope": "Academic tool context only. Our Gaussian-tail quadrature and independent high-precision reference cases are separate implementations."
+        },
+        "https://www.ivey.uwo.ca/bengrahaminvesting/resources/financial-databases-tools/black-scholes-options-calculator/": {
+          "role": "method",
+          "usedFor": "European call/put valuation with dividends.",
+          "scope": "Method-scope reference only. The source Excel model was not executed as our benchmark, and no accounting fair-value compliance is claimed."
         }
       }
     }

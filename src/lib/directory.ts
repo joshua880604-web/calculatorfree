@@ -10,6 +10,13 @@ export function directoryGroup(id:string,_category?:string){
  return group.id;
 }
 const toolAliases:Record<string,string[]>={
+"stock-split":["stock split calculator", "reverse stock split calculator", "sequential stock splits", "split adjusted average cost"],
+"customer-acquisition-cost":["customer acquisition cost calculator", "CAC calculator", "cost per new customer", "itemized acquisition costs"],
+"dividend-discount-model":["dividend discount model calculator", "Gordon growth model calculator", "dividend discount calculator", "two stage DDM"],
+"earnings-per-share":["earnings per share calculator", "EPS calculator", "weighted average shares calculator", "basic EPS calculation"],
+"sharpe-ratio":["sharpe ratio calculator", "sharpe measure calculator", "annualized Sharpe ratio", "Sharpe from return series"],
+"black-scholes":["black scholes calculator", "Black Scholes Merton calculator", "European option value calculator", "option theoretical price"],
+
 "credit-card-rewards":["credit card rewards calculator", "cash back credit card calculator", "points and miles value calculator", "credit card annual fee break even"],
 "accounts-receivable-turnover":["accounts receivable turnover calculator", "receivables turnover ratio", "days sales outstanding calculator", "average collection period"],
 "days-payable-outstanding":["days payable outstanding calculator", "DPO calculator", "accounts payable turnover calculator", "payables turnover ratio"],

@@ -1,0 +1,3 @@
+Case,Mode,Input assumptions,Result label,Expected value
+Forward,single,shares = 120; price = 45; average cost = 30; new shares = 3; old shares = 2,Theoretical shares after splits,180.0
+Sequential,chain,"shares = 120; price = 45; average cost = 30; splits = 3, 2 / 1, 5",Theoretical shares after splits,36.0

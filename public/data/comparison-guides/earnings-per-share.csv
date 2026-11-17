@@ -1,0 +1,3 @@
+Case,Mode,Input assumptions,Result label,Expected value
+Known average,known-average,net income = 1000000; preferred adjustment = 100000; average shares = 300000,Basic earnings per common share,3.0
+Weighted share schedule,weighted-schedule,"net income = 1000000; preferred adjustment = 100000; period days = 365; share schedule = 100000, 90 / 200000, 275",Basic earnings per common share,5.1328125

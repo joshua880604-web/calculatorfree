@@ -2,6 +2,7 @@ import type { Metric, Result } from "./types";
 
 // Complex tax forms, multi-debt entry sheets and the 401(k) story keep their wider flow.
 export const workspaceIds = [
+  "stock-split","customer-acquisition-cost","dividend-discount-model","earnings-per-share","sharpe-ratio","black-scholes",
   "credit-card-rewards","accounts-receivable-turnover","days-payable-outstanding","cash-conversion-cycle","roic","interest-coverage-ratio",
   "mortgage-buydown","cash-secured-put","profitability-index","return-on-equity","72t",
   "wacc","capm","cd-early-withdrawal-penalty","burn-rate","bond-duration",
@@ -25,10 +26,16 @@ export const workspaceIds = [
 export function hasCalculatorWorkspace(id: string): boolean { return (workspaceIds as readonly string[]).includes(id); }
 export function workspaceLayout(id: string, mode: string): "split" | "stacked" | null {
   if (!hasCalculatorWorkspace(id)) return null;
-  return id === 'credit-card-rewards' || id === 'cash-conversion-cycle' && mode!=='days' || id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
+  return (id === 'stock-split' && mode === 'chain') || (id === 'earnings-per-share' && mode === 'weighted-schedule') || (id === 'sharpe-ratio' && mode === 'return-series') || id === 'black-scholes' || id === 'credit-card-rewards' || id === 'cash-conversion-cycle' && mode!=='days' || id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
 }
 
 const priorities: Record<string, string[]> = {
+  'stock-split': ['Theoretical shares after splits','Proportional reference price per share','Adjusted average acquisition cost per share','Total acquisition cost preserved'],
+  'customer-acquisition-cost': ['Acquisition cost per unique new customer','Total acquisition cost included','Unique new customers in the selected scope'],
+  'dividend-discount-model': ['Modeled dividend-discount value per share','PV of explicit early-stage dividends','PV of stable-stage terminal value'],
+  'earnings-per-share': ['Basic earnings per common share','Entered earnings available to common','Weighted average common shares used'],
+  'sharpe-ratio': ['Sharpe ratio for one observation period','Assumption-annualized Sharpe ratio','Arithmetic mean excess return per period','Excess-return standard deviation per period'],
+  'black-scholes': ['European call theoretical value per share','European put theoretical value per share','Time to expiry in model years'],
   'credit-card-rewards': ['Recurring annual net rewards before card interest','Gross modeled annual reward value','Annual fee entered','First-year net including assumed one-time bonus'],
   'credit-card-rewards:compare': ['Recurring annual net advantage (A minus B)','Plan A annual net before interest','Plan B annual net before interest','Annual spend where recurring net rewards match'],
   'accounts-receivable-turnover': ['Receivables turnover in selected period','Average-balance DSO / collection days','Days in reporting period'],

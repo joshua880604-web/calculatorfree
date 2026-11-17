@@ -1,3 +1,9 @@
+import {stockSplitCalculator} from './stock-split';
+import {customerAcquisitionCostCalculator} from './customer-acquisition-cost';
+import {dividendDiscountModelCalculator} from './dividend-discount-model';
+import {earningsPerShareCalculator} from './earnings-per-share';
+import {sharpeRatioCalculator} from './sharpe-ratio';
+import {blackScholesCalculator} from './black-scholes';
 import {creditCardRewardsCalculator} from './credit-card-rewards';
 import {receivablesTurnoverCalculator} from './receivables-turnover';
 import {daysPayableOutstandingCalculator} from './days-payable-outstanding';
@@ -61,6 +67,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  stockSplitCalculator,customerAcquisitionCostCalculator,dividendDiscountModelCalculator,earningsPerShareCalculator,sharpeRatioCalculator,blackScholesCalculator,
   creditCardRewardsCalculator,receivablesTurnoverCalculator,daysPayableOutstandingCalculator,cashConversionCycleCalculator,roicCalculator,interestCoverageCalculator,
   mortgageBuydownCalculator,cashSecuredPutCalculator,profitabilityIndexCalculator,returnOnEquityCalculator,seppCalculator,
   waccCalculator,capmCalculator,cdPenaltyCalculator,burnRateCalculator,bondDurationCalculator,

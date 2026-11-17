@@ -1,0 +1,396 @@
+{
+  "method": "Independent 80-digit mpmath arithmetic; Gaussian probabilities from erfc, separate from JavaScript adaptive-quadrature implementation.",
+  "precisionDigits": 80,
+  "fixtures": [
+    {
+      "id": "stock-split",
+      "mode": "single",
+      "title": "Forward",
+      "values": {
+        "shares": "120",
+        "price": "45",
+        "average_cost": "30",
+        "new_shares": "3",
+        "old_shares": "2"
+      },
+      "expected": {
+        "Theoretical shares after splits": "180.0",
+        "Proportional reference price per share": "30.0",
+        "Adjusted average acquisition cost per share": "20.0",
+        "Total reference holding value": "5400.0",
+        "Total acquisition cost preserved": "3600.0"
+      }
+    },
+    {
+      "id": "stock-split",
+      "mode": "single",
+      "title": "Reverse with fraction",
+      "values": {
+        "shares": "103",
+        "price": "4",
+        "average_cost": "3",
+        "new_shares": "1",
+        "old_shares": "10"
+      },
+      "expected": {
+        "Theoretical shares after splits": "10.3",
+        "Proportional reference price per share": "40.0",
+        "Adjusted average acquisition cost per share": "30.0",
+        "Total reference holding value": "412.0",
+        "Total acquisition cost preserved": "309.0"
+      }
+    },
+    {
+      "id": "stock-split",
+      "mode": "chain",
+      "title": "Sequential",
+      "values": {
+        "shares": "120",
+        "price": "45",
+        "average_cost": "30",
+        "splits": "3, 2\n1, 5"
+      },
+      "expected": {
+        "Theoretical shares after splits": "36.0",
+        "Proportional reference price per share": "150.0",
+        "Adjusted average acquisition cost per share": "100.0",
+        "Total reference holding value": "5400.0",
+        "Total acquisition cost preserved": "3600.0"
+      }
+    },
+    {
+      "id": "customer-acquisition-cost",
+      "mode": "itemized",
+      "title": "Itemized",
+      "values": {
+        "customers": "100",
+        "advertising": "12000",
+        "people": "8000",
+        "agency": "0",
+        "software": "0",
+        "other": "5000"
+      },
+      "expected": {
+        "Acquisition cost per unique new customer": "250.0",
+        "Total acquisition cost included": 25000
+      }
+    },
+    {
+      "id": "customer-acquisition-cost",
+      "mode": "total",
+      "title": "Known total",
+      "values": {
+        "customers": "40",
+        "cost": "6000"
+      },
+      "expected": {
+        "Acquisition cost per unique new customer": "150.0",
+        "Total acquisition cost included": 6000
+      }
+    },
+    {
+      "id": "customer-acquisition-cost",
+      "mode": "total",
+      "title": "Zero cost",
+      "values": {
+        "customers": "25",
+        "cost": "0"
+      },
+      "expected": {
+        "Acquisition cost per unique new customer": "0.0",
+        "Total acquisition cost included": 0
+      }
+    },
+    {
+      "id": "dividend-discount-model",
+      "mode": "stable",
+      "title": "Latest dividend",
+      "values": {
+        "dividend": "2",
+        "growth": "4.0",
+        "required_return": "10.0",
+        "dividend_basis": "Latest annual dividend (D0)"
+      },
+      "expected": {
+        "Modeled dividend-discount value per share": "34.66666666666666666666666666666666666666666666666666666666666666666667"
+      }
+    },
+    {
+      "id": "dividend-discount-model",
+      "mode": "stable",
+      "title": "Known next dividend",
+      "values": {
+        "dividend": "2.08",
+        "growth": "4.0",
+        "required_return": "10.0",
+        "dividend_basis": "Next annual dividend (D1)"
+      },
+      "expected": {
+        "Modeled dividend-discount value per share": "34.66666666666666666666666666666666666666666666666666666666666666666667"
+      }
+    },
+    {
+      "id": "dividend-discount-model",
+      "mode": "stable",
+      "title": "Zero growth",
+      "values": {
+        "dividend": "3",
+        "growth": "0.0",
+        "required_return": "8.0",
+        "dividend_basis": "Next annual dividend (D1)"
+      },
+      "expected": {
+        "Modeled dividend-discount value per share": "37.5"
+      }
+    },
+    {
+      "id": "dividend-discount-model",
+      "mode": "two-stage",
+      "title": "Two stage",
+      "values": {
+        "dividend": "2.0",
+        "growth": "3.0",
+        "required_return": "8.0",
+        "early_growth": "10.0",
+        "years": "2"
+      },
+      "expected": {
+        "Modeled dividend-discount value per share": "46.85185185185185185185185185185185185185185185185185185185185185185185",
+        "Terminal price at end of early stage": "49.852",
+        "PV of explicit early-stage dividends": "4.111796982167352537722908093278463648834019204389574759945130315500686",
+        "PV of stable-stage terminal value": "42.74005486968449931412894375857338820301783264746227709190672153635117"
+      }
+    },
+    {
+      "id": "earnings-per-share",
+      "mode": "known-average",
+      "title": "Known average",
+      "values": {
+        "net_income": "1000000",
+        "preferred_adjustment": "100000",
+        "average_shares": "300000"
+      },
+      "expected": {
+        "Basic earnings per common share": "3.0"
+      }
+    },
+    {
+      "id": "earnings-per-share",
+      "mode": "known-average",
+      "title": "Loss",
+      "values": {
+        "net_income": "-100000",
+        "preferred_adjustment": "10000",
+        "average_shares": "50000"
+      },
+      "expected": {
+        "Basic earnings per common share": "-2.2"
+      }
+    },
+    {
+      "id": "earnings-per-share",
+      "mode": "known-average",
+      "title": "No preferred adjustment",
+      "values": {
+        "net_income": "900000",
+        "preferred_adjustment": "0",
+        "average_shares": "150000"
+      },
+      "expected": {
+        "Basic earnings per common share": "6.0"
+      }
+    },
+    {
+      "id": "earnings-per-share",
+      "mode": "weighted-schedule",
+      "title": "Weighted share schedule",
+      "values": {
+        "net_income": "1000000",
+        "preferred_adjustment": "100000",
+        "period_days": "365",
+        "share_schedule": "100000, 90\n200000, 275"
+      },
+      "expected": {
+        "Basic earnings per common share": "5.1328125",
+        "Weighted average common shares used": "175342.4657534246575342465753424657534246575342465753424657534246575342"
+      }
+    },
+    {
+      "id": "sharpe-ratio",
+      "mode": "statistics",
+      "title": "Known annual",
+      "values": {
+        "risk_free": "4.0",
+        "periods_per_year": "1",
+        "mean_return": "12.0",
+        "std_dev": "16.0"
+      },
+      "expected": {
+        "Sharpe ratio for one observation period": "0.5",
+        "Assumption-annualized Sharpe ratio": "0.5"
+      }
+    },
+    {
+      "id": "sharpe-ratio",
+      "mode": "statistics",
+      "title": "Negative excess",
+      "values": {
+        "risk_free": "4.0",
+        "periods_per_year": "1",
+        "mean_return": "2.0",
+        "std_dev": "10.0"
+      },
+      "expected": {
+        "Sharpe ratio for one observation period": "-0.2",
+        "Assumption-annualized Sharpe ratio": "-0.2"
+      }
+    },
+    {
+      "id": "sharpe-ratio",
+      "mode": "return-series",
+      "title": "Monthly return series",
+      "values": {
+        "risk_free": "0.0",
+        "periods_per_year": "12",
+        "returns": "-2.0, 1.0, 3.0, 0.0"
+      },
+      "expected": {
+        "Sharpe ratio for one observation period": "0.2401922307076307002248805046515305561951138453073713964789604588696004",
+        "Assumption-annualized Sharpe ratio": "0.8320502943378436830275126001854990645195299785796722029331814745139616"
+      }
+    },
+    {
+      "id": "black-scholes",
+      "mode": "european",
+      "title": "Classic no dividend",
+      "values": {
+        "spot": "100",
+        "strike": "100",
+        "risk_free": "5.0",
+        "dividend_yield": "0.0",
+        "volatility": "20.0",
+        "time_unit": "Years",
+        "time": "1"
+      },
+      "expected": {
+        "European call theoretical value per share": "10.45058357218556678165123120967833527930873700326815192709758165700242",
+        "European put theoretical value per share": "5.573526022256967690793763187643551345017481937305465380122538263672733",
+        "Put-call parity residual per share": 0
+      }
+    },
+    {
+      "id": "black-scholes",
+      "mode": "european",
+      "title": "Continuous dividend",
+      "values": {
+        "spot": "100",
+        "strike": "100",
+        "risk_free": "5.0",
+        "dividend_yield": "3.0",
+        "volatility": "20.0",
+        "time_unit": "Years",
+        "time": "1"
+      },
+      "expected": {
+        "European call theoretical value per share": "8.65252855394271468875258054309819405469294753537864021439159900417216",
+        "European put theoretical value per share": "6.730917649163297904642277325143976771728010916521591614205205566684433",
+        "Put-call parity residual per share": 0
+      }
+    },
+    {
+      "id": "black-scholes",
+      "mode": "european",
+      "title": "Negative continuous interest",
+      "values": {
+        "spot": "100",
+        "strike": "110",
+        "risk_free": "-2.0",
+        "dividend_yield": "1.0",
+        "volatility": "30.0",
+        "time_unit": "Years",
+        "time": "2"
+      },
+      "expected": {
+        "European call theoretical value per share": "10.77797493398223946624527863067095317357071976921385076907773256116347",
+        "European put theoretical value per share": "27.24729276446941418743879157899408839272695525665376687229262992117007",
+        "Put-call parity residual per share": 0
+      }
+    },
+    {
+      "id": "black-scholes",
+      "mode": "european",
+      "title": "Expiry call in money",
+      "values": {
+        "spot": "120",
+        "strike": "100",
+        "risk_free": "5.0",
+        "dividend_yield": "3.0",
+        "volatility": "20.0",
+        "time_unit": "Years",
+        "time": "0"
+      },
+      "expected": {
+        "European call theoretical value per share": "20.0",
+        "European put theoretical value per share": "0.0",
+        "Put-call parity residual per share": 0
+      }
+    },
+    {
+      "id": "black-scholes",
+      "mode": "european",
+      "title": "Expiry put in money",
+      "values": {
+        "spot": "80",
+        "strike": "100",
+        "risk_free": "5.0",
+        "dividend_yield": "3.0",
+        "volatility": "20.0",
+        "time_unit": "Years",
+        "time": "0"
+      },
+      "expected": {
+        "European call theoretical value per share": "0.0",
+        "European put theoretical value per share": "20.0",
+        "Put-call parity residual per share": 0
+      }
+    },
+    {
+      "id": "black-scholes",
+      "mode": "european",
+      "title": "Zero volatility",
+      "values": {
+        "spot": "100",
+        "strike": "100",
+        "risk_free": "5.0",
+        "dividend_yield": "3.0",
+        "volatility": "0.0",
+        "time_unit": "Years",
+        "time": "1"
+      },
+      "expected": {
+        "European call theoretical value per share": "1.921610904779416784110303217954217282964936618857048600186393437487727",
+        "European put theoretical value per share": "0.0",
+        "Put-call parity residual per share": 0
+      }
+    },
+    {
+      "id": "black-scholes",
+      "mode": "european",
+      "title": "Calendar-day conversion",
+      "values": {
+        "spot": "100",
+        "strike": "100",
+        "risk_free": "5.0",
+        "dividend_yield": "0.0",
+        "volatility": "20.0",
+        "time_unit": "Calendar days / 365",
+        "time": "365"
+      },
+      "expected": {
+        "European call theoretical value per share": "10.45058357218556678165123120967833527930873700326815192709758165700242",
+        "European put theoretical value per share": "5.573526022256967690793763187643551345017481937305465380122538263672733",
+        "Put-call parity residual per share": 0
+      }
+    }
+  ]
+}

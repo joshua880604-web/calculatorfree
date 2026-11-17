@@ -824,5 +824,11 @@
   {"id": "days-payable-outstanding", "category": "Other", "title": "Days Payable Outstanding Calculator", "local_route": "/days-payable-outstanding-calculator.html"},
   {"id": "cash-conversion-cycle", "category": "Other", "title": "Cash Conversion Cycle Calculator", "local_route": "/cash-conversion-cycle-calculator.html"},
   {"id": "roic", "category": "Other", "title": "ROIC Calculator", "local_route": "/roic-calculator.html"},
-  {"id": "interest-coverage-ratio", "category": "Other", "title": "Interest Coverage Ratio Calculator", "local_route": "/interest-coverage-ratio-calculator.html"}
+  {"id": "interest-coverage-ratio", "category": "Other", "title": "Interest Coverage Ratio Calculator", "local_route": "/interest-coverage-ratio-calculator.html"},
+  {"id": "stock-split", "category": "Investment", "title": "Stock Split Calculator", "local_route": "/stock-split-calculator.html"},
+  {"id": "customer-acquisition-cost", "category": "Other", "title": "Customer Acquisition Cost Calculator", "local_route": "/customer-acquisition-cost-calculator.html"},
+  {"id": "dividend-discount-model", "category": "Investment", "title": "Dividend Discount Model Calculator", "local_route": "/dividend-discount-model-calculator.html"},
+  {"id": "earnings-per-share", "category": "Investment", "title": "Earnings per Share (EPS) Calculator", "local_route": "/earnings-per-share-calculator.html"},
+  {"id": "sharpe-ratio", "category": "Investment", "title": "Sharpe Ratio Calculator", "local_route": "/sharpe-ratio-calculator.html"},
+  {"id": "black-scholes", "category": "Investment", "title": "Black-Scholes Calculator", "local_route": "/black-scholes-calculator.html"}
 ]

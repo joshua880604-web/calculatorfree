@@ -1,0 +1,2 @@
+Case,Mode,Input assumptions,Result label,Expected value
+Classic no dividend,european,spot = 100; strike = 100; risk free = 5.0; dividend yield = 0.0; volatility = 20.0; time unit = Years; time = 1,European call theoretical value per share,10.450583572185566

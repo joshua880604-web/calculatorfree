@@ -1,0 +1,3 @@
+Case,Mode,Input assumptions,Result label,Expected value
+Latest dividend,stable,dividend = 2; growth = 4.0; required return = 10.0; dividend basis = Latest annual dividend (D0),Modeled dividend-discount value per share,34.666666666666664
+Two stage,two-stage,dividend = 2.0; growth = 3.0; required return = 8.0; early growth = 10.0; years = 2,Modeled dividend-discount value per share,46.851851851851855

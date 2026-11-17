@@ -11,6 +11,13 @@ const loaders: Record<string, () => Promise<Calculator[]>> = {
 const businessTools = () => import('./calculators/business-tools').then(m => m.businessTools);
 const strategyTools=()=>import('./calculators/debt-strategies').then(m=>[m.debtSnowball,m.debtAvalanche]);
 const dataTools: Record<string, () => Promise<Calculator[]>> = {
+  'stock-split':()=>import('./calculators/stock-split').then(m=>[m.stockSplitCalculator]),
+  'customer-acquisition-cost':()=>import('./calculators/customer-acquisition-cost').then(m=>[m.customerAcquisitionCostCalculator]),
+  'dividend-discount-model':()=>import('./calculators/dividend-discount-model').then(m=>[m.dividendDiscountModelCalculator]),
+  'earnings-per-share':()=>import('./calculators/earnings-per-share').then(m=>[m.earningsPerShareCalculator]),
+  'sharpe-ratio':()=>import('./calculators/sharpe-ratio').then(m=>[m.sharpeRatioCalculator]),
+  'black-scholes':()=>import('./calculators/black-scholes').then(m=>[m.blackScholesCalculator]),
+
   'credit-card-rewards':()=>import('./calculators/credit-card-rewards').then(m=>[m.creditCardRewardsCalculator]),
   'accounts-receivable-turnover':()=>import('./calculators/receivables-turnover').then(m=>[m.receivablesTurnoverCalculator]),
   'days-payable-outstanding':()=>import('./calculators/days-payable-outstanding').then(m=>[m.daysPayableOutstandingCalculator]),
