@@ -3,5 +3,5 @@ import {comparisonGuides} from '@/lib/comparison-guides';
 import {pageMetadata} from '@/lib/seo';
 const guide=comparisonGuides["interest-coverage-ratio"].meta;
 const meta=pageMetadata(guide.path,guide.title,guide.description);
-export const metadata={...meta,openGraph:{...meta.openGraph,type:'article' as const,publishedTime:guide.publishedOn,modifiedTime:guide.publishedOn}};
+export const metadata={...meta,openGraph:{...meta.openGraph,type:'article' as const,publishedTime:guide.publishedOn,modifiedTime:guide.updatedOn??guide.publishedOn}};
 export default function Page(){return <ComparisonGuideArticle topic="interest-coverage-ratio"/>;}

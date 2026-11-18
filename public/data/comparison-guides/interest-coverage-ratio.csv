@@ -1,3 +1,3 @@
-Case,Mode,Input assumptions,Result label,Expected value
-ebit EBIT 100000,ebit,ebit = 100000; interest = 25000; target = 3,EBIT interest coverage (times),4.0
-bridge EBIT 100000,bridge,net income = 56000; income tax = 14000; interest = 30000; target = 3,EBIT interest coverage (times),3.3333333333333335
+Scenario,Calculator,Mode,Complete input assumptions,Result label,Independently checked value,Interpretation and scope,Restore complete preset
+EBIT divided by interest only,interest-coverage-ratio,ebit,EBIT for this reporting period: 100000 $; Interest expense for the same period: 25000 $; Selected interest-coverage target: 3 times,EBIT interest coverage (times),4,Uses EBIT and an interest-only denominator; principal repayment is excluded.,https://www.calculatorfree.io/interest-coverage-ratio-calculator#calc=share_version=1&mode=ebit&ebit=100000&interest=25000&target=3
+Separate NOI / total debt-service illustration,dscr,noi,Annual net operating income: 100000 $; Annual debt service: 40000 $; Target DSCR: 1.25,NOI-based DSCR,2.5,"NOI is a separately defined numerator, not a substitute name for EBIT.",https://www.calculatorfree.io/dscr-calculator#calc=share_version=1&mode=noi&noi=100000&debt=40000&target=1.25

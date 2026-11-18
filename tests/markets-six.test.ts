@@ -64,7 +64,7 @@ test('All new modes have complete reproducible presets, source-linked content an
  const entries=sitemapEntries({origin:'https://www.calculatorfree.io',indexable:true});
  for(const [id,g] of Object.entries(content)){
   const c=calculators.find(c=>c.id===id)!,article=articles[id as keyof typeof articles];assert.deepEqual(new Set(g.examples.map(e=>e.mode)),new Set(c.modes.map(m=>m.id)));assert.ok(terms.some(t=>t.tools.some(tool=>tool.id===id)));
-  for(const path of ['/'+id+'-calculator',article.meta.path,'/glossary/'+terms.find(t=>t.tools[0].id===id)!.slug+'/']){const e=entries.find(e=>e.url==='https://www.calculatorfree.io'+path);assert.ok(e);assert.equal(e.lastModified,path.endsWith('-calculator')?'2026-11-18':'2026-11-17');}
+  for(const path of ['/'+id+'-calculator',article.meta.path,'/glossary/'+terms.find(t=>t.tools[0].id===id)!.slug+'/']){const e=entries.find(e=>e.url==='https://www.calculatorfree.io'+path);assert.ok(e);assert.equal(e.lastModified,'2026-11-18');}
   for(const e of g.examples){const m=c.modes.find(m=>m.id===e.mode)!;assert.deepEqual(Object.keys(e.values).sort(),m.fields.map(f=>f.key).sort());const values=Object.fromEntries(Object.entries(e.values).map(([k,v])=>[k,String(v)])),r=runCalculation(id,e.mode,values);near(get(r,e.expected.label).value,e.expected.value);assert.deepEqual(await runClientCalculation(id,c.category,e.mode,values),r);const href=calculatorPresetHref('/'+id+'-calculator',e.mode,e.values),decoded=sharedInputs(c,'',href.slice(href.indexOf('#')))!;assert.equal(decoded.mode.id,e.mode);assert.deepEqual(decoded.values,values);assert.ok(resultContext(id,e.mode,values,r));}
  }
 });

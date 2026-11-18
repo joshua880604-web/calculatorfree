@@ -3579,8 +3579,8 @@
       }
     },
     "guide:/guides/2-1-vs-3-2-1-mortgage-buydown/": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://selling-guide.fanniemae.com/sel/b2-1.4-04/temporary-interest-rate-buydowns": {
           "role": "method",
@@ -3590,8 +3590,8 @@
       }
     },
     "glossary:temporary-mortgage-buydown": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://selling-guide.fanniemae.com/sel/b2-1.4-04/temporary-interest-rate-buydowns": {
           "role": "method",
@@ -3612,8 +3612,8 @@
       }
     },
     "guide:/guides/cash-secured-put-vs-covered-call/": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.optionseducation.org/strategies/all-strategies/cash-secured-put": {
           "role": "method",
@@ -3623,8 +3623,8 @@
       }
     },
     "glossary:cash-secured-put": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.optionseducation.org/strategies/all-strategies/cash-secured-put": {
           "role": "method",
@@ -3645,8 +3645,8 @@
       }
     },
     "guide:/guides/profitability-index-vs-npv/": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://corporatefinanceinstitute.com/resources/accounting/profitability-index/": {
           "role": "method",
@@ -3656,8 +3656,8 @@
       }
     },
     "glossary:profitability-index": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://corporatefinanceinstitute.com/resources/accounting/profitability-index/": {
           "role": "method",
@@ -3678,8 +3678,8 @@
       }
     },
     "guide:/guides/roe-dupont-analysis/": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://online.hbs.edu/blog/post/return-on-equity-formula": {
           "role": "method",
@@ -3689,8 +3689,8 @@
       }
     },
     "glossary:return-on-equity": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://online.hbs.edu/blog/post/return-on-equity-formula": {
           "role": "method",
@@ -3721,8 +3721,8 @@
       }
     },
     "guide:/guides/72t-sepp-methods-and-rules/": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.irs.gov/pub/irs-drop/n-22-06.pdf": {
           "role": "rule",
@@ -3742,8 +3742,8 @@
       }
     },
     "glossary:substantially-equal-periodic-payments": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.irs.gov/pub/irs-drop/n-22-06.pdf": {
           "role": "rule",
@@ -3774,8 +3774,8 @@
       }
     },
     "guide:/guides/cash-back-vs-points-and-annual-fees/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.chase.com/personal/credit-cards/education/rewards-benefits/quick-guide-to-credit-card-rewards-programs": {
           "role": "method",
@@ -3785,8 +3785,8 @@
       }
     },
     "glossary:credit-card-rewards": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.chase.com/personal/credit-cards/education/rewards-benefits/quick-guide-to-credit-card-rewards-programs": {
           "role": "method",
@@ -3807,8 +3807,8 @@
       }
     },
     "guide:/guides/receivables-turnover-vs-dso/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://openstax.org/books/principles-finance-2e/pages/6-2-operating-efficiency-ratios": {
           "role": "method",
@@ -3818,8 +3818,8 @@
       }
     },
     "glossary:accounts-receivable-turnover": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://openstax.org/books/principles-finance-2e/pages/6-2-operating-efficiency-ratios": {
           "role": "method",
@@ -3845,8 +3845,8 @@
       }
     },
     "guide:/guides/dpo-credit-purchases-vs-cogs/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.omnicalculator.com/finance/days-payable-outstanding": {
           "role": "method",
@@ -3861,8 +3861,8 @@
       }
     },
     "glossary:days-payable-outstanding": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.omnicalculator.com/finance/days-payable-outstanding": {
           "role": "method",
@@ -3888,8 +3888,8 @@
       }
     },
     "guide:/guides/cash-conversion-cycle-vs-operating-cycle/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://openstax.org/books/principles-finance-2e/pages/19-1-what-is-working-capital": {
           "role": "method",
@@ -3899,8 +3899,8 @@
       }
     },
     "glossary:cash-conversion-cycle": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://openstax.org/books/principles-finance-2e/pages/19-1-what-is-working-capital": {
           "role": "method",
@@ -3921,8 +3921,8 @@
       }
     },
     "guide:/guides/roic-vs-roe-roi-and-wacc/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.morganstanley.com/im/publication/insights/articles/article_returnoninvestedcapital.pdf": {
           "role": "method",
@@ -3932,8 +3932,8 @@
       }
     },
     "glossary:return-on-invested-capital": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.morganstanley.com/im/publication/insights/articles/article_returnoninvestedcapital.pdf": {
           "role": "method",
@@ -3954,8 +3954,8 @@
       }
     },
     "guide:/guides/interest-coverage-vs-dscr/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://openstax.org/books/principles-finance-2e/pages/6-4-solvency-ratios": {
           "role": "method",
@@ -3965,8 +3965,8 @@
       }
     },
     "glossary:interest-coverage-ratio": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://openstax.org/books/principles-finance-2e/pages/6-4-solvency-ratios": {
           "role": "method",
@@ -3987,8 +3987,8 @@
       }
     },
     "guide:/guides/stock-split-vs-reverse-stock-split/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-split": {
           "role": "method",
@@ -3998,8 +3998,8 @@
       }
     },
     "glossary:stock-split": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-split": {
           "role": "method",
@@ -4020,8 +4020,8 @@
       }
     },
     "guide:/guides/customer-acquisition-cost-vs-roas/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.tremendous.com/tools/customer-acquisition-cost-calculator/": {
           "role": "method",
@@ -4031,8 +4031,8 @@
       }
     },
     "glossary:customer-acquisition-cost": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.tremendous.com/tools/customer-acquisition-cost-calculator/": {
           "role": "method",
@@ -4058,8 +4058,8 @@
       }
     },
     "guide:/guides/dividend-discount-model-vs-dividend-reinvestment/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://goodcalculators.com/dividend-discount-model-ddm-calculator/": {
           "role": "method",
@@ -4074,8 +4074,8 @@
       }
     },
     "glossary:dividend-discount-model": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://goodcalculators.com/dividend-discount-model-ddm-calculator/": {
           "role": "method",
@@ -4101,8 +4101,8 @@
       }
     },
     "guide:/guides/basic-eps-vs-diluted-eps/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.ifrs.org/issued-standards/list-of-standards/ias-33-earnings-per-share/": {
           "role": "method",
@@ -4112,8 +4112,8 @@
       }
     },
     "glossary:earnings-per-share": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.ifrs.org/issued-standards/list-of-standards/ias-33-earnings-per-share/": {
           "role": "method",
@@ -4134,8 +4134,8 @@
       }
     },
     "guide:/guides/sharpe-ratio-vs-total-return/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://web.stanford.edu/~wfsharpe/art/sr/sr.htm": {
           "role": "method",
@@ -4145,8 +4145,8 @@
       }
     },
     "glossary:sharpe-ratio": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://web.stanford.edu/~wfsharpe/art/sr/sr.htm": {
           "role": "method",
@@ -4172,8 +4172,8 @@
       }
     },
     "guide:/guides/option-theoretical-value-vs-expiration-payoff/": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.math.columbia.edu/~smirnov/options13.html": {
           "role": "method",
@@ -4188,8 +4188,8 @@
       }
     },
     "glossary:black-scholes-model": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "The references support the specific concepts and limits identified below. Definitions, comparison assumptions and worked scenarios are this site’s educational explanations. Arithmetic checks do not verify the user’s source data, establish compliance or constitute independent professional review.",
       "overrides": {
         "https://www.math.columbia.edu/~smirnov/options13.html": {
           "role": "method",

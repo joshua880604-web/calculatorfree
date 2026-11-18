@@ -1,0 +1,823 @@
+{
+  "generatedOn": "2026-11-18",
+  "method": "Independent 60-digit Python Decimal reference calculations; 72t reuses the preserved independent IRS-table Decimal fixture; Black-Scholes uses independent 80-digit mpmath erfc. No production calculator code is imported.",
+  "fixtures": [
+    {
+      "topic": "mortgage-buydown",
+      "title": "2-1 temporary buydown",
+      "id": "mortgage-buydown",
+      "mode": "2-1",
+      "values": {
+        "principal": 300000,
+        "rate": 7,
+        "months": 360
+      },
+      "interpretation": "The lender still receives the unchanged note-rate payment.",
+      "expected": {
+        "First-year borrower monthly P&I": "1610.46486903641695448547773733766358041451957055147461380003",
+        "Contract monthly P&I at note rate": "1995.90748553754944064134569378947468174314656465412273215914",
+        "Total temporary subsidy funding": "6992.38231896509691627395903025429645552774397521007816049052"
+      },
+      "additionalResults": {},
+      "inputSummary": "Original loan principal: 300000 $; Fixed note annual interest rate: 7 %; Original amortization term: 360 months"
+    },
+    {
+      "topic": "mortgage-buydown",
+      "title": "3-2-1 temporary buydown",
+      "id": "mortgage-buydown",
+      "mode": "3-2-1",
+      "values": {
+        "principal": 300000,
+        "rate": 7,
+        "months": 360
+      },
+      "interpretation": "The lender still receives the unchanged note-rate payment.",
+      "expected": {
+        "First-year borrower monthly P&I": "1432.24588639637847713406463223277117064581103612799859933892",
+        "Contract monthly P&I at note rate": "1995.90748553754944064134569378947468174314656465412273215914",
+        "Total temporary subsidy funding": "13756.3215086591484783613317689347385886957703175235677543332"
+      },
+      "additionalResults": {},
+      "inputSummary": "Original loan principal: 300000 $; Fixed note annual interest rate: 7 %; Original amortization term: 360 months"
+    },
+    {
+      "topic": "cash-secured-put",
+      "title": "Cash-secured put at $45 expiry stock",
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 45
+      },
+      "interpretation": "Full strike-based secured cash is $10,000; no cash interest is modeled.",
+      "expected": {
+        "Modeled expiration profit / loss": "-504.0",
+        "Cash secured at strike × shares": "10000"
+      },
+      "additionalResults": {},
+      "inputSummary": "Strike price per share: 50 $; Premium received per share: 2.5 $; Number of short put contracts: 2 contracts; Shares per contract: 100 shares; Total trade and assumed assignment fees: 4 $; Assumed stock price at expiration: 45 $"
+    },
+    {
+      "topic": "cash-secured-put",
+      "title": "Covered call at $45 expiry stock",
+      "id": "covered-call",
+      "mode": "expiry",
+      "values": {
+        "stock": 50,
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "stock_fee": 0,
+        "option_fee": 2,
+        "exit_fee": 0,
+        "expiry": 45,
+        "days": 30
+      },
+      "interpretation": "Option opening fees are $2 per contract, or $4 total; net initial debit is $9,504.",
+      "expected": {
+        "Covered call profit / loss at your expiry price": "-504.0",
+        "Net initial debit": "9504.0"
+      },
+      "additionalResults": {},
+      "inputSummary": "Stock entry price per share: 50 $/share; Call strike price per share: 50 $/share; Call premium received per share: 2.5 $/share; Standard contracts sold: 2 contracts; Total stock purchase fees: 0 $ total; Option opening fee per contract: 2 $/contract; Total assumed expiry exit costs: 0 $ total; Your scenario stock price at expiry: 45 $/share; Calendar days to expiry: 30 days"
+    },
+    {
+      "topic": "cash-secured-put",
+      "title": "Cash-secured put at $50 expiry stock",
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 50
+      },
+      "interpretation": "Full strike-based secured cash is $10,000; no cash interest is modeled.",
+      "expected": {
+        "Modeled expiration profit / loss": "496.0",
+        "Cash secured at strike × shares": "10000"
+      },
+      "additionalResults": {},
+      "inputSummary": "Strike price per share: 50 $; Premium received per share: 2.5 $; Number of short put contracts: 2 contracts; Shares per contract: 100 shares; Total trade and assumed assignment fees: 4 $; Assumed stock price at expiration: 50 $"
+    },
+    {
+      "topic": "cash-secured-put",
+      "title": "Covered call at $50 expiry stock",
+      "id": "covered-call",
+      "mode": "expiry",
+      "values": {
+        "stock": 50,
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "stock_fee": 0,
+        "option_fee": 2,
+        "exit_fee": 0,
+        "expiry": 50,
+        "days": 30
+      },
+      "interpretation": "Option opening fees are $2 per contract, or $4 total; net initial debit is $9,504.",
+      "expected": {
+        "Covered call profit / loss at your expiry price": "496.0",
+        "Net initial debit": "9504.0"
+      },
+      "additionalResults": {},
+      "inputSummary": "Stock entry price per share: 50 $/share; Call strike price per share: 50 $/share; Call premium received per share: 2.5 $/share; Standard contracts sold: 2 contracts; Total stock purchase fees: 0 $ total; Option opening fee per contract: 2 $/contract; Total assumed expiry exit costs: 0 $ total; Your scenario stock price at expiry: 50 $/share; Calendar days to expiry: 30 days"
+    },
+    {
+      "topic": "cash-secured-put",
+      "title": "Cash-secured put at $55 expiry stock",
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 55
+      },
+      "interpretation": "Full strike-based secured cash is $10,000; no cash interest is modeled.",
+      "expected": {
+        "Modeled expiration profit / loss": "496.0",
+        "Cash secured at strike × shares": "10000"
+      },
+      "additionalResults": {},
+      "inputSummary": "Strike price per share: 50 $; Premium received per share: 2.5 $; Number of short put contracts: 2 contracts; Shares per contract: 100 shares; Total trade and assumed assignment fees: 4 $; Assumed stock price at expiration: 55 $"
+    },
+    {
+      "topic": "cash-secured-put",
+      "title": "Covered call at $55 expiry stock",
+      "id": "covered-call",
+      "mode": "expiry",
+      "values": {
+        "stock": 50,
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "stock_fee": 0,
+        "option_fee": 2,
+        "exit_fee": 0,
+        "expiry": 55,
+        "days": 30
+      },
+      "interpretation": "Option opening fees are $2 per contract, or $4 total; net initial debit is $9,504.",
+      "expected": {
+        "Covered call profit / loss at your expiry price": "496.0",
+        "Net initial debit": "9504.0"
+      },
+      "additionalResults": {},
+      "inputSummary": "Stock entry price per share: 50 $/share; Call strike price per share: 50 $/share; Call premium received per share: 2.5 $/share; Standard contracts sold: 2 contracts; Total stock purchase fees: 0 $ total; Option opening fee per contract: 2 $/contract; Total assumed expiry exit costs: 0 $ total; Your scenario stock price at expiry: 55 $/share; Calendar days to expiry: 30 days"
+    },
+    {
+      "topic": "profitability-index",
+      "title": "Project A: smaller initial outlay",
+      "id": "profitability-index",
+      "mode": "periodic",
+      "values": {
+        "initial": 1000,
+        "flows": "1500",
+        "frequency": "Annual",
+        "rate": 10
+      },
+      "interpretation": "One receipt at the end of year one; no intermediate cash flows.",
+      "expected": {
+        "Profitability index": "1.36363636363636363636363636363636363636363636363636363636364",
+        "Net present value": "363.63636363636363636363636363636363636363636363636363636364"
+      },
+      "additionalResults": {},
+      "inputSummary": "Initial investment outlay (positive): 1000 $; Future net cash flows, starting at period 1: 1500; Future payment spacing: Annual; Effective annual discount rate: 10 %"
+    },
+    {
+      "topic": "profitability-index",
+      "title": "Project B: larger initial outlay",
+      "id": "profitability-index",
+      "mode": "periodic",
+      "values": {
+        "initial": 10000,
+        "flows": "13000",
+        "frequency": "Annual",
+        "rate": 10
+      },
+      "interpretation": "One receipt at the end of year one; no intermediate cash flows.",
+      "expected": {
+        "Profitability index": "1.18181818181818181818181818181818181818181818181818181818182",
+        "Net present value": "1818.1818181818181818181818181818181818181818181818181818182"
+      },
+      "additionalResults": {},
+      "inputSummary": "Initial investment outlay (positive): 10000 $; Future net cash flows, starting at period 1: 13000; Future payment spacing: Annual; Effective annual discount rate: 10 %"
+    },
+    {
+      "topic": "return-on-equity",
+      "title": "Average book equity $1,250,000",
+      "id": "return-on-equity",
+      "mode": "dupont",
+      "values": {
+        "income": 200000,
+        "equity": 1250000,
+        "sales": 2000000,
+        "assets": 2500000
+      },
+      "interpretation": "Net income, sales and average assets remain fixed; only equity changes.",
+      "expected": {
+        "Return on equity": "16.00",
+        "Equity multiplier": "2"
+      },
+      "additionalResults": {},
+      "inputSummary": "Net income for the period: 200000 $; Average book equity for the period: 1250000 $; Sales for the same period: 2000000 $; Average assets for the same period: 2500000 $"
+    },
+    {
+      "topic": "return-on-equity",
+      "title": "Average book equity $625,000",
+      "id": "return-on-equity",
+      "mode": "dupont",
+      "values": {
+        "income": 200000,
+        "equity": 625000,
+        "sales": 2000000,
+        "assets": 2500000
+      },
+      "interpretation": "Net income, sales and average assets remain fixed; only equity changes.",
+      "expected": {
+        "Return on equity": "32.00",
+        "Equity multiplier": "4"
+      },
+      "additionalResults": {},
+      "inputSummary": "Net income for the period: 200000 $; Average book equity for the period: 625000 $; Sales for the same period: 2000000 $; Average assets for the same period: 2500000 $"
+    },
+    {
+      "topic": "72t",
+      "title": "First-year RMD method",
+      "id": "72t",
+      "mode": "rmd",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000
+      },
+      "interpretation": "Historical 2023-start single-life illustration; no qualification or current-rate conclusion.",
+      "expected": {
+        "Estimated first-year annual SEPP amount": "11049.7237569060773480662983425414364640883977900552486187845"
+      },
+      "additionalResults": {},
+      "inputSummary": "IRA owner birth date: 1973-08-15; First SEPP payment date: 2023-12-01; Account balance valuation date: 2022-12-31; One traditional IRA account balance: 400000 $"
+    },
+    {
+      "topic": "72t",
+      "title": "Fixed amortization at entered 4%",
+      "id": "72t",
+      "mode": "amortization",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000,
+        "rate": 4,
+        "afr_prior": 0,
+        "afr_second": 0
+      },
+      "interpretation": "Historical 2023-start single-life illustration; no qualification or current-rate conclusion.",
+      "expected": {
+        "Estimated first-year annual SEPP amount": "21101.6325300052330775362806113696121582734461947688497385321"
+      },
+      "additionalResults": {},
+      "inputSummary": "IRA owner birth date: 1973-08-15; First SEPP payment date: 2023-12-01; Account balance valuation date: 2022-12-31; One traditional IRA account balance: 400000 $; Selected annual calculation interest rate: 4 %; IRS 120% mid-term rate: prior month: 0 %; IRS 120% mid-term rate: two months prior: 0 %"
+    },
+    {
+      "topic": "72t",
+      "title": "Fixed annuitization at entered 4%",
+      "id": "72t",
+      "mode": "annuitization",
+      "values": {
+        "birth": "1973-08-15",
+        "start": "2023-12-01",
+        "valuation": "2022-12-31",
+        "balance": 400000,
+        "rate": 4,
+        "afr_prior": 0,
+        "afr_second": 0
+      },
+      "interpretation": "Historical 2023-start single-life illustration; no qualification or current-rate conclusion.",
+      "expected": {
+        "Estimated first-year annual SEPP amount": "22030.3272400791418387356299204035846958821744921464880933234"
+      },
+      "additionalResults": {},
+      "inputSummary": "IRA owner birth date: 1973-08-15; First SEPP payment date: 2023-12-01; Account balance valuation date: 2022-12-31; One traditional IRA account balance: 400000 $; Selected annual calculation interest rate: 4 %; IRS 120% mid-term rate: prior month: 0 %; IRS 120% mid-term rate: two months prior: 0 %"
+    },
+    {
+      "topic": "credit-card-rewards",
+      "title": "0.5 cents per point assumed",
+      "id": "credit-card-rewards",
+      "mode": "points",
+      "values": {
+        "spend_period": "Annual",
+        "categories": "30000, 2, 0",
+        "fallback": 1,
+        "cents_per_point": 0.5,
+        "annual_fee": 95,
+        "usable_credits": 0,
+        "bonus": 20000
+      },
+      "interpretation": "The same 60,000 annual points and $95 fee; the bonus is shown separately in first-year value.",
+      "expected": {
+        "Annual points / miles earned": "60000",
+        "Recurring annual net rewards before card interest": "205.0",
+        "First-year net including assumed one-time bonus": "305.0"
+      },
+      "additionalResults": {},
+      "inputSummary": "Spending amounts in each category are: Annual; Categories: spend, points per dollar, annual spend cap: 30000, 2, 0; Points per dollar above category spend caps: 1 points/$; Assumed redemption value per point / mile: 0.5 cents; Annual card fee: 95 $; Actual usable annual credits (net value): 0 $; One-time bonus points assumed earned: 20000 points"
+    },
+    {
+      "topic": "credit-card-rewards",
+      "title": "1 cents per point assumed",
+      "id": "credit-card-rewards",
+      "mode": "points",
+      "values": {
+        "spend_period": "Annual",
+        "categories": "30000, 2, 0",
+        "fallback": 1,
+        "cents_per_point": 1,
+        "annual_fee": 95,
+        "usable_credits": 0,
+        "bonus": 20000
+      },
+      "interpretation": "The same 60,000 annual points and $95 fee; the bonus is shown separately in first-year value.",
+      "expected": {
+        "Annual points / miles earned": "60000",
+        "Recurring annual net rewards before card interest": "505",
+        "First-year net including assumed one-time bonus": "705"
+      },
+      "additionalResults": {},
+      "inputSummary": "Spending amounts in each category are: Annual; Categories: spend, points per dollar, annual spend cap: 30000, 2, 0; Points per dollar above category spend caps: 1 points/$; Assumed redemption value per point / mile: 1 cents; Annual card fee: 95 $; Actual usable annual credits (net value): 0 $; One-time bonus points assumed earned: 20000 points"
+    },
+    {
+      "topic": "credit-card-rewards",
+      "title": "1.5 cents per point assumed",
+      "id": "credit-card-rewards",
+      "mode": "points",
+      "values": {
+        "spend_period": "Annual",
+        "categories": "30000, 2, 0",
+        "fallback": 1,
+        "cents_per_point": 1.5,
+        "annual_fee": 95,
+        "usable_credits": 0,
+        "bonus": 20000
+      },
+      "interpretation": "The same 60,000 annual points and $95 fee; the bonus is shown separately in first-year value.",
+      "expected": {
+        "Annual points / miles earned": "60000",
+        "Recurring annual net rewards before card interest": "805.0",
+        "First-year net including assumed one-time bonus": "1105.0"
+      },
+      "additionalResults": {},
+      "inputSummary": "Spending amounts in each category are: Annual; Categories: spend, points per dollar, annual spend cap: 30000, 2, 0; Points per dollar above category spend caps: 1 points/$; Assumed redemption value per point / mile: 1.5 cents; Annual card fee: 95 $; Actual usable annual credits (net value): 0 $; One-time bonus points assumed earned: 20000 points"
+    },
+    {
+      "topic": "accounts-receivable-turnover",
+      "title": "Average receivables $25,000",
+      "id": "accounts-receivable-turnover",
+      "mode": "average",
+      "values": {
+        "days": 365,
+        "credit_sales": 300000,
+        "average_ar": 25000
+      },
+      "interpretation": "Net credit sales remain $300,000 over the same 365-day period.",
+      "expected": {
+        "Receivables turnover in selected period": "12",
+        "Average-balance DSO / collection days": "30.4166666666666666666666666666666666666666666666666666666667"
+      },
+      "additionalResults": {},
+      "inputSummary": "Days in this reporting period: 365 days; Net credit sales for this period: 300000 $; Average trade receivables for this period: 25000 $"
+    },
+    {
+      "topic": "accounts-receivable-turnover",
+      "title": "Average receivables $50,000",
+      "id": "accounts-receivable-turnover",
+      "mode": "average",
+      "values": {
+        "days": 365,
+        "credit_sales": 300000,
+        "average_ar": 50000
+      },
+      "interpretation": "Net credit sales remain $300,000 over the same 365-day period.",
+      "expected": {
+        "Receivables turnover in selected period": "6",
+        "Average-balance DSO / collection days": "60.8333333333333333333333333333333333333333333333333333333333"
+      },
+      "additionalResults": {},
+      "inputSummary": "Days in this reporting period: 365 days; Net credit sales for this period: 300000 $; Average trade receivables for this period: 50000 $"
+    },
+    {
+      "topic": "days-payable-outstanding",
+      "title": "Net credit purchases denominator",
+      "id": "days-payable-outstanding",
+      "mode": "purchases",
+      "values": {
+        "days": 365,
+        "average_ap": 50000,
+        "purchases": 500000
+      },
+      "interpretation": "Same $50,000 average payables and 365 reporting days; only the denominator definition changes.",
+      "expected": {
+        "Days payable outstanding": "36.5",
+        "Payables turnover in selected period": "10"
+      },
+      "additionalResults": {},
+      "inputSummary": "Days in this reporting period: 365 days; Average trade accounts payable: 50000 $; Net credit purchases for this period: 500000 $"
+    },
+    {
+      "topic": "days-payable-outstanding",
+      "title": "Disclosed COGS proxy denominator",
+      "id": "days-payable-outstanding",
+      "mode": "cogs",
+      "values": {
+        "days": 365,
+        "average_ap": 50000,
+        "cogs": 400000
+      },
+      "interpretation": "Same $50,000 average payables and 365 reporting days; only the denominator definition changes.",
+      "expected": {
+        "Days payable outstanding": "45.625",
+        "Payables turnover in selected period": "8"
+      },
+      "additionalResults": {},
+      "inputSummary": "Days in this reporting period: 365 days; Average trade accounts payable: 50000 $; Cost of goods sold for this period: 400000 $"
+    },
+    {
+      "topic": "cash-conversion-cycle",
+      "title": "Payables days 60",
+      "id": "cash-conversion-cycle",
+      "mode": "days",
+      "values": {
+        "dio": 45,
+        "dso": 30,
+        "dpo": 60
+      },
+      "interpretation": "Inventory days remain 45 and collection days remain 30; operating cycle is unchanged.",
+      "expected": {
+        "Operating cycle before payables (days)": "75",
+        "Cash conversion cycle (days)": "15"
+      },
+      "additionalResults": {},
+      "inputSummary": "Inventory days (DIO): 45 days; Collection days (DSO): 30 days; Payables days (DPO): 60 days"
+    },
+    {
+      "topic": "cash-conversion-cycle",
+      "title": "Payables days 80",
+      "id": "cash-conversion-cycle",
+      "mode": "days",
+      "values": {
+        "dio": 45,
+        "dso": 30,
+        "dpo": 80
+      },
+      "interpretation": "Inventory days remain 45 and collection days remain 30; operating cycle is unchanged.",
+      "expected": {
+        "Operating cycle before payables (days)": "75",
+        "Cash conversion cycle (days)": "-5"
+      },
+      "additionalResults": {},
+      "inputSummary": "Inventory days (DIO): 45 days; Collection days (DSO): 30 days; Payables days (DPO): 80 days"
+    },
+    {
+      "topic": "roic",
+      "title": "Annual NOPAT $150,000",
+      "id": "roic",
+      "mode": "nopat",
+      "values": {
+        "nopat": 150000,
+        "capital": 1250000,
+        "wacc": 8
+      },
+      "interpretation": "Average invested capital remains $1.25 million and entered WACC remains 8%.",
+      "expected": {
+        "Annual return on invested capital": "12.00",
+        "ROIC minus WACC (percentage points)": "4.00",
+        "Simplified annual economic profit": "50000"
+      },
+      "additionalResults": {},
+      "inputSummary": "Annual NOPAT: 150000 $; Average invested capital for the year: 1250000 $; Assumed annual WACC for comparison: 8 %"
+    },
+    {
+      "topic": "roic",
+      "title": "Annual NOPAT $100,000",
+      "id": "roic",
+      "mode": "nopat",
+      "values": {
+        "nopat": 100000,
+        "capital": 1250000,
+        "wacc": 8
+      },
+      "interpretation": "Average invested capital remains $1.25 million and entered WACC remains 8%.",
+      "expected": {
+        "Annual return on invested capital": "8.00",
+        "ROIC minus WACC (percentage points)": "0.00",
+        "Simplified annual economic profit": "0"
+      },
+      "additionalResults": {},
+      "inputSummary": "Annual NOPAT: 100000 $; Average invested capital for the year: 1250000 $; Assumed annual WACC for comparison: 8 %"
+    },
+    {
+      "topic": "interest-coverage-ratio",
+      "title": "EBIT divided by interest only",
+      "id": "interest-coverage-ratio",
+      "mode": "ebit",
+      "values": {
+        "ebit": 100000,
+        "interest": 25000,
+        "target": 3
+      },
+      "interpretation": "Uses EBIT and an interest-only denominator; principal repayment is excluded.",
+      "expected": {
+        "EBIT interest coverage (times)": "4"
+      },
+      "additionalResults": {},
+      "inputSummary": "EBIT for this reporting period: 100000 $; Interest expense for the same period: 25000 $; Selected interest-coverage target: 3 times"
+    },
+    {
+      "topic": "interest-coverage-ratio",
+      "title": "Separate NOI / total debt-service illustration",
+      "id": "dscr",
+      "mode": "noi",
+      "values": {
+        "noi": 100000,
+        "debt": 40000,
+        "target": 1.25
+      },
+      "interpretation": "NOI is a separately defined numerator, not a substitute name for EBIT.",
+      "expected": {
+        "NOI-based DSCR": "2.5"
+      },
+      "additionalResults": {},
+      "inputSummary": "Annual net operating income: 100000 $; Annual debt service: 40000 $; Target DSCR: 1.25"
+    },
+    {
+      "topic": "stock-split",
+      "title": "3-for-2 split on the same holding",
+      "id": "stock-split",
+      "mode": "single",
+      "values": {
+        "shares": "120",
+        "price": "45",
+        "average_cost": "30",
+        "new_shares": 3,
+        "old_shares": 2
+      },
+      "interpretation": "The same 120 starting shares, $45 reference price and $30 per-share acquisition cost.",
+      "expected": {
+        "Theoretical shares after splits": "180.0",
+        "Proportional reference price per share": "3E+1",
+        "Adjusted average acquisition cost per share": "2E+1",
+        "Total reference holding value": "5400"
+      },
+      "additionalResults": {},
+      "inputSummary": "Shares held before the first split: 120 shares; Reference share price before the first split: 45 $; Average acquisition cost per share before splits: 30 $; New shares in the ratio: 3 new; Old shares in the ratio: 2 old"
+    },
+    {
+      "topic": "stock-split",
+      "title": "1-for-10 split on the same holding",
+      "id": "stock-split",
+      "mode": "single",
+      "values": {
+        "shares": "120",
+        "price": "45",
+        "average_cost": "30",
+        "new_shares": 1,
+        "old_shares": 10
+      },
+      "interpretation": "The same 120 starting shares, $45 reference price and $30 per-share acquisition cost.",
+      "expected": {
+        "Theoretical shares after splits": "12.0",
+        "Proportional reference price per share": "4.5E+2",
+        "Adjusted average acquisition cost per share": "3.0E+2",
+        "Total reference holding value": "5400"
+      },
+      "additionalResults": {},
+      "inputSummary": "Shares held before the first split: 120 shares; Reference share price before the first split: 45 $; Average acquisition cost per share before splits: 30 $; New shares in the ratio: 1 new; Old shares in the ratio: 10 old"
+    },
+    {
+      "topic": "customer-acquisition-cost",
+      "title": "Full-scope acquisition cost",
+      "id": "customer-acquisition-cost",
+      "mode": "itemized",
+      "values": {
+        "customers": "100",
+        "advertising": "12000",
+        "people": "8000",
+        "agency": "0",
+        "software": "0",
+        "other": "5000"
+      },
+      "interpretation": "The same 100 unique new customers; the second case deliberately excludes allocated personnel and other acquisition costs.",
+      "expected": {
+        "Acquisition cost per unique new customer": "250"
+      },
+      "additionalResults": {},
+      "inputSummary": "Acquisition advertising: 12000 $; Allocated acquisition personnel cost: 8000 $; Allocated agency / contractor cost: 0 $; Allocated acquisition software cost: 0 $; Other acquisition costs not counted above: 5000 $; Unique new customers in the same scope: 100 customers"
+    },
+    {
+      "topic": "customer-acquisition-cost",
+      "title": "Advertising-only cost per customer",
+      "id": "customer-acquisition-cost",
+      "mode": "itemized",
+      "values": {
+        "customers": "100",
+        "advertising": "12000",
+        "people": "0",
+        "agency": "0",
+        "software": "0",
+        "other": "0"
+      },
+      "interpretation": "The same 100 unique new customers; the second case deliberately excludes allocated personnel and other acquisition costs.",
+      "expected": {
+        "Acquisition cost per unique new customer": "120"
+      },
+      "additionalResults": {},
+      "inputSummary": "Acquisition advertising: 12000 $; Allocated acquisition personnel cost: 0 $; Allocated agency / contractor cost: 0 $; Allocated acquisition software cost: 0 $; Other acquisition costs not counted above: 0 $; Unique new customers in the same scope: 100 customers"
+    },
+    {
+      "topic": "customer-acquisition-cost",
+      "title": "Separately attributed revenue / ad spend",
+      "id": "roas",
+      "mode": "actual",
+      "values": {
+        "revenue": 36000,
+        "spend": 12000
+      },
+      "interpretation": "ROAS uses attributed revenue and advertising spend; it is not dollars of profit or cost per customer.",
+      "expected": {
+        "ROAS (multiple)": "3"
+      },
+      "additionalResults": {},
+      "inputSummary": "Revenue attributed to advertising: 36000 $; Advertising spend: 12000 $"
+    },
+    {
+      "topic": "dividend-discount-model",
+      "title": "Entered required return 10%",
+      "id": "dividend-discount-model",
+      "mode": "stable",
+      "values": {
+        "dividend": "2",
+        "growth": "4.0",
+        "required_return": 10,
+        "dividend_basis": "Latest annual dividend (D0)"
+      },
+      "interpretation": "The same $2 latest annual dividend and 4% perpetual growth; no reinvestment path is forecast.",
+      "expected": {
+        "Modeled dividend-discount value per share": "34.6666666666666666666666666666666666666666666666666666666667",
+        "Next annual dividend per share": "2.08"
+      },
+      "additionalResults": {},
+      "inputSummary": "Annual dividend per share: 2 $; Perpetual stable dividend growth rate: 4.0 %; Annual required return on equity: 10 %; The dividend entered is: Latest annual dividend (D0)"
+    },
+    {
+      "topic": "dividend-discount-model",
+      "title": "Entered required return 8%",
+      "id": "dividend-discount-model",
+      "mode": "stable",
+      "values": {
+        "dividend": "2",
+        "growth": "4.0",
+        "required_return": 8,
+        "dividend_basis": "Latest annual dividend (D0)"
+      },
+      "interpretation": "The same $2 latest annual dividend and 4% perpetual growth; no reinvestment path is forecast.",
+      "expected": {
+        "Modeled dividend-discount value per share": "52",
+        "Next annual dividend per share": "2.08"
+      },
+      "additionalResults": {},
+      "inputSummary": "Annual dividend per share: 2 $; Perpetual stable dividend growth rate: 4.0 %; Annual required return on equity: 8 %; The dividend entered is: Latest annual dividend (D0)"
+    },
+    {
+      "topic": "earnings-per-share",
+      "title": "Known 300,000 weighted average shares",
+      "id": "earnings-per-share",
+      "mode": "known-average",
+      "values": {
+        "net_income": "1000000",
+        "preferred_adjustment": "100000",
+        "average_shares": "300000"
+      },
+      "interpretation": "Both results are basic EPS; the share-history difference is not dilution.",
+      "expected": {
+        "Basic earnings per common share": "3",
+        "Weighted average common shares used": "300000"
+      },
+      "additionalResults": {},
+      "inputSummary": "Net income for the reporting period: 1000000 $; Preferred earnings adjustment already checked: 100000 $; Weighted average common shares for this period: 300000 shares"
+    },
+    {
+      "topic": "earnings-per-share",
+      "title": "Period-weighted issuance history",
+      "id": "earnings-per-share",
+      "mode": "weighted-schedule",
+      "values": {
+        "net_income": "1000000",
+        "preferred_adjustment": "100000",
+        "period_days": "365",
+        "share_schedule": "100000, 90\n200000, 275"
+      },
+      "interpretation": "Both results are basic EPS; the share-history difference is not dilution.",
+      "expected": {
+        "Basic earnings per common share": "5.13281250000000000000000000000000000000000000000000000000001",
+        "Weighted average common shares used": "175342.465753424657534246575342465753424657534246575342465753"
+      },
+      "additionalResults": {},
+      "inputSummary": "Net income for the reporting period: 1000000 $; Preferred earnings adjustment already checked: 100000 $; Days in the full reporting period: 365 days; Common shares outstanding, days in segment: 100000, 90 / 200000, 275"
+    },
+    {
+      "topic": "sharpe-ratio",
+      "title": "Sequence A: more variable monthly observations",
+      "id": "sharpe-ratio",
+      "mode": "return-series",
+      "values": {
+        "returns": "-2, 1, 3, 0",
+        "risk_free": 0,
+        "periods_per_year": 12
+      },
+      "interpretation": "Same 0.5% arithmetic monthly mean; sample volatility and compounded growth differ.",
+      "expected": {
+        "Sharpe ratio for one observation period": "0.240192230707630700224880504651530556195113845307371396478961",
+        "Excess-return standard deviation per period": "2.08166599946613273528229770697993148702431999266388543615099"
+      },
+      "additionalResults": {
+        "Compounded return across these four observations (%)": "1.949400"
+      },
+      "inputSummary": "Equally spaced simple returns (%): -2, 1, 3, 0; Fixed risk-free return for one observation period: 0 %; Observation periods per year for annualization: 12 periods/year"
+    },
+    {
+      "topic": "sharpe-ratio",
+      "title": "Sequence B: less variable monthly observations",
+      "id": "sharpe-ratio",
+      "mode": "return-series",
+      "values": {
+        "returns": "0, 0, 1, 1",
+        "risk_free": 0,
+        "periods_per_year": 12
+      },
+      "interpretation": "Same 0.5% arithmetic monthly mean; sample volatility and compounded growth differ.",
+      "expected": {
+        "Sharpe ratio for one observation period": "0.866025403784438646763723170752936183471402626905190314027904",
+        "Excess-return standard deviation per period": "0.577350269189625764509148780501957455647601751270126876018602"
+      },
+      "additionalResults": {
+        "Compounded return across these four observations (%)": "2.0100"
+      },
+      "inputSummary": "Equally spaced simple returns (%): 0, 0, 1, 1; Fixed risk-free return for one observation period: 0 %; Observation periods per year for annualization: 12 periods/year"
+    },
+    {
+      "topic": "black-scholes",
+      "title": "One year remaining",
+      "id": "black-scholes",
+      "mode": "european",
+      "values": {
+        "spot": "100",
+        "strike": "100",
+        "risk_free": "5.0",
+        "dividend_yield": "0.0",
+        "volatility": "20.0",
+        "time_unit": "Years",
+        "time": 1
+      },
+      "interpretation": "European per-share model; fixed $100 spot and strike are a controlled assumption, not a price forecast.",
+      "expected": {
+        "European call theoretical value per share": "10.450583572185566781651231209678335279308737003268151927097581657002417567025951",
+        "European put theoretical value per share": "5.5735260222569676907937631876435513450174819373054653801225382636727330838746448"
+      },
+      "additionalResults": {},
+      "inputSummary": "Current underlying spot price per share: 100 $; Exercise price per share: 100 $; Annualized volatility: 20.0 %; Annual continuously compounded risk-free rate: 5.0 %; Annual continuous dividend yield: 0.0 %; Expiry-time convention: Years; Time remaining in the selected convention: 1"
+    },
+    {
+      "topic": "black-scholes",
+      "title": "Expiry with the same assumed spot",
+      "id": "black-scholes",
+      "mode": "european",
+      "values": {
+        "spot": "100",
+        "strike": "100",
+        "risk_free": "5.0",
+        "dividend_yield": "0.0",
+        "volatility": "20.0",
+        "time_unit": "Years",
+        "time": 0
+      },
+      "interpretation": "European per-share model; fixed $100 spot and strike are a controlled assumption, not a price forecast.",
+      "expected": {
+        "European call theoretical value per share": "0.0",
+        "European put theoretical value per share": "0.0"
+      },
+      "additionalResults": {},
+      "inputSummary": "Current underlying spot price per share: 100 $; Exercise price per share: 100 $; Annualized volatility: 20.0 %; Annual continuously compounded risk-free rate: 5.0 %; Annual continuous dividend yield: 0.0 %; Expiry-time convention: Years; Time remaining in the selected convention: 0"
+    }
+  ]
+}
