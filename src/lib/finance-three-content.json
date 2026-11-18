@@ -1,0 +1,496 @@
+{
+  "basis-point": {
+    "checkedOn": "2026-11-18",
+    "summary": "One basis point is 0.01 percentage point, so 25 bps equals 0.25% as a rate quantity and 0.0025 as a decimal. A move from 5% to 5.25% is a 25-bps absolute increase and a 5% relative increase. Use the mode that matches a conversion, a rate comparison or a proportional monetary amount.",
+    "scope": "Financial rate conversion and proportional amounts only. No live rates, compounding, mortgage payment calculation or implied time period. Relative rate change is shown only for a positive starting rate.",
+    "examples": [
+      {
+        "title": "Convert 25 bps to 0.25% and 0.0025",
+        "mode": "convert",
+        "values": {
+          "value": 25,
+          "unit": "Basis points"
+        },
+        "inputs": "25 financial basis points.",
+        "steps": [
+          "Divide 25 by 100 for the percent quantity; divide by 10,000 for the decimal fraction."
+        ],
+        "answer": "The equivalents are 0.25% and 0.0025; the original quantity remains 25 bps.",
+        "expected": {
+          "label": "Basis points",
+          "value": 25.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A 1.25% rate quantity equals 125 bps",
+        "mode": "convert",
+        "values": {
+          "value": 1.25,
+          "unit": "Percent / percentage points"
+        },
+        "inputs": "1.25 entered as a percent quantity, not a decimal fraction.",
+        "steps": [
+          "Multiply the entered percent number by 100. The decimal fraction is 1.25 / 100."
+        ],
+        "answer": "The result is 125 bps, equivalent to a 0.0125 decimal fraction.",
+        "expected": {
+          "label": "Basis points",
+          "value": 125.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A 0.0025 decimal fraction equals 25 bps",
+        "mode": "convert",
+        "values": {
+          "value": 0.0025,
+          "unit": "Decimal"
+        },
+        "inputs": "0.0025 with Decimal selected.",
+        "steps": [
+          "Multiply the decimal fraction by 10,000. Do not treat the entry as 0.0025%."
+        ],
+        "answer": "The same rate quantity is 25 bps or 0.25%.",
+        "expected": {
+          "label": "Basis points",
+          "value": 25.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A move from 5% to 5.25% is 25 bps, not a 25% rise",
+        "mode": "rate-change",
+        "values": {
+          "start_rate": 5,
+          "end_rate": 5.25
+        },
+        "inputs": "Starting rate 5%; ending rate 5.25%.",
+        "steps": [
+          "The absolute difference is 0.25 percentage point; multiply by 100 to get bps.",
+          "For the relative comparison, divide 0.25 by the positive starting rate of 5 and multiply by 100."
+        ],
+        "answer": "The rate rose 25 bps, which is a 5% relative increase from the starting rate.",
+        "expected": {
+          "label": "Rate change in basis points",
+          "value": 25.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A fall from 5% to 4.5% is negative 50 bps",
+        "mode": "rate-change",
+        "values": {
+          "start_rate": 5,
+          "end_rate": 4.5
+        },
+        "inputs": "Starting rate 5%; ending rate 4.5%.",
+        "steps": [
+          "Subtract 5 from 4.5 to obtain −0.5 percentage point.",
+          "Multiply by 100 and retain the negative sign."
+        ],
+        "answer": "The change is −50 bps, a 10% relative decrease from the positive starting rate.",
+        "expected": {
+          "label": "Rate change in basis points",
+          "value": -50.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Apply 25 bps to a fixed $200,000 base",
+        "mode": "amount",
+        "values": {
+          "amount": 200000,
+          "bps": 25
+        },
+        "inputs": "$200,000 fixed base; 25 basis points; no time period implied.",
+        "steps": [
+          "Convert 25 bps to 0.0025 and multiply by the fixed base.",
+          "If the context is an annual fee, identify the annual period separately; this is not a mortgage-payment calculation."
+        ],
+        "answer": "The proportional amount is $500 under the fixed-base assumption.",
+        "expected": {
+          "label": "Amount represented by entered basis points",
+          "value": 500.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How many basis points are in 1%?",
+        "answer": "A 1% rate quantity equals 100 basis points. A change of one percentage point also equals 100 bps; a 1% relative increase is a different comparison."
+      },
+      {
+        "question": "Is 25 bps the same as 0.25%?",
+        "answer": "Yes as a rate quantity: 25 bps = 0.25% = 0.0025 in decimal form. A 25-bps change means 0.25 percentage point, not necessarily a 0.25% relative change."
+      },
+      {
+        "question": "How do I convert a decimal to basis points?",
+        "answer": "Multiply the decimal fraction by 10,000. For example, 0.0025 × 10,000 = 25 bps. In Convert mode, select Decimal before entering 0.0025."
+      },
+      {
+        "question": "Can basis points be negative?",
+        "answer": "Yes. A rate move from 5% to 4.5% is −50 bps. Conversion preserves the sign; relative change is omitted for a zero or negative starting rate."
+      },
+      {
+        "question": "Does 25 bps on a mortgage equal a $500 payment change?",
+        "answer": "On a fixed $200,000 base, 25 bps represents $500 of proportional amount. That is not a change in monthly mortgage payment; an amortizing payment also depends on the term, balance and payment frequency."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: Basis Point",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/basis-point"
+      }
+    ]
+  },
+  "prorated-rent": {
+    "checkedOn": "2026-11-18",
+    "summary": "Prorated rent charges only the selected billable days. With $2,000 monthly rent and January 17–31 included, the actual-calendar calculation is $2,000 / 31 × 15 = $967.74. A 30-day denominator gives $1,000 for the same dates. Use the method and billable-date convention required by your agreement and applicable rules.",
+    "scope": "Manual constant monthly rent and explicitly included billable dates. The selected day-count method is an assumption, not a legal ruling or a determination of lease obligations. No deposits, utilities, concessions or automatic monthly caps.",
+    "examples": [
+      {
+        "title": "Fifteen January days at $2,000 monthly rent",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 2000,
+          "start": "2026-01-17",
+          "end": "2026-01-31",
+          "basis": "Actual days in each month"
+        },
+        "inputs": "$2,000.00 monthly rent; 2026-01-17 through 2026-01-31, both included; Actual days in each month.",
+        "steps": [
+          "January has 31 days and the included interval has 15.",
+          "Multiply the unrounded $2,000 / 31 daily rate by 15."
+        ],
+        "answer": "Estimated rent is $967.74 after final rounding.",
+        "expected": {
+          "label": "Estimated rent for selected billable days",
+          "value": 967.741935483871,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "The same fifteen days with a 30-day denominator",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 2000,
+          "start": "2026-01-17",
+          "end": "2026-01-31",
+          "basis": "30-day month"
+        },
+        "inputs": "$2,000.00 monthly rent; 2026-01-17 through 2026-01-31, both included; 30-day month.",
+        "steps": [
+          "Keep the same fifteen billable dates; change only the denominator to 30.",
+          "Calculate $2,000 / 30 × 15."
+        ],
+        "answer": "Estimated rent is $1,000; the difference from actual-calendar rent comes from the selected method.",
+        "expected": {
+          "label": "Estimated rent for selected billable days",
+          "value": 1000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Split four billable days across January and February",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 2000,
+          "start": "2026-01-30",
+          "end": "2026-02-02",
+          "basis": "Actual days in each month"
+        },
+        "inputs": "$2,000.00 monthly rent; 2026-01-30 through 2026-02-02, both included; Actual days in each month.",
+        "steps": [
+          "Charge two January days at $2,000 / 31 and two February days at $2,000 / 28.",
+          "Add the unrounded segment charges before rounding the total."
+        ],
+        "answer": "The estimated total is $271.89, with both monthly denominators visible in the breakdown.",
+        "expected": {
+          "label": "Estimated rent for selected billable days",
+          "value": 271.889400921659,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Count February 29 in a leap-year partial month",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 1800,
+          "start": "2024-02-15",
+          "end": "2024-02-29",
+          "basis": "Actual days in each month"
+        },
+        "inputs": "$1,800.00 monthly rent; 2024-02-15 through 2024-02-29, both included; Actual days in each month.",
+        "steps": [
+          "February 2024 has 29 days; February 15–29 includes fifteen days.",
+          "Calculate $1,800 / 29 × 15."
+        ],
+        "answer": "The actual-month estimate is $931.03, with the leap day counted once.",
+        "expected": {
+          "label": "Estimated rent for selected billable days",
+          "value": 931.0344827586207,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Use a fixed 365-day annual denominator",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 2000,
+          "start": "2026-01-17",
+          "end": "2026-01-31",
+          "basis": "365-day year"
+        },
+        "inputs": "$2,000.00 monthly rent; 2026-01-17 through 2026-01-31, both included; 365-day year.",
+        "steps": [
+          "Convert monthly rent to a $24,000 annual base.",
+          "Divide by 365 and multiply by the same fifteen billable days."
+        ],
+        "answer": "The fixed-365 estimate is $986.30 for this interval.",
+        "expected": {
+          "label": "Estimated rent for selected billable days",
+          "value": 986.3013698630137,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Use 366 annual days for the leap-year illustration",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 1800,
+          "start": "2024-02-15",
+          "end": "2024-02-29",
+          "basis": "Actual days in each year"
+        },
+        "inputs": "$1,800.00 monthly rent; 2024-02-15 through 2024-02-29, both included; Actual days in each year.",
+        "steps": [
+          "Convert monthly rent to $21,600 annually.",
+          "Divide by 366 for 2024, then multiply by fifteen billable days."
+        ],
+        "answer": "The actual-year estimate is $885.25; it uses a different convention from the $931.03 actual-month case.",
+        "expected": {
+          "label": "Estimated rent for selected billable days",
+          "value": 885.2459016393443,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Use a confirmed count of fifteen days in a 31-day month",
+        "mode": "days",
+        "values": {
+          "monthly_rent": 2000,
+          "billable_days": 15,
+          "month_days": 31,
+          "basis": "Actual days in each month"
+        },
+        "inputs": "$2,000 monthly rent; fifteen known billable days; actual month length 31.",
+        "steps": [
+          "Divide monthly rent by the entered actual month length.",
+          "Multiply by the confirmed day count."
+        ],
+        "answer": "The estimate is $967.74, matching the corresponding January date example.",
+        "expected": {
+          "label": "Estimated rent for selected billable days",
+          "value": 967.741935483871,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Zero billable days produces a zero partial rent charge",
+        "mode": "days",
+        "values": {
+          "monthly_rent": 2000,
+          "billable_days": 0,
+          "month_days": 31,
+          "basis": "Actual days in each month"
+        },
+        "inputs": "$2,000 monthly rent; zero billable days; 31-day month.",
+        "steps": [
+          "The daily rate remains defined, but it applies to no billable days."
+        ],
+        "answer": "The calculated rent is $0; separate fees or contractual charges are not inferred.",
+        "expected": {
+          "label": "Estimated rent for selected billable days",
+          "value": 0.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Do I count the move-in and move-out days?",
+        "answer": "This calculator includes both entered billable dates. Whether a departure day is chargeable depends on your agreement and applicable rules. If it is excluded, enter the preceding day as the last billable day."
+      },
+      {
+        "question": "Should I divide rent by 30 or by the days in the month?",
+        "answer": "Use the method applicable to your agreement. Actual-calendar, fixed-30-day and annual methods can differ. The calculator displays the selected method and does not determine which one is legally required."
+      },
+      {
+        "question": "How does a leap year affect prorated rent?",
+        "answer": "The actual-month method uses 29 days for February in a leap year. The actual-year method uses 366 days for that year; fixed-365 and fixed-30 methods keep their stated denominators."
+      },
+      {
+        "question": "Can a 30-day calculation exceed the monthly rent?",
+        "answer": "Yes. Applying monthly rent / 30 to 31 actual billable days gives 31/30 of monthly rent. This worksheet imposes no cap and does not implement a 30/360 date-count convention; check any contractual cap separately."
+      },
+      {
+        "question": "Why can my invoice differ by a few cents?",
+        "answer": "The worksheet keeps full daily-rate precision and rounds the final total for display. An invoice that rounds each daily charge or each monthly line before summing can differ; use the agreed rounding policy."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Zillow Rental Manager: Prorated rent",
+        "url": "https://www.zillow.com/rentals-network/prorated-rent-calculator/"
+      }
+    ]
+  },
+  "operating-cash-flow": {
+    "checkedOn": "2026-11-18",
+    "summary": "Operating cash flow measures cash generated or used by the entered operating activities. In the worked reconciliation, $120,000 net income plus $30,000 adjustments minus a $20,000 operating working-capital increase gives $130,000 OCF. The same result can be reconstructed from consistent operating cash receipts and payments; it is not the same measure as profit or free cash flow.",
+    "scope": "A manual operating-cash-flow worksheet for one consistent reporting scope. Inputs require reconciled classifications; the tool does not prepare a complete accounting statement, retrieve company accounts or calculate free cash flow.",
+    "examples": [
+      {
+        "title": "Reconcile $120,000 net income to $130,000 operating cash flow",
+        "mode": "indirect",
+        "values": {
+          "net_income": 120000,
+          "noncash": 30000,
+          "ar_change": 15000,
+          "inventory_change": 10000,
+          "other_assets_change": 5000,
+          "ap_change": 8000,
+          "other_liabilities_change": 2000
+        },
+        "inputs": "Same period: net income $120,000; adjustments $30,000; operating asset increases $15,000 receivables, $10,000 inventory and $5,000 other; operating liability increases $8,000 payables and $2,000 other.",
+        "steps": [
+          "Operating asset increases use $30,000 cash; operating liability increases release $10,000.",
+          "Calculate $120,000 + $30,000 − $30,000 + $10,000."
+        ],
+        "answer": "OCF is $130,000; the positive $20,000 net working-capital increase is a cash use.",
+        "expected": {
+          "label": "Operating cash flow under entered assumptions",
+          "value": 130000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Replace the component changes with one $20,000 operating NWC increase",
+        "mode": "nwc",
+        "values": {
+          "net_income": 120000,
+          "noncash": 30000,
+          "nwc_change": 20000
+        },
+        "inputs": "Same period: net income $120,000; signed adjustments $30,000; already reconciled operating NWC increase $20,000.",
+        "steps": [
+          "Subtract the increase in operating assets less operating liabilities once.",
+          "Calculate $120,000 + $30,000 − $20,000."
+        ],
+        "answer": "OCF remains $130,000, matching the component case.",
+        "expected": {
+          "label": "Operating cash flow under entered assumptions",
+          "value": 130000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Cross-check $600,000 receipts against $470,000 operating payments",
+        "mode": "direct",
+        "values": {
+          "receipts": 600000,
+          "suppliers": 300000,
+          "employees": 100000,
+          "taxes": 30000,
+          "interest": 10000,
+          "other": 30000
+        },
+        "inputs": "Same illustrative period: receipts $600,000; supplier payments $300,000; employees $100,000; income tax $30,000; interest $10,000; other operating payments $30,000.",
+        "steps": [
+          "Sum the five nonoverlapping cash payment categories to $470,000.",
+          "Subtract them from the entered $600,000 receipts; do not subtract depreciation."
+        ],
+        "answer": "The direct illustration also gives $130,000 OCF under the specified operating classifications.",
+        "expected": {
+          "label": "Operating cash flow under entered assumptions",
+          "value": 130000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A $30,000 receivables decrease releases cash in the bridge",
+        "mode": "indirect",
+        "values": {
+          "net_income": 120000,
+          "noncash": 30000,
+          "ar_change": -30000,
+          "inventory_change": 10000,
+          "other_assets_change": 5000,
+          "ap_change": 8000,
+          "other_liabilities_change": 2000
+        },
+        "inputs": "Keep the first case unchanged except receivables fall by $30,000; enter that change as −30000.",
+        "steps": [
+          "Subtracting the negative receivables change adds $30,000.",
+          "The revised operating NWC change is −$25,000: assets decrease net $15,000 and liabilities increase $10,000."
+        ],
+        "answer": "OCF becomes $175,000; the $45,000 difference from the first case comes entirely from the changed receivables assumption.",
+        "expected": {
+          "label": "Operating cash flow under entered assumptions",
+          "value": 175000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A net loss can coexist with a further operating cash outflow",
+        "mode": "nwc",
+        "values": {
+          "net_income": -20000,
+          "noncash": 30000,
+          "nwc_change": 20000
+        },
+        "inputs": "Net loss $20,000; positive noncash adjustments $30,000; operating NWC increase $20,000.",
+        "steps": [
+          "Keep net income negative and subtract the positive working-capital increase.",
+          "Calculate −$20,000 + $30,000 − $20,000."
+        ],
+        "answer": "OCF is −$10,000. The worksheet preserves the cash outflow rather than describing it as zero.",
+        "expected": {
+          "label": "Operating cash flow under entered assumptions",
+          "value": -10000.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the operating cash flow formula?",
+        "answer": "In this indirect worksheet, start with net income, add signed noncash and nonoperating reconciliation adjustments, then subtract the increase in operating net working capital. Direct mode subtracts operating cash payments from operating receipts."
+      },
+      {
+        "question": "Does an increase in accounts receivable add or subtract cash?",
+        "answer": "An included operating receivables increase is subtracted in the indirect reconciliation. A decrease is entered as a negative change and adds cash, assuming the change has been reconciled for noncash and nonoperating movements."
+      },
+      {
+        "question": "Do I include cash and debt in working capital?",
+        "answer": "Not in this worksheet’s operating net working-capital definition. Exclude cash, cash equivalents and interest-bearing debt. Include the operating asset and operating liability items required by your reconciliation."
+      },
+      {
+        "question": "Can operating cash flow be negative when net income is positive?",
+        "answer": "Yes. A large operating working-capital increase or other cash-consuming adjustment can outweigh positive net income. A negative result alone does not identify its cause or prove insolvency."
+      },
+      {
+        "question": "Is operating cash flow the same as free cash flow?",
+        "answer": "No. Capital expenditure is a separate investing cash-flow item. Free cash flow commonly adjusts operating cash flow for capital spending, but definitions vary and this calculator does not label OCF as free cash flow."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC: Beginners’ guide to financial statements",
+        "url": "https://www.sec.gov/investor/pubs/begfinstmtguide.htm"
+      }
+    ]
+  }
+}

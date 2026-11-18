@@ -35,6 +35,7 @@ const wordingReviewDates:Record<string,string>={
  ...Object.fromEntries(["/stock-split-calculator.html", "/guides/stock-split-vs-reverse-stock-split/", "/glossary/stock-split/", "/customer-acquisition-cost-calculator.html", "/guides/customer-acquisition-cost-vs-roas/", "/glossary/customer-acquisition-cost/", "/dividend-discount-model-calculator.html", "/guides/dividend-discount-model-vs-dividend-reinvestment/", "/glossary/dividend-discount-model/", "/earnings-per-share-calculator.html", "/guides/basic-eps-vs-diluted-eps/", "/glossary/earnings-per-share/", "/sharpe-ratio-calculator.html", "/guides/sharpe-ratio-vs-total-return/", "/glossary/sharpe-ratio/", "/black-scholes-calculator.html", "/guides/option-theoretical-value-vs-expiration-payoff/", "/glossary/black-scholes-model/", "/stock-average-calculator.html", "/stock-profit-calculator.html", "/roas-calculator.html", "/break-even-calculator.html", "/margin-calculator.html", "/drip-calculator.html", "/capm-calculator.html", "/return-on-equity-calculator.html", "/present-value-calculator.html", "/roic-calculator.html", "/average-return-calculator.html", "/real-return-calculator.html", "/covered-call-calculator.html", "/cash-secured-put-calculator.html", "/financial-calculator.html", "/savings-investment-calculators.html", "/business-calculators.html", "/guides/", "/glossary/"].map(path=>[path,'2026-11-17'])),
  ...Object.fromEntries(["/stock-split-calculator.html", "/customer-acquisition-cost-calculator.html", "/dividend-discount-model-calculator.html", "/earnings-per-share-calculator.html", "/sharpe-ratio-calculator.html", "/black-scholes-calculator.html", "/mortgage-buydown-calculator.html", "/cash-secured-put-calculator.html", "/profitability-index-calculator.html", "/return-on-equity-calculator.html", "/72t-calculator.html"].map(path=>[path,'2026-11-18'])),
  ...Object.fromEntries(["/mortgage-buydown-calculator.html", "/profitability-index-calculator.html", "/return-on-equity-calculator.html", "/72t-calculator.html", "/credit-card-rewards-calculator.html", "/accounts-receivable-turnover-calculator.html", "/days-payable-outstanding-calculator.html", "/cash-conversion-cycle-calculator.html", "/roic-calculator.html", "/interest-coverage-ratio-calculator.html", "/stock-split-calculator.html", "/customer-acquisition-cost-calculator.html", "/dividend-discount-model-calculator.html", "/earnings-per-share-calculator.html", "/sharpe-ratio-calculator.html", "/black-scholes-calculator.html", "/cash-secured-put-calculator.html"].map(path=>[path,'2026-11-18'])),
+ ...Object.fromEntries(["/basis-point-calculator.html", "/guides/basis-points-vs-percentage-points/", "/glossary/basis-point/", "/prorated-rent-calculator.html", "/guides/how-to-prorate-rent-by-days/", "/glossary/prorated-rent/", "/operating-cash-flow-calculator.html", "/guides/operating-cash-flow-vs-net-income/", "/glossary/operating-cash-flow/", "/interest-rate-calculator.html", "/percentage-calculator.html", "/investment-fee-calculator.html", "/rent-affordability-calculator.html", "/rental-property-calculator.html", "/vacancy-rate-calculator.html", "/cash-conversion-cycle-calculator.html", "/roic-calculator.html", "/burn-rate-calculator.html", "/financial-calculator.html", "/real-estate-calculator.html", "/savings-investment-calculators.html", "/business-calculators.html", "/guides/", "/glossary/"].map(path=>[path,'2026-11-18'])),
 };
 function assertContentDate(path:string,historicalDate:string){
  assert.equal(contentUpdatedOn[path],wordingReviewDates[path]??historicalDate,path);
@@ -71,7 +72,7 @@ test("Production sitemap lists canonical pages and only reviewed content dates",
     SITE_INDEXABLE: "true",
   });
   const entries = sitemapEntries(config);
-  assert.equal(entries.length,430);
+  assert.equal(entries.length,439);
   for(const [path,date] of Object.entries(wordingReviewDates))assert.equal(contentUpdatedOn[path],date,path);
   for(const path of depthReviewPaths)assertContentDate(path,businessReviewPaths.includes(path)?'2026-11-06':latestGuidePaths.includes(path)?'2026-11-04':contentGuidePaths.includes(path)?'2026-11-03':'2026-11-02');
   assert.ok(entries.some(e=>new URL(e.url).pathname==='/disclaimer.html'));
@@ -185,9 +186,9 @@ test("Contextual related tools are real, distinct and not self-links", () => {
 
 test("Every functional calculator has a unique guide, reproducible examples and specific questions", () => {
   const tools=calculators.filter(c=>!c.directory);
-  assert.equal(tools.length,155);
-  assert.equal(Object.keys(guides).length,155);
-  assert.equal(new Set(Object.values(guides).map(g=>g.summary)).size,155);
+  assert.equal(tools.length,158);
+  assert.equal(Object.keys(guides).length,158);
+  assert.equal(new Set(Object.values(guides).map(g=>g.summary)).size,158);
   for(const tool of tools){
     const guide=guides[tool.id];assert.ok(guide,tool.id);
     assert.ok(guide.summary.length>80 && guide.scope.length>50,tool.id);
@@ -211,7 +212,7 @@ test("Production SEO follows the confirmed www extensionless destination while o
   assert.equal(absoluteURL("/cd-calculator.html",config),"https://www.calculatorfree.io/cd-calculator");
   assert.equal(absoluteURL("/glossary/",config),"https://www.calculatorfree.io/glossary/");
   const entries=sitemapEntries(config);
-  assert.equal(entries.length,430);
+  assert.equal(entries.length,439);
   for(const [path,date] of Object.entries(wordingReviewDates))assert.equal(contentUpdatedOn[path],date,path);
   assert.equal(new Set(entries.map(e=>e.url)).size,entries.length);
   assert.ok(entries.every(e=>e.url.startsWith("https://www.calculatorfree.io/")&&!e.url.endsWith(".html")&&!e.url.includes("?")));

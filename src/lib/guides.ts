@@ -1,3 +1,4 @@
+import financeThreeContent from './finance-three-content.json';
 import marketsSixContent from './markets-six-content.json';
 import financeSixContent from './finance-six-content.json';
 import financeNextFiveContent from './finance-next-five-content.json';
@@ -1040,3 +1041,7 @@ for(const [id,links] of Object.entries(financeSixRelated)){relatedCalculatorIds[
 Object.assign(guides,marketsSixContent as unknown as Record<string,Guide>);
 const marketsSixRelated:Record<string,string[]>={"stock-split": ["stock-average", "stock-profit"], "customer-acquisition-cost": ["roas", "break-even", "margin"], "dividend-discount-model": ["drip", "capm", "return-on-equity", "present-value"], "earnings-per-share": ["return-on-equity", "roic", "stock-profit"], "sharpe-ratio": ["average-return", "capm", "real-return"], "black-scholes": ["covered-call", "cash-secured-put", "stock-profit"]};
 for(const [id,links] of Object.entries(marketsSixRelated)){relatedCalculatorIds[id]=links;for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])].slice(0,8);}
+
+Object.assign(guides,financeThreeContent as unknown as Record<string,Guide>);
+const financeThreeRelated:Record<string,string[]>={"basis-point": ["interest-rate", "percentage", "investment-fee"], "prorated-rent": ["rent", "rental-property", "vacancy-rate"], "operating-cash-flow": ["cash-conversion-cycle", "roic", "burn-rate"]};
+for(const [id,links] of Object.entries(financeThreeRelated)){relatedCalculatorIds[id]=links;for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])].slice(0,8);}

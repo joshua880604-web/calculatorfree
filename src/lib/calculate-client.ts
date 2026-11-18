@@ -11,6 +11,10 @@ const loaders: Record<string, () => Promise<Calculator[]>> = {
 const businessTools = () => import('./calculators/business-tools').then(m => m.businessTools);
 const strategyTools=()=>import('./calculators/debt-strategies').then(m=>[m.debtSnowball,m.debtAvalanche]);
 const dataTools: Record<string, () => Promise<Calculator[]>> = {
+  'basis-point':()=>import('./calculators/basis-point').then(m=>[m.basisPointCalculator]),
+  'prorated-rent':()=>import('./calculators/prorated-rent').then(m=>[m.proratedRentCalculator]),
+  'operating-cash-flow':()=>import('./calculators/operating-cash-flow').then(m=>[m.operatingCashFlowCalculator]),
+
   'stock-split':()=>import('./calculators/stock-split').then(m=>[m.stockSplitCalculator]),
   'customer-acquisition-cost':()=>import('./calculators/customer-acquisition-cost').then(m=>[m.customerAcquisitionCostCalculator]),
   'dividend-discount-model':()=>import('./calculators/dividend-discount-model').then(m=>[m.dividendDiscountModelCalculator]),

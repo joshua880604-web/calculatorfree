@@ -4,5 +4,7 @@
   "/rent-calculator": "/rent-affordability-calculator",
   "/currency-calculator": "/currency-converter",
   "/credit-card-calculator": "/single-credit-card-payoff-calculator",
-  "/credit-card-payoff-calculator": "/multiple-credit-card-payoff-calculator"
+  "/credit-card-payoff-calculator": "/multiple-credit-card-payoff-calculator",
+  "/bps-calculator": "/basis-point-calculator",
+  "/prorate-rent-calculator": "/prorated-rent-calculator"
 }

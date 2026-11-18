@@ -1,3 +1,6 @@
+import {basisPointCalculator} from './basis-point';
+import {proratedRentCalculator} from './prorated-rent';
+import {operatingCashFlowCalculator} from './operating-cash-flow';
 import {stockSplitCalculator} from './stock-split';
 import {customerAcquisitionCostCalculator} from './customer-acquisition-cost';
 import {dividendDiscountModelCalculator} from './dividend-discount-model';
@@ -67,6 +70,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  basisPointCalculator,proratedRentCalculator,operatingCashFlowCalculator,
   stockSplitCalculator,customerAcquisitionCostCalculator,dividendDiscountModelCalculator,earningsPerShareCalculator,sharpeRatioCalculator,blackScholesCalculator,
   creditCardRewardsCalculator,receivablesTurnoverCalculator,daysPayableOutstandingCalculator,cashConversionCycleCalculator,roicCalculator,interestCoverageCalculator,
   mortgageBuydownCalculator,cashSecuredPutCalculator,profitabilityIndexCalculator,returnOnEquityCalculator,seppCalculator,

@@ -1,0 +1,9 @@
+Case,Mode,Input assumptions,Result label,Expected value
+"Fifteen January days at $2,000 monthly rent",dates,"$2,000.00 monthly rent; 2026-01-17 through 2026-01-31, both included; Actual days in each month.",Estimated rent for selected billable days,967.741935483871
+The same fifteen days with a 30-day denominator,dates,"$2,000.00 monthly rent; 2026-01-17 through 2026-01-31, both included; 30-day month.",Estimated rent for selected billable days,1000.0
+Split four billable days across January and February,dates,"$2,000.00 monthly rent; 2026-01-30 through 2026-02-02, both included; Actual days in each month.",Estimated rent for selected billable days,271.889400921659
+Count February 29 in a leap-year partial month,dates,"$1,800.00 monthly rent; 2024-02-15 through 2024-02-29, both included; Actual days in each month.",Estimated rent for selected billable days,931.0344827586207
+Use a fixed 365-day annual denominator,dates,"$2,000.00 monthly rent; 2026-01-17 through 2026-01-31, both included; 365-day year.",Estimated rent for selected billable days,986.3013698630137
+Use 366 annual days for the leap-year illustration,dates,"$1,800.00 monthly rent; 2024-02-15 through 2024-02-29, both included; Actual days in each year.",Estimated rent for selected billable days,885.2459016393443
+Use a confirmed count of fifteen days in a 31-day month,days,"$2,000 monthly rent; fifteen known billable days; actual month length 31.",Estimated rent for selected billable days,967.741935483871
+Zero billable days produces a zero partial rent charge,days,"$2,000 monthly rent; zero billable days; 31-day month.",Estimated rent for selected billable days,0.0

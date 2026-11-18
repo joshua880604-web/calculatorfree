@@ -830,5 +830,8 @@
   {"id": "dividend-discount-model", "category": "Investment", "title": "Dividend Discount Model Calculator", "local_route": "/dividend-discount-model-calculator.html"},
   {"id": "earnings-per-share", "category": "Investment", "title": "Earnings per Share (EPS) Calculator", "local_route": "/earnings-per-share-calculator.html"},
   {"id": "sharpe-ratio", "category": "Investment", "title": "Sharpe Ratio Calculator", "local_route": "/sharpe-ratio-calculator.html"},
-  {"id": "black-scholes", "category": "Investment", "title": "Black-Scholes Calculator", "local_route": "/black-scholes-calculator.html"}
+  {"id": "black-scholes", "category": "Investment", "title": "Black-Scholes Calculator", "local_route": "/black-scholes-calculator.html"},
+  {"id": "basis-point", "category": "Investment", "title": "Basis Point Calculator", "local_route": "/basis-point-calculator.html"},
+  {"id": "prorated-rent", "category": "Mortgage and Real Estate", "title": "Prorated Rent Calculator", "local_route": "/prorated-rent-calculator.html"},
+  {"id": "operating-cash-flow", "category": "Other", "title": "Operating Cash Flow Calculator", "local_route": "/operating-cash-flow-calculator.html"}
 ]

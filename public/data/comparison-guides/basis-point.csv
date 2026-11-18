@@ -1,0 +1,7 @@
+Case,Mode,Input assumptions,Result label,Expected value
+Convert 25 bps to 0.25% and 0.0025,convert,25 financial basis points.,Basis points,25.0
+A 1.25% rate quantity equals 125 bps,convert,"1.25 entered as a percent quantity, not a decimal fraction.",Basis points,125.0
+A 0.0025 decimal fraction equals 25 bps,convert,0.0025 with Decimal selected.,Basis points,25.0
+"A move from 5% to 5.25% is 25 bps, not a 25% rise",rate-change,Starting rate 5%; ending rate 5.25%.,Rate change in basis points,25.0
+A fall from 5% to 4.5% is negative 50 bps,rate-change,Starting rate 5%; ending rate 4.5%.,Rate change in basis points,-50.0
+"Apply 25 bps to a fixed $200,000 base",amount,"$200,000 fixed base; 25 basis points; no time period implied.",Amount represented by entered basis points,500.0

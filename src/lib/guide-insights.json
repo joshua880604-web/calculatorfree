@@ -1225,5 +1225,95 @@
       "With zero new customers, CAC is undefined. A zero included cost with positive customers can reflect an incomplete scope rather than genuinely costless acquisition."
     ],
     "checkedOn": "2026-11-18"
+  },
+  "basis-point": {
+    "answer": "A financial basis point is 0.01 percentage point. Convert one rate quantity, compare two quoted rates, or apply basis points to a fixed amount using separate modes. For 5% to 5.25%, the difference is 25 bps; the relative increase from the starting rate is 5%.",
+    "results": [
+      {
+        "label": "Basis points",
+        "meaning": "The entered rate quantity converted to financial basis points, preserving its sign."
+      },
+      {
+        "label": "Equivalent percent",
+        "meaning": "The percent representation of the quantity. When it describes a difference between two quoted percentages, read it as percentage points."
+      },
+      {
+        "label": "Equivalent decimal fraction",
+        "meaning": "The multiplier used in proportional arithmetic: 25 bps becomes 0.0025."
+      }
+    ],
+    "compare": [
+      "Convert 25 bps, then switch the input unit and enter 0.25 percent or 0.0025 decimal to confirm the same quantity.",
+      "Use Change Between Two Rates to isolate the absolute difference from relative percent growth. Keep the starting rate visible.",
+      "Use Basis Points of an Amount only for a fixed-base proportional comparison; document any annual or monthly fee period separately."
+    ],
+    "checks": [
+      "Confirm the selected input unit before entering the number; 0.25 decimal means 25%, not 0.25%.",
+      "A negative change preserves a decrease. Relative change is omitted for nonpositive starting rates.",
+      "A proportional amount has no time period until you supply one in the real-world context; it is not an amortizing mortgage payment."
+    ],
+    "checkedOn": "2026-11-18"
+  },
+  "prorated-rent": {
+    "answer": "Start with the actual first and last billable day. At $2,000 monthly rent, January 17–31 gives fifteen days and $967.74 using January’s 31-day denominator, or $1,000 using a fixed 30-day denominator. The result names the convention so the comparison can be checked against the agreement.",
+    "results": [
+      {
+        "label": "Estimated rent for selected billable days",
+        "meaning": "Sum of unrounded segment charges, rounded for monetary display. Separate deposits, utilities, concessions and fees are excluded."
+      },
+      {
+        "label": "Billable days included",
+        "meaning": "Both entered date endpoints count in date mode; known-days mode uses your confirmed day count for one month."
+      },
+      {
+        "label": "Day-count method",
+        "meaning": "The chosen arithmetic convention. Actual-month uses each month’s length; annual methods use twelve times monthly rent with their selected year denominator."
+      }
+    ],
+    "compare": [
+      "Keep monthly rent and billable dates unchanged, then change only the day-count method to understand the denominator effect.",
+      "For cross-month intervals, inspect each monthly segment rather than multiplying one month’s daily rate across the whole interval.",
+      "Compare the final total and rounding policy with the billing record. Use the agreed method instead of selecting whichever result is smaller."
+    ],
+    "checks": [
+      "The last entered date is included. If a departure day is not billable, enter the preceding day as the last billable day.",
+      "Monthly rent is assumed constant. Split separate rent rates or concessions into their own calculations.",
+      "A fixed-30-day calculation counts actual billable dates and has no automatic monthly cap; it does not implement a synthetic 30/360 date-count rule.",
+      "Unrounded daily rates are used until the final total. An agreement that rounds daily or per line may produce different cents."
+    ],
+    "checkedOn": "2026-11-18"
+  },
+  "operating-cash-flow": {
+    "answer": "Reconcile operating cash flow from one matched reporting scope. The worked indirect case uses $120,000 net income, $30,000 signed adjustments and a $20,000 operating working-capital increase to obtain $130,000 OCF. A consistent direct cash-receipts and payments illustration produces the same result.",
+    "results": [
+      {
+        "label": "Operating cash flow under entered assumptions",
+        "meaning": "The operating cash generated or used by the signed reconciliation. It excludes the separate investing and financing sections and is not a cash-balance forecast."
+      },
+      {
+        "label": "Increase in operating net working capital",
+        "meaning": "Included operating-asset increases less included operating-liability increases. Cash and interest-bearing debt are excluded from this worksheet’s definition."
+      },
+      {
+        "label": "Working-capital cash-flow effect",
+        "meaning": "The negative of the operating NWC increase. A positive NWC increase uses cash; a decrease adds cash in the indirect bridge."
+      },
+      {
+        "label": "Operating cash payments entered",
+        "meaning": "In direct mode, the sum of the nonoverlapping cash payment categories you entered. It does not include depreciation or debt principal."
+      }
+    ],
+    "compare": [
+      "Reproduce the component-change illustration, then use the same $20,000 aggregate operating NWC increase to check the second indirect mode.",
+      "Hold all other indirect inputs fixed and change a receivables increase to a decrease to see the signed cash effect. Do not pre-negate the change.",
+      "Cross-check against direct receipts and payments only when the reporting period, entity, accounting scope and included cash-flow categories match."
+    ],
+    "checks": [
+      "Changes mean ending balance minus beginning balance. Operating asset increases subtract cash; operating liability increases add it.",
+      "Remove acquisitions, foreign-exchange translation and other noncash balance changes before entering operating changes.",
+      "Add back included noncash expenses once and subtract applicable noncash income or gains in the signed adjustment total.",
+      "Direct mode uses cash receipts and payments, not accrual revenues and expenses. The worksheet does not determine reporting-framework classifications or free cash flow."
+    ],
+    "checkedOn": "2026-11-18"
   }
 }

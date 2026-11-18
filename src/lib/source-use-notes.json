@@ -1682,6 +1682,21 @@
       "role": "method",
       "usedFor": "European call/put valuation with dividends.",
       "scope": "Method-scope reference only. The source Excel model was not executed as our benchmark, and no accounting fair-value compliance is claimed."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/basis-point": {
+      "role": "method",
+      "usedFor": "The financial definition of a basis point.",
+      "scope": "The rate definition does not establish a quoted product rate or calculate an amortizing payment."
+    },
+    "https://www.zillow.com/rentals-network/prorated-rent-calculator/": {
+      "role": "method",
+      "usedFor": "A practical example of monthly rent divided by calendar-month days, then multiplied by occupancy days.",
+      "scope": "One arithmetic convention, not a universal legal requirement. Our alternative-method and cross-month examples are original calculations."
+    },
+    "https://www.sec.gov/investor/pubs/begfinstmtguide.htm": {
+      "role": "method",
+      "usedFor": "The distinction between income, operating cash flow and the investing/financing sections.",
+      "scope": "General educational context; our signed worksheet examples are hypothetical, not a complete compliant cash-flow statement."
     }
   },
   "pages": {
@@ -4185,6 +4200,105 @@
           "role": "method",
           "usedFor": "European call/put valuation with dividends.",
           "scope": "Method-scope reference only. The source Excel model was not executed as our benchmark, and no accounting fair-value compliance is claimed."
+        }
+      }
+    },
+    "calculator:basis-point": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Worked scenarios are original hypothetical illustrations, checked with independent 60-digit Python Decimal and calendar arithmetic. No source endorsement or independent professional review is claimed.",
+      "overrides": {
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/basis-point": {
+          "role": "method",
+          "usedFor": "The financial definition of a basis point.",
+          "scope": "The rate definition does not establish a quoted product rate or calculate an amortizing payment."
+        }
+      }
+    },
+    "guide:/guides/basis-points-vs-percentage-points/": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Worked scenarios are original hypothetical illustrations, checked with independent 60-digit Python Decimal and calendar arithmetic. No source endorsement or independent professional review is claimed.",
+      "overrides": {
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/basis-point": {
+          "role": "method",
+          "usedFor": "The financial definition of a basis point.",
+          "scope": "The rate definition does not establish a quoted product rate or calculate an amortizing payment."
+        }
+      }
+    },
+    "glossary:basis-point": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Worked scenarios are original hypothetical illustrations, checked with independent 60-digit Python Decimal and calendar arithmetic. No source endorsement or independent professional review is claimed.",
+      "overrides": {
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/basis-point": {
+          "role": "method",
+          "usedFor": "The financial definition of a basis point.",
+          "scope": "The rate definition does not establish a quoted product rate or calculate an amortizing payment."
+        }
+      }
+    },
+    "calculator:prorated-rent": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Worked scenarios are original hypothetical illustrations, checked with independent 60-digit Python Decimal and calendar arithmetic. No source endorsement or independent professional review is claimed.",
+      "overrides": {
+        "https://www.zillow.com/rentals-network/prorated-rent-calculator/": {
+          "role": "method",
+          "usedFor": "A practical example of monthly rent divided by calendar-month days, then multiplied by occupancy days.",
+          "scope": "One arithmetic convention, not a universal legal requirement. Our alternative-method and cross-month examples are original calculations."
+        }
+      }
+    },
+    "guide:/guides/how-to-prorate-rent-by-days/": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Worked scenarios are original hypothetical illustrations, checked with independent 60-digit Python Decimal and calendar arithmetic. No source endorsement or independent professional review is claimed.",
+      "overrides": {
+        "https://www.zillow.com/rentals-network/prorated-rent-calculator/": {
+          "role": "method",
+          "usedFor": "A practical example of monthly rent divided by calendar-month days, then multiplied by occupancy days.",
+          "scope": "One arithmetic convention, not a universal legal requirement. Our alternative-method and cross-month examples are original calculations."
+        }
+      }
+    },
+    "glossary:prorated-rent": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Worked scenarios are original hypothetical illustrations, checked with independent 60-digit Python Decimal and calendar arithmetic. No source endorsement or independent professional review is claimed.",
+      "overrides": {
+        "https://www.zillow.com/rentals-network/prorated-rent-calculator/": {
+          "role": "method",
+          "usedFor": "A practical example of monthly rent divided by calendar-month days, then multiplied by occupancy days.",
+          "scope": "One arithmetic convention, not a universal legal requirement. Our alternative-method and cross-month examples are original calculations."
+        }
+      }
+    },
+    "calculator:operating-cash-flow": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Worked scenarios are original hypothetical illustrations, checked with independent 60-digit Python Decimal and calendar arithmetic. No source endorsement or independent professional review is claimed.",
+      "overrides": {
+        "https://www.sec.gov/investor/pubs/begfinstmtguide.htm": {
+          "role": "method",
+          "usedFor": "The distinction between income, operating cash flow and the investing/financing sections.",
+          "scope": "General educational context; our signed worksheet examples are hypothetical, not a complete compliant cash-flow statement."
+        }
+      }
+    },
+    "guide:/guides/operating-cash-flow-vs-net-income/": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Worked scenarios are original hypothetical illustrations, checked with independent 60-digit Python Decimal and calendar arithmetic. No source endorsement or independent professional review is claimed.",
+      "overrides": {
+        "https://www.sec.gov/investor/pubs/begfinstmtguide.htm": {
+          "role": "method",
+          "usedFor": "The distinction between income, operating cash flow and the investing/financing sections.",
+          "scope": "General educational context; our signed worksheet examples are hypothetical, not a complete compliant cash-flow statement."
+        }
+      }
+    },
+    "glossary:operating-cash-flow": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Worked scenarios are original hypothetical illustrations, checked with independent 60-digit Python Decimal and calendar arithmetic. No source endorsement or independent professional review is claimed.",
+      "overrides": {
+        "https://www.sec.gov/investor/pubs/begfinstmtguide.htm": {
+          "role": "method",
+          "usedFor": "The distinction between income, operating cash flow and the investing/financing sections.",
+          "scope": "General educational context; our signed worksheet examples are hypothetical, not a complete compliant cash-flow statement."
         }
       }
     }

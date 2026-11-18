@@ -1,0 +1,289 @@
+{
+  "generatedOn": "2026-11-18",
+  "precisionDigits": 60,
+  "method": "Independent Python Decimal and Python calendar-date arithmetic. No production calculator imported. Rent reference sums one day at a time; production uses monthly segments.",
+  "fixtures": [
+    {
+      "id": "basis-point",
+      "mode": "convert",
+      "title": "Convert 25 bps to 0.25% and 0.0025",
+      "values": {
+        "value": 25,
+        "unit": "Basis points"
+      },
+      "expected": {
+        "Basis points": "25",
+        "Equivalent percent": "0.25",
+        "Equivalent decimal fraction": "0.0025"
+      }
+    },
+    {
+      "id": "basis-point",
+      "mode": "convert",
+      "title": "A 1.25% rate quantity equals 125 bps",
+      "values": {
+        "value": 1.25,
+        "unit": "Percent / percentage points"
+      },
+      "expected": {
+        "Basis points": "125.00",
+        "Equivalent percent": "1.25",
+        "Equivalent decimal fraction": "0.0125"
+      }
+    },
+    {
+      "id": "basis-point",
+      "mode": "convert",
+      "title": "A 0.0025 decimal fraction equals 25 bps",
+      "values": {
+        "value": 0.0025,
+        "unit": "Decimal"
+      },
+      "expected": {
+        "Basis points": "25.0000",
+        "Equivalent percent": "0.2500",
+        "Equivalent decimal fraction": "0.0025"
+      }
+    },
+    {
+      "id": "basis-point",
+      "mode": "rate-change",
+      "title": "A move from 5% to 5.25% is 25 bps, not a 25% rise",
+      "values": {
+        "start_rate": 5,
+        "end_rate": 5.25
+      },
+      "expected": {
+        "Rate change in basis points": "25.00",
+        "Rate change in percentage points": "0.25",
+        "Relative change from positive starting rate": "5.00"
+      }
+    },
+    {
+      "id": "basis-point",
+      "mode": "rate-change",
+      "title": "A fall from 5% to 4.5% is negative 50 bps",
+      "values": {
+        "start_rate": 5,
+        "end_rate": 4.5
+      },
+      "expected": {
+        "Rate change in basis points": "-50.0",
+        "Rate change in percentage points": "-0.5",
+        "Relative change from positive starting rate": "-10.0"
+      }
+    },
+    {
+      "id": "basis-point",
+      "mode": "amount",
+      "title": "Apply 25 bps to a fixed $200,000 base",
+      "values": {
+        "amount": 200000,
+        "bps": 25
+      },
+      "expected": {
+        "Amount represented by entered basis points": "500"
+      }
+    },
+    {
+      "id": "prorated-rent",
+      "mode": "dates",
+      "title": "Fifteen January days at $2,000 monthly rent",
+      "values": {
+        "monthly_rent": 2000,
+        "start": "2026-01-17",
+        "end": "2026-01-31",
+        "basis": "Actual days in each month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "967.741935483870967741935483870967741935483870967741935483870",
+        "Billable days included": "15"
+      }
+    },
+    {
+      "id": "prorated-rent",
+      "mode": "dates",
+      "title": "The same fifteen days with a 30-day denominator",
+      "values": {
+        "monthly_rent": 2000,
+        "start": "2026-01-17",
+        "end": "2026-01-31",
+        "basis": "30-day month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "1000.00000000000000000000000000000000000000000000000000000000",
+        "Billable days included": "15"
+      }
+    },
+    {
+      "id": "prorated-rent",
+      "mode": "dates",
+      "title": "Split four billable days across January and February",
+      "values": {
+        "monthly_rent": 2000,
+        "start": "2026-01-30",
+        "end": "2026-02-02",
+        "basis": "Actual days in each month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "271.889400921658986175115207373271889400921658986175115207374",
+        "Billable days included": "4"
+      }
+    },
+    {
+      "id": "prorated-rent",
+      "mode": "dates",
+      "title": "Count February 29 in a leap-year partial month",
+      "values": {
+        "monthly_rent": 1800,
+        "start": "2024-02-15",
+        "end": "2024-02-29",
+        "basis": "Actual days in each month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "931.034482758620689655172413793103448275862068965517241379314",
+        "Billable days included": "15"
+      }
+    },
+    {
+      "id": "prorated-rent",
+      "mode": "dates",
+      "title": "Use a fixed 365-day annual denominator",
+      "values": {
+        "monthly_rent": 2000,
+        "start": "2026-01-17",
+        "end": "2026-01-31",
+        "basis": "365-day year"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "986.301369863013698630136986301369863013698630136986301369868",
+        "Billable days included": "15"
+      }
+    },
+    {
+      "id": "prorated-rent",
+      "mode": "dates",
+      "title": "Use 366 annual days for the leap-year illustration",
+      "values": {
+        "monthly_rent": 1800,
+        "start": "2024-02-15",
+        "end": "2024-02-29",
+        "basis": "Actual days in each year"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "885.245901639344262295081967213114754098360655737704918032782",
+        "Billable days included": "15"
+      }
+    },
+    {
+      "id": "prorated-rent",
+      "mode": "days",
+      "title": "Use a confirmed count of fifteen days in a 31-day month",
+      "values": {
+        "monthly_rent": 2000,
+        "billable_days": 15,
+        "month_days": 31,
+        "basis": "Actual days in each month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "967.741935483870967741935483870967741935483870967741935483872",
+        "Billable days included": "15"
+      }
+    },
+    {
+      "id": "prorated-rent",
+      "mode": "days",
+      "title": "Zero billable days produces a zero partial rent charge",
+      "values": {
+        "monthly_rent": 2000,
+        "billable_days": 0,
+        "month_days": 31,
+        "basis": "Actual days in each month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "0E-58",
+        "Billable days included": "0"
+      }
+    },
+    {
+      "id": "operating-cash-flow",
+      "mode": "indirect",
+      "title": "Reconcile $120,000 net income to $130,000 operating cash flow",
+      "values": {
+        "net_income": 120000,
+        "noncash": 30000,
+        "ar_change": 15000,
+        "inventory_change": 10000,
+        "other_assets_change": 5000,
+        "ap_change": 8000,
+        "other_liabilities_change": 2000
+      },
+      "expected": {
+        "Increase in operating net working capital": "20000",
+        "Operating cash flow under entered assumptions": "130000"
+      }
+    },
+    {
+      "id": "operating-cash-flow",
+      "mode": "nwc",
+      "title": "Replace the component changes with one $20,000 operating NWC increase",
+      "values": {
+        "net_income": 120000,
+        "noncash": 30000,
+        "nwc_change": 20000
+      },
+      "expected": {
+        "Increase in operating net working capital": "20000",
+        "Operating cash flow under entered assumptions": "130000"
+      }
+    },
+    {
+      "id": "operating-cash-flow",
+      "mode": "direct",
+      "title": "Cross-check $600,000 receipts against $470,000 operating payments",
+      "values": {
+        "receipts": 600000,
+        "suppliers": 300000,
+        "employees": 100000,
+        "taxes": 30000,
+        "interest": 10000,
+        "other": 30000
+      },
+      "expected": {
+        "Operating cash flow under entered assumptions": "130000"
+      }
+    },
+    {
+      "id": "operating-cash-flow",
+      "mode": "indirect",
+      "title": "A $30,000 receivables decrease releases cash in the bridge",
+      "values": {
+        "net_income": 120000,
+        "noncash": 30000,
+        "ar_change": -30000,
+        "inventory_change": 10000,
+        "other_assets_change": 5000,
+        "ap_change": 8000,
+        "other_liabilities_change": 2000
+      },
+      "expected": {
+        "Increase in operating net working capital": "-25000",
+        "Operating cash flow under entered assumptions": "175000"
+      }
+    },
+    {
+      "id": "operating-cash-flow",
+      "mode": "nwc",
+      "title": "A net loss can coexist with a further operating cash outflow",
+      "values": {
+        "net_income": -20000,
+        "noncash": 30000,
+        "nwc_change": 20000
+      },
+      "expected": {
+        "Increase in operating net working capital": "20000",
+        "Operating cash flow under entered assumptions": "-10000"
+      }
+    }
+  ]
+}

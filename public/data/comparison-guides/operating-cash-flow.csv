@@ -1,0 +1,6 @@
+Case,Mode,Input assumptions,Result label,Expected value
+"Reconcile $120,000 net income to $130,000 operating cash flow",indirect,"Same period: net income $120,000; adjustments $30,000; operating asset increases $15,000 receivables, $10,000 inventory and $5,000 other; operating liability increases $8,000 payables and $2,000 other.",Operating cash flow under entered assumptions,130000.0
+"Replace the component changes with one $20,000 operating NWC increase",nwc,"Same period: net income $120,000; signed adjustments $30,000; already reconciled operating NWC increase $20,000.",Operating cash flow under entered assumptions,130000.0
+"Cross-check $600,000 receipts against $470,000 operating payments",direct,"Same illustrative period: receipts $600,000; supplier payments $300,000; employees $100,000; income tax $30,000; interest $10,000; other operating payments $30,000.",Operating cash flow under entered assumptions,130000.0
+"A $30,000 receivables decrease releases cash in the bridge",indirect,"Keep the first case unchanged except receivables fall by $30,000; enter that change as −30000.",Operating cash flow under entered assumptions,175000.0
+A net loss can coexist with a further operating cash outflow,nwc,"Net loss $20,000; positive noncash adjustments $30,000; operating NWC increase $20,000.",Operating cash flow under entered assumptions,-10000.0

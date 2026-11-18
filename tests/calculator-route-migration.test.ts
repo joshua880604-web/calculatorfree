@@ -7,8 +7,8 @@ import {calculators,routeFor} from '../src/lib/calculators';
 import {calculatorSchema,sitemapEntries} from '../src/lib/seo';
 import {readFavorites} from '../src/lib/favorites';
 const config={origin:'https://www.calculatorfree.io',indexable:true};
-test('Six migrations normalize historical links directly without changing query or fragment bytes',()=>{
- assert.equal(Object.keys(aliases).length,6);
+test('Historical routes and calculator synonyms normalize without changing query or fragment bytes',()=>{
+ assert.equal(Object.keys(aliases).length,8);
  const suffix='?mode=payment&label=A%26B&amount=100#calc=share_version=1&mode=payment&principal=6000';
  const rules=new Map(fs.readFileSync('public/_redirects','utf8').split(/\r?\n/).filter(l=>l.trim()&&!l.startsWith('#')).map(l=>{const[a,b]=l.split(/\s+/);return[a,b];}));
  for(const[from,to]of Object.entries(aliases)){

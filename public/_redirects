@@ -160,3 +160,12 @@
 
 /inventory-turnover-calculator.html /inventory-turnover-calculator 301
 /sba-loan-calculator.html /sba-loan-calculator 301
+
+# Financial rate, partial-rent and operating-cash-flow tools.
+/basis-point-calculator.html /basis-point-calculator 301
+/prorated-rent-calculator.html /prorated-rent-calculator 301
+/operating-cash-flow-calculator.html /operating-cash-flow-calculator 301
+/bps-calculator /basis-point-calculator 301
+/bps-calculator.html /basis-point-calculator 301
+/prorate-rent-calculator /prorated-rent-calculator 301
+/prorate-rent-calculator.html /prorated-rent-calculator 301

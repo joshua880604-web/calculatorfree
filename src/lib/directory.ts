@@ -10,6 +10,10 @@ export function directoryGroup(id:string,_category?:string){
  return group.id;
 }
 const toolAliases:Record<string,string[]>={
+"basis-point":["basis point calculator", "bps calculator", "basis points to percent", "percentage points to basis points"],
+"prorated-rent":["prorated rent calculator", "prorate rent calculator", "partial month rent calculator", "daily rent calculator"],
+"operating-cash-flow":["operating cash flow calculator", "OCF calculator", "cash flow from operations calculator", "indirect cash flow calculator"],
+
 "stock-split":["stock split calculator", "reverse stock split calculator", "sequential stock splits", "split adjusted average cost"],
 "customer-acquisition-cost":["customer acquisition cost calculator", "CAC calculator", "cost per new customer", "itemized acquisition costs"],
 "dividend-discount-model":["dividend discount model calculator", "Gordon growth model calculator", "dividend discount calculator", "two stage DDM"],
