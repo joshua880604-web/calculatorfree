@@ -5157,9 +5157,9 @@
       "Lean financial independence"
     ],
     "definition": "Lean FIRE describes financial independence built around a lower-spending lifestyle; it has no universal income or wealth cutoff.",
-    "explanation": "Start with the costs the portfolio must fund, including healthcare, recurring irregular expenses and an entered tax allowance. The calculator adds a buffer to the entire budget before sizing the full FIRE target. Avoid counting the same cost in more than one category. This is a full financial-independence target, unlike a discounted Coast FIRE threshold today.",
+    "explanation": "The label describes a spending plan rather than a separate investment formula. A lower recurring budget reduces the portfolio amount produced by the sizing equation, but leaves less room for costs that cannot easily be postponed. Housing, healthcare, replacement purchases and an allowance for taxes still belong in the chosen budget. Distinguish expenses you can reduce from those you must meet; calling a plan lean does not make every cost flexible. The example below isolates target sizing in today’s purchasing power.",
     "formula": "FIRE target = annual portfolio-funded budget / withdrawal assumption",
-    "formulaNote": "Use the rate as a decimal. Default rates are illustrative; a target does not establish that later withdrawals are sustainable.",
+    "formulaNote": "Divide the annual amount assigned to the portfolio by the withdrawal assumption in decimal form. The smaller budget is an entered lifestyle assumption; this equation does not test lifetime withdrawals.",
     "example": {
       "title": "$30,000 annual spending at an illustrative 4% rate",
       "intro": "Assume today’s USD, no additional spending buffer and no separate benefits.",
@@ -5172,8 +5172,8 @@
       "assumptions": "Target sizing only. No market path, withdrawal simulation, benefit timing or automatic tax calculation."
     },
     "pitfall": {
-      "title": "A lifestyle label is not a safety test",
-      "text": "A smaller or larger budget changes the target, but does not determine market risk, account access or whether the spending plan is feasible. Review the withdrawal assumption and later spending separately."
+      "title": "A low target can come from an incomplete budget",
+      "text": "Leaving out medical costs, irregular replacements or other necessary spending lowers the arithmetic target without removing the obligation. Check budget coverage separately from choosing a Lean FIRE label."
     },
     "tools": [
       {
@@ -5220,9 +5220,9 @@
       "Higher-spending financial independence"
     ],
     "definition": "Fat FIRE describes financial independence built around a higher-spending lifestyle; it has no universal portfolio threshold.",
-    "explanation": "Start with the costs the portfolio must fund, including healthcare, recurring irregular expenses and an entered tax allowance. The calculator adds a buffer to the entire budget before sizing the full FIRE target. Avoid counting the same cost in more than one category. This is a full financial-independence target, unlike a discounted Coast FIRE threshold today.",
+    "explanation": "Fat FIRE describes a plan with a larger spending allowance, often including discretionary items beyond essential recurring costs. The target still comes from the amount assigned to the portfolio, not from a special return formula. Separating essential commitments from optional travel, gifts or other planned extras makes the spending assumptions easier to inspect. A larger total can increase the modeled target without demonstrating how flexible the actual budget is. The illustration below assigns the entire stated budget to the portfolio in today’s purchasing power.",
     "formula": "FIRE target = annual portfolio-funded budget / withdrawal assumption",
-    "formulaNote": "Use the rate as a decimal. Default rates are illustrative; a target does not establish that later withdrawals are sustainable.",
+    "formulaNote": "The numerator is the annual spending assigned to investments, including any entered allowances. Higher spending increases the target at the same withdrawal assumption. The equation does not select a suitable rate or predict future wealth.",
     "example": {
       "title": "$120,000 annual spending at an illustrative 4% rate",
       "intro": "Assume today’s USD, no additional spending buffer and no separate benefits.",
@@ -5235,8 +5235,8 @@
       "assumptions": "Target sizing only. No market path, withdrawal simulation, benefit timing or automatic tax calculation."
     },
     "pitfall": {
-      "title": "A lifestyle label is not a safety test",
-      "text": "A smaller or larger budget changes the target, but does not determine market risk, account access or whether the spending plan is feasible. Review the withdrawal assumption and later spending separately."
+      "title": "A larger portfolio is not the same as a tested spending plan",
+      "text": "A high lifestyle budget and a large sizing target do not establish sustainable withdrawals. Account access, timing, taxes and future changes in essential or discretionary spending still need their own analysis."
     },
     "tools": [
       {
