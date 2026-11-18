@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-18",
+  "status": "local verification passed; remote preview pending; production unchanged",
+  "branch": "preview/cash-cobra-20261118",
+  "baseCommit": "f3bf037fe1e98db852043617ff051b8231c89f1f",
+  "productionCommit": "f3bf037fe1e98db852043617ff051b8231c89f1f",
+  "newCalculators": [
+    "cash-advance-fee",
+    "cobra-cost"
+  ],
+  "newModes": 3,
+  "publicExamples": 8,
+  "comparisonGuides": 2,
+  "glossaryTerms": 2,
+  "referenceCases": 16,
+  "independentMetricChecks": 89,
+  "testsPassed": 2911,
+  "productionConfiguredBuildPassed": true,
+  "browserChecks": 58,
+  "downloads": 4,
+  "viewportWidths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "noJavaScriptPages": 6,
+  "canonicalPages": 469,
+  "brokenLinks": 0,
+  "brokenFragments": 0,
+  "orphanPages": 0,
+  "existingModelInputsAndDefaultsPreserved": true,
+  "totalFunctionalCalculators": 168,
+  "totalFunctionalModes": 354,
+  "limitations": [
+    "Original arithmetic models, not competitor interface replicas or issuer/insurance quotations.",
+    "COBRA eligibility, actual duration, disability-extension pricing and state continuation are excluded.",
+    "Cash-advance statement-cycle capitalization, intervening payments and MCA are excluded.",
+    "Native Safari and remote HTTP body/Google indexing are not verified."
+  ]
+}

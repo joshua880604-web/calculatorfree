@@ -118,3 +118,7 @@ Verification complete for the three-tool batch: 2,843 tests, production-config s
 
 ### 2026-11-18 — SGR and reviewed internal links
 Added one original SGR calculator (3 modes), guide and term. Restored 15 curated links, added 35 explained guide/tool links and removed 27 weak associations. All 366 retained pairs reciprocal. 2,872 tests and 463-page static audit passed; 165 old tools /348 mode defaults unchanged. See sgr-internal-links-20261118.md. Combined four-tool preview pending deployment; production unchanged.
+
+## Cash advance and COBRA — 2026-11-18
+
+User continued the agreed two-tool priority. Keep one page for credit-card cash-advance fee/interest variants; exclude MCA and statutory APR claims. COBRA uses the ordinary federal premium basis, explicit subsidy and user-selected arithmetic months; no eligibility, disability extension or state-rule inference. Preserve existing calculations and publication settings. Preview first; await publication instruction.

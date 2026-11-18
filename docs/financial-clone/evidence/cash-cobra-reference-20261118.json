@@ -1,0 +1,354 @@
+{
+  "method": "Independent Python Decimal arithmetic at 70-digit precision; inputs and exact expected strings, no call into the TypeScript engine.",
+  "fixtures": [
+    {
+      "key": "cash-base",
+      "id": "cash-advance-fee",
+      "mode": "cost",
+      "values": {
+        "amount": "1000",
+        "fee_rate": "5",
+        "minimum_fee": "10",
+        "atm_fee": "3",
+        "apr": "30",
+        "days": "30",
+        "day_basis": "365",
+        "interest_method": "Simple daily",
+        "fee_treatment": "Pay upfront"
+      },
+      "expected": {
+        "Total modeled cost": "77.65753424657534246575342465753424657534246575342465753424657534246575",
+        "Estimated interest": "24.65753424657534246575342465753424657534246575342465753424657534246575",
+        "Total fees": "53",
+        "Total cash needed including repayment": "1077.657534246575342465753424657534246575342465753424657534246575342466",
+        "Ending card balance before repayment": "1024.657534246575342465753424657534246575342465753424657534246575342466",
+        "Interest-bearing starting balance": "1000"
+      }
+    },
+    {
+      "key": "cash-financed",
+      "id": "cash-advance-fee",
+      "mode": "cost",
+      "values": {
+        "amount": "1000",
+        "fee_rate": "5",
+        "minimum_fee": "10",
+        "atm_fee": "3",
+        "apr": "30",
+        "days": "30",
+        "day_basis": "365",
+        "interest_method": "Simple daily",
+        "fee_treatment": "Finance fees"
+      },
+      "expected": {
+        "Total modeled cost": "78.96438356164383561643835616438356164383561643835616438356164383561644",
+        "Estimated interest": "25.96438356164383561643835616438356164383561643835616438356164383561644",
+        "Total fees": "53",
+        "Total cash needed including repayment": "1078.964383561643835616438356164383561643835616438356164383561643835616",
+        "Ending card balance before repayment": "1078.964383561643835616438356164383561643835616438356164383561643835616",
+        "Interest-bearing starting balance": "1053"
+      }
+    },
+    {
+      "key": "cash-compound",
+      "id": "cash-advance-fee",
+      "mode": "cost",
+      "values": {
+        "amount": "1000",
+        "fee_rate": "5",
+        "minimum_fee": "10",
+        "atm_fee": "3",
+        "apr": "30",
+        "days": "30",
+        "day_basis": "365",
+        "interest_method": "Daily compound",
+        "fee_treatment": "Pay upfront"
+      },
+      "expected": {
+        "Total modeled cost": "77.95366486860911464039513286115788542253322476023052420292045815286700",
+        "Estimated interest": "24.95366486860911464039513286115788542253322476023052420292045815286700",
+        "Total fees": "53",
+        "Total cash needed including repayment": "1077.953664868609114640395132861157885422533224760230524202920458152867",
+        "Ending card balance before repayment": "1024.953664868609114640395132861157885422533224760230524202920458152867",
+        "Interest-bearing starting balance": "1000"
+      }
+    },
+    {
+      "key": "cash-zero-day",
+      "id": "cash-advance-fee",
+      "mode": "cost",
+      "values": {
+        "amount": "1000",
+        "fee_rate": "5",
+        "minimum_fee": "10",
+        "atm_fee": "3",
+        "apr": "30",
+        "days": "0",
+        "day_basis": "365",
+        "interest_method": "Simple daily",
+        "fee_treatment": "Pay upfront"
+      },
+      "expected": {
+        "Total modeled cost": "53.00000000000000000000000000000000000000000000000000000000000000000000",
+        "Estimated interest": "0E-70",
+        "Total fees": "53",
+        "Total cash needed including repayment": "1053.000000000000000000000000000000000000000000000000000000000000000000",
+        "Ending card balance before repayment": "1000.000000000000000000000000000000000000000000000000000000000000000000",
+        "Interest-bearing starting balance": "1000"
+      }
+    },
+    {
+      "key": "cash-minimum",
+      "id": "cash-advance-fee",
+      "mode": "cost",
+      "values": {
+        "amount": "50",
+        "fee_rate": "1",
+        "minimum_fee": "10",
+        "atm_fee": "0",
+        "apr": "30",
+        "days": "30",
+        "day_basis": "365",
+        "interest_method": "Simple daily",
+        "fee_treatment": "Pay upfront"
+      },
+      "expected": {
+        "Total modeled cost": "11.23287671232876712328767123287671232876712328767123287671232876712329",
+        "Estimated interest": "1.232876712328767123287671232876712328767123287671232876712328767123288",
+        "Total fees": "10",
+        "Total cash needed including repayment": "61.23287671232876712328767123287671232876712328767123287671232876712329",
+        "Ending card balance before repayment": "51.23287671232876712328767123287671232876712328767123287671232876712329",
+        "Interest-bearing starting balance": "50"
+      }
+    },
+    {
+      "key": "cash-360",
+      "id": "cash-advance-fee",
+      "mode": "cost",
+      "values": {
+        "amount": "1000",
+        "fee_rate": "5",
+        "minimum_fee": "10",
+        "atm_fee": "3",
+        "apr": "30",
+        "days": "30",
+        "day_basis": "360",
+        "interest_method": "Simple daily",
+        "fee_treatment": "Pay upfront"
+      },
+      "expected": {
+        "Total modeled cost": "78.00000000000000000000000000000000000000000000000000000000000000000000",
+        "Estimated interest": "25.00000000000000000000000000000000000000000000000000000000000000000000",
+        "Total fees": "53",
+        "Total cash needed including repayment": "1078.000000000000000000000000000000000000000000000000000000000000000000",
+        "Ending card balance before repayment": "1025.000000000000000000000000000000000000000000000000000000000000000000",
+        "Interest-bearing starting balance": "1000"
+      }
+    },
+    {
+      "key": "cash-zero-apr",
+      "id": "cash-advance-fee",
+      "mode": "cost",
+      "values": {
+        "amount": "1000",
+        "fee_rate": "5",
+        "minimum_fee": "10",
+        "atm_fee": "3",
+        "apr": "0",
+        "days": "3650",
+        "day_basis": "365",
+        "interest_method": "Simple daily",
+        "fee_treatment": "Pay upfront"
+      },
+      "expected": {
+        "Total modeled cost": "53",
+        "Estimated interest": "0",
+        "Total fees": "53",
+        "Total cash needed including repayment": "1053",
+        "Ending card balance before repayment": "1000",
+        "Interest-bearing starting balance": "1000"
+      }
+    },
+    {
+      "key": "cash-free",
+      "id": "cash-advance-fee",
+      "mode": "cost",
+      "values": {
+        "amount": "1000",
+        "fee_rate": "0",
+        "minimum_fee": "0",
+        "atm_fee": "0",
+        "apr": "0",
+        "days": "30",
+        "day_basis": "365",
+        "interest_method": "Simple daily",
+        "fee_treatment": "Pay upfront"
+      },
+      "expected": {
+        "Total modeled cost": "0",
+        "Estimated interest": "0",
+        "Total fees": "0",
+        "Total cash needed including repayment": "1000",
+        "Ending card balance before repayment": "1000",
+        "Interest-bearing starting balance": "1000"
+      }
+    },
+    {
+      "key": "cash-financed-compound",
+      "id": "cash-advance-fee",
+      "mode": "cost",
+      "values": {
+        "amount": "1234.56",
+        "fee_rate": "2.5",
+        "minimum_fee": "7",
+        "atm_fee": "2.75",
+        "apr": "29.99",
+        "days": "91",
+        "day_basis": "365",
+        "interest_method": "Daily compound",
+        "fee_treatment": "Finance fees"
+      },
+      "expected": {
+        "Total modeled cost": "132.0277772953555263385178491456783564641242262894102891681300165806915",
+        "Estimated interest": "98.41377729535552633851784914567835646412422628941028916813001658069148",
+        "Total fees": "33.614",
+        "Total cash needed including repayment": "1366.587777295355526338517849145678356464124226289410289168130016580691",
+        "Ending card balance before repayment": "1366.587777295355526338517849145678356464124226289410289168130016580691",
+        "Interest-bearing starting balance": "1268.174"
+      }
+    },
+    {
+      "key": "cobra-shares",
+      "id": "cobra-cost",
+      "mode": "contributions",
+      "values": {
+        "employee_share": "200",
+        "employer_share": "600",
+        "admin_rate": "2",
+        "monthly_subsidy": "0",
+        "months": "6"
+      },
+      "expected": {
+        "Estimated monthly amount you pay": "816",
+        "Estimated cost for selected months": "4896",
+        "Monthly change from previous employee payment": "616",
+        "Total monthly plan premium": "800",
+        "Monthly administrative charge": "16"
+      }
+    },
+    {
+      "key": "cobra-premium",
+      "id": "cobra-cost",
+      "mode": "premium",
+      "values": {
+        "total_premium": "800",
+        "previous_payment": "200",
+        "admin_rate": "2",
+        "monthly_subsidy": "0",
+        "months": "6"
+      },
+      "expected": {
+        "Estimated monthly amount you pay": "816",
+        "Estimated cost for selected months": "4896",
+        "Monthly change from previous employee payment": "616",
+        "Total monthly plan premium": "800",
+        "Monthly administrative charge": "16"
+      }
+    },
+    {
+      "key": "cobra-subsidy",
+      "id": "cobra-cost",
+      "mode": "contributions",
+      "values": {
+        "employee_share": "200",
+        "employer_share": "600",
+        "admin_rate": "2",
+        "monthly_subsidy": "300",
+        "months": "6"
+      },
+      "expected": {
+        "Estimated monthly amount you pay": "516",
+        "Estimated cost for selected months": "3096",
+        "Monthly change from previous employee payment": "316",
+        "Total monthly plan premium": "800",
+        "Monthly administrative charge": "16"
+      }
+    },
+    {
+      "key": "cobra-no-admin",
+      "id": "cobra-cost",
+      "mode": "premium",
+      "values": {
+        "total_premium": "800",
+        "previous_payment": "200",
+        "admin_rate": "0",
+        "monthly_subsidy": "0",
+        "months": "1"
+      },
+      "expected": {
+        "Estimated monthly amount you pay": "800",
+        "Estimated cost for selected months": "800",
+        "Monthly change from previous employee payment": "600",
+        "Total monthly plan premium": "800",
+        "Monthly administrative charge": "0"
+      }
+    },
+    {
+      "key": "cobra-full-subsidy",
+      "id": "cobra-cost",
+      "mode": "premium",
+      "values": {
+        "total_premium": "800",
+        "previous_payment": "200",
+        "admin_rate": "2",
+        "monthly_subsidy": "816",
+        "months": "36"
+      },
+      "expected": {
+        "Estimated monthly amount you pay": "0",
+        "Estimated cost for selected months": "0",
+        "Monthly change from previous employee payment": "-200",
+        "Total monthly plan premium": "800",
+        "Monthly administrative charge": "16"
+      }
+    },
+    {
+      "key": "cobra-negative-change",
+      "id": "cobra-cost",
+      "mode": "premium",
+      "values": {
+        "total_premium": "800",
+        "previous_payment": "200",
+        "admin_rate": "2",
+        "monthly_subsidy": "700",
+        "months": "6"
+      },
+      "expected": {
+        "Estimated monthly amount you pay": "116",
+        "Estimated cost for selected months": "696",
+        "Monthly change from previous employee payment": "-84",
+        "Total monthly plan premium": "800",
+        "Monthly administrative charge": "16"
+      }
+    },
+    {
+      "key": "cobra-decimals",
+      "id": "cobra-cost",
+      "mode": "contributions",
+      "values": {
+        "employee_share": "123.45",
+        "employer_share": "678.91",
+        "admin_rate": "1.25",
+        "monthly_subsidy": "77.77",
+        "months": "7"
+      },
+      "expected": {
+        "Estimated monthly amount you pay": "734.6195",
+        "Estimated cost for selected months": "5142.3365",
+        "Monthly change from previous employee payment": "611.1695",
+        "Total monthly plan premium": "802.36",
+        "Monthly administrative charge": "10.0295"
+      }
+    }
+  ]
+}

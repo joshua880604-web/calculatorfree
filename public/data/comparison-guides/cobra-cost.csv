@@ -1,0 +1,5 @@
+Scenario,Mode,Input assumptions,Metric,Expected value
+Combine employee and employer contributions,contributions,employee_share: 200; employer_share: 600; admin_rate: 2; monthly_subsidy: 0; months: 6,Estimated monthly amount you pay,816.0
+Use an already-known full plan premium,premium,total_premium: 800; previous_payment: 200; admin_rate: 2; monthly_subsidy: 0; months: 6,Estimated monthly amount you pay,816.0
+Model an entered monthly employer subsidy,contributions,employee_share: 200; employer_share: 600; admin_rate: 2; monthly_subsidy: 300; months: 6,Estimated monthly amount you pay,516.0
+Model a plan with no administrative charge,premium,total_premium: 800; previous_payment: 200; admin_rate: 0; monthly_subsidy: 0; months: 1,Estimated monthly amount you pay,800.0

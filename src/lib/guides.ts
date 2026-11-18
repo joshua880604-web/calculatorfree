@@ -1,3 +1,4 @@
+import cashCobraContent from './cash-cobra-content.json';
 import sgrContent from './sgr-content.json';
 import ratioPropertyThreeContent from './ratio-property-three-content.json';
 import specialistFourContent from './specialist-four-content.json';
@@ -1071,3 +1072,9 @@ for(const [id,links] of Object.entries(ratioPropertyThreeRelated)){
 Object.assign(guides,sgrContent as unknown as Record<string,Guide>);
 relatedCalculatorIds["sustainable-growth-rate"]=["return-on-equity", "debt-to-equity-ratio", "dividend-discount-model", "operating-cash-flow"];
 for(const id of relatedCalculatorIds["sustainable-growth-rate"])relatedCalculatorIds[id]=[...new Set(["sustainable-growth-rate",...(relatedCalculatorIds[id]??[])])];
+
+Object.assign(guides,cashCobraContent as unknown as Record<string,Guide>);
+relatedCalculatorIds["cash-advance-fee"]=["credit-card", "credit-card-minimum-payment", "balance-transfer"];
+for(const id of relatedCalculatorIds["cash-advance-fee"])relatedCalculatorIds[id]=[...new Set(["cash-advance-fee",...(relatedCalculatorIds[id]??[])])];
+relatedCalculatorIds["cobra-cost"]=["emergency-fund", "budget", "savings"];
+for(const id of relatedCalculatorIds["cobra-cost"])relatedCalculatorIds[id]=[...new Set(["cobra-cost",...(relatedCalculatorIds[id]??[])])];

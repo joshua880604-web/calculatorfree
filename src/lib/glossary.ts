@@ -1,3 +1,4 @@
+import cashCobraTerms from './cash-cobra-glossary.json';
 import sgrTerms from './sgr-glossary.json';
 import ratioPropertyThreeTerms from './ratio-property-three-glossary.json';
 import specialistFourTerms from './specialist-four-glossary.json';
@@ -30,7 +31,7 @@ export type GlossaryTerm = {
 };
 export const glossaryCategories=['Saving & investing','Retirement','Loans & debt','Housing & property','Tax & income','Business & pricing','Everyday money'];
 export const glossaryPath='/glossary/';
-export const glossaryTerms=[...data,...companionTerms,...businessTerms,...financeFiveTerms,...financeNextFiveTerms,...financeSixTerms,...marketsSixTerms,...financeThreeTerms,...specialistFourTerms,...ratioPropertyThreeTerms,...sgrTerms] as GlossaryTerm[];
+export const glossaryTerms=[...data,...companionTerms,...businessTerms,...financeFiveTerms,...financeNextFiveTerms,...financeSixTerms,...marketsSixTerms,...financeThreeTerms,...specialistFourTerms,...ratioPropertyThreeTerms,...sgrTerms,...cashCobraTerms] as GlossaryTerm[];
 const newToolGlossaryLinks:Record<string,{id:string;text:string}[]>={
  'certificate-of-deposit':[{id:'cd-ladder',text:'Build staggered maturities and compare reinvestment with retained cash.'}],
  'net-present-value':[{id:'npv',text:'Discount periodic or actual-date signed cash flows, including the time-zero investment.'}],
@@ -74,3 +75,5 @@ export function glossarySchema(term?:GlossaryTerm,config:SiteConfig=siteConfig()
 expandedGlossarySlugs.push(...ratioPropertyThreeTerms.map(term=>term.slug));
 
 expandedGlossarySlugs.push(...sgrTerms.map(term=>term.slug));
+
+expandedGlossarySlugs.push(...cashCobraTerms.map(t=>t.slug));

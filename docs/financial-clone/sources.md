@@ -96,3 +96,7 @@ This change uses the authorized classification proposal and the existing source 
 ### 2026-11-18 — SGR and reviewed internal links
 - https://www.wallstreetprep.com/knowledge/sustainable-growth-rate/ — The annual ROE × retention approximation, average-equity ROE convention, and distinction between SGR at stable capital structure and internal growth without external funding. Concept background. Our fixed assumptions and original arithmetic are not a company forecast, credit approval, source endorsement or professional review.
 - https://corporatefinanceinstitute.com/resources/valuation/sustainable-growth-rate/ — The retention = (net income − dividends) / net income relation and the commonly used ROE × retention formula. Concept background only. Equity-denominator conventions must be reconciled; no source certifies our implementation or the future sustainability of a company’s growth.
+
+## Cash advance and COBRA — 2026-11-18
+
+CFPB grace-period guidance and CMS federal COBRA facts were read as concept/rule references. Source roles and exclusions are recorded per tool/guide/term in src/lib/source-use-notes.json. They do not validate individual agreements or certify the original implementation.

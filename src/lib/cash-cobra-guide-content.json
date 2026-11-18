@@ -1,0 +1,339 @@
+{
+  "cash-advance-fee": {
+    "meta": {
+      "path": "/guides/cash-advance-fees-vs-interest/",
+      "title": "Cash Advance Fees vs. Interest: Compare Repayment Dates",
+      "heading": "Cash Advance Fees vs. Interest: Compare Repayment Dates",
+      "description": "A cash advance costs more than its upfront fee. In the example, $1,000 with a 5% fee, $3 ATM fee and 30 days of simple interest at 30% APR costs about $77.",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "cash-advance-fee",
+        "credit-card",
+        "credit-card-minimum-payment",
+        "balance-transfer"
+      ],
+      "topic": "Credit-card borrowing",
+      "breadcrumb": "Cash Advance Fees vs. Interest",
+      "cardIntro": "A cash advance costs more than its upfront fee. In the example, $1,000 with a 5% fee, $3 ATM fee and 30 days of simple interest at 30% APR costs about $77.66 when fees are paid separately. Change the fee treatment and interest convention to match your agreement.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "A cash advance costs more than its upfront fee. In the example, $1,000 with a 5% fee, $3 ATM fee and 30 days of simple interest at 30% APR costs about $77.66 when fees are paid separately. Change the fee treatment and interest convention to match your agreement.",
+    "answer": "A cash advance costs more than its upfront fee. In the example, $1,000 with a 5% fee, $3 ATM fee and 30 days of simple interest at 30% APR costs about $77.66 when fees are paid separately. Change the fee treatment and interest convention to match your agreement.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original scenarios checked against independent 70-digit Python Decimal calculations. This verifies arithmetic for the stated assumptions, not a card agreement, COBRA eligibility or external professional review.",
+    "sections": [
+      {
+        "id": "fee",
+        "title": "How does a $53 fee become a $77.66 cost?",
+        "paragraphs": [
+          "The fee is max($1,000 × 5%, $10) + $3 = $53.",
+          "Simple interest on $1,000 for 30 days at 30% / 365 is about $24.66.",
+          "Cost is about $77.66; principal plus cost is about $1,077.66."
+        ],
+        "formula": "Fee = max(amount × fee rate, minimum) + ATM; simple interest = selected balance × APR / day basis × days."
+      },
+      {
+        "id": "treatment",
+        "title": "What changes when the fees are financed?",
+        "paragraphs": [
+          "With all $53 of fees financed, the starting balance is $1,053. The same 30-day simple-interest assumption gives about $25.96 in interest and $78.96 in cost. The fees are counted once in that cost, not once at withdrawal and again in repayment.",
+          "Fee-specific agreements can differ. The worksheet applies the selected treatment to both fees; it does not infer an issuer’s rules."
+        ]
+      },
+      {
+        "id": "timing",
+        "title": "What does paying earlier change?",
+        "paragraphs": [
+          "At 7, 14 and 30 days with separately paid fees, the $53 upfront charge is unchanged. Only the interest varies in this comparison. The table assumes no partial payments.",
+          "Interest usually starts at the cash advance transaction date. Check the actual posting and accrual rules; selecting zero days is a mathematical fee-only boundary."
+        ]
+      },
+      {
+        "id": "apr",
+        "title": "Why is simple annualized cost different from APR?",
+        "paragraphs": [
+          "Dividing cost by cash received and scaling by days per year is only a simple annualized comparison. It does not solve the yield of a dated cash-flow stream or establish a legally disclosed APR.",
+          "Daily compound is an explicitly selectable approximation. A statement-based or monthly-capitalization process can produce a different bill. There are no lender-specific rates or approved financing alternatives supplied by this tool."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does the minimum fee replace the percentage fee?",
+        "answer": "The advance fee is the larger of the entered percentage charge and minimum fee, then the additional ATM fee is added once."
+      },
+      {
+        "question": "Do the fees themselves accrue interest?",
+        "answer": "That depends on the agreement. Choose separately paid fees or add both entered fees to the interest-bearing starting balance. Different fee-specific treatment requires a separate calculation."
+      },
+      {
+        "question": "Is the annualized cost an APR quote?",
+        "answer": "No. It is a simple annualization of the modeled cost relative to cash received. It is not a statutory APR, IRR or effective annual yield, and zero days gives no annualized value."
+      },
+      {
+        "question": "Is the table a minimum-payment schedule?",
+        "answer": "No. Each row assumes one full repayment on that day and no earlier payment. Use a payoff tool separately for installment budgeting; its rate and balance assumptions must match."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: Credit-card grace periods",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+        "usedFor": "Cash advances generally start accruing interest at the transaction date.",
+        "scope": "Background only; card-specific fees, interest-bearing balances and compounding must come from the user agreement. No source endorses this calculator."
+      }
+    ],
+    "related": [
+      {
+        "href": "/cash-advance-fee-calculator",
+        "label": "Open the calculator"
+      },
+      {
+        "href": "/single-credit-card-payoff-calculator",
+        "label": "Credit Card Payoff Calculator"
+      },
+      {
+        "href": "/credit-card-minimum-payment-calculator",
+        "label": "Credit Card Minimum Payment Calculator"
+      },
+      {
+        "href": "/balance-transfer-calculator",
+        "label": "Balance Transfer Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Pay fees separately and repay after 30 days",
+        "path": "/cash-advance-fee-calculator",
+        "mode": "cost",
+        "values": {
+          "amount": "1000",
+          "fee_rate": "5",
+          "minimum_fee": "10",
+          "atm_fee": "3",
+          "apr": "30",
+          "days": "30",
+          "day_basis": "365",
+          "interest_method": "Simple daily",
+          "fee_treatment": "Pay upfront"
+        },
+        "featured": true
+      },
+      {
+        "label": "Finance fees on the same advance",
+        "path": "/cash-advance-fee-calculator",
+        "mode": "cost",
+        "values": {
+          "amount": "1000",
+          "fee_rate": "5",
+          "minimum_fee": "10",
+          "atm_fee": "3",
+          "apr": "30",
+          "days": "30",
+          "day_basis": "365",
+          "interest_method": "Simple daily",
+          "fee_treatment": "Finance fees"
+        },
+        "featured": false
+      },
+      {
+        "label": "Compare daily compounding with simple interest",
+        "path": "/cash-advance-fee-calculator",
+        "mode": "cost",
+        "values": {
+          "amount": "1000",
+          "fee_rate": "5",
+          "minimum_fee": "10",
+          "atm_fee": "3",
+          "apr": "30",
+          "days": "30",
+          "day_basis": "365",
+          "interest_method": "Daily compound",
+          "fee_treatment": "Pay upfront"
+        },
+        "featured": false
+      },
+      {
+        "label": "Zero days isolates the upfront fees",
+        "path": "/cash-advance-fee-calculator",
+        "mode": "cost",
+        "values": {
+          "amount": "1000",
+          "fee_rate": "5",
+          "minimum_fee": "10",
+          "atm_fee": "3",
+          "apr": "30",
+          "days": "0",
+          "day_basis": "365",
+          "interest_method": "Simple daily",
+          "fee_treatment": "Pay upfront"
+        },
+        "featured": false
+      }
+    ],
+    "limitations": [
+      "One USD credit-card cash advance with a single full repayment, selected daily simple or compounded interest, explicit day basis and fee treatment. No intervening payments, statement-cycle capitalization, purchase balances, issuer quote, statutory APR or merchant cash advance."
+    ]
+  },
+  "cobra-cost": {
+    "meta": {
+      "path": "/guides/cobra-premium-vs-payroll-deduction/",
+      "title": "COBRA Premium vs. Payroll Deduction: What Changes?",
+      "heading": "COBRA Premium vs. Payroll Deduction: What Changes?",
+      "description": "COBRA premium planning starts with the full plan cost, including the employer contribution. With $200 from the employee, $600 from the employer and a selec",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "cobra-cost",
+        "emergency-fund",
+        "budget",
+        "savings"
+      ],
+      "topic": "Health coverage budgeting",
+      "breadcrumb": "COBRA Premium vs. Payroll Deduction",
+      "cardIntro": "COBRA premium planning starts with the full plan cost, including the employer contribution. With $200 from the employee, $600 from the employer and a selected 2% administrative charge, the monthly amount is $816 before any entered subsidy. This worksheet estimates premiums, not eligibility or total medical spending.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "COBRA premium planning starts with the full plan cost, including the employer contribution. With $200 from the employee, $600 from the employer and a selected 2% administrative charge, the monthly amount is $816 before any entered subsidy. This worksheet estimates premiums, not eligibility or total medical spending.",
+    "answer": "COBRA premium planning starts with the full plan cost, including the employer contribution. With $200 from the employee, $600 from the employer and a selected 2% administrative charge, the monthly amount is $816 before any entered subsidy. This worksheet estimates premiums, not eligibility or total medical spending.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original scenarios checked against independent 70-digit Python Decimal calculations. This verifies arithmetic for the stated assumptions, not a card agreement, COBRA eligibility or external professional review.",
+    "sections": [
+      {
+        "id": "full-premium",
+        "title": "Why can an $200 payroll amount become an $816 premium?",
+        "paragraphs": [
+          "Full monthly plan cost is $200 + $600 = $800.",
+          "The selected 2% administrative charge adds $16.",
+          "Monthly amount is $816, or $4,896 over six selected months."
+        ],
+        "formula": "Full premium = employee share + employer share. Modeled monthly payment = full premium × (1 + administrative rate) − entered subsidy."
+      },
+      {
+        "id": "known",
+        "title": "What if I already know the full plan cost?",
+        "paragraphs": [
+          "Use Known Full Plan Premium mode and enter $800 directly. The previous $200 employee payment is only a comparison baseline and is not added to the premium again.",
+          "Use the same coverage tier and monthly frequency. Family coverage and employee-only coverage are not interchangeable inputs."
+        ]
+      },
+      {
+        "id": "subsidy",
+        "title": "How should temporary employer assistance be modeled?",
+        "paragraphs": [
+          "An entered $300 subsidy reduces the $816 payment to $516. Over six months at the unchanged subsidy, payments total $3,096.",
+          "If support ends earlier, run separate periods. For three supported months and three unsupported months, the total is 3 × $516 + 3 × $816 = $3,996. No assistance program is assumed automatically."
+        ]
+      },
+      {
+        "id": "limits",
+        "title": "What does the standard 102% limit leave out?",
+        "paragraphs": [
+          "The ordinary federal rule permits a charge up to 102% of the applicable plan cost; an entered 0% administrative charge is also possible. The default 2% is illustrative and not an assertion that every plan charges it.",
+          "Certain disability-extension months can have different limits, including up to 150%. This worksheet does not model that extension, state continuation or eligibility. Selected planning months do not establish entitlement to coverage.",
+          "Compare medical deductibles, provider networks and other costs separately. This premium worksheet does not estimate ACA subsidies, after-tax effects or recommend which coverage to choose."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Do I multiply just my old payroll deduction by 1.02?",
+        "answer": "No. Start with the full plan cost for the same coverage tier, including the amount the employer used to contribute. The ordinary administrative charge can be up to 2%."
+      },
+      {
+        "question": "Does choosing 18 or 36 months mean I qualify?",
+        "answer": "No. The month input only controls arithmetic. Eligibility, election deadlines, qualifying events and permitted duration require the plan notice and applicable rules."
+      },
+      {
+        "question": "What if the subsidy ends after three months?",
+        "answer": "Run the subsidized months and remaining unsubsidized months separately, then add the two amounts. This worksheet applies one unchanged subsidy to each selected month."
+      },
+      {
+        "question": "Does this estimate include deductibles or the disability extension?",
+        "answer": "No. Medical out-of-pocket costs, state continuation and disability-extension premiums are excluded. Certain disability-extension months have different federal limits."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CMS: COBRA continuation coverage",
+        "url": "https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_fact_sheet",
+        "usedFor": "Full employee plus employer premium basis, ordinary 102% ceiling and the separate disability-extension exception.",
+        "scope": "Federal premium background only. This worksheet excludes the disability extension and does not determine individual eligibility, state continuation, tax effects or actual plan charges."
+      }
+    ],
+    "related": [
+      {
+        "href": "/cobra-cost-calculator",
+        "label": "Open the calculator"
+      },
+      {
+        "href": "/emergency-fund-calculator",
+        "label": "Emergency Fund Calculator"
+      },
+      {
+        "href": "/budget-calculator",
+        "label": "Budget Calculator"
+      },
+      {
+        "href": "/savings-calculator",
+        "label": "Savings Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Combine employee and employer contributions",
+        "path": "/cobra-cost-calculator",
+        "mode": "contributions",
+        "values": {
+          "employee_share": "200",
+          "employer_share": "600",
+          "admin_rate": "2",
+          "monthly_subsidy": "0",
+          "months": "6"
+        },
+        "featured": true
+      },
+      {
+        "label": "Use an already-known full plan premium",
+        "path": "/cobra-cost-calculator",
+        "mode": "premium",
+        "values": {
+          "total_premium": "800",
+          "previous_payment": "200",
+          "admin_rate": "2",
+          "monthly_subsidy": "0",
+          "months": "6"
+        },
+        "featured": false
+      },
+      {
+        "label": "Model an entered monthly employer subsidy",
+        "path": "/cobra-cost-calculator",
+        "mode": "contributions",
+        "values": {
+          "employee_share": "200",
+          "employer_share": "600",
+          "admin_rate": "2",
+          "monthly_subsidy": "300",
+          "months": "6"
+        },
+        "featured": false
+      },
+      {
+        "label": "Model a plan with no administrative charge",
+        "path": "/cobra-cost-calculator",
+        "mode": "premium",
+        "values": {
+          "total_premium": "800",
+          "previous_payment": "200",
+          "admin_rate": "0",
+          "monthly_subsidy": "0",
+          "months": "1"
+        },
+        "featured": false
+      }
+    ],
+    "limitations": [
+      "Ordinary federal COBRA premium-only worksheet with a 0–2% administrative charge and constant entered monthly subsidy. Matching coverage tier, no eligibility or duration determination, medical spending, state continuation or disability-extension premium model."
+    ]
+  }
+}

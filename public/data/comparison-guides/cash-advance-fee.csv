@@ -1,0 +1,5 @@
+Scenario,Mode,Input assumptions,Metric,Expected value
+Pay fees separately and repay after 30 days,cost,amount: 1000; fee_rate: 5; minimum_fee: 10; atm_fee: 3; apr: 30; days: 30; day_basis: 365; interest_method: Simple daily; fee_treatment: Pay upfront,Total modeled cost,77.65753424657534
+Finance fees on the same advance,cost,amount: 1000; fee_rate: 5; minimum_fee: 10; atm_fee: 3; apr: 30; days: 30; day_basis: 365; interest_method: Simple daily; fee_treatment: Finance fees,Total modeled cost,78.96438356164384
+Compare daily compounding with simple interest,cost,amount: 1000; fee_rate: 5; minimum_fee: 10; atm_fee: 3; apr: 30; days: 30; day_basis: 365; interest_method: Daily compound; fee_treatment: Pay upfront,Total modeled cost,77.95366486860911
+Zero days isolates the upfront fees,cost,amount: 1000; fee_rate: 5; minimum_fee: 10; atm_fee: 3; apr: 30; days: 0; day_basis: 365; interest_method: Simple daily; fee_treatment: Pay upfront,Total modeled cost,53.0

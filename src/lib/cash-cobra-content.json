@@ -1,0 +1,261 @@
+{
+  "cash-advance-fee": {
+    "checkedOn": "2026-11-18",
+    "summary": "A cash advance costs more than its upfront fee. In the example, $1,000 with a 5% fee, $3 ATM fee and 30 days of simple interest at 30% APR costs about $77.66 when fees are paid separately. Change the fee treatment and interest convention to match your agreement.",
+    "scope": "One USD credit-card cash advance with a single full repayment, selected daily simple or compounded interest, explicit day basis and fee treatment. No intervening payments, statement-cycle capitalization, purchase balances, issuer quote, statutory APR or merchant cash advance.",
+    "examples": [
+      {
+        "title": "Pay fees separately and repay after 30 days",
+        "mode": "cost",
+        "values": {
+          "amount": "1000",
+          "fee_rate": "5",
+          "minimum_fee": "10",
+          "atm_fee": "3",
+          "apr": "30",
+          "days": "30",
+          "day_basis": "365",
+          "interest_method": "Simple daily",
+          "fee_treatment": "Pay upfront"
+        },
+        "inputs": "amount: 1000; fee_rate: 5; minimum_fee: 10; atm_fee: 3; apr: 30; days: 30; day_basis: 365; interest_method: Simple daily; fee_treatment: Pay upfront",
+        "steps": [
+          "The fee is max($1,000 × 5%, $10) + $3 = $53.",
+          "Simple interest on $1,000 for 30 days at 30% / 365 is about $24.66.",
+          "Cost is about $77.66; principal plus cost is about $1,077.66."
+        ],
+        "answer": "Total modeled cost: $77.66 under these stated assumptions.",
+        "expected": {
+          "label": "Total modeled cost",
+          "value": 77.65753424657534,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Finance fees on the same advance",
+        "mode": "cost",
+        "values": {
+          "amount": "1000",
+          "fee_rate": "5",
+          "minimum_fee": "10",
+          "atm_fee": "3",
+          "apr": "30",
+          "days": "30",
+          "day_basis": "365",
+          "interest_method": "Simple daily",
+          "fee_treatment": "Finance fees"
+        },
+        "inputs": "amount: 1000; fee_rate: 5; minimum_fee: 10; atm_fee: 3; apr: 30; days: 30; day_basis: 365; interest_method: Simple daily; fee_treatment: Finance fees",
+        "steps": [
+          "The same $53 fee is included in the interest-bearing starting balance of $1,053.",
+          "Interest is about $25.96; include the fee once in the final cash total."
+        ],
+        "answer": "Total modeled cost: $78.96 under these stated assumptions.",
+        "expected": {
+          "label": "Total modeled cost",
+          "value": 78.96438356164384,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Compare daily compounding with simple interest",
+        "mode": "cost",
+        "values": {
+          "amount": "1000",
+          "fee_rate": "5",
+          "minimum_fee": "10",
+          "atm_fee": "3",
+          "apr": "30",
+          "days": "30",
+          "day_basis": "365",
+          "interest_method": "Daily compound",
+          "fee_treatment": "Pay upfront"
+        },
+        "inputs": "amount: 1000; fee_rate: 5; minimum_fee: 10; atm_fee: 3; apr: 30; days: 30; day_basis: 365; interest_method: Daily compound; fee_treatment: Pay upfront",
+        "steps": [
+          "Keep fees separate and change only the approximation to daily compounding.",
+          "Use $1,000 × [(1 + 0.30 / 365)^30 − 1] for interest.",
+          "This is a model comparison, not evidence of your issuer’s capitalization method."
+        ],
+        "answer": "Total modeled cost: $77.95 under these stated assumptions.",
+        "expected": {
+          "label": "Total modeled cost",
+          "value": 77.95366486860911,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Zero days isolates the upfront fees",
+        "mode": "cost",
+        "values": {
+          "amount": "1000",
+          "fee_rate": "5",
+          "minimum_fee": "10",
+          "atm_fee": "3",
+          "apr": "30",
+          "days": "0",
+          "day_basis": "365",
+          "interest_method": "Simple daily",
+          "fee_treatment": "Pay upfront"
+        },
+        "inputs": "amount: 1000; fee_rate: 5; minimum_fee: 10; atm_fee: 3; apr: 30; days: 0; day_basis: 365; interest_method: Simple daily; fee_treatment: Pay upfront",
+        "steps": [
+          "Keep the $53 in fees.",
+          "With zero accrued days the interest term is zero.",
+          "This boundary case is not a promised interest-free withdrawal."
+        ],
+        "answer": "Total modeled cost: $53.00 under these stated assumptions.",
+        "expected": {
+          "label": "Total modeled cost",
+          "value": 53.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does the minimum fee replace the percentage fee?",
+        "answer": "The advance fee is the larger of the entered percentage charge and minimum fee, then the additional ATM fee is added once."
+      },
+      {
+        "question": "Do the fees themselves accrue interest?",
+        "answer": "That depends on the agreement. Choose separately paid fees or add both entered fees to the interest-bearing starting balance. Different fee-specific treatment requires a separate calculation."
+      },
+      {
+        "question": "Is the annualized cost an APR quote?",
+        "answer": "No. It is a simple annualization of the modeled cost relative to cash received. It is not a statutory APR, IRR or effective annual yield, and zero days gives no annualized value."
+      },
+      {
+        "question": "Is the table a minimum-payment schedule?",
+        "answer": "No. Each row assumes one full repayment on that day and no earlier payment. Use a payoff tool separately for installment budgeting; its rate and balance assumptions must match."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: Credit-card grace periods",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/"
+      }
+    ]
+  },
+  "cobra-cost": {
+    "checkedOn": "2026-11-18",
+    "summary": "COBRA premium planning starts with the full plan cost, including the employer contribution. With $200 from the employee, $600 from the employer and a selected 2% administrative charge, the monthly amount is $816 before any entered subsidy. This worksheet estimates premiums, not eligibility or total medical spending.",
+    "scope": "Ordinary federal COBRA premium-only worksheet with a 0–2% administrative charge and constant entered monthly subsidy. Matching coverage tier, no eligibility or duration determination, medical spending, state continuation or disability-extension premium model.",
+    "examples": [
+      {
+        "title": "Combine employee and employer contributions",
+        "mode": "contributions",
+        "values": {
+          "employee_share": "200",
+          "employer_share": "600",
+          "admin_rate": "2",
+          "monthly_subsidy": "0",
+          "months": "6"
+        },
+        "inputs": "employee_share: 200; employer_share: 600; admin_rate: 2; monthly_subsidy: 0; months: 6",
+        "steps": [
+          "Full monthly plan cost is $200 + $600 = $800.",
+          "The selected 2% administrative charge adds $16.",
+          "Monthly amount is $816, or $4,896 over six selected months."
+        ],
+        "answer": "Estimated monthly amount you pay: $816.00 under these stated assumptions.",
+        "expected": {
+          "label": "Estimated monthly amount you pay",
+          "value": 816.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Use an already-known full plan premium",
+        "mode": "premium",
+        "values": {
+          "total_premium": "800",
+          "previous_payment": "200",
+          "admin_rate": "2",
+          "monthly_subsidy": "0",
+          "months": "6"
+        },
+        "inputs": "total_premium: 800; previous_payment: 200; admin_rate: 2; monthly_subsidy: 0; months: 6",
+        "steps": [
+          "Start with the already-known full $800 premium; do not add employer contributions again.",
+          "At 2% and no subsidy, monthly payment is $816."
+        ],
+        "answer": "Estimated monthly amount you pay: $816.00 under these stated assumptions.",
+        "expected": {
+          "label": "Estimated monthly amount you pay",
+          "value": 816.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Model an entered monthly employer subsidy",
+        "mode": "contributions",
+        "values": {
+          "employee_share": "200",
+          "employer_share": "600",
+          "admin_rate": "2",
+          "monthly_subsidy": "300",
+          "months": "6"
+        },
+        "inputs": "employee_share: 200; employer_share: 600; admin_rate: 2; monthly_subsidy: 300; months: 6",
+        "steps": [
+          "Keep the $816 premium including the administrative charge.",
+          "Subtract the entered $300 monthly subsidy, leaving $516.",
+          "Six selected months cost $3,096."
+        ],
+        "answer": "Estimated monthly amount you pay: $516.00 under these stated assumptions.",
+        "expected": {
+          "label": "Estimated monthly amount you pay",
+          "value": 516.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Model a plan with no administrative charge",
+        "mode": "premium",
+        "values": {
+          "total_premium": "800",
+          "previous_payment": "200",
+          "admin_rate": "0",
+          "monthly_subsidy": "0",
+          "months": "1"
+        },
+        "inputs": "total_premium: 800; previous_payment: 200; admin_rate: 0; monthly_subsidy: 0; months: 1",
+        "steps": [
+          "Select 0% administrative charge on the full $800 premium.",
+          "One planning month costs $800; the standard 2% ceiling is not a required fee."
+        ],
+        "answer": "Estimated monthly amount you pay: $800.00 under these stated assumptions.",
+        "expected": {
+          "label": "Estimated monthly amount you pay",
+          "value": 800.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Do I multiply just my old payroll deduction by 1.02?",
+        "answer": "No. Start with the full plan cost for the same coverage tier, including the amount the employer used to contribute. The ordinary administrative charge can be up to 2%."
+      },
+      {
+        "question": "Does choosing 18 or 36 months mean I qualify?",
+        "answer": "No. The month input only controls arithmetic. Eligibility, election deadlines, qualifying events and permitted duration require the plan notice and applicable rules."
+      },
+      {
+        "question": "What if the subsidy ends after three months?",
+        "answer": "Run the subsidized months and remaining unsubsidized months separately, then add the two amounts. This worksheet applies one unchanged subsidy to each selected month."
+      },
+      {
+        "question": "Does this estimate include deductibles or the disability extension?",
+        "answer": "No. Medical out-of-pocket costs, state continuation and disability-extension premiums are excluded. Certain disability-extension months have different federal limits."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CMS: COBRA continuation coverage",
+        "url": "https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_fact_sheet"
+      }
+    ]
+  }
+}

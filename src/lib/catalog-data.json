@@ -841,5 +841,7 @@
   {"id": "sortino-ratio", "title": "Sortino Ratio Calculator", "category": "Investment", "local_route": "/sortino-ratio-calculator.html"},
   {"id": "gross-rent-multiplier", "title": "Gross Rent Multiplier (GRM) Calculator", "category": "Mortgage and Real Estate", "local_route": "/gross-rent-multiplier-calculator.html"},
   {"id": "debt-to-equity-ratio", "title": "Debt-to-Equity Ratio Calculator", "category": "Other", "local_route": "/debt-to-equity-ratio-calculator.html"},
-  {"id": "sustainable-growth-rate", "category": "Other", "title": "Sustainable Growth Rate Calculator", "local_route": "/sustainable-growth-rate-calculator.html"}
+  {"id": "sustainable-growth-rate", "category": "Other", "title": "Sustainable Growth Rate Calculator", "local_route": "/sustainable-growth-rate-calculator.html"},
+  {"id": "cash-advance-fee", "category": "Other", "title": "Cash Advance Fee Calculator", "local_route": "/cash-advance-fee-calculator.html"},
+  {"id": "cobra-cost", "category": "Other", "title": "COBRA Cost Calculator", "local_route": "/cobra-cost-calculator.html"}
 ]

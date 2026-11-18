@@ -399,3 +399,9 @@ Object.assign(searchTasks,{"sortino-ratio": [{"keyword": "Sortino ratio calculat
 
 keywordTitles["sustainable-growth-rate"]="Sustainable Growth Rate Calculator - ROE, Retention & Targets";
 searchTasks["sustainable-growth-rate"]=[{"keyword": "Sustainable growth rate calculator", "mode": "ratios", "description": "Estimate annual SGR from ROE and dividend payout. Reconcile income, retained earnings and book equity, or solve the retention needed for a selected growth target.", "aliases": ["SGR calculator"]}, {"keyword": "Sustainable growth from income and equity", "mode": "financials", "description": "Use positive annual income, matching dividends and a two-point average book-equity base."}, {"keyword": "Required retention for target growth", "mode": "target", "description": "Hold annual ROE fixed and solve a feasible retention and dividend payout assumption."}];
+
+keywordTitles["cash-advance-fee"]="Cash Advance Fee Calculator";
+searchTasks["cash-advance-fee"]=[{"keyword": "Cash Advance Fee Calculator", "mode": "cost", "description": "A cash advance costs more than its upfront fee. In the example, $1,000 with a 5% fee, $3 ATM fee and 30 days of simple interest at 30% APR costs about $77.66 when fees are paid separately. Change the fee treatment and interest convention to match your agreement.", "aliases": ["cash advance interest calculator", "credit card cash advance calculator"]}];
+
+keywordTitles["cobra-cost"]="COBRA Cost Calculator";
+searchTasks["cobra-cost"]=[{"keyword": "COBRA Cost Calculator", "mode": "contributions", "description": "COBRA premium planning starts with the full plan cost, including the employer contribution. With $200 from the employee, $600 from the employer and a selected 2% administrative charge, the monthly amount is $816 before any entered subsidy. This worksheet estimates premiums, not eligibility or total medical spending.", "aliases": ["COBRA premium calculator", "COBRA insurance cost calculator"]}];

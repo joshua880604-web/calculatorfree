@@ -4,6 +4,9 @@ import {roth401kComparisonScope} from './roth-401k-scope';
 // Scope labels describe implemented rules, not a promise of worldwide tax support.
 export function calculatorScope(id: string, mode: string, values: Values): string | undefined {
   switch (id) {
+case "cash-advance-fee": return "One USD credit-card cash advance with a single full repayment, selected daily simple or compounded interest, explicit day basis and fee treatment. No intervening payments, statement-cycle capitalization, purchase balances, issuer quote, statutory APR or merchant cash advance.";
+case "cobra-cost": return "Ordinary federal COBRA premium-only worksheet with a 0\u20132% administrative charge and constant entered monthly subsidy. Matching coverage tier, no eligibility or duration determination, medical spending, state continuation or disability-extension premium model.";
+
     case 'sustainable-growth-rate': return "An annual ROE \u00d7 retention approximation for positive ROE, positive earnings/equity in accounting mode, and dividend payout from 0% to 100%. Fixed policy assumptions, no full financing model, new equity issuance, market feed, growth forecast or automatic valuation growth input.";
     case 'sortino-ratio': return 'Matching-period simple returns, fixed target and all-observation downside deviation. Period ratios only; no automatic annualization, live market prices or performance rating.';
     case 'gross-rent-multiplier': return 'Whole-property price and scheduled gross rent before expenses, vacancy, financing and tax. Reverse modes use your selected multiplier; no appraisal, net yield or payback estimate.';

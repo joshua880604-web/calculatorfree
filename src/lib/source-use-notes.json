@@ -1742,6 +1742,16 @@
       "role": "background",
       "usedFor": "The retention = (net income − dividends) / net income relation and the commonly used ROE × retention formula.",
       "scope": "Concept background only. Equity-denominator conventions must be reconciled; no source certifies our implementation or the future sustainability of a company’s growth."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/": {
+      "role": "background",
+      "usedFor": "Cash advances generally start accruing interest at the transaction date.",
+      "scope": "Background only; card-specific fees, interest-bearing balances and compounding must come from the user agreement. No source endorses this calculator."
+    },
+    "https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_fact_sheet": {
+      "role": "rule",
+      "usedFor": "Full employee plus employer premium basis, ordinary 102% ceiling and the separate disability-extension exception.",
+      "scope": "Federal premium background only. This worksheet excludes the disability extension and does not determine individual eligibility, state continuation, tax effects or actual plan charges."
     }
   },
   "pages": {
@@ -4638,6 +4648,72 @@
           "role": "background",
           "usedFor": "The retention = (net income − dividends) / net income relation and the commonly used ROE × retention formula.",
           "scope": "Concept background only. Equity-denominator conventions must be reconciled; no source certifies our implementation or the future sustainability of a company’s growth."
+        }
+      }
+    },
+    "calculator:cash-advance-fee": {
+      "updatedOn": "2026-11-18",
+      "note": "Original examples independently checked with Decimal arithmetic; no professional review, issuer quote or eligibility determination claimed.",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/": {
+          "role": "background",
+          "usedFor": "Cash advances generally start accruing interest at the transaction date.",
+          "scope": "Background only; card-specific fees, interest-bearing balances and compounding must come from the user agreement. No source endorses this calculator."
+        }
+      }
+    },
+    "guide:/guides/cash-advance-fees-vs-interest/": {
+      "updatedOn": "2026-11-18",
+      "note": "Original examples independently checked with Decimal arithmetic; no professional review, issuer quote or eligibility determination claimed.",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/": {
+          "role": "background",
+          "usedFor": "Cash advances generally start accruing interest at the transaction date.",
+          "scope": "Background only; card-specific fees, interest-bearing balances and compounding must come from the user agreement. No source endorses this calculator."
+        }
+      }
+    },
+    "glossary:cash-advance-fee": {
+      "updatedOn": "2026-11-18",
+      "note": "Original examples independently checked with Decimal arithmetic; no professional review, issuer quote or eligibility determination claimed.",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/": {
+          "role": "background",
+          "usedFor": "Cash advances generally start accruing interest at the transaction date.",
+          "scope": "Background only; card-specific fees, interest-bearing balances and compounding must come from the user agreement. No source endorses this calculator."
+        }
+      }
+    },
+    "calculator:cobra-cost": {
+      "updatedOn": "2026-11-18",
+      "note": "Original examples independently checked with Decimal arithmetic; no professional review, issuer quote or eligibility determination claimed.",
+      "overrides": {
+        "https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_fact_sheet": {
+          "role": "rule",
+          "usedFor": "Full employee plus employer premium basis, ordinary 102% ceiling and the separate disability-extension exception.",
+          "scope": "Federal premium background only. This worksheet excludes the disability extension and does not determine individual eligibility, state continuation, tax effects or actual plan charges."
+        }
+      }
+    },
+    "guide:/guides/cobra-premium-vs-payroll-deduction/": {
+      "updatedOn": "2026-11-18",
+      "note": "Original examples independently checked with Decimal arithmetic; no professional review, issuer quote or eligibility determination claimed.",
+      "overrides": {
+        "https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_fact_sheet": {
+          "role": "rule",
+          "usedFor": "Full employee plus employer premium basis, ordinary 102% ceiling and the separate disability-extension exception.",
+          "scope": "Federal premium background only. This worksheet excludes the disability extension and does not determine individual eligibility, state continuation, tax effects or actual plan charges."
+        }
+      }
+    },
+    "glossary:cobra-cost": {
+      "updatedOn": "2026-11-18",
+      "note": "Original examples independently checked with Decimal arithmetic; no professional review, issuer quote or eligibility determination claimed.",
+      "overrides": {
+        "https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_fact_sheet": {
+          "role": "rule",
+          "usedFor": "Full employee plus employer premium basis, ordinary 102% ceiling and the separate disability-extension exception.",
+          "scope": "Federal premium background only. This worksheet excludes the disability extension and does not determine individual eligibility, state continuation, tax effects or actual plan charges."
         }
       }
     }

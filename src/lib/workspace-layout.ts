@@ -2,6 +2,7 @@ import type { Metric, Result } from "./types";
 
 // Complex tax forms, multi-debt entry sheets and the 401(k) story keep their wider flow.
 export const workspaceIds = [
+ "cash-advance-fee", "cobra-cost",
   "sustainable-growth-rate",
   "sortino-ratio", "gross-rent-multiplier", "debt-to-equity-ratio",
   "business-line-of-credit","triple-net-lease","arm-mortgage","portfolio-rebalancing",
@@ -34,6 +35,8 @@ export function workspaceLayout(id: string, mode: string): "split" | "stacked" |
 }
 
 const priorities: Record<string, string[]> = {
+ 'cash-advance-fee':['Total modeled cost','Estimated interest','Total fees'],
+ 'cobra-cost':['Estimated monthly amount you pay','Estimated cost for selected months','Monthly change from previous employee payment'],
 'sustainable-growth-rate':['Annual SGR under entered assumptions','Earnings retention ratio','Annual ROE used'],
 'sustainable-growth-rate:target':['Required earnings retention','Implied dividend payout ratio','Annual SGR under entered assumptions'],
 'sortino-ratio':['Sortino ratio for one observation period','Downside deviation per period','Mean return minus target'],

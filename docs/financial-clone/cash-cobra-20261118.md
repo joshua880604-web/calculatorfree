@@ -1,0 +1,11 @@
+# Cash advance and COBRA cost tools — 2026-11-18
+
+Preview branch: preview/cash-cobra-20261118, based on production f3bf037fe1e98db852043617ff051b8231c89f1f. Production is unchanged. Development is authorized; production publication requires the user's subsequent publication instruction.
+
+Two original tools, three modes, eight complete worked presets, two substantive worked guides, two glossary entries and CSV downloads. One canonical tool per intent; no keyword-alias duplicate pages. Relevant category, guide, glossary and calculator links are reciprocal. Existing 166 functional tools / 351 modes retain their fields and default results.
+
+Cash advances: configurable percentage/minimum fee and ATM charge, 360/365 day basis, simple/daily-compound interest and upfront/financed fees; table compares full repayment dates. No merchant cash advance, installments, issuer quote or statutory APR. COBRA: matched employee/employer shares or full premium input, ordinary 0–2% administrative charge, constant entered subsidy and a chosen arithmetic horizon. No eligibility finding, guaranteed coverage period, disability extension, state continuation or medical-cost comparison.
+
+Validation: 16 independent 70-digit Decimal cases / 89 metric checks; 2911 tests passed; TypeScript validated by production-configured build. Chromium: 58 checks at 320/390/768/1440 including all three modes, full-input example restoration, tab switches, invalid-input correction and Enter submission, guide/term readability, six no-JavaScript pages, and four successful CSV downloads. Mobile and desktop result/form screenshots inspected. Static audit: 469 canonical pages, zero broken files/fragments or orphan pages; retained new guide/tool and related-tool links are reciprocal. AdSense loader and public-domain build checks passed; no advertising/CMP or deployment configuration change.
+
+Reproducible local evidence is under /workspace/work/cash-cobra-development-20261118/. Concise source evidence: evidence/cash-cobra-reference-20261118.json and evidence/cash-cobra-verification-20261118.json. The reference script and mathematical tests are committed. Competitor interface parity and professional review are not claimed. Native Safari, remote preview body access and Google crawling/indexing/ranking are unverified. Remote preview deployment is recorded separately after it succeeds.

@@ -1,3 +1,5 @@
+import {cashAdvanceFeeCalculator} from './cash-advance-fee';
+import {cobraCostCalculator} from './cobra-cost';
 import {sustainableGrowthRateCalculator} from './sustainable-growth-rate';
 import {sortinoRatioCalculator} from './sortino-ratio';
 import {grossRentMultiplierCalculator} from './gross-rent-multiplier';
@@ -78,6 +80,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+ cashAdvanceFeeCalculator, cobraCostCalculator,
   sustainableGrowthRateCalculator,
   sortinoRatioCalculator,grossRentMultiplierCalculator,debtToEquityRatioCalculator,
   businessLineOfCreditCalculator,tripleNetLeaseCalculator,armMortgageCalculator,portfolioRebalancingCalculator,
