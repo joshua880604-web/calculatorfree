@@ -1,3 +1,4 @@
+import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
@@ -62,4 +63,4 @@ export default function APRGuide(){return <div className="page-wrap glossary-pag
 <p>{"The figures exclude irregular payment dates, financed costs, optional products, refunds, penalties and tax effects. The rate solver does not determine which charges a lender must legally include. Review the contract and lender disclosure for those details. See the "}<SiteLink href="/methodology">{"calculation methodology"}</SiteLink>{"."}</p>
 <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
 <section aria-labelledby="sources"><h2 id="sources">Sources</h2><SourceReferences context={'guide:'+aprGuide.path} sources={[{"title": "CFPB: loan interest rate versus APR", "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/"}, {"title": "CFPB: mortgage note rate versus APR", "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/"}, {"title": "CFPB: daily card interest and payment allocation", "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"}]}/></section>
-</article></main></div>;}
+<GuideToolLinks path="/guides/apr-vs-interest-rate/"/></article></main></div>;}

@@ -1,3 +1,4 @@
+import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
@@ -58,4 +59,4 @@ export default function DebtSaveGuide(){return <div className="page-wrap glossar
 <p>{"Debt examples use fixed monthly accrual, no new borrowing, no late fees and no prepayment penalty. Actual credit cards may use daily balances, variable APRs and other charges. The savings illustration has no account fees, inflation adjustment or interest-rate changes. Read the "}<SiteLink href="/methodology">{"methodology"}</SiteLink>{" for the site’s calculation and review status."}</p>
 <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
 <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/should-i-pay-off-debt-or-save/" sources={[{"title": "SEC Investor.gov: saving, investing and wealth-building", "url": "https://www.investor.gov/build-wealth-over-time-through-saving-and-investing"}, {"title": "CFPB: building an emergency fund", "url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"}]}/></section>
-</article></main></div>;}
+<GuideToolLinks path="/guides/should-i-pay-off-debt-or-save/"/></article></main></div>;}

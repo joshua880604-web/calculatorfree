@@ -1,0 +1,164 @@
+{
+  "sustainable-growth-rate": {
+    "checkedOn": "2026-11-18",
+    "summary": "Sustainable growth is modeled here as annual ROE multiplied by earnings retention. A 15% annual ROE and 40% dividend payout leave 60% retention and give a 9% SGR approximation. The result assumes stable policies and is not a prediction of actual sales growth.",
+    "scope": "An annual ROE × retention approximation for positive ROE, positive earnings/equity in accounting mode, and dividend payout from 0% to 100%. Fixed policy assumptions, no full financing model, new equity issuance, market feed, growth forecast or automatic valuation growth input.",
+    "examples": [
+      {
+        "title": "A 40% payout leaves 60% of earnings",
+        "mode": "ratios",
+        "values": {
+          "roe": "15",
+          "payout": "40"
+        },
+        "inputs": "roe: 15; payout: 40",
+        "steps": [
+          "Keep annual ROE at 15%.",
+          "Retention = 1 − 40% = 60%.",
+          "Annual SGR approximation = 15% × 0.60."
+        ],
+        "answer": "The stated annual ROE × retention model gives 9%. It does not predict next year’s sales.",
+        "expected": {
+          "label": "Annual SGR under entered assumptions",
+          "value": 9.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Annual accounting inputs reproduce the same 9%",
+        "mode": "financials",
+        "values": {
+          "net_income": "180000",
+          "dividends": "72000",
+          "equity_begin": "1000000",
+          "equity_end": "1400000"
+        },
+        "inputs": "net income: 180000; dividends: 72000; equity begin: 1000000; equity end: 1400000",
+        "steps": [
+          "Average beginning and ending positive equity: ($1,000,000 + $1,400,000) / 2 = $1,200,000.",
+          "ROE = $180,000 / $1,200,000 = 15%; payout = $72,000 / $180,000 = 40%.",
+          "Current-year earnings retained are $108,000, and the same ROE × retention product is 9%."
+        ],
+        "answer": "The annual SGR approximation is 9%, using a two-point average equity base and matching income/dividend scope.",
+        "expected": {
+          "label": "Annual SGR under entered assumptions",
+          "value": 9.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Retain all earnings at unchanged ROE",
+        "mode": "ratios",
+        "values": {
+          "roe": "15",
+          "payout": "0"
+        },
+        "inputs": "roe: 15; payout: 0",
+        "steps": [
+          "Payout is 0%, so retention is 100%.",
+          "Multiply 15% annual ROE by 1.00."
+        ],
+        "answer": "SGR is 15% under the unchanged-ROE assumption. This is not a recommendation to stop dividends.",
+        "expected": {
+          "label": "Annual SGR under entered assumptions",
+          "value": 15.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Distribute all earnings in the equation",
+        "mode": "ratios",
+        "values": {
+          "roe": "15",
+          "payout": "100"
+        },
+        "inputs": "roe: 15; payout: 100",
+        "steps": [
+          "Payout of 100% leaves 0% earnings retention.",
+          "Multiply 15% annual ROE by zero."
+        ],
+        "answer": "The result is 0%, rather than an undefined ratio. Real growth could still involve changes outside this model.",
+        "expected": {
+          "label": "Annual SGR under entered assumptions",
+          "value": 0.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Retention needed for a selected 12% target",
+        "mode": "target",
+        "values": {
+          "roe": "15",
+          "target_growth": "12"
+        },
+        "inputs": "roe: 15; target growth: 12",
+        "steps": [
+          "Hold annual ROE fixed at 15%.",
+          "Required retention = 12% / 15% = 80%.",
+          "The corresponding dividend payout is 100% − 80% = 20%."
+        ],
+        "answer": "An 80% retention assumption yields the selected 12% product. It does not establish the financing or investment needed to achieve it.",
+        "expected": {
+          "label": "Required earnings retention",
+          "value": 80.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "The maximum feasible target at this ROE",
+        "mode": "target",
+        "values": {
+          "roe": "15",
+          "target_growth": "15"
+        },
+        "inputs": "roe: 15; target growth: 15",
+        "steps": [
+          "At unchanged 15% annual ROE, a 15% target requires 15 / 15 = 100% retention.",
+          "That corresponds to zero dividend payout."
+        ],
+        "answer": "The feasible upper boundary of this 0–100% retention model is 15%; a higher target is rejected.",
+        "expected": {
+          "label": "Required earnings retention",
+          "value": 100.0,
+          "tolerance": 1e-08
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "What formula does this SGR calculator use?",
+        "answer": "It uses annual SGR = annual ROE × earnings retention, where retention = 1 − dividend payout ratio. The accounting mode computes ROE with a two-point average of positive beginning and ending book equity. Other timing conventions are not silently substituted."
+      },
+      {
+        "question": "Does sustainable growth mean the company cannot borrow?",
+        "answer": "No. The stated model assumes no new equity issuance and a stable capital structure; debt may rise proportionally with equity. A model forbidding all external financing is an internal-growth model and is not calculated here."
+      },
+      {
+        "question": "What is the difference between retention and dividend payout?",
+        "answer": "For this positive-income scope, retention is the fraction of annual income not distributed as dividends. At 40% payout, retention is 60%. Current-year retained earnings are not the cumulative balance-sheet retained-earnings account or a cash-flow figure."
+      },
+      {
+        "question": "Why does the calculator stop for losses or nonpositive equity?",
+        "answer": "Those inputs do not support the positive-earnings sustainable-growth interpretation used here. Accounting mode requires positive annual net income, positive beginning and ending equity, and dividends no greater than income."
+      },
+      {
+        "question": "Can I set a target above the entered annual ROE?",
+        "answer": "That would require retention above 100% in this equation. The inverse mode rejects it instead of treating a negative dividend payout as feasible. Change the target or investigate whether a different ROE assumption is defensible."
+      },
+      {
+        "question": "Can I use this output as perpetual dividend growth?",
+        "answer": "Do not transfer it automatically. A DDM or DCF stable-growth assumption needs its own support and a required return or discount rate above that perpetual growth rate. This SGR is conditional on the supplied profitability and retention assumptions."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Wall Street Prep: Sustainable Growth Rate",
+        "url": "https://www.wallstreetprep.com/knowledge/sustainable-growth-rate/"
+      },
+      {
+        "title": "CFI: Sustainable Growth Rate",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/sustainable-growth-rate/"
+      }
+    ]
+  }
+}

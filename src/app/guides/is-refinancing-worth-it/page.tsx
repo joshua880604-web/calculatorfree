@@ -1,3 +1,4 @@
+import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideGlossaryLinks from '@/components/GuideGlossaryLinks';
@@ -69,4 +70,4 @@ export default function RefinanceGuide(){return <div className="page-wrap glossa
 <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
 <GuideGlossaryLinks path={refinanceGuide.path}/>
 <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/is-refinancing-worth-it/" sources={[{"title": "CFPB: Loan Estimate definition", "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/"}, {"title": "CFPB: no-closing-cost refinance trade-offs", "url": "https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/"}]}/></section>
-</article></main></div>;}
+<GuideToolLinks path="/guides/is-refinancing-worth-it/"/></article></main></div>;}

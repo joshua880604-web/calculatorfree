@@ -2,6 +2,7 @@ import type { Metric, Result } from "./types";
 
 // Complex tax forms, multi-debt entry sheets and the 401(k) story keep their wider flow.
 export const workspaceIds = [
+  "sustainable-growth-rate",
   "sortino-ratio", "gross-rent-multiplier", "debt-to-equity-ratio",
   "business-line-of-credit","triple-net-lease","arm-mortgage","portfolio-rebalancing",
   "basis-point","prorated-rent","operating-cash-flow",
@@ -33,6 +34,8 @@ export function workspaceLayout(id: string, mode: string): "split" | "stacked" |
 }
 
 const priorities: Record<string, string[]> = {
+'sustainable-growth-rate':['Annual SGR under entered assumptions','Earnings retention ratio','Annual ROE used'],
+'sustainable-growth-rate:target':['Required earnings retention','Implied dividend payout ratio','Annual SGR under entered assumptions'],
 'sortino-ratio':['Sortino ratio for one observation period','Downside deviation per period','Mean return minus target'],
 'gross-rent-multiplier':['Gross rent multiplier (annual rent basis)','Gross annual rent yield before expenses','Annual gross scheduled rent'],
 'gross-rent-multiplier:price':['Price implied by entered rent and GRM','Gross rent multiplier (annual rent basis)','Annual gross scheduled rent'],

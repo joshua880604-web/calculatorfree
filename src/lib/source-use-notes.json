@@ -1732,6 +1732,16 @@
       "role": "background",
       "usedFor": "A documented total-liabilities / shareholders’ equity definition and the need to interpret leverage in context.",
       "scope": "BDC is a Canadian institution. Its definition is background, not a US lending requirement, unique industry standard, endorsement or professional review. Our narrower borrowing definition is identified separately."
+    },
+    "https://www.wallstreetprep.com/knowledge/sustainable-growth-rate/": {
+      "role": "background",
+      "usedFor": "The annual ROE × retention approximation, average-equity ROE convention, and distinction between SGR at stable capital structure and internal growth without external funding.",
+      "scope": "Concept background. Our fixed assumptions and original arithmetic are not a company forecast, credit approval, source endorsement or professional review."
+    },
+    "https://corporatefinanceinstitute.com/resources/valuation/sustainable-growth-rate/": {
+      "role": "background",
+      "usedFor": "The retention = (net income − dividends) / net income relation and the commonly used ROE × retention formula.",
+      "scope": "Concept background only. Equity-denominator conventions must be reconciled; no source certifies our implementation or the future sustainability of a company’s growth."
     }
   },
   "pages": {
@@ -4580,6 +4590,54 @@
           "role": "background",
           "usedFor": "A documented total-liabilities / shareholders’ equity definition and the need to interpret leverage in context.",
           "scope": "BDC is a Canadian institution. Its definition is background, not a US lending requirement, unique industry standard, endorsement or professional review. Our narrower borrowing definition is identified separately."
+        }
+      }
+    },
+    "calculator:sustainable-growth-rate": {
+      "updatedOn": "2026-11-18",
+      "note": "Original positive-earnings annual examples were checked independently with 80-digit Decimal arithmetic. The approximation and financing assumptions are explicit; source references do not certify or professionally review this tool.",
+      "overrides": {
+        "https://www.wallstreetprep.com/knowledge/sustainable-growth-rate/": {
+          "role": "background",
+          "usedFor": "The annual ROE × retention approximation, average-equity ROE convention, and distinction between SGR at stable capital structure and internal growth without external funding.",
+          "scope": "Concept background. Our fixed assumptions and original arithmetic are not a company forecast, credit approval, source endorsement or professional review."
+        },
+        "https://corporatefinanceinstitute.com/resources/valuation/sustainable-growth-rate/": {
+          "role": "background",
+          "usedFor": "The retention = (net income − dividends) / net income relation and the commonly used ROE × retention formula.",
+          "scope": "Concept background only. Equity-denominator conventions must be reconciled; no source certifies our implementation or the future sustainability of a company’s growth."
+        }
+      }
+    },
+    "guide:/guides/sustainable-growth-rate-vs-actual-growth/": {
+      "updatedOn": "2026-11-18",
+      "note": "Original positive-earnings annual examples were checked independently with 80-digit Decimal arithmetic. The approximation and financing assumptions are explicit; source references do not certify or professionally review this tool.",
+      "overrides": {
+        "https://www.wallstreetprep.com/knowledge/sustainable-growth-rate/": {
+          "role": "background",
+          "usedFor": "The annual ROE × retention approximation, average-equity ROE convention, and distinction between SGR at stable capital structure and internal growth without external funding.",
+          "scope": "Concept background. Our fixed assumptions and original arithmetic are not a company forecast, credit approval, source endorsement or professional review."
+        },
+        "https://corporatefinanceinstitute.com/resources/valuation/sustainable-growth-rate/": {
+          "role": "background",
+          "usedFor": "The retention = (net income − dividends) / net income relation and the commonly used ROE × retention formula.",
+          "scope": "Concept background only. Equity-denominator conventions must be reconciled; no source certifies our implementation or the future sustainability of a company’s growth."
+        }
+      }
+    },
+    "glossary:sustainable-growth-rate": {
+      "updatedOn": "2026-11-18",
+      "note": "Original positive-earnings annual examples were checked independently with 80-digit Decimal arithmetic. The approximation and financing assumptions are explicit; source references do not certify or professionally review this tool.",
+      "overrides": {
+        "https://www.wallstreetprep.com/knowledge/sustainable-growth-rate/": {
+          "role": "background",
+          "usedFor": "The annual ROE × retention approximation, average-equity ROE convention, and distinction between SGR at stable capital structure and internal growth without external funding.",
+          "scope": "Concept background. Our fixed assumptions and original arithmetic are not a company forecast, credit approval, source endorsement or professional review."
+        },
+        "https://corporatefinanceinstitute.com/resources/valuation/sustainable-growth-rate/": {
+          "role": "background",
+          "usedFor": "The retention = (net income − dividends) / net income relation and the commonly used ROE × retention formula.",
+          "scope": "Concept background only. Equity-denominator conventions must be reconciled; no source certifies our implementation or the future sustainability of a company’s growth."
         }
       }
     }

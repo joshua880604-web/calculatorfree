@@ -192,3 +192,7 @@ Current version overrides earlier live-feed/server assumptions. See static-expor
 Developing three original tools in preview/ratio-property-three-20261118; seven modes. Explicit matching-period/all-N Sortino, gross-rent-only screening, and corporate book-equity leverage definitions. Production remains at the existing specialist-four release. Verification evidence and status will be recorded in ratio-property-three-20261118.md.
 
 Verification complete for the three-tool batch: 2,843 tests, production-config static export, 22 independent reference cases, 28 mode/viewport checks and 460-page structural/link audit passed. See ratio-property-three-20261118.md. Remote preview pending; production unchanged.
+
+
+### 2026-11-18 — SGR and reviewed internal links
+Added one original SGR calculator (3 modes), guide and term. Restored 15 curated links, added 35 explained guide/tool links and removed 27 weak associations. All 366 retained pairs reciprocal. 2,872 tests and 463-page static audit passed; 165 old tools /348 mode defaults unchanged. See sgr-internal-links-20261118.md. Combined four-tool preview pending deployment; production unchanged.

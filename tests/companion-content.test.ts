@@ -23,7 +23,7 @@ test('Five new articles and five terms have unique real routes, dates and recipr
  for(const [topic] of Object.entries(rawGuides)){
   const guide=comparisonGuides[topic];assert.equal(editorialGuides.filter(x=>x.path===guide.meta.path).length,1);
   assert.ok(fs.existsSync('src/app'+guide.meta.path+'page.tsx'));
-  assert.equal(entries.filter(x=>x.url===config.origin+guide.meta.path).length,1);assert.equal(contentUpdatedOn[guide.meta.path],'2026-11-05');
+  assert.equal(entries.filter(x=>x.url===config.origin+guide.meta.path).length,1);assert.equal(contentUpdatedOn[guide.meta.path],guide.meta.linksUpdatedOn??'2026-11-05');
   assert.ok(guide.sections.length>=5);assert.ok(guide.questions.length>=5);assert.ok(guide.sources.length>=2);
   assert.ok(guide.sections.reduce((s,x)=>s+x.paragraphs.join(' ').split(/\s+/).length,0)>550);
   assert.equal(new Set(guide.sections.map(s=>s.id)).size,guide.sections.length);

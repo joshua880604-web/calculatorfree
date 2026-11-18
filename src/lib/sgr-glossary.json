@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "sustainable-growth-rate",
+    "name": "Sustainable growth rate (SGR)",
+    "title": "Sustainable Growth Rate: ROE, Retention & Assumptions",
+    "description": "Understand the annual ROE × retention approximation, a worked 9% example, financing assumptions and the difference from actual growth.",
+    "category": "Business & pricing",
+    "aliases": [
+      "SGR",
+      "ROE × retention growth approximation"
+    ],
+    "definition": "Sustainable growth rate is modeled here as annual return on equity multiplied by the share of earnings retained, under stated stable operating and capital-policy assumptions.",
+    "explanation": "Retention is one minus the dividend payout ratio for matching positive annual income. The product is a conditional approximation, not a revenue-growth forecast. Its financing interpretation keeps the capital structure stable without new equity issuance, while debt can increase proportionally. A no-external-financing internal-growth model is a separate task.",
+    "formula": "Annual SGR = annual ROE × (1 − dividend payout ratio).",
+    "formulaNote": "Use matching annual factors. The accounting worksheet uses a two-point average of positive beginning and ending book equity. Other denominator and timing conventions need reconciliation.",
+    "example": {
+      "title": "A 40% payout leaves 60% of earnings",
+      "intro": "roe: 15; payout: 40",
+      "steps": [
+        "Keep annual ROE at 15%.",
+        "Retention = 1 − 40% = 60%.",
+        "Annual SGR approximation = 15% × 0.60."
+      ],
+      "answer": "The stated annual ROE × retention model gives 9%. It does not predict next year’s sales.",
+      "assumptions": "An annual ROE × retention approximation for positive ROE, positive earnings/equity in accounting mode, and dividend payout from 0% to 100%. Fixed policy assumptions, no full financing model, new equity issuance, market feed, growth forecast or automatic valuation growth input.",
+      "calculator": {
+        "id": "sustainable-growth-rate",
+        "mode": "ratios",
+        "values": {
+          "roe": "15",
+          "payout": "40"
+        },
+        "expected": [
+          {
+            "label": "Annual SGR under entered assumptions",
+            "value": 9.0,
+            "tolerance": 1e-08
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Sustainable growth is not a guarantee of actual growth",
+      "text": "The 9% product for 15% ROE and 60% retention does not establish that sales will grow 9%, that cash is available, or that a lender will fund the implied borrowing. It also is not automatically a valid perpetual valuation growth input."
+    },
+    "tools": [
+      {
+        "id": "sustainable-growth-rate",
+        "text": "Inspect the annual ratio, accounting bridge and target-retention scenarios."
+      },
+      {
+        "id": "return-on-equity",
+        "text": "Reconcile the supplied income and book-equity scope separately."
+      }
+    ],
+    "related": [
+      "return-on-equity",
+      "debt-to-equity-ratio",
+      "dividend-discount-model"
+    ],
+    "sources": [
+      {
+        "title": "Wall Street Prep: Sustainable Growth Rate",
+        "url": "https://www.wallstreetprep.com/knowledge/sustainable-growth-rate/"
+      },
+      {
+        "title": "CFI: Sustainable Growth Rate",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/sustainable-growth-rate/"
+      }
+    ],
+    "checkedOn": "2026-11-18",
+    "scope": "An annual ROE × retention approximation for positive ROE, positive earnings/equity in accounting mode, and dividend payout from 0% to 100%. Fixed policy assumptions, no full financing model, new equity issuance, market feed, growth forecast or automatic valuation growth input.",
+    "guides": [
+      {
+        "title": "Sustainable Growth Rate vs. Actual Growth: ROE & Retention",
+        "path": "/guides/sustainable-growth-rate-vs-actual-growth/"
+      }
+    ]
+  }
+]

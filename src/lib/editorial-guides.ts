@@ -1,3 +1,4 @@
+import guideToolRepairs from './guide-tool-repairs.json';
 import {comparisonGuideList} from './comparison-guides';
 import {questionGuideList} from './question-guides';
 import {practicalGuideList} from './practical-guides';
@@ -240,4 +241,12 @@ for(const guide of editorialGuides){
  if(guide.path==='/guides/how-to-calculate-stock-profit/')additions.push('capital-gains-tax');
  if(guide.calculatorIds.includes('rental-property'))additions.push('1031-exchange','home-maintenance-cost','vacancy-rate');
  if(additions.length)guide.calculatorIds=[...new Set([...guide.calculatorIds,...additions])];
+}
+
+// Explicit editorial review of the audited guide-to-tool relationships.
+for(const guide of editorialGuides){
+ const repair=(guideToolRepairs as Record<string,{removeCalculatorIds:string[];links:{id:string;description:string}[];reviewedOn:string}>)[guide.path];
+ if(!repair)continue;
+ guide.calculatorIds=guide.calculatorIds.filter(id=>!repair.removeCalculatorIds.includes(id));
+ guide.linksUpdatedOn=repair.reviewedOn;
 }

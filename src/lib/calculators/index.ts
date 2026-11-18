@@ -1,3 +1,4 @@
+import {sustainableGrowthRateCalculator} from './sustainable-growth-rate';
 import {sortinoRatioCalculator} from './sortino-ratio';
 import {grossRentMultiplierCalculator} from './gross-rent-multiplier';
 import {debtToEquityRatioCalculator} from './debt-to-equity-ratio';
@@ -77,6 +78,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  sustainableGrowthRateCalculator,
   sortinoRatioCalculator,grossRentMultiplierCalculator,debtToEquityRatioCalculator,
   businessLineOfCreditCalculator,tripleNetLeaseCalculator,armMortgageCalculator,portfolioRebalancingCalculator,
   basisPointCalculator,proratedRentCalculator,operatingCashFlowCalculator,

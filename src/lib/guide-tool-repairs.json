@@ -1,0 +1,393 @@
+{
+  "/guides/hsa-vs-fsa/": {
+    "links": [
+      {
+        "id": "fsa",
+        "description": "Budget eligible FSA expenses, employee contributions and entered tax savings; confirm your plan terms."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/simple-interest-vs-compound-interest/": {
+    "links": [
+      {
+        "id": "rule-of-72",
+        "description": "Compare approximate and exact doubling time for your constant effective annual return."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/401k-vs-roth-ira/": {
+    "links": [
+      {
+        "id": "ira",
+        "description": "Explore a traditional IRA growth scenario separately from the Roth and workplace-plan examples."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/cash-out-refinance-vs-heloc/": {
+    "links": [
+      {
+        "id": "home-equity-loan",
+        "description": "Compare a separate fixed-payment home-equity-loan scenario using your quoted terms."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-much-money-do-i-need-to-retire/": {
+    "links": [
+      {
+        "id": "social-security",
+        "description": "Explore entered Social Security benefit assumptions separately when building the retirement income gap."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/4-percent-rule/": {
+    "links": [
+      {
+        "id": "retirement-withdrawal",
+        "description": "Test an entered withdrawal rate with your spending, other income and constant-return assumptions; no safe-rate guarantee."
+      }
+    ],
+    "removeCalculatorIds": [
+      "coast-fire"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/roth-conversion-taxes/": {
+    "links": [],
+    "removeCalculatorIds": [
+      "ira"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/gross-margin-vs-net-margin/": {
+    "links": [
+      {
+        "id": "break-even",
+        "description": "Translate contribution margin and fixed costs into a separate break-even sales scenario."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/balance-transfer-vs-personal-loan/": {
+    "links": [
+      {
+        "id": "debt-consolidation",
+        "description": "Model a consolidation loan with your existing debt and entered fees before comparing borrowing costs."
+      }
+    ],
+    "removeCalculatorIds": [
+      "credit-utilization"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-does-a-1031-exchange-work/": {
+    "links": [
+      {
+        "id": "closing-cost",
+        "description": "Estimate transaction costs and cash needs separately; this worksheet does not establish exchange eligibility or tax treatment."
+      }
+    ],
+    "removeCalculatorIds": [
+      "capital-gains-tax",
+      "rental-property",
+      "home-maintenance-cost",
+      "vacancy-rate"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-much-to-budget-for-home-maintenance/": {
+    "links": [
+      {
+        "id": "emergency-fund",
+        "description": "Budget a separate cash buffer using your entered expenses and target months; avoid counting the same reserve twice."
+      }
+    ],
+    "removeCalculatorIds": [
+      "house-affordability"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-calculate-rental-vacancy-rate/": {
+    "links": [
+      {
+        "id": "cash-on-cash-return",
+        "description": "Explore how your entered vacancy and operating assumptions affect a separate equity cash-yield scenario."
+      },
+      {
+        "id": "dscr",
+        "description": "Compare an entered rental-income or NOI scenario with the modeled debt service; lender definitions can differ."
+      }
+    ],
+    "removeCalculatorIds": [
+      "1031-exchange",
+      "home-maintenance-cost"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-calculate-credit-utilization/": {
+    "links": [
+      {
+        "id": "balance-transfer",
+        "description": "Compare transfer fees and repayment costs separately; moving a balance does not by itself reduce total debt."
+      },
+      {
+        "id": "credit-card-minimum-payment",
+        "description": "Model balance reduction under an entered payment rule, with interest treated separately from credit-limit arithmetic."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-calculate-capital-gains-tax/": {
+    "links": [
+      {
+        "id": "stock-profit",
+        "description": "Reconcile purchase cost, sale proceeds and trading fees before entering the separate tax assumptions."
+      }
+    ],
+    "removeCalculatorIds": [
+      "1031-exchange"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/sba-7a-vs-504-loan-payments/": {
+    "links": [
+      {
+        "id": "dscr",
+        "description": "Compare the entered operating-income scope with debt service separately; a modeled ratio is not SBA or lender approval."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-prorate-rent-by-days/": {
+    "links": [],
+    "removeCalculatorIds": [
+      "1031-exchange",
+      "home-maintenance-cost"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/nnn-vs-gross-lease-cost/": {
+    "links": [],
+    "removeCalculatorIds": [
+      "dscr",
+      "1031-exchange",
+      "home-maintenance-cost",
+      "vacancy-rate"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/grm-vs-cap-rate-gross-rent-and-noi/": {
+    "links": [],
+    "removeCalculatorIds": [
+      "dscr",
+      "1031-exchange",
+      "home-maintenance-cost",
+      "vacancy-rate"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-soon-can-you-refinance-a-mortgage/": {
+    "links": [
+      {
+        "id": "mortgage",
+        "description": "Reconstruct a fixed-rate mortgage payment scenario before comparing your refinance quote."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/down-payment-and-closing-cost-cash/": {
+    "links": [
+      {
+        "id": "closing-cost",
+        "description": "Itemize buyer closing costs, credits and the resulting cash to close."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-calculate-net-operating-income/": {
+    "links": [
+      {
+        "id": "dscr",
+        "description": "Use your reconciled NOI in the separate NOI-based debt-service coverage calculation."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-calculate-rental-property-cash-flow/": {
+    "links": [
+      {
+        "id": "home-maintenance-cost",
+        "description": "Budget maintenance and replacement reserves separately before deciding which amounts belong in your cash-flow model."
+      },
+      {
+        "id": "vacancy-rate",
+        "description": "Check unit vacancy or unit-day assumptions before entering rental-income losses."
+      }
+    ],
+    "removeCalculatorIds": [
+      "1031-exchange"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-calculate-stock-profit/": {
+    "links": [
+      {
+        "id": "capital-gains-tax",
+        "description": "Estimate a separate sale-tax scenario using your verified basis and tax assumptions; trading profit is not automatically taxable gain."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/pay-off-mortgage-or-invest/": {
+    "links": [
+      {
+        "id": "mortgage-payoff",
+        "description": "Reconcile the current balance, regular payment and extra-principal schedule before comparing the investing alternative."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/barista-fire-vs-coast-fire/": {
+    "links": [
+      {
+        "id": "lean-fire",
+        "description": "Explore a separate full-retirement target at your selected lower spending budget; this does not model the Barista income bridge."
+      },
+      {
+        "id": "fat-fire",
+        "description": "Explore a separate full-retirement target at your selected higher spending budget; the label does not select a return or success probability."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-calculate-debt-snowball/": {
+    "links": [],
+    "removeCalculatorIds": [
+      "debt-payoff"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-calculate-debt-avalanche/": {
+    "links": [],
+    "removeCalculatorIds": [
+      "debt-payoff"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/how-to-calculate-coast-fire/": {
+    "links": [
+      {
+        "id": "fire",
+        "description": "Work from annual spending to an entered full-retirement portfolio target before discounting it to a Coast milestone."
+      },
+      {
+        "id": "compound-interest",
+        "description": "Inspect a separate constant-return growth scenario and keep nominal and inflation-adjusted assumptions consistent."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/debt-snowball-vs-avalanche/": {
+    "links": [
+      {
+        "id": "debt-snowball",
+        "description": "Build a smallest-balance-first schedule using all required minimums and the same affordable payment budget."
+      },
+      {
+        "id": "debt-avalanche",
+        "description": "Build a highest-APR-first schedule with the same debts and budget to compare interest and payoff milestones."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/biweekly-vs-monthly-mortgage-payments/": {
+    "links": [
+      {
+        "id": "mortgage",
+        "description": "Reproduce the standard monthly principal-and-interest baseline under matching fixed-rate assumptions."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/are-mortgage-points-worth-it/": {
+    "links": [
+      {
+        "id": "refinance",
+        "description": "Compare a separately quoted refinance offer with the current loan using its own fees and holding period."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/rent-vs-buy-a-house/": {
+    "links": [],
+    "removeCalculatorIds": [
+      "rent"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/should-i-pay-off-debt-or-save/": {
+    "links": [
+      {
+        "id": "emergency-fund",
+        "description": "Estimate an entered cash-buffer target before allocating the remaining budget to debt repayment."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/apr-vs-interest-rate/": {
+    "links": [
+      {
+        "id": "loan",
+        "description": "Build the payment schedule from principal, note rate and term; compare fees in the separate APR worksheet."
+      }
+    ],
+    "removeCalculatorIds": [
+      "personal-loan"
+    ],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/is-refinancing-worth-it/": {
+    "links": [
+      {
+        "id": "mortgage",
+        "description": "Check the current loan’s payment assumptions before evaluating a replacement offer."
+      },
+      {
+        "id": "discount-points",
+        "description": "Evaluate the entered points purchase separately using a consistent balance, holding period and rate difference."
+      }
+    ],
+    "removeCalculatorIds": [],
+    "reviewedOn": "2026-11-18"
+  },
+  "/guides/roth-ira-vs-traditional-ira/": {
+    "links": [],
+    "removeCalculatorIds": [
+      "retirement"
+    ],
+    "reviewedOn": "2026-11-18"
+  }
+}

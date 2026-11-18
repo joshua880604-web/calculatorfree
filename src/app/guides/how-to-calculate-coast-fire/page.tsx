@@ -1,3 +1,4 @@
+import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideGlossaryLinks from '@/components/GuideGlossaryLinks';
@@ -103,4 +104,4 @@ export default function CoastFireGuide(){return <div className="page-wrap glossa
  <SourceReferences context={'guide:'+coastFireGuide.path} sources={[{"title": "OpenStax: present value and inflation context", "url": "https://openstax.org/books/principles-finance/pages/7-4-applications-of-tvm-in-finance"}, {"title": "SEC Investor.gov: compound growth inputs", "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"}, {"title": "SSA: official benefits estimates", "url": "https://www.ssa.gov/prepare/get-benefits-estimate"}, {"title": "WalletBurst: Coast FIRE concept", "url": "https://walletburst.com/coast-fire/"}, {"title": "WalletBurst: Barista FIRE concept", "url": "https://walletburst.com/barista-fire/"}]}/>
  <p>Sources support the concepts; they do not validate a personal plan or endorse the illustrative rates. See our <SiteLink href="/methodology">calculation methodology and review status</SiteLink>, <SiteLink href="/retirement-calculators">Retirement Calculators</SiteLink>, and <SiteLink href="/guides/">all financial guides</SiteLink>.</p>
 <GuideGlossaryLinks path={coastFireGuide.path}/>
-</article></main></div>;}
+<GuideToolLinks path="/guides/how-to-calculate-coast-fire/"/></article></main></div>;}

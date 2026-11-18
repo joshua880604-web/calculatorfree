@@ -1,3 +1,4 @@
+import GuideToolLinks from './GuideToolLinks';
 import DiscountReference from './DiscountReference';
 import InterestRateReference from './InterestRateReference';
 import SourceReferences from './SourceReferences';
@@ -31,5 +32,5 @@ export default function PracticalGuideArticle({slug}:{slug:string}){
  <section><h2 id="questions">Common questions</h2>{data.questions.map(q=><section key={q.question}><h3>{q.question}</h3><p>{q.answer}</p></section>)}</section>
  <section><h2 id="sources">Sources, verification and limits</h2><p>Official and educational sources provide context for the definitions and rules discussed above. They do not endorse the calculator or these hypothetical assumptions. Tax sources have the editions stated in their titles or on their pages; a cited older publication is not a claim that every provision applies unchanged to a later year. Actual contracts, account documents and filing requirements control real transactions.</p><SourceReferences context={'guide:'+'/guides/'+slug+'/'} sources={data.sources}/><p>Read the calculator’s assumptions and <SiteLink href="/methodology">site methodology</SiteLink>. Existing automated tests and additional selected independent arithmetic checks support this release; the reproduction table itself is not a separate audit of the engine. Sources and model context were checked on the date shown, not certified by a named financial reviewer.</p></section>
  <section className="related"><h2>Related tools and next steps</h2><ul>{data.ids.map(id=>{const c=data.cases.find(c=>c.calculatorId===id)!;return <li key={id}><SiteLink href={c.path}>{c.tool}</SiteLink></li>})}<li><SiteLink href="/guides/">Browse guides by financial task</SiteLink></li><li><SiteLink href="/glossary/">Look up financial terms</SiteLink></li></ul></section>
- </article></main></div>;
+ <GuideToolLinks path={meta.path}/></article></main></div>;
 }

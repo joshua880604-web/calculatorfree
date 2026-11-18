@@ -1,3 +1,4 @@
+import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideScenarioReview,{GuideCheckSummary} from '@/components/GuideScenarioReview';
@@ -74,5 +75,5 @@ export default function MortgagePointsGuide(){return <div className="page-wrap g
 <p>{"The model charges monthly interest at the contractual annual rate divided by 12, retains precision and adjusts the final payment to the balance actually owed. Official sources are linked where they support product and disclosure explanations. Source and calculation checks: October 27, 2026. See our "}<SiteLink href="https://www.calculatorfree.io/methodology">{"methodology and review status"}</SiteLink>{"."}</p>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
  <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/are-mortgage-points-worth-it/" sources={[{"title": "CFPB: Lender Credits and Discount Points", "url": "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/"}, {"title": "CFPB: historical discount-point trends", "url": "https://www.consumerfinance.gov/data-research/research-reports/data-spotlight-trends-in-discount-points-amid-rising-interest-rates/"}, {"title": "CFPB: compare loan estimates", "url": "https://www.consumerfinance.gov/owning-a-home/compare/compare-loan-estimates/"}, {"title": "IRS Topic 504: home-mortgage points", "url": "https://www.irs.gov/taxtopics/tc504"}]}/></section>
-</article></main></div>;
+<GuideToolLinks path="/guides/are-mortgage-points-worth-it/"/></article></main></div>;
 }

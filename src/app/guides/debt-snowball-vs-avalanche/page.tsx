@@ -1,3 +1,4 @@
+import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideScenarioReview,{GuideCheckSummary} from '@/components/GuideScenarioReview';
@@ -67,4 +68,4 @@ export default function DebtComparisonGuide(){return <div className="page-wrap g
 <h2 id="sources">{"Sources"}</h2>
 <SourceReferences context={'guide:'+debtGuide.path} sources={[{"title": "CFPB: Debt action plan (2018 worksheet)", "url": "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_debt-action-plan_tool_2018-11.pdf"}, {"title": "CFPB: daily card interest and payment allocation", "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"}, {"title": "CFPB: when minimum card payments are unaffordable", "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-i-cant-pay-my-credit-card-bills-en-1697/"}]}/>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
- </article></main></div>;}
+ <GuideToolLinks path="/guides/debt-snowball-vs-avalanche/"/></article></main></div>;}

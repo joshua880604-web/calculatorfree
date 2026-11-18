@@ -1,3 +1,4 @@
+import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
@@ -42,4 +43,4 @@ export default function BaristaCoastComparison(){return <div className="page-wra
  <h2>Sources and model boundaries</h2>
  <SourceReferences context="guide:/guides/barista-fire-vs-coast-fire/" sources={[{"title": "WalletBurst: Barista FIRE concept and planning inputs", "url": "https://walletburst.com/tools/barista-fire-calc/"}, {"title": "Investor.gov: mutual fund risks and expenses", "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs/mutual-funds"}, {"title": "IRS: early-distribution rules and exceptions", "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-exceptions-to-tax-on-early-distributions"}]}/>
  <p>Cash-flow examples are independently calculated under the stated assumptions. Educational estimates only; not financial, tax or investment advice. See our <SiteLink href="/methodology">calculation methodology</SiteLink>.</p>
- </article></main></div>;}
+ <GuideToolLinks path="/guides/barista-fire-vs-coast-fire/"/></article></main></div>;}

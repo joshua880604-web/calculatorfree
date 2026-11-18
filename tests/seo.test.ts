@@ -41,6 +41,7 @@ const wordingReviewDates:Record<string,string>={
  ...Object.fromEntries(["/glossary/weighted-average-cost-of-capital/", "/glossary/capital-asset-pricing-model/", "/glossary/bond-duration/", "/glossary/cd-early-withdrawal-penalty/", "/glossary/burn-rate/", "/glossary/lean-fire/", "/glossary/fat-fire/", "/glossary/", "/wacc-calculator.html", "/capm-calculator.html", "/bond-duration-calculator.html", "/bond-calculator.html", "/cd-early-withdrawal-penalty-calculator.html", "/cd-calculator.html", "/burn-rate-calculator.html", "/current-ratio-calculator.html", "/guides/how-to-calculate-wacc/", "/guides/capm-cost-of-equity-and-market-risk-premium/", "/guides/macaulay-vs-modified-duration/", "/guides/how-to-calculate-cd-early-withdrawal-penalty/", "/guides/gross-vs-net-burn-rate-and-cash-runway/"].map(path=>[path,'2026-11-18'])),
 };
 Object.assign(wordingReviewDates,Object.fromEntries(["/1031-exchange-calculator.html", "/apr-calculator.html", "/basis-point-calculator.html", "/burn-rate-calculator.html", "/business-calculators.html", "/business-loan-calculator.html", "/capital-gains-tax-calculator.html", "/dca-calculator.html", "/dscr-calculator.html", "/financial-calculator.html", "/glossary/", "/guides/", "/home-maintenance-cost-calculator.html", "/investment-calculator.html", "/lease-calculator.html", "/loan-calculators.html", "/mortgage-calculator.html", "/mortgage-comparison-calculator.html", "/noi-calculator.html", "/operating-cash-flow-calculator.html", "/prorated-rent-calculator.html", "/real-estate-calculator.html", "/refinance-calculator.html", "/rental-property-calculator.html", "/savings-investment-calculators.html", "/stock-average-calculator.html", "/tax-income-calculators.html", "/vacancy-rate-calculator.html", "/arm-mortgage-calculator.html", "/business-line-of-credit-calculator.html", "/glossary/adjustable-rate-mortgage/", "/glossary/business-line-of-credit/", "/glossary/portfolio-rebalancing/", "/glossary/triple-net-lease/", "/guides/arm-vs-fixed-mortgage-rate-caps/", "/guides/business-line-of-credit-vs-term-loan/", "/guides/nnn-vs-gross-lease-cost/", "/guides/rebalance-with-contributions-vs-selling/", "/portfolio-rebalancing-calculator.html", "/triple-net-lease-calculator.html"].map(path=>[path,'2026-11-18'])));
+Object.assign(wordingReviewDates,Object.fromEntries(["/1031-exchange-calculator.html", "/apr-calculator.html", "/average-return-calculator.html", "/business-calculators.html", "/business-loan-calculator.html", "/cap-rate-calculator.html", "/capital-gains-tax-calculator.html", "/cash-on-cash-return-calculator.html", "/coast-fire-calculator.html", "/credit-utilization-calculator.html", "/current-ratio-calculator.html", "/debt-payoff-calculator.html", "/debt-to-equity-ratio-calculator.html", "/dividend-discount-model-calculator.html", "/dscr-calculator.html", "/financial-calculator.html", "/glossary/", "/glossary/sustainable-growth-rate/", "/guides/", "/guides/4-percent-rule/", "/guides/401k-vs-roth-ira/", "/guides/apr-vs-interest-rate/", "/guides/are-mortgage-points-worth-it/", "/guides/balance-transfer-vs-personal-loan/", "/guides/barista-fire-vs-coast-fire/", "/guides/biweekly-vs-monthly-mortgage-payments/", "/guides/cash-out-refinance-vs-heloc/", "/guides/debt-snowball-vs-avalanche/", "/guides/down-payment-and-closing-cost-cash/", "/guides/grm-vs-cap-rate-gross-rent-and-noi/", "/guides/gross-margin-vs-net-margin/", "/guides/how-does-a-1031-exchange-work/", "/guides/how-much-money-do-i-need-to-retire/", "/guides/how-much-to-budget-for-home-maintenance/", "/guides/how-soon-can-you-refinance-a-mortgage/", "/guides/how-to-calculate-capital-gains-tax/", "/guides/how-to-calculate-coast-fire/", "/guides/how-to-calculate-credit-utilization/", "/guides/how-to-calculate-debt-avalanche/", "/guides/how-to-calculate-debt-snowball/", "/guides/how-to-calculate-net-operating-income/", "/guides/how-to-calculate-rental-property-cash-flow/", "/guides/how-to-calculate-rental-vacancy-rate/", "/guides/how-to-calculate-stock-profit/", "/guides/how-to-prorate-rent-by-days/", "/guides/hsa-vs-fsa/", "/guides/is-refinancing-worth-it/", "/guides/nnn-vs-gross-lease-cost/", "/guides/pay-off-mortgage-or-invest/", "/guides/rent-vs-buy-a-house/", "/guides/roth-conversion-taxes/", "/guides/roth-ira-vs-traditional-ira/", "/guides/sba-7a-vs-504-loan-payments/", "/guides/should-i-pay-off-debt-or-save/", "/guides/simple-interest-vs-compound-interest/", "/guides/sustainable-growth-rate-vs-actual-growth/", "/home-maintenance-cost-calculator.html", "/house-affordability-calculator.html", "/investment-calculator.html", "/ira-calculator.html", "/mortgage-calculator.html", "/mortgage-payoff-calculator.html", "/noi-calculator.html", "/operating-cash-flow-calculator.html", "/personal-loan-calculator.html", "/refinance-calculator.html", "/rent-affordability-calculator.html", "/rental-property-calculator.html", "/retirement-calculator.html", "/return-on-equity-calculator.html", "/sustainable-growth-rate-calculator.html", "/vacancy-rate-calculator.html"].map(path=>[path,'2026-11-18'])));
 function assertContentDate(path:string,historicalDate:string){
  assert.equal(contentUpdatedOn[path],wordingReviewDates[path]??historicalDate,path);
 }
@@ -78,7 +79,7 @@ test("Production sitemap lists canonical pages and only reviewed content dates",
     SITE_INDEXABLE: "true",
   });
   const entries = sitemapEntries(config);
-  assert.equal(entries.length,460);
+  assert.equal(entries.length,463);
   for(const [path,date] of Object.entries(wordingReviewDates))assert.equal(contentUpdatedOn[path],date,path);
   for(const path of depthReviewPaths)assertContentDate(path,businessReviewPaths.includes(path)?'2026-11-06':latestGuidePaths.includes(path)?'2026-11-04':contentGuidePaths.includes(path)?'2026-11-03':'2026-11-02');
   assert.ok(entries.some(e=>new URL(e.url).pathname==='/disclaimer.html'));
@@ -192,9 +193,9 @@ test("Contextual related tools are real, distinct and not self-links", () => {
 
 test("Every functional calculator has a unique guide, reproducible examples and specific questions", () => {
   const tools=calculators.filter(c=>!c.directory);
-  assert.equal(tools.length,165);
-  assert.equal(Object.keys(guides).length,165);
-  assert.equal(new Set(Object.values(guides).map(g=>g.summary)).size,165);
+  assert.equal(tools.length,166);
+  assert.equal(Object.keys(guides).length,166);
+  assert.equal(new Set(Object.values(guides).map(g=>g.summary)).size,166);
   for(const tool of tools){
     const guide=guides[tool.id];assert.ok(guide,tool.id);
     assert.ok(guide.summary.length>80 && guide.scope.length>50,tool.id);
@@ -218,7 +219,7 @@ test("Production SEO follows the confirmed www extensionless destination while o
   assert.equal(absoluteURL("/cd-calculator.html",config),"https://www.calculatorfree.io/cd-calculator");
   assert.equal(absoluteURL("/glossary/",config),"https://www.calculatorfree.io/glossary/");
   const entries=sitemapEntries(config);
-  assert.equal(entries.length,460);
+  assert.equal(entries.length,463);
   for(const [path,date] of Object.entries(wordingReviewDates))assert.equal(contentUpdatedOn[path],date,path);
   assert.equal(new Set(entries.map(e=>e.url)).size,entries.length);
   assert.ok(entries.every(e=>e.url.startsWith("https://www.calculatorfree.io/")&&!e.url.endsWith(".html")&&!e.url.includes("?")));

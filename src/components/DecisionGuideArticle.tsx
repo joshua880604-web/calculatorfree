@@ -1,3 +1,4 @@
+import GuideToolLinks from './GuideToolLinks';
 import SourceReferences from './SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import GuideGlossaryLinks from './GuideGlossaryLinks';
@@ -26,5 +27,5 @@ export default function DecisionGuideArticle({topic}:{topic:DecisionGuideTopic})
  <section aria-labelledby="sources"><h2 id="sources">Sources, arithmetic checks and limitations</h2><ul>{data.limitations.map(p=><li key={p}>{p}</li>)}</ul><p>The 19 scenarios across these three guides and the cap-rate comparison were independently calculated in Python Decimal at 60-digit precision and checked against the website models within 0.000001 in the stated units before display rounding. This checks the stated arithmetic, not real-world suitability or an external professional review. Reproduction scripts and CSV assumptions describe this model version; future changes may alter outputs.</p><SourceReferences context={'guide:'+guide.path} sources={data.sources}/><p>Sources explain rules and concepts, not our hypothetical outcomes, and do not endorse the calculators. Read our <SiteLink href="/methodology">methodology and limitations</SiteLink>.</p></section>
  <GuideGlossaryLinks path={guide.path}/>
  <section className="related"><h2>Related tools and concepts</h2><ul>{data.related.map(link=><li key={link.href}><SiteLink href={link.href}>{link.label}</SiteLink></li>)}</ul><p><SiteLink href={data.calculatorPath}>{data.calculatorLabel}</SiteLink> · <SiteLink href="/guides/">All guides</SiteLink></p></section>
- </article></main></div>;
+ <GuideToolLinks path={guide.path}/></article></main></div>;
 }

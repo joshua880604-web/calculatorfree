@@ -1,3 +1,4 @@
+import GuideToolLinks from './GuideToolLinks';
 import type {ReactNode} from 'react';
 import type {EditorialGuide} from '@/lib/editorial-guides';
 import {editorialSchema} from '@/lib/editorial-guides';
@@ -16,6 +17,7 @@ export default function QuestionGuideArticle({guide,sections,sources,children,le
   {lead}
   <nav className="guide-nav" aria-label="Guide sections">{sections.map(s=><a key={s.id} href={'#'+s.id}>{s.label}</a>)}<a href="#sources">Sources & limits</a></nav>
   {children}
+  <GuideToolLinks path={guide.path}/>
   <section aria-labelledby="sources"><h2 id="sources">Sources, checks and limitations</h2><SourceReferences context={'guide:'+guide.path} sources={sources}/><p>Sources explain the rules within their stated scope; they do not endorse this website. Worked examples are hypothetical. No independent professional review is claimed. Read our <SiteLink href="/methodology#editorial-policy">authorship and checking policy</SiteLink> or <SiteLink href="/about#contact">report a correction</SiteLink>.</p></section>
   <p><SiteLink href="/guides/">Browse all financial guides</SiteLink></p>
  </article></main></div>;

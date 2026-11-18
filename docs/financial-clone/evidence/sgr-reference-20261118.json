@@ -1,0 +1,273 @@
+{
+  "date": "2026-11-18",
+  "method": "Independent Decimal arithmetic, 80 digits, explicitly specified annual ROE × retention approximation.",
+  "fixtures": [
+    {
+      "key": "sgr-ratios",
+      "id": "sustainable-growth-rate",
+      "mode": "ratios",
+      "values": {
+        "roe": "15",
+        "payout": "40"
+      },
+      "title": "A 40% payout leaves 60% of earnings",
+      "steps": [
+        "Keep annual ROE at 15%.",
+        "Retention = 1 − 40% = 60%.",
+        "Annual SGR approximation = 15% × 0.60."
+      ],
+      "answer": "The stated annual ROE × retention model gives 9%. It does not predict next year’s sales.",
+      "publish": true,
+      "expected": {
+        "Annual SGR under entered assumptions": "9",
+        "Earnings retention ratio": "60",
+        "Dividend payout ratio": "40",
+        "Annual ROE used": "15"
+      }
+    },
+    {
+      "key": "sgr-financials",
+      "id": "sustainable-growth-rate",
+      "mode": "financials",
+      "values": {
+        "net_income": "180000",
+        "dividends": "72000",
+        "equity_begin": "1000000",
+        "equity_end": "1400000"
+      },
+      "title": "Annual accounting inputs reproduce the same 9%",
+      "steps": [
+        "Average beginning and ending positive equity: ($1,000,000 + $1,400,000) / 2 = $1,200,000.",
+        "ROE = $180,000 / $1,200,000 = 15%; payout = $72,000 / $180,000 = 40%.",
+        "Current-year earnings retained are $108,000, and the same ROE × retention product is 9%."
+      ],
+      "answer": "The annual SGR approximation is 9%, using a two-point average equity base and matching income/dividend scope.",
+      "publish": true,
+      "expected": {
+        "Annual net income used": "180000",
+        "Annual dividends paid": "72000",
+        "Current-year earnings retained": "108000",
+        "Two-point average book equity": "1200000",
+        "Annual SGR under entered assumptions": "9.000",
+        "Earnings retention ratio": "60.0",
+        "Dividend payout ratio": "40.0",
+        "Annual ROE used": "15.00"
+      }
+    },
+    {
+      "key": "sgr-no-payout",
+      "id": "sustainable-growth-rate",
+      "mode": "ratios",
+      "values": {
+        "roe": "15",
+        "payout": "0"
+      },
+      "title": "Retain all earnings at unchanged ROE",
+      "steps": [
+        "Payout is 0%, so retention is 100%.",
+        "Multiply 15% annual ROE by 1.00."
+      ],
+      "answer": "SGR is 15% under the unchanged-ROE assumption. This is not a recommendation to stop dividends.",
+      "publish": true,
+      "expected": {
+        "Annual SGR under entered assumptions": "15",
+        "Earnings retention ratio": "100",
+        "Dividend payout ratio": "0",
+        "Annual ROE used": "15"
+      }
+    },
+    {
+      "key": "sgr-full-payout",
+      "id": "sustainable-growth-rate",
+      "mode": "ratios",
+      "values": {
+        "roe": "15",
+        "payout": "100"
+      },
+      "title": "Distribute all earnings in the equation",
+      "steps": [
+        "Payout of 100% leaves 0% earnings retention.",
+        "Multiply 15% annual ROE by zero."
+      ],
+      "answer": "The result is 0%, rather than an undefined ratio. Real growth could still involve changes outside this model.",
+      "publish": true,
+      "expected": {
+        "Annual SGR under entered assumptions": "0",
+        "Earnings retention ratio": "0",
+        "Dividend payout ratio": "100",
+        "Annual ROE used": "15"
+      }
+    },
+    {
+      "key": "sgr-target",
+      "id": "sustainable-growth-rate",
+      "mode": "target",
+      "values": {
+        "roe": "15",
+        "target_growth": "12"
+      },
+      "title": "Retention needed for a selected 12% target",
+      "steps": [
+        "Hold annual ROE fixed at 15%.",
+        "Required retention = 12% / 15% = 80%.",
+        "The corresponding dividend payout is 100% − 80% = 20%."
+      ],
+      "answer": "An 80% retention assumption yields the selected 12% product. It does not establish the financing or investment needed to achieve it.",
+      "publish": true,
+      "expected": {
+        "Annual SGR under entered assumptions": "12",
+        "Required earnings retention": "80.0",
+        "Implied dividend payout ratio": "20.0",
+        "Annual ROE used": "15"
+      }
+    },
+    {
+      "key": "sgr-target-limit",
+      "id": "sustainable-growth-rate",
+      "mode": "target",
+      "values": {
+        "roe": "15",
+        "target_growth": "15"
+      },
+      "title": "The maximum feasible target at this ROE",
+      "steps": [
+        "At unchanged 15% annual ROE, a 15% target requires 15 / 15 = 100% retention.",
+        "That corresponds to zero dividend payout."
+      ],
+      "answer": "The feasible upper boundary of this 0–100% retention model is 15%; a higher target is rejected.",
+      "publish": true,
+      "expected": {
+        "Annual SGR under entered assumptions": "15",
+        "Required earnings retention": "100",
+        "Implied dividend payout ratio": "0",
+        "Annual ROE used": "15"
+      }
+    },
+    {
+      "key": "sgr-target-zero",
+      "id": "sustainable-growth-rate",
+      "mode": "target",
+      "values": {
+        "roe": "15",
+        "target_growth": "0"
+      },
+      "title": "Zero target",
+      "steps": [],
+      "answer": "",
+      "publish": false,
+      "expected": {
+        "Annual SGR under entered assumptions": "0",
+        "Required earnings retention": "0",
+        "Implied dividend payout ratio": "100",
+        "Annual ROE used": "15"
+      }
+    },
+    {
+      "key": "sgr-target-decimal",
+      "id": "sustainable-growth-rate",
+      "mode": "target",
+      "values": {
+        "roe": "12.5",
+        "target_growth": "7.5"
+      },
+      "title": "Fractional target",
+      "steps": [],
+      "answer": "",
+      "publish": false,
+      "expected": {
+        "Annual SGR under entered assumptions": "7.5",
+        "Required earnings retention": "60.0",
+        "Implied dividend payout ratio": "40.0",
+        "Annual ROE used": "12.5"
+      }
+    },
+    {
+      "key": "sgr-small-target",
+      "id": "sustainable-growth-rate",
+      "mode": "target",
+      "values": {
+        "roe": "0.1",
+        "target_growth": "0.05"
+      },
+      "title": "Small positive ROE",
+      "steps": [],
+      "answer": "",
+      "publish": false,
+      "expected": {
+        "Annual SGR under entered assumptions": "0.05",
+        "Required earnings retention": "50.0",
+        "Implied dividend payout ratio": "50.0",
+        "Annual ROE used": "0.1"
+      }
+    },
+    {
+      "key": "sgr-payout-fraction",
+      "id": "sustainable-growth-rate",
+      "mode": "ratios",
+      "values": {
+        "roe": "12.5",
+        "payout": "33.3333"
+      },
+      "title": "Fractional payout",
+      "steps": [],
+      "answer": "",
+      "publish": false,
+      "expected": {
+        "Annual SGR under entered assumptions": "8.3333375",
+        "Earnings retention ratio": "66.6667",
+        "Dividend payout ratio": "33.3333",
+        "Annual ROE used": "12.5"
+      }
+    },
+    {
+      "key": "sgr-financial-other",
+      "id": "sustainable-growth-rate",
+      "mode": "financials",
+      "values": {
+        "net_income": "200000",
+        "dividends": "50000",
+        "equity_begin": "1000000",
+        "equity_end": "3000000"
+      },
+      "title": "Asymmetric equity endpoints",
+      "steps": [],
+      "answer": "",
+      "publish": false,
+      "expected": {
+        "Annual net income used": "200000",
+        "Annual dividends paid": "50000",
+        "Current-year earnings retained": "150000",
+        "Two-point average book equity": "2000000",
+        "Annual SGR under entered assumptions": "7.500",
+        "Earnings retention ratio": "75.00",
+        "Dividend payout ratio": "25.00",
+        "Annual ROE used": "10.0"
+      }
+    },
+    {
+      "key": "sgr-financial-full-payout",
+      "id": "sustainable-growth-rate",
+      "mode": "financials",
+      "values": {
+        "net_income": "180000",
+        "dividends": "180000",
+        "equity_begin": "1000000",
+        "equity_end": "1400000"
+      },
+      "title": "All positive income distributed",
+      "steps": [],
+      "answer": "",
+      "publish": false,
+      "expected": {
+        "Annual net income used": "180000",
+        "Annual dividends paid": "180000",
+        "Current-year earnings retained": "0",
+        "Two-point average book equity": "1200000",
+        "Annual SGR under entered assumptions": "0.00",
+        "Earnings retention ratio": "0",
+        "Dividend payout ratio": "100",
+        "Annual ROE used": "15.00"
+      }
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import sgrContent from './sgr-content.json';
 import ratioPropertyThreeContent from './ratio-property-three-content.json';
 import specialistFourContent from './specialist-four-content.json';
 import financeThreeContent from './finance-three-content.json';
@@ -1066,3 +1067,7 @@ for(const [id,links] of Object.entries(ratioPropertyThreeRelated)){
  relatedCalculatorIds[id]=links;
  for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])];
 }
+
+Object.assign(guides,sgrContent as unknown as Record<string,Guide>);
+relatedCalculatorIds["sustainable-growth-rate"]=["return-on-equity", "debt-to-equity-ratio", "dividend-discount-model", "operating-cash-flow"];
+for(const id of relatedCalculatorIds["sustainable-growth-rate"])relatedCalculatorIds[id]=[...new Set(["sustainable-growth-rate",...(relatedCalculatorIds[id]??[])])];

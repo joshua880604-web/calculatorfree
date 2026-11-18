@@ -31,9 +31,10 @@ test('Substantive question updates preserve original publication and advance rev
  assert.equal(updated.length,63);
  for(const path of ['/guides/how-to-read-amortization-and-loan-payments/','/guides/compound-interest-with-monthly-contributions/','/guides/balance-transfer-vs-personal-loan/','/guides/irr-vs-npv/']){
   const guide=editorialGuides.find(g=>g.path===path)!;
-  assert.equal(guide.linksUpdatedOn,'2026-11-16');
-  assert.equal(editorialSchema(guide,config)['@graph'][0].dateModified,'2026-11-16');
-  assert.equal(sitemapEntries(config).find(e=>e.url===config.origin+path)!.lastModified,'2026-11-16');
+  const expected=path==='/guides/balance-transfer-vs-personal-loan/'?'2026-11-18':'2026-11-16';
+  assert.equal(guide.linksUpdatedOn,expected);
+  assert.equal(editorialSchema(guide,config)['@graph'][0].dateModified,expected);
+  assert.equal(sitemapEntries(config).find(e=>e.url===config.origin+path)!.lastModified,expected);
  }
  assert.equal(editorialGuides.find(g=>g.path==='/guides/compound-interest-with-monthly-contributions/')!.updatedOn,'2026-11-04','A link update must not advance the arithmetic/source-check date.');
  const november4Updates=new Set(["/guides/how-are-heloc-payments-calculated/", "/guides/how-to-calculate-home-equity-loan-payments/", "/guides/how-to-calculate-personal-loan-payments/", "/guides/how-to-compare-debt-consolidation-loans/", "/guides/roth-conversion-ladder/"]);

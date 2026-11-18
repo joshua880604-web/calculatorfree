@@ -205,7 +205,7 @@ export default async function Page({
             <SearchTasks id={c.id} />
             <CalculatorGuide calculator={c} />
             <EmbedCitationHelp id={c.id} title={c.title}/>
-            {motherPageCopy[c.id] ? (editorialGuides.some(guide=>guide.calculatorIds.includes(c.id))&&<section className="related"><h2>Related guides</h2><ul>{editorialGuides.filter(guide=>guide.calculatorIds.includes(c.id)).map(guide=><li key={guide.path}><SiteLink href={guide.path}>{guide.heading}</SiteLink> — {guide.cardIntro}</li>)}</ul></section>) : editorialGuides.filter(guide=>guide.calculatorIds.includes(c.id)).map(guide=><section className="related" key={guide.path}><h2>Related guide</h2><p><SiteLink href={guide.path}>{guide.heading}</SiteLink>: {guide.cardIntro}</p></section>)}
+            {editorialGuides.some(guide=>guide.calculatorIds.includes(c.id))&&<section className="related"><h2>Related guides</h2><ul>{editorialGuides.filter(guide=>guide.calculatorIds.includes(c.id)).map(guide=><li key={guide.path}><SiteLink href={guide.path}>{guide.heading}</SiteLink> — {guide.cardIntro}</li>)}</ul></section>}
           </>
         ) : (
           <Directory />
@@ -225,7 +225,7 @@ export default async function Page({
                     relatedCalculatorIds[c.id].indexOf(b.id)
                   : 0,
               )
-              .slice(0, 8)
+              .slice(0, relatedCalculatorIds[c.id]?.length ?? 8)
               .map((x) => (
                 <SiteLink href={routeFor(x.id)} key={x.id}>
                   {x.title}
