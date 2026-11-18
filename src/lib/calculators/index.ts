@@ -1,3 +1,6 @@
+import {sortinoRatioCalculator} from './sortino-ratio';
+import {grossRentMultiplierCalculator} from './gross-rent-multiplier';
+import {debtToEquityRatioCalculator} from './debt-to-equity-ratio';
 import {businessLineOfCreditCalculator} from './business-line-of-credit';
 import {tripleNetLeaseCalculator} from './triple-net-lease';
 import {armMortgageCalculator} from './arm-mortgage';
@@ -74,6 +77,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  sortinoRatioCalculator,grossRentMultiplierCalculator,debtToEquityRatioCalculator,
   businessLineOfCreditCalculator,tripleNetLeaseCalculator,armMortgageCalculator,portfolioRebalancingCalculator,
   basisPointCalculator,proratedRentCalculator,operatingCashFlowCalculator,
   stockSplitCalculator,customerAcquisitionCostCalculator,dividendDiscountModelCalculator,earningsPerShareCalculator,sharpeRatioCalculator,blackScholesCalculator,

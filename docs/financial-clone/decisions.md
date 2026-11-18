@@ -108,3 +108,9 @@ User explicitly requested these three priorities after FNCalculator review. Impl
 ## 2026-10-26 — Category organization
 
 User approved six financial categories plus supporting general tools, consistent desktop/mobile navigation, scenario subgroups and contextual sidebars. Preserve every old page URL and category fragment. Use a separate display taxonomy so calculation-engine source categories and policy/form behavior remain intact.
+
+
+### 2026-11-18 — Sortino, GRM and corporate D/E
+Developing three original tools in preview/ratio-property-three-20261118; seven modes. Explicit matching-period/all-N Sortino, gross-rent-only screening, and corporate book-equity leverage definitions. Production remains at the existing specialist-four release. Verification evidence and status will be recorded in ratio-property-three-20261118.md.
+
+Verification complete for the three-tool batch: 2,843 tests, production-config static export, 22 independent reference cases, 28 mode/viewport checks and 460-page structural/link audit passed. See ratio-property-three-20261118.md. Remote preview pending; production unchanged.

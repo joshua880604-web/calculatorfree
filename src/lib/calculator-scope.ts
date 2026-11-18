@@ -4,6 +4,9 @@ import {roth401kComparisonScope} from './roth-401k-scope';
 // Scope labels describe implemented rules, not a promise of worldwide tax support.
 export function calculatorScope(id: string, mode: string, values: Values): string | undefined {
   switch (id) {
+    case 'sortino-ratio': return 'Matching-period simple returns, fixed target and all-observation downside deviation. Period ratios only; no automatic annualization, live market prices or performance rating.';
+    case 'gross-rent-multiplier': return 'Whole-property price and scheduled gross rent before expenses, vacancy, financing and tax. Reverse modes use your selected multiplier; no appraisal, net yield or payback estimate.';
+    case 'debt-to-equity-ratio': return 'Manual company balance-sheet amounts and book equity with a selected liabilities or borrowing definition. Nonpositive equity is flagged. Repayment assumes existing company cash; new equity stays in the business. No personal DTI or credit approval.';
     case "mortgage-buydown": return "Fixed-rate, monthly amortizing loans only. Tax, insurance, mortgage insurance and closing charges are excluded. No eligibility, approval, source-of-funds limits or unused subsidy refund is determined.";
     case "cash-secured-put": return "Manual, standard share-delivery puts held to expiration. No live option chain, fair-value pricing, early-close model, assignment probability or tax calculation. Broker collateral rules can differ.";
     case "profitability-index": return "One positive initial outlay and manually entered future net flows or a known discounted PV. Periodic flows start at the end of period 1. This is not the alternative ratio of positive inflows to all outflows.";

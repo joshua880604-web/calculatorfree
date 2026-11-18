@@ -1,0 +1,368 @@
+{
+  "date": "2026-11-18",
+  "fixtures": [
+    {
+      "key": "sortino-basic",
+      "id": "sortino-ratio",
+      "mode": "return-series",
+      "values": {
+        "returns": "-3, 1, 4, 10",
+        "period": "Monthly",
+        "target": "1"
+      },
+      "title": "All four observations stay in the denominator",
+      "steps": [
+        "Mean = (−3 + 1 + 4 + 10) / 4 = 3%.",
+        "Against a 1% target, squared shortfalls are 16, 0, 0 and 0 in percentage-point units.",
+        "Downside deviation = sqrt(16 / 4) = 2 points; Sortino = (3 − 1) / 2."
+      ],
+      "answer": "Monthly period Sortino is 1.0000, with downside deviation of 2 percentage points.",
+      "publish": true
+    },
+    {
+      "key": "sortino-statistics",
+      "id": "sortino-ratio",
+      "mode": "statistics",
+      "values": {
+        "mean_return": "3",
+        "downside_deviation": "2",
+        "period": "Monthly",
+        "target": "1"
+      },
+      "title": "Known statistics reproduce the series result",
+      "steps": [
+        "Use arithmetic mean 3%, target 1% and matching-period downside deviation 2 points.",
+        "Divide the 2-point mean-minus-target return by 2-point downside deviation."
+      ],
+      "answer": "The same monthly period ratio is 1.0000; ordinary standard deviation would be a different denominator.",
+      "publish": true
+    },
+    {
+      "key": "sortino-target-zero",
+      "id": "sortino-ratio",
+      "mode": "return-series",
+      "values": {
+        "returns": "-3, 1, 4, 10",
+        "period": "Monthly",
+        "target": "0"
+      },
+      "title": "Changing only the target changes the downside set",
+      "steps": [
+        "Keep the four returns and lower the fixed monthly target from 1% to 0%.",
+        "Only the −3% return is below target: downside deviation = sqrt(9 / 4) = 1.5 points.",
+        "Mean-minus-target is 3 points."
+      ],
+      "answer": "Monthly Sortino becomes 2.0000, rather than 1.0000. The comparison changed its objective.",
+      "publish": true
+    },
+    {
+      "key": "sortino-negative",
+      "id": "sortino-ratio",
+      "mode": "return-series",
+      "values": {
+        "returns": "-3, -1, 0, 0",
+        "period": "Monthly",
+        "target": "0"
+      },
+      "title": "Negative mean return keeps a negative ratio",
+      "steps": [
+        "The arithmetic mean is −1%.",
+        "Squared shortfalls sum to 10; divide by all four observations before taking the square root.",
+        "Sortino = −1 / sqrt(2.5)."
+      ],
+      "answer": "Period Sortino is about −0.6325, with downside deviation about 1.5811 percentage points.",
+      "publish": true
+    },
+    {
+      "key": "sortino-zero",
+      "id": "sortino-ratio",
+      "mode": "return-series",
+      "values": {
+        "returns": "1, 2, 3, 4",
+        "period": "Monthly",
+        "target": "1"
+      },
+      "title": "Every return meets the target",
+      "steps": [
+        "Each return meets or exceeds the fixed 1% target.",
+        "Every shortfall is zero, so downside deviation is zero."
+      ],
+      "answer": "The ratio is undefined; it is not reported as infinity, a real zero or a guaranteed good score.",
+      "publish": true
+    },
+    {
+      "key": "sortino-annual",
+      "id": "sortino-ratio",
+      "mode": "return-series",
+      "values": {
+        "returns": "-3, 1, 4, 10",
+        "period": "Annual",
+        "target": "1"
+      },
+      "title": "Annual observations retain their own period",
+      "steps": [],
+      "answer": "",
+      "publish": false
+    },
+    {
+      "key": "sortino-loss-boundary",
+      "id": "sortino-ratio",
+      "mode": "return-series",
+      "values": {
+        "returns": "-100, 0",
+        "period": "Monthly",
+        "target": "0"
+      },
+      "title": "A full loss is accepted as a simple return",
+      "steps": [],
+      "answer": "",
+      "publish": false
+    },
+    {
+      "key": "sortino-zero-stat",
+      "id": "sortino-ratio",
+      "mode": "statistics",
+      "values": {
+        "mean_return": "3",
+        "downside_deviation": "0",
+        "period": "Monthly",
+        "target": "1"
+      },
+      "title": "Zero entered downside deviation",
+      "steps": [],
+      "answer": "",
+      "publish": false
+    },
+    {
+      "key": "grm-monthly",
+      "id": "gross-rent-multiplier",
+      "mode": "grm",
+      "values": {
+        "price": "360000",
+        "rent": "2400",
+        "rent_period": "Monthly"
+      },
+      "title": "Monthly rent becomes annual rent before division",
+      "steps": [
+        "Annual gross rent = $2,400 × 12 = $28,800.",
+        "GRM = $360,000 / $28,800 = 12.5.",
+        "Gross annual rent yield = $28,800 / $360,000 × 100 = 8%."
+      ],
+      "answer": "The property is priced at 12.5 times scheduled annual rent, with an 8% gross rent yield before expenses.",
+      "publish": true
+    },
+    {
+      "key": "grm-annual",
+      "id": "gross-rent-multiplier",
+      "mode": "grm",
+      "values": {
+        "price": "360000",
+        "rent": "28800",
+        "rent_period": "Annual"
+      },
+      "title": "Annual and monthly inputs reconcile",
+      "steps": [
+        "Enter $28,800 annual rent instead of $2,400 monthly rent.",
+        "The annual rent denominator stays $28,800."
+      ],
+      "answer": "GRM remains 12.5 and gross annual rent yield remains 8%. Changing units alone without converting rent would give a wrong comparison.",
+      "publish": true
+    },
+    {
+      "key": "grm-price",
+      "id": "gross-rent-multiplier",
+      "mode": "price",
+      "values": {
+        "rent": "2400",
+        "rent_period": "Monthly",
+        "grm": "12.5"
+      },
+      "title": "Reverse the formula for a selected price",
+      "steps": [
+        "Annualize $2,400 monthly gross rent to $28,800.",
+        "Multiply that rent by the user-selected GRM of 12.5."
+      ],
+      "answer": "The implied price is $360,000 under that chosen multiplier; this does not verify market value.",
+      "publish": true
+    },
+    {
+      "key": "grm-rent",
+      "id": "gross-rent-multiplier",
+      "mode": "rent",
+      "values": {
+        "price": "360000",
+        "grm": "12.5",
+        "rent_period": "Monthly"
+      },
+      "title": "Reverse the formula for required rent",
+      "steps": [
+        "Divide the entered $360,000 price by a selected GRM of 12.5.",
+        "Divide $28,800 required annual rent by 12."
+      ],
+      "answer": "Required monthly gross rent is $2,400; the calculation does not establish that a tenant will pay it.",
+      "publish": true
+    },
+    {
+      "key": "grm-rent-annual",
+      "id": "gross-rent-multiplier",
+      "mode": "rent",
+      "values": {
+        "price": "360000",
+        "grm": "12.5",
+        "rent_period": "Annual"
+      },
+      "title": "Required annual output",
+      "steps": [],
+      "answer": "",
+      "publish": false
+    },
+    {
+      "key": "grm-other",
+      "id": "gross-rent-multiplier",
+      "mode": "grm",
+      "values": {
+        "price": "525000",
+        "rent": "3500",
+        "rent_period": "Monthly"
+      },
+      "title": "Different price and rent",
+      "steps": [],
+      "answer": "",
+      "publish": false
+    },
+    {
+      "key": "de-total",
+      "id": "debt-to-equity-ratio",
+      "mode": "snapshot",
+      "values": {
+        "debt_basis": "Total liabilities",
+        "debt": "240000",
+        "equity": "160000"
+      },
+      "title": "Total liabilities divided by book equity",
+      "steps": [
+        "Use $240,000 total liabilities and $160,000 matching book equity.",
+        "D/E = 240,000 / 160,000.",
+        "Selected liabilities / (liabilities + equity) = 240,000 / 400,000."
+      ],
+      "answer": "D/E is 1.5000 and the selected numerator/capital share is 60%.",
+      "publish": true
+    },
+    {
+      "key": "de-interest",
+      "id": "debt-to-equity-ratio",
+      "mode": "snapshot",
+      "values": {
+        "debt_basis": "Interest-bearing debt",
+        "debt": "160000",
+        "equity": "160000"
+      },
+      "title": "A narrower debt definition gives a different ratio",
+      "steps": [
+        "For the same company and $160,000 equity, select $160,000 interest-bearing debt rather than $240,000 total liabilities.",
+        "D/E becomes 160,000 / 160,000 = 1.",
+        "The selected capital denominator is 160,000 + 160,000, excluding $80,000 other liabilities."
+      ],
+      "answer": "Borrowing-based D/E is 1.0000 and selected debt/capital is 50%; debt/total assets would instead be 40% if assets are $400,000.",
+      "publish": true
+    },
+    {
+      "key": "de-changes",
+      "id": "debt-to-equity-ratio",
+      "mode": "changes",
+      "values": {
+        "debt_basis": "Total liabilities",
+        "debt": "240000",
+        "equity": "160000",
+        "repayment": "40000",
+        "equity_injection": "40000"
+      },
+      "title": "Repayment and new equity affect different balances",
+      "steps": [
+        "Repay $40,000 from existing company cash: liabilities fall to $200,000 and equity stays $160,000.",
+        "Separately raise $40,000 new equity retained as cash: equity becomes $200,000.",
+        "Apply both independent entries: D/E = 200,000 / 200,000."
+      ],
+      "answer": "D/E moves from 1.5000 to 1.0000; repayment alone gives 1.2500 and new equity alone gives 1.2000.",
+      "publish": true
+    },
+    {
+      "key": "de-restore",
+      "id": "debt-to-equity-ratio",
+      "mode": "changes",
+      "values": {
+        "debt_basis": "Total liabilities",
+        "debt": "100000",
+        "equity": "-20000",
+        "repayment": "0",
+        "equity_injection": "70000"
+      },
+      "title": "New equity can restore a positive denominator",
+      "steps": [
+        "The initial $−20,000 book equity does not receive a meaningful D/E score.",
+        "A $70,000 new equity injection retained in the company increases equity to $50,000.",
+        "Debt remains $100,000, giving an after-change ratio of 2."
+      ],
+      "answer": "The before-change ratio stays flagged. After-change D/E is 2.0000 once equity becomes positive.",
+      "publish": true
+    },
+    {
+      "key": "de-zero",
+      "id": "debt-to-equity-ratio",
+      "mode": "snapshot",
+      "values": {
+        "debt_basis": "Total liabilities",
+        "debt": "240000",
+        "equity": "0"
+      },
+      "title": "Zero equity",
+      "steps": [],
+      "answer": "",
+      "publish": false
+    },
+    {
+      "key": "de-negative",
+      "id": "debt-to-equity-ratio",
+      "mode": "snapshot",
+      "values": {
+        "debt_basis": "Total liabilities",
+        "debt": "240000",
+        "equity": "-40000"
+      },
+      "title": "Negative equity",
+      "steps": [],
+      "answer": "",
+      "publish": false
+    },
+    {
+      "key": "de-debt-zero",
+      "id": "debt-to-equity-ratio",
+      "mode": "snapshot",
+      "values": {
+        "debt_basis": "Total liabilities",
+        "debt": "0",
+        "equity": "160000"
+      },
+      "title": "Zero debt positive equity",
+      "steps": [],
+      "answer": "",
+      "publish": false
+    },
+    {
+      "key": "de-full-repay",
+      "id": "debt-to-equity-ratio",
+      "mode": "changes",
+      "values": {
+        "debt_basis": "Total liabilities",
+        "debt": "240000",
+        "equity": "160000",
+        "repayment": "240000",
+        "equity_injection": "0"
+      },
+      "title": "Full repayment",
+      "steps": [],
+      "answer": "",
+      "publish": false
+    }
+  ]
+}

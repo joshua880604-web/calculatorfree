@@ -70,13 +70,15 @@ test("SEO defaults never invent a public origin or enable preview indexing", () 
   ])
     assert.throws(() => siteConfig({ SITE_URL: url }));
 });
+const ratioPropertyPaths=['/sortino-ratio-calculator.html','/gross-rent-multiplier-calculator.html','/debt-to-equity-ratio-calculator.html','/guides/sortino-vs-sharpe-target-and-downside/','/guides/grm-vs-cap-rate-gross-rent-and-noi/','/guides/debt-to-equity-definitions-and-capital-changes/','/glossary/sortino-ratio/','/glossary/gross-rent-multiplier/','/glossary/debt-to-equity-ratio/'];
+for(const path of ratioPropertyPaths)wordingReviewDates[path]='2026-11-18';
 test("Production sitemap lists canonical pages and only reviewed content dates", () => {
   const config = siteConfig({
     SITE_URL: "https://finance.example/",
     SITE_INDEXABLE: "true",
   });
   const entries = sitemapEntries(config);
-  assert.equal(entries.length,451);
+  assert.equal(entries.length,460);
   for(const [path,date] of Object.entries(wordingReviewDates))assert.equal(contentUpdatedOn[path],date,path);
   for(const path of depthReviewPaths)assertContentDate(path,businessReviewPaths.includes(path)?'2026-11-06':latestGuidePaths.includes(path)?'2026-11-04':contentGuidePaths.includes(path)?'2026-11-03':'2026-11-02');
   assert.ok(entries.some(e=>new URL(e.url).pathname==='/disclaimer.html'));
@@ -190,9 +192,9 @@ test("Contextual related tools are real, distinct and not self-links", () => {
 
 test("Every functional calculator has a unique guide, reproducible examples and specific questions", () => {
   const tools=calculators.filter(c=>!c.directory);
-  assert.equal(tools.length,162);
-  assert.equal(Object.keys(guides).length,162);
-  assert.equal(new Set(Object.values(guides).map(g=>g.summary)).size,162);
+  assert.equal(tools.length,165);
+  assert.equal(Object.keys(guides).length,165);
+  assert.equal(new Set(Object.values(guides).map(g=>g.summary)).size,165);
   for(const tool of tools){
     const guide=guides[tool.id];assert.ok(guide,tool.id);
     assert.ok(guide.summary.length>80 && guide.scope.length>50,tool.id);
@@ -216,7 +218,7 @@ test("Production SEO follows the confirmed www extensionless destination while o
   assert.equal(absoluteURL("/cd-calculator.html",config),"https://www.calculatorfree.io/cd-calculator");
   assert.equal(absoluteURL("/glossary/",config),"https://www.calculatorfree.io/glossary/");
   const entries=sitemapEntries(config);
-  assert.equal(entries.length,451);
+  assert.equal(entries.length,460);
   for(const [path,date] of Object.entries(wordingReviewDates))assert.equal(contentUpdatedOn[path],date,path);
   assert.equal(new Set(entries.map(e=>e.url)).size,entries.length);
   assert.ok(entries.every(e=>e.url.startsWith("https://www.calculatorfree.io/")&&!e.url.endsWith(".html")&&!e.url.includes("?")));

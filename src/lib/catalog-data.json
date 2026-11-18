@@ -837,5 +837,8 @@
   {"id": "business-line-of-credit", "category": "Other", "title": "Business Line of Credit Calculator", "local_route": "/business-line-of-credit-calculator.html"},
   {"id": "triple-net-lease", "category": "Mortgage and Real Estate", "title": "Triple Net Lease Calculator", "local_route": "/triple-net-lease-calculator.html"},
   {"id": "arm-mortgage", "category": "Mortgage and Real Estate", "title": "ARM Mortgage Calculator", "local_route": "/arm-mortgage-calculator.html"},
-  {"id": "portfolio-rebalancing", "category": "Investment", "title": "Portfolio Rebalancing Calculator", "local_route": "/portfolio-rebalancing-calculator.html"}
+  {"id": "portfolio-rebalancing", "category": "Investment", "title": "Portfolio Rebalancing Calculator", "local_route": "/portfolio-rebalancing-calculator.html"},
+  {"id": "sortino-ratio", "title": "Sortino Ratio Calculator", "category": "Investment", "local_route": "/sortino-ratio-calculator.html"},
+  {"id": "gross-rent-multiplier", "title": "Gross Rent Multiplier (GRM) Calculator", "category": "Mortgage and Real Estate", "local_route": "/gross-rent-multiplier-calculator.html"},
+  {"id": "debt-to-equity-ratio", "title": "Debt-to-Equity Ratio Calculator", "category": "Other", "local_route": "/debt-to-equity-ratio-calculator.html"}
 ]

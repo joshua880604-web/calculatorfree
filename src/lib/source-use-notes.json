@@ -1717,6 +1717,21 @@
       "role": "background",
       "usedFor": "Rebalancing terminology and the role of trading, contributions, fees and taxes.",
       "scope": "General educational context. Our deficit-based cash allocation and exact cent rounding are stated worksheet conventions, not an SEC-recommended strategy or asset allocation."
+    },
+    "https://rpc.cfainstitute.org/sites/default/files/-/media/documents/code/gips/the-sortino-ratio.pdf": {
+      "role": "background",
+      "usedFor": "The role of a target return, downside deviation, denominator conventions and limitations of cross-period scaling.",
+      "scope": "Concept reference. This worksheet explicitly chooses all N observations and reports a period ratio only. The source does not validate our original examples or professionally review this site."
+    },
+    "https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-is-a-gross-rent-multiplier-grm": {
+      "role": "background",
+      "usedFor": "Property price divided by annual gross rent and comparison with similar properties.",
+      "scope": "Concept reference; the indexed source supplied the formula, while direct body access was restricted during research. No local market multiplier, appraisal or achievable rent is supplied."
+    },
+    "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/financial-tools/debt-to-equity-ratio": {
+      "role": "background",
+      "usedFor": "A documented total-liabilities / shareholders’ equity definition and the need to interpret leverage in context.",
+      "scope": "BDC is a Canadian institution. Its definition is background, not a US lending requirement, unique industry standard, endorsement or professional review. Our narrower borrowing definition is identified separately."
     }
   },
   "pages": {
@@ -4466,6 +4481,105 @@
           "role": "background",
           "usedFor": "Rebalancing terminology and the role of trading, contributions, fees and taxes.",
           "scope": "General educational context. Our deficit-based cash allocation and exact cent rounding are stated worksheet conventions, not an SEC-recommended strategy or asset allocation."
+        }
+      }
+    },
+    "calculator:sortino-ratio": {
+      "updatedOn": "2026-11-18",
+      "note": "Original hypothetical arithmetic was checked separately with Python Decimal at 80-digit precision. Concept citations do not imply endorsement, source review of this implementation or professional certification.",
+      "overrides": {
+        "https://rpc.cfainstitute.org/sites/default/files/-/media/documents/code/gips/the-sortino-ratio.pdf": {
+          "role": "background",
+          "usedFor": "The role of a target return, downside deviation, denominator conventions and limitations of cross-period scaling.",
+          "scope": "Concept reference. This worksheet explicitly chooses all N observations and reports a period ratio only. The source does not validate our original examples or professionally review this site."
+        }
+      }
+    },
+    "guide:/guides/sortino-vs-sharpe-target-and-downside/": {
+      "updatedOn": "2026-11-18",
+      "note": "Original hypothetical arithmetic was checked separately with Python Decimal at 80-digit precision. Concept citations do not imply endorsement, source review of this implementation or professional certification.",
+      "overrides": {
+        "https://rpc.cfainstitute.org/sites/default/files/-/media/documents/code/gips/the-sortino-ratio.pdf": {
+          "role": "background",
+          "usedFor": "The role of a target return, downside deviation, denominator conventions and limitations of cross-period scaling.",
+          "scope": "Concept reference. This worksheet explicitly chooses all N observations and reports a period ratio only. The source does not validate our original examples or professionally review this site."
+        }
+      }
+    },
+    "glossary:sortino-ratio": {
+      "updatedOn": "2026-11-18",
+      "note": "Original hypothetical arithmetic was checked separately with Python Decimal at 80-digit precision. Concept citations do not imply endorsement, source review of this implementation or professional certification.",
+      "overrides": {
+        "https://rpc.cfainstitute.org/sites/default/files/-/media/documents/code/gips/the-sortino-ratio.pdf": {
+          "role": "background",
+          "usedFor": "The role of a target return, downside deviation, denominator conventions and limitations of cross-period scaling.",
+          "scope": "Concept reference. This worksheet explicitly chooses all N observations and reports a period ratio only. The source does not validate our original examples or professionally review this site."
+        }
+      }
+    },
+    "calculator:gross-rent-multiplier": {
+      "updatedOn": "2026-11-18",
+      "note": "Original hypothetical arithmetic was checked separately with Python Decimal at 80-digit precision. Concept citations do not imply endorsement, source review of this implementation or professional certification.",
+      "overrides": {
+        "https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-is-a-gross-rent-multiplier-grm": {
+          "role": "background",
+          "usedFor": "Property price divided by annual gross rent and comparison with similar properties.",
+          "scope": "Concept reference; the indexed source supplied the formula, while direct body access was restricted during research. No local market multiplier, appraisal or achievable rent is supplied."
+        }
+      }
+    },
+    "guide:/guides/grm-vs-cap-rate-gross-rent-and-noi/": {
+      "updatedOn": "2026-11-18",
+      "note": "Original hypothetical arithmetic was checked separately with Python Decimal at 80-digit precision. Concept citations do not imply endorsement, source review of this implementation or professional certification.",
+      "overrides": {
+        "https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-is-a-gross-rent-multiplier-grm": {
+          "role": "background",
+          "usedFor": "Property price divided by annual gross rent and comparison with similar properties.",
+          "scope": "Concept reference; the indexed source supplied the formula, while direct body access was restricted during research. No local market multiplier, appraisal or achievable rent is supplied."
+        }
+      }
+    },
+    "glossary:gross-rent-multiplier": {
+      "updatedOn": "2026-11-18",
+      "note": "Original hypothetical arithmetic was checked separately with Python Decimal at 80-digit precision. Concept citations do not imply endorsement, source review of this implementation or professional certification.",
+      "overrides": {
+        "https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-is-a-gross-rent-multiplier-grm": {
+          "role": "background",
+          "usedFor": "Property price divided by annual gross rent and comparison with similar properties.",
+          "scope": "Concept reference; the indexed source supplied the formula, while direct body access was restricted during research. No local market multiplier, appraisal or achievable rent is supplied."
+        }
+      }
+    },
+    "calculator:debt-to-equity-ratio": {
+      "updatedOn": "2026-11-18",
+      "note": "Original hypothetical arithmetic was checked separately with Python Decimal at 80-digit precision. Concept citations do not imply endorsement, source review of this implementation or professional certification.",
+      "overrides": {
+        "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/financial-tools/debt-to-equity-ratio": {
+          "role": "background",
+          "usedFor": "A documented total-liabilities / shareholders’ equity definition and the need to interpret leverage in context.",
+          "scope": "BDC is a Canadian institution. Its definition is background, not a US lending requirement, unique industry standard, endorsement or professional review. Our narrower borrowing definition is identified separately."
+        }
+      }
+    },
+    "guide:/guides/debt-to-equity-definitions-and-capital-changes/": {
+      "updatedOn": "2026-11-18",
+      "note": "Original hypothetical arithmetic was checked separately with Python Decimal at 80-digit precision. Concept citations do not imply endorsement, source review of this implementation or professional certification.",
+      "overrides": {
+        "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/financial-tools/debt-to-equity-ratio": {
+          "role": "background",
+          "usedFor": "A documented total-liabilities / shareholders’ equity definition and the need to interpret leverage in context.",
+          "scope": "BDC is a Canadian institution. Its definition is background, not a US lending requirement, unique industry standard, endorsement or professional review. Our narrower borrowing definition is identified separately."
+        }
+      }
+    },
+    "glossary:debt-to-equity-ratio": {
+      "updatedOn": "2026-11-18",
+      "note": "Original hypothetical arithmetic was checked separately with Python Decimal at 80-digit precision. Concept citations do not imply endorsement, source review of this implementation or professional certification.",
+      "overrides": {
+        "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/financial-tools/debt-to-equity-ratio": {
+          "role": "background",
+          "usedFor": "A documented total-liabilities / shareholders’ equity definition and the need to interpret leverage in context.",
+          "scope": "BDC is a Canadian institution. Its definition is background, not a US lending requirement, unique industry standard, endorsement or professional review. Our narrower borrowing definition is identified separately."
         }
       }
     }

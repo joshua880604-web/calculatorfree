@@ -1,3 +1,4 @@
+import ratioPropertyThreeContent from './ratio-property-three-content.json';
 import specialistFourContent from './specialist-four-content.json';
 import financeThreeContent from './finance-three-content.json';
 import marketsSixContent from './markets-six-content.json';
@@ -1055,6 +1056,13 @@ const specialistFourRelated:Record<string,string[]>={
  'portfolio-rebalancing':['investment','dca','stock-average','capital-gains-tax']
 };
 for(const [id,links] of Object.entries(specialistFourRelated)){
+ relatedCalculatorIds[id]=links;
+ for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])];
+}
+
+Object.assign(guides,ratioPropertyThreeContent as unknown as Record<string,Guide>);
+const ratioPropertyThreeRelated:Record<string,string[]>={"sortino-ratio": ["sharpe-ratio", "average-return", "portfolio-rebalancing"], "gross-rent-multiplier": ["cap-rate", "noi", "rental-property"], "debt-to-equity-ratio": ["wacc", "return-on-equity", "interest-coverage-ratio", "current-ratio"]};
+for(const [id,links] of Object.entries(ratioPropertyThreeRelated)){
  relatedCalculatorIds[id]=links;
  for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])];
 }

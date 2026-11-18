@@ -1,0 +1,384 @@
+{
+  "sortino-ratio": {
+    "checkedOn": "2026-11-18",
+    "summary": "Sortino divides arithmetic mean return minus a fixed target by downside deviation relative to that target. For monthly returns −3%, 1%, 4% and 10% with a 1% monthly target, this worksheet gives a period ratio of 1.0000. All four observations stay in the downside denominator.",
+    "scope": "Manual matching-period simple returns or supplied arithmetic mean, fixed MAR and downside deviation. The downside denominator includes all N observations. No annual scaling, market-price retrieval, strategy ranking or future-return estimate.",
+    "examples": [
+      {
+        "title": "All four observations stay in the denominator",
+        "mode": "return-series",
+        "values": {
+          "returns": "-3, 1, 4, 10",
+          "period": "Monthly",
+          "target": "1"
+        },
+        "inputs": "returns: -3, 1, 4, 10; period: Monthly; target: 1",
+        "steps": [
+          "Mean = (−3 + 1 + 4 + 10) / 4 = 3%.",
+          "Against a 1% target, squared shortfalls are 16, 0, 0 and 0 in percentage-point units.",
+          "Downside deviation = sqrt(16 / 4) = 2 points; Sortino = (3 − 1) / 2."
+        ],
+        "answer": "Monthly period Sortino is 1.0000, with downside deviation of 2 percentage points.",
+        "expected": {
+          "label": "Sortino ratio for one observation period",
+          "value": 1.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Known statistics reproduce the series result",
+        "mode": "statistics",
+        "values": {
+          "mean_return": "3",
+          "downside_deviation": "2",
+          "period": "Monthly",
+          "target": "1"
+        },
+        "inputs": "mean return: 3; downside deviation: 2; period: Monthly; target: 1",
+        "steps": [
+          "Use arithmetic mean 3%, target 1% and matching-period downside deviation 2 points.",
+          "Divide the 2-point mean-minus-target return by 2-point downside deviation."
+        ],
+        "answer": "The same monthly period ratio is 1.0000; ordinary standard deviation would be a different denominator.",
+        "expected": {
+          "label": "Sortino ratio for one observation period",
+          "value": 1.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Changing only the target changes the downside set",
+        "mode": "return-series",
+        "values": {
+          "returns": "-3, 1, 4, 10",
+          "period": "Monthly",
+          "target": "0"
+        },
+        "inputs": "returns: -3, 1, 4, 10; period: Monthly; target: 0",
+        "steps": [
+          "Keep the four returns and lower the fixed monthly target from 1% to 0%.",
+          "Only the −3% return is below target: downside deviation = sqrt(9 / 4) = 1.5 points.",
+          "Mean-minus-target is 3 points."
+        ],
+        "answer": "Monthly Sortino becomes 2.0000, rather than 1.0000. The comparison changed its objective.",
+        "expected": {
+          "label": "Sortino ratio for one observation period",
+          "value": 2.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Negative mean return keeps a negative ratio",
+        "mode": "return-series",
+        "values": {
+          "returns": "-3, -1, 0, 0",
+          "period": "Monthly",
+          "target": "0"
+        },
+        "inputs": "returns: -3, -1, 0, 0; period: Monthly; target: 0",
+        "steps": [
+          "The arithmetic mean is −1%.",
+          "Squared shortfalls sum to 10; divide by all four observations before taking the square root.",
+          "Sortino = −1 / sqrt(2.5)."
+        ],
+        "answer": "Period Sortino is about −0.6325, with downside deviation about 1.5811 percentage points.",
+        "expected": {
+          "label": "Sortino ratio for one observation period",
+          "value": -0.6324555320336759,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Every return meets the target",
+        "mode": "return-series",
+        "values": {
+          "returns": "1, 2, 3, 4",
+          "period": "Monthly",
+          "target": "1"
+        },
+        "inputs": "returns: 1, 2, 3, 4; period: Monthly; target: 1",
+        "steps": [
+          "Each return meets or exceeds the fixed 1% target.",
+          "Every shortfall is zero, so downside deviation is zero."
+        ],
+        "answer": "The ratio is undefined; it is not reported as infinity, a real zero or a guaranteed good score.",
+        "expected": {
+          "label": "Downside deviation per period",
+          "value": 0.0,
+          "tolerance": 1e-08
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does Sortino count only losing observations in the denominator?",
+        "answer": "This worksheet uses every observation, including zero shortfalls for returns at or above the target. Using only below-target observations produces a different downside-deviation convention and a different ratio."
+      },
+      {
+        "question": "Is the target always zero or the risk-free rate?",
+        "answer": "Enter the fixed minimum acceptable return for one observation period. It can represent your stated objective, but must match the return period. The calculator neither selects a risk-free rate nor converts an annual target to a monthly one."
+      },
+      {
+        "question": "Why is Sortino undefined when all returns meet the target?",
+        "answer": "Every target shortfall is zero, leaving zero downside deviation. Division by zero is undefined, even when the mean return is above the target. That state is not replaced by infinity or a numerical zero."
+      },
+      {
+        "question": "Can I use standard deviation instead of downside deviation?",
+        "answer": "No. Standard deviation measures variation around the mean and includes upside variation. Downside deviation here measures squared shortfalls below the fixed target using all observations."
+      },
+      {
+        "question": "Does choosing Monthly annualize my Sortino ratio?",
+        "answer": "No. The period selector labels the matching interval. The tool does not multiply by sqrt(12). To analyze annual outcomes, use annual observations and an annual target with an appropriate data sample."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFA Institute: The Sortino Ratio (2012)",
+        "url": "https://rpc.cfainstitute.org/sites/default/files/-/media/documents/code/gips/the-sortino-ratio.pdf"
+      }
+    ]
+  },
+  "gross-rent-multiplier": {
+    "checkedOn": "2026-11-18",
+    "summary": "Gross rent multiplier (GRM) is property price divided by annual gross scheduled rent. A $360,000 property with $2,400 monthly gross rent has a GRM of 12.5 and an 8% gross annual rent yield. Both figures exclude vacancy, operating costs, financing and tax.",
+    "scope": "Whole-property price and gross scheduled rent before deductions. Reverse modes use a multiplier chosen by you. No net yield, cap-rate calculation, appraisal, guaranteed payback period, market rent or recommendation.",
+    "examples": [
+      {
+        "title": "Monthly rent becomes annual rent before division",
+        "mode": "grm",
+        "values": {
+          "price": "360000",
+          "rent": "2400",
+          "rent_period": "Monthly"
+        },
+        "inputs": "price: 360000; rent: 2400; rent period: Monthly",
+        "steps": [
+          "Annual gross rent = $2,400 × 12 = $28,800.",
+          "GRM = $360,000 / $28,800 = 12.5.",
+          "Gross annual rent yield = $28,800 / $360,000 × 100 = 8%."
+        ],
+        "answer": "The property is priced at 12.5 times scheduled annual rent, with an 8% gross rent yield before expenses.",
+        "expected": {
+          "label": "Gross rent multiplier (annual rent basis)",
+          "value": 12.5,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Annual and monthly inputs reconcile",
+        "mode": "grm",
+        "values": {
+          "price": "360000",
+          "rent": "28800",
+          "rent_period": "Annual"
+        },
+        "inputs": "price: 360000; rent: 28800; rent period: Annual",
+        "steps": [
+          "Enter $28,800 annual rent instead of $2,400 monthly rent.",
+          "The annual rent denominator stays $28,800."
+        ],
+        "answer": "GRM remains 12.5 and gross annual rent yield remains 8%. Changing units alone without converting rent would give a wrong comparison.",
+        "expected": {
+          "label": "Gross rent multiplier (annual rent basis)",
+          "value": 12.5,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Reverse the formula for a selected price",
+        "mode": "price",
+        "values": {
+          "rent": "2400",
+          "rent_period": "Monthly",
+          "grm": "12.5"
+        },
+        "inputs": "rent: 2400; rent period: Monthly; grm: 12.5",
+        "steps": [
+          "Annualize $2,400 monthly gross rent to $28,800.",
+          "Multiply that rent by the user-selected GRM of 12.5."
+        ],
+        "answer": "The implied price is $360,000 under that chosen multiplier; this does not verify market value.",
+        "expected": {
+          "label": "Price implied by entered rent and GRM",
+          "value": 360000.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Reverse the formula for required rent",
+        "mode": "rent",
+        "values": {
+          "price": "360000",
+          "grm": "12.5",
+          "rent_period": "Monthly"
+        },
+        "inputs": "price: 360000; grm: 12.5; rent period: Monthly",
+        "steps": [
+          "Divide the entered $360,000 price by a selected GRM of 12.5.",
+          "Divide $28,800 required annual rent by 12."
+        ],
+        "answer": "Required monthly gross rent is $2,400; the calculation does not establish that a tenant will pay it.",
+        "expected": {
+          "label": "Required gross rent (monthly)",
+          "value": 2400.0,
+          "tolerance": 1e-08
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do I calculate GRM from monthly rent?",
+        "answer": "Multiply whole-property monthly gross scheduled rent by 12, then divide price by that annual amount. $360,000 divided by ($2,400 × 12) equals 12.5."
+      },
+      {
+        "question": "Is GRM the same as cap rate?",
+        "answer": "No. GRM uses gross rent and price. Cap rate uses net operating income and price or value; it requires operating-expense assumptions. Gross rent yield is 100 / GRM, and is also before expenses."
+      },
+      {
+        "question": "Does a GRM of 12.5 mean I recover my investment in 12.5 years?",
+        "answer": "No. The multiplier compares price with one year of gross rent and ignores expenses, vacancy, financing, changing rents and sale proceeds. It is not an investment payback schedule."
+      },
+      {
+        "question": "Can the calculator tell me a fair property price?",
+        "answer": "The reverse-price mode multiplies annual rent by your chosen GRM. That is an arithmetic scenario. Comparable-property selection, local market evidence and valuation judgment are not supplied."
+      },
+      {
+        "question": "Should rent include vacancy deductions or NOI?",
+        "answer": "Use scheduled gross rent before vacancy and operating deductions in this worksheet. Do not substitute NOI or mix scheduled and collected-rent definitions when comparing properties."
+      }
+    ],
+    "sources": [
+      {
+        "title": "JPMorgan: What is a gross rent multiplier?",
+        "url": "https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-is-a-gross-rent-multiplier-grm"
+      }
+    ]
+  },
+  "debt-to-equity-ratio": {
+    "checkedOn": "2026-11-18",
+    "summary": "Debt-to-equity compares a stated company liability or borrowing amount with matching book equity. With $240,000 total liabilities and $160,000 equity, D/E is 1.5000. Selecting only $160,000 interest-bearing debt changes D/E to 1.0000; the numerator definition matters.",
+    "scope": "A manual book-equity leverage worksheet, using either total liabilities or interest-bearing debt. Nonpositive equity is flagged. Scenarios separate repayment from existing cash and new equity retained as cash; cash availability, covenants and credit approval are outside the model.",
+    "examples": [
+      {
+        "title": "Total liabilities divided by book equity",
+        "mode": "snapshot",
+        "values": {
+          "debt_basis": "Total liabilities",
+          "debt": "240000",
+          "equity": "160000"
+        },
+        "inputs": "debt basis: Total liabilities; debt: 240000; equity: 160000",
+        "steps": [
+          "Use $240,000 total liabilities and $160,000 matching book equity.",
+          "D/E = 240,000 / 160,000.",
+          "Selected liabilities / (liabilities + equity) = 240,000 / 400,000."
+        ],
+        "answer": "D/E is 1.5000 and the selected numerator/capital share is 60%.",
+        "expected": {
+          "label": "Debt-to-equity ratio",
+          "value": 1.5,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "A narrower debt definition gives a different ratio",
+        "mode": "snapshot",
+        "values": {
+          "debt_basis": "Interest-bearing debt",
+          "debt": "160000",
+          "equity": "160000"
+        },
+        "inputs": "debt basis: Interest-bearing debt; debt: 160000; equity: 160000",
+        "steps": [
+          "For the same company and $160,000 equity, select $160,000 interest-bearing debt rather than $240,000 total liabilities.",
+          "D/E becomes 160,000 / 160,000 = 1.",
+          "The selected capital denominator is 160,000 + 160,000, excluding $80,000 other liabilities."
+        ],
+        "answer": "Borrowing-based D/E is 1.0000 and selected debt/capital is 50%; debt/total assets would instead be 40% if assets are $400,000.",
+        "expected": {
+          "label": "Debt-to-equity ratio",
+          "value": 1.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "Repayment and new equity affect different balances",
+        "mode": "changes",
+        "values": {
+          "debt_basis": "Total liabilities",
+          "debt": "240000",
+          "equity": "160000",
+          "repayment": "40000",
+          "equity_injection": "40000"
+        },
+        "inputs": "debt basis: Total liabilities; debt: 240000; equity: 160000; repayment: 40000; equity injection: 40000",
+        "steps": [
+          "Repay $40,000 from existing company cash: liabilities fall to $200,000 and equity stays $160,000.",
+          "Separately raise $40,000 new equity retained as cash: equity becomes $200,000.",
+          "Apply both independent entries: D/E = 200,000 / 200,000."
+        ],
+        "answer": "D/E moves from 1.5000 to 1.0000; repayment alone gives 1.2500 and new equity alone gives 1.2000.",
+        "expected": {
+          "label": "Debt-to-equity after entered changes",
+          "value": 1.0,
+          "tolerance": 1e-08
+        }
+      },
+      {
+        "title": "New equity can restore a positive denominator",
+        "mode": "changes",
+        "values": {
+          "debt_basis": "Total liabilities",
+          "debt": "100000",
+          "equity": "-20000",
+          "repayment": "0",
+          "equity_injection": "70000"
+        },
+        "inputs": "debt basis: Total liabilities; debt: 100000; equity: -20000; repayment: 0; equity injection: 70000",
+        "steps": [
+          "The initial $−20,000 book equity does not receive a meaningful D/E score.",
+          "A $70,000 new equity injection retained in the company increases equity to $50,000.",
+          "Debt remains $100,000, giving an after-change ratio of 2."
+        ],
+        "answer": "The before-change ratio stays flagged. After-change D/E is 2.0000 once equity becomes positive.",
+        "expected": {
+          "label": "Debt-to-equity after entered changes",
+          "value": 2.0,
+          "tolerance": 1e-08
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Should I enter total liabilities or interest-bearing debt?",
+        "answer": "Select the definition used in your analysis and enter its reconciled amount. Total liabilities may include payables and provisions beyond borrowing. Comparing D/E ratios with different numerator definitions can be misleading."
+      },
+      {
+        "question": "Does the calculator use book equity or market capitalization?",
+        "answer": "Book shareholders’ equity at the same date and company scope. Market-value leverage is a different analysis. Match the ownership and consolidation scope of the numerator and denominator."
+      },
+      {
+        "question": "Why is a ratio not shown for negative equity?",
+        "answer": "A negative denominator can create a misleading negative leverage score. The worksheet shows the entered negative equity and flags the ratio as not meaningful; it does not label that state healthy."
+      },
+      {
+        "question": "Does repaying debt increase equity?",
+        "answer": "Repayment from existing company cash reduces cash and the selected liability by the same amount, leaving equity unchanged in this model. A separate new equity injection increases cash and equity. Fees, interest and profit would need separate treatment."
+      },
+      {
+        "question": "Is selected debt divided by debt plus equity a debt-to-assets ratio?",
+        "answer": "Not automatically. If the selected numerator is interest-bearing debt, other liabilities are absent from that denominator. $160,000 debt plus $160,000 equity excludes $80,000 other liabilities in the guide’s example."
+      },
+      {
+        "question": "Is this a personal debt-to-income calculator?",
+        "answer": "No. This page compares company balance-sheet amounts with book equity. Personal DTI uses recurring debt payments and income; use the separate debt-to-income tool for that task."
+      }
+    ],
+    "sources": [
+      {
+        "title": "BDC: Debt-to-equity ratio calculator",
+        "url": "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/financial-tools/debt-to-equity-ratio"
+      }
+    ]
+  }
+}

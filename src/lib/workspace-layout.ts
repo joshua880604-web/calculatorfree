@@ -2,6 +2,7 @@ import type { Metric, Result } from "./types";
 
 // Complex tax forms, multi-debt entry sheets and the 401(k) story keep their wider flow.
 export const workspaceIds = [
+  "sortino-ratio", "gross-rent-multiplier", "debt-to-equity-ratio",
   "business-line-of-credit","triple-net-lease","arm-mortgage","portfolio-rebalancing",
   "basis-point","prorated-rent","operating-cash-flow",
   "stock-split","customer-acquisition-cost","dividend-discount-model","earnings-per-share","sharpe-ratio","black-scholes",
@@ -28,10 +29,16 @@ export const workspaceIds = [
 export function hasCalculatorWorkspace(id: string): boolean { return (workspaceIds as readonly string[]).includes(id); }
 export function workspaceLayout(id: string, mode: string): "split" | "stacked" | null {
   if (!hasCalculatorWorkspace(id)) return null;
-  return id === 'arm-mortgage' || id === 'portfolio-rebalancing' || (id === 'business-line-of-credit' && mode === 'ledger') || id === 'operating-cash-flow' || (id === 'stock-split' && mode === 'chain') || (id === 'earnings-per-share' && mode === 'weighted-schedule') || (id === 'sharpe-ratio' && mode === 'return-series') || id === 'black-scholes' || id === 'credit-card-rewards' || id === 'cash-conversion-cycle' && mode!=='days' || id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
+  return (id === 'sortino-ratio' && mode === 'return-series') || id === 'arm-mortgage' || id === 'portfolio-rebalancing' || (id === 'business-line-of-credit' && mode === 'ledger') || id === 'operating-cash-flow' || (id === 'stock-split' && mode === 'chain') || (id === 'earnings-per-share' && mode === 'weighted-schedule') || (id === 'sharpe-ratio' && mode === 'return-series') || id === 'black-scholes' || id === 'credit-card-rewards' || id === 'cash-conversion-cycle' && mode!=='days' || id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
 }
 
 const priorities: Record<string, string[]> = {
+'sortino-ratio':['Sortino ratio for one observation period','Downside deviation per period','Mean return minus target'],
+'gross-rent-multiplier':['Gross rent multiplier (annual rent basis)','Gross annual rent yield before expenses','Annual gross scheduled rent'],
+'gross-rent-multiplier:price':['Price implied by entered rent and GRM','Gross rent multiplier (annual rent basis)','Annual gross scheduled rent'],
+'gross-rent-multiplier:rent':['Required gross rent (monthly)','Required gross rent (annual)','Annual gross scheduled rent'],
+'debt-to-equity-ratio':['Debt-to-equity ratio','Selected numerator / (numerator + book equity)','Book equity used'],
+'debt-to-equity-ratio:changes':['Debt-to-equity after entered changes','Debt-to-equity before entered changes','Book equity used'],
 "business-line-of-credit":["Modeled interest for entered period", "Interest plus entered fees", "Principal assumed unchanged"],
 "business-line-of-credit:ledger":["Modeled interest over selected dates", "Closing principal balance", "Average daily principal balance"],
 "business-line-of-credit:paydown":["Modeled payoff time in months", "Interest over modeled payments", "Principal remaining at model end"],

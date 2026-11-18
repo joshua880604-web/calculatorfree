@@ -186,3 +186,9 @@ Current version overrides earlier live-feed/server assumptions. See static-expor
 - Added check-public-brand.mjs to every static build. It scans all public text assets, including hidden HTML/RSC payloads and lazy bundles, and fails the build if the excluded domain appears. No runtime filtering or hiding is used.
 - Validation: 570 tests and static build passed; public-export scan found zero violations. Full public page and representative calculation browser checks are recorded in evidence/browser-public-brand-qa.json. Existing 95-page SEO checks remain applicable.
 - Final verification: 95 public pages at 390px passed domain/overflow checks, with 15 real-estate local links and 3 calculation submissions checked. No script errors or excluded-domain requests. Official IRS guide links and BLS methodology links remain visible. Production-origin and preview builds both passed 95-page SEO audits and zero-match scans of 257 public text assets. About/real-estate mobile views inspected.
+
+
+### 2026-11-18 — Sortino, GRM and corporate D/E
+Developing three original tools in preview/ratio-property-three-20261118; seven modes. Explicit matching-period/all-N Sortino, gross-rent-only screening, and corporate book-equity leverage definitions. Production remains at the existing specialist-four release. Verification evidence and status will be recorded in ratio-property-three-20261118.md.
+
+Verification complete for the three-tool batch: 2,843 tests, production-config static export, 22 independent reference cases, 28 mode/viewport checks and 460-page structural/link audit passed. See ratio-property-three-20261118.md. Remote preview pending; production unchanged.

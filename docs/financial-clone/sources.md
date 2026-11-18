@@ -85,3 +85,9 @@ Primary rules: https://www.consumerfinance.gov/ask-cfpb/when-can-i-remove-privat
 ## 2026-10-26 — Category organization
 
 This change uses the authorized classification proposal and the existing source catalog, captured routes/modes/default-result hashes, canonical/sitemap and redirect artifacts. No new financial or policy sources are needed because mathematical models and rules are unchanged.
+
+
+### 2026-11-18 — Sortino, GRM and corporate D/E
+- https://rpc.cfainstitute.org/sites/default/files/-/media/documents/code/gips/the-sortino-ratio.pdf — The role of a target return, downside deviation, denominator conventions and limitations of cross-period scaling. Concept reference. This worksheet explicitly chooses all N observations and reports a period ratio only. The source does not validate our original examples or professionally review this site.
+- https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-is-a-gross-rent-multiplier-grm — Property price divided by annual gross rent and comparison with similar properties. Concept reference; the indexed source supplied the formula, while direct body access was restricted during research. No local market multiplier, appraisal or achievable rent is supplied.
+- https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/financial-tools/debt-to-equity-ratio — A documented total-liabilities / shareholders’ equity definition and the need to interpret leverage in context. BDC is a Canadian institution. Its definition is background, not a US lending requirement, unique industry standard, endorsement or professional review. Our narrower borrowing definition is identified separately.

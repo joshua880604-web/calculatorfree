@@ -1,0 +1,223 @@
+[
+  {
+    "name": "Sortino ratio",
+    "category": "Saving & investing",
+    "aliases": [
+      "Target downside ratio",
+      "Sortino measure"
+    ],
+    "definition": "Sortino is arithmetic mean return above a fixed target divided by downside deviation below that target, with an explicitly stated period and denominator convention.",
+    "explanation": "The target defines a shortfall. In this worksheet, returns at or above it contribute zero and all observations remain in the downside denominator. The arithmetic mean-minus-target numerator can be negative. Zero downside deviation leaves the quotient undefined. Standard deviation around the mean is a different risk measure, and the period result is not automatically annualized.",
+    "formula": "Period Sortino = (mean return − target) / sqrt(Σ min(return − target, 0)² / N).",
+    "formulaNote": "Here N includes every observation; return, target and deviation use matching periods and percentage-point units.",
+    "pitfall": {
+      "title": "A positive return can still fall below the target",
+      "text": "A 0.5% monthly return is a shortfall against a 1% monthly target. Counting only negative returns, or dividing only by the count of losing observations, changes the measure."
+    },
+    "related": [
+      "sharpe-ratio"
+    ],
+    "slug": "sortino-ratio",
+    "title": "Sortino ratio Explained: Formula, Example & Limits",
+    "description": "Sortino is arithmetic mean return above a fixed target divided by downside deviation below that target, with an explicitly stated period and denominator con",
+    "checkedOn": "2026-11-18",
+    "scope": "Manual matching-period simple returns or supplied arithmetic mean, fixed MAR and downside deviation. The downside denominator includes all N observations. No annual scaling, market-price retrieval, strategy ranking or future-return estimate.",
+    "sources": [
+      {
+        "title": "CFA Institute: The Sortino Ratio (2012)",
+        "url": "https://rpc.cfainstitute.org/sites/default/files/-/media/documents/code/gips/the-sortino-ratio.pdf"
+      }
+    ],
+    "tools": [
+      {
+        "id": "sortino-ratio",
+        "text": "Inspect the stated inputs, result and matching calculation scope."
+      },
+      {
+        "id": "sharpe-ratio",
+        "text": "Explore this separate related calculation with its own inputs."
+      }
+    ],
+    "guides": [
+      {
+        "title": "Sortino vs. Sharpe Ratio: Targets, Downside & Matching Periods",
+        "path": "/guides/sortino-vs-sharpe-target-and-downside/"
+      }
+    ],
+    "example": {
+      "title": "All four observations stay in the denominator",
+      "intro": "returns: -3, 1, 4, 10; period: Monthly; target: 1",
+      "steps": [
+        "Mean = (−3 + 1 + 4 + 10) / 4 = 3%.",
+        "Against a 1% target, squared shortfalls are 16, 0, 0 and 0 in percentage-point units.",
+        "Downside deviation = sqrt(16 / 4) = 2 points; Sortino = (3 − 1) / 2."
+      ],
+      "answer": "Monthly period Sortino is 1.0000, with downside deviation of 2 percentage points.",
+      "assumptions": "Manual matching-period simple returns or supplied arithmetic mean, fixed MAR and downside deviation. The downside denominator includes all N observations. No annual scaling, market-price retrieval, strategy ranking or future-return estimate.",
+      "calculator": {
+        "id": "sortino-ratio",
+        "mode": "return-series",
+        "values": {
+          "returns": "-3, 1, 4, 10",
+          "period": "Monthly",
+          "target": "1"
+        },
+        "expected": [
+          {
+            "label": "Sortino ratio for one observation period",
+            "value": 1.0,
+            "tolerance": 1e-08
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Gross rent multiplier (GRM)",
+    "category": "Housing & property",
+    "aliases": [
+      "GRM",
+      "Price-to-gross-rent multiplier"
+    ],
+    "definition": "Gross rent multiplier is a property price divided by annual gross rent. This worksheet uses scheduled whole-property rent before vacancy and expense deductions.",
+    "explanation": "The annual denominator makes monthly and annual rent quotes comparable after converting units. Its reciprocal times 100 gives gross annual rent yield, not cap rate or net rental yield. Reverse calculations express a chosen multiplier as an implied price or required rent. Comparable-property evidence, expense analysis and market judgment remain separate.",
+    "formula": "GRM = property price / annual gross scheduled rent; gross annual rent yield (%) = 100 / GRM.",
+    "formulaNote": "Multiply monthly gross rent by 12 first. Gross scheduled rent is not net operating income, and the multiplier is not a payback period.",
+    "pitfall": {
+      "title": "The multiplier does not reveal net return",
+      "text": "A GRM of 12.5 compares price with one year of gross rent. It does not deduct vacancy, operating costs, capital work, financing or tax and cannot establish a 12.5-year payback."
+    },
+    "related": [
+      "cap-rate-vs-cash-on-cash-return",
+      "capital-expenditure"
+    ],
+    "slug": "gross-rent-multiplier",
+    "title": "Gross rent multiplier (GRM) Explained: Formula, Example & Limits",
+    "description": "Gross rent multiplier is a property price divided by annual gross rent. This worksheet uses scheduled whole-property rent before vacancy and expense deducti",
+    "checkedOn": "2026-11-18",
+    "scope": "Whole-property price and gross scheduled rent before deductions. Reverse modes use a multiplier chosen by you. No net yield, cap-rate calculation, appraisal, guaranteed payback period, market rent or recommendation.",
+    "sources": [
+      {
+        "title": "JPMorgan: What is a gross rent multiplier?",
+        "url": "https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-is-a-gross-rent-multiplier-grm"
+      }
+    ],
+    "tools": [
+      {
+        "id": "gross-rent-multiplier",
+        "text": "Inspect the stated inputs, result and matching calculation scope."
+      },
+      {
+        "id": "cap-rate",
+        "text": "Explore this separate related calculation with its own inputs."
+      }
+    ],
+    "guides": [
+      {
+        "title": "GRM vs. Cap Rate: Gross Rent, Operating Costs & Price",
+        "path": "/guides/grm-vs-cap-rate-gross-rent-and-noi/"
+      }
+    ],
+    "example": {
+      "title": "Monthly rent becomes annual rent before division",
+      "intro": "price: 360000; rent: 2400; rent period: Monthly",
+      "steps": [
+        "Annual gross rent = $2,400 × 12 = $28,800.",
+        "GRM = $360,000 / $28,800 = 12.5.",
+        "Gross annual rent yield = $28,800 / $360,000 × 100 = 8%."
+      ],
+      "answer": "The property is priced at 12.5 times scheduled annual rent, with an 8% gross rent yield before expenses.",
+      "assumptions": "Whole-property price and gross scheduled rent before deductions. Reverse modes use a multiplier chosen by you. No net yield, cap-rate calculation, appraisal, guaranteed payback period, market rent or recommendation.",
+      "calculator": {
+        "id": "gross-rent-multiplier",
+        "mode": "grm",
+        "values": {
+          "price": "360000",
+          "rent": "2400",
+          "rent_period": "Monthly"
+        },
+        "expected": [
+          {
+            "label": "Gross rent multiplier (annual rent basis)",
+            "value": 12.5,
+            "tolerance": 1e-08
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Debt-to-equity ratio",
+    "category": "Business & pricing",
+    "aliases": [
+      "D/E ratio",
+      "Corporate debt equity ratio"
+    ],
+    "definition": "Debt-to-equity compares a clearly defined company liability or borrowing amount with matching shareholders’ equity. This worksheet uses book equity and identifies total-liabilities and interest-bearing-debt numerators separately.",
+    "explanation": "The ratio is sensitive to both definitions and balance-sheet events. Repaying a liability from existing cash reduces cash and that liability without creating equity in this model. A new equity injection retained as cash increases equity. Zero or negative book equity needs explicit investigation rather than a favorable negative leverage score.",
+    "formula": "D/E = selected total liabilities or interest-bearing debt / positive book shareholders’ equity.",
+    "formulaNote": "Use one reporting date, currency and company scope. Borrowing / (borrowing + equity) can exclude other liabilities and is not automatically borrowing / total assets.",
+    "pitfall": {
+      "title": "A different debt definition can explain a different ratio",
+      "text": "$240,000 total liabilities and $160,000 equity give 1.5. If only $160,000 interest-bearing debt is selected for the same equity, the ratio is 1.0. The company did not change; the numerator did."
+    },
+    "related": [
+      "return-on-equity",
+      "return-on-invested-capital"
+    ],
+    "slug": "debt-to-equity-ratio",
+    "title": "Debt-to-equity ratio Explained: Formula, Example & Limits",
+    "description": "Debt-to-equity compares a clearly defined company liability or borrowing amount with matching shareholders’ equity. This worksheet uses book equity and iden",
+    "checkedOn": "2026-11-18",
+    "scope": "A manual book-equity leverage worksheet, using either total liabilities or interest-bearing debt. Nonpositive equity is flagged. Scenarios separate repayment from existing cash and new equity retained as cash; cash availability, covenants and credit approval are outside the model.",
+    "sources": [
+      {
+        "title": "BDC: Debt-to-equity ratio calculator",
+        "url": "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/financial-tools/debt-to-equity-ratio"
+      }
+    ],
+    "tools": [
+      {
+        "id": "debt-to-equity-ratio",
+        "text": "Inspect the stated inputs, result and matching calculation scope."
+      },
+      {
+        "id": "wacc",
+        "text": "Explore this separate related calculation with its own inputs."
+      }
+    ],
+    "guides": [
+      {
+        "title": "Debt-to-Equity: Total Liabilities vs. Borrowing & New Capital",
+        "path": "/guides/debt-to-equity-definitions-and-capital-changes/"
+      }
+    ],
+    "example": {
+      "title": "Total liabilities divided by book equity",
+      "intro": "debt basis: Total liabilities; debt: 240000; equity: 160000",
+      "steps": [
+        "Use $240,000 total liabilities and $160,000 matching book equity.",
+        "D/E = 240,000 / 160,000.",
+        "Selected liabilities / (liabilities + equity) = 240,000 / 400,000."
+      ],
+      "answer": "D/E is 1.5000 and the selected numerator/capital share is 60%.",
+      "assumptions": "A manual book-equity leverage worksheet, using either total liabilities or interest-bearing debt. Nonpositive equity is flagged. Scenarios separate repayment from existing cash and new equity retained as cash; cash availability, covenants and credit approval are outside the model.",
+      "calculator": {
+        "id": "debt-to-equity-ratio",
+        "mode": "snapshot",
+        "values": {
+          "debt_basis": "Total liabilities",
+          "debt": "240000",
+          "equity": "160000"
+        },
+        "expected": [
+          {
+            "label": "Debt-to-equity ratio",
+            "value": 1.5,
+            "tolerance": 1e-08
+          }
+        ]
+      }
+    }
+  }
+]
