@@ -1,11 +1,11 @@
 {
   "credit-card-rewards": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "Credit card reward value depends on eligible spending, earn rates, caps, redemption assumptions and fees. This worksheet separates recurring annual net value from a first-year bonus and compares two manual plans using the same spending budget.",
     "scope": "Manual eligible-spending assumptions only. No issuer catalogue, live offer, automatic point valuation, approval or tax determination. Results are before unentered interest and other costs; all spending caps here are annual.",
     "examples": [
       {
-        "title": "Annual cash back cap 0",
+        "title": "Separate $630 of cash back from the fee and one-time bonus",
         "mode": "cashback",
         "values": {
           "spend_period": "Annual",
@@ -15,12 +15,12 @@
           "usable_credits": 0,
           "bonus": 200
         },
-        "inputs": "spend period = Annual; categories = 12000, 3, 0 / 18000, 1.5, 0; fallback = 1.5; annual fee = 95; usable credits = 0; bonus = 200",
+        "inputs": "Annual eligible spending: $12,000 at 3% and $18,000 at 1.5%; no category caps; $95 annual fee; $200 one-time bonus; no usable credits.",
         "steps": [
-          "Recurring net = annual gross reward value + usable net credits − annual fee; points value = points × cents per point / 100.",
-          "With these inputs, gross modeled annual reward value = $630.00."
+          "Calculate $12,000 × 3% = $360 and $18,000 × 1.5% = $270.",
+          "Add the rewards, then subtract the $95 fee for recurring net value. Include the $200 bonus only in the first-year illustration."
         ],
-        "answer": "Gross modeled annual reward value: $630.00.",
+        "answer": "Gross annual cash back is $630; recurring net value is $535 and first-year value including the entered bonus is $735.",
         "expected": {
           "label": "Gross modeled annual reward value",
           "value": 630.0,
@@ -28,7 +28,7 @@
         }
       },
       {
-        "title": "Points at cents value 1",
+        "title": "Value 60,000 annual points at an entered one cent each",
         "mode": "points",
         "values": {
           "spend_period": "Annual",
@@ -39,12 +39,12 @@
           "usable_credits": 0,
           "bonus": 20000
         },
-        "inputs": "spend period = Annual; categories = 30000, 2, 0; fallback = 1; cents per point = 1.0; annual fee = 95; usable credits = 0; bonus = 20000",
+        "inputs": "$30,000 annual eligible spend at 2 points per dollar; no cap; 1 cent per point; $95 annual fee; 20,000-point one-time bonus; no credits.",
         "steps": [
-          "Recurring net = annual gross reward value + usable net credits − annual fee; points value = points × cents per point / 100.",
-          "With these inputs, annual points / miles earned = $60,000.00."
+          "Multiply $30,000 by 2 to obtain the recurring points earned.",
+          "At the entered redemption assumption, points are worth $600 before the fee. The bonus adds $200 only once."
         ],
-        "answer": "Annual points / miles earned: $60,000.00.",
+        "answer": "The plan earns 60,000 annual points: $505 recurring net value or $705 in the bonus year at the stated redemption value.",
         "expected": {
           "label": "Annual points / miles earned",
           "value": 60000.0,
@@ -52,7 +52,7 @@
         }
       },
       {
-        "title": "Flat plan rate A 2",
+        "title": "Compare a 2% card with a $95 fee against a fee-free 1% card",
         "mode": "compare",
         "values": {
           "spend": 30000,
@@ -63,12 +63,13 @@
           "fee_b": 0,
           "credits_b": 0
         },
-        "inputs": "spend = 30000; rate a = 2; fee a = 95; credits a = 0; rate b = 1; fee b = 0; credits b = 0",
+        "inputs": "Same $30,000 annual eligible spending for both plans; Plan A earns 2% with a $95 fee; Plan B earns 1% with no fee; no credits.",
         "steps": [
-          "Recurring net = annual gross reward value + usable net credits − annual fee; points value = points × cents per point / 100.",
-          "With these inputs, recurring annual net advantage (a minus b) = $205.00."
+          "Plan A gives $600 − $95 = $505 recurring net rewards.",
+          "Plan B gives $300 recurring net rewards. Subtract B from A using the same spending amount.",
+          "The $95 fee is offset at $9,500 annual spending for these flat rates. Interest, late fees and promotional bonuses are not included."
         ],
-        "answer": "Recurring annual net advantage (A minus B): $205.00.",
+        "answer": "Plan A has a $205 recurring annual advantage at the entered $30,000 spending level.",
         "expected": {
           "label": "Recurring annual net advantage (A minus B)",
           "value": 205.0,
@@ -102,24 +103,24 @@
     ]
   },
   "accounts-receivable-turnover": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "Receivables turnover compares period net credit sales with representative average trade receivables. Using the same definitions, average-balance DSO converts that turnover into collection days. Reporting-period days and the balance method are part of the result.",
     "scope": "Matched-period net credit sales and trade receivables only. The two-point average may miss seasonality. DSO uses average balances here; no closing-balance, countback, aging, bad-debt or customer-credit analysis is provided.",
     "examples": [
       {
-        "title": "average 365 days",
+        "title": "Convert 12 annual receivables turns into about 30.42 collection days",
         "mode": "average",
         "values": {
           "days": 365,
           "credit_sales": 300000,
           "average_ar": 25000
         },
-        "inputs": "days = 365; credit sales = 300000; average ar = 25000",
+        "inputs": "365-day reporting period; $300,000 net credit sales; $25,000 representative average trade receivables.",
         "steps": [
-          "Turnover = net credit sales / average trade AR; average-balance DSO = reporting days × average AR / net credit sales.",
-          "With these inputs, receivables turnover in selected period = 12.000000."
+          "Divide net credit sales by average receivables: $300,000 / $25,000 = 12.",
+          "Divide 365 reporting days by turnover. Keep cash sales out of a credit-sales denominator."
         ],
-        "answer": "Receivables turnover in selected period: 12.000000.",
+        "answer": "Turnover is 12 times for the year and average-balance DSO is about 30.42 days. This does not identify the age of any particular invoice.",
         "expected": {
           "label": "Receivables turnover in selected period",
           "value": 12.0,
@@ -127,7 +128,7 @@
         }
       },
       {
-        "title": "balances 365 days",
+        "title": "Average $20,000 and $30,000 receivables balances before calculating",
         "mode": "balances",
         "values": {
           "days": 365,
@@ -135,12 +136,12 @@
           "begin_ar": 20000,
           "end_ar": 30000
         },
-        "inputs": "days = 365; credit sales = 300000; begin ar = 20000; end ar = 30000",
+        "inputs": "365-day year; $300,000 net credit sales; beginning receivables $20,000; ending receivables $30,000.",
         "steps": [
-          "Turnover = net credit sales / average trade AR; average-balance DSO = reporting days × average AR / net credit sales.",
-          "With these inputs, receivables turnover in selected period = 12.000000."
+          "The two-point average is ($20,000 + $30,000) / 2 = $25,000.",
+          "Use that average with same-period net credit sales. Seasonal sales or a large year-end balance change may need a better average."
         ],
-        "answer": "Receivables turnover in selected period: 12.000000.",
+        "answer": "The inputs reproduce 12 annual turns and about 30.42 collection days, rather than using only the ending balance.",
         "expected": {
           "label": "Receivables turnover in selected period",
           "value": 12.0,
@@ -174,24 +175,24 @@
     ]
   },
   "days-payable-outstanding": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "Days payable outstanding converts a matched-period trade-payables balance into an estimated payment period. Purchase-based and COGS-proxy versions can give different answers. This worksheet names the denominator and reports payables turnover alongside the days measure.",
     "scope": "Manual trade payables and matched credit purchases or a named COGS proxy. No inferred credit-purchase share, full inventory roll-forward, supplier aging, contract-term approval or cash-solvency decision.",
     "examples": [
       {
-        "title": "purchases 365 days",
+        "title": "Ten payables turns imply 36.5 payment days in a 365-day year",
         "mode": "purchases",
         "values": {
           "days": 365,
           "average_ap": 50000,
           "purchases": 500000
         },
-        "inputs": "days = 365; average ap = 50000; purchases = 500000",
+        "inputs": "$50,000 average trade payables; $500,000 same-period net credit purchases; 365 reporting days.",
         "steps": [
-          "Purchase-based DPO = reporting days × average trade AP / net credit purchases; proxy DPO explicitly substitutes COGS.",
-          "With these inputs, days payable outstanding = 36.500000."
+          "Payables turnover is $500,000 / $50,000 = 10.",
+          "DPO is $50,000 / $500,000 × 365. Match the trade-payables balance to the purchases financed by those suppliers."
         ],
-        "answer": "Days payable outstanding: 36.500000.",
+        "answer": "DPO is 36.5 days. Compare it with actual supplier terms and payment records before judging payment behavior.",
         "expected": {
           "label": "Days payable outstanding",
           "value": 36.5,
@@ -199,7 +200,7 @@
         }
       },
       {
-        "title": "balances 365 days",
+        "title": "Use beginning and ending payables to estimate the same average",
         "mode": "balances",
         "values": {
           "days": 365,
@@ -207,12 +208,12 @@
           "end_ap": 60000,
           "purchases": 500000
         },
-        "inputs": "days = 365; begin ap = 40000; end ap = 60000; purchases = 500000",
+        "inputs": "Beginning trade payables $40,000; ending trade payables $60,000; annual net credit purchases $500,000; 365 days.",
         "steps": [
-          "Purchase-based DPO = reporting days × average trade AP / net credit purchases; proxy DPO explicitly substitutes COGS.",
-          "With these inputs, days payable outstanding = 36.500000."
+          "Average the balances to obtain $50,000.",
+          "Divide average payables by matching credit purchases and multiply by 365. A two-point average can hide seasonal swings."
         ],
-        "answer": "Days payable outstanding: 36.500000.",
+        "answer": "The estimated average produces 36.5 DPO, matching the known-average purchase-based case.",
         "expected": {
           "label": "Days payable outstanding",
           "value": 36.5,
@@ -220,19 +221,19 @@
         }
       },
       {
-        "title": "cogs 365 days",
+        "title": "A $400,000 COGS proxy changes the estimate to 45.625 days",
         "mode": "cogs",
         "values": {
           "days": 365,
           "average_ap": 50000,
           "cogs": 400000
         },
-        "inputs": "days = 365; average ap = 50000; cogs = 400000",
+        "inputs": "Same $50,000 average payables and 365-day year; substitute $400,000 cost of goods sold for credit purchases.",
         "steps": [
-          "Purchase-based DPO = reporting days × average trade AP / net credit purchases; proxy DPO explicitly substitutes COGS.",
-          "With these inputs, days payable outstanding = 45.625000."
+          "Calculate $50,000 / $400,000 × 365.",
+          "The result differs from purchase-based DPO because the denominator changed. It does not show that the company actually paid suppliers later."
         ],
-        "answer": "Days payable outstanding: 45.625000.",
+        "answer": "The COGS-proxy result is 45.625 days. Label the proxy when comparing it with a purchase-based result.",
         "expected": {
           "label": "Days payable outstanding",
           "value": 45.625,
@@ -270,24 +271,24 @@
     ]
   },
   "cash-conversion-cycle": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "The cash conversion cycle combines inventory days and collection days, then subtracts payables days. The operating cycle stops before that subtraction. Keeping all three components on compatible definitions allows a meaningful comparison between known-days and financial-input calculations.",
     "scope": "Manual, matched-period balance ratios or supplied component days. Purchase-based and COGS-proxy payables are separate modes. This is not a cash-balance forecast, liquidity guarantee or supplier-payment instruction.",
     "examples": [
       {
-        "title": "Component days (45, 30, 60)",
+        "title": "A 75-day operating cycle becomes a 15-day cash conversion cycle",
         "mode": "days",
         "values": {
           "dio": 45,
           "dso": 30,
           "dpo": 60
         },
-        "inputs": "dio = 45; dso = 30; dpo = 60",
+        "inputs": "Inventory days 45; collection days 30; payables days 60; all entered on compatible definitions.",
         "steps": [
-          "CCC = DIO + DSO − DPO; operating cycle = DIO + DSO.",
-          "With these inputs, cash conversion cycle (days) = 15.000000."
+          "Add inventory and collection days: 45 + 30 = 75.",
+          "Subtract payables days: 75 − 60. The operating cycle and cash conversion cycle are different measures."
         ],
-        "answer": "Cash conversion cycle (days): 15.000000.",
+        "answer": "The cash conversion cycle is 15 days; the operating cycle is 75 days. Neither is a cash-balance forecast.",
         "expected": {
           "label": "Cash conversion cycle (days)",
           "value": 15.0,
@@ -295,7 +296,7 @@
         }
       },
       {
-        "title": "purchases 365 days",
+        "title": "Derive each component before combining financial-statement inputs",
         "mode": "purchases",
         "values": {
           "days": 365,
@@ -306,12 +307,13 @@
           "average_ap": 50000,
           "purchases": 500000
         },
-        "inputs": "days = 365; inventory = 80000; cogs = 400000; average ar = 25000; credit sales = 600000; average ap = 50000; purchases = 500000",
+        "inputs": "365 days; average inventory $80,000; COGS $400,000; average receivables $25,000; net credit sales $600,000; average payables $50,000; credit purchases $500,000.",
         "steps": [
-          "CCC = DIO + DSO − DPO; operating cycle = DIO + DSO.",
-          "With these inputs, cash conversion cycle (days) = 51.708333."
+          "Inventory days = $80,000 / $400,000 × 365 = 73.",
+          "Collection days = $25,000 / $600,000 × 365 ≈ 15.2083; payables days = $50,000 / $500,000 × 365 = 36.5.",
+          "Combine the unrounded components: inventory days + collection days − payables days."
         ],
-        "answer": "Cash conversion cycle (days): 51.708333.",
+        "answer": "The purchase-based cash conversion cycle is about 51.71 days under these matching annual inputs.",
         "expected": {
           "label": "Cash conversion cycle (days)",
           "value": 51.708333333333336,
@@ -319,7 +321,7 @@
         }
       },
       {
-        "title": "cogs 365 days",
+        "title": "Changing only the payables denominator changes the reported cycle",
         "mode": "cogs",
         "values": {
           "days": 365,
@@ -329,12 +331,13 @@
           "credit_sales": 600000,
           "average_ap": 50000
         },
-        "inputs": "days = 365; inventory = 80000; cogs = 400000; average ar = 25000; credit sales = 600000; average ap = 50000",
+        "inputs": "Use the same 365-day balances, COGS and credit sales as the preceding case; use COGS as the disclosed payables proxy.",
         "steps": [
-          "CCC = DIO + DSO − DPO; operating cycle = DIO + DSO.",
-          "With these inputs, cash conversion cycle (days) = 42.583333."
+          "Inventory and collection days remain 73 and about 15.2083.",
+          "Payables days become $50,000 / $400,000 × 365 = 45.625.",
+          "Subtract this different payables estimate. A lower cycle here is a definition change, not evidence of an operating improvement."
         ],
-        "answer": "Cash conversion cycle (days): 42.583333.",
+        "answer": "The COGS-proxy cycle is about 42.58 days. Keep the denominator convention consistent in comparisons.",
         "expected": {
           "label": "Cash conversion cycle (days)",
           "value": 42.583333333333336,
@@ -368,24 +371,24 @@
     ]
   },
   "roic": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "ROIC compares annual after-tax operating profit with representative average invested capital. It differs from accounting net-income ROE and a general profit-to-cost ROI. The numerator, capital definition, tax assumptions and reporting period must describe the same operating scope.",
     "scope": "Annual manual operating-profit and invested-capital assumptions only. No live financial statements, balance-sheet reconstruction, intangible-capital adjustment or stock valuation. Loss tax benefits are not presumed unless explicitly selected.",
     "examples": [
       {
-        "title": "nopat annual operating model",
+        "title": "Compare 12% ROIC with an entered 8% WACC",
         "mode": "nopat",
         "values": {
           "nopat": 150000,
           "capital": 1250000,
           "wacc": 8
         },
-        "inputs": "nopat = 150000; capital = 1250000; wacc = 8",
+        "inputs": "Annual NOPAT $150,000; representative average invested capital $1,250,000; entered WACC 8%.",
         "steps": [
-          "ROIC = annual NOPAT / average invested capital; simplified economic profit = NOPAT − WACC × matching average capital.",
-          "With these inputs, annual return on invested capital = 12.00%."
+          "Divide annual after-tax operating profit by average invested capital and express the ratio as a percentage.",
+          "Subtract the entered WACC in percentage points. On the same capital base, simplified economic profit is $150,000 − 8% × $1,250,000."
         ],
-        "answer": "Annual return on invested capital: 12.00%.",
+        "answer": "ROIC is 12%, a 4-percentage-point spread over the assumed WACC; simplified annual economic profit is $50,000.",
         "expected": {
           "label": "Annual return on invested capital",
           "value": 12.0,
@@ -393,7 +396,7 @@
         }
       },
       {
-        "title": "ebit annual operating model",
+        "title": "Convert $200,000 EBIT to $150,000 NOPAT at a 25% tax assumption",
         "mode": "ebit",
         "values": {
           "ebit": 200000,
@@ -402,12 +405,12 @@
           "capital": 1250000,
           "wacc": 8
         },
-        "inputs": "ebit = 200000; tax rate = 25; loss tax = No assumed tax benefit on a loss; capital = 1250000; wacc = 8",
+        "inputs": "Annual EBIT $200,000; entered operating tax rate 25%; no assumed tax benefit on a loss; average invested capital $1,250,000; WACC 8%.",
         "steps": [
-          "ROIC = annual NOPAT / average invested capital; simplified economic profit = NOPAT − WACC × matching average capital.",
-          "With these inputs, annual return on invested capital = 12.00%."
+          "For this positive EBIT case, simplified NOPAT = $200,000 × (1 − 25%) = $150,000.",
+          "Divide that operating numerator by average capital. Do not silently substitute net income after financing costs."
         ],
-        "answer": "Annual return on invested capital: 12.00%.",
+        "answer": "The simplified tax bridge gives 12% ROIC. An entered tax rate does not establish actual cash taxes or a tax deduction.",
         "expected": {
           "label": "Annual return on invested capital",
           "value": 12.0,
@@ -415,7 +418,7 @@
         }
       },
       {
-        "title": "balances annual operating model",
+        "title": "Average $1 million and $1.5 million of invested capital",
         "mode": "balances",
         "values": {
           "nopat": 150000,
@@ -423,12 +426,12 @@
           "end_capital": 1500000,
           "wacc": 8
         },
-        "inputs": "nopat = 150000; begin capital = 1000000; end capital = 1500000; wacc = 8",
+        "inputs": "Annual NOPAT $150,000; beginning invested capital $1,000,000; ending invested capital $1,500,000; WACC 8%.",
         "steps": [
-          "ROIC = annual NOPAT / average invested capital; simplified economic profit = NOPAT − WACC × matching average capital.",
-          "With these inputs, annual return on invested capital = 12.00%."
+          "The two-point capital average is $1,250,000.",
+          "Use the same annual NOPAT and WACC assumptions as the known-average example. More frequent balances may better represent material within-year changes."
         ],
-        "answer": "Annual return on invested capital: 12.00%.",
+        "answer": "ROIC is 12% using the estimated average. The matching denominator makes it comparable with the first case.",
         "expected": {
           "label": "Annual return on invested capital",
           "value": 12.0,
@@ -462,24 +465,25 @@
     ]
   },
   "interest-coverage-ratio": {
-    "checkedOn": "2026-11-17",
-    "summary": "Interest coverage, also called times interest earned, compares EBIT with same-period interest expense. It measures an earnings-to-interest relationship rather than full principal-and-interest debt service. The selected target is a scenario input, not a universal safe threshold.",
+    "checkedOn": "2026-11-18",
+    "summary": "Interest coverage divides EBIT by borrowing interest expense from the same reporting period. For example, $100,000 EBIT and $25,000 interest give 4 times coverage. The result describes an earnings-to-interest relationship; it does not show whether cash can cover principal repayments or every other obligation.",
     "scope": "Manual matched-period EBIT and borrowing-interest expenses, or a simple signed net-income/tax bridge. No EBITDA model, cash-flow forecast, lender approval, default probability or universal covenant threshold.",
     "examples": [
       {
-        "title": "ebit EBIT 100000",
+        "title": "$100,000 EBIT covers $25,000 annual interest four times",
         "mode": "ebit",
         "values": {
           "ebit": 100000,
           "interest": 25000,
           "target": 3
         },
-        "inputs": "ebit = 100000; interest = 25000; target = 3",
+        "inputs": "Same 12-month period: EBIT $100,000; borrowing interest expense $25,000; selected coverage target 3 times.",
         "steps": [
-          "ICR / TIE = EBIT / interest expense; required EBIT = selected coverage target × same-period interest expense.",
-          "With these inputs, ebit interest coverage (times) = 4.000000."
+          "Divide $100,000 by $25,000. EBIT is earnings before interest and income taxes; use an amount covering the same business and reporting period as interest.",
+          "At the selected target, required EBIT is 3 × $25,000 = $75,000. Compare that with actual EBIT to find $25,000 headroom.",
+          "Principal repayments, capital expenditure and working-capital cash needs are outside this interest-only denominator."
         ],
-        "answer": "EBIT interest coverage (times): 4.000000.",
+        "answer": "Coverage is 4 times. The entered 3-times target is a comparison assumption, not a lending approval or a universal safety threshold.",
         "expected": {
           "label": "EBIT interest coverage (times)",
           "value": 4.0,
@@ -487,7 +491,7 @@
         }
       },
       {
-        "title": "bridge EBIT 100000",
+        "title": "Rebuild $100,000 EBIT from net income, tax and interest",
         "mode": "bridge",
         "values": {
           "net_income": 56000,
@@ -495,15 +499,36 @@
           "interest": 30000,
           "target": 3
         },
-        "inputs": "net income = 56000; income tax = 14000; interest = 30000; target = 3",
+        "inputs": "Same reporting period: net income $56,000; income tax expense $14,000; interest expense $30,000; target 3 times.",
         "steps": [
-          "ICR / TIE = EBIT / interest expense; required EBIT = selected coverage target × same-period interest expense.",
-          "With these inputs, ebit interest coverage (times) = 3.333333."
+          "Add the signed income-tax amount and interest back to net income: $56,000 + $14,000 + $30,000 = $100,000.",
+          "Divide by the same $30,000 interest expense. The target requires $90,000 EBIT, leaving $10,000 headroom.",
+          "Use this simple bridge only when those three statement amounts reconcile to the EBIT definition you need; a covenant may require other adjustments."
         ],
-        "answer": "EBIT interest coverage (times): 3.333333.",
+        "answer": "Coverage is about 3.3333 times. Both numerator and denominator matter: this differs from the first case despite matching EBIT.",
         "expected": {
           "label": "EBIT interest coverage (times)",
           "value": 3.3333333333333335,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "An operating loss produces negative interest coverage",
+        "mode": "ebit",
+        "values": {
+          "ebit": -10000,
+          "interest": 25000,
+          "target": 3
+        },
+        "inputs": "Same 12-month period: EBIT −$10,000; interest expense $25,000; selected target 3 times.",
+        "steps": [
+          "Divide −$10,000 by $25,000. Preserve the negative sign rather than interpreting the result as zero debt or spare earnings.",
+          "At the entered 3-times target, required EBIT is $75,000. Relative to the −$10,000 actual amount, the modeled EBIT shortfall is $85,000."
+        ],
+        "answer": "Interest coverage is −0.4 times. This is an earnings deficit, not a default prediction or a cash-flow forecast.",
+        "expected": {
+          "label": "EBIT interest coverage (times)",
+          "value": -0.4,
           "tolerance": 1e-07
         }
       }

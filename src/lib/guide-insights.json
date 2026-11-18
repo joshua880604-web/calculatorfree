@@ -24,7 +24,7 @@
       "Do not compare a principal-and-interest payment with another quote that includes escrow.",
       "Paying off a mortgage does not remove property taxes, insurance or maintenance.",
       "For requested 80% PMI cancellation, use the appraisal at purchase if below the purchase price; a current market appraisal is not the original value.",
-      "Automatic PMI uses an assumed credit score range (default 740\u2013759) and a dated base-rate card. Select Manual to use an actual lender quote; PMI is already included in the initial monthly total and schedule costs."
+      "Automatic PMI uses an assumed credit score range (default 740–759) and a dated base-rate card. Select Manual to use an actual lender quote; PMI is already included in the initial monthly total and schedule costs."
     ],
     "checkedOn": "2026-10-26"
   },
@@ -208,7 +208,7 @@
     ],
     "checks": [
       "The draw period does not simulate gradual new advances or changing balances.",
-      "An allocated monthly account fee is not a prediction of the lender\u2019s actual annual billing date.",
+      "An allocated monthly account fee is not a prediction of the lender’s actual annual billing date.",
       "Fees can change estimated APR even when the contract interest rate stays the same."
     ],
     "checkedOn": "2026-10-21"
@@ -289,7 +289,7 @@
       "Keep the distribution year fixed when checking whether the spouse-related table selection changes the divisor."
     ],
     "checks": [
-      "Use the required prior December 31 balance rather than substituting today\u2019s balance.",
+      "Use the required prior December 31 balance rather than substituting today’s balance.",
       "Inherited accounts and some still-working exceptions are outside this owner-account model.",
       "A displayed annual RMD does not determine its income-tax treatment or payment deadline."
     ],
@@ -308,7 +308,7 @@
       },
       {
         "label": "Take-home pay per period",
-        "meaning": "This job\u2019s modeled pay after deductions and allocated taxes; other-job income is not added to this paycheck."
+        "meaning": "This job’s modeled pay after deductions and allocated taxes; other-job income is not added to this paycheck."
       }
     ],
     "compare": [
@@ -316,7 +316,7 @@
       "Compare annual totals before comparing pay periods; weekly, biweekly and semimonthly schedules have different counts."
     ],
     "checks": [
-      "Do not enter the same income as both this job\u2019s pay and other-job income.",
+      "Do not enter the same income as both this job’s pay and other-job income.",
       "State and local rates are entered estimates, not complete jurisdiction-specific returns.",
       "W-4 elections, year-to-date payroll and IRS Publication 15-T withholding are not fully modeled."
     ],
@@ -339,7 +339,7 @@
       }
     ],
     "compare": [
-      "Hold price, appraisal and loan terms fixed; compare an illustrative rate with your lender\u2019s annual quote.",
+      "Hold price, appraisal and loan terms fixed; compare an illustrative rate with your lender’s annual quote.",
       "Then compare extra principal and the requested versus automatic scenarios without changing original value."
     ],
     "checks": [
@@ -377,7 +377,7 @@
     "checkedOn": "2026-10-26"
   },
   "discount-points": {
-    "answer": "Compare two fixed-rate loan quotes with the same principal and term. Points cost 1% of principal per point, but the rate reduction must come from the lender\u2019s actual quote. The comparison distinguishes monthly cash savings from interest-and-fee savings at a sale or refinancing horizon.",
+    "answer": "Compare two fixed-rate loan quotes with the same principal and term. Points cost 1% of principal per point, but the rate reduction must come from the lender’s actual quote. The comparison distinguishes monthly cash savings from interest-and-fee savings at a sale or refinancing horizon.",
     "results": [
       {
         "label": "Net borrowing-cost savings at horizon (B vs A)",
@@ -389,7 +389,7 @@
       },
       {
         "label": "First net-cost break-even month",
-        "meaning": "The first modeled month that B\u2019s interest/fee cost is no higher than A\u2019s, not a guarantee of permanent advantage."
+        "meaning": "The first modeled month that B’s interest/fee cost is no higher than A’s, not a guarantee of permanent advantage."
       }
     ],
     "compare": [
@@ -412,15 +412,15 @@
       },
       {
         "label": "Age at Coast FIRE",
-        "meaning": "The first modeled month when the portfolio meets the moving Coast threshold. \u201cNot reached by target age\u201d means the model found no crossing within your selected horizon."
+        "meaning": "The first modeled month when the portfolio meets the moving Coast threshold. “Not reached by target age” means the model found no crossing within your selected horizon."
       },
       {
         "label": "Current gap to Coast threshold",
-        "meaning": "Today\u2019s threshold minus the current retirement portfolio, floored at zero. Monthly deposits can close the moving gap; this is not an extra immediate-payment requirement."
+        "meaning": "Today’s threshold minus the current retirement portfolio, floored at zero. Monthly deposits can close the moving gap; this is not an extra immediate-payment requirement."
       },
       {
         "label": "Retirement balance on modeled path",
-        "meaning": "The projected balance after deposits stop at the first crossing, or after deposits continue to retirement if the threshold is never reached. Amounts retain today\u2019s purchasing power."
+        "meaning": "The projected balance after deposits stop at the first crossing, or after deposits continue to retirement if the threshold is never reached. Amounts retain today’s purchasing power."
       }
     ],
     "compare": [
@@ -429,7 +429,7 @@
       "To compare the full timeline, change one input in the form, calculate again and compare the resulting age and path. Use the existing CSV or result-summary exports to retain each scenario."
     ],
     "checks": [
-      "Every dollar amount is in today\u2019s USD. Do not inflate the retirement budget a second time.",
+      "Every dollar amount is in today’s USD. Do not inflate the retirement budget a second time.",
       "The return field is nominal, after fees. Inflation is deducted through the exact real-growth relationship.",
       "Monthly deposits maintain purchasing power and end at the first modeled crossing. No pre-retirement withdrawals are modeled.",
       "Default rates are illustrations. Lower returns, higher spending or different withdrawal assumptions can change the conclusion; no probability of success is calculated."
@@ -437,7 +437,7 @@
     "checkedOn": "2026-10-28"
   },
   "noi": {
-    "answer": "NOI separates a property\u2019s operations from financing. Choose one reporting period for every income and expense field, then review the annual reconciliation before interpreting cash flow or returns.",
+    "answer": "NOI separates a property’s operations from financing. Choose one reporting period for every income and expense field, then review the annual reconciliation before interpreting cash flow or returns.",
     "results": [
       {
         "label": "Annual net operating income",
@@ -469,7 +469,7 @@
     "results": [
       {
         "label": "FIRE portfolio target",
-        "meaning": "Annual portfolio-funded spending divided by the entered withdrawal rate, in today\u2019s USD."
+        "meaning": "Annual portfolio-funded spending divided by the entered withdrawal rate, in today’s USD."
       },
       {
         "label": "Age at modeled FIRE target",
@@ -486,7 +486,7 @@
       "Use Coast FIRE only for the distinct question of growing to a later retirement target without further deposits."
     ],
     "checks": [
-      "All money is in today\u2019s purchasing power. Nominal return and inflation are separate inputs.",
+      "All money is in today’s purchasing power. Nominal return and inflation are separate inputs.",
       "Monthly deposits maintain purchasing power and stop when the savings projection ends.",
       "Reaching a withdrawal-rate sizing target does not establish withdrawal safety or access to retirement accounts."
     ],
@@ -781,11 +781,11 @@
     "results": [
       {
         "label": "Payment each period",
-        "meaning": "Fix Length\u2019s regular payout for the selected frequency; a partial final period can produce a different last amount."
+        "meaning": "Fix Length’s regular payout for the selected frequency; a partial final period can produce a different last amount."
       },
       {
         "label": "Payout duration in years",
-        "meaning": "Fix Payment\u2019s actual final payment date, using whole payout dates."
+        "meaning": "Fix Payment’s actual final payment date, using whole payout dates."
       },
       {
         "label": "Total investment earnings",
@@ -841,7 +841,7 @@
     "results": [
       {
         "label": "Highest present-value application age",
-        "meaning": "Best of nine whole ages 62\u201370 under Ideal mode\u2019s assumptions, not household claiming advice."
+        "meaning": "Best of nine whole ages 62–70 under Ideal mode’s assumptions, not household claiming advice."
       },
       {
         "label": "Initial monthly benefit at selected age",
@@ -849,12 +849,12 @@
       },
       {
         "label": "Second option advantage",
-        "meaning": "Compare mode\u2019s second stream PV minus first, both valued at the earlier claim age."
+        "meaning": "Compare mode’s second stream PV minus first, both valued at the earlier claim age."
       }
     ],
     "compare": [
       "Use SSA estimates and verify whether they include future inflation.",
-      "Use Ideal\u2019s common age-62-dollar PIA or Compare\u2019s nominal claim-date quotes consistently.",
+      "Use Ideal’s common age-62-dollar PIA or Compare’s nominal claim-date quotes consistently.",
       "Vary lifespan and discount rate to understand the sensitivity."
     ],
     "checks": [
@@ -873,7 +873,7 @@
       },
       {
         "label": "FIRE portfolio target",
-        "meaning": "The annual portfolio-funded budget divided by the chosen withdrawal-rate assumption, in today\u2019s USD."
+        "meaning": "The annual portfolio-funded budget divided by the chosen withdrawal-rate assumption, in today’s USD."
       },
       {
         "label": "Age at modeled FIRE target",
@@ -886,7 +886,7 @@
       "Change one budget input and Calculate again to see a different full projection."
     ],
     "checks": [
-      "All budget entries use today\u2019s purchasing power; do not inflate them again.",
+      "All budget entries use today’s purchasing power; do not inflate them again.",
       "Annual provisions are recurring allowances, not dated one-time expenses.",
       "The tax allowance and withdrawal rate are user assumptions; neither is an automatic tax or safety calculation."
     ],
@@ -901,7 +901,7 @@
       },
       {
         "label": "FIRE portfolio target",
-        "meaning": "The annual portfolio-funded budget divided by the chosen withdrawal-rate assumption, in today\u2019s USD."
+        "meaning": "The annual portfolio-funded budget divided by the chosen withdrawal-rate assumption, in today’s USD."
       },
       {
         "label": "Age at modeled FIRE target",
@@ -914,7 +914,7 @@
       "Change one budget input and Calculate again to see a different full projection."
     ],
     "checks": [
-      "All budget entries use today\u2019s purchasing power; do not inflate them again.",
+      "All budget entries use today’s purchasing power; do not inflate them again.",
       "Annual provisions are recurring allowances, not dated one-time expenses.",
       "The tax allowance and withdrawal rate are user assumptions; neither is an automatic tax or safety calculation."
     ],
@@ -933,7 +933,7 @@
       },
       {
         "label": "Total interest",
-        "meaning": "Sum of opening balance \u00d7 APR / 12 each month. Displayed cents are rounded; daily-interest statements may differ."
+        "meaning": "Sum of opening balance × APR / 12 each month. Displayed cents are rounded; daily-interest statements may differ."
       }
     ],
     "compare": [
@@ -961,7 +961,7 @@
       },
       {
         "label": "Total interest",
-        "meaning": "Sum of opening balance \u00d7 APR / 12 each month. Displayed cents are rounded; daily-interest statements may differ."
+        "meaning": "Sum of opening balance × APR / 12 each month. Displayed cents are rounded; daily-interest statements may differ."
       }
     ],
     "compare": [
@@ -1095,5 +1095,135 @@
       "Fixed overhead, financing and income tax remain separate; the tool does not automatically subtract them."
     ],
     "checkedOn": "2026-10-29"
+  },
+  "cash-secured-put": {
+    "answer": "For two 100-share puts with a $50 strike, $2.50 premium and $4 total fees, net premium is $496 and expiration breakeven is $47.52 per share. Change the assumed expiration price to see whether that premium covers the intrinsic obligation. Every example below uses the same position, making the price comparison reproducible.",
+    "results": [
+      {
+        "label": "Modeled expiration profit / loss",
+        "meaning": "Net premium less the short put’s intrinsic obligation at your assumed expiration price. A premium receipt can coexist with an overall loss."
+      },
+      {
+        "label": "Cash secured at strike × shares",
+        "meaning": "The full strike-based purchase amount before premium credit: $10,000 in the examples. This is the worksheet’s comparison denominator, not a broker buying-power quote."
+      },
+      {
+        "label": "Expiration breakeven per share",
+        "meaning": "Strike minus net premium per covered share. The examples give $47.52 after the one entered $4 fee amount."
+      },
+      {
+        "label": "Net premium / secured cash",
+        "meaning": "The single-trade net premium divided by the full strike-based cash amount. It is not annualized and does not measure assignment probability or maximum downside."
+      }
+    ],
+    "compare": [
+      "Hold strike, premium, contracts, shares per contract and fees fixed. First use $55 as the assumed expiration price and note the $496 capped gain.",
+      "Change only expiration stock price to $47.52 and then $45. Those cases show break-even and a $504 loss without changing the original premium.",
+      "Test a zero stock price to see the $9,504 maximum modeled loss. Compare that downside with the limited premium rather than ranking the trade on premium percentage alone."
+    ],
+    "checks": [
+      "Use the strike and multiplier for the actual contract specification. This tool supports standard share delivery, not adjusted mixed-security deliverables.",
+      "Enter premium per share and fees as one total trade amount. If you include assumed assignment charges, include them once in that total.",
+      "Use your chosen scenario price rather than treating it as a forecast. No live quote, exercise probability or early-close value is retrieved.",
+      "American-style puts can be assigned before expiration. The displayed expiration relationship does not guarantee whether or when assignment occurs."
+    ],
+    "checkedOn": "2026-11-18"
+  },
+  "interest-coverage-ratio": {
+    "answer": "Use EBIT and borrowing interest expense for the same reporting period and business scope. $100,000 EBIT divided by $25,000 interest gives 4 times coverage. Read that as an accounting earnings relationship, then examine the target headroom separately from cash, principal repayments and lender-specific covenant definitions.",
+    "results": [
+      {
+        "label": "EBIT interest coverage (times)",
+        "meaning": "The EBIT numerator divided by positive borrowing interest expense. Negative EBIT produces a negative multiple; zero interest leaves the ratio undefined."
+      },
+      {
+        "label": "Period EBIT used",
+        "meaning": "Entered EBIT, or the simplified bridge from net income plus the signed income-tax amount and interest. The bridge needs to reconcile with your actual statement definitions."
+      },
+      {
+        "label": "EBIT needed for selected target coverage",
+        "meaning": "Your chosen target multiple multiplied by the entered interest expense. At 3 times and $25,000 interest, the target EBIT is $75,000."
+      },
+      {
+        "label": "EBIT headroom / shortfall against target",
+        "meaning": "Actual EBIT less target EBIT. This is an earnings difference in dollars; it is not available cash or unused borrowing capacity."
+      }
+    ],
+    "compare": [
+      "Start with the $100,000 EBIT and $25,000 interest case. Keep the 3-times target fixed to distinguish the observed 4-times ratio from the chosen target.",
+      "Increase interest expense while holding EBIT fixed to isolate financing-cost sensitivity. Lower coverage in that comparison does not mean operating earnings changed.",
+      "If using the net-income bridge, reconcile net income, signed income tax and interest first. Compare the rebuilt EBIT with a directly reported amount before interpreting the ratio."
+    ],
+    "checks": [
+      "Take earnings and interest from the same annual or interim period. Combining annual EBIT with one quarter of interest would overstate coverage.",
+      "Use borrowing interest expense, not principal repayments, dividend payments or an unlabeled net-interest amount. Check how your statement treats interest income.",
+      "Keep an income-tax benefit negative in the bridge. Do not automatically turn a benefit into a positive add-back.",
+      "The simple bridge may need adjustments for discontinued operations, nonoperating items or a contractual EBIT definition. Use the definition required by the analysis.",
+      "Treat the target as an editable scenario. A ratio alone cannot determine default risk, loan eligibility or sufficient cash for debt service."
+    ],
+    "checkedOn": "2026-11-18"
+  },
+  "stock-split": {
+    "answer": "A stock split changes quantity and proportional per-share amounts together. In a 3-for-2 split, 120 shares become 180; a $45 reference price becomes $30, leaving $5,400 total reference value. Use the preserved totals to check the arithmetic, then consult issuer and broker terms for actual settlement and fractional shares.",
+    "results": [
+      {
+        "label": "Theoretical shares after splits",
+        "meaning": "Original share quantity multiplied by the cumulative new-for-old factor. Fractional results are retained rather than rounded to a presumed broker outcome."
+      },
+      {
+        "label": "Proportional reference price per share",
+        "meaning": "Entered reference price divided by the cumulative split factor. It isolates the proportional corporate action and is not an actual post-split market quotation."
+      },
+      {
+        "label": "Adjusted average acquisition cost per share",
+        "meaning": "The intact holding’s entered total acquisition cost allocated over the theoretical new quantity. It does not construct tax lots or account for a sale or cash settlement."
+      },
+      {
+        "label": "Total reference holding value",
+        "meaning": "Original shares times original reference price, preserved by the proportional calculation. More shares alone do not imply a gain in this value."
+      }
+    ],
+    "compare": [
+      "Enter the issuer’s ratio as new shares for old shares. Reproduce 3 new for 2 old before comparing it with a reverse split such as 1 new for 10 old.",
+      "For sequential splits, list each ratio in order and inspect the step table. Apply the combined factor to the original quantity only once.",
+      "Check both total reference value and total acquisition cost before and after. If you are comparing the same intact holding, proportional per-share changes should reconcile with those totals."
+    ],
+    "checks": [
+      "Start with the shares held before the first action. Do not use a share count that your broker has already adjusted and apply the same split again.",
+      "Enter whole positive numbers for the new-for-old ratio. A 1-for-10 reverse split is 1 new and 10 old, not the other way round.",
+      "Use the issuer announcement and broker notice for eligibility, record dates, cash in lieu and rounding; this calculator does not infer them.",
+      "Keep actual trades, fees, cash settlements and tax-lot adjustments separate from the proportional average-cost illustration."
+    ],
+    "checkedOn": "2026-11-18"
+  },
+  "customer-acquisition-cost": {
+    "answer": "Define the acquisition cohort and cost scope first, then divide included costs by unique new customers. The worked $25,000 cost reconciliation for 100 new customers gives $250 CAC. Re-entering only $12,000 of advertising gives $120 per customer, illustrating how a narrower definition can change the ratio without making the acquisition effort more efficient.",
+    "results": [
+      {
+        "label": "Acquisition cost per unique new customer",
+        "meaning": "Selected acquisition costs divided by customers counted once when first acquired in the matching scope. Orders, visits and leads are different denominators."
+      },
+      {
+        "label": "Total acquisition cost included",
+        "meaning": "Your already reconciled total, or the sum of nonoverlapping advertising, allocated personnel, agency, software and other acquisition items. The tool does not discover missing costs."
+      },
+      {
+        "label": "Unique new customers in the selected scope",
+        "meaning": "The new-customer count for the campaign, channel or company-wide definition you chose. Repeat orders from an existing customer do not increase this count."
+      }
+    ],
+    "compare": [
+      "Reconcile the itemized $25,000 case against the same known total with 100 customers. Both modes should produce $250 when the included costs and customer scope match.",
+      "Keep the 100 customers fixed and remove the $8,000 personnel plus $5,000 other costs. The $120 result is an advertising-only measure; label the changed definition.",
+      "For campaign or period comparisons, hold the cost definition and customer attribution method consistent, then examine timing and cohort differences before interpreting a lower ratio."
+    ],
+    "checks": [
+      "Record the reporting window, new-customer definition and attribution scope alongside your source data. Review conversion lag before pairing this month’s spending with this month’s customers.",
+      "Use a deduplicated new-customer count from your records. Repeat purchases, existing-customer orders and leads should not silently become new customers.",
+      "Allocate the acquisition-related portion of shared salaries, agency invoices and software once. Avoid counting an agency cost inside advertising and again in its own line.",
+      "Use customer revenue and gross-profit or contribution information separately when examining economics. CAC is not ROAS, LTV or a business profitability conclusion.",
+      "With zero new customers, CAC is undefined. A zero included cost with positive customers can reflect an incomplete scope rather than genuinely costless acquisition."
+    ],
+    "checkedOn": "2026-11-18"
   }
 }

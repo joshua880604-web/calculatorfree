@@ -1,23 +1,24 @@
 {
   "mortgage-buydown": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "A temporary mortgage buydown uses subsidy funds to cover part of the early principal-and-interest payments. A 2-1 plan illustrates two years of reduced borrower payments; a 3-2-1 plan illustrates three. The mortgage note rate and lender payment remain unchanged.",
     "scope": "Fixed-rate, monthly amortizing loans only. Tax, insurance, mortgage insurance and closing charges are excluded. No eligibility, approval, source-of-funds limits or unused subsidy refund is determined.",
     "examples": [
       {
-        "title": "2-1 payments at original principal and term",
+        "title": "A 2-1 buydown starts a $300,000 loan at $1,610.46 a month",
         "mode": "2-1",
         "values": {
           "principal": 300000,
           "rate": 7,
           "months": 360
         },
-        "inputs": "principal = 300000; rate = 7; months = 360",
+        "inputs": "$300,000 loan; 7% fixed note rate; 360 monthly payments; 2-1 temporary buydown.",
         "steps": [
-          "Subsidy = full note-rate P&I − reduced borrower P&I.",
-          "With the stated assumptions, first-year borrower monthly p&i = 1,610.46."
+          "Calculate the lender payment at the 7% note rate over the full 360-month term.",
+          "Calculate the first-year borrower payment using 5% over that same original principal and term. The second-year borrower calculation uses 6%.",
+          "Subsidy funds cover the difference between the borrower payment and the unchanged contract payment. Taxes and insurance are outside these amounts."
         ],
-        "answer": "First-year borrower monthly P&I: $1,610.46.",
+        "answer": "First-year borrower principal and interest is $1,610.46 per month. Budget for the payment increase when each temporary reduction ends.",
         "expected": {
           "label": "First-year borrower monthly P&I",
           "value": 1610.464869036417,
@@ -25,19 +26,20 @@
         }
       },
       {
-        "title": "3-2-1 payments at original principal and term",
+        "title": "A 3-2-1 buydown spreads the temporary reductions over three years",
         "mode": "3-2-1",
         "values": {
           "principal": 300000,
           "rate": 7,
           "months": 360
         },
-        "inputs": "principal = 300000; rate = 7; months = 360",
+        "inputs": "The same $300,000, 7%, 360-month loan; select the 3-2-1 plan.",
         "steps": [
-          "Subsidy = full note-rate P&I − reduced borrower P&I.",
-          "With the stated assumptions, first-year borrower monthly p&i = 1,432.25."
+          "Use borrower calculation rates of 4%, 5% and 6% in years one, two and three, respectively.",
+          "For each reduced year, use the original loan amount and original term; the lender continues receiving the 7% contract payment.",
+          "Compare total subsidy funding as well as the first-year payment. A lower initial payment can require a larger subsidy."
         ],
-        "answer": "First-year borrower monthly P&I: $1,432.25.",
+        "answer": "First-year borrower principal and interest is $1,432.25 per month. The 7% note rate has not changed.",
         "expected": {
           "label": "First-year borrower monthly P&I",
           "value": 1432.2458863963784,
@@ -45,19 +47,19 @@
         }
       },
       {
-        "title": "1-0 payments at original principal and term",
+        "title": "A 1-0 buydown provides one year of reduced borrower payments",
         "mode": "1-0",
         "values": {
           "principal": 300000,
           "rate": 7,
           "months": 360
         },
-        "inputs": "principal = 300000; rate = 7; months = 360",
+        "inputs": "$300,000 loan; 7% note rate; 360 months; 1-0 temporary buydown.",
         "steps": [
-          "Subsidy = full note-rate P&I − reduced borrower P&I.",
-          "With the stated assumptions, first-year borrower monthly p&i = 1,798.65."
+          "Calculate the first-year borrower payment using a 6% calculation rate on the original amount and term.",
+          "From year two, the borrower pays the full contract principal and interest. The subsidy is temporary rather than a permanent rate reduction."
         ],
-        "answer": "First-year borrower monthly P&I: $1,798.65.",
+        "answer": "The first-year borrower payment is $1,798.65 a month, before taxes and insurance.",
         "expected": {
           "label": "First-year borrower monthly P&I",
           "value": 1798.6515754582572,
@@ -65,19 +67,19 @@
         }
       },
       {
-        "title": "1-1 payments at original principal and term",
+        "title": "A 1-1 buydown keeps the same reduction for two years",
         "mode": "1-1",
         "values": {
           "principal": 300000,
           "rate": 7,
           "months": 360
         },
-        "inputs": "principal = 300000; rate = 7; months = 360",
+        "inputs": "The same $300,000, 7%, 360-month loan; 1-1 temporary buydown.",
         "steps": [
-          "Subsidy = full note-rate P&I − reduced borrower P&I.",
-          "With the stated assumptions, first-year borrower monthly p&i = 1,798.65."
+          "Use a 6% borrower calculation rate in both of the first two years.",
+          "Compare this with the 1-0 example: the first-year payment matches, but the second subsidy year increases total required funding."
         ],
-        "answer": "First-year borrower monthly P&I: $1,798.65.",
+        "answer": "The borrower pays $1,798.65 a month in each reduced year. Equal starting payments do not imply equal buydown costs.",
         "expected": {
           "label": "First-year borrower monthly P&I",
           "value": 1798.6515754582572,
@@ -111,12 +113,84 @@
     ]
   },
   "cash-secured-put": {
-    "checkedOn": "2026-11-17",
-    "summary": "A cash-secured put combines a short put with cash available to buy the contract shares if assigned. Premium is limited; a large stock-price decline can produce a much larger loss. This worksheet isolates expiration outcomes and makes its cash denominator explicit.",
+    "checkedOn": "2026-11-18",
+    "summary": "A cash-secured put earns at most the net option premium in this expiration worksheet, while a falling stock can create a much larger loss. Enter a strike, premium, fees and share count, then compare the same position at different expiration prices. The examples below hold those trade inputs constant so the price effect is visible.",
     "scope": "Manual, standard share-delivery puts held to expiration. No live option chain, fair-value pricing, early-close model, assignment probability or tax calculation. Broker collateral rules can differ.",
     "examples": [
       {
-        "title": "Expiration stock 0",
+        "title": "Above the $50 strike: keep $496 net premium",
+        "mode": "expiration",
+        "values": {
+          "strike": 50,
+          "premium": 2.5,
+          "contracts": 2,
+          "multiplier": 100,
+          "fees": 4,
+          "stock": 55
+        },
+        "inputs": "Strike $50; premium $2.50 per share; two contracts of 100 shares each; $4 total fees; assumed expiration stock price $55.00.",
+        "steps": [
+          "Two contracts × 100 shares cover 200 shares. Gross premium is $2.50 × 200 = $500; subtract $4 total fees to obtain $496 net premium.",
+          "At a $55 expiration share price, max($50 − $55, 0) is zero, so there is no intrinsic-value obligation in this scenario.",
+          "The $10,000 strike-based cash amount remains a separate collateral measure. The premium does not capture the stock’s upside above the strike."
+        ],
+        "answer": "Modeled expiration profit is $496, the maximum for these trade inputs. Exercise or assignment outcomes are not guaranteed by an assumed price.",
+        "expected": {
+          "label": "Modeled expiration profit / loss",
+          "value": 496,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "At $47.52 per share: the position breaks even after fees",
+        "mode": "expiration",
+        "values": {
+          "strike": 50,
+          "premium": 2.5,
+          "contracts": 2,
+          "multiplier": 100,
+          "fees": 4,
+          "stock": 47.52
+        },
+        "inputs": "Strike $50; premium $2.50 per share; two contracts of 100 shares each; $4 total fees; assumed expiration stock price $47.52.",
+        "steps": [
+          "Use the same $496 net premium and 200 covered shares.",
+          "Breakeven = $50 strike − $496 / 200 = $47.52 per share.",
+          "The $2.48 intrinsic loss per share totals $496, offsetting the net premium. Break-even does not mean assignment cannot occur."
+        ],
+        "answer": "Modeled expiration profit or loss is $0, before taxes and any costs omitted from the entered fees.",
+        "expected": {
+          "label": "Modeled expiration profit / loss",
+          "value": 0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "At $45 per share: premium offsets part of a $1,000 obligation",
+        "mode": "expiration",
+        "values": {
+          "strike": 50,
+          "premium": 2.5,
+          "contracts": 2,
+          "multiplier": 100,
+          "fees": 4,
+          "stock": 45
+        },
+        "inputs": "Strike $50; premium $2.50 per share; two contracts of 100 shares each; $4 total fees; assumed expiration stock price $45.00.",
+        "steps": [
+          "The same trade still receives $496 net premium; do not subtract the $4 fees a second time.",
+          "Intrinsic obligation is ($50 − $45) × 200 = $1,000. Subtract it from net premium.",
+          "If the shares are delivered at the strike, $47.52 is the modeled net economic acquisition cost per share under these inputs, not a completed tax-basis record."
+        ],
+        "answer": "Modeled expiration loss is $504. A positive premium receipt does not ensure a profitable trade.",
+        "expected": {
+          "label": "Modeled expiration profit / loss",
+          "value": -504,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "At a zero stock price: the modeled maximum loss is $9,504",
         "mode": "expiration",
         "values": {
           "strike": 50,
@@ -126,15 +200,16 @@
           "fees": 4,
           "stock": 0
         },
-        "inputs": "strike = 50; premium = 2.5; contracts = 2; multiplier = 100; fees = 4; stock = 0",
+        "inputs": "Strike $50; premium $2.50 per share; two contracts of 100 shares each; $4 total fees; assumed expiration stock price $0.00.",
         "steps": [
-          "Expiration P&L = net premium − max(strike − stock price, 0) × shares.",
-          "With the stated assumptions, modeled expiration profit / loss = -9,504.00."
+          "The maximum strike-based share purchase amount is $50 × 200 = $10,000.",
+          "At a zero share price, subtract the $496 net premium from that full amount.",
+          "Compare this loss with the $496 maximum gain. The premium-to-cash percentage does not describe the possible downside or an annualized return."
         ],
-        "answer": "Modeled expiration profit / loss: $-9,504.00.",
+        "answer": "Modeled maximum expiration loss is $9,504. The example illustrates substantial downside despite the cash backing.",
         "expected": {
           "label": "Modeled expiration profit / loss",
-          "value": -9504.0,
+          "value": -9504,
           "tolerance": 1e-07
         }
       }
@@ -165,23 +240,23 @@
     ]
   },
   "profitability-index": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "Profitability index expresses future net cash-flow present value per dollar of initial investment. NPV expresses the difference in dollars. Keeping the time-zero outlay separate makes the two measures reconcile and avoids counting the initial investment twice.",
     "scope": "One positive initial outlay and manually entered future net flows or a known discounted PV. Periodic flows start at the end of period 1. This is not the alternative ratio of positive inflows to all outflows.",
     "examples": [
       {
-        "title": "Already discounted future PV",
+        "title": "A $12,000 present value against a $10,000 outlay gives PI of 1.20",
         "mode": "known-pv",
         "values": {
           "initial": 10000,
           "pv": 12000
         },
-        "inputs": "initial = 10000; pv = 12000",
+        "inputs": "$10,000 initial investment now; $12,000 present value of future net cash flows, already discounted.",
         "steps": [
-          "PI = PV(future net cash flows) / initial outlay = 1 + NPV / initial outlay.",
-          "With the stated assumptions, profitability index = 1.200000."
+          "Divide future cash-flow present value by the initial outlay: $12,000 / $10,000.",
+          "Subtract the same outlay to reconcile NPV: $12,000 − $10,000 = $2,000. Do not discount the entered present value again."
         ],
-        "answer": "Profitability index: 1.200000×.",
+        "answer": "PI is 1.20: $1.20 of modeled future present value per $1 invested. The $2,000 NPV is a separate dollar measure.",
         "expected": {
           "label": "Profitability index",
           "value": 1.2,
@@ -189,7 +264,7 @@
         }
       },
       {
-        "title": "Annual future flows start after time zero",
+        "title": "Three $4,000 receipts fall slightly short at a 10% discount rate",
         "mode": "periodic",
         "values": {
           "initial": 10000,
@@ -197,12 +272,13 @@
           "frequency": "Annual",
           "rate": 10
         },
-        "inputs": "initial = 10000; flows = 4000 / 4000 / 4000; frequency = Annual; rate = 10",
+        "inputs": "$10,000 initial outlay; $4,000 at the end of each of years one, two and three; 10% annual discount rate.",
         "steps": [
-          "PI = PV(future net cash flows) / initial outlay = 1 + NPV / initial outlay.",
-          "With the stated assumptions, profitability index = 0.994741."
+          "Discount each future receipt separately: $4,000 / 1.10, $4,000 / 1.10² and $4,000 / 1.10³.",
+          "Their present values total about $9,947.41. Keep the $10,000 time-zero outlay outside that future-flow list.",
+          "Divide the discounted receipts by the outlay. The undiscounted $12,000 total alone cannot determine the result."
         ],
-        "answer": "Profitability index: 0.994741×.",
+        "answer": "PI is about 0.994741 and NPV about −$52.59 under these timing and discount assumptions.",
         "expected": {
           "label": "Profitability index",
           "value": 0.994740796393689,
@@ -236,23 +312,23 @@
     ]
   },
   "return-on-equity": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "Corporate return on equity compares period net income with average book equity. The three-factor DuPont identity separates the same ratio into profitability, asset turnover and leverage. Numerator, denominator and period must describe the same ownership scope.",
     "scope": "Manual corporate accounting ratios. No financial-statement retrieval, equity valuation or property cash-yield model. Nonpositive equity and equity crossings do not receive a healthy performance score.",
     "examples": [
       {
-        "title": "average income 200000",
+        "title": "Earn $200,000 on $1.25 million of average equity",
         "mode": "average",
         "values": {
           "income": 200000,
           "equity": 1250000
         },
-        "inputs": "income = 200000; equity = 1250000",
+        "inputs": "$200,000 period net income; $1,250,000 representative average book equity for the same ownership scope.",
         "steps": [
-          "ROE = net income / average equity; DuPont = margin × asset turnover × equity multiplier.",
-          "With the stated assumptions, return on equity = 16.00."
+          "Divide net income by average equity: $200,000 / $1,250,000.",
+          "Convert the ratio to a percentage. Use book equity, rather than the market value of the company’s shares."
         ],
-        "answer": "Return on equity: 16.00%.",
+        "answer": "ROE is 16% for the entered period. This is an accounting return, not a shareholder’s market return.",
         "expected": {
           "label": "Return on equity",
           "value": 16.0,
@@ -260,19 +336,19 @@
         }
       },
       {
-        "title": "balances income 200000",
+        "title": "Estimate average equity from $1 million and $1.5 million balances",
         "mode": "balances",
         "values": {
           "income": 200000,
           "begin_equity": 1000000,
           "end_equity": 1500000
         },
-        "inputs": "income = 200000; begin equity = 1000000; end equity = 1500000",
+        "inputs": "$200,000 period net income; beginning book equity $1,000,000; ending book equity $1,500,000.",
         "steps": [
-          "ROE = net income / average equity; DuPont = margin × asset turnover × equity multiplier.",
-          "With the stated assumptions, return on equity = 16.00."
+          "Average the two balances: ($1,000,000 + $1,500,000) / 2 = $1,250,000.",
+          "Divide same-period net income by that average. Large within-period changes may require a more representative average."
         ],
-        "answer": "Return on equity: 16.00%.",
+        "answer": "The two-point average gives 16% ROE. It matches the known-average case because the denominator is the same.",
         "expected": {
           "label": "Return on equity",
           "value": 16.0,
@@ -280,7 +356,7 @@
         }
       },
       {
-        "title": "dupont income 200000",
+        "title": "Reconcile 16% ROE through margin, turnover and leverage",
         "mode": "dupont",
         "values": {
           "income": 200000,
@@ -288,12 +364,13 @@
           "sales": 2000000,
           "assets": 2500000
         },
-        "inputs": "income = 200000; equity = 1250000; sales = 2000000; assets = 2500000",
+        "inputs": "$200,000 net income; $2,000,000 sales; $2,500,000 average assets; $1,250,000 average equity.",
         "steps": [
-          "ROE = net income / average equity; DuPont = margin × asset turnover × equity multiplier.",
-          "With the stated assumptions, return on equity = 16.00."
+          "Net margin is $200,000 / $2,000,000 = 10%.",
+          "Asset turnover is $2,000,000 / $2,500,000 = 0.8; the equity multiplier is $2,500,000 / $1,250,000 = 2.",
+          "Multiply 10% × 0.8 × 2. The identity explains the same accounting ratio without treating greater leverage as an automatic improvement."
         ],
-        "answer": "Return on equity: 16.00%.",
+        "answer": "DuPont ROE is 16%, using consistent income, asset and equity definitions.",
         "expected": {
           "label": "Return on equity",
           "value": 16.0,
@@ -327,12 +404,12 @@
     ]
   },
   "72t": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "A substantially equal periodic payment series may qualify for an exception to the 10% additional tax on early retirement distributions if its requirements are satisfied. Notice 2022-6 describes three calculation methods. The amount alone does not establish or qualify a series.",
     "scope": "First-year estimates for a new single-life traditional IRA series starting from 2023 onward under the rules checked here. No joint lives, inherited accounts, pre-2023 transition, first-year proration, tax eligibility, recapture calculation or installment administration.",
     "examples": [
       {
-        "title": "IRS age-50 first-year RMD method",
+        "title": "An age-50 RMD-method illustration uses a 36.2-year divisor",
         "mode": "rmd",
         "values": {
           "birth": "1973-08-15",
@@ -340,13 +417,13 @@
           "valuation": "2022-12-31",
           "balance": 400000
         },
-        "inputs": "birth = 1973-08-15; start = 2023-12-01; valuation = 2022-12-31; balance = 400000",
+        "inputs": "Birth August 15, 1973; series starts December 1, 2023; entered December 31, 2022 valuation of $400,000; Single Life table.",
         "steps": [
-          "RMD: balance / expectancy; amortization: balance / level-payment factor; annuitization: balance / mortality annuity factor.",
-          "Age on the 2023 birthday is 50; use Single Life expectancy 36.2. Fixed methods use a selected annual rate of 4%.",
-          "With the stated assumptions, estimated first-year annual sepp amount = 11,049.72."
+          "Age in the illustrated first distribution year is 50. The selected Single Life expectancy is 36.2 years.",
+          "Divide the entered account balance by 36.2. This is the RMD calculation method for a SEPP illustration, not a regular age-based required distribution.",
+          "The calculator does not establish that the valuation choice or distribution arrangement qualifies for an exception."
         ],
-        "answer": "Estimated first-year annual SEPP amount: $11,049.72.",
+        "answer": "The illustrated first-year annual amount is $11,049.72. Later-year RMD-method amounts require new inputs and the applicable rules.",
         "expected": {
           "label": "Estimated first-year annual SEPP amount",
           "value": 11049.723756906078,
@@ -354,7 +431,7 @@
         }
       },
       {
-        "title": "Fixed amortization rate 0.04",
+        "title": "A 4% fixed-amortization illustration gives a different annual amount",
         "mode": "amortization",
         "values": {
           "birth": "1973-08-15",
@@ -365,13 +442,13 @@
           "afr_prior": 0,
           "afr_second": 0
         },
-        "inputs": "birth = 1973-08-15; start = 2023-12-01; valuation = 2022-12-31; balance = 400000; rate = 4.0; afr prior = 0; afr second = 0",
+        "inputs": "Same birth, 2023 start date and $400,000 valuation; 4% entered annual rate; both optional prior-month AFR fields left at zero.",
         "steps": [
-          "RMD: balance / expectancy; amortization: balance / level-payment factor; annuitization: balance / mortality annuity factor.",
-          "Age on the 2023 birthday is 50; use Single Life expectancy 36.2. Fixed methods use a selected annual rate of 4%.",
-          "With the stated assumptions, estimated first-year annual sepp amount = 21,101.63."
+          "Use the 36.2-year Single Life period and the entered 4% rate in the level annual-payment formula.",
+          "The zero AFR entries mean no prior-month AFR data were supplied; they are not historical rate observations. Check rate eligibility separately.",
+          "This calculator uses a single-life, annual-payment illustration and does not establish SEPP qualification or a compliant payment calendar."
         ],
-        "answer": "Estimated first-year annual SEPP amount: $21,101.63.",
+        "answer": "The illustrated annual payment is $21,101.63, before any ordinary income tax. The 4% rate is an example, not a current rate recommendation.",
         "expected": {
           "label": "Estimated first-year annual SEPP amount",
           "value": 21101.632530005234,
@@ -379,7 +456,7 @@
         }
       },
       {
-        "title": "Mortality annuity-immediate rate 0.04",
+        "title": "Fixed annuitization uses mortality weights rather than a single term",
         "mode": "annuitization",
         "values": {
           "birth": "1973-08-15",
@@ -390,13 +467,13 @@
           "afr_prior": 0,
           "afr_second": 0
         },
-        "inputs": "birth = 1973-08-15; start = 2023-12-01; valuation = 2022-12-31; balance = 400000; rate = 4.0; afr prior = 0; afr second = 0",
+        "inputs": "Same age-50, 2023-start $400,000 illustration; 4% entered rate; optional prior-month AFR fields left at zero.",
         "steps": [
-          "RMD: balance / expectancy; amortization: balance / level-payment factor; annuitization: balance / mortality annuity factor.",
-          "Age on the 2023 birthday is 50; use Single Life expectancy 36.2. Fixed methods use a selected annual rate of 4%.",
-          "With the stated assumptions, estimated first-year annual sepp amount = 22,030.33."
+          "Use the model’s specified IRS mortality table and year-end-payment convention to calculate a single-life annuity divisor.",
+          "Divide the balance by that divisor. Mortality-weighted annuitization and fixed-term amortization need not produce the same payment.",
+          "Confirm eligibility, permitted rates, account segregation and modification rules separately; this first-year calculation is not a full SEPP plan."
         ],
-        "answer": "Estimated first-year annual SEPP amount: $22,030.33.",
+        "answer": "The modeled annual amount is $22,030.33 under the stated mortality and timing convention, before ordinary income tax.",
         "expected": {
           "label": "Estimated first-year annual SEPP amount",
           "value": 22030.327240079143,

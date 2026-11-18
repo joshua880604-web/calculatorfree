@@ -3586,8 +3586,8 @@
       }
     },
     "calculator:cash-secured-put": {
-      "updatedOn": "2026-11-17",
-      "note": "Sources support the specific definitions or rules below. Worked figures use independently calculated Python Decimal examples; no source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "Sources explain the definitions and limitations identified below. The hypothetical scenarios and step-by-step arithmetic are our own illustrations, checked under the stated inputs. A concept reference does not verify your statement data, recommend a transaction or provide an independent professional review.",
       "overrides": {
         "https://www.optionseducation.org/strategies/all-strategies/cash-secured-put": {
           "role": "method",
@@ -3928,8 +3928,8 @@
       }
     },
     "calculator:interest-coverage-ratio": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 60-digit Python Decimal arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "Sources explain the definitions and limitations identified below. The hypothetical scenarios and step-by-step arithmetic are our own illustrations, checked under the stated inputs. A concept reference does not verify your statement data, recommend a transaction or provide an independent professional review.",
       "overrides": {
         "https://openstax.org/books/principles-finance-2e/pages/6-4-solvency-ratios": {
           "role": "method",
@@ -3961,8 +3961,8 @@
       }
     },
     "calculator:stock-split": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "Sources explain the definitions and limitations identified below. The hypothetical scenarios and step-by-step arithmetic are our own illustrations, checked under the stated inputs. A concept reference does not verify your statement data, recommend a transaction or provide an independent professional review.",
       "overrides": {
         "https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-split": {
           "role": "method",
@@ -3994,8 +3994,8 @@
       }
     },
     "calculator:customer-acquisition-cost": {
-      "updatedOn": "2026-11-17",
-      "note": "References support the specific definitions below. Examples and descriptions are original; worked numbers are cross-checked with independent 80-digit independent mpmath reference arithmetic. No source endorsement or professional review is claimed.",
+      "updatedOn": "2026-11-18",
+      "note": "Sources explain the definitions and limitations identified below. The hypothetical scenarios and step-by-step arithmetic are our own illustrations, checked under the stated inputs. A concept reference does not verify your statement data, recommend a transaction or provide an independent professional review.",
       "overrides": {
         "https://www.tremendous.com/tools/customer-acquisition-cost-calculator/": {
           "role": "method",

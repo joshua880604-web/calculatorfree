@@ -1,11 +1,11 @@
 {
   "stock-split": {
-    "checkedOn": "2026-11-17",
-    "summary": "A proportional stock split changes share quantity and per-share reference amounts by reciprocal factors. Forward and reverse splits use the same new-for-old convention. The calculation preserves the intact holding’s reference value and total acquisition cost; actual market prices and broker treatment of fractions require separate information.",
+    "checkedOn": "2026-11-18",
+    "summary": "Enter a split as new shares for old shares: a 3-for-2 split multiplies quantity by 1.5 and divides proportional per-share amounts by 1.5. A reverse split uses the same convention. This lets you reconcile share count, reference holding value and average acquisition cost without treating a corporate action alone as an investment gain.",
     "scope": "Manual proportional changes to an intact position. Theoretical fractional shares are retained. No cash-in-lieu, broker rounding, market quotation, lot-level tax reporting, sale or corporate-action eligibility is inferred.",
     "examples": [
       {
-        "title": "Forward",
+        "title": "A 3-for-2 split turns 120 shares into 180 theoretical shares",
         "mode": "single",
         "values": {
           "shares": "120",
@@ -14,12 +14,13 @@
           "new_shares": "3",
           "old_shares": "2"
         },
-        "inputs": "shares = 120; price = 45; average cost = 30; new shares = 3; old shares = 2",
+        "inputs": "120 shares before the split; $45 reference market price; $30 average acquisition cost per share; 3 new shares for every 2 old shares.",
         "steps": [
-          "Factor = new shares / old shares; quantity after = quantity before × factor; reference price and average cost per share divide by factor.",
-          "With these inputs, theoretical shares after splits = 180.000000."
+          "The new-for-old factor is 3 / 2 = 1.5. Multiply share quantity by that factor.",
+          "Divide the reference price by 1.5 to get $30 and average acquisition cost by 1.5 to get $20 per share.",
+          "Check the totals: 180 × $30 remains $5,400 of reference value; 180 × $20 remains $3,600 of acquisition cost."
         ],
-        "answer": "Theoretical shares after splits: 180.000000.",
+        "answer": "The theoretical holding is 180 shares. The proportional split alone creates no gain in total reference value.",
         "expected": {
           "label": "Theoretical shares after splits",
           "value": 180.0,
@@ -27,7 +28,7 @@
         }
       },
       {
-        "title": "Sequential",
+        "title": "A 3-for-2 split followed by a 1-for-5 reverse split leaves 36 shares",
         "mode": "chain",
         "values": {
           "shares": "120",
@@ -35,15 +36,39 @@
           "average_cost": "30",
           "splits": "3, 2\n1, 5"
         },
-        "inputs": "shares = 120; price = 45; average cost = 30; splits = 3, 2 / 1, 5",
+        "inputs": "Start with the same 120 shares, $45 reference price and $30 average cost; apply 3-for-2, then 1-for-5 in order.",
         "steps": [
-          "Factor = new shares / old shares; quantity after = quantity before × factor; reference price and average cost per share divide by factor.",
-          "With these inputs, theoretical shares after splits = 36.000000."
+          "After the first split, there are 180 theoretical shares. The reverse split then multiplies that quantity by 1 / 5.",
+          "The combined factor is (3 / 2) × (1 / 5) = 0.3. Divide the original reference price and per-share cost by 0.3.",
+          "The resulting reference price is $150 and average cost $100 per share. Total reference value and acquisition cost stay unchanged."
         ],
-        "answer": "Theoretical shares after splits: 36.000000.",
+        "answer": "The intact position has 36 theoretical shares, $5,400 total reference value and $3,600 total acquisition cost.",
         "expected": {
           "label": "Theoretical shares after splits",
           "value": 36.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A 1-for-10 reverse split can leave a fractional entitlement",
+        "mode": "single",
+        "values": {
+          "shares": "103",
+          "price": "8",
+          "average_cost": "12",
+          "new_shares": "1",
+          "old_shares": "10"
+        },
+        "inputs": "103 old shares; $8 reference price; $12 average acquisition cost per old share; 1 new share for every 10 old shares.",
+        "steps": [
+          "Multiply 103 shares by 1 / 10. The theoretical quantity retains the fractional 0.3 share.",
+          "Divide the $8 reference price and $12 average cost by 0.1 to get $80 and $120 per new share.",
+          "Check the preserved totals: 10.3 × $80 = $824 reference value and 10.3 × $120 = $1,236 acquisition cost. Issuer and broker settlement terms determine actual fractional-share treatment."
+        ],
+        "answer": "The theoretical result is 10.3 new shares. The calculator does not round this to 10 shares or invent a cash-in-lieu payment.",
+        "expected": {
+          "label": "Theoretical shares after splits",
+          "value": 10.3,
           "tolerance": 1e-07
         }
       }
@@ -74,12 +99,12 @@
     ]
   },
   "customer-acquisition-cost": {
-    "checkedOn": "2026-11-17",
-    "summary": "Customer acquisition cost divides the costs included in a defined acquisition effort by unique new customers attributed to that same scope. The customer definition, period and cost allocation are essential inputs. CAC measures cost per new customer; ROAS measures attributed revenue per advertising dollar.",
+    "checkedOn": "2026-11-18",
+    "summary": "Customer acquisition cost is the included acquisition spending divided by unique new customers in the same scope. In the itemized example, $25,000 of nonoverlapping costs for 100 new customers gives $250 CAC. Define the customer, time window and included costs before comparing campaigns or channels; a smaller ratio alone does not establish profitability.",
     "scope": "Manual costs and unique-new-customer counts for a user-defined matching scope. No CRM connection, automatic attribution, customer lifetime value, universal good-CAC threshold or budget recommendation.",
     "examples": [
       {
-        "title": "Itemized",
+        "title": "Reconcile $25,000 of acquisition costs for 100 new customers",
         "mode": "itemized",
         "values": {
           "customers": "100",
@@ -89,12 +114,13 @@
           "software": "0",
           "other": "5000"
         },
-        "inputs": "customers = 100; advertising = 12000; people = 8000; agency = 0; software = 0; other = 5000",
+        "inputs": "One selected acquisition cohort and reporting window: 100 unique new customers; $12,000 advertising; $8,000 allocated acquisition personnel; $5,000 other acquisition costs; no separate agency or software costs.",
         "steps": [
-          "CAC = nonoverlapping acquisition costs / unique new customers in the matching period and scope.",
-          "With these inputs, acquisition cost per unique new customer = $250.000000."
+          "Reconcile nonoverlapping costs: $12,000 + $8,000 + $5,000 = $25,000. The personnel and other amounts must not already be included in advertising.",
+          "Divide the selected total by 100 unique new customers. Count each newly acquired customer once, even if that customer places multiple orders.",
+          "Record whether the window describes a campaign, channel or company-wide cohort so a later comparison uses the same scope."
         ],
-        "answer": "Acquisition cost per unique new customer: $250.000000.",
+        "answer": "CAC is $250 per new customer for this defined cost scope. That amount alone does not establish profit or an acceptable advertising budget.",
         "expected": {
           "label": "Acquisition cost per unique new customer",
           "value": 250.0,
@@ -102,21 +128,45 @@
         }
       },
       {
-        "title": "Known total",
+        "title": "An already reconciled $6,000 total for 40 new customers gives $150 CAC",
         "mode": "total",
         "values": {
           "customers": "40",
           "cost": "6000"
         },
-        "inputs": "customers = 40; cost = 6000",
+        "inputs": "A separate selected acquisition cohort: $6,000 known total acquisition cost; 40 unique new customers in the matching scope.",
         "steps": [
-          "CAC = nonoverlapping acquisition costs / unique new customers in the matching period and scope.",
-          "With these inputs, acquisition cost per unique new customer = $150.000000."
+          "Enter the reconciled cost once rather than entering both the total and its components.",
+          "Divide $6,000 by 40. Before comparing it with the $250 example, check customer definitions, included costs, attribution and sales-cycle timing."
         ],
-        "answer": "Acquisition cost per unique new customer: $150.000000.",
+        "answer": "CAC is $150 per new customer. The smaller ratio does not by itself prove that this separate cohort is more profitable.",
         "expected": {
           "label": "Acquisition cost per unique new customer",
           "value": 150.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Advertising-only cost is a narrower $120 per customer measure",
+        "mode": "itemized",
+        "values": {
+          "customers": "100",
+          "advertising": "12000",
+          "people": "0",
+          "agency": "0",
+          "software": "0",
+          "other": "0"
+        },
+        "inputs": "Same illustrative 100-new-customer cohort; include $12,000 advertising only; set personnel, agency, software and other costs to zero.",
+        "steps": [
+          "Divide the $12,000 selected advertising cost by the same 100 unique new customers.",
+          "Compare with the $250 full-scope illustration: the $130 gap per customer comes from omitting $13,000 of personnel and other costs. The customer count did not change.",
+          "Label this as advertising-only cost per new customer. Mixing it with an all-in CAC can make acquisition look cheaper without any operating improvement."
+        ],
+        "answer": "Advertising-only cost is $120 per new customer; the broader example remains $250. State the cost definition beside either figure.",
+        "expected": {
+          "label": "Acquisition cost per unique new customer",
+          "value": 120,
           "tolerance": 1e-07
         }
       }
@@ -147,12 +197,12 @@
     ]
   },
   "dividend-discount-model": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "A dividend discount model values assumed future equity distributions at an entered required return. Stable-growth value uses the next annual dividend divided by required return minus perpetual growth. A two-stage model discounts early dividends separately from a later stable-growth terminal value.",
     "scope": "Manual annual end-period dividend assumptions and one annual required equity return. Stable-stage return must exceed growth. No dividend lookup, trading recommendation, automatic growth forecast or tax calculation.",
     "examples": [
       {
-        "title": "Latest dividend",
+        "title": "Grow the latest $2 dividend before applying Gordon growth",
         "mode": "stable",
         "values": {
           "dividend": "2",
@@ -160,12 +210,13 @@
           "required_return": "10.0",
           "dividend_basis": "Latest annual dividend (D0)"
         },
-        "inputs": "dividend = 2; growth = 4.0; required return = 10.0; dividend basis = Latest annual dividend (D0)",
+        "inputs": "Latest annual dividend D0 $2 per share; perpetual growth 4%; required annual return 10%.",
         "steps": [
-          "Stable value = D1 / (r − g); two-stage value = PV of early dividends + PV of terminal price at year N.",
-          "With these inputs, modeled dividend-discount value per share = $34.666667."
+          "Calculate the next annual dividend: D1 = $2 × 1.04 = $2.08.",
+          "Divide D1 by the rate spread: $2.08 / (0.10 − 0.04). Using D0 directly would miss one growth step.",
+          "The perpetual-growth assumption requires the required return to exceed growth. Small changes in that spread can greatly change value."
         ],
-        "answer": "Modeled dividend-discount value per share: $34.666667.",
+        "answer": "The assumed dividend stream has a modeled value of about $34.67 per share; this is not a market quote or guaranteed return.",
         "expected": {
           "label": "Modeled dividend-discount value per share",
           "value": 34.666666666666664,
@@ -173,7 +224,7 @@
         }
       },
       {
-        "title": "Two stage",
+        "title": "Discount two early-growth dividends and a later stable-growth value",
         "mode": "two-stage",
         "values": {
           "dividend": "2.0",
@@ -182,12 +233,13 @@
           "early_growth": "10.0",
           "years": "2"
         },
-        "inputs": "dividend = 2.0; growth = 3.0; required return = 8.0; early growth = 10.0; years = 2",
+        "inputs": "Latest annual dividend $2; 10% growth for two years; 3% perpetual growth afterward; 8% required return.",
         "steps": [
-          "Stable value = D1 / (r − g); two-stage value = PV of early dividends + PV of terminal price at year N.",
-          "With these inputs, modeled dividend-discount value per share = $46.851852."
+          "The first two annual dividends are $2.20 and $2.42. The next dividend for the stable stage is $2.42 × 1.03 = $2.4926.",
+          "The terminal price at the end of year two is $2.4926 / (0.08 − 0.03) = $49.852.",
+          "Discount year-one dividend once, and both the year-two dividend and terminal price twice. Keep the terminal value at the correct date."
         ],
-        "answer": "Modeled dividend-discount value per share: $46.851852.",
+        "answer": "The combined modeled present value is about $46.85 per share under these stated dividend and return assumptions.",
         "expected": {
           "label": "Modeled dividend-discount value per share",
           "value": 46.851851851851855,
@@ -225,24 +277,24 @@
     ]
   },
   "earnings-per-share": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "Basic earnings per share divides period earnings available to common shareholders by weighted average common shares for the same period. Preferred earnings adjustments and the share denominator need a consistent accounting scope. Diluted EPS adds distinct numerator, denominator and anti-dilution considerations.",
     "scope": "A simplified basic-EPS worksheet using an already-checked preferred earnings adjustment and a supplied average or complete share/day schedule. No automatic diluted EPS, corporate-action restatement or complete reporting compliance.",
     "examples": [
       {
-        "title": "Known average",
+        "title": "Allocate $900,000 of common earnings over 300,000 average shares",
         "mode": "known-average",
         "values": {
           "net_income": "1000000",
           "preferred_adjustment": "100000",
           "average_shares": "300000"
         },
-        "inputs": "net income = 1000000; preferred adjustment = 100000; average shares = 300000",
+        "inputs": "$1,000,000 period net income; $100,000 entered preferred earnings adjustment; 300,000 weighted average common shares.",
         "steps": [
-          "Basic EPS = (net income − entered preferred earnings adjustment) / weighted average common shares.",
-          "With these inputs, basic earnings per common share = $3.000000."
+          "Subtract the applicable preferred earnings adjustment: $1,000,000 − $100,000 = $900,000.",
+          "Divide common earnings by weighted average common shares for that same period. The adjustment must match the accounting treatment being analyzed."
         ],
-        "answer": "Basic earnings per common share: $3.000000.",
+        "answer": "Basic EPS is $3 per common share. It does not include option, convertible-security or other diluted-EPS adjustments.",
         "expected": {
           "label": "Basic earnings per common share",
           "value": 3.0,
@@ -250,7 +302,7 @@
         }
       },
       {
-        "title": "Weighted share schedule",
+        "title": "Weight a share issuance across a 365-day reporting period",
         "mode": "weighted-schedule",
         "values": {
           "net_income": "1000000",
@@ -258,12 +310,13 @@
           "period_days": "365",
           "share_schedule": "100000, 90\n200000, 275"
         },
-        "inputs": "net income = 1000000; preferred adjustment = 100000; period days = 365; share schedule = 100000, 90 / 200000, 275",
+        "inputs": "Same $900,000 common earnings; 100,000 common shares for 90 days and 200,000 for the remaining 275 days.",
         "steps": [
-          "Basic EPS = (net income − entered preferred earnings adjustment) / weighted average common shares.",
-          "With these inputs, basic earnings per common share = $5.132812."
+          "Confirm that 90 + 275 covers all 365 reporting days without overlap.",
+          "Weighted average shares = (100,000 × 90 + 200,000 × 275) / 365 ≈ 175,342.47.",
+          "Divide common earnings by the unrounded weighted average. The 200,000 ending balance is not the average for the full period."
         ],
-        "answer": "Basic earnings per common share: $5.132812.",
+        "answer": "Basic EPS is $5.1328125, displayed to the calculator’s precision. This is a basic-share illustration, not diluted EPS.",
         "expected": {
           "label": "Basic earnings per common share",
           "value": 5.1328125,
@@ -297,12 +350,12 @@
     ]
   },
   "sharpe-ratio": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "Sharpe ratio compares arithmetic mean excess return with the standard deviation of those excess returns. The return period and benchmark convention are part of the measure. This worksheet accepts matching-period statistics or a simple return series with a constant same-period risk-free return.",
     "scope": "Manual equally spaced simple returns or matched statistics. Series mode uses sample standard deviation (n−1), a fixed same-period risk-free return and an explicit annualization count. No market-price feed, portfolio optimization or performance guarantee.",
     "examples": [
       {
-        "title": "Known annual",
+        "title": "An 8-percentage-point annual excess return over 16% volatility",
         "mode": "statistics",
         "values": {
           "risk_free": "4.0",
@@ -310,12 +363,12 @@
           "mean_return": "12.0",
           "std_dev": "16.0"
         },
-        "inputs": "risk free = 4.0; periods per year = 1; mean return = 12.0; std dev = 16.0",
+        "inputs": "Annual arithmetic mean return 12%; annual risk-free return 4%; annual excess-return standard deviation 16%; one observation period per year.",
         "steps": [
-          "Period Sharpe = mean(excess return) / standard deviation(excess return); assumed annual Sharpe = period Sharpe × sqrt(periods per year).",
-          "With these inputs, sharpe ratio for one observation period = 0.500000."
+          "Subtract the matching-period risk-free return: 12% − 4% = 8 percentage points.",
+          "Divide 8 by 16. Because the statistics are already annual and the scaling factor is one, no monthly-to-annual conversion is applied."
         ],
-        "answer": "Sharpe ratio for one observation period: 0.500000.",
+        "answer": "The Sharpe ratio is 0.5, a dimensionless ratio rather than a 0.5% return or a guarantee of future performance.",
         "expected": {
           "label": "Sharpe ratio for one observation period",
           "value": 0.5,
@@ -323,19 +376,20 @@
         }
       },
       {
-        "title": "Monthly return series",
+        "title": "Calculate sample volatility from four monthly returns",
         "mode": "return-series",
         "values": {
           "risk_free": "0.0",
           "periods_per_year": "12",
           "returns": "-2.0, 1.0, 3.0, 0.0"
         },
-        "inputs": "risk free = 0.0; periods per year = 12; returns = -2.0, 1.0, 3.0, 0.0",
+        "inputs": "Monthly simple returns −2%, 1%, 3% and 0%; constant monthly risk-free return 0%; 12 observations per year for optional scaling.",
         "steps": [
-          "Period Sharpe = mean(excess return) / standard deviation(excess return); assumed annual Sharpe = period Sharpe × sqrt(periods per year).",
-          "With these inputs, sharpe ratio for one observation period = 0.240192."
+          "Arithmetic mean monthly excess return is 0.5%. Use the sample standard deviation, with three degrees of freedom, for these four observations.",
+          "Divide the mean by sample volatility to obtain the one-month observation-period ratio.",
+          "The optional annualized illustration multiplies that ratio by √12. Correlation and the short sample can make this scaling a poor forecast."
         ],
-        "answer": "Sharpe ratio for one observation period: 0.240192.",
+        "answer": "The monthly-period Sharpe ratio is about 0.240192; the assumption-annualized illustration is about 0.832050.",
         "expected": {
           "label": "Sharpe ratio for one observation period",
           "value": 0.2401922307076307,
@@ -369,12 +423,12 @@
     ]
   },
   "black-scholes": {
-    "checkedOn": "2026-11-17",
+    "checkedOn": "2026-11-18",
     "summary": "The Black-Scholes-Merton model values European call and put options using entered spot, strike, time, annual volatility and continuous interest and dividend rates. Theoretical value before expiry is different from a contract’s expiration payoff or a trader’s net profit.",
     "scope": "European exercise with constant annual volatility and continuous rates. Per-share theory values only; no American early exercise, discrete cash dividends, real-time quotes, implied-volatility estimation or employee-option accounting determination.",
     "examples": [
       {
-        "title": "Classic no dividend",
+        "title": "Price a one-year European call with $100 spot and strike",
         "mode": "european",
         "values": {
           "spot": "100",
@@ -385,12 +439,13 @@
           "time_unit": "Years",
           "time": "1"
         },
-        "inputs": "spot = 100; strike = 100; risk free = 5.0; dividend yield = 0.0; volatility = 20.0; time unit = Years; time = 1",
+        "inputs": "Spot $100; strike $100; one year to expiry; 20% annual volatility; 5% continuously compounded risk-free rate; zero continuous dividend yield.",
         "steps": [
-          "C = S exp(−qT)N(d1) − K exp(−rT)N(d2); C − P = S exp(−qT) − K exp(−rT).",
-          "With these inputs, european call theoretical value per share = $10.450584."
+          "Use rates as decimals and time in years. The normal-distribution inputs are d1 = 0.35 and d2 = 0.15.",
+          "Evaluate S × N(d1) − K × exp(−rT) × N(d2) under the zero-dividend assumptions.",
+          "The result is a theoretical value per share. A contract multiplier, actual premium paid, fees and early exercise are separate questions."
         ],
-        "answer": "European call theoretical value per share: $10.450584.",
+        "answer": "The European call’s modeled value is about $10.450584 per share. It is neither an expiration profit nor a live option quote.",
         "expected": {
           "label": "European call theoretical value per share",
           "value": 10.450583572185566,

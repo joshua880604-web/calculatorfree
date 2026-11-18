@@ -386,3 +386,6 @@ for(const path of ["/stock-split-calculator.html", "/guides/stock-split-vs-rever
 
 // Reviewed page/task descriptions replace worked-case labels; calculation methods are unchanged.
 for(const path of ["/stock-split-calculator.html", "/customer-acquisition-cost-calculator.html", "/dividend-discount-model-calculator.html", "/earnings-per-share-calculator.html", "/sharpe-ratio-calculator.html", "/black-scholes-calculator.html", "/mortgage-buydown-calculator.html", "/cash-secured-put-calculator.html", "/profitability-index-calculator.html", "/return-on-equity-calculator.html", "/72t-calculator.html"])recordWordingUpdate(path,'2026-11-18');
+
+// Substantive example editing and result explanations; only these tool pages changed.
+for(const id of ["mortgage-buydown", "profitability-index", "return-on-equity", "72t", "credit-card-rewards", "accounts-receivable-turnover", "days-payable-outstanding", "cash-conversion-cycle", "roic", "interest-coverage-ratio", "stock-split", "customer-acquisition-cost", "dividend-discount-model", "earnings-per-share", "sharpe-ratio", "black-scholes", "cash-secured-put"])recordWordingUpdate('/'+id+'-calculator.html','2026-11-18');

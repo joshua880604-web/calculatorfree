@@ -1,0 +1,260 @@
+{
+  "generatedOn": "2026-11-18",
+  "precisionDigits": 60,
+  "method": "Independent Python Decimal calculation from the stated scenario inputs; no production calculator imported. Validates published example figures, not real-world outcomes or professional suitability.",
+  "fixtures": [
+    {
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "title": "Above the $50 strike: keep $496 net premium",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 55
+      },
+      "expected": {
+        "Modeled expiration profit / loss": "496.0",
+        "Net option premium after fees": "496.0",
+        "Cash secured at strike \u00d7 shares": "10000",
+        "Expiration breakeven per share": "47.52",
+        "Maximum expiration profit": "496.0",
+        "Maximum expiration loss at zero stock price": "9504.0",
+        "Net premium / secured cash": "4.9600",
+        "Shares covered by contracts": "200"
+      }
+    },
+    {
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "title": "At $47.52 per share: the position breaks even after fees",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 47.52
+      },
+      "expected": {
+        "Modeled expiration profit / loss": "0.00",
+        "Net option premium after fees": "496.0",
+        "Cash secured at strike \u00d7 shares": "10000",
+        "Expiration breakeven per share": "47.52",
+        "Maximum expiration profit": "496.0",
+        "Maximum expiration loss at zero stock price": "9504.0",
+        "Net premium / secured cash": "4.9600",
+        "Shares covered by contracts": "200"
+      }
+    },
+    {
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "title": "At $45 per share: premium offsets part of a $1,000 obligation",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 45
+      },
+      "expected": {
+        "Modeled expiration profit / loss": "-504.0",
+        "Net option premium after fees": "496.0",
+        "Cash secured at strike \u00d7 shares": "10000",
+        "Expiration breakeven per share": "47.52",
+        "Maximum expiration profit": "496.0",
+        "Maximum expiration loss at zero stock price": "9504.0",
+        "Net premium / secured cash": "4.9600",
+        "Shares covered by contracts": "200"
+      }
+    },
+    {
+      "id": "cash-secured-put",
+      "mode": "expiration",
+      "title": "At a zero stock price: the modeled maximum loss is $9,504",
+      "values": {
+        "strike": 50,
+        "premium": 2.5,
+        "contracts": 2,
+        "multiplier": 100,
+        "fees": 4,
+        "stock": 0
+      },
+      "expected": {
+        "Modeled expiration profit / loss": "-9504.0",
+        "Net option premium after fees": "496.0",
+        "Cash secured at strike \u00d7 shares": "10000",
+        "Expiration breakeven per share": "47.52",
+        "Maximum expiration profit": "496.0",
+        "Maximum expiration loss at zero stock price": "9504.0",
+        "Net premium / secured cash": "4.9600",
+        "Shares covered by contracts": "200"
+      }
+    },
+    {
+      "id": "interest-coverage-ratio",
+      "mode": "ebit",
+      "title": "$100,000 EBIT covers $25,000 annual interest four times",
+      "values": {
+        "ebit": 100000,
+        "interest": 25000,
+        "target": 3
+      },
+      "expected": {
+        "EBIT interest coverage (times)": "4",
+        "Period EBIT used": "100000",
+        "Period interest expense used": "25000",
+        "EBIT needed for selected target coverage": "75000",
+        "EBIT headroom / shortfall against target": "25000"
+      }
+    },
+    {
+      "id": "interest-coverage-ratio",
+      "mode": "bridge",
+      "title": "Rebuild $100,000 EBIT from net income, tax and interest",
+      "values": {
+        "net_income": 56000,
+        "income_tax": 14000,
+        "interest": 30000,
+        "target": 3
+      },
+      "expected": {
+        "EBIT interest coverage (times)": "3.33333333333333333333333333333333333333333333333333333333333",
+        "Period EBIT used": "100000",
+        "Period interest expense used": "30000",
+        "EBIT needed for selected target coverage": "90000",
+        "EBIT headroom / shortfall against target": "10000"
+      }
+    },
+    {
+      "id": "interest-coverage-ratio",
+      "mode": "ebit",
+      "title": "An operating loss produces negative interest coverage",
+      "values": {
+        "ebit": -10000,
+        "interest": 25000,
+        "target": 3
+      },
+      "expected": {
+        "EBIT interest coverage (times)": "-0.4",
+        "Period EBIT used": "-10000",
+        "Period interest expense used": "25000",
+        "EBIT needed for selected target coverage": "75000",
+        "EBIT headroom / shortfall against target": "-85000"
+      }
+    },
+    {
+      "id": "stock-split",
+      "mode": "single",
+      "title": "A 3-for-2 split turns 120 shares into 180 theoretical shares",
+      "values": {
+        "shares": "120",
+        "price": "45",
+        "average_cost": "30",
+        "new_shares": "3",
+        "old_shares": "2"
+      },
+      "expected": {
+        "Theoretical shares after splits": "180.0",
+        "Proportional reference price per share": "3E+1",
+        "Adjusted average acquisition cost per share": "2E+1",
+        "Cumulative new-for-old split factor": "1.5",
+        "Total reference holding value": "5400",
+        "Total acquisition cost preserved": "3600"
+      }
+    },
+    {
+      "id": "stock-split",
+      "mode": "chain",
+      "title": "A 3-for-2 split followed by a 1-for-5 reverse split leaves 36 shares",
+      "values": {
+        "shares": "120",
+        "price": "45",
+        "average_cost": "30",
+        "splits": "3, 2\n1, 5"
+      },
+      "expected": {
+        "Theoretical shares after splits": "36.00",
+        "Proportional reference price per share": "1.5E+2",
+        "Adjusted average acquisition cost per share": "1E+2",
+        "Cumulative new-for-old split factor": "0.30",
+        "Total reference holding value": "5400",
+        "Total acquisition cost preserved": "3600"
+      }
+    },
+    {
+      "id": "stock-split",
+      "mode": "single",
+      "title": "A 1-for-10 reverse split can leave a fractional entitlement",
+      "values": {
+        "shares": "103",
+        "price": "8",
+        "average_cost": "12",
+        "new_shares": "1",
+        "old_shares": "10"
+      },
+      "expected": {
+        "Theoretical shares after splits": "10.3",
+        "Proportional reference price per share": "8E+1",
+        "Adjusted average acquisition cost per share": "1.2E+2",
+        "Cumulative new-for-old split factor": "0.1",
+        "Total reference holding value": "824",
+        "Total acquisition cost preserved": "1236"
+      }
+    },
+    {
+      "id": "customer-acquisition-cost",
+      "mode": "itemized",
+      "title": "Reconcile $25,000 of acquisition costs for 100 new customers",
+      "values": {
+        "customers": "100",
+        "advertising": "12000",
+        "people": "8000",
+        "agency": "0",
+        "software": "0",
+        "other": "5000"
+      },
+      "expected": {
+        "Acquisition cost per unique new customer": "250",
+        "Total acquisition cost included": "25000",
+        "Unique new customers in the selected scope": "100"
+      }
+    },
+    {
+      "id": "customer-acquisition-cost",
+      "mode": "total",
+      "title": "An already reconciled $6,000 total for 40 new customers gives $150 CAC",
+      "values": {
+        "customers": "40",
+        "cost": "6000"
+      },
+      "expected": {
+        "Acquisition cost per unique new customer": "150",
+        "Total acquisition cost included": "6000",
+        "Unique new customers in the selected scope": "40"
+      }
+    },
+    {
+      "id": "customer-acquisition-cost",
+      "mode": "itemized",
+      "title": "Advertising-only cost is a narrower $120 per customer measure",
+      "values": {
+        "customers": "100",
+        "advertising": "12000",
+        "people": "0",
+        "agency": "0",
+        "software": "0",
+        "other": "0"
+      },
+      "expected": {
+        "Acquisition cost per unique new customer": "120",
+        "Total acquisition cost included": "12000",
+        "Unique new customers in the selected scope": "100"
+      }
+    }
+  ]
+}
