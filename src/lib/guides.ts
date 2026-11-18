@@ -1,3 +1,4 @@
+import specialistFourContent from './specialist-four-content.json';
 import financeThreeContent from './finance-three-content.json';
 import marketsSixContent from './markets-six-content.json';
 import financeSixContent from './finance-six-content.json';
@@ -1045,3 +1046,15 @@ for(const [id,links] of Object.entries(marketsSixRelated)){relatedCalculatorIds[
 Object.assign(guides,financeThreeContent as unknown as Record<string,Guide>);
 const financeThreeRelated:Record<string,string[]>={"basis-point": ["interest-rate", "percentage", "investment-fee"], "prorated-rent": ["rent", "rental-property", "vacancy-rate"], "operating-cash-flow": ["cash-conversion-cycle", "roic", "burn-rate"]};
 for(const [id,links] of Object.entries(financeThreeRelated)){relatedCalculatorIds[id]=links;for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])].slice(0,8);}
+
+Object.assign(guides,specialistFourContent as unknown as Record<string,Guide>);
+const specialistFourRelated:Record<string,string[]>={
+ 'business-line-of-credit':['business-loan','apr','operating-cash-flow','burn-rate'],
+ 'triple-net-lease':['lease','prorated-rent','rental-property','noi'],
+ 'arm-mortgage':['mortgage','mortgage-comparison','refinance','basis-point'],
+ 'portfolio-rebalancing':['investment','dca','stock-average','capital-gains-tax']
+};
+for(const [id,links] of Object.entries(specialistFourRelated)){
+ relatedCalculatorIds[id]=links;
+ for(const linked of links)relatedCalculatorIds[linked]=[...new Set([id,...(relatedCalculatorIds[linked]??[])])];
+}

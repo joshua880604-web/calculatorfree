@@ -40,6 +40,7 @@ const wordingReviewDates:Record<string,string>={
  ...Object.fromEntries(["/balance-transfer-calculator.html", "/break-even-calculator.html", "/budget-calculator.html", "/burn-rate-calculator.html", "/business-calculators.html", "/business-loan-calculator.html", "/capm-calculator.html", "/closing-cost-calculator.html", "/current-ratio-calculator.html", "/discount-points-calculator.html", "/irr-calculator.html", "/loan-calculators.html", "/margin-calculator.html", "/mirr-calculator.html", "/mortgage-comparison-calculator.html", "/payback-period-calculator.html", "/present-value-calculator.html", "/quick-ratio-calculator.html", "/real-estate-calculator.html", "/real-return-calculator.html", "/retirement-calculators.html", "/retirement-withdrawal-calculator.html", "/rmd-calculator.html", "/roth-conversion-ladder-calculator.html", "/savings-investment-calculators.html", "/stock-profit-calculator.html", "/wacc-calculator.html"].map(path=>[path,'2026-11-18'])),
  ...Object.fromEntries(["/glossary/weighted-average-cost-of-capital/", "/glossary/capital-asset-pricing-model/", "/glossary/bond-duration/", "/glossary/cd-early-withdrawal-penalty/", "/glossary/burn-rate/", "/glossary/lean-fire/", "/glossary/fat-fire/", "/glossary/", "/wacc-calculator.html", "/capm-calculator.html", "/bond-duration-calculator.html", "/bond-calculator.html", "/cd-early-withdrawal-penalty-calculator.html", "/cd-calculator.html", "/burn-rate-calculator.html", "/current-ratio-calculator.html", "/guides/how-to-calculate-wacc/", "/guides/capm-cost-of-equity-and-market-risk-premium/", "/guides/macaulay-vs-modified-duration/", "/guides/how-to-calculate-cd-early-withdrawal-penalty/", "/guides/gross-vs-net-burn-rate-and-cash-runway/"].map(path=>[path,'2026-11-18'])),
 };
+Object.assign(wordingReviewDates,Object.fromEntries(["/1031-exchange-calculator.html", "/apr-calculator.html", "/basis-point-calculator.html", "/burn-rate-calculator.html", "/business-calculators.html", "/business-loan-calculator.html", "/capital-gains-tax-calculator.html", "/dca-calculator.html", "/dscr-calculator.html", "/financial-calculator.html", "/glossary/", "/guides/", "/home-maintenance-cost-calculator.html", "/investment-calculator.html", "/lease-calculator.html", "/loan-calculators.html", "/mortgage-calculator.html", "/mortgage-comparison-calculator.html", "/noi-calculator.html", "/operating-cash-flow-calculator.html", "/prorated-rent-calculator.html", "/real-estate-calculator.html", "/refinance-calculator.html", "/rental-property-calculator.html", "/savings-investment-calculators.html", "/stock-average-calculator.html", "/tax-income-calculators.html", "/vacancy-rate-calculator.html", "/arm-mortgage-calculator.html", "/business-line-of-credit-calculator.html", "/glossary/adjustable-rate-mortgage/", "/glossary/business-line-of-credit/", "/glossary/portfolio-rebalancing/", "/glossary/triple-net-lease/", "/guides/arm-vs-fixed-mortgage-rate-caps/", "/guides/business-line-of-credit-vs-term-loan/", "/guides/nnn-vs-gross-lease-cost/", "/guides/rebalance-with-contributions-vs-selling/", "/portfolio-rebalancing-calculator.html", "/triple-net-lease-calculator.html"].map(path=>[path,'2026-11-18'])));
 function assertContentDate(path:string,historicalDate:string){
  assert.equal(contentUpdatedOn[path],wordingReviewDates[path]??historicalDate,path);
 }
@@ -75,7 +76,7 @@ test("Production sitemap lists canonical pages and only reviewed content dates",
     SITE_INDEXABLE: "true",
   });
   const entries = sitemapEntries(config);
-  assert.equal(entries.length,439);
+  assert.equal(entries.length,451);
   for(const [path,date] of Object.entries(wordingReviewDates))assert.equal(contentUpdatedOn[path],date,path);
   for(const path of depthReviewPaths)assertContentDate(path,businessReviewPaths.includes(path)?'2026-11-06':latestGuidePaths.includes(path)?'2026-11-04':contentGuidePaths.includes(path)?'2026-11-03':'2026-11-02');
   assert.ok(entries.some(e=>new URL(e.url).pathname==='/disclaimer.html'));
@@ -189,9 +190,9 @@ test("Contextual related tools are real, distinct and not self-links", () => {
 
 test("Every functional calculator has a unique guide, reproducible examples and specific questions", () => {
   const tools=calculators.filter(c=>!c.directory);
-  assert.equal(tools.length,158);
-  assert.equal(Object.keys(guides).length,158);
-  assert.equal(new Set(Object.values(guides).map(g=>g.summary)).size,158);
+  assert.equal(tools.length,162);
+  assert.equal(Object.keys(guides).length,162);
+  assert.equal(new Set(Object.values(guides).map(g=>g.summary)).size,162);
   for(const tool of tools){
     const guide=guides[tool.id];assert.ok(guide,tool.id);
     assert.ok(guide.summary.length>80 && guide.scope.length>50,tool.id);
@@ -215,7 +216,7 @@ test("Production SEO follows the confirmed www extensionless destination while o
   assert.equal(absoluteURL("/cd-calculator.html",config),"https://www.calculatorfree.io/cd-calculator");
   assert.equal(absoluteURL("/glossary/",config),"https://www.calculatorfree.io/glossary/");
   const entries=sitemapEntries(config);
-  assert.equal(entries.length,439);
+  assert.equal(entries.length,451);
   for(const [path,date] of Object.entries(wordingReviewDates))assert.equal(contentUpdatedOn[path],date,path);
   assert.equal(new Set(entries.map(e=>e.url)).size,entries.length);
   assert.ok(entries.every(e=>e.url.startsWith("https://www.calculatorfree.io/")&&!e.url.endsWith(".html")&&!e.url.includes("?")));

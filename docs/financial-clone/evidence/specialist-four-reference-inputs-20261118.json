@@ -1,0 +1,140 @@
+[
+  {
+    "id": "business-line-of-credit",
+    "modes": [
+      {
+        "id": "interest",
+        "values": {
+          "balance": "25000",
+          "rate": "12",
+          "days": "30",
+          "basis": "365",
+          "fees": "50"
+        }
+      },
+      {
+        "id": "ledger",
+        "values": {
+          "start": "2026-12-01",
+          "end": "2027-01-01",
+          "opening": "10000",
+          "limit": "50000",
+          "rate": "12",
+          "basis": "365",
+          "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+          "fees": "50"
+        }
+      },
+      {
+        "id": "paydown",
+        "values": {
+          "balance": "25000",
+          "rate": "12",
+          "payment": "1000",
+          "monthly_fee": "0",
+          "max_months": "600"
+        }
+      }
+    ]
+  },
+  {
+    "id": "triple-net-lease",
+    "modes": [
+      {
+        "id": "quoted",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "nnn_rate": "6",
+          "nnn_basis": "Per square foot per year",
+          "years": "5",
+          "base_growth": "3",
+          "nnn_growth": "2",
+          "free_months": "0",
+          "other_monthly": "0",
+          "upfront": "2000",
+          "deposit": "5000"
+        }
+      },
+      {
+        "id": "building",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "building_area": "10000",
+          "taxes": "30000",
+          "insurance": "10000",
+          "cam": "20000",
+          "years": "5",
+          "base_growth": "3",
+          "nnn_growth": "2",
+          "free_months": "0",
+          "other_monthly": "0",
+          "upfront": "2000",
+          "deposit": "5000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "arm-mortgage",
+    "modes": [
+      {
+        "id": "scenario",
+        "values": {
+          "principal": "300000",
+          "term_years": "30",
+          "initial_rate": "5",
+          "fixed_years": "5",
+          "reset_months": "12",
+          "first_cap": "2",
+          "periodic_cap": "2",
+          "lifetime_cap": "5",
+          "margin": "2.5",
+          "floor": "2.5",
+          "indices": "5",
+          "fixed_compare_rate": "6",
+          "holding_years": "7"
+        }
+      },
+      {
+        "id": "upward-caps",
+        "values": {
+          "principal": "300000",
+          "term_years": "30",
+          "initial_rate": "5",
+          "fixed_years": "5",
+          "reset_months": "12",
+          "first_cap": "2",
+          "periodic_cap": "2",
+          "lifetime_cap": "5",
+          "fixed_compare_rate": "6",
+          "holding_years": "7"
+        }
+      }
+    ]
+  },
+  {
+    "id": "portfolio-rebalancing",
+    "modes": [
+      {
+        "id": "trades",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "0",
+          "fees": "0"
+        }
+      },
+      {
+        "id": "contributions",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "10000",
+          "fees": "0"
+        }
+      }
+    ]
+  }
+]

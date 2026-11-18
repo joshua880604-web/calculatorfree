@@ -2,6 +2,7 @@ import type { Metric, Result } from "./types";
 
 // Complex tax forms, multi-debt entry sheets and the 401(k) story keep their wider flow.
 export const workspaceIds = [
+  "business-line-of-credit","triple-net-lease","arm-mortgage","portfolio-rebalancing",
   "basis-point","prorated-rent","operating-cash-flow",
   "stock-split","customer-acquisition-cost","dividend-discount-model","earnings-per-share","sharpe-ratio","black-scholes",
   "credit-card-rewards","accounts-receivable-turnover","days-payable-outstanding","cash-conversion-cycle","roic","interest-coverage-ratio",
@@ -27,10 +28,19 @@ export const workspaceIds = [
 export function hasCalculatorWorkspace(id: string): boolean { return (workspaceIds as readonly string[]).includes(id); }
 export function workspaceLayout(id: string, mode: string): "split" | "stacked" | null {
   if (!hasCalculatorWorkspace(id)) return null;
-  return id === 'operating-cash-flow' || (id === 'stock-split' && mode === 'chain') || (id === 'earnings-per-share' && mode === 'weighted-schedule') || (id === 'sharpe-ratio' && mode === 'return-series') || id === 'black-scholes' || id === 'credit-card-rewards' || id === 'cash-conversion-cycle' && mode!=='days' || id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
+  return id === 'arm-mortgage' || id === 'portfolio-rebalancing' || (id === 'business-line-of-credit' && mode === 'ledger') || id === 'operating-cash-flow' || (id === 'stock-split' && mode === 'chain') || (id === 'earnings-per-share' && mode === 'weighted-schedule') || (id === 'sharpe-ratio' && mode === 'return-series') || id === 'black-scholes' || id === 'credit-card-rewards' || id === 'cash-conversion-cycle' && mode!=='days' || id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
 }
 
 const priorities: Record<string, string[]> = {
+"business-line-of-credit":["Modeled interest for entered period", "Interest plus entered fees", "Principal assumed unchanged"],
+"business-line-of-credit:ledger":["Modeled interest over selected dates", "Closing principal balance", "Average daily principal balance"],
+"business-line-of-credit:paydown":["Modeled payoff time in months", "Interest over modeled payments", "Principal remaining at model end"],
+"triple-net-lease":["First-year recurring occupancy cost", "First-year average monthly recurring cost", "Total modeled nonrefundable occupancy cost"],
+"arm-mortgage":["Initial monthly principal and interest", "First-reset monthly principal and interest", "Highest modeled monthly principal and interest"],
+"arm-mortgage:upward-caps":["Highest modeled monthly principal and interest", "First-reset monthly principal and interest", "Initial monthly principal and interest"],
+"portfolio-rebalancing":["Total modeled buys", "Total modeled sells", "Post-cost portfolio value", "Total absolute dollar gap from rounded targets"],
+"portfolio-rebalancing:contributions":["Total absolute dollar gap from rounded targets", "Post-cost portfolio value", "Total modeled buys", "Allocation status"],
+
 "basis-point":["Basis points", "Equivalent percent", "Equivalent decimal fraction"],
 "basis-point:rate-change":["Rate change in basis points", "Rate change in percentage points", "Relative change from positive starting rate"],
 "basis-point:amount":["Amount represented by entered basis points", "Amount used as the calculation base", "Basis points applied"],

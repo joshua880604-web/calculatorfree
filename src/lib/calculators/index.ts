@@ -1,3 +1,7 @@
+import {businessLineOfCreditCalculator} from './business-line-of-credit';
+import {tripleNetLeaseCalculator} from './triple-net-lease';
+import {armMortgageCalculator} from './arm-mortgage';
+import {portfolioRebalancingCalculator} from './portfolio-rebalancing';
 import {basisPointCalculator} from './basis-point';
 import {proratedRentCalculator} from './prorated-rent';
 import {operatingCashFlowCalculator} from './operating-cash-flow';
@@ -70,6 +74,7 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+  businessLineOfCreditCalculator,tripleNetLeaseCalculator,armMortgageCalculator,portfolioRebalancingCalculator,
   basisPointCalculator,proratedRentCalculator,operatingCashFlowCalculator,
   stockSplitCalculator,customerAcquisitionCostCalculator,dividendDiscountModelCalculator,earningsPerShareCalculator,sharpeRatioCalculator,blackScholesCalculator,
   creditCardRewardsCalculator,receivablesTurnoverCalculator,daysPayableOutstandingCalculator,cashConversionCycleCalculator,roicCalculator,interestCoverageCalculator,

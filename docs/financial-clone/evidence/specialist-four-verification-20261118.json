@@ -1,0 +1,140 @@
+{
+  "checkedOn": "2026-11-18",
+  "baseCommit": "202f2ff1ef1c6b8247abffbea333457dd963752e",
+  "scope": "Four original specialist calculators, nine modes, four comparison guides and four distinct glossary entries. Preview delivery; production ref is not part of this change.",
+  "calculatorIds": [
+    "business-line-of-credit",
+    "triple-net-lease",
+    "arm-mortgage",
+    "portfolio-rebalancing"
+  ],
+  "newCanonicalPaths": [
+    "/business-line-of-credit-calculator",
+    "/triple-net-lease-calculator",
+    "/arm-mortgage-calculator",
+    "/portfolio-rebalancing-calculator",
+    "/guides/business-line-of-credit-vs-term-loan/",
+    "/guides/nnn-vs-gross-lease-cost/",
+    "/guides/arm-vs-fixed-mortgage-rate-caps/",
+    "/guides/rebalance-with-contributions-vs-selling/",
+    "/glossary/business-line-of-credit/",
+    "/glossary/triple-net-lease/",
+    "/glossary/adjustable-rate-mortgage/",
+    "/glossary/portfolio-rebalancing/"
+  ],
+  "originalCalculatorExamples": 17,
+  "guideScenarios": 13,
+  "glossaryExamples": 4,
+  "independentArithmetic": {
+    "fixtures": 34,
+    "numericMetrics": 197,
+    "reproductionCommand": "python scripts/check-specialist-four-reference.py",
+    "usesProductionCalculatorCode": false
+  },
+  "validation": {
+    "typecheck": true,
+    "unitTestsPassed": 2787,
+    "unitTestsFailed": 0,
+    "staticBuild": true,
+    "browserModeViewportChecks": 27,
+    "articleViewportChecks": 24,
+    "completeExampleRestorations": 34,
+    "CSVDownloads": 8,
+    "noJavaScriptReadablePages": 12,
+    "modeSwitches": 18,
+    "invalidInputCorrectionFlows": 8,
+    "prioritizedModeResultChecks": 4,
+    "browserErrors": [],
+    "shareInputsExcludedByDefaultAndOnlyInFragment": true,
+    "site": {
+      "passed": true,
+      "canonicalPages": 451,
+      "newPages": [
+        {
+          "url": "https://www.calculatorfree.io/arm-mortgage-calculator",
+          "mainIncoming": 8,
+          "editorialWordsDiagnosticOnly": 1245
+        },
+        {
+          "url": "https://www.calculatorfree.io/business-line-of-credit-calculator",
+          "mainIncoming": 8,
+          "editorialWordsDiagnosticOnly": 1073
+        },
+        {
+          "url": "https://www.calculatorfree.io/glossary/adjustable-rate-mortgage/",
+          "mainIncoming": 4,
+          "editorialWordsDiagnosticOnly": 595
+        },
+        {
+          "url": "https://www.calculatorfree.io/glossary/business-line-of-credit/",
+          "mainIncoming": 4,
+          "editorialWordsDiagnosticOnly": 569
+        },
+        {
+          "url": "https://www.calculatorfree.io/glossary/portfolio-rebalancing/",
+          "mainIncoming": 4,
+          "editorialWordsDiagnosticOnly": 548
+        },
+        {
+          "url": "https://www.calculatorfree.io/glossary/triple-net-lease/",
+          "mainIncoming": 4,
+          "editorialWordsDiagnosticOnly": 561
+        },
+        {
+          "url": "https://www.calculatorfree.io/guides/arm-vs-fixed-mortgage-rate-caps/",
+          "mainIncoming": 9,
+          "editorialWordsDiagnosticOnly": 1458
+        },
+        {
+          "url": "https://www.calculatorfree.io/guides/business-line-of-credit-vs-term-loan/",
+          "mainIncoming": 9,
+          "editorialWordsDiagnosticOnly": 1445
+        },
+        {
+          "url": "https://www.calculatorfree.io/guides/nnn-vs-gross-lease-cost/",
+          "mainIncoming": 13,
+          "editorialWordsDiagnosticOnly": 1445
+        },
+        {
+          "url": "https://www.calculatorfree.io/guides/rebalance-with-contributions-vs-selling/",
+          "mainIncoming": 9,
+          "editorialWordsDiagnosticOnly": 1485
+        },
+        {
+          "url": "https://www.calculatorfree.io/portfolio-rebalancing-calculator",
+          "mainIncoming": 8,
+          "editorialWordsDiagnosticOnly": 959
+        },
+        {
+          "url": "https://www.calculatorfree.io/triple-net-lease-calculator",
+          "mainIncoming": 8,
+          "editorialWordsDiagnosticOnly": 1179
+        }
+      ],
+      "changedExistingPages": 28,
+      "unchangedExistingPages": 411,
+      "parsedJSONLDScripts": 448,
+      "internalMainLinkOccurrences": 14379,
+      "brokenFiles": [],
+      "brokenFragments": [],
+      "structureIssues": [],
+      "duplicateTitles": {},
+      "duplicateDescriptions": {},
+      "newPagesHaveContextualIncomingLinks": true,
+      "modificationDatesFollowVisibleChanges": true
+    },
+    "oldCalculators": {
+      "passed": true,
+      "oldCalculators": 158,
+      "oldModes": 332,
+      "fieldsAndDefaultResultsUnchanged": true,
+      "totalFunctionalCalculators": 162,
+      "totalFunctionalModes": 341
+    }
+  },
+  "limits": [
+    "Local Chromium and static-export checks do not certify native Safari, live Google crawling or financial eligibility.",
+    "Existing AdSense loader was stubbed during browser testing; live advertising, account consent settings and AdSense review outcome are not tested.",
+    "Reference sources explain concepts. Original numerical examples are independently checked arithmetic, not professional financial or legal review."
+  ]
+}

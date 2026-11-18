@@ -1,0 +1,1028 @@
+{
+  "checkedOn": "2026-11-18",
+  "method": "Independent Python Decimal (80-digit), explicit calendar-day enumeration, closed-form amortization with hand-specified ARM rate segments, annual lease aggregation, and Fraction-based exact cent allocation. No production calculator code is imported.",
+  "fixtures": [
+    {
+      "id": "business-line-of-credit",
+      "mode": "interest",
+      "title": "30 days on $25,000 with a 365-day basis",
+      "values": {
+        "balance": "25000",
+        "rate": "12",
+        "days": "30",
+        "basis": "365",
+        "fees": "50"
+      },
+      "expected": {
+        "Modeled interest for entered period": "246.57534246575342465753424657534246575342465753424657534246575342465753424657534",
+        "Interest plus entered fees": "296.57534246575342465753424657534246575342465753424657534246575342465753424657534"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "interest",
+      "title": "30 days on $25,000 with a 360-day basis",
+      "values": {
+        "balance": "25000",
+        "rate": "12",
+        "days": "30",
+        "basis": "360",
+        "fees": "50"
+      },
+      "expected": {
+        "Modeled interest for entered period": "250.00",
+        "Interest plus entered fees": "300.00"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "interest",
+      "title": "Zero interest with a separately paid fee",
+      "values": {
+        "balance": "25000",
+        "rate": "0",
+        "days": "30",
+        "basis": "365",
+        "fees": "50"
+      },
+      "expected": {
+        "Modeled interest for entered period": "0",
+        "Interest plus entered fees": "50"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "ledger",
+      "title": "Two dated principal changes through December",
+      "values": {
+        "start": "2026-12-01",
+        "end": "2027-01-01",
+        "opening": "10000",
+        "limit": "50000",
+        "rate": "12",
+        "basis": "365",
+        "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+        "fees": "50"
+      },
+      "expected": {
+        "Modeled interest over selected dates": "126.24657534246575342465753424657534246575342465753424657534246575342465753424658",
+        "Interest plus entered fees": "176.24657534246575342465753424657534246575342465753424657534246575342465753424658",
+        "Closing principal balance": "12000",
+        "Average daily principal balance": "12387.096774193548387096774193548387096774193548387096774193548387096774193548387",
+        "Days in modeled period": "31"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "ledger",
+      "title": "Start-day draw and last-included-day principal repayment",
+      "values": {
+        "start": "2026-12-01",
+        "end": "2027-01-01",
+        "opening": "10000",
+        "limit": "50000",
+        "rate": "12",
+        "basis": "365",
+        "transactions": "2026-12-01, 5000\n2026-12-31, -3000",
+        "fees": "50"
+      },
+      "expected": {
+        "Modeled interest over selected dates": "151.89041095890410958904109589041095890410958904109589041095890410958904109589041",
+        "Interest plus entered fees": "201.89041095890410958904109589041095890410958904109589041095890410958904109589041",
+        "Closing principal balance": "12000",
+        "Average daily principal balance": "14903.225806451612903225806451612903225806451612903225806451612903225806451612903",
+        "Days in modeled period": "31"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "ledger",
+      "title": "Leap day is included with a constant 365-day denominator",
+      "values": {
+        "start": "2024-02-28",
+        "end": "2024-03-01",
+        "opening": "10000",
+        "limit": "50000",
+        "rate": "12",
+        "basis": "365",
+        "transactions": "2024-02-29, 1000",
+        "fees": "0"
+      },
+      "expected": {
+        "Modeled interest over selected dates": "6.9041095890410958904109589041095890410958904109589041095890410958904109589041096",
+        "Interest plus entered fees": "6.9041095890410958904109589041095890410958904109589041095890410958904109589041096",
+        "Closing principal balance": "11000",
+        "Average daily principal balance": "10500",
+        "Days in modeled period": "2"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "ledger",
+      "title": "No activity leaves the opening principal unchanged",
+      "values": {
+        "start": "2026-12-01",
+        "end": "2027-01-01",
+        "opening": "10000",
+        "limit": "50000",
+        "rate": "12",
+        "basis": "365",
+        "transactions": "",
+        "fees": "50"
+      },
+      "expected": {
+        "Modeled interest over selected dates": "101.91780821917808219178082191780821917808219178082191780821917808219178082191781",
+        "Interest plus entered fees": "151.91780821917808219178082191780821917808219178082191780821917808219178082191781",
+        "Closing principal balance": "10000",
+        "Average daily principal balance": "10000",
+        "Days in modeled period": "31"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "paydown",
+      "title": "Three zero-rate payments",
+      "values": {
+        "balance": "1200",
+        "rate": "0",
+        "payment": "400",
+        "monthly_fee": "0",
+        "max_months": "12"
+      },
+      "expected": {
+        "Interest over modeled payments": "0",
+        "Total payments including fees": "1200",
+        "Principal remaining at model end": "0",
+        "Monthly fees over modeled payments": "0",
+        "Payments modeled": "3",
+        "Modeled payoff time in months": "3"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "paydown",
+      "title": "Fixed payment with a monthly fee",
+      "values": {
+        "balance": "1000",
+        "rate": "12",
+        "payment": "200",
+        "monthly_fee": "5",
+        "max_months": "12"
+      },
+      "expected": {
+        "Interest over modeled payments": "31.877213881500",
+        "Total payments including fees": "1061.877213881500",
+        "Principal remaining at model end": "0",
+        "Monthly fees over modeled payments": "30",
+        "Payments modeled": "6",
+        "Modeled payoff time in months": "6"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "paydown",
+      "title": "Horizon ends before payoff",
+      "values": {
+        "balance": "1000",
+        "rate": "12",
+        "payment": "200",
+        "monthly_fee": "5",
+        "max_months": "2"
+      },
+      "expected": {
+        "Interest over modeled payments": "18.1500",
+        "Total payments including fees": "400",
+        "Principal remaining at model end": "628.1500",
+        "Monthly fees over modeled payments": "10",
+        "Payments modeled": "2"
+      }
+    },
+    {
+      "id": "business-line-of-credit",
+      "mode": "paydown",
+      "title": "Default fixed-payment credit paydown",
+      "values": {
+        "balance": "25000",
+        "rate": "12",
+        "payment": "1000",
+        "monthly_fee": "0",
+        "max_months": "600"
+      },
+      "expected": {
+        "Interest over modeled payments": "3912.2092574575011941443798532343428068774684255343145282425000",
+        "Total payments including fees": "28912.2092574575011941443798532343428068774684255343145282425000",
+        "Principal remaining at model end": "0",
+        "Monthly fees over modeled payments": "0",
+        "Payments modeled": "29",
+        "Modeled payoff time in months": "29"
+      }
+    },
+    {
+      "id": "triple-net-lease",
+      "mode": "quoted",
+      "title": "Annual per-square-foot quotes, one year",
+      "values": {
+        "area": "2000",
+        "base_rate": "24",
+        "base_basis": "Per square foot per year",
+        "nnn_rate": "6",
+        "nnn_basis": "Per square foot per year",
+        "years": "1",
+        "base_growth": "0",
+        "nnn_growth": "0",
+        "free_months": "0",
+        "other_monthly": "0",
+        "upfront": "0",
+        "deposit": "0"
+      },
+      "expected": {
+        "First-year recurring occupancy cost": "60000",
+        "First-year average monthly recurring cost": "5000",
+        "Total modeled nonrefundable occupancy cost": "60000",
+        "First-month cash including deposit and upfront cost": "5000",
+        "Refundable deposit kept separate": "0"
+      }
+    },
+    {
+      "id": "triple-net-lease",
+      "mode": "building",
+      "title": "Area-share expenses reconcile with the same NNN quote",
+      "values": {
+        "area": "2000",
+        "base_rate": "24",
+        "base_basis": "Per square foot per year",
+        "building_area": "10000",
+        "taxes": "30000",
+        "insurance": "10000",
+        "cam": "20000",
+        "years": "1",
+        "base_growth": "0",
+        "nnn_growth": "0",
+        "free_months": "0",
+        "other_monthly": "0",
+        "upfront": "0",
+        "deposit": "0"
+      },
+      "expected": {
+        "First-year recurring occupancy cost": "60000.0",
+        "First-year average monthly recurring cost": "5000.0",
+        "Total modeled nonrefundable occupancy cost": "60000.0",
+        "First-month cash including deposit and upfront cost": "5000.0",
+        "Refundable deposit kept separate": "0",
+        "Area-based expense share": "20.0"
+      }
+    },
+    {
+      "id": "triple-net-lease",
+      "mode": "quoted",
+      "title": "An explicitly all-in gross quote matches the initial total",
+      "values": {
+        "area": "2000",
+        "base_rate": "30",
+        "base_basis": "Per square foot per year",
+        "nnn_rate": "0",
+        "nnn_basis": "Per square foot per year",
+        "years": "1",
+        "base_growth": "0",
+        "nnn_growth": "0",
+        "free_months": "0",
+        "other_monthly": "0",
+        "upfront": "0",
+        "deposit": "0"
+      },
+      "expected": {
+        "First-year recurring occupancy cost": "60000",
+        "First-year average monthly recurring cost": "5000",
+        "Total modeled nonrefundable occupancy cost": "60000",
+        "First-month cash including deposit and upfront cost": "5000",
+        "Refundable deposit kept separate": "0"
+      }
+    },
+    {
+      "id": "triple-net-lease",
+      "mode": "quoted",
+      "title": "Monthly quotes normalize to the same annual cost",
+      "values": {
+        "area": "2000",
+        "base_rate": "2",
+        "base_basis": "Per square foot per month",
+        "nnn_rate": ".5",
+        "nnn_basis": "Per square foot per month",
+        "years": "1",
+        "base_growth": "0",
+        "nnn_growth": "0",
+        "free_months": "0",
+        "other_monthly": "0",
+        "upfront": "0",
+        "deposit": "0"
+      },
+      "expected": {
+        "First-year recurring occupancy cost": "60000.0",
+        "First-year average monthly recurring cost": "5000.0",
+        "Total modeled nonrefundable occupancy cost": "60000.0",
+        "First-month cash including deposit and upfront cost": "5000.0",
+        "Refundable deposit kept separate": "0"
+      }
+    },
+    {
+      "id": "triple-net-lease",
+      "mode": "quoted",
+      "title": "Two abated months leave NNN and other charges payable",
+      "values": {
+        "area": "2000",
+        "base_rate": "24",
+        "base_basis": "Per square foot per year",
+        "nnn_rate": "6",
+        "nnn_basis": "Per square foot per year",
+        "years": "2",
+        "base_growth": "0",
+        "nnn_growth": "0",
+        "free_months": "2",
+        "other_monthly": "100",
+        "upfront": "2000",
+        "deposit": "5000"
+      },
+      "expected": {
+        "First-year recurring occupancy cost": "53200",
+        "First-year average monthly recurring cost": "4433.3333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "Total modeled nonrefundable occupancy cost": "116400",
+        "First-month cash including deposit and upfront cost": "8100",
+        "Refundable deposit kept separate": "5000"
+      }
+    },
+    {
+      "id": "triple-net-lease",
+      "mode": "quoted",
+      "title": "Separate annual base and NNN escalation",
+      "values": {
+        "area": "2000",
+        "base_rate": "24",
+        "base_basis": "Per square foot per year",
+        "nnn_rate": "6",
+        "nnn_basis": "Per square foot per year",
+        "years": "3",
+        "base_growth": "3",
+        "nnn_growth": "2",
+        "free_months": "0",
+        "other_monthly": "0",
+        "upfront": "0",
+        "deposit": "0"
+      },
+      "expected": {
+        "First-year recurring occupancy cost": "60000",
+        "First-year average monthly recurring cost": "5000",
+        "Total modeled nonrefundable occupancy cost": "185088.0000",
+        "First-month cash including deposit and upfront cost": "5000",
+        "Refundable deposit kept separate": "0"
+      }
+    },
+    {
+      "id": "triple-net-lease",
+      "mode": "quoted",
+      "title": "A full year of base-rent abatement still has NNN charges",
+      "values": {
+        "area": "2000",
+        "base_rate": "24",
+        "base_basis": "Per square foot per year",
+        "nnn_rate": "6",
+        "nnn_basis": "Per square foot per year",
+        "years": "1",
+        "base_growth": "0",
+        "nnn_growth": "0",
+        "free_months": "12",
+        "other_monthly": "0",
+        "upfront": "0",
+        "deposit": "5000"
+      },
+      "expected": {
+        "First-year recurring occupancy cost": "12000",
+        "First-year average monthly recurring cost": "1000",
+        "Total modeled nonrefundable occupancy cost": "12000",
+        "First-month cash including deposit and upfront cost": "6000",
+        "Refundable deposit kept separate": "5000"
+      }
+    },
+    {
+      "id": "triple-net-lease",
+      "mode": "quoted",
+      "title": "Default five-year quoted lease",
+      "values": {
+        "area": "2000",
+        "base_rate": "24",
+        "base_basis": "Per square foot per year",
+        "nnn_rate": "6",
+        "nnn_basis": "Per square foot per year",
+        "years": "5",
+        "base_growth": "3",
+        "nnn_growth": "2",
+        "free_months": "0",
+        "other_monthly": "0",
+        "upfront": "2000",
+        "deposit": "5000"
+      },
+      "expected": {
+        "First-year recurring occupancy cost": "60000",
+        "First-year average monthly recurring cost": "5000",
+        "Total modeled nonrefundable occupancy cost": "319287.00080000",
+        "First-month cash including deposit and upfront cost": "12000",
+        "Refundable deposit kept separate": "5000"
+      }
+    },
+    {
+      "id": "triple-net-lease",
+      "mode": "building",
+      "title": "Default five-year area-share lease",
+      "values": {
+        "area": "2000",
+        "base_rate": "24",
+        "base_basis": "Per square foot per year",
+        "building_area": "10000",
+        "taxes": "30000",
+        "insurance": "10000",
+        "cam": "20000",
+        "years": "5",
+        "base_growth": "3",
+        "nnn_growth": "2",
+        "free_months": "0",
+        "other_monthly": "0",
+        "upfront": "2000",
+        "deposit": "5000"
+      },
+      "expected": {
+        "First-year recurring occupancy cost": "60000.0",
+        "First-year average monthly recurring cost": "5000.0",
+        "Total modeled nonrefundable occupancy cost": "319287.000800000",
+        "First-month cash including deposit and upfront cost": "12000.0",
+        "Refundable deposit kept separate": "5000",
+        "Area-based expense share": "20.0"
+      }
+    },
+    {
+      "id": "arm-mortgage",
+      "mode": "scenario",
+      "title": "Entered index reaches 7% then 7.5%",
+      "values": {
+        "principal": "300000",
+        "term_years": "30",
+        "initial_rate": "5",
+        "fixed_years": "5",
+        "reset_months": "12",
+        "first_cap": "2",
+        "periodic_cap": "2",
+        "lifetime_cap": "5",
+        "margin": "2.5",
+        "floor": "2.5",
+        "indices": "5",
+        "fixed_compare_rate": "6",
+        "holding_years": "7"
+      },
+      "expected": {
+        "Initial monthly principal and interest": "1610.4648690364169544854777373376635804145195705514746137993264633659880804273957",
+        "First-reset monthly principal and interest": "1947.0791264954498210916455558625395525508854510260246780218050180435518210596827",
+        "Highest modeled monthly principal and interest": "2033.4664948940763839701871220496431293839490605385573258615084660596133740833600",
+        "ARM interest through holding period": "111467.61754468887158568931369442500090813127020237416597946408558882522449429162",
+        "ARM principal after holding period": "267073.17794582953985581865731921899390004208183051070510490473597762795732693137",
+        "Fixed-loan interest through holding period": "120004.89001118204192139242010483992804610766261317374780210010337377421068000544",
+        "Fixed-loan principal after holding period": "268918.15767268843848434418669635199745677289150407554348200764300626479828179422",
+        "ARM minus fixed interest through holding period": "-8537.27246649317033570310641041492713797639241079958182263601778494898618571382",
+        "Full-model ARM interest": "405631.19218962441370564230206090751071805912908050528281233568624365055841436761"
+      },
+      "referenceRateSegments": [
+        {
+          "months": 60,
+          "annualRate": "5"
+        },
+        {
+          "months": 12,
+          "annualRate": "7"
+        },
+        {
+          "months": 288,
+          "annualRate": "7.5"
+        }
+      ]
+    },
+    {
+      "id": "arm-mortgage",
+      "mode": "upward-caps",
+      "title": "Upward-cap stress reaches 7%, 9%, then 10%",
+      "values": {
+        "principal": "300000",
+        "term_years": "30",
+        "initial_rate": "5",
+        "fixed_years": "5",
+        "reset_months": "12",
+        "first_cap": "2",
+        "periodic_cap": "2",
+        "lifetime_cap": "5",
+        "fixed_compare_rate": "6",
+        "holding_years": "7"
+      },
+      "expected": {
+        "Initial monthly principal and interest": "1610.4648690364169544854777373376635804145195705514746137993264633659880804273957",
+        "First-reset monthly principal and interest": "1947.0791264954498210916455558625395525508854510260246780218050180435518210596827",
+        "Highest modeled monthly principal and interest": "2484.1434445203551602324683901634731568902381961565123592602167952392051589004700",
+        "ARM interest through holding period": "115543.21790138563561666573074797070624939563476363606550192812725963639076724530",
+        "ARM principal after holding period": "267924.13516507212709724718153525427189989772521721512717658762292524785376102922",
+        "Fixed-loan interest through holding period": "120004.89001118204192139242010483992804610766261317374780210010337377421068000544",
+        "Fixed-loan principal after holding period": "268918.15767268843848434418669635199745677289150407554348200764300626479828179422",
+        "ARM minus fixed interest through holding period": "-4461.67210979640630472668935686922179671202784953768230017197611413781991276014",
+        "Full-model ARM interest": "533242.67342393153274357982489783502565120365168561834948116033982040916086274570"
+      },
+      "referenceRateSegments": [
+        {
+          "months": 60,
+          "annualRate": "5"
+        },
+        {
+          "months": 12,
+          "annualRate": "7"
+        },
+        {
+          "months": 12,
+          "annualRate": "9"
+        },
+        {
+          "months": 276,
+          "annualRate": "10"
+        }
+      ]
+    },
+    {
+      "id": "arm-mortgage",
+      "mode": "scenario",
+      "title": "Falling index descends through symmetric caps to the floor",
+      "values": {
+        "principal": "300000",
+        "term_years": "30",
+        "initial_rate": "6",
+        "fixed_years": "5",
+        "reset_months": "12",
+        "first_cap": "1",
+        "periodic_cap": "1",
+        "lifetime_cap": "5",
+        "margin": "1",
+        "floor": "2",
+        "indices": "0",
+        "fixed_compare_rate": "6",
+        "holding_years": "10"
+      },
+      "expected": {
+        "Initial monthly principal and interest": "1798.6515754582571837743837310534277451111282274892643371439578615179691952168002",
+        "First-reset monthly principal and interest": "1631.9595095265113738137442949428040062791576498020816326701429944170137093301007",
+        "Highest modeled monthly principal and interest": "1798.6515754582571837743837310534277451111282274892643371439578615179691952168002",
+        "ARM interest through holding period": "129571.54400292614516893648936972913976896448438927100546284775045282612990812643",
+        "ARM principal after holding period": "239230.86533173476588614413287712903301651900619148013279555729553254369021417516",
+        "Fixed-loan interest through holding period": "166895.36394617068460635276671502084644126239969405583361189785691959191933642305",
+        "Fixed-loan principal after holding period": "251057.17489117982255342671898860951702792701239534411315462291353743561591040703",
+        "ARM minus fixed interest through holding period": "-37323.81994324453943741627734529170667229791530478482814905010646676578942829662",
+        "Full-model ARM interest": "180795.65787058483662356332066710595149241981315004415804821996205560128847078353"
+      },
+      "referenceRateSegments": [
+        {
+          "months": 60,
+          "annualRate": "6"
+        },
+        {
+          "months": 12,
+          "annualRate": "5"
+        },
+        {
+          "months": 12,
+          "annualRate": "4"
+        },
+        {
+          "months": 12,
+          "annualRate": "3"
+        },
+        {
+          "months": 264,
+          "annualRate": "2"
+        }
+      ]
+    },
+    {
+      "id": "arm-mortgage",
+      "mode": "scenario",
+      "title": "Six-month resets follow successive entered indices",
+      "values": {
+        "principal": "300000",
+        "term_years": "15",
+        "initial_rate": "4",
+        "fixed_years": "5",
+        "reset_months": "6",
+        "first_cap": "1",
+        "periodic_cap": "1",
+        "lifetime_cap": "3",
+        "margin": "2",
+        "floor": "2",
+        "indices": "8\n0",
+        "fixed_compare_rate": "6",
+        "holding_years": "7"
+      },
+      "expected": {
+        "Initial monthly principal and interest": "2219.0637768278107779332595480197273066855112239326901570554254603814902046190351",
+        "First-reset monthly principal and interest": "2324.7155083566329383857394050810764413307434752958918879689602355867800629934726",
+        "Highest modeled monthly principal and interest": "2324.7155083566329383857394050810764413307434752958918879689602355867800629934726",
+        "ARM interest through holding period": "66680.517286317766731916924675473819469408105229669619090686984256545706216046560",
+        "ARM principal after holding period": "181199.13036953810243859756754021199638307884927416502058793865142144510582686026",
+        "Fixed-loan interest through holding period": "105292.32918265992905870923839884903995392581443365485404901883310411228670311088",
+        "Fixed-loan principal after holding period": "192640.40851445019882925773550414295446988606099050955011065320745923614629089213",
+        "ARM minus fixed interest through holding period": "-38611.811896342162326792313723375220484517709203985234958331848847566580487064320",
+        "Full-model ARM interest": "81713.477032442010941721401987123260628406652478197705556668397123142782499834685"
+      },
+      "referenceRateSegments": [
+        {
+          "months": 60,
+          "annualRate": "4"
+        },
+        {
+          "months": 6,
+          "annualRate": "5"
+        },
+        {
+          "months": 6,
+          "annualRate": "4"
+        },
+        {
+          "months": 6,
+          "annualRate": "3"
+        },
+        {
+          "months": 102,
+          "annualRate": "2"
+        }
+      ]
+    },
+    {
+      "id": "arm-mortgage",
+      "mode": "upward-caps",
+      "title": "Zero-rate, zero-cap amortization",
+      "values": {
+        "principal": "300000",
+        "term_years": "30",
+        "initial_rate": "0",
+        "fixed_years": "5",
+        "reset_months": "12",
+        "first_cap": "0",
+        "periodic_cap": "0",
+        "lifetime_cap": "0",
+        "fixed_compare_rate": "0",
+        "holding_years": "7"
+      },
+      "expected": {
+        "Initial monthly principal and interest": "833.33333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "First-reset monthly principal and interest": "833.33333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "Highest modeled monthly principal and interest": "833.33333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "ARM interest through holding period": "0E-75",
+        "ARM principal after holding period": "230000.00000000000000000000000000000000000000000000000000000000000000000000000000",
+        "Fixed-loan interest through holding period": "0E-75",
+        "Fixed-loan principal after holding period": "230000.00000000000000000000000000000000000000000000000000000000000000000000000000",
+        "ARM minus fixed interest through holding period": "0E-75",
+        "Full-model ARM interest": "0E-75"
+      },
+      "referenceRateSegments": [
+        {
+          "months": 60,
+          "annualRate": "0"
+        },
+        {
+          "months": 300,
+          "annualRate": "0"
+        }
+      ]
+    },
+    {
+      "id": "arm-mortgage",
+      "mode": "scenario",
+      "title": "A zero lifetime increase blocks a high index",
+      "values": {
+        "principal": "300000",
+        "term_years": "30",
+        "initial_rate": "5",
+        "fixed_years": "5",
+        "reset_months": "12",
+        "first_cap": "2",
+        "periodic_cap": "2",
+        "lifetime_cap": "0",
+        "margin": "2.5",
+        "floor": "2.5",
+        "indices": "20",
+        "fixed_compare_rate": "6",
+        "holding_years": "7"
+      },
+      "expected": {
+        "Initial monthly principal and interest": "1610.4648690364169544854777373376635804145195705514746137993264633659880804273957",
+        "First-reset monthly principal and interest": "1610.4648690364169544854777373376635804145195705514746137993264633659880804273956",
+        "Highest modeled monthly principal and interest": "1610.4648690364169544854777373376635804145195705514746137993264633659880804273957",
+        "ARM interest through holding period": "99114.094402700428537763423229479217607808832476524943822653432832307491710173406",
+        "ARM principal after holding period": "263835.04540364140436098329329311547685298918855020107626351000990956449295427217",
+        "Fixed-loan interest through holding period": "120004.89001118204192139242010483992804610766261317374780210010337377421068000544",
+        "Fixed-loan principal after holding period": "268918.15767268843848434418669635199745677289150407554348200764300626479828179422",
+        "ARM minus fixed interest through holding period": "-20890.795608481613383628996875360710438298830136648803979446670541466718969832034",
+        "Full-model ARM interest": "279767.35285311010361477198544155888894922704539853086096775752681175570895386245"
+      },
+      "referenceRateSegments": [
+        {
+          "months": 60,
+          "annualRate": "5"
+        },
+        {
+          "months": 300,
+          "annualRate": "5"
+        }
+      ]
+    },
+    {
+      "id": "portfolio-rebalancing",
+      "mode": "trades",
+      "title": "Full 60/40 rebalance of a 70/30 holding",
+      "values": {
+        "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+        "cash_change": "0",
+        "fees": "0"
+      },
+      "expected": {
+        "Total modeled buys": "10000",
+        "Total modeled sells": "10000",
+        "Post-cost portfolio value": "100000",
+        "Total absolute dollar gap from rounded targets": "0",
+        "Entered transaction costs": "0",
+        "Minimum net new cash for a no-sale target": "16666.67"
+      },
+      "referenceAllocation": {
+        "currentCents": [
+          7000000,
+          3000000
+        ],
+        "targetCents": [
+          6000000,
+          4000000
+        ],
+        "changeCents": [
+          -1000000,
+          1000000
+        ],
+        "afterCents": [
+          6000000,
+          4000000
+        ]
+      }
+    },
+    {
+      "id": "portfolio-rebalancing",
+      "mode": "contributions",
+      "title": "A $10,000 contribution leaves target deviations",
+      "values": {
+        "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+        "cash_change": "10000",
+        "fees": "0"
+      },
+      "expected": {
+        "Total modeled buys": "10000",
+        "Total modeled sells": "0",
+        "Post-cost portfolio value": "110000",
+        "Total absolute dollar gap from rounded targets": "8000",
+        "Entered transaction costs": "0",
+        "Minimum net new cash for a no-sale target": "16666.67"
+      },
+      "referenceAllocation": {
+        "currentCents": [
+          7000000,
+          3000000
+        ],
+        "targetCents": [
+          6600000,
+          4400000
+        ],
+        "changeCents": [
+          0,
+          1000000
+        ],
+        "afterCents": [
+          7000000,
+          4000000
+        ]
+      }
+    },
+    {
+      "id": "portfolio-rebalancing",
+      "mode": "contributions",
+      "title": "A $20,000 contribution reaches cent-rounded targets",
+      "values": {
+        "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+        "cash_change": "20000",
+        "fees": "0"
+      },
+      "expected": {
+        "Total modeled buys": "20000",
+        "Total modeled sells": "0",
+        "Post-cost portfolio value": "120000",
+        "Total absolute dollar gap from rounded targets": "0",
+        "Entered transaction costs": "0",
+        "Minimum net new cash for a no-sale target": "16666.67"
+      },
+      "referenceAllocation": {
+        "currentCents": [
+          7000000,
+          3000000
+        ],
+        "targetCents": [
+          7200000,
+          4800000
+        ],
+        "changeCents": [
+          200000,
+          1800000
+        ],
+        "afterCents": [
+          7200000,
+          4800000
+        ]
+      }
+    },
+    {
+      "id": "portfolio-rebalancing",
+      "mode": "trades",
+      "title": "A withdrawal and fees reduce the allocatable portfolio",
+      "values": {
+        "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+        "cash_change": "-10000",
+        "fees": "100"
+      },
+      "expected": {
+        "Total modeled buys": "5960",
+        "Total modeled sells": "16060",
+        "Post-cost portfolio value": "89900",
+        "Total absolute dollar gap from rounded targets": "0",
+        "Entered transaction costs": "100",
+        "Minimum net new cash for a no-sale target": "16666.67"
+      },
+      "referenceAllocation": {
+        "currentCents": [
+          7000000,
+          3000000
+        ],
+        "targetCents": [
+          5394000,
+          3596000
+        ],
+        "changeCents": [
+          -1606000,
+          596000
+        ],
+        "afterCents": [
+          5394000,
+          3596000
+        ]
+      }
+    },
+    {
+      "id": "portfolio-rebalancing",
+      "mode": "contributions",
+      "title": "New cash covers separately entered transaction costs",
+      "values": {
+        "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+        "cash_change": "20000",
+        "fees": "100"
+      },
+      "expected": {
+        "Total modeled buys": "19900",
+        "Total modeled sells": "0",
+        "Post-cost portfolio value": "119900",
+        "Total absolute dollar gap from rounded targets": "0",
+        "Entered transaction costs": "100",
+        "Minimum net new cash for a no-sale target": "16666.67"
+      },
+      "referenceAllocation": {
+        "currentCents": [
+          7000000,
+          3000000
+        ],
+        "targetCents": [
+          7194000,
+          4796000
+        ],
+        "changeCents": [
+          194000,
+          1796000
+        ],
+        "afterCents": [
+          7194000,
+          4796000
+        ]
+      }
+    },
+    {
+      "id": "portfolio-rebalancing",
+      "mode": "trades",
+      "title": "A final cent follows the largest fractional target",
+      "values": {
+        "assets": "A, .01, 33.333333\nB, .01, 33.333333\nC, .01, 33.333334",
+        "cash_change": ".01",
+        "fees": "0"
+      },
+      "expected": {
+        "Total modeled buys": "0.01",
+        "Total modeled sells": "0",
+        "Post-cost portfolio value": "0.04",
+        "Total absolute dollar gap from rounded targets": "0",
+        "Entered transaction costs": "0",
+        "Minimum net new cash for a no-sale target": "0.01"
+      },
+      "referenceAllocation": {
+        "currentCents": [
+          1,
+          1,
+          1
+        ],
+        "targetCents": [
+          1,
+          1,
+          2
+        ],
+        "changeCents": [
+          0,
+          0,
+          1
+        ],
+        "afterCents": [
+          1,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "portfolio-rebalancing",
+      "mode": "contributions",
+      "title": "A held zero-target asset cannot disappear without a sale",
+      "values": {
+        "assets": "A, 100, 0\nB, 0, 100",
+        "cash_change": "100",
+        "fees": "0"
+      },
+      "expected": {
+        "Total modeled buys": "100",
+        "Total modeled sells": "0",
+        "Post-cost portfolio value": "200",
+        "Total absolute dollar gap from rounded targets": "200",
+        "Entered transaction costs": "0"
+      },
+      "referenceAllocation": {
+        "currentCents": [
+          10000,
+          0
+        ],
+        "targetCents": [
+          0,
+          20000
+        ],
+        "changeCents": [
+          0,
+          10000
+        ],
+        "afterCents": [
+          10000,
+          10000
+        ]
+      }
+    },
+    {
+      "id": "portfolio-rebalancing",
+      "mode": "trades",
+      "title": "New cash creates a portfolio from zero current holdings",
+      "values": {
+        "assets": "A, 0, 60\nB, 0, 40",
+        "cash_change": "100",
+        "fees": "0"
+      },
+      "expected": {
+        "Total modeled buys": "100",
+        "Total modeled sells": "0",
+        "Post-cost portfolio value": "100",
+        "Total absolute dollar gap from rounded targets": "0",
+        "Entered transaction costs": "0",
+        "Minimum net new cash for a no-sale target": "0"
+      },
+      "referenceAllocation": {
+        "currentCents": [
+          0,
+          0
+        ],
+        "targetCents": [
+          6000,
+          4000
+        ],
+        "changeCents": [
+          6000,
+          4000
+        ],
+        "afterCents": [
+          6000,
+          4000
+        ]
+      }
+    }
+  ]
+}

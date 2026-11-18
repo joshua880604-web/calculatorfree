@@ -833,5 +833,9 @@
   {"id": "black-scholes", "category": "Investment", "title": "Black-Scholes Calculator", "local_route": "/black-scholes-calculator.html"},
   {"id": "basis-point", "category": "Investment", "title": "Basis Point Calculator", "local_route": "/basis-point-calculator.html"},
   {"id": "prorated-rent", "category": "Mortgage and Real Estate", "title": "Prorated Rent Calculator", "local_route": "/prorated-rent-calculator.html"},
-  {"id": "operating-cash-flow", "category": "Other", "title": "Operating Cash Flow Calculator", "local_route": "/operating-cash-flow-calculator.html"}
+  {"id": "operating-cash-flow", "category": "Other", "title": "Operating Cash Flow Calculator", "local_route": "/operating-cash-flow-calculator.html"},
+  {"id": "business-line-of-credit", "category": "Other", "title": "Business Line of Credit Calculator", "local_route": "/business-line-of-credit-calculator.html"},
+  {"id": "triple-net-lease", "category": "Mortgage and Real Estate", "title": "Triple Net Lease Calculator", "local_route": "/triple-net-lease-calculator.html"},
+  {"id": "arm-mortgage", "category": "Mortgage and Real Estate", "title": "ARM Mortgage Calculator", "local_route": "/arm-mortgage-calculator.html"},
+  {"id": "portfolio-rebalancing", "category": "Investment", "title": "Portfolio Rebalancing Calculator", "local_route": "/portfolio-rebalancing-calculator.html"}
 ]

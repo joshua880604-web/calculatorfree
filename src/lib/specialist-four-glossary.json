@@ -1,0 +1,330 @@
+[
+  {
+    "slug": "business-line-of-credit",
+    "name": "Business line of credit",
+    "title": "Business Line of Credit: Draws, Principal and Interest",
+    "description": "Understand a business line of credit as a borrowing facility with outstanding principal, permitted draws and repayments. Separate credit limit, cost and principal owed.",
+    "category": "Business & pricing",
+    "aliases": [
+      "Business revolving credit",
+      "Business credit line"
+    ],
+    "definition": "A business line of credit is a financing facility under which a business may draw and repay funds subject to its agreement and credit limit. The limit, principal outstanding, interest charge and required payment are different quantities.",
+    "explanation": "The credit limit describes permitted capacity, not the amount already borrowed. A draw increases principal, while a principal repayment reduces it. Interest measures the charge for using money over time; paying that charge alone need not reduce the debt. Whether repaid amounts can be borrowed again, how payments are allocated and when a facility can be renewed depend on the agreement. A ledger with dated principal activity makes these distinctions easier to reconcile, but it cannot infer an account’s contractual minimum-payment or capitalization rules.",
+    "formula": "Closing principal = opening principal + draws − principal-only repayments",
+    "formulaNote": "A separate simple-interest illustration sums principal × days, then applies the annual rate and stated 360- or 365-day denominator. Interest and fees are paid separately in that illustration; actual agreement terms can differ.",
+    "example": {
+      "title": "Two dated principal changes through December",
+      "intro": "An original December illustration starts with $10,000, adds $5,000 on December 10 and repays $3,000 principal on December 20. January 1 is excluded.",
+      "steps": [
+        "The principal amounts are $10,000 for 9 days, $15,000 for 10 days and $12,000 for 12 days.",
+        "The balance-day sum is 384,000. At 12% / 365, simple interest is about $126.25.",
+        "Closing principal is $10,000 + $5,000 − $3,000 = $12,000. The separately entered $50 fee changes cost, not principal."
+      ],
+      "answer": "The principal ends at $12,000 while interest plus the separate fee is $176.25. A cost payment and a principal reduction describe different cash-flow effects.",
+      "assumptions": "A manual principal and interest worksheet with stated date boundaries, simple-interest bases and separate paid fees. No lender minimum-payment rule, revolving-account APR disclosure, compounding of unpaid charges, live offer or credit approval.",
+      "calculator": {
+        "id": "business-line-of-credit",
+        "mode": "ledger",
+        "values": {
+          "start": "2026-12-01",
+          "end": "2027-01-01",
+          "opening": "10000",
+          "limit": "50000",
+          "rate": "12",
+          "basis": "365",
+          "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+          "fees": "50"
+        },
+        "expected": [
+          {
+            "label": "Closing principal balance",
+            "value": 12000.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Available credit is not income or cash already owned",
+      "text": "A limit is a borrowing constraint. Drawing against it creates principal owed, and paying only interest can leave that principal unchanged. Credit availability and affordability are separate questions."
+    },
+    "tools": [
+      {
+        "id": "business-line-of-credit",
+        "text": "Reconcile dated principal activity, interest and a separate no-redraw payment scenario."
+      },
+      {
+        "id": "business-loan",
+        "text": "Model a separate fixed-loan payment schedule under its own assumptions."
+      }
+    ],
+    "related": [
+      "apr",
+      "amortization",
+      "operating-cash-flow"
+    ],
+    "sources": [
+      {
+        "title": "SBA: 7(a) loans and monitored lines of credit",
+        "url": "https://www.sba.gov/loans/7a-loans/"
+      }
+    ],
+    "checkedOn": "2026-11-18",
+    "scope": "A manual principal and interest worksheet with stated date boundaries, simple-interest bases and separate paid fees. No lender minimum-payment rule, revolving-account APR disclosure, compounding of unpaid charges, live offer or credit approval.",
+    "guides": [
+      {
+        "title": "Business Line of Credit vs. Term Loan: Timing, Fees & Principal",
+        "path": "/guides/business-line-of-credit-vs-term-loan/"
+      }
+    ]
+  },
+  {
+    "slug": "triple-net-lease",
+    "name": "Triple net lease (NNN)",
+    "title": "Triple Net Lease: Base Rent, Expense Shares and Total Cost",
+    "description": "Define NNN lease charges and distinguish a base quote from total tenant occupancy cost. Follow an explicit area-share example and its contractual limits.",
+    "category": "Housing & property",
+    "aliases": [
+      "NNN lease",
+      "Triple net commercial lease"
+    ],
+    "definition": "A triple net lease is a commercial lease structure that separates base rent from specified property expenses charged to the tenant, commonly property taxes, insurance and maintenance. The agreement determines the included costs and how they are allocated.",
+    "explanation": "A low base rate does not by itself describe the tenant’s total payment. An additional NNN quote can be stated per square foot or as an allocated expense amount, and the period of the quote matters. A building-level bill is also different from one tenant’s share. A physical-area fraction can illustrate an allocation, but the contractual denominator, expense pool or other adjustment may differ. The terminology describes a cost arrangement; it does not make every expense recoverable or replace reading the agreement.",
+    "formula": "Illustrated annual tenant cost = annual payable base rent + allocated nonoverlapping property expenses + other entered recurring charges",
+    "formulaNote": "The linked building-cost example allocates expenses using tenant rentable area divided by entered building rentable area. That fraction is a stated model assumption. Quote units, abatement and separate upfront charges require their own treatment.",
+    "example": {
+      "title": "Area-share expenses reconcile with the same NNN quote",
+      "intro": "Assume a 2,000-square-foot unit in a 10,000-square-foot building, $24 annual base rent per square foot and the entered area-based allocation.",
+      "steps": [
+        "The area fraction is 20%. Annual building taxes, insurance and nonoverlapping CAM total $60,000.",
+        "The modeled tenant expense share is $12,000 a year, or $6 per tenant square foot.",
+        "Adding $48,000 annual base rent gives $60,000 recurring annual cost; this one-year example has no extra costs or deposit."
+      ],
+      "answer": "The tenant’s recurring monthly average is $5,000 under the specified scope. The building expense total and tenant charge remain separately identified.",
+      "assumptions": "A tenant occupancy-cost scenario using entered quotes or an area-based expense share. Base-rent abatement, annual escalation and upfront charges follow the stated model. No lease interpretation, automatic local expenses or property-investment valuation.",
+      "calculator": {
+        "id": "triple-net-lease",
+        "mode": "building",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "building_area": "10000",
+          "taxes": "30000",
+          "insurance": "10000",
+          "cam": "20000",
+          "years": "1",
+          "base_growth": "0",
+          "nnn_growth": "0",
+          "free_months": "0",
+          "other_monthly": "0",
+          "upfront": "0",
+          "deposit": "0"
+        },
+        "expected": [
+          {
+            "label": "First-year recurring occupancy cost",
+            "value": 60000.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Count an included expense once",
+      "text": "A quoted NNN rate may already include taxes, insurance and CAM. Adding those same expenses again under other charges inflates the scenario. Reconcile the quote and contract before combining categories."
+    },
+    "tools": [
+      {
+        "id": "triple-net-lease",
+        "text": "Normalize quote units and separate recurring costs, abatement, upfront cash and a deposit."
+      },
+      {
+        "id": "prorated-rent",
+        "text": "Explore a separate date-based rent proration task using an entered counting convention."
+      }
+    ],
+    "related": [
+      "net-operating-income",
+      "prorated-rent"
+    ],
+    "sources": [
+      {
+        "title": "Cornell LII Wex: Net lease",
+        "url": "https://www.law.cornell.edu/wex/net_lease"
+      }
+    ],
+    "checkedOn": "2026-11-18",
+    "scope": "A tenant occupancy-cost scenario using entered quotes or an area-based expense share. Base-rent abatement, annual escalation and upfront charges follow the stated model. No lease interpretation, automatic local expenses or property-investment valuation.",
+    "guides": [
+      {
+        "title": "NNN vs. Gross Lease: Base Rent, Free Months & Upfront Cash",
+        "path": "/guides/nnn-vs-gross-lease-cost/"
+      }
+    ]
+  },
+  {
+    "slug": "adjustable-rate-mortgage",
+    "name": "Adjustable-rate mortgage (ARM)",
+    "title": "Adjustable-Rate Mortgage: Index, Margin, Rate Caps and Reset",
+    "description": "Define an ARM and distinguish its initial fixed period, index-plus-margin target and rate constraints. See why a reset payment uses the remaining balance and term.",
+    "category": "Housing & property",
+    "aliases": [
+      "ARM loan",
+      "Variable-rate mortgage"
+    ],
+    "definition": "An adjustable-rate mortgage is a home loan whose interest rate can reset under specified terms after an initial rate period. The reset framework can include an index, margin, timing convention and limits on rate changes.",
+    "explanation": "The starting payment reflects the initial rate and amortization assumptions. A later payment also depends on the principal still outstanding and the term remaining at the reset. An index-plus-margin amount is an unconstrained target until the applicable limits are applied. A per-reset limit and a lifetime ceiling answer different constraint questions. These concepts do not determine a future market index, and a rate cap is distinct from a contractual payment cap or an interest-only feature.",
+    "formula": "Illustrated reset target = entered index + margin, subject to stated rate constraints",
+    "formulaNote": "The linked monthly model applies symmetric first and later change limits, a lifetime increase above the initial rate, and a separate floor. It re-amortizes remaining principal after a reset, without payment caps, negative amortization or unused-cap carryover.",
+    "example": {
+      "title": "Entered index reaches 7% then 7.5%",
+      "intro": "A hypothetical $300,000, 30-year loan starts at 5% for five years. The next entered index is 5%, margin 2.5 points and the first change limit is 2 points.",
+      "steps": [
+        "The uncapped target is 7.5%, while the selected first-reset limit permits only 7%.",
+        "After sixty scheduled payments, use the remaining principal and 300 remaining months.",
+        "The monthly principal-and-interest amount changes from about $1,610.46 to $1,947.08 in month 61."
+      ],
+      "answer": "The first adjusted payment is based on a 7% constrained rate, not the unconstrained 7.5% target. Future entries remain assumptions rather than rate predictions.",
+      "assumptions": "Fully amortizing monthly loans with manual rate paths or upward-cap stress. First and later rate limits, a lifetime increase and a separate floor are explicit assumptions. No rate forecast, cap carryover, payment caps, negative amortization or lender disclosure.",
+      "calculator": {
+        "id": "arm-mortgage",
+        "mode": "scenario",
+        "values": {
+          "principal": "300000",
+          "term_years": "30",
+          "initial_rate": "5",
+          "fixed_years": "5",
+          "reset_months": "12",
+          "first_cap": "2",
+          "periodic_cap": "2",
+          "lifetime_cap": "5",
+          "margin": "2.5",
+          "floor": "2.5",
+          "indices": "5",
+          "fixed_compare_rate": "6",
+          "holding_years": "7"
+        },
+        "expected": [
+          {
+            "label": "First-reset monthly principal and interest",
+            "value": 1947.0791264954498,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "A starting payment does not describe the full rate path",
+      "text": "The introductory rate and payment leave later resets unspecified. Review both the constraints and the entered path, and keep any full-term peak distinct from an earlier holding-period comparison."
+    },
+    "tools": [
+      {
+        "id": "arm-mortgage",
+        "text": "Inspect a manual reset path or upward-cap stress with matched holding-period results."
+      },
+      {
+        "id": "mortgage",
+        "text": "Calculate a separate fixed-rate monthly mortgage under its own entered costs."
+      }
+    ],
+    "related": [
+      "amortization",
+      "apr"
+    ],
+    "sources": [
+      {
+        "title": "CFPB: ARM rate caps",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-rate-caps-with-an-adjustable-rate-mortgage-arm-and-how-do-they-work-en-1951/"
+      },
+      {
+        "title": "CFPB: ARM index and margin",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/for-an-adjustable-rate-mortgage-arm-what-are-the-index-and-margin-and-how-do-they-work-en-1949/"
+      }
+    ],
+    "checkedOn": "2026-11-18",
+    "scope": "Fully amortizing monthly loans with manual rate paths or upward-cap stress. First and later rate limits, a lifetime increase and a separate floor are explicit assumptions. No rate forecast, cap carryover, payment caps, negative amortization or lender disclosure.",
+    "guides": [
+      {
+        "title": "ARM vs. Fixed Mortgage: Rate Caps, Reset Payments & Balances",
+        "path": "/guides/arm-vs-fixed-mortgage-rate-caps/"
+      }
+    ]
+  },
+  {
+    "slug": "portfolio-rebalancing",
+    "name": "Portfolio rebalancing",
+    "title": "Portfolio Rebalancing: Target Weights, Cash Flows and Deviations",
+    "description": "Understand rebalancing as restoring user-selected allocation weights. Distinguish dollar trades, added cash, target feasibility and rounding from investment performance.",
+    "category": "Saving & investing",
+    "aliases": [
+      "Asset-allocation rebalancing",
+      "Portfolio allocation adjustment"
+    ],
+    "definition": "Portfolio rebalancing adjusts holdings toward a chosen allocation mix after values or cash flows have changed their weights. It can involve sales and purchases, new contributions or other permitted actions under the selected constraints.",
+    "explanation": "A target weight specifies a share of a defined final portfolio value, rather than a fixed purchase amount. Adding cash or paying costs changes that denominator. Existing holdings may exceed their resulting targets, so a contribution-only plan can leave deviations even after investing all available cash. A rebalancing worksheet reconciles those quantities under the user’s targets; it does not establish a suitable asset mix, a return forecast or an instruction to trade.",
+    "formula": "Dollar change in a full plan = target weight × post-cost portfolio value − current asset value",
+    "formulaNote": "The linked implementation allocates targets in whole cents. A contribution-only plan instead preserves holdings and assigns net new cash proportionally to positive target-dollar deficits, then reports residual deviations.",
+    "example": {
+      "title": "A $10,000 contribution leaves target deviations",
+      "intro": "The illustration starts with $70,000 in one asset and $30,000 in another, user targets of 60%/40%, and $10,000 new cash with no costs.",
+      "steps": [
+        "The $110,000 final total implies $66,000 and $44,000 targets.",
+        "The first asset is already above target. The stated no-sale rule allocates the $10,000 to the second asset.",
+        "Final amounts are $70,000 and $40,000, leaving $4,000 above and $4,000 below the rounded targets."
+      ],
+      "answer": "The total absolute dollar gap is $8,000. Investing all new cash does not necessarily complete the target adjustment.",
+      "assumptions": "Dollar allocations under your supplied targets, with exact cent reconciliation. Full trades and contribution-only allocation have different constraints. No recommended portfolio, live quote, broker order, whole-share restriction or tax calculation.",
+      "calculator": {
+        "id": "portfolio-rebalancing",
+        "mode": "contributions",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "10000",
+          "fees": "0"
+        },
+        "expected": [
+          {
+            "label": "Total absolute dollar gap from rounded targets",
+            "value": 8000.0,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Reaching a target is not a performance or suitability result",
+      "text": "The target mix is an input. Matching it does not show that an investment has earned a return, that the mix suits a person, or that a dollar plan satisfies taxes, account rules or whole-share constraints."
+    },
+    "tools": [
+      {
+        "id": "portfolio-rebalancing",
+        "text": "Compare a full dollar plan with a clearly defined no-sale contribution allocation."
+      },
+      {
+        "id": "capital-gains-tax",
+        "text": "Explore a separate entered-sale tax estimate without treating it as a lot-selection or rebalancing-tax engine."
+      }
+    ],
+    "related": [
+      "dollar-cost-averaging",
+      "cost-basis",
+      "capital-gains"
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: Asset allocation, diversification and rebalancing",
+        "url": "https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset"
+      }
+    ],
+    "checkedOn": "2026-11-18",
+    "scope": "Dollar allocations under your supplied targets, with exact cent reconciliation. Full trades and contribution-only allocation have different constraints. No recommended portfolio, live quote, broker order, whole-share restriction or tax calculation.",
+    "guides": [
+      {
+        "title": "Rebalance With Contributions vs. Selling: Targets & Cash Limits",
+        "path": "/guides/rebalance-with-contributions-vs-selling/"
+      }
+    ]
+  }
+]

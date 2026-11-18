@@ -1,0 +1,578 @@
+{
+  "business-line-of-credit": {
+    "checkedOn": "2026-11-18",
+    "summary": "Estimate the cost of principal actually used, with timing and paid charges visible. A constant $25,000 balance at 12% for 30 days gives $246.58 simple interest on a 365-day basis. A dated ledger instead weights each balance by its days; a separate fixed-payment mode shows how principal could decline without new draws.",
+    "scope": "A manual principal and interest worksheet with stated date boundaries, simple-interest bases and separate paid fees. No lender minimum-payment rule, revolving-account APR disclosure, compounding of unpaid charges, live offer or credit approval.",
+    "examples": [
+      {
+        "title": "30 days on $25,000 with a 365-day basis",
+        "mode": "interest",
+        "values": {
+          "balance": "25000",
+          "rate": "12",
+          "days": "30",
+          "basis": "365",
+          "fees": "50"
+        },
+        "inputs": "Principal outstanding for every day: 25000 $; Annual interest rate assumption: 12 %; Days interest accrues: 30 days; Simple-interest days per year: 365; Fees paid separately for this period: 50 $",
+        "steps": [
+          "Convert the entered 12% annual rate to 0.12, then multiply $25,000 × 0.12 × 30 / 365.",
+          "Add the separately entered $50 fee after calculating interest. Principal stays $25,000."
+        ],
+        "answer": "Interest is $246.58 and interest plus fees is $296.58; neither number includes principal repayment.",
+        "expected": {
+          "label": "Modeled interest for entered period",
+          "value": 246.57534246575344,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "30 days on $25,000 with a 360-day basis",
+        "mode": "interest",
+        "values": {
+          "balance": "25000",
+          "rate": "12",
+          "days": "30",
+          "basis": "360",
+          "fees": "50"
+        },
+        "inputs": "Principal outstanding for every day: 25000 $; Annual interest rate assumption: 12 %; Days interest accrues: 30 days; Simple-interest days per year: 360; Fees paid separately for this period: 50 $",
+        "steps": [
+          "Change only the denominator from 365 to 360.",
+          "Calculate $25,000 × 0.12 × 30 / 360 = $250, then add the same $50 fee."
+        ],
+        "answer": "The entered basis gives $250 interest and $300 including fees. The $3.42 difference from the other case comes from the denominator.",
+        "expected": {
+          "label": "Modeled interest for entered period",
+          "value": 250.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Two dated principal changes through December",
+        "mode": "ledger",
+        "values": {
+          "start": "2026-12-01",
+          "end": "2027-01-01",
+          "opening": "10000",
+          "limit": "50000",
+          "rate": "12",
+          "basis": "365",
+          "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+          "fees": "50"
+        },
+        "inputs": "Start date (included): 2026-12-01; End date (excluded): 2027-01-01; Principal at start before listed transactions: 10000 $; Entered credit limit: 50000 $; Annual interest rate assumption: 12 %; Simple-interest days per year: 365; Date, signed principal change: 2026-12-10, 5000 / 2026-12-20, -3000; Period fees paid separately: 50 $",
+        "steps": [
+          "Include December 1 through December 31; January 1 is the exclusive end.",
+          "Accumulate 9 days at $10,000, 10 days at $15,000 and 12 days at $12,000: 384,000 balance-days.",
+          "Apply 12% / 365 to those balance-days, then add the separate $50 fee."
+        ],
+        "answer": "Interest is $126.25, closing principal is $12,000 and average daily principal is $12,387.10. The interest-plus-fee amount is $176.25.",
+        "expected": {
+          "label": "Modeled interest over selected dates",
+          "value": 126.24657534246575,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Default fixed-payment credit paydown",
+        "mode": "paydown",
+        "values": {
+          "balance": "25000",
+          "rate": "12",
+          "payment": "1000",
+          "monthly_fee": "0",
+          "max_months": "600"
+        },
+        "inputs": "Starting principal: 25000 $; Annual interest rate assumption: 12 %; Chosen total monthly payment: 1000 $; Fee charged each active month: 0 $; Maximum modeled months: 600 months",
+        "steps": [
+          "Use the separate monthly model: interest is opening principal × 12% / 12, with no fees or new draws.",
+          "Apply $1,000 monthly, reducing the final payment to the remaining principal plus interest."
+        ],
+        "answer": "The model pays off in 29 payments. Total interest is $3,912.21 and the final payment is $912.21, before any unmodeled contractual charges.",
+        "expected": {
+          "label": "Interest over modeled payments",
+          "value": 3912.2092574575013,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Horizon ends before payoff",
+        "mode": "paydown",
+        "values": {
+          "balance": "1000",
+          "rate": "12",
+          "payment": "200",
+          "monthly_fee": "5",
+          "max_months": "2"
+        },
+        "inputs": "Starting principal: 1000 $; Annual interest rate assumption: 12 %; Chosen total monthly payment: 200 $; Fee charged each active month: 5 $; Maximum modeled months: 2 months",
+        "steps": [
+          "Start with $1,000 principal, 12% annual interest and a $5 monthly fee.",
+          "Month one pays $10 interest, $5 fee and $185 principal. Month two charges interest on the resulting $815."
+        ],
+        "answer": "After two $200 payments, $628.15 principal remains. Two modeled rows are not a two-month payoff.",
+        "expected": {
+          "label": "Principal remaining at model end",
+          "value": 628.15,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is the interest-plus-fees result my required minimum payment?",
+        "answer": "No. That amount includes only modeled interest and entered paid fees. A required payment can also include principal or follow a lender-specific rule, which these daily worksheets do not infer."
+      },
+      {
+        "question": "Do the start and end dates both accrue interest?",
+        "answer": "The dated ledger includes the start and excludes the end. Principal transactions take effect before accrual on their listed date. A transaction on the exclusive end belongs in the next modeled period."
+      },
+      {
+        "question": "Why can a 360-day basis cost more than a 365-day basis?",
+        "answer": "At the same principal, annual rate and counted days, division by 360 gives a larger daily amount. Choose the convention specified in the agreement; the worksheet does not decide which convention applies."
+      },
+      {
+        "question": "Can I enter repayments that include interest?",
+        "answer": "Ledger repayments must be principal-only amounts. Interest and period fees are paid separately in that model. The fixed-payment mode has a different, explicit monthly waterfall for fees, interest and principal."
+      },
+      {
+        "question": "Why does the fixed-payment mode show principal still outstanding?",
+        "answer": "The selected maximum-month horizon can end before payoff. Read the remaining principal and the explicit not-paid-off status. A payment that cannot cover first-month interest and fees is outside that model and is rejected."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SBA: 7(a) loans and monitored lines of credit",
+        "url": "https://www.sba.gov/loans/7a-loans/"
+      }
+    ]
+  },
+  "triple-net-lease": {
+    "checkedOn": "2026-11-18",
+    "summary": "A quoted base rent is only part of the entered occupancy cost. In a one-year illustration, 2,000 square feet at $24 annual base rent plus $6 annual NNN gives $60,000 recurring annual cost. The schedule separates base rent, NNN, other recurring amounts, upfront costs and a refundable deposit.",
+    "scope": "A tenant occupancy-cost scenario using entered quotes or an area-based expense share. Base-rent abatement, annual escalation and upfront charges follow the stated model. No lease interpretation, automatic local expenses or property-investment valuation.",
+    "examples": [
+      {
+        "title": "Annual per-square-foot quotes, one year",
+        "mode": "quoted",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "nnn_rate": "6",
+          "nnn_basis": "Per square foot per year",
+          "years": "1",
+          "base_growth": "0",
+          "nnn_growth": "0",
+          "free_months": "0",
+          "other_monthly": "0",
+          "upfront": "0",
+          "deposit": "0"
+        },
+        "inputs": "Tenant rentable area: 2000 sq ft; Base rent quoted per square foot: 24 $; Base-rent quote period: Per square foot per year; NNN charge quoted per square foot: 6 $; NNN quote period: Per square foot per year; Whole lease years to model: 1 years; Base-rent increase each lease year: 0 %; NNN-charge increase each lease year: 0 %; Initial months with base rent abated: 0 months; Other nonoverlapping monthly occupancy charges: 0 $; Upfront nonrefundable occupancy cost: 0 $; Refundable deposit entered separately: 0 $",
+        "steps": [
+          "Multiply 2,000 square feet by $24 annual base rent and $6 annual NNN.",
+          "Add $48,000 base rent and $12,000 NNN; no other costs, free months, growth or upfront charges are entered."
+        ],
+        "answer": "Recurring cost is $60,000 for the year, or $5,000 per month.",
+        "expected": {
+          "label": "First-year recurring occupancy cost",
+          "value": 60000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Area-share expenses reconcile with the same NNN quote",
+        "mode": "building",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "building_area": "10000",
+          "taxes": "30000",
+          "insurance": "10000",
+          "cam": "20000",
+          "years": "1",
+          "base_growth": "0",
+          "nnn_growth": "0",
+          "free_months": "0",
+          "other_monthly": "0",
+          "upfront": "0",
+          "deposit": "0"
+        },
+        "inputs": "Tenant rentable area: 2000 sq ft; Base rent quoted per square foot: 24 $; Base-rent quote period: Per square foot per year; Building rentable area used for expense share: 10000 sq ft; Whole-building annual property taxes: 30000 $; Whole-building annual insurance: 10000 $; Whole-building annual CAM excluding taxes and insurance: 20000 $; Whole lease years to model: 1 years; Base-rent increase each lease year: 0 %; NNN-charge increase each lease year: 0 %; Initial months with base rent abated: 0 months; Other nonoverlapping monthly occupancy charges: 0 $; Upfront nonrefundable occupancy cost: 0 $; Refundable deposit entered separately: 0 $",
+        "steps": [
+          "The entered 2,000-square-foot unit is 20% of a 10,000-square-foot building.",
+          "Add $30,000 taxes, $10,000 insurance and $20,000 nonoverlapping CAM, then allocate 20%.",
+          "Add the resulting $12,000 tenant expense share to $48,000 annual base rent."
+        ],
+        "answer": "The same $60,000 recurring annual cost is reproduced. This assumes the contract uses the entered area-based share.",
+        "expected": {
+          "label": "First-year recurring occupancy cost",
+          "value": 60000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Two abated months leave NNN and other charges payable",
+        "mode": "quoted",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "nnn_rate": "6",
+          "nnn_basis": "Per square foot per year",
+          "years": "2",
+          "base_growth": "0",
+          "nnn_growth": "0",
+          "free_months": "2",
+          "other_monthly": "100",
+          "upfront": "2000",
+          "deposit": "5000"
+        },
+        "inputs": "Tenant rentable area: 2000 sq ft; Base rent quoted per square foot: 24 $; Base-rent quote period: Per square foot per year; NNN charge quoted per square foot: 6 $; NNN quote period: Per square foot per year; Whole lease years to model: 2 years; Base-rent increase each lease year: 0 %; NNN-charge increase each lease year: 0 %; Initial months with base rent abated: 2 months; Other nonoverlapping monthly occupancy charges: 100 $; Upfront nonrefundable occupancy cost: 2000 $; Refundable deposit entered separately: 5000 $",
+        "steps": [
+          "Abate two $4,000 base-rent months while retaining $1,000 monthly NNN and $100 other monthly charges.",
+          "Year one costs $53,200 recurring; year two costs $61,200. Add the separate $2,000 upfront nonrefundable cost once.",
+          "Keep the $5,000 refundable deposit outside the nonrefundable cost total."
+        ],
+        "answer": "Total modeled nonrefundable cost is $116,400 over two years. First-month cash is $8,100 including the deposit and upfront cost.",
+        "expected": {
+          "label": "First-year recurring occupancy cost",
+          "value": 53200.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Separate annual base and NNN escalation",
+        "mode": "quoted",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "nnn_rate": "6",
+          "nnn_basis": "Per square foot per year",
+          "years": "3",
+          "base_growth": "3",
+          "nnn_growth": "2",
+          "free_months": "0",
+          "other_monthly": "0",
+          "upfront": "0",
+          "deposit": "0"
+        },
+        "inputs": "Tenant rentable area: 2000 sq ft; Base rent quoted per square foot: 24 $; Base-rent quote period: Per square foot per year; NNN charge quoted per square foot: 6 $; NNN quote period: Per square foot per year; Whole lease years to model: 3 years; Base-rent increase each lease year: 3 %; NNN-charge increase each lease year: 2 %; Initial months with base rent abated: 0 months; Other nonoverlapping monthly occupancy charges: 0 $; Upfront nonrefundable occupancy cost: 0 $; Refundable deposit entered separately: 0 $",
+        "steps": [
+          "Use the initial $48,000 base rent and $12,000 NNN for year one.",
+          "Increase base rent 3% and NNN 2% at each lease-year anniversary; other and upfront costs are zero."
+        ],
+        "answer": "The three annual recurring totals are $60,000, $61,680 and $63,408, summing to $185,088.",
+        "expected": {
+          "label": "Total modeled nonrefundable occupancy cost",
+          "value": 185088.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How do I compare annual and monthly per-square-foot quotes?",
+        "answer": "Select the unit for base rent and NNN separately. A monthly per-square-foot amount is multiplied by 12 for its annual equivalent before area is applied. A monthly total-dollar quote is a different unit."
+      },
+      {
+        "question": "Does free rent remove NNN charges in this calculator?",
+        "answer": "The selected initial free months abate base rent only. NNN and other recurring charges remain payable in the scenario. Check the actual agreement before adopting that assumption."
+      },
+      {
+        "question": "What if the lease uses a different expense share from area divided by area?",
+        "answer": "The building-cost mode assumes a rentable-area share. When that is not the contractual rule, reconcile the appropriate tenant charge first and enter it in quoted-charge mode. The tool does not interpret contractual allocation clauses."
+      },
+      {
+        "question": "Is the security deposit included in total occupancy cost?",
+        "answer": "The entered refundable deposit appears separately and in first-month cash. It is excluded from modeled nonrefundable occupancy cost, with no assumed refund date or interest on the deposit."
+      },
+      {
+        "question": "Is this the same as an equipment lease payment calculator?",
+        "answer": "No. This worksheet combines commercial space rent and entered occupancy charges. A financing lease payment uses a different cash-flow model, principal or asset value, financing rate and residual assumptions."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Cornell LII Wex: Net lease",
+        "url": "https://www.law.cornell.edu/wex/net_lease"
+      }
+    ]
+  },
+  "arm-mortgage": {
+    "checkedOn": "2026-11-18",
+    "summary": "An ARM payment can change when the rate resets and the remaining balance is re-amortized. The illustrative $300,000 loan starts at 5% for five years; a capped 7% first reset changes monthly P&I from $1,610.46 to $1,947.08. Future indices, reset limits and the comparison rate are entered assumptions.",
+    "scope": "Fully amortizing monthly loans with manual rate paths or upward-cap stress. First and later rate limits, a lifetime increase and a separate floor are explicit assumptions. No rate forecast, cap carryover, payment caps, negative amortization or lender disclosure.",
+    "examples": [
+      {
+        "title": "Entered index reaches 7% then 7.5%",
+        "mode": "scenario",
+        "values": {
+          "principal": "300000",
+          "term_years": "30",
+          "initial_rate": "5",
+          "fixed_years": "5",
+          "reset_months": "12",
+          "first_cap": "2",
+          "periodic_cap": "2",
+          "lifetime_cap": "5",
+          "margin": "2.5",
+          "floor": "2.5",
+          "indices": "5",
+          "fixed_compare_rate": "6",
+          "holding_years": "7"
+        },
+        "inputs": "Starting loan principal: 300000 $; Original amortization term: 30 years; Initial annual rate: 5 %; Initial fixed-rate years: 5 years; Months between later rate resets: 12; First-reset limit in percentage points: 2 %; Later per-reset limit in percentage points: 2 %; Lifetime increase above initial rate in points: 5 %; Annual margin added to each index in points: 2.5 %; Minimum annual rate after resets: 2.5 %; Successive annual index assumptions, one per reset: 5; Fixed-rate comparison annual rate: 6 %; Whole years to compare: 7 years",
+        "steps": [
+          "Amortize $300,000 over 30 years at 5% for the first 60 monthly payments.",
+          "The entered 5% index plus 2.5-point margin targets 7.5%. The first 2-point limit instead allows 7% in month 61.",
+          "In month 73 the unchanged target is within the next 2-point limit. Recalculate payments from the actual remaining principal and months."
+        ],
+        "answer": "Initial monthly P&I is $1,610.46, first-reset P&I is $1,947.08 and the highest payment on this complete path is $2,033.47.",
+        "expected": {
+          "label": "First-reset monthly principal and interest",
+          "value": 1947.0791264954498,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Upward-cap stress reaches 7%, 9%, then 10%",
+        "mode": "upward-caps",
+        "values": {
+          "principal": "300000",
+          "term_years": "30",
+          "initial_rate": "5",
+          "fixed_years": "5",
+          "reset_months": "12",
+          "first_cap": "2",
+          "periodic_cap": "2",
+          "lifetime_cap": "5",
+          "fixed_compare_rate": "6",
+          "holding_years": "7"
+        },
+        "inputs": "Starting loan principal: 300000 $; Original amortization term: 30 years; Initial annual rate: 5 %; Initial fixed-rate years: 5 years; Months between later rate resets: 12; First-reset limit in percentage points: 2 %; Later per-reset limit in percentage points: 2 %; Lifetime increase above initial rate in points: 5 %; Fixed-rate comparison annual rate: 6 %; Whole years to compare: 7 years",
+        "steps": [
+          "Keep the same principal, term, first five years and 2/2/5 upward limits.",
+          "Use every permitted upward step: 7% in month 61, 9% in month 73 and the 10% lifetime ceiling in month 85."
+        ],
+        "answer": "The highest full-model monthly P&I is $2,484.14. This stress path is an assumption, not an index prediction.",
+        "expected": {
+          "label": "Highest modeled monthly principal and interest",
+          "value": 2484.143444520355,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Falling index descends through symmetric caps to the floor",
+        "mode": "scenario",
+        "values": {
+          "principal": "300000",
+          "term_years": "30",
+          "initial_rate": "6",
+          "fixed_years": "5",
+          "reset_months": "12",
+          "first_cap": "1",
+          "periodic_cap": "1",
+          "lifetime_cap": "5",
+          "margin": "1",
+          "floor": "2",
+          "indices": "0",
+          "fixed_compare_rate": "6",
+          "holding_years": "10"
+        },
+        "inputs": "Starting loan principal: 300000 $; Original amortization term: 30 years; Initial annual rate: 6 %; Initial fixed-rate years: 5 years; Months between later rate resets: 12; First-reset limit in percentage points: 1 %; Later per-reset limit in percentage points: 1 %; Lifetime increase above initial rate in points: 5 %; Annual margin added to each index in points: 1 %; Minimum annual rate after resets: 2 %; Successive annual index assumptions, one per reset: 0; Fixed-rate comparison annual rate: 6 %; Whole years to compare: 10 years",
+        "steps": [
+          "Start at 6%, with a five-year initial period and 1-point first/later change limits.",
+          "The entered zero index plus one-point margin is below the separate 2% floor. Rates descend to 5%, 4%, 3%, then 2% through the symmetric reset limits."
+        ],
+        "answer": "The rate cannot jump directly to the floor at the first reset. Each payment is recalculated over the remaining term.",
+        "expected": {
+          "label": "First-reset monthly principal and interest",
+          "value": 1631.9595095265113,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Six-month resets follow successive entered indices",
+        "mode": "scenario",
+        "values": {
+          "principal": "300000",
+          "term_years": "15",
+          "initial_rate": "4",
+          "fixed_years": "5",
+          "reset_months": "6",
+          "first_cap": "1",
+          "periodic_cap": "1",
+          "lifetime_cap": "3",
+          "margin": "2",
+          "floor": "2",
+          "indices": "8\n0",
+          "fixed_compare_rate": "6",
+          "holding_years": "7"
+        },
+        "inputs": "Starting loan principal: 300000 $; Original amortization term: 15 years; Initial annual rate: 4 %; Initial fixed-rate years: 5 years; Months between later rate resets: 6; First-reset limit in percentage points: 1 %; Later per-reset limit in percentage points: 1 %; Lifetime increase above initial rate in points: 3 %; Annual margin added to each index in points: 2 %; Minimum annual rate after resets: 2 %; Successive annual index assumptions, one per reset: 8 / 0; Fixed-rate comparison annual rate: 6 %; Whole years to compare: 7 years",
+        "steps": [
+          "Use a 15-year loan with a 4% initial rate for five years and then six-month resets.",
+          "An 8% index plus 2 points is limited to 5% in month 61. The next entered zero index repeats, producing 4%, 3% and finally the 2% floor at later resets."
+        ],
+        "answer": "Index entries represent successive resets, not calendar years. The selected six-month interval changes when those rates take effect.",
+        "expected": {
+          "label": "First-reset monthly principal and interest",
+          "value": 2324.715508356633,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does 5/1 mean the rate changes five times in year one?",
+        "answer": "Here it means five initial fixed-rate years followed by resets every 12 months. Enter seven or ten fixed years for 7/1 or 10/1. A six-month reset can be selected explicitly; the timing assumptions are part of the model."
+      },
+      {
+        "question": "Are the future index values current market forecasts?",
+        "answer": "No. Each index is entered manually for a successive reset, and the last value repeats. The upward-cap mode is a separate stress assumption. Neither mode supplies a forecast, live rate or lender quote."
+      },
+      {
+        "question": "Why is the first adjusted rate different from index plus margin?",
+        "answer": "The sum is the uncapped target. The model then applies the floor, permitted first or later reset change, and lifetime ceiling. If the supplied constraints leave no feasible rate, the scenario is rejected."
+      },
+      {
+        "question": "Are interest-rate caps also payment caps?",
+        "answer": "No. This tool caps the rate and recalculates a fully amortizing payment from the remaining balance and term. It does not model contractual payment caps, interest-only periods, negative amortization or unused-cap carryover."
+      },
+      {
+        "question": "Does lower modeled interest prove that an ARM is the better loan?",
+        "answer": "No. The comparison uses one entered path, the same principal and term, and a selected holding period. Fees, escrow, insurance, taxes and the borrower’s circumstances are outside the interest comparison."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: ARM rate caps",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-rate-caps-with-an-adjustable-rate-mortgage-arm-and-how-do-they-work-en-1951/"
+      },
+      {
+        "title": "CFPB: ARM index and margin",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/for-an-adjustable-rate-mortgage-arm-what-are-the-index-and-margin-and-how-do-they-work-en-1949/"
+      }
+    ]
+  },
+  "portfolio-rebalancing": {
+    "checkedOn": "2026-11-18",
+    "summary": "Supply your current asset values and target weights to see the dollar changes. A $100,000 portfolio held 70/30 can be moved to an illustrative 60/40 target by selling $10,000 of the first asset and buying $10,000 of the second. Adding cash without sales follows a separate rule and may leave target deviations.",
+    "scope": "Dollar allocations under your supplied targets, with exact cent reconciliation. Full trades and contribution-only allocation have different constraints. No recommended portfolio, live quote, broker order, whole-share restriction or tax calculation.",
+    "examples": [
+      {
+        "title": "Full 60/40 rebalance of a 70/30 holding",
+        "mode": "trades",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "0",
+          "fees": "0"
+        },
+        "inputs": "Asset label, current dollar value, target percent: US stocks, 70000, 60 / Bonds, 30000, 40; Cash added (+) or withdrawn (−) before costs: 0 $; Total transaction costs funded by this plan: 0 $",
+        "steps": [
+          "The $100,000 holding consists of $70,000 stocks and $30,000 bonds. Targets are user-entered 60% and 40%.",
+          "With no added cash or costs, targets are $60,000 and $40,000. Subtract current values."
+        ],
+        "answer": "The dollar plan sells $10,000 stocks and buys $10,000 bonds. The target choice is illustrative, not recommended.",
+        "expected": {
+          "label": "Total modeled buys",
+          "value": 10000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A $10,000 contribution leaves target deviations",
+        "mode": "contributions",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "10000",
+          "fees": "0"
+        },
+        "inputs": "Asset label, current dollar value, target percent: US stocks, 70000, 60 / Bonds, 30000, 40; New cash available before entered costs: 10000 $; Costs paid from the new cash: 0 $",
+        "steps": [
+          "The final value is $110,000; cent-rounded targets are $66,000 stocks and $44,000 bonds.",
+          "Stocks already exceed their target, so the defined no-sale rule directs all $10,000 to the bond deficit."
+        ],
+        "answer": "Holdings become $70,000 stocks and $40,000 bonds. Each is $4,000 from its target; the total absolute gap is $8,000.",
+        "expected": {
+          "label": "Total absolute dollar gap from rounded targets",
+          "value": 8000.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A $20,000 contribution reaches cent-rounded targets",
+        "mode": "contributions",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "20000",
+          "fees": "0"
+        },
+        "inputs": "Asset label, current dollar value, target percent: US stocks, 70000, 60 / Bonds, 30000, 40; New cash available before entered costs: 20000 $; Costs paid from the new cash: 0 $",
+        "steps": [
+          "The final value is $120,000, with $72,000 and $48,000 targets.",
+          "Positive deficits are $2,000 stocks and $18,000 bonds; the $20,000 net contribution covers both."
+        ],
+        "answer": "The cent-rounded targets are reached with no sales. This result depends on the entered cash and target mix.",
+        "expected": {
+          "label": "Total absolute dollar gap from rounded targets",
+          "value": 0.0,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "A withdrawal and fees reduce the allocatable portfolio",
+        "mode": "trades",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "-10000",
+          "fees": "100"
+        },
+        "inputs": "Asset label, current dollar value, target percent: US stocks, 70000, 60 / Bonds, 30000, 40; Cash added (+) or withdrawn (−) before costs: -10000 $; Total transaction costs funded by this plan: 100 $",
+        "steps": [
+          "Subtract the $10,000 withdrawal and $100 costs from the $100,000 starting value.",
+          "Allocate the remaining $89,900 to targets of $53,940 stocks and $35,960 bonds."
+        ],
+        "answer": "Sell $16,060 stocks and buy $5,960 bonds. The net $10,100 sale proceeds cover the withdrawal and entered costs.",
+        "expected": {
+          "label": "Post-cost portfolio value",
+          "value": 89900.0,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does this calculator choose a suitable portfolio for me?",
+        "answer": "No. You supply every target weight. The worksheet reconciles dollar amounts under those targets; it does not select securities, judge risk tolerance or recommend a mix."
+      },
+      {
+        "question": "Why can a contribution leave the portfolio off target?",
+        "answer": "Without sales, an asset already above its final target remains held. The stated contribution-only rule distributes available net cash among positive dollar deficits, then reports the remaining deviations."
+      },
+      {
+        "question": "What does the minimum net new cash figure mean?",
+        "answer": "It is a mathematical no-sale feasibility threshold for the entered holdings and unrounded proportional targets, rounded upward to a cent. It excludes costs and is not a recommendation to add that amount. A held zero-target asset cannot be removed by finite added cash."
+      },
+      {
+        "question": "Why can weights differ slightly from the entered targets after a complete rebalance?",
+        "answer": "Target dollars are allocated in whole cents using largest fractional remainders, with row order breaking ties. Cent-sized holdings need not represent every percentage ratio exactly."
+      },
+      {
+        "question": "Does a buy or sell amount account for capital-gains tax or whole shares?",
+        "answer": "No. The plan uses dollar amounts and one entered cost total. It does not model lots, gains, taxes, spreads, settlement or whole-share constraints, and it does not submit orders."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: Asset allocation, diversification and rebalancing",
+        "url": "https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset"
+      }
+    ]
+  }
+}

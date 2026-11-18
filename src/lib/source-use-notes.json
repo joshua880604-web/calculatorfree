@@ -1697,6 +1697,26 @@
       "role": "method",
       "usedFor": "The distinction between income, operating cash flow and the investing/financing sections.",
       "scope": "General educational context; our signed worksheet examples are hypothetical, not a complete compliant cash-flow statement."
+    },
+    "https://www.law.cornell.edu/wex/net_lease": {
+      "role": "background",
+      "usedFor": "The terminology separating base rent, net-lease expenses and gross leases.",
+      "scope": "General definition only. Expense allocation, abatement and escalation must be read from the particular agreement; no legal interpretation is supplied."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-are-rate-caps-with-an-adjustable-rate-mortgage-arm-and-how-do-they-work-en-1951/": {
+      "role": "background",
+      "usedFor": "The distinction between first-adjustment, subsequent-adjustment and lifetime rate constraints.",
+      "scope": "Concept reference only. Our explicit symmetric per-reset model and selected rate paths do not reproduce every contract, cap carryover or disclosure."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/for-an-adjustable-rate-mortgage-arm-what-are-the-index-and-margin-and-how-do-they-work-en-1949/": {
+      "role": "background",
+      "usedFor": "How an index and contractual margin relate to an adjusted rate subject to caps.",
+      "scope": "No future index, current quote or recommended mortgage assumption is supplied by the source or this tool."
+    },
+    "https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset": {
+      "role": "background",
+      "usedFor": "Rebalancing terminology and the role of trading, contributions, fees and taxes.",
+      "scope": "General educational context. Our deficit-based cash allocation and exact cent rounding are stated worksheet conventions, not an SEC-recommended strategy or asset allocation."
     }
   },
   "pages": {
@@ -4299,6 +4319,153 @@
           "role": "method",
           "usedFor": "The distinction between income, operating cash flow and the investing/financing sections.",
           "scope": "General educational context; our signed worksheet examples are hypothetical, not a complete compliant cash-flow statement."
+        }
+      }
+    },
+    "calculator:business-line-of-credit": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.sba.gov/loans/7a-loans/": {
+          "role": "background",
+          "usedFor": "General context for working-capital lending and the distinction between term loans and lines of credit.",
+          "scope": "Background only. This calculator is not an SBA product, an eligibility worksheet or a quotation of program rates, fees or guarantees."
+        }
+      }
+    },
+    "guide:/guides/business-line-of-credit-vs-term-loan/": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.sba.gov/loans/7a-loans/": {
+          "role": "background",
+          "usedFor": "General context for working-capital lending and the distinction between term loans and lines of credit.",
+          "scope": "Background only. This calculator is not an SBA product, an eligibility worksheet or a quotation of program rates, fees or guarantees."
+        }
+      }
+    },
+    "glossary:business-line-of-credit": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.sba.gov/loans/7a-loans/": {
+          "role": "background",
+          "usedFor": "General context for working-capital lending and the distinction between term loans and lines of credit.",
+          "scope": "Background only. This calculator is not an SBA product, an eligibility worksheet or a quotation of program rates, fees or guarantees."
+        }
+      }
+    },
+    "calculator:triple-net-lease": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.law.cornell.edu/wex/net_lease": {
+          "role": "background",
+          "usedFor": "The terminology separating base rent, net-lease expenses and gross leases.",
+          "scope": "General definition only. Expense allocation, abatement and escalation must be read from the particular agreement; no legal interpretation is supplied."
+        }
+      }
+    },
+    "guide:/guides/nnn-vs-gross-lease-cost/": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.law.cornell.edu/wex/net_lease": {
+          "role": "background",
+          "usedFor": "The terminology separating base rent, net-lease expenses and gross leases.",
+          "scope": "General definition only. Expense allocation, abatement and escalation must be read from the particular agreement; no legal interpretation is supplied."
+        }
+      }
+    },
+    "glossary:triple-net-lease": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.law.cornell.edu/wex/net_lease": {
+          "role": "background",
+          "usedFor": "The terminology separating base rent, net-lease expenses and gross leases.",
+          "scope": "General definition only. Expense allocation, abatement and escalation must be read from the particular agreement; no legal interpretation is supplied."
+        }
+      }
+    },
+    "calculator:arm-mortgage": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-are-rate-caps-with-an-adjustable-rate-mortgage-arm-and-how-do-they-work-en-1951/": {
+          "role": "background",
+          "usedFor": "The distinction between first-adjustment, subsequent-adjustment and lifetime rate constraints.",
+          "scope": "Concept reference only. Our explicit symmetric per-reset model and selected rate paths do not reproduce every contract, cap carryover or disclosure."
+        },
+        "https://www.consumerfinance.gov/ask-cfpb/for-an-adjustable-rate-mortgage-arm-what-are-the-index-and-margin-and-how-do-they-work-en-1949/": {
+          "role": "background",
+          "usedFor": "How an index and contractual margin relate to an adjusted rate subject to caps.",
+          "scope": "No future index, current quote or recommended mortgage assumption is supplied by the source or this tool."
+        }
+      }
+    },
+    "guide:/guides/arm-vs-fixed-mortgage-rate-caps/": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-are-rate-caps-with-an-adjustable-rate-mortgage-arm-and-how-do-they-work-en-1951/": {
+          "role": "background",
+          "usedFor": "The distinction between first-adjustment, subsequent-adjustment and lifetime rate constraints.",
+          "scope": "Concept reference only. Our explicit symmetric per-reset model and selected rate paths do not reproduce every contract, cap carryover or disclosure."
+        },
+        "https://www.consumerfinance.gov/ask-cfpb/for-an-adjustable-rate-mortgage-arm-what-are-the-index-and-margin-and-how-do-they-work-en-1949/": {
+          "role": "background",
+          "usedFor": "How an index and contractual margin relate to an adjusted rate subject to caps.",
+          "scope": "No future index, current quote or recommended mortgage assumption is supplied by the source or this tool."
+        }
+      }
+    },
+    "glossary:adjustable-rate-mortgage": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-are-rate-caps-with-an-adjustable-rate-mortgage-arm-and-how-do-they-work-en-1951/": {
+          "role": "background",
+          "usedFor": "The distinction between first-adjustment, subsequent-adjustment and lifetime rate constraints.",
+          "scope": "Concept reference only. Our explicit symmetric per-reset model and selected rate paths do not reproduce every contract, cap carryover or disclosure."
+        },
+        "https://www.consumerfinance.gov/ask-cfpb/for-an-adjustable-rate-mortgage-arm-what-are-the-index-and-margin-and-how-do-they-work-en-1949/": {
+          "role": "background",
+          "usedFor": "How an index and contractual margin relate to an adjusted rate subject to caps.",
+          "scope": "No future index, current quote or recommended mortgage assumption is supplied by the source or this tool."
+        }
+      }
+    },
+    "calculator:portfolio-rebalancing": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset": {
+          "role": "background",
+          "usedFor": "Rebalancing terminology and the role of trading, contributions, fees and taxes.",
+          "scope": "General educational context. Our deficit-based cash allocation and exact cent rounding are stated worksheet conventions, not an SEC-recommended strategy or asset allocation."
+        }
+      }
+    },
+    "guide:/guides/rebalance-with-contributions-vs-selling/": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset": {
+          "role": "background",
+          "usedFor": "Rebalancing terminology and the role of trading, contributions, fees and taxes.",
+          "scope": "General educational context. Our deficit-based cash allocation and exact cent rounding are stated worksheet conventions, not an SEC-recommended strategy or asset allocation."
+        }
+      }
+    },
+    "glossary:portfolio-rebalancing": {
+      "updatedOn": "2026-11-18",
+      "note": "References support the specific concepts identified below. Original hypothetical examples were checked with independent 80-digit Decimal arithmetic or exact rational cent allocation. This is an arithmetic check, not source endorsement or professional review.",
+      "overrides": {
+        "https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset": {
+          "role": "background",
+          "usedFor": "Rebalancing terminology and the role of trading, contributions, fees and taxes.",
+          "scope": "General educational context. Our deficit-based cash allocation and exact cent rounding are stated worksheet conventions, not an SEC-recommended strategy or asset allocation."
         }
       }
     }

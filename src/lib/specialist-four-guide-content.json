@@ -1,0 +1,812 @@
+{
+  "business-line-of-credit": {
+    "meta": {
+      "path": "/guides/business-line-of-credit-vs-term-loan/",
+      "title": "Business Line of Credit vs. Term Loan: Timing, Fees & Principal",
+      "heading": "Business Line of Credit vs. Term Loan: Follow the Cash and Principal",
+      "description": "Separate simple interest, principal repayments and paid fees. Compare a dated credit ledger with a no-redraw monthly payment plan using complete examples.",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "business-line-of-credit",
+        "business-loan",
+        "apr",
+        "operating-cash-flow",
+        "burn-rate"
+      ],
+      "topic": "Business financing",
+      "breadcrumb": "Line of credit vs. term loan",
+      "cardIntro": "The decision in these examples is how to reconcile the money paid with the debt still outstanding. The daily illustrations and monthly paydown illustration use their own stated timing conventions. They are not quotes for interchangeable products, and a smaller displayed payment does not establish a lower total borrowing cost.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "The decision in these examples is how to reconcile the money paid with the debt still outstanding. The daily illustrations and monthly paydown illustration use their own stated timing conventions. They are not quotes for interchangeable products, and a smaller displayed payment does not establish a lower total borrowing cost.",
+    "answer": "An interest charge measures borrowing cost; it does not show how much principal has been repaid. A dated line-of-credit worksheet tracks each draw and principal repayment, while the separate fixed-payment model assumes no redraws. Read the closing balance alongside every cost or payoff figure.",
+    "exampleNote": "The linked scenarios restore every input used for their own worksheet. Arithmetic was checked separately with 80-digit Decimal calculations, calendar-day enumeration, hand-specified ARM rate segments and exact rational cent allocation. The CSV preserves complete inputs and selected reference results. These checks establish the stated numerical examples, not a lender agreement, lease interpretation, professional review or investment recommendation.",
+    "featuredBeforeIntro": true,
+    "sections": [
+      {
+        "id": "purpose",
+        "title": "What question does each worksheet answer?",
+        "paragraphs": [
+          "The constant-balance worksheet is useful when one principal amount remains outstanding for a known number of days. It calculates the interest charge under a selected annual day basis and adds a separate entered fee. It does not determine how much principal a lender requires you to repay, nor whether a credit facility can be renewed or redrawn.",
+          "The dated ledger instead lets borrowing needs change. Positive activity adds principal, and negative activity reduces principal. The chosen credit limit constrains each activity row. The monthly payment worksheet is another task: it starts with one balance, prohibits new draws, and applies a chosen payment until payoff or the entered horizon. That is an amortization scenario, not a reconstructed business-credit agreement."
+        ]
+      },
+      {
+        "id": "basis",
+        "title": "Why can the same balance and annual rate give different period charges?",
+        "paragraphs": [
+          "For an original illustration, keep $25,000 outstanding for 30 counted days at a 12% annual interest assumption. With a 365-day denominator, interest is $246.58. A 360-day denominator produces $250.00. Adding the same separately paid $50 fee gives $296.58 or $300.00. The difference is caused by the stated denominator; it is not a newly inferred lender margin.",
+          "A quoted annual rate does not identify every billing detail. Record the actual day-count convention, whether a transaction affects the balance before or after that date’s accrual, and how fees or unpaid charges are handled. These simple-interest worksheets keep the rate constant and pay charges separately. If an agreement capitalizes charges or uses a different balance convention, the model needs adjustment before its result can be treated as a reconciliation."
+        ],
+        "formula": "Daily-model interest = annual rate / selected year basis × sum of principal × days at that principal."
+      },
+      {
+        "id": "dated",
+        "title": "How does a draw or repayment change the daily ledger?",
+        "paragraphs": [
+          "Consider December 1 through December 31, with January 1 excluded. Opening principal is $10,000. A $5,000 draw on December 10 increases it to $15,000; a $3,000 principal repayment on December 20 leaves $12,000. Transactions take effect before interest accrues on their dates. The result is nine days at $10,000, ten at $15,000, and twelve at $12,000.",
+          "The 384,000 balance-days give $126.25 interest at 12% on a 365-day basis. A separate $50 fee raises the cost amount to $176.25, while principal ends at $12,000. The $3,000 transaction is principal-only. Entering a total bank payment that already includes interest would reduce principal too far in this worksheet. Same-day rows are processed in entered order, so each must also respect the credit limit."
+        ]
+      },
+      {
+        "id": "horizon",
+        "title": "When does a payment table actually establish payoff?",
+        "paragraphs": [
+          "The monthly comparison below starts with $1,000, a 12% nominal annual rate, a $200 total monthly payment and a $5 fee each active month. Interest in this separate model is opening principal multiplied by the annual rate divided by 12. The first payment covers $10 interest, $5 fee and $185 principal. The next month therefore starts with $815.",
+          "If the horizon is two months, $628.15 principal remains after the two payments. Extending the horizon allows the same payment rule to continue; the final payment is reduced when the remaining debt is smaller than $200. A row count is a payoff time only when the remaining principal is zero. The model rejects an initial payment that cannot cover interest plus the fee, because unpaid-charge capitalization is outside its scope."
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Compare a short horizon with the completed payment scenario",
+        "paragraphs": [
+          "These two rows use the same starting principal, rate, fee and payment. Only the maximum number of modeled months changes. They isolate the difference between showing activity through a date and reporting a complete repayment outcome. The daily credit examples above use a different day-based convention and should not be substituted into this monthly schedule without a stated conversion."
+        ],
+        "table": {
+          "caption": "Identical monthly payment rule, different model horizons",
+          "headers": [
+            "Scenario",
+            "Payments modeled",
+            "Interest within horizon",
+            "Principal at model end"
+          ],
+          "rows": [
+            [
+              "Horizon ends before payoff",
+              "2",
+              "$18.15",
+              "$628.15"
+            ],
+            [
+              "Fixed payment with a monthly fee",
+              "6",
+              "$31.88",
+              "$0.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "comparison-limits",
+        "title": "How should I compare a line of credit with a separate term-loan quote?",
+        "paragraphs": [
+          "Match the amount and dates on which money is actually needed, then distinguish principal, interest, fees and unused borrowing availability. A fixed loan and a changing line balance can fund different amounts over different periods. Comparing their headline payment amounts without those cash flows can hide remaining debt or change the question midway through the comparison.",
+          "Keep a reconciliation record with the account period, principal-only activity, charge convention and final balance. This site’s business-loan calculator can illustrate a separate fixed-loan schedule, but it does not turn a line-of-credit ledger into a lender’s renewal, minimum-payment or underwriting terms. The worked results demonstrate the stated arithmetic, not an offered facility or a borrowing recommendation."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why is the $176.25 ledger cost not the reduction in debt?",
+        "answer": "It is modeled interest plus a separately paid fee. Principal changes only through the entered draws and principal repayments; the example ends with $12,000 principal."
+      },
+      {
+        "question": "Can I compare the daily ledger directly with the monthly payment example?",
+        "answer": "They use different explicitly stated timing conventions. Match actual funding and payment dates and the intended convention before treating results as alternatives for the same financing need."
+      },
+      {
+        "question": "What needs checking when the worksheet differs from a statement?",
+        "answer": "Check the date boundary, principal-only transaction amounts, day basis, rate changes, fee classification and capitalization. The worksheet does not infer missing contractual rules."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SBA: 7(a) loans and monitored lines of credit",
+        "url": "https://www.sba.gov/loans/7a-loans/",
+        "usedFor": "General context for working-capital lending and the distinction between term loans and lines of credit.",
+        "scope": "Background only. This calculator is not an SBA product, an eligibility worksheet or a quotation of program rates, fees or guarantees."
+      }
+    ],
+    "related": [
+      {
+        "href": "/business-line-of-credit-calculator.html",
+        "label": "Business Line of Credit Calculator"
+      },
+      {
+        "href": "/business-loan-calculator.html",
+        "label": "Business Loan Calculator"
+      },
+      {
+        "href": "/apr-calculator.html",
+        "label": "APR Calculator"
+      },
+      {
+        "href": "/operating-cash-flow-calculator.html",
+        "label": "Operating Cash Flow Calculator"
+      },
+      {
+        "href": "/burn-rate-calculator.html",
+        "label": "Burn Rate & Cash Runway Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Two dated principal changes through December",
+        "path": "/business-line-of-credit-calculator",
+        "mode": "ledger",
+        "values": {
+          "start": "2026-12-01",
+          "end": "2027-01-01",
+          "opening": "10000",
+          "limit": "50000",
+          "rate": "12",
+          "basis": "365",
+          "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+          "fees": "50"
+        },
+        "featured": true
+      },
+      {
+        "label": "Horizon ends before payoff",
+        "path": "/business-line-of-credit-calculator",
+        "mode": "paydown",
+        "values": {
+          "balance": "1000",
+          "rate": "12",
+          "payment": "200",
+          "monthly_fee": "5",
+          "max_months": "2"
+        }
+      },
+      {
+        "label": "Fixed payment with a monthly fee",
+        "path": "/business-line-of-credit-calculator",
+        "mode": "paydown",
+        "values": {
+          "balance": "1000",
+          "rate": "12",
+          "payment": "200",
+          "monthly_fee": "5",
+          "max_months": "12"
+        }
+      }
+    ],
+    "limitations": [
+      "A manual principal and interest worksheet with stated date boundaries, simple-interest bases and separate paid fees. No lender minimum-payment rule, revolving-account APR disclosure, compounding of unpaid charges, live offer or credit approval.",
+      "Examples are original hypothetical inputs; sources support the identified concepts and do not endorse or professionally review this site."
+    ]
+  },
+  "triple-net-lease": {
+    "meta": {
+      "path": "/guides/nnn-vs-gross-lease-cost/",
+      "title": "NNN vs. Gross Lease: Base Rent, Free Months & Upfront Cash",
+      "heading": "NNN vs. Gross Lease: Compare the Entered Total Occupancy Cost",
+      "description": "Normalize rent per square foot, reconcile NNN expense shares and separate base-rent abatement, annual growth, upfront costs and a refundable deposit.",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "triple-net-lease",
+        "lease",
+        "prorated-rent",
+        "rental-property",
+        "noi"
+      ],
+      "topic": "Commercial property",
+      "breadcrumb": "NNN vs. gross lease",
+      "cardIntro": "The question is what the tenant would pay under each explicitly entered cost arrangement. A lease label does not reveal the full expense schedule. The examples below reconcile quote units and selected assumptions; they do not interpret a particular lease or assert which party legally owes a cost.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "The question is what the tenant would pay under each explicitly entered cost arrangement. A lease label does not reveal the full expense schedule. The examples below reconcile quote units and selected assumptions; they do not interpret a particular lease or assert which party legally owes a cost.",
+    "answer": "Compare the entered total occupancy cost under the same area, period and included expenses. A $24 annual base quote plus $6 annual NNN per square foot equals a $30 all-in annual quote only under the illustration’s stated inclusions. Free base-rent months, escalating charges and upfront cash can change the comparison.",
+    "exampleNote": "The linked scenarios restore every input used for their own worksheet. Arithmetic was checked separately with 80-digit Decimal calculations, calendar-day enumeration, hand-specified ARM rate segments and exact rational cent allocation. The CSV preserves complete inputs and selected reference results. These checks establish the stated numerical examples, not a lender agreement, lease interpretation, professional review or investment recommendation.",
+    "featuredBeforeIntro": true,
+    "sections": [
+      {
+        "id": "units",
+        "title": "Put both quotes on the same area and time basis",
+        "paragraphs": [
+          "Start by identifying what the quote measures. Dollars per square foot per year differ from dollars per square foot per month and from a total monthly dollar payment. The calculator has separate period selectors for base rent and the NNN quote. The area must also match the quoted basis; a usable floor area and a contractual rentable area can be different quantities.",
+          "For a 2,000-square-foot illustration, $24 annual base rent per square foot is $48,000 a year or $4,000 a month. A $6 annual NNN quote adds $12,000 a year or $1,000 a month. Equivalently, entering $2 monthly base rent and $0.50 monthly NNN per square foot reproduces those amounts. Changing only the unit selector without converting the quoted rate changes the cost by a factor of twelve."
+        ]
+      },
+      {
+        "id": "scope",
+        "title": "When does an all-in gross quote match a base-plus-NNN quote?",
+        "paragraphs": [
+          "The controlled one-year comparison assumes no other recurring charges, free months, escalation, upfront costs or deposit. The $24 base plus $6 NNN arrangement totals $60,000 for the entered area. An illustrative $30 all-in annual quote per square foot, entered with no additional modeled pass-through amount, also totals $60,000. That equality comes from the supplied amounts and inclusions.",
+          "Before comparing real offers, reconcile exactly which expenses are included in each amount. A quote described as gross can still have exclusions or separate charges that need review. A stated NNN amount can already contain taxes, insurance and maintenance. Entering those amounts again as other costs would duplicate them. The calculator performs the arithmetic on the selected scope; it does not decide the contract’s scope."
+        ]
+      },
+      {
+        "id": "share",
+        "title": "How can whole-building expenses produce the same tenant NNN amount?",
+        "paragraphs": [
+          "In the area-share illustration, a 2,000-square-foot tenant occupies 20% of the entered 10,000-square-foot building. Annual building taxes of $30,000, insurance of $10,000 and nonoverlapping CAM of $20,000 total $60,000. Multiplying by 20% gives the tenant a $12,000 annual expense share, equivalent to $6 per square foot for that tenant.",
+          "This reproduces the quoted-charge example only because the cost categories, area denominator and assumed allocation are consistent. Some agreements use a different share, expense pool or adjustment. In that situation, reconcile the applicable tenant amount separately and use quoted-charge mode. The table’s area calculation is an assumption for the example, not a statement that physical occupancy always determines the bill."
+        ],
+        "formula": "Area-share tenant charge = tenant rentable area / entered building rentable area × nonoverlapping annual building expenses."
+      },
+      {
+        "id": "controlled",
+        "title": "Reconcile three ways of entering the same one-year cost",
+        "paragraphs": [
+          "All rows use the same 2,000-square-foot space and a flat one-year horizon. The quoted NNN and area-share rows describe the same $12,000 tenant charge. The all-in illustration places the same total in base rent and assumes no additional pass-through charge. Cost equivalence here does not establish legal or economic equivalence between actual lease offers."
+        ],
+        "table": {
+          "caption": "Matched first-year amounts under explicitly different input descriptions",
+          "headers": [
+            "Input description",
+            "Recurring annual cost",
+            "Average monthly recurring cost"
+          ],
+          "rows": [
+            [
+              "Annual per-square-foot quotes, one year",
+              "$60,000.00",
+              "$5,000.00"
+            ],
+            [
+              "Area-share expenses reconcile with the same NNN quote",
+              "$60,000.00",
+              "$5,000.00"
+            ],
+            [
+              "An explicitly all-in gross quote matches the initial total",
+              "$60,000.00",
+              "$5,000.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "abatement",
+        "title": "What does a free base-rent month leave payable?",
+        "paragraphs": [
+          "The two-year example abates the first two $4,000 base-rent months. The scenario still charges $1,000 NNN and $100 other occupancy costs in each of those months. First-year recurring cost becomes $53,200, compared with $61,200 in the second year. It is useful to separate the first month’s cash requirement from a twelve-month average and a complete term total.",
+          "Adding the $2,000 upfront nonrefundable cost once gives $116,400 total nonrefundable cost over two years. A separately entered $5,000 refundable deposit raises first-month cash to $8,100, but is not part of that nonrefundable total. No return date or present value is assumed for the deposit. If a quoted deposit is actually nonrefundable, its classification needs changing before using this comparison."
+        ]
+      },
+      {
+        "id": "growth",
+        "title": "Compare cost paths as well as the starting quote",
+        "paragraphs": [
+          "A flat first-year amount can conceal different later assumptions. With initial annual base rent of $48,000 rising 3% and NNN of $12,000 rising 2% at each lease-year anniversary, the first three yearly recurring costs are $60,000, $61,680 and $63,408. Their $185,088 total differs from three copies of the starting quote.",
+          "The worksheet applies entered annual growth to aggregate base rent and aggregate NNN, while other monthly charges remain flat. It does not forecast reassessments, insurance premiums, lease renewals, expense stops or market rents. When comparing offers, use the same horizon and make the applicable cost path explicit; a single average cannot reveal every early cash requirement or later exposure."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can the lower base-rent quote have the higher total cost?",
+        "answer": "Yes. Additional charges, annual changes, different included expenses and upfront amounts can outweigh a lower base rate. Compare a reconciled total over the same period."
+      },
+      {
+        "question": "Does the area-share result decide what my lease permits?",
+        "answer": "No. It applies the explicitly selected area fraction to entered costs. The agreement may use a different allocation or expense definition."
+      },
+      {
+        "question": "Why are recurring cost and first-month cash different?",
+        "answer": "Initial cash can include a separate deposit and upfront costs. Recurring cost measures the period’s rent and occupancy charges; base-rent abatement can also change the first month."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Cornell LII Wex: Net lease",
+        "url": "https://www.law.cornell.edu/wex/net_lease",
+        "usedFor": "The terminology separating base rent, net-lease expenses and gross leases.",
+        "scope": "General definition only. Expense allocation, abatement and escalation must be read from the particular agreement; no legal interpretation is supplied."
+      }
+    ],
+    "related": [
+      {
+        "href": "/triple-net-lease-calculator.html",
+        "label": "Triple Net Lease Calculator"
+      },
+      {
+        "href": "/lease-calculator.html",
+        "label": "Lease Calculator"
+      },
+      {
+        "href": "/prorated-rent-calculator.html",
+        "label": "Prorated Rent Calculator"
+      },
+      {
+        "href": "/rental-property-calculator.html",
+        "label": "Rental Property Calculator"
+      },
+      {
+        "href": "/noi-calculator.html",
+        "label": "NOI Calculator (Net Operating Income)"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Annual per-square-foot quotes, one year",
+        "path": "/triple-net-lease-calculator",
+        "mode": "quoted",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "nnn_rate": "6",
+          "nnn_basis": "Per square foot per year",
+          "years": "1",
+          "base_growth": "0",
+          "nnn_growth": "0",
+          "free_months": "0",
+          "other_monthly": "0",
+          "upfront": "0",
+          "deposit": "0"
+        },
+        "featured": true
+      },
+      {
+        "label": "Area-share expenses reconcile with the same NNN quote",
+        "path": "/triple-net-lease-calculator",
+        "mode": "building",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "building_area": "10000",
+          "taxes": "30000",
+          "insurance": "10000",
+          "cam": "20000",
+          "years": "1",
+          "base_growth": "0",
+          "nnn_growth": "0",
+          "free_months": "0",
+          "other_monthly": "0",
+          "upfront": "0",
+          "deposit": "0"
+        }
+      },
+      {
+        "label": "An explicitly all-in gross quote matches the initial total",
+        "path": "/triple-net-lease-calculator",
+        "mode": "quoted",
+        "values": {
+          "area": "2000",
+          "base_rate": "30",
+          "base_basis": "Per square foot per year",
+          "nnn_rate": "0",
+          "nnn_basis": "Per square foot per year",
+          "years": "1",
+          "base_growth": "0",
+          "nnn_growth": "0",
+          "free_months": "0",
+          "other_monthly": "0",
+          "upfront": "0",
+          "deposit": "0"
+        }
+      },
+      {
+        "label": "Two abated months leave NNN and other charges payable",
+        "path": "/triple-net-lease-calculator",
+        "mode": "quoted",
+        "values": {
+          "area": "2000",
+          "base_rate": "24",
+          "base_basis": "Per square foot per year",
+          "nnn_rate": "6",
+          "nnn_basis": "Per square foot per year",
+          "years": "2",
+          "base_growth": "0",
+          "nnn_growth": "0",
+          "free_months": "2",
+          "other_monthly": "100",
+          "upfront": "2000",
+          "deposit": "5000"
+        }
+      }
+    ],
+    "limitations": [
+      "A tenant occupancy-cost scenario using entered quotes or an area-based expense share. Base-rent abatement, annual escalation and upfront charges follow the stated model. No lease interpretation, automatic local expenses or property-investment valuation.",
+      "Examples are original hypothetical inputs; sources support the identified concepts and do not endorse or professionally review this site."
+    ]
+  },
+  "arm-mortgage": {
+    "meta": {
+      "path": "/guides/arm-vs-fixed-mortgage-rate-caps/",
+      "title": "ARM vs. Fixed Mortgage: Rate Caps, Reset Payments & Balances",
+      "heading": "ARM vs. Fixed Mortgage: Follow the Reset Rate and Remaining Balance",
+      "description": "Compare an entered ARM index path and an upward-cap stress with a fixed-rate alternative. Separate reset payments, holding-period interest and remaining principal.",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "arm-mortgage",
+        "mortgage",
+        "mortgage-comparison",
+        "refinance",
+        "basis-point"
+      ],
+      "topic": "Mortgages",
+      "breadcrumb": "ARM vs. fixed mortgage",
+      "cardIntro": "This guide compares explicit models of the same principal and term. A supplied index path and an upward-cap stress are different assumptions, and both can be compared with an entered fixed rate over the same holding period. None of those inputs is a forecast, a live offer or a judgment about which loan fits a borrower.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "This guide compares explicit models of the same principal and term. A supplied index path and an upward-cap stress are different assumptions, and both can be compared with an entered fixed rate over the same holding period. None of those inputs is a forecast, a live offer or a judgment about which loan fits a borrower.",
+    "answer": "The initial ARM payment answers the starting cash-flow question. Later payments require a reset rate, remaining principal and remaining amortization term. In the stated $300,000 example, monthly P&I starts at $1,610.46 and changes to $1,947.08 at the first capped reset; later outcomes depend on the chosen rate path.",
+    "exampleNote": "The linked scenarios restore every input used for their own worksheet. Arithmetic was checked separately with 80-digit Decimal calculations, calendar-day enumeration, hand-specified ARM rate segments and exact rational cent allocation. The CSV preserves complete inputs and selected reference results. These checks establish the stated numerical examples, not a lender agreement, lease interpretation, professional review or investment recommendation.",
+    "featuredBeforeIntro": true,
+    "sections": [
+      {
+        "id": "timing",
+        "title": "When does the first changed payment occur?",
+        "paragraphs": [
+          "A 5/1 setup in this worksheet means five fixed-rate years followed by a reset every twelve months. The first sixty payments therefore use the initial rate. The first adjusted rate takes effect before interest is calculated for payment month sixty-one. A 7/1 or 10/1 setup changes the initial fixed years; a six-month reset interval is a separate explicit selection.",
+          "The entire original amortization term remains relevant. In the 30-year illustration, five years of scheduled repayment have already reduced principal before the first reset. The new payment amortizes that remaining principal over 300 remaining months. Applying the new rate to the original $300,000 and starting another 30-year term would answer a different question."
+        ]
+      },
+      {
+        "id": "caps",
+        "title": "How does the chosen rate path become a constrained reset rate?",
+        "paragraphs": [
+          "The model first adds an entered index to an entered margin. That target is then checked against the applicable first-reset or later-reset change limit, the lifetime ceiling above the initial rate, and the separate selected floor. The per-reset change limits are symmetric in scenario mode. The tool rejects a combination of floor and caps that leaves no feasible rate.",
+          "For the original 5% initial-rate case, a 5% index plus a 2.5-point margin targets 7.5%. The first two-point change limit permits only 7% in month sixty-one. At the next annual reset the same 7.5% target fits within the selected later limit. An unused portion of a previous change limit is not carried forward in this worksheet."
+        ],
+        "formula": "At reset, payment = remaining principal × monthly rate / [1 − (1 + monthly rate)^(−remaining months)], with a separate zero-rate case."
+      },
+      {
+        "id": "stress",
+        "title": "What does the upward-cap stress scenario establish?",
+        "paragraphs": [
+          "The stress mode assumes the maximum permitted upward rate move at every reset. With the same 5% initial rate and entered 2/2/5 upward limits, it uses 7% at month sixty-one, 9% at month seventy-three and a 10% lifetime ceiling at month eighty-five. The highest full-model monthly P&I is $2,484.14 under that path.",
+          "The entered-index scenario instead reaches 7%, then 7.5%, with highest full-model monthly P&I of $2,033.47. These numbers differ because of the rate path. The stress case is a defined constraint test; it is not evidence that an index will reach a certain level or that a borrower will refinance before a payment change. Contractual payment limits, carryover and other features require their own treatment."
+        ]
+      },
+      {
+        "id": "holding",
+        "title": "Why compare interest and principal remaining at the same month?",
+        "paragraphs": [
+          "The calculator also builds a fixed-rate alternative using the same starting principal and original term. Both are measured at the entered whole-year holding horizon. Interest paid and principal remaining are separate results. Principal repayments move money toward reducing debt; counting them as if they were only financing cost can distort a comparison.",
+          "A seven-year holding period ends after month eighty-four. The stress case’s 10% rate in month eighty-five is outside that particular holding period, even though it belongs in the full remaining-loan illustration. Read metric labels and horizons carefully. The comparison excludes taxes, insurance, PMI, closing fees, sale costs and any refinancing, so its interest difference is not a complete ownership-cost or suitability ranking."
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Compare the entered path with the upward-cap assumption",
+        "paragraphs": [
+          "The rows keep principal, original term, initial fixed period, reset interval, caps, comparison rate and seven-year holding horizon aligned. Scenario mode additionally uses the stated index, margin and floor. The full-model peak looks beyond the holding horizon; the interest and balance columns stop at the selected month."
+        ],
+        "table": {
+          "caption": "Same loan setup, two explicitly different future-rate assumptions",
+          "headers": [
+            "Rate-path assumption",
+            "First-reset monthly P&I",
+            "Highest full-model monthly P&I",
+            "ARM interest through year 7",
+            "ARM balance after year 7"
+          ],
+          "rows": [
+            [
+              "Entered index reaches 7% then 7.5%",
+              "$1,947.08",
+              "$2,033.47",
+              "$111,467.62",
+              "$267,073.18"
+            ],
+            [
+              "Upward-cap stress reaches 7%, 9%, then 10%",
+              "$1,947.08",
+              "$2,484.14",
+              "$115,543.22",
+              "$267,924.14"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "record",
+        "title": "Which details need checking against the actual agreement?",
+        "paragraphs": [
+          "Record the index definition, margin, lookback, reset dates, rounding rules and the separate rate constraints. A loan-month illustration cannot infer a future market index or every contractual adjustment convention. A rate cap also differs from a payment cap; this model recalculates a fully amortizing payment instead of allowing unpaid interest to increase principal.",
+          "Use the complete input links to reproduce the figures, then change one assumption at a time. A falling-index path, for example, still moves through the entered downward change limits rather than jumping immediately to its floor. The outcome remains conditional on the selected model, with no claim that the calculator reproduces a Loan Estimate or recommends taking an adjustable-rate mortgage."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why is the model’s first reset at month 61 rather than month 60?",
+        "answer": "The first sixty payments complete the entered five fixed years. The reset occurs before the next monthly accrual and payment, under this worksheet’s explicit month-boundary convention."
+      },
+      {
+        "question": "Why can the full-model peak be outside my holding period?",
+        "answer": "The peak scans the full amortization schedule, while holding-period interest and remaining principal stop at the selected month. They answer different horizon questions."
+      },
+      {
+        "question": "Can I use the stress case as a rate forecast?",
+        "answer": "No. It deliberately applies every permitted upward step. The entered-index case is also a manual scenario, and neither supplies a future market forecast or lender disclosure."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: ARM rate caps",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-rate-caps-with-an-adjustable-rate-mortgage-arm-and-how-do-they-work-en-1951/",
+        "usedFor": "The distinction between first-adjustment, subsequent-adjustment and lifetime rate constraints.",
+        "scope": "Concept reference only. Our explicit symmetric per-reset model and selected rate paths do not reproduce every contract, cap carryover or disclosure."
+      },
+      {
+        "title": "CFPB: ARM index and margin",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/for-an-adjustable-rate-mortgage-arm-what-are-the-index-and-margin-and-how-do-they-work-en-1949/",
+        "usedFor": "How an index and contractual margin relate to an adjusted rate subject to caps.",
+        "scope": "No future index, current quote or recommended mortgage assumption is supplied by the source or this tool."
+      }
+    ],
+    "related": [
+      {
+        "href": "/arm-mortgage-calculator.html",
+        "label": "ARM Mortgage Calculator"
+      },
+      {
+        "href": "/mortgage-calculator.html",
+        "label": "Mortgage Calculator"
+      },
+      {
+        "href": "/mortgage-comparison-calculator.html",
+        "label": "Mortgage Comparison Calculator"
+      },
+      {
+        "href": "/refinance-calculator.html",
+        "label": "Refinance Calculator"
+      },
+      {
+        "href": "/basis-point-calculator.html",
+        "label": "Basis Point Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Entered index reaches 7% then 7.5%",
+        "path": "/arm-mortgage-calculator",
+        "mode": "scenario",
+        "values": {
+          "principal": "300000",
+          "term_years": "30",
+          "initial_rate": "5",
+          "fixed_years": "5",
+          "reset_months": "12",
+          "first_cap": "2",
+          "periodic_cap": "2",
+          "lifetime_cap": "5",
+          "margin": "2.5",
+          "floor": "2.5",
+          "indices": "5",
+          "fixed_compare_rate": "6",
+          "holding_years": "7"
+        },
+        "featured": true
+      },
+      {
+        "label": "Upward-cap stress reaches 7%, 9%, then 10%",
+        "path": "/arm-mortgage-calculator",
+        "mode": "upward-caps",
+        "values": {
+          "principal": "300000",
+          "term_years": "30",
+          "initial_rate": "5",
+          "fixed_years": "5",
+          "reset_months": "12",
+          "first_cap": "2",
+          "periodic_cap": "2",
+          "lifetime_cap": "5",
+          "fixed_compare_rate": "6",
+          "holding_years": "7"
+        }
+      }
+    ],
+    "limitations": [
+      "Fully amortizing monthly loans with manual rate paths or upward-cap stress. First and later rate limits, a lifetime increase and a separate floor are explicit assumptions. No rate forecast, cap carryover, payment caps, negative amortization or lender disclosure.",
+      "Examples are original hypothetical inputs; sources support the identified concepts and do not endorse or professionally review this site."
+    ]
+  },
+  "portfolio-rebalancing": {
+    "meta": {
+      "path": "/guides/rebalance-with-contributions-vs-selling/",
+      "title": "Rebalance With Contributions vs. Selling: Targets & Cash Limits",
+      "heading": "Rebalance With Contributions vs. Selling: Track the Remaining Target Gap",
+      "description": "Compare full dollar rebalancing with a defined contribution-only allocation. Reconcile fees, withdrawals, cent rounding and targets that added cash cannot reach.",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "portfolio-rebalancing",
+        "investment",
+        "dca",
+        "stock-average",
+        "capital-gains-tax"
+      ],
+      "topic": "Portfolio allocation",
+      "breadcrumb": "Contributions vs. selling",
+      "cardIntro": "The allocation targets are supplied by the user, not selected by the tool. The examples isolate the cash and arithmetic needed to implement those targets under different constraints. They are dollar worksheets, with no live quotes, recommended securities, broker instructions or capital-gains tax determination.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "The allocation targets are supplied by the user, not selected by the tool. The examples isolate the cash and arithmetic needed to implement those targets under different constraints. They are dollar worksheets, with no live quotes, recommended securities, broker instructions or capital-gains tax determination.",
+    "answer": "A full rebalance can sell an overweight asset to fund an underweight one. A contribution-only plan keeps existing holdings and can leave the portfolio off target. For the stated $100,000 70/30 holding and illustrative 60/40 targets, $10,000 new cash leaves deviations, while $20,000 can reach the cent-rounded target amounts without sales.",
+    "exampleNote": "The linked scenarios restore every input used for their own worksheet. Arithmetic was checked separately with 80-digit Decimal calculations, calendar-day enumeration, hand-specified ARM rate segments and exact rational cent allocation. The CSV preserves complete inputs and selected reference results. These checks establish the stated numerical examples, not a lender agreement, lease interpretation, professional review or investment recommendation.",
+    "featuredBeforeIntro": true,
+    "sections": [
+      {
+        "id": "full",
+        "title": "How does a full dollar rebalance reconcile the same starting holding?",
+        "paragraphs": [
+          "Start with $70,000 labeled stocks and $30,000 labeled bonds. At a $100,000 total and user-entered 60%/40% targets, desired amounts are $60,000 and $40,000. Subtracting current values gives a $10,000 sale of the first asset and a $10,000 purchase of the second. Net external cash is zero in this illustration.",
+          "That arithmetic assumes dollar trades can be made as listed, with no costs, restrictions or whole-share constraint. Labels are descriptions of the supplied holdings, not securities selected by the site. The tool can reconcile other user targets and amounts, but it does not decide whether any of those targets are suitable or whether trading is advisable."
+        ]
+      },
+      {
+        "id": "cash-only",
+        "title": "What changes when sales are prohibited?",
+        "paragraphs": [
+          "Add $10,000 to the same holding without selling. The new total is $110,000, so 60%/40% targets become $66,000 and $44,000. The existing $70,000 first asset already exceeds its final target. The defined rule directs cash in proportion to positive dollar deficits; here the only positive deficit is the second asset’s $14,000 shortfall.",
+          "The entire $10,000 goes to the second asset. Holdings become $70,000 and $40,000: the first is $4,000 above its target and the second is $4,000 below. Their weights are about 63.6364% and 36.3636%. Cash has been invested and no asset has been sold, but the desired configuration has not been fully restored. The reported total absolute dollar gap is $8,000, counting both sides."
+        ]
+      },
+      {
+        "id": "sufficient",
+        "title": "When does more new cash make the no-sale target feasible?",
+        "paragraphs": [
+          "With $20,000 new cash, the final $120,000 portfolio has targets of $72,000 and $48,000. The original amounts are both below those targets, leaving deficits of $2,000 and $18,000. The contribution covers both, so the plan matches the cent-rounded targets with no sales under the entered assumptions.",
+          "A separate feasibility figure considers how large the final total must be so that no existing amount exceeds its unrounded target. For the original 70/30 holding and 60/40 targets, the limiting total is $70,000 divided by 60%, with required added cash rounded upward to $16,666.67. That is a mathematical threshold net of costs, not a recommendation to contribute that amount. A currently held asset with a zero target cannot be removed by any finite cash addition."
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Compare the three dollar plans without confusing them with investment returns",
+        "paragraphs": [
+          "All rows start from the same $70,000/$30,000 amounts and supplied 60/40 target mix, with costs zero. They differ in external cash and permission to sell, which also changes the final total. The buy amount is a transaction amount; it is not profit or new investment performance. Matching target dollars does not establish a suitable risk exposure."
+        ],
+        "table": {
+          "caption": "Same holdings and targets, different cash and sale constraints",
+          "headers": [
+            "Constraint",
+            "External cash",
+            "Modeled buys",
+            "Modeled sells",
+            "Final portfolio",
+            "Total absolute target gap"
+          ],
+          "rows": [
+            [
+              "Full 60/40 rebalance of a 70/30 holding",
+              "$0.00",
+              "$10,000.00",
+              "$10,000.00",
+              "$100,000.00",
+              "$0.00"
+            ],
+            [
+              "A $10,000 contribution leaves target deviations",
+              "$10,000.00",
+              "$10,000.00",
+              "$0.00",
+              "$110,000.00",
+              "$8,000.00"
+            ],
+            [
+              "A $20,000 contribution reaches cent-rounded targets",
+              "$20,000.00",
+              "$20,000.00",
+              "$0.00",
+              "$120,000.00",
+              "$0.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "costs",
+        "title": "How do costs and withdrawals change the amount being allocated?",
+        "paragraphs": [
+          "The full-trade example with a $10,000 withdrawal and $100 entered costs allocates $89,900. At 60%/40%, target dollars are $53,940 and $35,960. Selling $16,060 of the first asset and buying $5,960 of the second leaves $10,100 net sale proceeds to fund the withdrawal and costs. The portfolio conservation table shows the same reconciliation.",
+          "Contribution-only mode pays the entered cost total from the new contribution, and rejects a fee amount that would require selling holdings to fund it. Costs are supplied as one nonoverlapping amount. Capital-gains tax, spreads, lot selection and account restrictions are not calculated. If idle cash is part of the target allocation, include it explicitly as another asset row rather than assuming it is hidden in a transaction column."
+        ]
+      },
+      {
+        "id": "rounding",
+        "title": "Why does exact cent allocation still need a rounding explanation?",
+        "paragraphs": [
+          "The worksheet accepts money to two decimal places and weights to six. It assigns integer cents using largest fractional remainders, breaking a remainder tie in row order. That keeps total target dollars and allocated contribution cash equal to the available budget. A cent-sized target amount can still produce a slightly different percentage ratio from an unrounded weight.",
+          "Read both the final holdings and the residual target gap. A contribution-only plan with limited new cash is intentionally allowed to retain deviations, and a full plan can involve sales that have consequences outside this calculator. Before using an output operationally, reconcile prices, costs, permissible trades and account details separately. The worksheet supplies a transparent conditional allocation, not a portfolio recommendation or execution service."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why does the $10,000 no-sale plan still show a target gap?",
+        "answer": "The first asset starts above its final target and cannot be sold. The defined allocation uses all net new cash for positive deficits but does not erase that existing overweight."
+      },
+      {
+        "question": "Does reaching a 60/40 illustration mean that mix is recommended?",
+        "answer": "No. Every target is an input. The worksheet calculates dollar changes without evaluating suitability, expected return or investment risk for the user."
+      },
+      {
+        "question": "Can a zero-target holding be eliminated with new contributions alone?",
+        "answer": "No finite added cash makes a positive holding equal a zero target. Removing that holding would require an action outside the no-sale constraint."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: Asset allocation, diversification and rebalancing",
+        "url": "https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset",
+        "usedFor": "Rebalancing terminology and the role of trading, contributions, fees and taxes.",
+        "scope": "General educational context. Our deficit-based cash allocation and exact cent rounding are stated worksheet conventions, not an SEC-recommended strategy or asset allocation."
+      }
+    ],
+    "related": [
+      {
+        "href": "/portfolio-rebalancing-calculator.html",
+        "label": "Portfolio Rebalancing Calculator"
+      },
+      {
+        "href": "/investment-calculator.html",
+        "label": "Investment Calculator"
+      },
+      {
+        "href": "/dca-calculator.html",
+        "label": "DCA Calculator"
+      },
+      {
+        "href": "/stock-average-calculator.html",
+        "label": "Stock Average Calculator"
+      },
+      {
+        "href": "/capital-gains-tax-calculator.html",
+        "label": "Capital Gains Tax Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Full 60/40 rebalance of a 70/30 holding",
+        "path": "/portfolio-rebalancing-calculator",
+        "mode": "trades",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "0",
+          "fees": "0"
+        },
+        "featured": true
+      },
+      {
+        "label": "A $10,000 contribution leaves target deviations",
+        "path": "/portfolio-rebalancing-calculator",
+        "mode": "contributions",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "10000",
+          "fees": "0"
+        }
+      },
+      {
+        "label": "A $20,000 contribution reaches cent-rounded targets",
+        "path": "/portfolio-rebalancing-calculator",
+        "mode": "contributions",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "20000",
+          "fees": "0"
+        }
+      },
+      {
+        "label": "A withdrawal and fees reduce the allocatable portfolio",
+        "path": "/portfolio-rebalancing-calculator",
+        "mode": "trades",
+        "values": {
+          "assets": "US stocks, 70000, 60\nBonds, 30000, 40",
+          "cash_change": "-10000",
+          "fees": "100"
+        }
+      }
+    ],
+    "limitations": [
+      "Dollar allocations under your supplied targets, with exact cent reconciliation. Full trades and contribution-only allocation have different constraints. No recommended portfolio, live quote, broker order, whole-share restriction or tax calculation.",
+      "Examples are original hypothetical inputs; sources support the identified concepts and do not endorse or professionally review this site."
+    ]
+  }
+}
