@@ -150,3 +150,11 @@ Keep the existing three tools and guides, all fifteen prior comparison inputs an
 ## FHA, VA and affordability content — 2026-11-19
 
 Preserve existing FHA/VA engines and policy constants. Clarify price down payment versus lower-appraisal premium LTV, original MIP baselines versus extra principal, and scheduled payment versus actual first-month outlay. Keep VA exemption and prior-use categories separate from fee payment and property costs. Add maintenance and fixed cash down to affordability while preserving its five-income comparison. Retain all old worked examples and complete original presets. Preview only; production publication awaits user instruction.
+
+## Refinance, payoff and rent/buy content — 2026-11-19
+
+Preserve the existing three calculators and guides, including every old chart/table/CSV and nine worked examples. Add fifteen separately identified comparisons and eleven complete task presets. Distinguish payment recovery from matched-date borrowing cost, cash-out borrowing from saving, prepayment timing from equal-budget investment comparisons, and annual checkpoints from the fixed thirty-year rent/buy horizon. Retain signed losses, missing recovery/crossing metrics and negative renter funding shortfalls without calling them feasible portfolios. Engines/defaults stay unchanged. Preview only; production publication awaits user instruction.
+
+## GSC priority-page corrections — 2026-11-19
+
+Keep the confirmed broad visibility decline separate from unproved causal hypotheses. Fix the selected tax metric, align visible/structured review dates, add complete known-input pricing tasks and an explicit legacy minimum-payment redirect. Preserve routes, calculation modes/defaults, prior comparison work and publication dates. Include the pending housing-comparison work in the consolidated preview. Production publication still follows the existing user-request workflow.

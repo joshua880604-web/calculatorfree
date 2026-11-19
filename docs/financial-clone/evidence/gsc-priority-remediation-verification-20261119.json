@@ -1,0 +1,267 @@
+{
+  "date": "2026-11-19",
+  "passed": true,
+  "productionBase": "bc38ae0f8570b52a3e4159466e9163a1a723d5f0",
+  "previewParent": "b4db912bc06c29a2b387df71d426e7ec60cdbaf0",
+  "tests": {
+    "command": "npm test",
+    "passed": 3152,
+    "failed": 0
+  },
+  "typecheck": {
+    "command": "npm run typecheck -- --incremental false",
+    "exitCode": 0
+  },
+  "builds": {
+    "productionSourceSnapshot": "Explicit SITE_URL and SITE_INDEXABLE; webpack for external dependency symlink",
+    "preview": "Existing npm run build; explicit production-style indexability flags",
+    "bothPassed": true
+  },
+  "independentPricingArithmetic": {
+    "cases": 11,
+    "numericChecks": 46,
+    "precision": 70
+  },
+  "displayedPricingTasks": 9,
+  "fullInputTaskShortcuts": 6,
+  "browser": {
+    "uniquePages": 7,
+    "checks": 52,
+    "downloads": 3,
+    "errors": [],
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "noJavaScript": true,
+    "legacyMinimumRedirect": {
+      "status": 301,
+      "hops": 1,
+      "finalStatus": 200
+    },
+    "VATPairsVerified": 6,
+    "VATUnknownsCleared": true,
+    "VATClearAndInvalidPairVerified": true
+  },
+  "visual": {
+    "passed": true,
+    "inspectedFiles": [
+      "sales-tax-320.png",
+      "vat-320.png",
+      "tax-guide-320.png",
+      "sales-tax-1440.png",
+      "vat-1440.png",
+      "tax-guide-1440.png",
+      "tax-amount-chart.png"
+    ]
+  },
+  "productionSourceAudit": {
+    "passed": true,
+    "label": "production-source",
+    "canonicalPages": 469,
+    "indexableCanonicalPages": 469,
+    "brokenLinks": 0,
+    "brokenFragments": 0,
+    "orphanPages": 0,
+    "reviewedPages": [
+      {
+        "path": "/amortization-calculator",
+        "canonical": "https://www.calculatorfree.io/amortization-calculator",
+        "incomingPages": 19,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/credit-card-minimum-payment-calculator",
+        "canonical": "https://www.calculatorfree.io/credit-card-minimum-payment-calculator",
+        "incomingPages": 18,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/sales-tax-calculator",
+        "canonical": "https://www.calculatorfree.io/sales-tax-calculator",
+        "incomingPages": 22,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/vat-calculator",
+        "canonical": "https://www.calculatorfree.io/vat-calculator",
+        "incomingPages": 14,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-read-amortization-and-loan-payments/",
+        "incomingPages": 11,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "canonical": "https://www.calculatorfree.io/guides/credit-card-minimum-payment-and-payoff-time/",
+        "incomingPages": 6,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/guides/tax-inclusive-prices-sales-tax-and-vat/",
+        "canonical": "https://www.calculatorfree.io/guides/tax-inclusive-prices-sales-tax-and-vat/",
+        "incomingPages": 7,
+        "oneH1": true,
+        "indexFollow": true
+      }
+    ],
+    "legacyRedirects": [
+      {
+        "old": "/amortization-calculator.html",
+        "target": "/amortization-calculator",
+        "staticRulePresent": true,
+        "status": 301,
+        "hopsInStaticRules": 1
+      },
+      {
+        "old": "/credit-card-minimum-payment-calculator.html",
+        "target": "/credit-card-minimum-payment-calculator",
+        "staticRulePresent": false,
+        "hostingDefaultBehaviorNotVerified": true
+      },
+      {
+        "old": "/sales-tax-calculator.html",
+        "target": "/sales-tax-calculator",
+        "staticRulePresent": true,
+        "status": 301,
+        "hopsInStaticRules": 1
+      },
+      {
+        "old": "/vat-calculator.html",
+        "target": "/vat-calculator",
+        "staticRulePresent": true,
+        "status": 301,
+        "hopsInStaticRules": 1
+      }
+    ],
+    "explicitLegacyRuleGaps": [
+      "/credit-card-minimum-payment-calculator.html"
+    ],
+    "scope": "Static source build with explicit SITE_URL and SITE_INDEXABLE=true; not live HTTP headers, deployment environment or historical Google rendering."
+  },
+  "previewAudit": {
+    "passed": true,
+    "label": "preview",
+    "canonicalPages": 469,
+    "indexableCanonicalPages": 469,
+    "brokenLinks": 0,
+    "brokenFragments": 0,
+    "orphanPages": 0,
+    "reviewedPages": [
+      {
+        "path": "/amortization-calculator",
+        "canonical": "https://www.calculatorfree.io/amortization-calculator",
+        "incomingPages": 19,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/credit-card-minimum-payment-calculator",
+        "canonical": "https://www.calculatorfree.io/credit-card-minimum-payment-calculator",
+        "incomingPages": 18,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/sales-tax-calculator",
+        "canonical": "https://www.calculatorfree.io/sales-tax-calculator",
+        "incomingPages": 22,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/vat-calculator",
+        "canonical": "https://www.calculatorfree.io/vat-calculator",
+        "incomingPages": 14,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-read-amortization-and-loan-payments/",
+        "incomingPages": 11,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "canonical": "https://www.calculatorfree.io/guides/credit-card-minimum-payment-and-payoff-time/",
+        "incomingPages": 6,
+        "oneH1": true,
+        "indexFollow": true
+      },
+      {
+        "path": "/guides/tax-inclusive-prices-sales-tax-and-vat/",
+        "canonical": "https://www.calculatorfree.io/guides/tax-inclusive-prices-sales-tax-and-vat/",
+        "incomingPages": 7,
+        "oneH1": true,
+        "indexFollow": true
+      }
+    ],
+    "legacyRedirects": [
+      {
+        "old": "/amortization-calculator.html",
+        "target": "/amortization-calculator",
+        "staticRulePresent": true,
+        "status": 301,
+        "hopsInStaticRules": 1
+      },
+      {
+        "old": "/credit-card-minimum-payment-calculator.html",
+        "target": "/credit-card-minimum-payment-calculator",
+        "staticRulePresent": true,
+        "status": 301,
+        "hopsInStaticRules": 1
+      },
+      {
+        "old": "/sales-tax-calculator.html",
+        "target": "/sales-tax-calculator",
+        "staticRulePresent": true,
+        "status": 301,
+        "hopsInStaticRules": 1
+      },
+      {
+        "old": "/vat-calculator.html",
+        "target": "/vat-calculator",
+        "staticRulePresent": true,
+        "status": 301,
+        "hopsInStaticRules": 1
+      }
+    ],
+    "explicitLegacyRuleGaps": [],
+    "scope": "Static source build with explicit SITE_URL and SITE_INDEXABLE=true; not live HTTP headers, deployment environment or historical Google rendering."
+  },
+  "modelRegression": {
+    "passed": true,
+    "entries": 169,
+    "modes": 354,
+    "existingFieldsDefaultsAndResultsUnchanged": true
+  },
+  "retainedHousingBatch": {
+    "uniquePages": 6,
+    "browserChecks": 70,
+    "downloads": 6,
+    "independentCases": 17,
+    "numericChecks": 461,
+    "originalExamplesRetained": 9
+  },
+  "scopeLimits": [
+    "The static production-source audit is not a live HTTP/header or deployment-environment verification.",
+    "No historical root cause of the exposure collapse is established.",
+    "Hosting-native .html behavior is unverified; missing explicit rule is not a proven historical hosting fault.",
+    "These changes are preview-only. No recovery claim before publication and subsequent GSC observations."
+  ],
+  "workDirectory": "/workspace/work/gsc-priority-remediation-20261119",
+  "productionPublished": false
+}

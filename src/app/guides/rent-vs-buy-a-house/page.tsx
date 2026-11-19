@@ -1,16 +1,17 @@
+import RefinancePayoffRentBuyReference from '@/components/RefinancePayoffRentBuyReference';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
 import {pageMetadata} from '@/lib/seo';
-import {rentBuyGuide,editorialSchema} from '@/lib/editorial-guides';
+import {rentBuyGuide,editorialSchema,guideContentDate} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(rentBuyGuide.path,rentBuyGuide.title,rentBuyGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:rentBuyGuide.publishedOn,modifiedTime:rentBuyGuide.updatedOn??rentBuyGuide.publishedOn}};
+export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:rentBuyGuide.publishedOn,modifiedTime:guideContentDate(rentBuyGuide)}};
 export default function RentBuyGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Rent vs. buy a house</span></nav>
  <p className="glossary-category">Mortgages · Comparison guide</p><h1>{rentBuyGuide.heading}</h1>
- <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published <time dateTime={rentBuyGuide.publishedOn}>October 28, 2026</time> · Updated <time dateTime={rentBuyGuide.updatedOn??rentBuyGuide.publishedOn}>October 30, 2026</time></p><ContentReviewNotice kind="guide"/>
+ <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published <time dateTime={rentBuyGuide.publishedOn}>October 28, 2026</time> · Updated <time dateTime={guideContentDate(rentBuyGuide)}>{new Date(guideContentDate(rentBuyGuide)+"T12:00:00Z").toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric",timeZone:"UTC"})}</time></p><ContentReviewNotice kind="guide"/>
  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(editorialSchema(rentBuyGuide))}}/>
 <p>{"Renting or buying is a comparison between complete housing plans, not just rent and a mortgage payment. Compare similar homes over the same period, account for the cash needed upfront and include what happens to the home and mortgage when you leave. For renting, also state what you assume happens to money not used for a down payment and ownership costs."}</p>
 <p>{"In the hypothetical example below, renting is ahead at year 3 and buying is ahead at year 5. Changing just the home-appreciation assumption from 3% to 1% makes renting ahead at year 5 instead. There is no universal five-year rule hidden in that result; it belongs to the chosen inputs."}</p>
@@ -78,6 +79,7 @@ export default function RentBuyGuide(){return <div className="page-wrap glossary
 <p>{"Use the "}<SiteLink href="https://www.calculatorfree.io/rent-vs-buy-calculator">{"Rent vs. Buy Calculator"}</SiteLink>{" to inspect the schedule and assumptions. The "}<SiteLink href="https://www.calculatorfree.io/mortgage-calculator">{"Mortgage Calculator"}</SiteLink>{" and "}<SiteLink href="https://www.calculatorfree.io/house-affordability-calculator">{"House Affordability Calculator"}</SiteLink>{" answer related payment and budget questions, rather than replacing the exit-date comparison."}</p>
 <p>{"Sources and calculations checked October 28, 2026. See our "}<SiteLink href="https://www.calculatorfree.io/methodology">{"methodology and review status"}</SiteLink>{"."}</p>
  <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
- <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/rent-vs-buy-a-house/" sources={[{"title": "Fannie Mae: rent-versus-buy responsibilities and costs", "url": "https://yourhome.fanniemae.com/buy/rent-vs-buy-whats-right-you"}, {"title": "CFPB: complete housing budgets, down payment and upfront cash", "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/"}, {"title": "CFPB: costs and financial considerations of homeownership", "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-some-of-the-financial-considerations-of-buying-a-home-en-119/"}]}/></section>
+ <RefinancePayoffRentBuyReference id="rent-vs-buy" inGuide/>
+<section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/rent-vs-buy-a-house/" sources={[{"title": "Fannie Mae: rent-versus-buy responsibilities and costs", "url": "https://yourhome.fanniemae.com/buy/rent-vs-buy-whats-right-you"}, {"title": "CFPB: complete housing budgets, down payment and upfront cash", "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/"}, {"title": "CFPB: costs and financial considerations of homeownership", "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-some-of-the-financial-considerations-of-buying-a-home-en-119/"}]}/></section>
 </article></main></div>;
 }

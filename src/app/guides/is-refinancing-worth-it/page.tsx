@@ -1,3 +1,4 @@
+import RefinancePayoffRentBuyReference from '@/components/RefinancePayoffRentBuyReference';
 import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
@@ -5,18 +6,18 @@ import GuideGlossaryLinks from '@/components/GuideGlossaryLinks';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
 import {pageMetadata} from '@/lib/seo';
-import {refinanceGuide,editorialSchema} from '@/lib/editorial-guides';
+import {refinanceGuide,editorialSchema,guideContentDate} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(refinanceGuide.path,refinanceGuide.title,refinanceGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:refinanceGuide.publishedOn,modifiedTime:refinanceGuide.updatedOn??refinanceGuide.publishedOn}};
+export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:refinanceGuide.publishedOn,modifiedTime:guideContentDate(refinanceGuide)}};
 export default function RefinanceGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Is refinancing worth it?</span></nav>
  <p className="glossary-category">Mortgages · Comparison guide</p><h1>{refinanceGuide.heading}</h1>
- <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published · Calculations and sources checked <time dateTime={refinanceGuide.publishedOn}>October 28, 2026</time> · Updated <time dateTime={refinanceGuide.updatedOn}>November 3, 2026</time></p><ContentReviewNotice kind="guide"/>
+ <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published · Calculations and sources checked <time dateTime={refinanceGuide.publishedOn}>October 28, 2026</time> · Updated <time dateTime={guideContentDate(refinanceGuide)}>{new Date(guideContentDate(refinanceGuide)+"T12:00:00Z").toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric",timeZone:"UTC"})}</time></p><ContentReviewNotice kind="guide"/>
  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(editorialSchema(refinanceGuide))}}/>
 <p>{"Refinancing can be worthwhile when the benefits of replacing your current loan exceed the new costs over the time you expect to keep it. Check the actual quote, upfront or financed fees, monthly payments and remaining balances at the same future date. A lower payment does not necessarily mean lower lifetime interest, especially if the new loan runs longer."}</p>
 <p>{"There is no universal rule that a one-percentage-point rate drop makes refinancing worthwhile. In our hypothetical $300,000 example, replacing 25 remaining years at 6.5% with 25 years at 5.5% saves about $183.36 a month before taxes and insurance. A $5,000 cash closing cost has a simple payment-recovery period of about 27.27 months. That is one useful measure, not the complete comparison."}</p>
-<p>{"All rates and fees below are illustrative, not current lender offers. The examples use fixed rates, monthly payments, no cash out, no mortgage insurance, no tax benefits, no prepayment penalties and no further refinancing. They exclude the return you might earn on retained cash."}</p>
+<p>{"All rates and fees below are illustrative, not current lender offers. The original $300,000 matched-date examples use fixed rates, monthly payments, no cash out, no mortgage insurance, no tax benefits, no prepayment penalties and no further refinancing. They exclude the return you might earn on retained cash."}</p>
 <RemainingGuideSummary id="refinance"/>
   <nav className="guide-nav" aria-label="Guide sections"><SiteLink href="#compare-from-today-not-from-the-original-closing">{"Compare from today, not from the original closing"}</SiteLink><SiteLink href="#separate-the-fees-from-other-closing-cash">{"Separate the fees from other closing cash"}</SiteLink><SiteLink href="#compare-the-same-remaining-term-before-extending-it">{"Compare the same remaining term before extending it"}</SiteLink><SiteLink href="#use-simple-break-even-as-a-first-screen">{"Use simple break-even as a first screen"}</SiteLink><SiteLink href="#compare-costs-and-balances-at-your-planned-exit-date">{"Compare costs and balances at your planned exit date"}</SiteLink><SiteLink href="#financing-fees-changes-the-balance-not-just-cash-at-closing">{"Financing fees changes the balance, not just cash at closing"}</SiteLink><SiteLink href="#common-questions">{"Common questions"}</SiteLink><SiteLink href="#calculation-checks-and-exclusions">{"Calculation checks and exclusions"}</SiteLink></nav>
 <RemainingGuideReview id="refinance"/>
@@ -69,5 +70,6 @@ export default function RefinanceGuide(){return <div className="page-wrap glossa
 <p>{"The model does not determine legal fee classifications, lender approval, tax deductions, cash-out benefits, changing insurance premiums or opportunity cost. Use the "}<SiteLink href="/real-estate-calculator">{"Mortgage and Housing directory"}</SiteLink>{" for related tools and the "}<SiteLink href="/methodology">{"methodology"}</SiteLink>{" for review status."}</p>
 <p><SiteLink href="/guides/">All financial guides</SiteLink></p>
 <GuideGlossaryLinks path={refinanceGuide.path}/>
+<RefinancePayoffRentBuyReference id="refinance" inGuide/>
 <section aria-labelledby="reference-use"><h2 id="reference-use">References and their scope</h2><SourceReferences context="guide:/guides/is-refinancing-worth-it/" sources={[{"title": "CFPB: Loan Estimate definition", "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/"}, {"title": "CFPB: no-closing-cost refinance trade-offs", "url": "https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/"}]}/></section>
 <GuideToolLinks path="/guides/is-refinancing-worth-it/"/></article></main></div>;}

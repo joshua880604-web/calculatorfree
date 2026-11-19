@@ -84,7 +84,7 @@ export const rentBuyGuide:EditorialGuide={
  title:'Rent vs. Buy a House: Costs, Equity & Holding Period',
  heading:'Rent vs. Buy a House: Compare Costs, Equity, and Time',
  description:'Compare renting and buying over matched exit dates with sale costs, mortgage balances and invested savings. Test appreciation, returns and maintenance assumptions.',
- publishedOn:'2026-10-28',updatedOn:'2026-10-30',calculatorIds:['rent-vs-buy','rent','mortgage','house-affordability'],
+ publishedOn:'2026-10-28',updatedOn:'2026-11-19',calculatorIds:['rent-vs-buy','rent','mortgage','house-affordability'],
  topic:'Mortgages',breadcrumb:'Rent vs. buy a house',
  cardIntro:'Compare sale equity with the renter’s invested cash at years 1, 3, 5 and 10. See how one changed assumption can reverse the model result.',
 };
@@ -122,7 +122,7 @@ export const aprGuide:EditorialGuide={
  "cardIntro": "Compare two $20,000 loan offers to see why a lower interest rate and smaller payment can still produce a higher APR and total borrowing cost."
 };
 export const refinanceGuide:EditorialGuide={
- updatedOn:'2026-11-03',
+ updatedOn:'2026-11-19',
  "path": "/guides/is-refinancing-worth-it/",
  "title": "Is Refinancing Worth It? Fees, Terms & Break-Even",
  "heading": "Is Refinancing Worth It? Compare Fees, Loan Terms, and Your Holding Period",

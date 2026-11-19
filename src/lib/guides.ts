@@ -1129,3 +1129,10 @@ for(const id of ['heloc','home-equity-loan','debt-consolidation']as const){guide
 
 import fhaVaAffordExamples from './fha-va-afford-examples.json';
 for(const id of ['fha-loan','va-mortgage','house-affordability']as const){guides[id].examples.push(...fhaVaAffordExamples[id].map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));guides[id].checkedOn='2026-11-19';}
+
+import refinancePayoffRentBuyExamples from './refinance-payoff-rentbuy-examples.json';
+for(const id of ['refinance','mortgage-payoff','rent-vs-buy']as const){guides[id].examples.push(...refinancePayoffRentBuyExamples[id].map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));guides[id].checkedOn='2026-11-19';}
+if(!guides['mortgage-payoff'].sources.some(s=>s.url==='https://www.consumerfinance.gov/ask-cfpb/what-is-a-prepayment-penalty-en-1957/'))guides['mortgage-payoff'].sources.push({title:'CFPB: prepayment-penalty terms depend on the mortgage contract',url:'https://www.consumerfinance.gov/ask-cfpb/what-is-a-prepayment-penalty-en-1957/'});
+
+// Pricing task examples and source scopes reviewed without changing model defaults.
+for(const id of ["sales-tax","vat"]){guides[id].checkedOn="2026-11-19";}

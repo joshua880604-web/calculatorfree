@@ -1,0 +1,222 @@
+{
+  "checkedOn": "2026-11-19",
+  "decimalPrecision": 70,
+  "cases": [
+    {
+      "key": "sales-add",
+      "calculatorId": "sales-tax",
+      "mode": "after",
+      "label": "Add an entered sales-tax rate",
+      "known": "Net $100; rate 7%",
+      "values": {
+        "before": "100",
+        "rate": "7"
+      },
+      "expected": {
+        "net": "100",
+        "tax": "7",
+        "gross": "107",
+        "rate": "7"
+      },
+      "display": true
+    },
+    {
+      "key": "sales-remove",
+      "calculatorId": "sales-tax",
+      "mode": "before",
+      "label": "Recover the price before sales tax",
+      "known": "Gross $107; rate 7%",
+      "values": {
+        "after": "107",
+        "rate": "7"
+      },
+      "expected": {
+        "net": "1E+2",
+        "tax": "7",
+        "gross": "107",
+        "rate": "7"
+      },
+      "display": true
+    },
+    {
+      "key": "sales-rate",
+      "calculatorId": "sales-tax",
+      "mode": "rate",
+      "label": "Recover the rate from two prices",
+      "known": "Net $100; gross $107",
+      "values": {
+        "before": "100",
+        "after": "107"
+      },
+      "expected": {
+        "net": "100",
+        "tax": "7",
+        "gross": "107",
+        "rate": "7.00"
+      },
+      "display": true
+    },
+    {
+      "key": "sales-zero",
+      "calculatorId": "sales-tax",
+      "mode": "after",
+      "label": "Zero entered sales-tax rate",
+      "known": "Net $100; rate 0%",
+      "values": {
+        "before": "100",
+        "rate": "0"
+      },
+      "expected": {
+        "net": "100",
+        "tax": "0",
+        "gross": "100",
+        "rate": "0"
+      },
+      "display": false
+    },
+    {
+      "key": "vat-rate-net",
+      "calculatorId": "vat",
+      "mode": "any-two",
+      "label": "Add VAT from a net price",
+      "known": "Net $100; rate 20%",
+      "values": {
+        "rate": "20",
+        "net": "100",
+        "gross": "",
+        "tax": ""
+      },
+      "expected": {
+        "net": "100",
+        "tax": "20",
+        "gross": "120",
+        "rate": "20"
+      },
+      "display": true
+    },
+    {
+      "key": "vat-rate-gross",
+      "calculatorId": "vat",
+      "mode": "any-two",
+      "label": "Remove VAT from a gross price",
+      "known": "Gross $120; rate 20%",
+      "values": {
+        "rate": "20",
+        "net": "",
+        "gross": "120",
+        "tax": ""
+      },
+      "expected": {
+        "net": "1.0E+2",
+        "tax": "20",
+        "gross": "120",
+        "rate": "20"
+      },
+      "display": true
+    },
+    {
+      "key": "vat-rate-tax",
+      "calculatorId": "vat",
+      "mode": "any-two",
+      "label": "Recover prices from the tax amount",
+      "known": "Tax $20; rate 20%",
+      "values": {
+        "rate": "20",
+        "net": "",
+        "gross": "",
+        "tax": "20"
+      },
+      "expected": {
+        "net": "1.0E+2",
+        "tax": "20",
+        "gross": "120",
+        "rate": "20"
+      },
+      "display": true
+    },
+    {
+      "key": "vat-net-gross",
+      "calculatorId": "vat",
+      "mode": "any-two",
+      "label": "Recover VAT from net and gross",
+      "known": "Net $100; gross $120",
+      "values": {
+        "rate": "",
+        "net": "100",
+        "gross": "120",
+        "tax": ""
+      },
+      "expected": {
+        "net": "100",
+        "tax": "20",
+        "gross": "120",
+        "rate": "20.0"
+      },
+      "display": true
+    },
+    {
+      "key": "vat-net-tax",
+      "calculatorId": "vat",
+      "mode": "any-two",
+      "label": "Recover VAT from net and tax",
+      "known": "Net $100; tax $20",
+      "values": {
+        "rate": "",
+        "net": "100",
+        "gross": "",
+        "tax": "20"
+      },
+      "expected": {
+        "net": "100",
+        "tax": "20",
+        "gross": "120",
+        "rate": "20.0"
+      },
+      "display": true
+    },
+    {
+      "key": "vat-gross-tax",
+      "calculatorId": "vat",
+      "mode": "any-two",
+      "label": "Recover VAT from gross and tax",
+      "known": "Gross $120; tax $20",
+      "values": {
+        "rate": "",
+        "net": "",
+        "gross": "120",
+        "tax": "20"
+      },
+      "expected": {
+        "net": "100",
+        "tax": "20",
+        "gross": "120",
+        "rate": "20.0"
+      },
+      "display": true
+    },
+    {
+      "key": "vat-zero",
+      "calculatorId": "vat",
+      "mode": "any-two",
+      "label": "Zero entered VAT rate",
+      "known": "Net $100; rate 0%",
+      "values": {
+        "rate": "0",
+        "net": "100",
+        "gross": "",
+        "tax": ""
+      },
+      "expected": {
+        "net": "100",
+        "tax": "0",
+        "gross": "100",
+        "rate": "0"
+      },
+      "display": false
+    }
+  ],
+  "rounding": {
+    "lineTax": "0.00",
+    "basketTax": "0.01"
+  }
+}

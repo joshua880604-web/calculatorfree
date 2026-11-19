@@ -1,0 +1,10 @@
+Task,Calculator,Mode,Complete inputs,Net amount,Tax amount,Gross amount,Rate (%),Restore link
+Add an entered sales-tax rate,sales-tax,after,"{""before"":""100"",""rate"":""7""}",100,7,107,7,/sales-tax-calculator#calc=share_version=1&mode=after&before=100&rate=7
+Recover the price before sales tax,sales-tax,before,"{""after"":""107"",""rate"":""7""}",1E+2,7,107,7,/sales-tax-calculator#calc=share_version=1&mode=before&after=107&rate=7
+Recover the rate from two prices,sales-tax,rate,"{""before"":""100"",""after"":""107""}",100,7,107,7.00,/sales-tax-calculator#calc=share_version=1&mode=rate&before=100&after=107
+Add VAT from a net price,vat,any-two,"{""rate"":""20"",""net"":""100"",""gross"":"""",""tax"":""""}",100,20,120,20,/vat-calculator#calc=share_version=1&mode=any-two&rate=20&net=100&gross=&tax=
+Remove VAT from a gross price,vat,any-two,"{""rate"":""20"",""net"":"""",""gross"":""120"",""tax"":""""}",1.0E+2,20,120,20,/vat-calculator#calc=share_version=1&mode=any-two&rate=20&net=&gross=120&tax=
+Recover prices from the tax amount,vat,any-two,"{""rate"":""20"",""net"":"""",""gross"":"""",""tax"":""20""}",1.0E+2,20,120,20,/vat-calculator#calc=share_version=1&mode=any-two&rate=20&net=&gross=&tax=20
+Recover VAT from net and gross,vat,any-two,"{""rate"":"""",""net"":""100"",""gross"":""120"",""tax"":""""}",100,20,120,20.0,/vat-calculator#calc=share_version=1&mode=any-two&rate=&net=100&gross=120&tax=
+Recover VAT from net and tax,vat,any-two,"{""rate"":"""",""net"":""100"",""gross"":"""",""tax"":""20""}",100,20,120,20.0,/vat-calculator#calc=share_version=1&mode=any-two&rate=&net=100&gross=&tax=20
+Recover VAT from gross and tax,vat,any-two,"{""rate"":"""",""net"":"""",""gross"":""120"",""tax"":""20""}",100,20,120,20.0,/vat-calculator#calc=share_version=1&mode=any-two&rate=&net=&gross=120&tax=20

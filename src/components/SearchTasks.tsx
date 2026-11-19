@@ -7,7 +7,7 @@ import { routeFor } from '@/lib/catalog';
 import focusedTasks from '@/lib/focused-calculation-tasks.json';
 export default function SearchTasks({id}:{id:string}) {
  const tasks=searchTasks[id];
- if(!tasks||motherPageCopy[id])return null;
+ if(!tasks||(motherPageCopy[id]&&!Object.hasOwn(focusedTasks,id)))return null;
  return <section className="search-tasks" aria-label="Choose a calculation">
   <h2>Choose what to calculate</h2>
   {tasks.map(task=>{

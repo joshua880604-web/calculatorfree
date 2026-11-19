@@ -13,7 +13,8 @@
       "topic": "Mortgages",
       "breadcrumb": "Pay off mortgage or invest",
       "cardIntro": "Five constant-return scenarios show why equal budgets, freed mortgage payments and rate conventions change the comparison.",
-      "format": "Decision guide & model check"
+      "format": "Decision guide & model check",
+      "updatedOn": "2026-11-19"
     },
     "intro": "There is no universal answer to whether you should pay off your mortgage or invest. Prepayment reduces debt and interest; investing keeps money exposed to uncertain returns and account-access conditions. A useful numerical comparison gives both paths the same cash, the same monthly budget and the same end date. Our five hypothetical scenarios isolate the investment-return assumption rather than predict which choice will win in real life.",
     "calculatorId": "mortgage-vs-invest",

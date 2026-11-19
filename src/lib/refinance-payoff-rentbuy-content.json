@@ -1,0 +1,683 @@
+{
+  "refinance": {
+    "heading": "Separate payment recovery from five-year borrowing cost",
+    "intro": "These five hypothetical replacement-loan cases start with a $250,000 current balance, $1,800 P&I payment and 6% rate. They are separate from the guide’s original $300,000 examples. New rates are 5%; fees, terms and cash-out differences are stated. The five-year figures compare both schedules at month 60.",
+    "columns": [
+      "Scenario",
+      "New P&I payment",
+      "Monthly payment reduction",
+      "Closing costs",
+      "Simple recovery (months)",
+      "New balance at month 60",
+      "5-year interest + fee saving"
+    ],
+    "rows": [
+      {
+        "label": "20 years; USD 3,000 paid upfront",
+        "calculatorId": "refinance",
+        "mode": "balance",
+        "values": {
+          "principal": "250000",
+          "payment": "1800",
+          "rate": "6",
+          "new_rate": "5",
+          "new_years": "20",
+          "cashout": "0",
+          "points": "0",
+          "fees": "3000",
+          "finance": "No"
+        },
+        "metrics": {
+          "New monthly payment": 1649.8893480416434,
+          "Current monthly payment": 1800.0,
+          "Monthly payment reduction": 150.11065195835664,
+          "Closing costs": 3000.0,
+          "Current future interest": 177891.6043277946,
+          "New total interest": 145973.4435299944,
+          "Simple closing-cost break-even (months)": 19.985257280957338
+        },
+        "derived": {
+          "Current balance at month 60": 211626.48321957522,
+          "New balance at month 60": 208637.15794473363,
+          "Current payments through month 60": 108000.0,
+          "New payments through month 60": 98993.3608824986,
+          "Five-year interest-plus-fee savings": 8995.964392343014,
+          "New financed principal": 250000.0,
+          "Cash received": 0.0,
+          "Upfront closing cash": 3000.0
+        },
+        "display": [
+          "$1,649.89",
+          "$150.11",
+          "$3,000.00",
+          "19.99",
+          "$208,637.16",
+          "$8,995.96"
+        ]
+      },
+      {
+        "label": "20 years; USD 3,000 fees financed",
+        "calculatorId": "refinance",
+        "mode": "balance",
+        "values": {
+          "principal": "250000",
+          "payment": "1800",
+          "rate": "6",
+          "new_rate": "5",
+          "new_years": "20",
+          "cashout": "0",
+          "points": "0",
+          "fees": "3000",
+          "finance": "Yes"
+        },
+        "metrics": {
+          "New monthly payment": 1669.688020218143,
+          "Current monthly payment": 1800.0,
+          "Monthly payment reduction": 130.3119797818569,
+          "Closing costs": 3000.0,
+          "Current future interest": 177891.6043277946,
+          "New total interest": 147725.12485235435,
+          "Simple closing-cost break-even (months)": 23.021674638218368
+        },
+        "derived": {
+          "Current balance at month 60": 211626.48321957522,
+          "New balance at month 60": 211140.8038400704,
+          "Current payments through month 60": 108000.0,
+          "New payments through month 60": 100181.28121308859,
+          "Five-year interest-plus-fee savings": 8304.398166416227,
+          "New financed principal": 253000.0,
+          "Cash received": 0.0,
+          "Upfront closing cash": 0.0
+        },
+        "display": [
+          "$1,669.69",
+          "$130.31",
+          "$3,000.00",
+          "23.02",
+          "$211,140.80",
+          "$8,304.40"
+        ]
+      },
+      {
+        "label": "30 years; same rate and upfront cost",
+        "calculatorId": "refinance",
+        "mode": "balance",
+        "values": {
+          "principal": "250000",
+          "payment": "1800",
+          "rate": "6",
+          "new_rate": "5",
+          "new_years": "30",
+          "cashout": "0",
+          "points": "0",
+          "fees": "3000",
+          "finance": "No"
+        },
+        "metrics": {
+          "New monthly payment": 1342.0540575303476,
+          "Current monthly payment": 1800.0,
+          "Monthly payment reduction": 457.94594246965255,
+          "Closing costs": 3000.0,
+          "Current future interest": 177891.6043277946,
+          "New total interest": 233139.46071092508,
+          "Simple closing-cost break-even (months)": 6.550991551145375
+        },
+        "derived": {
+          "Current balance at month 60": 211626.48321957522,
+          "New balance at month 60": 229571.8302125798,
+          "Current payments through month 60": 108000.0,
+          "New payments through month 60": 80523.24345182085,
+          "Five-year interest-plus-fee savings": 6531.409555174577,
+          "New financed principal": 250000.0,
+          "Cash received": 0.0,
+          "Upfront closing cash": 3000.0
+        },
+        "display": [
+          "$1,342.05",
+          "$457.95",
+          "$3,000.00",
+          "6.55",
+          "$229,571.83",
+          "$6,531.41"
+        ]
+      },
+      {
+        "label": "15 years; payment increases",
+        "calculatorId": "refinance",
+        "mode": "balance",
+        "values": {
+          "principal": "250000",
+          "payment": "1800",
+          "rate": "6",
+          "new_rate": "5",
+          "new_years": "15",
+          "cashout": "0",
+          "points": "0",
+          "fees": "3000",
+          "finance": "No"
+        },
+        "metrics": {
+          "New monthly payment": 1976.9840668538611,
+          "Current monthly payment": 1800.0,
+          "Monthly payment reduction": -176.9840668538612,
+          "Closing costs": 3000.0,
+          "Current future interest": 177891.6043277946,
+          "New total interest": 105857.13203369502
+        },
+        "derived": {
+          "Current balance at month 60": 211626.48321957522,
+          "New balance at month 60": 186392.72740038764,
+          "Current payments through month 60": 108000.0,
+          "New payments through month 60": 118619.04401123167,
+          "Five-year interest-plus-fee savings": 11614.71180795591,
+          "New financed principal": 250000.0,
+          "Cash received": 0.0,
+          "Upfront closing cash": 3000.0
+        },
+        "display": [
+          "$1,976.98",
+          "-$176.98",
+          "$3,000.00",
+          "Not applicable: payment rises",
+          "$186,392.73",
+          "$11,614.71"
+        ]
+      },
+      {
+        "label": "USD 25,000 cash out + 1 point financed",
+        "calculatorId": "refinance",
+        "mode": "balance",
+        "values": {
+          "principal": "250000",
+          "payment": "1800",
+          "rate": "6",
+          "new_rate": "5",
+          "new_years": "20",
+          "cashout": "25000",
+          "points": "1",
+          "fees": "3000",
+          "finance": "Yes"
+        },
+        "metrics": {
+          "New monthly payment": 1852.8257378507656,
+          "Current monthly payment": 1800.0,
+          "Monthly payment reduction": -52.8257378507655,
+          "Closing costs": 5750.0,
+          "Current future interest": 177891.6043277946,
+          "New total interest": 163928.17708418373
+        },
+        "derived": {
+          "Current balance at month 60": 211626.48321957522,
+          "New balance at month 60": 234299.52837193586,
+          "Current payments through month 60": 108000.0,
+          "New payments through month 60": 111169.54427104593,
+          "Five-year interest-plus-fee savings": -842.5894234065489,
+          "New financed principal": 280750.0,
+          "Cash received": 25000.0,
+          "Upfront closing cash": 0.0
+        },
+        "display": [
+          "$1,852.83",
+          "-$52.83",
+          "$5,750.00",
+          "Not applicable: payment rises",
+          "$234,299.53",
+          "-$842.59"
+        ]
+      }
+    ],
+    "guidePath": "/guides/is-refinancing-worth-it/",
+    "notes": [
+      "Simple recovery = closing costs / monthly payment reduction, only if the reduction is positive. It is a payment-based screen, including for financed fees; it is not a balance-aware economic break-even or a date when upfront cash was necessarily repaid.",
+      "Five-year borrowing-cost saving = current interest through month 60 − new interest through month 60 − closing costs once. Derive this by reconciling payments and remaining balances at the same date. This excludes opportunity returns, taxes and any benefit from using cash-out proceeds.",
+      "The $25,000 cash-out row supplies additional cash and finances the stated costs. Its one point is charged on current balance plus cash out, before adding financed fees. Do not call cash out a saving or treat this row as equal-proceeds financing.",
+      "The fifteen-year case raises the monthly payment, so the tool has no simple payment-recovery number. A longer term can lower the payment while increasing lifetime interest. Old payments and fees already paid are sunk historical amounts.",
+      "The original-loan task derives a balance from a regular original schedule; it cannot reconstruct prior extra payments, modifications or late postings. Use the actual current balance/payment when available. Check an actual Loan Estimate; no quotes or approval are supplied."
+    ],
+    "chartMetric": "Five-year interest-plus-fee savings",
+    "chartTitle": "Refinance: five-year interest-plus-fee savings (USD)",
+    "chartAlt": "Five-year borrowing-cost savings compare current interest with new interest and fees at month sixty, excluding the use of cash-out proceeds.",
+    "chartCaption": "Matched month-60 borrowing costs, not a lifetime, equal-cash or investment-benefit ranking.",
+    "checkedOn": "2026-11-19",
+    "csvPath": "/data/reviewed-scenarios/refinance-20261119.csv",
+    "chartPath": "/images/guides/reviewed-refinance-20261119.svg"
+  },
+  "mortgage-payoff": {
+    "heading": "Compare the timing of extra mortgage principal",
+    "intro": "Hold the current $120,000 balance, $2,500 contractual monthly P&I payment and hypothetical 6% rate fixed. The monthly $250 and annual $3,000 patterns use the same extra budget over a full active year, with different timing. The $10,000 cases compare a one-time payment at month 1 or month 24.",
+    "columns": [
+      "Scenario",
+      "First scheduled outlay",
+      "Payments until payoff",
+      "Interest with strategy",
+      "Interest saved"
+    ],
+    "rows": [
+      {
+        "label": "No extra principal",
+        "calculatorId": "mortgage-payoff",
+        "mode": "remaining-normal",
+        "values": {
+          "principal": "120000",
+          "payment": "2500",
+          "rate": "6"
+        },
+        "metrics": {
+          "Current principal balance": 120000.0,
+          "Interest with strategy": 17561.33271050111,
+          "Interest saved": 0.0,
+          "Years to payoff": 4.666666666666667
+        },
+        "derived": {
+          "Payments until payoff": 56.0,
+          "First scheduled outlay": 2500.0
+        },
+        "display": [
+          "$2,500.00",
+          "56",
+          "$17,561.33",
+          "$0.00"
+        ]
+      },
+      {
+        "label": "USD 250 extra every month",
+        "calculatorId": "mortgage-payoff",
+        "mode": "remaining-extra",
+        "values": {
+          "principal": "120000",
+          "payment": "2500",
+          "rate": "6",
+          "extra_monthly": "250",
+          "extra_yearly": "0",
+          "extra_once": "0",
+          "extra_once_month": "1"
+        },
+        "metrics": {
+          "Current principal balance": 120000.0,
+          "Interest with strategy": 15712.899577790871,
+          "Interest saved": 1848.433132710237,
+          "Years to payoff": 4.166666666666667
+        },
+        "derived": {
+          "Payments until payoff": 50.0,
+          "First scheduled outlay": 2750.0
+        },
+        "display": [
+          "$2,750.00",
+          "50",
+          "$15,712.90",
+          "$1,848.43"
+        ]
+      },
+      {
+        "label": "USD 3,000 extra each year",
+        "calculatorId": "mortgage-payoff",
+        "mode": "remaining-extra",
+        "values": {
+          "principal": "120000",
+          "payment": "2500",
+          "rate": "6",
+          "extra_monthly": "0",
+          "extra_yearly": "3000",
+          "extra_once": "0",
+          "extra_once_month": "1"
+        },
+        "metrics": {
+          "Current principal balance": 120000.0,
+          "Interest with strategy": 16085.741528634177,
+          "Interest saved": 1475.591181866932,
+          "Years to payoff": 4.166666666666667
+        },
+        "derived": {
+          "Payments until payoff": 50.0,
+          "First scheduled outlay": 2500.0
+        },
+        "display": [
+          "$2,500.00",
+          "50",
+          "$16,085.74",
+          "$1,475.59"
+        ]
+      },
+      {
+        "label": "USD 10,000 extra in month 1",
+        "calculatorId": "mortgage-payoff",
+        "mode": "remaining-extra",
+        "values": {
+          "principal": "120000",
+          "payment": "2500",
+          "rate": "6",
+          "extra_monthly": "0",
+          "extra_yearly": "0",
+          "extra_once": "10000",
+          "extra_once_month": "1"
+        },
+        "metrics": {
+          "Current principal balance": 120000.0,
+          "Interest with strategy": 14605.774255550717,
+          "Interest saved": 2955.558454950391,
+          "Years to payoff": 4.166666666666667
+        },
+        "derived": {
+          "Payments until payoff": 50.0,
+          "First scheduled outlay": 12500.0
+        },
+        "display": [
+          "$12,500.00",
+          "50",
+          "$14,605.77",
+          "$2,955.56"
+        ]
+      },
+      {
+        "label": "USD 10,000 extra in month 24",
+        "calculatorId": "mortgage-payoff",
+        "mode": "remaining-extra",
+        "values": {
+          "principal": "120000",
+          "payment": "2500",
+          "rate": "6",
+          "extra_monthly": "0",
+          "extra_yearly": "0",
+          "extra_once": "10000",
+          "extra_once_month": "24"
+        },
+        "metrics": {
+          "Current principal balance": 120000.0,
+          "Interest with strategy": 15994.542768915571,
+          "Interest saved": 1566.7899415855372,
+          "Years to payoff": 4.25
+        },
+        "derived": {
+          "Payments until payoff": 51.0,
+          "First scheduled outlay": 2500.0
+        },
+        "display": [
+          "$2,500.00",
+          "51",
+          "$15,994.54",
+          "$1,566.79"
+        ]
+      }
+    ],
+    "guidePath": "/guides/pay-off-mortgage-or-invest/",
+    "notes": [
+      "The current balance is different from the original borrowed amount. Current-balance modes start from today’s entered principal and P&I payment; the original-loan task derives a separate regular-schedule balance.",
+      "Annual extras arrive in months 12, 24 and so on. One-time extras arrive with the specified scheduled payment, after that month’s interest. Keep the contractual payment; the last payment is capped at the remaining amount due.",
+      "The monthly and annual patterns differ in timing and may use different total extra cash in the final partial year. The $10,000 lump sums are separate cash budgets. Interest totals alone do not rank strategies on an equal-cash or opportunity-return basis.",
+      "This section is a prepayment-only comparison. It does not reproduce or replace the separate equal-budget investing model already in the linked guide. Loan interest saved is not a portfolio-return forecast.",
+      "Escrow, mortgage insurance, taxes, prepayment penalties, daily accrued interest and payment-posting rules are excluded. Extra principal assumes correct application by the servicer. Obtain a dated payoff quote for a final settlement."
+    ],
+    "chartMetric": "Interest with strategy",
+    "chartTitle": "Mortgage payoff: remaining modeled interest (USD)",
+    "chartAlt": "Remaining interest under a fixed current balance and payment with monthly, annual or early/later lump-sum extras.",
+    "chartCaption": "Same starting loan, stated different extra-cash patterns. No investment return or prepayment penalty is included.",
+    "checkedOn": "2026-11-19",
+    "csvPath": "/data/reviewed-scenarios/mortgage-payoff-20261119.csv",
+    "chartPath": "/images/guides/reviewed-mortgage-payoff-20261119.svg"
+  },
+  "rent-vs-buy": {
+    "heading": "Inspect the same year before reading a 30-year headline",
+    "intro": "The baseline matches the guide’s $400,000 home, 20% down, 6% thirty-year loan, $2,400 monthly rent, $2,400 refundable deposit, 3% appreciation and 5% effective annual portfolio-return assumptions. Other ownership and transaction costs are retained in every full-input preset. Each row changes the one named assumption; income-tax benefits are disabled.",
+    "columns": [
+      "Scenario",
+      "Buyer equity, year 10",
+      "Renter wealth, year 10",
+      "Buyer minus renter, year 10",
+      "First annual crossing",
+      "Buyer equity, year 30",
+      "Renter wealth, year 30"
+    ],
+    "rows": [
+      {
+        "label": "Base: 3% appreciation; 5% return",
+        "calculatorId": "rent-vs-buy",
+        "mode": "comparison",
+        "values": {
+          "price": "400000",
+          "down": "20",
+          "rate": "6",
+          "years": "30",
+          "buy_closing": "3",
+          "selling": "6",
+          "tax": "4800",
+          "insurance": "1500",
+          "hoa": "0",
+          "maintenance": "4000",
+          "cost_growth": "2",
+          "tax_growth": "2",
+          "appreciation": "3",
+          "rent": "2400",
+          "rent_growth": "3",
+          "renter_insurance": "200",
+          "deposit": "2400",
+          "rental_costs": "0",
+          "return": "5",
+          "tax_rate": "0",
+          "standard": "0"
+        },
+        "metrics": {
+          "Buyer equity after 30 years": 912650.6891673122,
+          "Renter terminal wealth after 30 years": 28110.351293884338,
+          "First year buying leads": 5.0
+        },
+        "derived": {
+          "Buyer equity at year 10": 237518.2387494647,
+          "Renter wealth at year 10": 165948.4602900701,
+          "Buyer minus renter at year 10": 71569.77845939458,
+          "Minimum modeled portfolio": 25710.351293884338
+        },
+        "display": [
+          "$237,518.24",
+          "$165,948.46",
+          "$71,569.78",
+          "5",
+          "$912,650.69",
+          "$28,110.35"
+        ]
+      },
+      {
+        "label": "No home appreciation",
+        "calculatorId": "rent-vs-buy",
+        "mode": "comparison",
+        "values": {
+          "price": "400000",
+          "down": "20",
+          "rate": "6",
+          "years": "30",
+          "buy_closing": "3",
+          "selling": "6",
+          "tax": "4800",
+          "insurance": "1500",
+          "hoa": "0",
+          "maintenance": "4000",
+          "cost_growth": "2",
+          "tax_growth": "2",
+          "appreciation": "0",
+          "rent": "2400",
+          "rent_growth": "3",
+          "renter_insurance": "200",
+          "deposit": "2400",
+          "rental_costs": "0",
+          "return": "5",
+          "tax_rate": "0",
+          "standard": "0"
+        },
+        "metrics": {
+          "Buyer equity after 30 years": 376000.0,
+          "Renter terminal wealth after 30 years": 28110.351293884338,
+          "First year buying leads": 19.0
+        },
+        "derived": {
+          "Buyer equity at year 10": 108205.68011607486,
+          "Renter wealth at year 10": 165948.4602900701,
+          "Buyer minus renter at year 10": -57742.780173995256,
+          "Minimum modeled portfolio": 25710.351293884338
+        },
+        "display": [
+          "$108,205.68",
+          "$165,948.46",
+          "-$57,742.78",
+          "19",
+          "$376,000.00",
+          "$28,110.35"
+        ]
+      },
+      {
+        "label": "Zero investment return",
+        "calculatorId": "rent-vs-buy",
+        "mode": "comparison",
+        "values": {
+          "price": "400000",
+          "down": "20",
+          "rate": "6",
+          "years": "30",
+          "buy_closing": "3",
+          "selling": "6",
+          "tax": "4800",
+          "insurance": "1500",
+          "hoa": "0",
+          "maintenance": "4000",
+          "cost_growth": "2",
+          "tax_growth": "2",
+          "appreciation": "3",
+          "rent": "2400",
+          "rent_growth": "3",
+          "renter_insurance": "200",
+          "deposit": "2400",
+          "rental_costs": "0",
+          "return": "0",
+          "tax_rate": "0",
+          "standard": "0"
+        },
+        "metrics": {
+          "Buyer equity after 30 years": 912650.6891673122,
+          "Renter terminal wealth after 30 years": -177752.16739390953,
+          "First year buying leads": 3.0
+        },
+        "derived": {
+          "Buyer equity at year 10": 237518.2387494647,
+          "Renter wealth at year 10": 102659.85958565223,
+          "Buyer minus renter at year 10": 134858.37916381247,
+          "Minimum modeled portfolio": -180152.16739390953
+        },
+        "display": [
+          "$237,518.24",
+          "$102,659.86",
+          "$134,858.38",
+          "3",
+          "$912,650.69",
+          "-$177,752.17"
+        ]
+      },
+      {
+        "label": "USD 1,500 starting monthly rent",
+        "calculatorId": "rent-vs-buy",
+        "mode": "comparison",
+        "values": {
+          "price": "400000",
+          "down": "20",
+          "rate": "6",
+          "years": "30",
+          "buy_closing": "3",
+          "selling": "6",
+          "tax": "4800",
+          "insurance": "1500",
+          "hoa": "0",
+          "maintenance": "4000",
+          "cost_growth": "2",
+          "tax_growth": "2",
+          "appreciation": "3",
+          "rent": "1500",
+          "rent_growth": "3",
+          "renter_insurance": "200",
+          "deposit": "2400",
+          "rental_costs": "0",
+          "return": "5",
+          "tax_rate": "0",
+          "standard": "0"
+        },
+        "metrics": {
+          "Buyer equity after 30 years": 912650.6891673122,
+          "Renter terminal wealth after 30 years": 1074477.621974794
+        },
+        "derived": {
+          "Buyer equity at year 10": 237518.2387494647,
+          "Renter wealth at year 10": 323332.2539044078,
+          "Buyer minus renter at year 10": -85814.01515494309,
+          "Minimum modeled portfolio": 89600.0
+        },
+        "display": [
+          "$237,518.24",
+          "$323,332.25",
+          "-$85,814.02",
+          "Not within 30 years",
+          "$912,650.69",
+          "$1,074,477.62"
+        ]
+      },
+      {
+        "label": "8% selling cost instead of 6%",
+        "calculatorId": "rent-vs-buy",
+        "mode": "comparison",
+        "values": {
+          "price": "400000",
+          "down": "20",
+          "rate": "6",
+          "years": "30",
+          "buy_closing": "3",
+          "selling": "8",
+          "tax": "4800",
+          "insurance": "1500",
+          "hoa": "0",
+          "maintenance": "4000",
+          "cost_growth": "2",
+          "tax_growth": "2",
+          "appreciation": "3",
+          "rent": "2400",
+          "rent_growth": "3",
+          "renter_insurance": "200",
+          "deposit": "2400",
+          "rental_costs": "0",
+          "return": "5",
+          "tax_rate": "0",
+          "standard": "0"
+        },
+        "metrics": {
+          "Buyer equity after 30 years": 893232.589397795,
+          "Renter terminal wealth after 30 years": 28110.351293884338,
+          "First year buying leads": 6.0
+        },
+        "derived": {
+          "Buyer equity at year 10": 226766.90771471174,
+          "Renter wealth at year 10": 165948.4602900701,
+          "Buyer minus renter at year 10": 60818.447424641614,
+          "Minimum modeled portfolio": 25710.351293884338
+        },
+        "display": [
+          "$226,766.91",
+          "$165,948.46",
+          "$60,818.45",
+          "6",
+          "$893,232.59",
+          "$28,110.35"
+        ]
+      }
+    ],
+    "guidePath": "/guides/rent-vs-buy-a-house/",
+    "notes": [
+      "The calculator always projects 30 years. Year 10 is a checkpoint in that same schedule, not a new holding-period input. Buyer equity at each checkpoint assumes the entered selling cost and deducts the then-outstanding mortgage.",
+      "The renter’s starting account is down payment plus purchase costs avoided, less rental deposit and upfront rental costs. Monthly ownership-minus-rental cash-flow differences are invested or withdrawn at month end; the refundable deposit is added to reported renter wealth.",
+      "First annual crossing means the first year buyer equity is at least renter wealth. It is not an exact break-even month, a permanent lead or a probability of success. Not within 30 years means no crossing was found, not zero years.",
+      "A negative renter account or terminal figure indicates an unfunded shortfall in this model, not a feasible investment portfolio or a financing offer. Additional borrowing costs to fund that shortfall are not simulated. Inspect cash resources as well as the signed wealth comparison.",
+      "All returns, rents, growth and selling percentages are hypothetical. Mortgage insurance, utilities, unexpected repair timing, portfolio fees/taxes and personal income-tax benefits are outside these cases. The result is not a market forecast or a recommendation."
+    ],
+    "chartMetric": "Buyer minus renter at year 10",
+    "chartTitle": "Rent vs. buy: buyer minus renter at year 10 (USD)",
+    "chartAlt": "Signed year-ten wealth differences under five stated rent-versus-buy assumptions; negative favors the modeled renter figure at that checkpoint.",
+    "chartCaption": "A year-10 checkpoint in a fixed 30-year simulation, not a forecast or permanent winner. Signed losses and funding shortfalls are retained.",
+    "checkedOn": "2026-11-19",
+    "csvPath": "/data/reviewed-scenarios/rent-vs-buy-20261119.csv",
+    "chartPath": "/images/guides/reviewed-rent-vs-buy-20261119.svg"
+  }
+}

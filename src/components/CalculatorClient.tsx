@@ -587,7 +587,7 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
     <>
       <div className={"calculator-intro-row"+(motherCopy?" mother-page-intro":"")}><p className="intro">{motherCopy?.intro??calc.intro}</p>{enhancedSharing?<div className="calculator-utility-actions enhanced-sharing-actions"><FavoriteButton id={id}/><button type="button" className="calculator-share-launch" aria-haspopup="dialog" onClick={()=>setShareTab('Share')}>Share / Export</button></div>:<FavoriteButton id={id}/>}</div>
       {shareTab&&enhancedSharing&&<ShareToolsDialog key={shareTab} initialTab={shareTab} id={id} title={calc.title} path={routeFor(id)} mode={mode} values={values} result={result} fields={visible} onClose={closeShare}/>}
-      {id !== "mortgage" && !motherCopy && shortcuts.length > 0 && <nav className="task-shortcuts" aria-label="Calculation shortcuts">{shortcuts.map(task=><button type="button" key={task.keyword} onClick={()=>openShortcut(task)}>{task.keyword}</button>)}</nav>}
+      {id !== "mortgage" && (!motherCopy || shortcuts.some(task=>task.values)) && shortcuts.length > 0 && <nav className="task-shortcuts" aria-label="Calculation shortcuts">{shortcuts.map(task=><button type="button" key={task.keyword} onClick={()=>openShortcut(task)}>{task.keyword}</button>)}</nav>}
       {calc.modes.length > 1 && (
         <div className={"mode-tabs" + (compactModes ? " compact-mode-tabs" : "") + (id === "mortgage" ? " mortgage-mode-tabs" : "")} role="tablist" aria-label="Calculation mode">
           {calc.modes.map((m) => (

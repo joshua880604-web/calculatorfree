@@ -128,3 +128,11 @@ Read [CFPB HELOC features](https://www.consumerfinance.gov/ask-cfpb/what-is-a-ho
 ## FHA, VA and affordability content — 2026-11-19
 
 Read [HUD Mortgagee Letter 2023-05](https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf), [HUD premium calculation](https://www.hud.gov/hud-partners/housing-premium-calculation), [VA funding fees](https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/), and [CFPB housing budgets](https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/). Retained model terms are explicit: ordinary FHA table, original scheduled premium rounding and April 7, 2023 VA purchase chart. Historical HUD example rates are not reused as current rules. The new FHA examples stay within the lower base-loan band. Sources do not certify the original hypothetical arithmetic or determine eligibility. Independent Decimal references check 21 cases /732 values.
+
+## Refinance, payoff and rent/buy content — 2026-11-19
+
+Read [CFPB no-closing-cost refinance](https://www.consumerfinance.gov/ask-cfpb/is-there-such-a-thing-as-a-no-cost-or-no-closing-loan-or-refinancing-en-141/), [CFPB prepayment penalties](https://www.consumerfinance.gov/ask-cfpb/what-is-a-prepayment-penalty-en-1957/) and [Fannie Mae rent/buy responsibilities and costs](https://yourhome.fanniemae.com/buy/rent-vs-buy-whats-right-you). Concept references only, not certification of the original hypothetical figures. New rent/buy cases disable income-tax benefits and make no current deduction claims. Seventeen independent Decimal cases /461 numerical or absence checks cover the new comparisons and original-loan entry points.
+
+## Priority-page remediation sources — 2026-11-19
+
+Google traffic-drop and helpful-content documentation informed the audit boundaries; no specific algorithmic cause is asserted. New York taxable-receipt guidance (https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/taxable_receipt.htm) is scoped to that jurisdiction. GOV.UK VAT pricing guidance (https://www.gov.uk/charge-reclaim-record-vat) is scoped to UK VAT. Tax-price arithmetic is independently checked by scripts/check-tax-price-reference.py; entered example rates do not imply taxability or a current local rate. See gsc-priority-remediation-20261119.md.

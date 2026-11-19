@@ -1,0 +1,25 @@
+# GSC priority-page audit and pricing workflows — 2026-11-19
+
+The comparison export confirms global Web impressions of 6,871 to 6 and U.S. impressions of 2,026 to 3 between November 1–8 and November 9–16. Of 199 previously visible URLs, 197 have no impressions in the later window. The currently indexed directory also falls from 54 to zero. These observations establish a broad visibility loss together with index-count contraction, but do not identify a particular algorithm, content-quality judgment or deployment fault as the cause. The query export is capped at 1,000 rows; page and property impression aggregations differ.
+
+## Concrete findings and changes
+
+- The tax-inclusive pricing guide compared changing tax rates using an unchanged net/base-price metric. Its table and chart now show the resulting tax amounts: $7 versus $0 sales tax, and $20 versus $10 VAT, each on a $100 base. The original four complete-input examples, metrics and CSV schema remain.
+- Nine independently checked task examples cover three sales-tax modes and all six supported VAT input pairs. Complete fragments explicitly clear VAT's unknown fields. The two existing calculator pages and the existing guide expose these examples, and six task/shortcut entries restore them without adding routes or changing calculation engines.
+- The guide explains removing tax by division and a one-cent aggregate-versus-line rounding illustration. New York taxable-receipt and UK VAT sources have separate jurisdiction limits. Entered rates are hypothetical, not location lookups or taxability determinations.
+- Practical-guide bylines now derive their visible checked date from the same editorial date as structured data. The November 19 amortization and minimum-payment updates no longer display the old November 1 checked date. Publication dates remain unchanged. The pricing guide's modified date reflects its substantive changes.
+- The dedicated minimum-payment tool lacked an explicit legacy `.html` rule in the production source. Added a one-hop 301 to the extensionless canonical path. Hosting-native `.html` behavior was not directly observed, so the missing explicit rule is not described as a proven historical redirect failure or the cause of the traffic drop.
+
+## Technical audit boundaries
+
+The production Git snapshot `bc38ae0f8570b52a3e4159466e9163a1a723d5f0` and the updated source were separately built with `SITE_URL=https://www.calculatorfree.io` and `SITE_INDEXABLE=true`. Both exports have 469 unique sitemap URLs, one matching canonical and one H1 per URL, indexable robots metadata, no broken internal file/fragment targets and no orphan pages. The seven reviewed calculator/guide pages have reciprocal links. The snapshot build used webpack because its symlinked dependencies are outside Turbopack's project root; the normal workspace/preview build used the existing build command. These checks cover source-generated HTML, not historical or current production response headers, deployed environment variables, all CDN rules, or Google-rendered output.
+
+The public reader retrieved the production amortization page. The minimum-payment and pricing-guide URLs could not be read through that tool; no origin HTTP status is inferred from that limitation. User screenshots independently show the amortization and minimum-payment live tests as eligible, the directory and boat page as indexed, no temporary-removal requests, no reported manual actions/security issues, and no corresponding large crawl-failure spike. The boat page stopped showing impressions from October 28 and is not a synchronous November 9 control.
+
+## Verification and retained work
+
+Independent `scripts/check-tax-price-reference.py` produces 11 cases and 46 numeric checks at 70-digit precision, including zero-rate cases and the rounding illustration. `tests/tax-price-reference.test.ts` exercises the actual modes, all six VAT pairs, complete blank-field restoration inputs and the corrected selected tax metrics. All 3,152 tests, full TypeScript and static builds pass. All 169 entries / 354 modes retain existing fields, default values and default results.
+
+Browser, download, visual and redirect evidence is recorded in `evidence/gsc-priority-remediation-verification-20261119.json`. Work scripts, logs, the production snapshot and screenshots are in `/workspace/work/gsc-priority-remediation-20261119/`.
+
+The preview also completes and retains the previously authorized refinance, mortgage-payoff and rent/buy work described in `refinance-payoff-rentbuy-content-20261119.md`, including its 17 independent cases, 70 browser checks and six downloads. It retains all 20 preceding calculator improvements. No new page or calculation mode was added in this pass. Branch: `preview/gsc-priority-repair-20261119`; remote preview checkpoint is recorded outside the repository in the work directory. Production remains on `bc38ae0f8570b52a3e4159466e9163a1a723d5f0`; no production publication is performed by this audit. Traffic recovery cannot be verified before publishing and collecting subsequent GSC data.

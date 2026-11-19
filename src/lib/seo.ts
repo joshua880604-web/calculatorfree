@@ -432,3 +432,9 @@ Object.assign(contentUpdatedOn,{"/heloc-calculator.html": "2026-11-19", "/home-e
 
 // Substantive FHA/VA fee and ownership-budget scenario review.
 Object.assign(contentUpdatedOn,{"/fha-loan-calculator.html": "2026-11-19", "/va-mortgage-calculator.html": "2026-11-19", "/house-affordability-calculator.html": "2026-11-19", "/guides/how-to-calculate-fha-loan-payments/": "2026-11-19", "/guides/how-to-calculate-va-loan-payments/": "2026-11-19", "/guides/how-much-house-can-i-afford/": "2026-11-19"});
+
+// Substantive refinance, prepayment and rent/buy checkpoint review.
+Object.assign(contentUpdatedOn,{"/refinance-calculator.html": "2026-11-19", "/mortgage-payoff-calculator.html": "2026-11-19", "/rent-vs-buy-calculator.html": "2026-11-19", "/guides/is-refinancing-worth-it/": "2026-11-19", "/guides/pay-off-mortgage-or-invest/": "2026-11-19", "/guides/rent-vs-buy-a-house/": "2026-11-19"});
+
+// Tax-price workflows and selected-output correction, independently checked.
+Object.assign(contentUpdatedOn,{"/sales-tax-calculator.html":"2026-11-19","/vat-calculator.html":"2026-11-19","/guides/tax-inclusive-prices-sales-tax-and-vat/":"2026-11-19"});

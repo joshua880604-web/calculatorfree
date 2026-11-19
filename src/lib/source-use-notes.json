@@ -1767,6 +1767,16 @@
       "role": "concept",
       "usedFor": "Explain negative trade equity and the difference between a payoff amount and a statement balance.",
       "scope": "No state tax, lender approval or numeric certification."
+    },
+    "https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/taxable_receipt.htm": {
+      "role": "rule",
+      "usedFor": "New York examples explaining why discounts and additional charges can affect the taxable receipt.",
+      "scope": "New York-specific taxability context; it does not establish a nationwide rate, every state’s rules, or the hypothetical 7% rate."
+    },
+    "https://www.gov.uk/charge-reclaim-record-vat": {
+      "role": "method",
+      "usedFor": "VAT-inclusive pricing and the distinction between a price before VAT and a total including VAT.",
+      "scope": "UK VAT guidance. The shared gross/net identity does not make VAT equivalent to U.S. sales tax or certify the entered rate."
     }
   },
   "pages": {
@@ -2187,7 +2197,8 @@
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
     },
     "guide:/guides/pay-off-mortgage-or-invest/": {
-      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+      "note": "CFPB guidance supports checking contract prepayment terms and payment application. Hypothetical extras reduce principal after monthly interest. Final settlement fees, daily accrued interest and investment opportunity returns are excluded. Sources do not certify the independently calculated figures.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/current-ratio-vs-quick-ratio/": {
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
@@ -2676,7 +2687,18 @@
       "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
     },
     "calculator:vat": {
-      "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction."
+      "note": "Examples use entered rates and a selected taxable base. Independent Decimal checks verify pricing identities, not legal taxability, current local rates or invoice rounding rules.",
+      "updatedOn": "2026-11-19",
+      "extras": [
+        {
+          "title": "New York Tax Department: taxable receipt, discounts and additional charges (New York scope)",
+          "url": "https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/taxable_receipt.htm"
+        },
+        {
+          "title": "GOV.UK: charging VAT and VAT-inclusive pricing (UK scope)",
+          "url": "https://www.gov.uk/charge-reclaim-record-vat"
+        }
+      ]
     },
     "calculator:debt-payoff": {
       "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote."
@@ -2835,13 +2857,14 @@
       "updatedOn": "2026-11-19"
     },
     "calculator:mortgage-payoff": {
-      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote.",
+      "note": "CFPB guidance supports checking contract prepayment terms and payment application. Hypothetical extras reduce principal after monthly interest. Final settlement fees, daily accrued interest and investment opportunity returns are excluded. Sources do not certify the independently calculated figures.",
       "extras": [
         {
           "title": "OpenStax: periodic loan payment and amortization method",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:currency": {
       "note": "The converter uses a stored reference snapshot with the provider and quote dates shown in the tool. References explain rate conventions; they do not turn stored rates into live executable quotes.",
@@ -2862,13 +2885,18 @@
       ]
     },
     "calculator:sales-tax": {
-      "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction.",
+      "note": "Examples use entered rates and a selected taxable base. Independent Decimal checks verify pricing identities, not legal taxability, current local rates or invoice rounding rules.",
       "extras": [
         {
-          "title": "OpenStax: percentage bases for tax, commission and discount",
-          "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications"
+          "title": "New York Tax Department: taxable receipt, discounts and additional charges (New York scope)",
+          "url": "https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/taxable_receipt.htm"
+        },
+        {
+          "title": "GOV.UK: charging VAT and VAT-inclusive pricing (UK scope)",
+          "url": "https://www.gov.uk/charge-reclaim-record-vat"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:down-payment": {
       "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
@@ -2947,7 +2975,8 @@
       "updatedOn": "2026-11-19"
     },
     "calculator:rent-vs-buy": {
-      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+      "note": "Fannie Mae and CFPB explain differing responsibilities, transaction costs and complete housing budgets. The new cases use no income-tax benefit and hypothetical constant growth. Year-ten results are checkpoints in the unchanged thirty-year model; a negative portfolio indicates an unfunded shortfall without financing costs. Sources do not certify the independently calculated figures.",
+      "updatedOn": "2026-11-19"
     },
     "calculator:ira": {
       "note": "Check the tax year, jurisdiction and purpose of each reference. A simplified comparison or book calculation does not establish complete tax liability, tax eligibility or the treatment of every deduction and transaction.",
@@ -2972,13 +3001,14 @@
       ]
     },
     "calculator:refinance": {
-      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote.",
+      "note": "CFPB references explain that financed closing costs and higher-rate credits do not make costs disappear. The new examples distinguish simple payment recovery from matched-month interest-plus-fee cost. Cash out is new borrowing; no cash-out benefit, actual quote or economic break-even is inferred. Sources do not certify the independently calculated figures.",
       "extras": [
         {
           "title": "OpenStax: periodic loan payment and amortization method",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:present-value": {
       "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
@@ -3115,7 +3145,18 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/tax-inclusive-prices-sales-tax-and-vat/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "Examples use entered rates and a selected taxable base. Independent Decimal checks verify pricing identities, not legal taxability, current local rates or invoice rounding rules.",
+      "updatedOn": "2026-11-19",
+      "extras": [
+        {
+          "title": "New York Tax Department: taxable receipt, discounts and additional charges (New York scope)",
+          "url": "https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/taxable_receipt.htm"
+        },
+        {
+          "title": "GOV.UK: charging VAT and VAT-inclusive pricing (UK scope)",
+          "url": "https://www.gov.uk/charge-reclaim-record-vat"
+        }
+      ]
     },
     "guide:/guides/simple-and-discounted-payback/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
@@ -3139,7 +3180,8 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/rent-vs-buy-a-house/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "Fannie Mae and CFPB explain differing responsibilities, transaction costs and complete housing budgets. The new cases use no income-tax benefit and hypothetical constant growth. Year-ten results are checkpoints in the unchanged thirty-year model; a negative portfolio indicates an unfunded shortfall without financing costs. Sources do not certify the independently calculated figures.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-to-compare-debt-consolidation-loans/": {
       "note": "CFPB references explain consolidation fees, extended terms and secured-debt risks. Current debt minimums and rollover budgets are fixed entered assumptions; new loans use their own installments, so the cases are not equal-budget optimization. Sources do not certify the original hypothetical arithmetic.",
@@ -3157,8 +3199,8 @@
       "updatedOn": "2026-11-19"
     },
     "guide:/guides/is-refinancing-worth-it/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
-      "updatedOn": "2026-11-03"
+      "note": "CFPB references explain that financed closing costs and higher-rate credits do not make costs disappear. The new examples distinguish simple payment recovery from matched-month interest-plus-fee cost. Cash out is new borrowing; no cash-out benefit, actual quote or economic break-even is inferred. Sources do not certify the independently calculated figures.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-to-calculate-boat-loan-payments/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review. The added down-payment comparison holds price, rate, tax treatment and term fixed, while upfront cash changes. The 2026-11-19 independently checked cases do not establish live lender terms, tax jurisdiction treatment or total ownership affordability.",

@@ -1,0 +1,190 @@
+{
+  "refinance": [
+    {
+      "title": "Finance $3,000 refinance costs without treating them as free",
+      "mode": "balance",
+      "values": {
+        "principal": "250000",
+        "payment": "1800",
+        "rate": "6",
+        "new_rate": "5",
+        "new_years": "20",
+        "cashout": "0",
+        "points": "0",
+        "fees": "3000",
+        "finance": "Yes"
+      },
+      "inputs": "$250,000 current balance; $1,800 P&I; current 6%; replacement 5% for twenty years; $3,000 fees financed; no cash out or points.",
+      "steps": [
+        "Add costs to get a $253,000 new principal.",
+        "Calculate the replacement P&I payment and retain the higher remaining balance caused by financing costs.",
+        "At month sixty, subtract new interest and the closing cost once from current interest; simple payment recovery is a separate screen."
+      ],
+      "answer": "New P&I payment: $1,669.69.",
+      "expected": {
+        "label": "New monthly payment",
+        "value": 1669.688020218143,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Keep an increased refinance payment distinct from simple recovery",
+      "mode": "balance",
+      "values": {
+        "principal": "250000",
+        "payment": "1800",
+        "rate": "6",
+        "new_rate": "5",
+        "new_years": "15",
+        "cashout": "0",
+        "points": "0",
+        "fees": "3000",
+        "finance": "No"
+      },
+      "inputs": "$250,000 current balance; $1,800 P&I; current 6%; replacement 5% for fifteen years; $3,000 upfront costs; no points or cash out.",
+      "steps": [
+        "Amortize the replacement over 180 monthly periods.",
+        "Subtract its payment from the current $1,800; the result is negative.",
+        "Do not report a positive or zero simple payment-recovery time when the monthly payment rises."
+      ],
+      "answer": "Monthly payment reduction: -$176.98; simple payment recovery not applicable.",
+      "expected": {
+        "label": "Monthly payment reduction",
+        "value": -176.9840668538612,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "mortgage-payoff": [
+    {
+      "title": "Time an annual mortgage extra payment at month twelve",
+      "mode": "remaining-extra",
+      "values": {
+        "principal": "120000",
+        "payment": "2500",
+        "rate": "6",
+        "extra_monthly": "0",
+        "extra_yearly": "3000",
+        "extra_once": "0",
+        "extra_once_month": "1"
+      },
+      "inputs": "$120,000 current balance; 6%; $2,500 regular monthly P&I; $3,000 extra at month twelve and every twelve payments afterward.",
+      "steps": [
+        "Retain the contractual payment and apply the extra only at each annual scheduled month.",
+        "Accrue interest on opening principal, apply payment and cap the final installment.",
+        "Compare with $250 extra monthly as a different timing pattern; extra cash stops when the loan is repaid."
+      ],
+      "answer": "Remaining modeled interest: $16,085.74.",
+      "expected": {
+        "label": "Interest with strategy",
+        "value": 16085.741528634177,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Delay a $10,000 mortgage principal payment until month twenty-four",
+      "mode": "remaining-extra",
+      "values": {
+        "principal": "120000",
+        "payment": "2500",
+        "rate": "6",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "10000",
+        "extra_once_month": "24"
+      },
+      "inputs": "$120,000 current balance; 6%; $2,500 regular monthly P&I; one $10,000 extra at scheduled month twenty-four; no other extras.",
+      "steps": [
+        "Keep the first twenty-three scheduled payments unchanged.",
+        "Apply the lump sum after month twenty-four interest.",
+        "Compare its remaining interest with the same lump sum in month one, excluding opportunity returns and prepayment penalties."
+      ],
+      "answer": "Remaining modeled interest: $15,994.54.",
+      "expected": {
+        "label": "Interest with strategy",
+        "value": 15994.542768915571,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "rent-vs-buy": [
+    {
+      "title": "Hold home appreciation at zero in the rent-versus-buy model",
+      "mode": "comparison",
+      "values": {
+        "price": "400000",
+        "down": "20",
+        "rate": "6",
+        "years": "30",
+        "buy_closing": "3",
+        "selling": "6",
+        "tax": "4800",
+        "insurance": "1500",
+        "hoa": "0",
+        "maintenance": "4000",
+        "cost_growth": "2",
+        "tax_growth": "2",
+        "appreciation": "0",
+        "rent": "2400",
+        "rent_growth": "3",
+        "renter_insurance": "200",
+        "deposit": "2400",
+        "rental_costs": "0",
+        "return": "5",
+        "tax_rate": "0",
+        "standard": "0"
+      },
+      "inputs": "$400,000 home; 20% down; 6% thirty-year loan; $2,400 starting monthly rent; original guide ownership and transaction costs; no income-tax benefit. 0% home appreciation, 5% portfolio return.",
+      "steps": [
+        "Keep the purchased home’s gross value constant and still subtract the selling cost and remaining loan at each annual checkpoint.",
+        "Read buyer and renter wealth in the same year-ten schedule row.",
+        "Keep the full thirty-year output separate from that checkpoint and do not call the first annual crossing a permanent lead."
+      ],
+      "answer": "Buyer equity at thirty years: $376,000.00.",
+      "expected": {
+        "label": "Buyer equity after 30 years",
+        "value": 376000.0,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Remove investment growth without hiding rent-versus-buy funding gaps",
+      "mode": "comparison",
+      "values": {
+        "price": "400000",
+        "down": "20",
+        "rate": "6",
+        "years": "30",
+        "buy_closing": "3",
+        "selling": "6",
+        "tax": "4800",
+        "insurance": "1500",
+        "hoa": "0",
+        "maintenance": "4000",
+        "cost_growth": "2",
+        "tax_growth": "2",
+        "appreciation": "3",
+        "rent": "2400",
+        "rent_growth": "3",
+        "renter_insurance": "200",
+        "deposit": "2400",
+        "rental_costs": "0",
+        "return": "0",
+        "tax_rate": "0",
+        "standard": "0"
+      },
+      "inputs": "$400,000 home; 20% down; 6% thirty-year loan; $2,400 starting monthly rent; original guide ownership and transaction costs; no income-tax benefit. 3% appreciation, 0% portfolio return.",
+      "steps": [
+        "Set opportunity return to zero while continuing all monthly cash-flow deposits or withdrawals; inspect negative account figures as unfunded shortfalls.",
+        "Read buyer and renter wealth in the same year-ten schedule row.",
+        "Keep the full thirty-year output separate from that checkpoint and do not call the first annual crossing a permanent lead."
+      ],
+      "answer": "Buyer equity at thirty years: $912,650.69.",
+      "expected": {
+        "label": "Buyer equity after 30 years",
+        "value": 912650.6891673122,
+        "tolerance": 1e-06
+      }
+    }
+  ]
+}

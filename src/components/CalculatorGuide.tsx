@@ -1,3 +1,5 @@
+import RefinancePayoffRentBuyReference from './RefinancePayoffRentBuyReference';
+import TaxPriceReference,{hasTaxPriceReference} from './TaxPriceReference';
 import HelocCreditReference from './HelocCreditReference';
 import DiscountReference from './DiscountReference';
 import InterestRateReference from './InterestRateReference';
@@ -59,6 +61,7 @@ export default function CalculatorGuide({
             {insight && <SiteLink href="#compare-scenarios">Compare scenarios</SiteLink>}
             {calculator.id === "roi" && <SiteLink href="#roi-formulas">ROI formulas</SiteLink>}
             {hasRepaymentComparison(calculator.id)&&<SiteLink href="#repayment-comparison-heading">Repayment comparison</SiteLink>}
+            {hasTaxPriceReference(calculator.id)&&<SiteLink href="#tax-price-tasks">Tax-price examples</SiteLink>}
             <SiteLink href="#worked-examples">Examples</SiteLink><SiteLink href="#common-questions">Questions</SiteLink>
             <SiteLink href="#scope-assumptions">Assumptions</SiteLink><SiteLink href="#sources">Sources</SiteLink>
             {hasBlogSnippetKit(calculator.id)&&<BlogSnippetLink>For writers &amp; bloggers</BlogSnippetLink>}
@@ -82,7 +85,7 @@ export default function CalculatorGuide({
           {calculator.id === "house-affordability" && <HouseIncomeReference/>}
           {["house-affordability","heloc","mortgage","401k","compound-interest","personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && (compact||sections.comparisons?<GuideDisclosure title={loanCostComparisonTitle(calculator.id)}><LoanCostReference id={calculator.id}/></GuideDisclosure>:<LoanCostReference id={calculator.id}/>)}
           {calculator.id==='heloc'&&<HelocCreditReference/>}
-          {calculator.id==='pmi' && <PmiRateReference/>}{!hasRepaymentComparison(calculator.id)&&!hasFundFeesCdReference(calculator.id)&&<RemainingFinanceReference id={calculator.id}/>}<RepaymentComparison id={calculator.id}/><FundFeesCdReference id={calculator.id}/><h2 id="worked-examples">Worked examples</h2>
+          {calculator.id==='pmi' && <PmiRateReference/>}{!hasRepaymentComparison(calculator.id)&&!hasFundFeesCdReference(calculator.id)&&!hasTaxPriceReference(calculator.id)&&<RemainingFinanceReference id={calculator.id}/>}<RepaymentComparison id={calculator.id}/><FundFeesCdReference id={calculator.id}/><RefinancePayoffRentBuyReference id={calculator.id}/><TaxPriceReference id={calculator.id}/><h2 id="worked-examples">Worked examples</h2>
           {foldExamples?<>{workedExamples?.[0]}{workedExamples&&workedExamples.length>1&&<GuideDisclosure title={'More worked examples ('+(workedExamples.length-1)+')'}>{workedExamples.slice(1)}</GuideDisclosure>}</>:workedExamples}
           {calculator.id === "rmd" && <RmdReference/>}
           <h2 id="common-questions">Common questions</h2>

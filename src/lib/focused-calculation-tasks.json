@@ -1285,5 +1285,291 @@
         "maintenance_unit": "Percent of home value"
       }
     }
+  ],
+  "refinance": [
+    {
+      "keyword": "Refinance calculator",
+      "mode": "balance",
+      "description": "Compare your current mortgage with a new loan, including cash out and closing costs. Simple break-even uses costs divided by the monthly payment reduction.",
+      "values": {
+        "principal": "250000",
+        "payment": "1800",
+        "rate": "6",
+        "new_rate": "5",
+        "new_years": "20",
+        "cashout": "0",
+        "points": "0",
+        "fees": "3000",
+        "finance": "No"
+      },
+      "aliases": [
+        "Mortgage refinance break even calculator"
+      ]
+    },
+    {
+      "keyword": "Cash out refinance calculator",
+      "mode": "balance",
+      "description": "Enter additional cash, points and financed costs separately. Cash out is new borrowing rather than a saving; compare remaining balances and fees.",
+      "values": {
+        "principal": "250000",
+        "payment": "1800",
+        "rate": "6",
+        "new_rate": "5",
+        "new_years": "20",
+        "cashout": "25000",
+        "points": "1",
+        "fees": "3000",
+        "finance": "Yes"
+      }
+    },
+    {
+      "keyword": "Refinance calculator with financed closing costs",
+      "mode": "balance",
+      "description": "Add the stated closing cost to the new balance. Simple payment recovery differs from a matched-date interest-plus-fee comparison.",
+      "values": {
+        "principal": "250000",
+        "payment": "1800",
+        "rate": "6",
+        "new_rate": "5",
+        "new_years": "20",
+        "cashout": "0",
+        "points": "0",
+        "fees": "3000",
+        "finance": "Yes"
+      }
+    },
+    {
+      "keyword": "Refinance calculator from original loan",
+      "mode": "original",
+      "description": "Derive a regular-schedule current balance from original amount, rate, term and payments made. Past extras or modifications are not reconstructed.",
+      "values": {
+        "principal": "100000",
+        "years": "10",
+        "months": "0",
+        "rate": "6",
+        "elapsed": "60",
+        "new_rate": "5",
+        "new_years": "20",
+        "cashout": "0",
+        "points": "0",
+        "fees": "3000",
+        "finance": "No"
+      }
+    }
+  ],
+  "mortgage-payoff": [
+    {
+      "keyword": "Mortgage payoff calculator",
+      "mode": "remaining-extra",
+      "description": "Use your current balance and regular payment to compare extra monthly, annual or one-time payments. Review interest saved and time to payoff.",
+      "values": {
+        "principal": "120000",
+        "payment": "2500",
+        "rate": "6",
+        "extra_monthly": "250",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1"
+      },
+      "aliases": [
+        "Mortgage calculator with extra payments",
+        "Extra mortgage payment calculator",
+        "Early mortgage payoff calculator",
+        "Mortgage interest savings calculator"
+      ]
+    },
+    {
+      "keyword": "Mortgage payoff calculator with annual extra payments",
+      "mode": "remaining-extra",
+      "description": "Keep the entered current P&I payment and add $3,000 at the twelfth scheduled month and each year afterward.",
+      "values": {
+        "principal": "120000",
+        "payment": "2500",
+        "rate": "6",
+        "extra_monthly": "0",
+        "extra_yearly": "3000",
+        "extra_once": "0",
+        "extra_once_month": "1"
+      }
+    },
+    {
+      "keyword": "Lump sum mortgage payment calculator",
+      "mode": "remaining-extra",
+      "description": "Apply $10,000 extra with the first scheduled payment, after monthly interest. Compare the later-month case in the table.",
+      "values": {
+        "principal": "120000",
+        "payment": "2500",
+        "rate": "6",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "10000",
+        "extra_once_month": "1"
+      }
+    },
+    {
+      "keyword": "Mortgage payoff calculator from original loan",
+      "mode": "known-normal",
+      "description": "Derive a balance from the original regular schedule and elapsed payments. Use actual current information if prior extras, modifications or timing differ.",
+      "values": {
+        "principal": "120000",
+        "years": "5",
+        "months": "0",
+        "rate": "6",
+        "elapsed": "12"
+      }
+    }
+  ],
+  "rent-vs-buy": [
+    {
+      "keyword": "Rent vs buy calculator with investment returns",
+      "mode": "comparison",
+      "description": "Compare renting and buying over a fixed 30-year projection, including home equity after sale, invested cash-flow differences and ownership costs.",
+      "values": {
+        "price": "400000",
+        "down": "20",
+        "rate": "6",
+        "years": "30",
+        "buy_closing": "3",
+        "selling": "6",
+        "tax": "4800",
+        "insurance": "1500",
+        "hoa": "0",
+        "maintenance": "4000",
+        "cost_growth": "2",
+        "tax_growth": "2",
+        "appreciation": "3",
+        "rent": "2400",
+        "rent_growth": "3",
+        "renter_insurance": "200",
+        "deposit": "2400",
+        "rental_costs": "0",
+        "return": "5",
+        "tax_rate": "0",
+        "standard": "0"
+      },
+      "aliases": [
+        "Rent vs buy calculator"
+      ]
+    },
+    {
+      "keyword": "Rent vs buy calculator with no appreciation",
+      "mode": "comparison",
+      "description": "Hold the home value constant while retaining the stated rent, financing, portfolio return and costs. Review annual checkpoints, not just terminal wealth.",
+      "values": {
+        "price": "400000",
+        "down": "20",
+        "rate": "6",
+        "years": "30",
+        "buy_closing": "3",
+        "selling": "6",
+        "tax": "4800",
+        "insurance": "1500",
+        "hoa": "0",
+        "maintenance": "4000",
+        "cost_growth": "2",
+        "tax_growth": "2",
+        "appreciation": "0",
+        "rent": "2400",
+        "rent_growth": "3",
+        "renter_insurance": "200",
+        "deposit": "2400",
+        "rental_costs": "0",
+        "return": "5",
+        "tax_rate": "0",
+        "standard": "0"
+      }
+    },
+    {
+      "keyword": "Rent vs buy calculator with closing costs",
+      "mode": "comparison",
+      "description": "Use 3% purchase and an entered 8% selling-cost assumption in this illustration. The sale percentage is not a standard commission or a live quote.",
+      "values": {
+        "price": "400000",
+        "down": "20",
+        "rate": "6",
+        "years": "30",
+        "buy_closing": "3",
+        "selling": "8",
+        "tax": "4800",
+        "insurance": "1500",
+        "hoa": "0",
+        "maintenance": "4000",
+        "cost_growth": "2",
+        "tax_growth": "2",
+        "appreciation": "3",
+        "rent": "2400",
+        "rent_growth": "3",
+        "renter_insurance": "200",
+        "deposit": "2400",
+        "rental_costs": "0",
+        "return": "5",
+        "tax_rate": "0",
+        "standard": "0"
+      }
+    }
+  ],
+  "sales-tax": [
+    {
+      "keyword": "Add an entered sales-tax rate",
+      "mode": "after",
+      "description": "Net $100; rate 7%. Restore these known values and calculate the remaining amounts; choose your own applicable rate and taxable base.",
+      "values": {
+        "before": "100",
+        "rate": "7"
+      }
+    },
+    {
+      "keyword": "Recover the price before sales tax",
+      "mode": "before",
+      "description": "Gross $107; rate 7%. Restore these known values and calculate the remaining amounts; choose your own applicable rate and taxable base.",
+      "values": {
+        "after": "107",
+        "rate": "7"
+      }
+    },
+    {
+      "keyword": "Recover the rate from two prices",
+      "mode": "rate",
+      "description": "Net $100; gross $107. Restore these known values and calculate the remaining amounts; choose your own applicable rate and taxable base.",
+      "values": {
+        "before": "100",
+        "after": "107"
+      }
+    }
+  ],
+  "vat": [
+    {
+      "keyword": "Add VAT from a net price",
+      "mode": "any-two",
+      "description": "Net $100; rate 20%. Restore these known values and calculate the remaining amounts; choose your own applicable rate and taxable base.",
+      "values": {
+        "rate": "20",
+        "net": "100",
+        "gross": "",
+        "tax": ""
+      }
+    },
+    {
+      "keyword": "Remove VAT from a gross price",
+      "mode": "any-two",
+      "description": "Gross $120; rate 20%. Restore these known values and calculate the remaining amounts; choose your own applicable rate and taxable base.",
+      "values": {
+        "rate": "20",
+        "net": "",
+        "gross": "120",
+        "tax": ""
+      }
+    },
+    {
+      "keyword": "Recover VAT from net and gross",
+      "mode": "any-two",
+      "description": "Net $100; gross $120. Restore these known values and calculate the remaining amounts; choose your own applicable rate and taxable base.",
+      "values": {
+        "rate": "",
+        "net": "100",
+        "gross": "120",
+        "tax": ""
+      }
+    }
   ]
 }

@@ -1,5 +1,7 @@
 # One canonical URL per document. Query strings are retained by Pages.
 # Renamed calculators: preserve old route ownership, with no redirect chains.
+# Keep the dedicated minimum-payment tool explicit across static hosts.
+/credit-card-minimum-payment-calculator.html /credit-card-minimum-payment-calculator 301
 / /financial-calculator 301
 /index.html /financial-calculator 301
 /glossary.html /glossary/ 301

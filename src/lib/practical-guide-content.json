@@ -5763,7 +5763,7 @@
       "vat"
     ],
     "title": "Tax-Inclusive Prices: Sales Tax and VAT Arithmetic Explained",
-    "answer": "Tax added to a base price and tax already included in a gross price require different operations. Entered rates illustrate arithmetic, not jurisdictional taxability.",
+    "answer": "To add an entered tax rate, multiply the taxable base by 1 + rate. To remove included tax, divide the gross total by 1 + rate. Work through a receipt, choose the amounts you know and compare the tax dollars; these tools do not look up local rates or determine taxability.",
     "sections": [
       {
         "title": "Calculate an added tax from the base",
@@ -5771,7 +5771,7 @@
       },
       {
         "title": "Recover included tax by division",
-        "text": "When VAT is included in a gross total, divide gross by one plus the decimal rate to recover net. At 20%, a $120 gross amount contains $100 net and $20 tax. Taking 20% of $120 would give $24 and overstate the included tax. The VAT tool can solve from the supported entered pair; blank unknown fields should not be filled with a guessed zero."
+        "text": "When VAT is included in a gross total, divide gross by one plus the decimal rate to recover net. At 20%, a $120 gross amount contains $100 net and $20 tax. Taking 20% of $120 would give $24 and overstate the included tax. The VAT tool can solve from the supported entered pair; blank unknown fields should not be filled with a guessed zero. The same identity also removes an entered U.S. sales-tax rate from a total: $107 / 1.07 = $100 before tax and $7 tax."
       },
       {
         "title": "Keep compliance outside a pricing identity",
@@ -5802,8 +5802,12 @@
     ],
     "sources": [
       {
-        "href": "https://www.gov.uk/vat-businesses/charging-vat",
-        "label": "GOV.UK: VAT-inclusive and exclusive pricing context"
+        "href": "https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/taxable_receipt.htm",
+        "label": "New York Tax Department: taxable receipt, discounts and additional charges (New York scope)"
+      },
+      {
+        "href": "https://www.gov.uk/charge-reclaim-record-vat",
+        "label": "GOV.UK: charging VAT and VAT-inclusive pricing (UK scope)"
       }
     ],
     "cases": [
@@ -5812,14 +5816,14 @@
         "tool": "Sales Tax Calculator",
         "path": "/sales-tax-calculator",
         "mode": "after",
-        "label": "Baseline",
+        "label": "Entered rate 7%; unchanged $100 base",
         "values": {
           "before": "100",
           "rate": "7"
         },
         "focus": {
-          "label": "Before-tax price",
-          "value": 100,
+          "label": "Sales tax",
+          "value": 7,
           "format": "money"
         },
         "metrics": [
@@ -5863,14 +5867,14 @@
         "tool": "Sales Tax Calculator",
         "path": "/sales-tax-calculator",
         "mode": "after",
-        "label": "Change Sales tax rate to 0",
+        "label": "Entered rate 0%; unchanged $100 base",
         "values": {
           "before": "100",
           "rate": "0"
         },
         "focus": {
-          "label": "Before-tax price",
-          "value": 100,
+          "label": "Sales tax",
+          "value": 0,
           "format": "money"
         },
         "metrics": [
@@ -5914,7 +5918,7 @@
         "tool": "VAT Calculator",
         "path": "/vat-calculator",
         "mode": "any-two",
-        "label": "Baseline",
+        "label": "Entered rate 20%; unchanged $100 base",
         "values": {
           "rate": "20",
           "net": "100",
@@ -5922,8 +5926,8 @@
           "tax": ""
         },
         "focus": {
-          "label": "Net amount",
-          "value": 100,
+          "label": "VAT amount",
+          "value": 20,
           "format": "money"
         },
         "metrics": [
@@ -5977,7 +5981,7 @@
         "tool": "VAT Calculator",
         "path": "/vat-calculator",
         "mode": "any-two",
-        "label": "Change VAT rate to 10",
+        "label": "Entered rate 10%; unchanged $100 base",
         "values": {
           "rate": "10",
           "net": "100",
@@ -5985,8 +5989,8 @@
           "tax": ""
         },
         "focus": {
-          "label": "Net amount",
-          "value": 100,
+          "label": "VAT amount",
+          "value": 10,
           "format": "money"
         },
         "metrics": [
