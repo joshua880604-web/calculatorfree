@@ -1,0 +1,146 @@
+{
+  "auto-loan": [
+    {
+      "title": "Solve a vehicle price from a $600 loan-payment budget",
+      "mode": "price",
+      "values": {
+        "tax_state": "Manual",
+        "purchase_year": "2026",
+        "payment": "600",
+        "months": "60",
+        "rate": "6",
+        "rebate": "0",
+        "down": "5000",
+        "trade": "0",
+        "owed": "0",
+        "tax": "7",
+        "fees": "500",
+        "trade_credit": "Yes",
+        "rebate_tax": "No",
+        "finance_fees": "Yes"
+      },
+      "inputs": "$600 monthly financing budget; 60 months; 6% nominal rate; $5,000 down; manual 7% price-based tax and $500 financed fees.",
+      "steps": [
+        "Discount 60 monthly $600 payments at 0.5% per month to find the supported principal.",
+        "Solve principal = vehicle price × 1.07 − $5,000 + $500 under the entered manual tax assumptions.",
+        "Keep fuel, insurance and maintenance outside this loan-only budget."
+      ],
+      "answer": "Vehicle price: $33,210.59; monthly loan payment: $600.00.",
+      "expected": {
+        "label": "Vehicle price",
+        "value": 33210.59481371884,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "personal-loan": [
+    {
+      "title": "Read a separately paid personal-loan fee as net initial cash",
+      "mode": "repayment",
+      "values": {
+        "principal": "20000",
+        "years": "3",
+        "months": "0",
+        "rate": "12",
+        "origination": "3",
+        "documentation": "0",
+        "other_fee": "0",
+        "treatment": "Paid upfront",
+        "insurance": "0"
+      },
+      "inputs": "$20,000 loan; 36 months; 12% nominal rate; 3% origination fee.",
+      "steps": [
+        "Enter Paid upfront for the $600 fee; the gross disbursement and separate fee payment net to $19,400 at time zero.",
+        "Amortize $20,000 over 36 months; no insurance is entered.",
+        "Subtract net initial cash from total installments without adding the fee a second time."
+      ],
+      "answer": "Payment: $664.29; total outflow minus net cash: $4,514.30.",
+      "expected": {
+        "label": "Payment including insurance",
+        "value": 664.2861962570239,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Separate $20 monthly insurance from loan interest",
+      "mode": "repayment",
+      "values": {
+        "principal": "20000",
+        "years": "3",
+        "months": "0",
+        "rate": "12",
+        "origination": "3",
+        "documentation": "0",
+        "other_fee": "0",
+        "treatment": "Deducted from proceeds",
+        "insurance": "20"
+      },
+      "inputs": "$20,000 loan; 36 months; 12% nominal rate; 3% origination fee.",
+      "steps": [
+        "Deduct the 3% fee from $20,000, leaving $19,400 net cash.",
+        "Add $20 per month to the principal-and-interest installment; 36 insurance payments total $720.",
+        "Use the combined payment for modeled cash-flow APR, without asserting regulatory charge treatment."
+      ],
+      "answer": "Payment including insurance: $684.29; total installment outflow: $24,634.30.",
+      "expected": {
+        "label": "Payment including insurance",
+        "value": 684.2861962570239,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "student-loan": [
+    {
+      "title": "Add $1,200 annually to a student loan",
+      "mode": "extra",
+      "values": {
+        "principal": "30000",
+        "years": "10",
+        "months": "0",
+        "rate": "6",
+        "extra_monthly": "0",
+        "extra_yearly": "1200",
+        "extra_once": "0",
+        "extra_once_month": "1"
+      },
+      "inputs": "$30,000 balance; ten-year contract; 6% nominal rate.",
+      "steps": [
+        "Keep the original $333.0615 contractual monthly installment.",
+        "Add $1,200 at month 12 and each twelfth payment afterward.",
+        "Recalculate interest on the reduced balance and cap the final payment at the amount owed."
+      ],
+      "answer": "87 modeled payments; total interest: $7,208.37.",
+      "expected": {
+        "label": "Total interest",
+        "value": 7208.369069672997,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Make one $1,200 extra student-loan payment",
+      "mode": "extra",
+      "values": {
+        "principal": "30000",
+        "years": "10",
+        "months": "0",
+        "rate": "6",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "1200",
+        "extra_once_month": "1"
+      },
+      "inputs": "$30,000 balance; ten-year contract; 6% nominal rate.",
+      "steps": [
+        "Keep the original $333.0615 contractual monthly installment.",
+        "Add $1,200 at the first scheduled payment only, after that month’s interest.",
+        "Recalculate interest on the reduced balance and cap the final payment at the amount owed."
+      ],
+      "answer": "114 modeled payments; total interest: $9,024.50.",
+      "expected": {
+        "label": "Total interest",
+        "value": 9024.503262950775,
+        "tolerance": 1e-06
+      }
+    }
+  ]
+}

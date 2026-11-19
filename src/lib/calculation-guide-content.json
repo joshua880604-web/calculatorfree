@@ -3401,16 +3401,16 @@
       "path": "/guides/how-to-calculate-personal-loan-payments/",
       "title": "How to Calculate Personal Loan Payments, Fees and Total Cost",
       "heading": "How to Calculate Personal Loan Payments, Fees and Total Cost",
-      "description": "Calculate personal loan installments, net proceeds and borrowing cost. Compare deducted or financed fees and a longer term using four reproducible examples.",
+      "description": "Calculate personal loan installments, net proceeds and borrowing cost. Compare deducted or financed fees and a longer term using six reproducible examples.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "personal-loan"
       ],
       "topic": "Loans & debt",
       "breadcrumb": "How to Calculate Personal Loan Payments, Fees and Total Cost",
-      "cardIntro": "Calculate personal loan installments, net proceeds and borrowing cost. Compare deducted or financed fees and a longer term using four reproducible examples.",
+      "cardIntro": "Calculate personal loan installments, net proceeds and borrowing cost. Compare deducted or financed fees and a longer term using six reproducible examples.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/personal-loan-calculator",
     "calculatorLabel": "Personal Loan Calculator",
@@ -3470,6 +3470,16 @@
           "For extra principal on an existing balance, use the linked Loan Repayment Calculator with the actual balance and contractual payment. The Personal Loan form models the contracted schedule and fee-adjusted cash flows; it does not simulate a new extra-payment plan or apply a prepayment penalty. Check contract terms separately."
         ],
         "formula": ""
+      },
+      {
+        "id": "upfront-and-insurance",
+        "title": "Read upfront fees and recurring insurance without counting them twice",
+        "formula": "Cash-flow cost = total installments + entered insurance payments − net initial cash",
+        "paragraphs": [
+          "For a $20,000 loan with a 3% fee paid upfront, the lender’s gross disbursement can be $20,000 while you separately pay $600. This model reports $19,400 as net initial cash and uses that same time-zero net amount for its APR calculation. The deducted-fee case also nets to $19,400, with the same scheduled payment and cash-flow APR; the transaction mechanics are different even though this simplified net cash flow is equal.",
+          "Do not add the $600 fee a second time to “outflow minus net cash”: it is already captured by reducing initial cash. Financing the fee instead repays $20,600 while supplying $20,000 net cash. Those rows do not hold cash received constant across every treatment.",
+          "The entered $20 per-payment insurance example adds $720 over 36 monthly payments. The principal-and-interest schedule still excludes those insurance charges, while “Payment including insurance” and the table’s total installment outflow include them. The modeled nominal APR includes all entered insurance without deciding which charges belong in a lender’s legally disclosed APR. Check the actual disclosure and whether insurance is optional."
+        ]
       }
     ],
     "columns": [
@@ -3477,11 +3487,12 @@
       "Net initial cash",
       "Payment including insurance",
       "Total installment outflow",
-      "Outflow minus net cash"
+      "Outflow minus net cash",
+      "Modeled nominal cash-flow APR"
     ],
     "chart": "personal-guide",
-    "chartAlt": "Modeled personal loan borrowing costs with no fee, deducted fees, financed fees and a longer repayment term.",
-    "chartCaption": "Fixed monthly hypothetical inputs. Net cash and repayment balances differ between fee treatments; these are not matched-net-proceeds offers.",
+    "chartAlt": "Modeled personal-loan outflow minus net initial cash across six fee, term and insurance examples.",
+    "chartCaption": "Outflow includes all entered monthly insurance. Net initial cash subtracts a separately paid fee at time zero as well as a deducted fee; it is not always the lender’s gross deposit. Modeled APR is not a regulatory disclosure.",
     "questions": [
       {
         "question": "What is the payment on a $20,000 personal loan?",
@@ -3541,6 +3552,11 @@
         "href": "/glossary/amortization/",
         "label": "Loan amortization glossary"
       }
+    ],
+    "reviewNotes": [
+      "For Paid upfront, a $20,000 gross disbursement minus a separate $600 fee nets to $19,400 initial cash, just like the deducted-fee cash-flow example. Net initial cash is not always the amount deposited by the lender.",
+      "Outflow minus net cash already includes the upfront or deducted fee. Do not add it again. Financed-fee rows supply a different net amount from deducted-fee rows.",
+      "The $20 monthly insurance row adds $720 over 36 months. The principal-and-interest schedule excludes insurance; the combined payment, table outflow and modeled cash-flow APR include it. APR here does not classify regulatory finance charges."
     ]
   },
   "student": {
@@ -3548,15 +3564,16 @@
       "path": "/guides/how-to-calculate-student-loan-payments/",
       "title": "How to Calculate Student Loan Payments and Early Payoff",
       "heading": "How to Calculate Student Loan Payments and Early Payoff",
-      "description": "Calculate fixed monthly student loan payments and compare extra principal with a longer term. Four reproducible cases distinguish modeled interest from servicer payoff quotes.",
+      "description": "Calculate fixed monthly student loan payments and compare extra principal with a longer term. Six reproducible cases distinguish modeled interest from servicer payoff quotes.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "student-loan"
       ],
       "topic": "Loans & debt",
       "breadcrumb": "How to Calculate Student Loan Payments and Early Payoff",
-      "cardIntro": "Calculate fixed monthly student loan payments and compare extra principal with a longer term. Four reproducible cases distinguish modeled interest from servicer payoff quotes.",
-      "format": "Calculation guide & model check"
+      "cardIntro": "Calculate fixed monthly student loan payments and compare extra principal with a longer term. Six reproducible cases distinguish modeled interest from servicer payoff quotes.",
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/student-loan-calculator",
     "calculatorLabel": "Student Loan Calculator",
@@ -3616,6 +3633,16 @@
           "A decision to prepay can also affect emergency cash, other debt and potential program benefits. This tool does not calculate income-driven payments, forgiveness, tax deductions or the value of federal protections. Do not use the interest difference alone as a recommendation to refinance or abandon a program."
         ],
         "formula": ""
+      },
+      {
+        "id": "extra-timing",
+        "title": "Separate monthly, annual and one-time extra payments",
+        "formula": "Monthly interest = opening balance × 6% / 12; principal paid = capped payment − interest",
+        "paragraphs": [
+          "An extra $100 every month and $1,200 once each year share a $1,200 annual extra budget during full active years, but not the same timing. The annual case applies the extra at the twelfth scheduled payment and every twelve payments afterward. Monthly extras begin reducing principal earlier. After early payoff, extras stop; the final partial year need not use the same total cash.",
+          "The separate one-time $1,200 case pays extra at the first scheduled month only. It is neither $1,200 every year nor an immediate principal reduction before first-month interest. Keep the contracted ten-year installment when comparing these extra-payment patterns; the final installment is capped at principal plus that period’s interest.",
+          "These equal-month schedules exclude daily accrual, payment posting delays, fees, separate loan-group allocation, income-driven repayment and forgiveness. Ask the servicer how extra money is applied and whether regular future payments should continue. A model balance is not a dated payoff quote."
+        ]
       }
     ],
     "columns": [
@@ -3626,8 +3653,8 @@
       "Total paid"
     ],
     "chart": "student-guide",
-    "chartAlt": "Total modeled student loan interest falls with extra monthly principal and rises with a longer contractual term.",
-    "chartCaption": "Same $30,000 balance and 6% entered rate. Extra-payment cases retain the ten-year contractual payment and reduce principal monthly; the final installment is capped.",
+    "chartAlt": "Modeled total interest for six student-loan schedules with different terms and monthly, annual or one-time extra principal.",
+    "chartCaption": "One $30,000 balance at a hypothetical 6% nominal rate. Annual extras arrive in months 12, 24 and so on; a one-time extra in month 1 is not a recurring annual budget.",
     "questions": [
       {
         "question": "How much is a $30,000 student loan payment?",
@@ -3682,6 +3709,11 @@
         "href": "/glossary/amortization/",
         "label": "Loan amortization glossary"
       }
+    ],
+    "reviewNotes": [
+      "Annual extra payments arrive in months 12, 24 and so on. A $1,200 annual budget and $100 every month have different timing; extras stop when the loan is repaid.",
+      "The $1,200 one-time row applies only in month 1, after that month’s interest. It does not repeat each year or reduce principal before first-month interest.",
+      "These are fixed equal-month projections with a capped final payment. Confirm servicer allocation and continued regular payments; daily accrued interest, loan-group allocation, income-driven repayment and forgiveness are excluded."
     ]
   },
   "business": {
@@ -4955,16 +4987,16 @@
       "path": "/guides/how-to-calculate-auto-loan-payments/",
       "title": "How to Calculate Auto Loan Payments, Taxes and Trade Equity",
       "heading": "How to Calculate Auto Loan Payments, Taxes and Trade Equity",
-      "description": "Calculate auto loan payments from price, down payment, trade debt and entered taxes. Five reproducible cases compare term, upfront cash and interest.",
+      "description": "Calculate auto loan payments from price, down payment, trade debt and entered taxes. Seven reproducible cases compare term, upfront cash and interest.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "auto-loan"
       ],
       "topic": "Loans & debt",
       "breadcrumb": "How to Calculate Auto Loan Payments, Taxes and Trade Equity",
-      "cardIntro": "Calculate auto loan payments from price, down payment, trade debt and entered taxes. Five reproducible cases compare term, upfront cash and interest.",
+      "cardIntro": "Calculate auto loan payments from price, down payment, trade debt and entered taxes. Seven reproducible cases compare term, upfront cash and interest.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/auto-loan-calculator",
     "calculatorLabel": "Auto Loan Calculator",
@@ -5024,18 +5056,28 @@
           "This purchase calculator also has a price solver, but it does not evaluate a complete household affordability budget. For extra principal on an existing balance, use Loan Repayment Calculator and review the separate early-payoff guide. Prepayment penalties, daily interest and contract-specific charges require separate checks."
         ],
         "formula": ""
+      },
+      {
+        "id": "reverse-budget",
+        "title": "Solve a vehicle price from a loan-payment budget",
+        "formula": "Target principal = payment × [1 − (1 + monthly rate)^(−months)] / monthly rate",
+        "paragraphs": [
+          "With $600 per month, 60 months and a hypothetical 6% nominal rate, first find the principal supported by the loan payment. Under the example’s manual 7% price-based tax, $500 financed fees and $5,000 down payment, solve price from principal = price × 1.07 − $5,000 + $500. The resulting vehicle price is about $33,210.59. The financed amount and vehicle sticker price are different figures.",
+          "This is a financing budget, not a full car-affordability budget. Insurance, fuel, maintenance and other ownership costs remain separate. In the trade comparison, $8,000 value and $11,000 owed produce $3,000 negative equity. Switching the manual trade-tax credit off adds $560 tax and financing; it does not change that $3,000 debt gap. Select real tax treatment and confirm the contract rather than treating this illustration as a state rule."
+        ]
       }
     ],
     "columns": [
       "Scenario",
+      "Vehicle price",
       "Monthly loan payment",
       "Upfront cash",
       "Financed amount",
       "Total loan interest"
     ],
     "chart": "auto-guide",
-    "chartAlt": "Total auto loan interest under different terms, tax financing, trade debt and down payments.",
-    "chartCaption": "All cases use explicit Manual tax assumptions, not a jurisdiction tax ruling. Trade-debt financing and any selected trade-in tax credit are separate calculations.",
+    "chartAlt": "Total modeled interest for seven auto-loan scenarios, including manual trade-tax treatment and a vehicle price solved from a monthly loan budget.",
+    "chartCaption": "Manual tax assumptions only, not state-law determinations. The final row solves a different vehicle price from a $600 loan-payment budget; it is not a fixed-price offer comparison.",
     "questions": [
       {
         "question": "Should I enter car price or loan amount?",
@@ -5071,6 +5113,10 @@
       {
         "href": "https://www.consumerfinance.gov/consumer-tools/auto-loans/",
         "label": "CFPB: comparing auto loan terms and purchase documents"
+      },
+      {
+        "href": "https://www.consumerfinance.gov/ask-cfpb/should-i-trade-in-my-car-if-its-not-paid-off-en-2045/",
+        "label": "CFPB: unpaid trade-in debt and negative equity"
       }
     ],
     "related": [
@@ -5094,6 +5140,11 @@
         "href": "/guides/leasing-vs-buying-a-car/",
         "label": "Leasing vs Buying a Car"
       }
+    ],
+    "reviewNotes": [
+      "Every case uses Manual tax treatment and explicitly restores purchase year, tax flags, trade value and trade debt. No state tax entitlement is inferred.",
+      "The $8,000 trade with $11,000 owed adds $3,000 negative equity. Turning the manual trade-tax credit off adds $560 tax at 7%; debt and tax credit are separate.",
+      "The $600 budget row solves a different vehicle price. This is a loan-payment budget and excludes fuel, insurance and maintenance."
     ]
   },
   "boat": {

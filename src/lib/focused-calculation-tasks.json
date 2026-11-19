@@ -596,5 +596,184 @@
         "advisor": "1"
       }
     }
+  ],
+  "auto-loan": [
+    {
+      "keyword": "Car payment calculator",
+      "mode": "payment",
+      "description": "Calculate a car loan payment with the stated manual tax, down payment and financed fees. Ownership expenses remain separate.",
+      "values": {
+        "tax_state": "Manual",
+        "purchase_year": "2026",
+        "price": "35000",
+        "months": "60",
+        "rate": "6",
+        "rebate": "0",
+        "down": "5000",
+        "trade": "0",
+        "owed": "0",
+        "tax": "7",
+        "fees": "500",
+        "trade_credit": "Yes",
+        "rebate_tax": "No",
+        "finance_fees": "Yes"
+      },
+      "aliases": [
+        "Car loan calculator",
+        "Auto loan calculator with taxes and fees"
+      ]
+    },
+    {
+      "keyword": "Auto loan calculator with trade in",
+      "mode": "payment",
+      "description": "Keep trade-in value separate from its unpaid loan. This manual example rolls $3,000 negative equity into financing; tax treatment is an entered assumption.",
+      "values": {
+        "tax_state": "Manual",
+        "purchase_year": "2026",
+        "price": "35000",
+        "months": "60",
+        "rate": "6",
+        "rebate": "0",
+        "down": "5000",
+        "trade": "8000",
+        "owed": "11000",
+        "tax": "7",
+        "fees": "500",
+        "trade_credit": "Yes",
+        "rebate_tax": "No",
+        "finance_fees": "Yes"
+      },
+      "aliases": [
+        "Auto loan calculator with trade in and sales tax"
+      ]
+    },
+    {
+      "keyword": "Car affordability calculator by monthly payment",
+      "mode": "price",
+      "description": "Solve vehicle price from a $600 monthly loan budget, fixed term, down payment and manual taxes and fees. This does not budget insurance, fuel or maintenance.",
+      "values": {
+        "tax_state": "Manual",
+        "purchase_year": "2026",
+        "payment": "600",
+        "months": "60",
+        "rate": "6",
+        "rebate": "0",
+        "down": "5000",
+        "trade": "0",
+        "owed": "0",
+        "tax": "7",
+        "fees": "500",
+        "trade_credit": "Yes",
+        "rebate_tax": "No",
+        "finance_fees": "Yes"
+      }
+    }
+  ],
+  "personal-loan": [
+    {
+      "keyword": "Personal loan calculator with origination fee",
+      "mode": "repayment",
+      "description": "Estimate payments, net initial cash and a modeled cash-flow APR with the fee deducted. Actual disclosures and fee classification require separate checks.",
+      "values": {
+        "principal": "20000",
+        "years": "3",
+        "months": "0",
+        "rate": "12",
+        "origination": "3",
+        "documentation": "0",
+        "other_fee": "0",
+        "treatment": "Deducted from proceeds",
+        "insurance": "0"
+      },
+      "aliases": [
+        "Personal loan calculator",
+        "Personal loan payment calculator",
+        "Personal loan APR calculator"
+      ]
+    },
+    {
+      "keyword": "Personal loan calculator with financed fees",
+      "mode": "repayment",
+      "description": "Finance the entered fee into the repayment balance. Compare net cash received as well as monthly installments; fee treatments do not all supply the same net cash.",
+      "values": {
+        "principal": "20000",
+        "years": "3",
+        "months": "0",
+        "rate": "12",
+        "origination": "3",
+        "documentation": "0",
+        "other_fee": "0",
+        "treatment": "Financed",
+        "insurance": "0"
+      }
+    },
+    {
+      "keyword": "Personal loan calculator with insurance",
+      "mode": "repayment",
+      "description": "Add an entered $20 per-payment insurance charge to the deducted-fee example. The payment including insurance differs from the principal-and-interest schedule.",
+      "values": {
+        "principal": "20000",
+        "years": "3",
+        "months": "0",
+        "rate": "12",
+        "origination": "3",
+        "documentation": "0",
+        "other_fee": "0",
+        "treatment": "Deducted from proceeds",
+        "insurance": "20"
+      }
+    }
+  ],
+  "student-loan": [
+    {
+      "keyword": "Student loan payment calculator",
+      "mode": "normal",
+      "description": "Estimate fixed monthly student loan payments and interest from an entered balance, rate and term. Daily accrual, income-driven plans and forgiveness are not calculated.",
+      "values": {
+        "principal": "30000",
+        "years": "10",
+        "months": "0",
+        "rate": "6"
+      },
+      "aliases": [
+        "Student loan interest calculator",
+        "Student loan calculator",
+        "Student loan repayment calculator"
+      ]
+    },
+    {
+      "keyword": "Student loan payoff calculator",
+      "mode": "extra",
+      "description": "Estimate the effect of extra monthly, annual or one-time student-loan payments. This is a fixed-rate repayment model, not an income-driven repayment or forgiveness estimate.",
+      "values": {
+        "principal": "30000",
+        "years": "10",
+        "months": "0",
+        "rate": "6",
+        "extra_monthly": "100",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1"
+      },
+      "aliases": [
+        "Student loan extra payment calculator",
+        "Student loan calculator extra payments"
+      ]
+    },
+    {
+      "keyword": "Student loan calculator with annual extra payments",
+      "mode": "extra",
+      "description": "Keep the ten-year contractual installment and add $1,200 in month 12 and each year afterward. Annual timing differs from $100 extra every month.",
+      "values": {
+        "principal": "30000",
+        "years": "10",
+        "months": "0",
+        "rate": "6",
+        "extra_monthly": "0",
+        "extra_yearly": "1200",
+        "extra_once": "0",
+        "extra_once_month": "1"
+      }
+    }
   ]
 }

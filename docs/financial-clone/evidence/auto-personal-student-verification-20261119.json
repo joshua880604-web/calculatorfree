@@ -1,0 +1,640 @@
+{
+  "date": "2026-11-19",
+  "status": "validated; remote preview deployment pending; production publication pending",
+  "scope": [
+    "auto-loan",
+    "personal-loan",
+    "student-loan"
+  ],
+  "tests": {
+    "passed": 3036,
+    "failed": 0,
+    "log": "/workspace/work/auto-personal-student-content-20261119/tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "npm run typecheck -- --incremental false",
+    "log": "/workspace/work/auto-personal-student-content-20261119/typecheck.log"
+  },
+  "build": {
+    "passed": true,
+    "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build",
+    "log": "/workspace/work/auto-personal-student-content-20261119/build.log"
+  },
+  "independentMath": {
+    "passed": true,
+    "cases": 19,
+    "numericChecks": 406,
+    "decimalPrecision": 70,
+    "reference": "auto-personal-student-reference-20261119.json",
+    "command": "python scripts/check-auto-personal-student-reference.py"
+  },
+  "compatibility": {
+    "passed": true,
+    "existingEntries": 169,
+    "existingModes": 354,
+    "fieldsDefaultsAndResultsUnchanged": true,
+    "originalWorkedExamplesPreserved": 13
+  },
+  "browser": {
+    "passed": true,
+    "uniquePages": 6,
+    "checks": [
+      {
+        "kind": "page",
+        "path": "/auto-loan-calculator",
+        "width": 320,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-auto-loan-payments/",
+        "width": 320,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/personal-loan-calculator",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-personal-loan-payments/",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/student-loan-calculator",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-student-loan-payments/",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/auto-loan-calculator",
+        "width": 390,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-auto-loan-payments/",
+        "width": 390,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/personal-loan-calculator",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-personal-loan-payments/",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/student-loan-calculator",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-student-loan-payments/",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/auto-loan-calculator",
+        "width": 768,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-auto-loan-payments/",
+        "width": 768,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "auto",
+        "label": "60 months, financed tax and fees",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "auto",
+        "label": "72 months, financed tax and fees",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "auto",
+        "label": "60 months, tax and fees upfront",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "auto",
+        "label": "USD 8,000 trade, USD 11,000 owed",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "auto",
+        "label": "USD 8,000 down payment",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "auto",
+        "label": "Same trade debt, no tax credit",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "auto",
+        "label": "Solve price from a USD 600 budget",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "auto-loan",
+        "keyword": "Car payment calculator",
+        "mode": "payment",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "auto-loan",
+        "keyword": "Auto loan calculator with trade in",
+        "mode": "payment",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "auto-loan",
+        "keyword": "Car affordability calculator by monthly payment",
+        "mode": "price",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "auto-loan",
+        "keyword": "Car payment calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "auto-loan",
+        "keyword": "Auto loan calculator with trade in",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "auto-loan",
+        "keyword": "Car affordability calculator by monthly payment",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "auto-loan"
+      },
+      {
+        "kind": "page",
+        "path": "/personal-loan-calculator",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-personal-loan-payments/",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "personal",
+        "label": "36 months, no origination fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "personal",
+        "label": "36 months, fee deducted",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "personal",
+        "label": "36 months, fee financed",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "personal",
+        "label": "60 months, fee deducted",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "personal",
+        "label": "36 months, fee paid upfront",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "personal",
+        "label": "Deducted fee + USD 20 monthly insurance",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "personal-loan",
+        "keyword": "Personal loan calculator with origination fee",
+        "mode": "repayment",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "personal-loan",
+        "keyword": "Personal loan calculator with financed fees",
+        "mode": "repayment",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "personal-loan",
+        "keyword": "Personal loan calculator with insurance",
+        "mode": "repayment",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "personal-loan",
+        "keyword": "Personal loan calculator with origination fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "personal-loan",
+        "keyword": "Personal loan calculator with financed fees",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "personal-loan",
+        "keyword": "Personal loan calculator with insurance",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "personal-loan"
+      },
+      {
+        "kind": "page",
+        "path": "/student-loan-calculator",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-student-loan-payments/",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "student",
+        "label": "10-year fixed monthly schedule",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "student",
+        "label": "20-year term, same balance and rate",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "student",
+        "label": "10-year contract + USD 100 monthly",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "student",
+        "label": "10-year contract + USD 200 monthly",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "student",
+        "label": "10-year contract + USD 1,200 each year",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "student",
+        "label": "10-year contract + USD 1,200 in month 1",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "student-loan",
+        "keyword": "Student loan payment calculator",
+        "mode": "normal",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "student-loan",
+        "keyword": "Student loan payoff calculator",
+        "mode": "extra",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "student-loan",
+        "keyword": "Student loan calculator with annual extra payments",
+        "mode": "extra",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "student-loan",
+        "keyword": "Student loan payment calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "student-loan",
+        "keyword": "Student loan payoff calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "student-loan",
+        "keyword": "Student loan calculator with annual extra payments",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "student-loan"
+      },
+      {
+        "kind": "page",
+        "path": "/auto-loan-calculator",
+        "width": 1440,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-auto-loan-payments/",
+        "width": 1440,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/personal-loan-calculator",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-personal-loan-payments/",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/student-loan-calculator",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-student-loan-payments/",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/auto-loan-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-calculate-auto-loan-payments/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/personal-loan-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-calculate-personal-loan-payments/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/student-loan-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-calculate-student-loan-payments/",
+        "readableCases": true
+      }
+    ],
+    "downloads": [
+      {
+        "path": "/auto-loan-calculator",
+        "file": "auto-cases.csv",
+        "cases": 7
+      },
+      {
+        "path": "/guides/how-to-calculate-auto-loan-payments/",
+        "file": "auto-cases.csv",
+        "cases": 7
+      },
+      {
+        "path": "/personal-loan-calculator",
+        "file": "personal-cases.csv",
+        "cases": 6
+      },
+      {
+        "path": "/guides/how-to-calculate-personal-loan-payments/",
+        "file": "personal-cases.csv",
+        "cases": 6
+      },
+      {
+        "path": "/student-loan-calculator",
+        "file": "student-cases.csv",
+        "cases": 6
+      },
+      {
+        "path": "/guides/how-to-calculate-student-loan-payments/",
+        "file": "student-cases.csv",
+        "cases": 6
+      }
+    ],
+    "errors": []
+  },
+  "staticAudit": {
+    "passed": true,
+    "canonicalPages": 469,
+    "brokenFiles": [],
+    "brokenFragments": [],
+    "orphanPages": [],
+    "reviewedPages": [
+      {
+        "path": "/auto-loan-calculator",
+        "canonical": "https://www.calculatorfree.io/auto-loan-calculator",
+        "incomingPages": 21,
+        "oneH1": true
+      },
+      {
+        "path": "/personal-loan-calculator",
+        "canonical": "https://www.calculatorfree.io/personal-loan-calculator",
+        "incomingPages": 13,
+        "oneH1": true
+      },
+      {
+        "path": "/student-loan-calculator",
+        "canonical": "https://www.calculatorfree.io/student-loan-calculator",
+        "incomingPages": 9,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-calculate-auto-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-calculate-auto-loan-payments/",
+        "incomingPages": 9,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-calculate-personal-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-calculate-personal-loan-payments/",
+        "incomingPages": 7,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-calculate-student-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-calculate-student-loan-payments/",
+        "incomingPages": 5,
+        "oneH1": true
+      }
+    ],
+    "newGuideToolLinksReciprocal": true,
+    "previousIndexingPolicyPreserved": true
+  },
+  "visual": {
+    "desktopAndMobileInspected": true,
+    "allThreeChartsDecodedAndInspected": true,
+    "screenshots": [
+      "/workspace/work/auto-personal-student-content-20261119/auto-320.png",
+      "/workspace/work/auto-personal-student-content-20261119/auto-1440.png",
+      "/workspace/work/auto-personal-student-content-20261119/auto-chart.png",
+      "/workspace/work/auto-personal-student-content-20261119/personal-320.png",
+      "/workspace/work/auto-personal-student-content-20261119/personal-1440.png",
+      "/workspace/work/auto-personal-student-content-20261119/personal-chart.png",
+      "/workspace/work/auto-personal-student-content-20261119/student-320.png",
+      "/workspace/work/auto-personal-student-content-20261119/student-1440.png",
+      "/workspace/work/auto-personal-student-content-20261119/student-chart.png"
+    ]
+  },
+  "limits": [
+    "Native Safari unverified",
+    "External professional review unverified",
+    "Remote HTTP bodies unverified",
+    "No state tax rule, regulatory APR classification, or repayment program update",
+    "No indexing, ranking or AdSense approval guarantee"
+  ]
+}

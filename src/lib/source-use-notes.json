@@ -1762,6 +1762,11 @@
       "role": "concept",
       "usedFor": "Distinguishing fund charges, fee-related lost growth and deposit rate conventions as applicable.",
       "scope": "Definitions and financial context only; no endorsement, guaranteed product offer, bank-statement parity or independent professional certification."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/should-i-trade-in-my-car-if-its-not-paid-off-en-2045/": {
+      "role": "concept",
+      "usedFor": "Explain negative trade equity and the difference between a payoff amount and a statement balance.",
+      "scope": "No state tax, lender approval or numeric certification."
     }
   },
   "pages": {
@@ -2085,22 +2090,24 @@
       "note": "References explain repayment priorities and issuer practices. This site calculates its own fixed-input monthly illustration; daily balances, changing minimums and actual statement rules may differ."
     },
     "calculator:personal-loan": {
-      "note": "Separate the payment method from product rules, fees and eligibility. The entered rates and charges are assumptions; this schedule is not a lender disclosure or legal qualification test.",
+      "note": "Concept references explain trade debt, fee cash flows or payment allocation; they do not certify the independently calculated hypothetical results. Manual auto taxes are entered assumptions; personal-loan APR does not classify regulatory charges; student schedules exclude daily accrual and program eligibility.",
       "extras": [
         {
           "title": "OpenStax 8.3: periodic loan payment and amortization method",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:student-loan": {
-      "note": "Separate the payment method from product rules, fees and eligibility. The entered rates and charges are assumptions; this schedule is not a lender disclosure or legal qualification test.",
+      "note": "Concept references explain trade debt, fee cash flows or payment allocation; they do not certify the independently calculated hypothetical results. Manual auto taxes are entered assumptions; personal-loan APR does not classify regulatory charges; student schedules exclude daily accrual and program eligibility.",
       "extras": [
         {
           "title": "OpenStax 8.3: periodic loan payment and amortization method",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:business-loan": {
       "note": "Separate the payment method from product rules, fees and eligibility. The entered rates and charges are assumptions; this schedule is not a lender disclosure or legal qualification test.",
@@ -2166,11 +2173,12 @@
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
     },
     "guide:/guides/how-to-calculate-personal-loan-payments/": {
-      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements.",
-      "updatedOn": "2026-11-04"
+      "note": "Concept references explain trade debt, fee cash flows or payment allocation; they do not certify the independently calculated hypothetical results. Manual auto taxes are entered assumptions; personal-loan APR does not classify regulatory charges; student schedules exclude daily accrual and program eligibility.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-to-calculate-student-loan-payments/": {
-      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+      "note": "Concept references explain trade debt, fee cash flows or payment allocation; they do not certify the independently calculated hypothetical results. Manual auto taxes are entered assumptions; personal-loan APR does not classify regulatory charges; student schedules exclude daily accrual and program eligibility.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-to-calculate-business-loan-payments/": {
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
@@ -2711,13 +2719,14 @@
       "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
     },
     "calculator:auto-loan": {
-      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "note": "Concept references explain trade debt, fee cash flows or payment allocation; they do not certify the independently calculated hypothetical results. Manual auto taxes are entered assumptions; personal-loan APR does not classify regulatory charges; student schedules exclude daily accrual and program eligibility.",
       "extras": [
         {
           "title": "OpenStax: periodic loan payment and amortization method",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:salary": {
       "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
@@ -3138,7 +3147,8 @@
       "updatedOn": "2026-11-04"
     },
     "guide:/guides/how-to-calculate-auto-loan-payments/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "Concept references explain trade debt, fee cash flows or payment allocation; they do not certify the independently calculated hypothetical results. Manual auto taxes are entered assumptions; personal-loan APR does not classify regulatory charges; student schedules exclude daily accrual and program eligibility.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/is-refinancing-worth-it/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",

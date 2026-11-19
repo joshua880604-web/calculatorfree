@@ -138,3 +138,7 @@ Preserve current engines, routes, titles and all prior worked examples. Extend e
 ## Fund fees and CD content review — 2026-11-19
 
 Keep the three existing calculator pages and two existing guides. Use full-input tasks for fund loads, advisor fees and exact CD terms; promote six/twelve/fourteen-month terms to executable presets without duplicate keyword pages. Separate gross/net return basis and charged fees/lost growth. Do not rank the different fund models together. Preserve seven unique prior worked examples and merge one exact CD duplicate. Update only five substantive content dates. Engines, defaults, indexing policy and production remain unchanged; preview publication only.
+
+## Auto, personal and student loan content — 2026-11-19
+
+Retain the three existing calculator pages and guides, all thirteen comparison inputs and all thirteen worked examples. Add actual full-input tasks for trade equity, reverse vehicle price, personal financed fees/insurance and annual student extras. Explain net initial cash and insurance outside the loan schedule. Manual auto taxes remain assumptions. Distinguish monthly, annual and one-time extra timing. Engines and defaults stay unchanged. Preview only; production publication awaits user instruction.

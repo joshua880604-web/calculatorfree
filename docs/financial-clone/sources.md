@@ -116,3 +116,7 @@ Reviewed [CFPB note rate versus APR](https://www.consumerfinance.gov/ask-cfpb/wh
 ## Fund fees and CD content review — 2026-11-19
 
 Read [SEC mutual-fund fee categories](https://www.investor.gov/introduction-investing/investing-basics/glossary/mutual-fund-fees-and-expenses), [SEC fees and expenses bulletin](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated), and [CFPB Regulation DD definitions](https://www.consumerfinance.gov/rules-policy/regulations/1030/2/). These support fee/return-basis and APY/nominal distinctions, not current quotes, product-specific load formulas, tax treatment or external numeric certification. Fifteen hypothetical scenarios /192 numeric checks use independent 70-digit Decimal arithmetic. See fund-fees-cd-content-20261119.md.
+
+## Auto, personal and student loan content — 2026-11-19
+
+Read [CFPB unpaid trade-in debt](https://www.consumerfinance.gov/ask-cfpb/should-i-trade-in-my-car-if-its-not-paid-off-en-2045/), [personal installment-loan fees](https://www.consumerfinance.gov/ask-cfpb/do-personal-installment-loans-have-fees-en-2120/) and [student payment allocation](https://www.consumerfinance.gov/ask-cfpb/how-is-my-student-loan-payment-applied-to-my-account-en-605/). Concept references only: no state tax entitlement, regulatory APR classification, live quote, program eligibility or professional certification. The nineteen original examples /406 values use independent 70-digit Decimal arithmetic.
