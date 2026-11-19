@@ -1,0 +1,703 @@
+{
+  "date": "2026-11-19",
+  "status": "validated; remote preview deployment pending; production publication pending",
+  "scope": [
+    "heloc",
+    "home-equity-loan",
+    "debt-consolidation"
+  ],
+  "tests": {
+    "passed": 3075,
+    "failed": 0,
+    "log": "/workspace/work/equity-heloc-consolidation-content-20261119/tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "npm run typecheck -- --incremental false",
+    "log": "/workspace/work/equity-heloc-consolidation-content-20261119/typecheck.log"
+  },
+  "build": {
+    "passed": true,
+    "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build",
+    "log": "/workspace/work/equity-heloc-consolidation-content-20261119/build.log"
+  },
+  "independentMath": {
+    "passed": true,
+    "cases": 23,
+    "numericChecks": 601,
+    "decimalPrecision": 70,
+    "reference": "equity-heloc-consolidation-reference-20261119.json",
+    "command": "python scripts/check-equity-heloc-consolidation-reference.py"
+  },
+  "compatibility": {
+    "passed": true,
+    "existingEntries": 169,
+    "existingModes": 354,
+    "fieldsDefaultsAndResultsUnchanged": true,
+    "originalWorkedExamplesPreserved": 15
+  },
+  "browser": {
+    "passed": true,
+    "uniquePages": 6,
+    "checks": [
+      {
+        "kind": "page",
+        "path": "/heloc-calculator",
+        "width": 320,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "width": 320,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/home-equity-loan-calculator",
+        "width": 320,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "width": 320,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/debt-consolidation-calculator",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-compare-debt-consolidation-loans/",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/heloc-calculator",
+        "width": 390,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "width": 390,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/home-equity-loan-calculator",
+        "width": 390,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "width": 390,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/debt-consolidation-calculator",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-compare-debt-consolidation-loans/",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/heloc-calculator",
+        "width": 768,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "width": 768,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "credit-ceiling-preset-click",
+        "path": "/heloc-calculator",
+        "label": "Assumed 80% ceiling, USD 210,000 mortgage",
+        "completeInputsAndResultVerified": true
+      },
+      {
+        "kind": "credit-ceiling-preset-click",
+        "path": "/heloc-calculator",
+        "label": "Same ceiling, USD 450,000 mortgage",
+        "completeInputsAndResultVerified": true
+      },
+      {
+        "kind": "credit-ceiling-preset-click",
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "label": "Assumed 80% ceiling, USD 210,000 mortgage",
+        "completeInputsAndResultVerified": true
+      },
+      {
+        "kind": "credit-ceiling-preset-click",
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "label": "Same ceiling, USD 450,000 mortgage",
+        "completeInputsAndResultVerified": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "heloc",
+        "label": "Base: 8%, 20-year repayment",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "heloc",
+        "label": "10% throughout",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "heloc",
+        "label": "10-year repayment",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "heloc",
+        "label": "USD 120 annual draw fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "heloc",
+        "label": "USD 1,000 deducted closing cost",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "heloc",
+        "label": "0% rate throughout",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "heloc",
+        "label": "2% closing cost paid upfront",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "heloc",
+        "label": "No draw period; USD 120 annual fee entered",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "heloc",
+        "keyword": "HELOC payment calculator",
+        "mode": "draw-repay",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "heloc",
+        "keyword": "HELOC payment calculator with annual fee",
+        "mode": "draw-repay",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "heloc",
+        "keyword": "HELOC borrowing limit calculator",
+        "mode": "maximum-credit",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "heloc",
+        "keyword": "HELOC payment calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "heloc",
+        "keyword": "HELOC payment calculator with annual fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "heloc",
+        "keyword": "HELOC borrowing limit calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "heloc"
+      },
+      {
+        "kind": "page",
+        "path": "/home-equity-loan-calculator",
+        "width": 768,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "width": 768,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "equity",
+        "label": "15 years, no closing costs",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "equity",
+        "label": "15 years, USD 1,500 upfront costs",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "equity",
+        "label": "15 years, USD 1,500 financed costs",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "equity",
+        "label": "10 years, USD 1,500 upfront costs",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "equity",
+        "label": "20 years, USD 1,500 upfront costs",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "equity",
+        "label": "15 years, USD 1,500 deducted costs",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "equity",
+        "label": "0% rate, USD 1,500 upfront costs",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "home-equity-loan",
+        "keyword": "Home equity loan calculator",
+        "mode": "loan",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "home-equity-loan",
+        "keyword": "Home equity loan calculator with financed closing costs",
+        "mode": "loan",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "home-equity-loan",
+        "keyword": "Home equity loan calculator with deducted closing costs",
+        "mode": "loan",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "home-equity-loan",
+        "keyword": "Home equity loan calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "home-equity-loan",
+        "keyword": "Home equity loan calculator with financed closing costs",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "home-equity-loan",
+        "keyword": "Home equity loan calculator with deducted closing costs",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "home-equity-loan"
+      },
+      {
+        "kind": "page",
+        "path": "/debt-consolidation-calculator",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-compare-debt-consolidation-loans/",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "consolidation",
+        "label": "4 years, 3% fee financed",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "consolidation",
+        "label": "8 years, 3% fee financed",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "consolidation",
+        "label": "4 years, 3% fee upfront",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "consolidation",
+        "label": "4 years, no origination fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "consolidation",
+        "label": "Two cards, 5-year new loan",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "consolidation",
+        "label": "Same two cards, 3-year new loan",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "debt-consolidation",
+        "keyword": "Debt consolidation calculator",
+        "mode": "comparison",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "debt-consolidation",
+        "keyword": "Debt consolidation calculator with upfront fees",
+        "mode": "comparison",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "debt-consolidation",
+        "keyword": "Multiple debt consolidation calculator",
+        "mode": "comparison",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "debt-consolidation",
+        "keyword": "Debt consolidation calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "debt-consolidation",
+        "keyword": "Debt consolidation calculator with upfront fees",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "debt-consolidation",
+        "keyword": "Multiple debt consolidation calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "debt-consolidation"
+      },
+      {
+        "kind": "page",
+        "path": "/heloc-calculator",
+        "width": 1440,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "width": 1440,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/home-equity-loan-calculator",
+        "width": 1440,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "width": 1440,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/debt-consolidation-calculator",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-compare-debt-consolidation-loans/",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/heloc-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/home-equity-loan-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/debt-consolidation-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-compare-debt-consolidation-loans/",
+        "readableCases": true
+      },
+      {
+        "kind": "credit-ceiling-viewport",
+        "width": 320,
+        "scrollVerified": true,
+        "visualCapture": true
+      },
+      {
+        "kind": "credit-ceiling-viewport",
+        "width": 1440,
+        "scrollVerified": false,
+        "visualCapture": true
+      }
+    ],
+    "downloads": [
+      {
+        "path": "/heloc-calculator",
+        "file": "heloc-cases.csv",
+        "cases": 8
+      },
+      {
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "file": "heloc-cases.csv",
+        "cases": 8
+      },
+      {
+        "path": "/heloc-calculator",
+        "file": "heloc-limit-cases.csv",
+        "cases": 2
+      },
+      {
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "file": "heloc-limit-cases.csv",
+        "cases": 2
+      },
+      {
+        "path": "/home-equity-loan-calculator",
+        "file": "equity-cases.csv",
+        "cases": 7
+      },
+      {
+        "path": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "file": "equity-cases.csv",
+        "cases": 7
+      },
+      {
+        "path": "/debt-consolidation-calculator",
+        "file": "consolidation-cases.csv",
+        "cases": 6
+      },
+      {
+        "path": "/guides/how-to-compare-debt-consolidation-loans/",
+        "file": "consolidation-cases.csv",
+        "cases": 6
+      }
+    ],
+    "errors": []
+  },
+  "staticAudit": {
+    "passed": true,
+    "canonicalPages": 469,
+    "brokenFiles": [],
+    "brokenFragments": [],
+    "orphanPages": [],
+    "reviewedPages": [
+      {
+        "path": "/heloc-calculator",
+        "canonical": "https://www.calculatorfree.io/heloc-calculator",
+        "incomingPages": 18,
+        "oneH1": true
+      },
+      {
+        "path": "/home-equity-loan-calculator",
+        "canonical": "https://www.calculatorfree.io/home-equity-loan-calculator",
+        "incomingPages": 15,
+        "oneH1": true
+      },
+      {
+        "path": "/debt-consolidation-calculator",
+        "canonical": "https://www.calculatorfree.io/debt-consolidation-calculator",
+        "incomingPages": 16,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-are-heloc-payments-calculated/",
+        "canonical": "https://www.calculatorfree.io/guides/how-are-heloc-payments-calculated/",
+        "incomingPages": 8,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-calculate-home-equity-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-calculate-home-equity-loan-payments/",
+        "incomingPages": 7,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-compare-debt-consolidation-loans/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-compare-debt-consolidation-loans/",
+        "incomingPages": 7,
+        "oneH1": true
+      }
+    ],
+    "newGuideToolLinksReciprocal": true,
+    "previousIndexingPolicyPreserved": true
+  },
+  "visual": {
+    "desktopAndMobileInspected": true,
+    "allThreeChartsDecodedAndInspected": true,
+    "creditLimitTableInspected": true,
+    "screenshots": [
+      "/workspace/work/equity-heloc-consolidation-content-20261119/heloc-320.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/heloc-1440.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/heloc-chart.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/equity-320.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/equity-1440.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/equity-chart.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/consolidation-320.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/consolidation-1440.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/consolidation-chart.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/credit-320.png",
+      "/workspace/work/equity-heloc-consolidation-content-20261119/credit-1440.png"
+    ]
+  },
+  "limits": [
+    "Native Safari unverified",
+    "External professional review unverified",
+    "Remote HTTP bodies unverified",
+    "No live rates, universal LTV rule, eligibility determination or regulatory charge classification",
+    "No indexing, ranking or AdSense approval guarantee"
+  ]
+}

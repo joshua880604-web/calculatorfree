@@ -2258,14 +2258,14 @@
       "calculatorId": "heloc",
       "mode": "draw-repay",
       "values": {
-        "principal": 50000,
-        "rate": 8,
-        "draw": 10,
-        "years": 20,
-        "closing": 0,
+        "principal": "50000",
+        "rate": "8",
+        "draw": "10",
+        "years": "20",
+        "closing": "0",
         "closing_unit": "Dollars",
         "closing_treatment": "Upfront",
-        "charge": 0
+        "charge": "0"
       },
       "metrics": {
         "Monthly draw payment": 333.3333333333333,
@@ -2281,7 +2281,9 @@
         "$333.33",
         "$418.22",
         "$90,372.81",
-        "$50,000.00"
+        "$50,000.00",
+        "$50,000.00",
+        "$0.00"
       ]
     },
     {
@@ -2289,14 +2291,14 @@
       "calculatorId": "heloc",
       "mode": "draw-repay",
       "values": {
-        "principal": 50000,
-        "rate": 10,
-        "draw": 10,
-        "years": 20,
-        "closing": 0,
+        "principal": "50000",
+        "rate": "10",
+        "draw": "10",
+        "years": "20",
+        "closing": "0",
         "closing_unit": "Dollars",
         "closing_treatment": "Upfront",
-        "charge": 0
+        "charge": "0"
       },
       "metrics": {
         "Monthly draw payment": 416.6666666666667,
@@ -2312,7 +2314,9 @@
         "$416.67",
         "$482.51",
         "$115,802.60",
-        "$50,000.00"
+        "$50,000.00",
+        "$50,000.00",
+        "$0.00"
       ]
     },
     {
@@ -2320,14 +2324,14 @@
       "calculatorId": "heloc",
       "mode": "draw-repay",
       "values": {
-        "principal": 50000,
-        "rate": 8,
-        "draw": 10,
-        "years": 10,
-        "closing": 0,
+        "principal": "50000",
+        "rate": "8",
+        "draw": "10",
+        "years": "10",
+        "closing": "0",
         "closing_unit": "Dollars",
         "closing_treatment": "Upfront",
-        "charge": 0
+        "charge": "0"
       },
       "metrics": {
         "Monthly draw payment": 333.3333333333333,
@@ -2343,7 +2347,9 @@
         "$333.33",
         "$606.64",
         "$62,796.56",
-        "$50,000.00"
+        "$50,000.00",
+        "$50,000.00",
+        "$0.00"
       ]
     },
     {
@@ -2351,14 +2357,14 @@
       "calculatorId": "heloc",
       "mode": "draw-repay",
       "values": {
-        "principal": 50000,
-        "rate": 8,
-        "draw": 10,
-        "years": 20,
-        "closing": 0,
+        "principal": "50000",
+        "rate": "8",
+        "draw": "10",
+        "years": "20",
+        "closing": "0",
         "closing_unit": "Dollars",
         "closing_treatment": "Upfront",
-        "charge": 120
+        "charge": "120"
       },
       "metrics": {
         "Monthly draw payment": 343.3333333333333,
@@ -2374,7 +2380,9 @@
         "$343.33",
         "$418.22",
         "$90,372.81",
-        "$50,000.00"
+        "$50,000.00",
+        "$50,000.00",
+        "$1,200.00"
       ]
     },
     {
@@ -2382,14 +2390,14 @@
       "calculatorId": "heloc",
       "mode": "draw-repay",
       "values": {
-        "principal": 50000,
-        "rate": 8,
-        "draw": 10,
-        "years": 20,
-        "closing": 1000,
+        "principal": "50000",
+        "rate": "8",
+        "draw": "10",
+        "years": "20",
+        "closing": "1000",
         "closing_unit": "Dollars",
         "closing_treatment": "Deducted from loan",
-        "charge": 0
+        "charge": "0"
       },
       "metrics": {
         "Monthly draw payment": 333.3333333333333,
@@ -2405,7 +2413,9 @@
         "$333.33",
         "$418.22",
         "$90,372.81",
-        "$49,000.00"
+        "$49,000.00",
+        "$49,000.00",
+        "$1,000.00"
       ]
     },
     {
@@ -2413,14 +2423,14 @@
       "calculatorId": "heloc",
       "mode": "draw-repay",
       "values": {
-        "principal": 50000,
-        "rate": 0,
-        "draw": 10,
-        "years": 20,
-        "closing": 0,
+        "principal": "50000",
+        "rate": "0",
+        "draw": "10",
+        "years": "20",
+        "closing": "0",
         "closing_unit": "Dollars",
         "closing_treatment": "Upfront",
-        "charge": 0
+        "charge": "0"
       },
       "metrics": {
         "Monthly draw payment": 0.0,
@@ -2436,7 +2446,77 @@
         "$0.00",
         "$208.33",
         "$0.00",
-        "$50,000.00"
+        "$50,000.00",
+        "$50,000.00",
+        "$0.00"
+      ]
+    },
+    {
+      "label": "2% closing cost paid upfront",
+      "calculatorId": "heloc",
+      "mode": "draw-repay",
+      "values": {
+        "principal": "50000",
+        "rate": "8",
+        "draw": "10",
+        "years": "20",
+        "closing": "2",
+        "closing_unit": "Percent",
+        "closing_treatment": "Upfront",
+        "charge": "0"
+      },
+      "metrics": {
+        "Monthly draw payment": 333.3333333333333,
+        "Monthly repayment": 418.22003449673144,
+        "Cash disbursed at closing": 50000.0,
+        "Closing costs paid upfront": 1000.0,
+        "Net initial proceeds after closing costs": 49000.0,
+        "Total interest": 90372.80827921555,
+        "Fees and annual charges": 1000.0,
+        "Annual fees during draw": 0.0,
+        "Nominal APR including fees": 8.198828764229203
+      },
+      "display": [
+        "$333.33",
+        "$418.22",
+        "$90,372.81",
+        "$50,000.00",
+        "$49,000.00",
+        "$1,000.00"
+      ]
+    },
+    {
+      "label": "No draw period; USD 120 annual fee entered",
+      "calculatorId": "heloc",
+      "mode": "draw-repay",
+      "values": {
+        "principal": "50000",
+        "rate": "8",
+        "draw": "0",
+        "years": "20",
+        "closing": "0",
+        "closing_unit": "Dollars",
+        "closing_treatment": "Upfront",
+        "charge": "120"
+      },
+      "metrics": {
+        "Monthly draw payment": 0.0,
+        "Monthly repayment": 418.22003449673144,
+        "Cash disbursed at closing": 50000.0,
+        "Closing costs paid upfront": 0.0,
+        "Net initial proceeds after closing costs": 50000.0,
+        "Total interest": 50372.80827921554,
+        "Fees and annual charges": 0.0,
+        "Annual fees during draw": 0.0,
+        "Nominal APR including fees": 8.0
+      },
+      "display": [
+        "$0.00",
+        "$418.22",
+        "$50,372.81",
+        "$50,000.00",
+        "$50,000.00",
+        "$0.00"
       ]
     }
   ],
@@ -4885,11 +4965,11 @@
       "calculatorId": "home-equity-loan",
       "mode": "loan",
       "values": {
-        "principal": 60000,
-        "years": 15,
-        "months": 0,
-        "rate": 8,
-        "closing": 0,
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "8",
+        "closing": "0",
         "treatment": "Paid upfront"
       },
       "metrics": {
@@ -4904,7 +4984,8 @@
         "$573.39",
         "$60,000.00",
         "$103,210.43",
-        "$43,210.43"
+        "$43,210.43",
+        "8.0000%"
       ]
     },
     {
@@ -4912,11 +4993,11 @@
       "calculatorId": "home-equity-loan",
       "mode": "loan",
       "values": {
-        "principal": 60000,
-        "years": 15,
-        "months": 0,
-        "rate": 8,
-        "closing": 1500,
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "8",
+        "closing": "1500",
         "treatment": "Paid upfront"
       },
       "metrics": {
@@ -4931,7 +5012,8 @@
         "$573.39",
         "$58,500.00",
         "$103,210.43",
-        "$44,710.43"
+        "$44,710.43",
+        "8.4217%"
       ]
     },
     {
@@ -4939,11 +5021,11 @@
       "calculatorId": "home-equity-loan",
       "mode": "loan",
       "values": {
-        "principal": 60000,
-        "years": 15,
-        "months": 0,
-        "rate": 8,
-        "closing": 1500,
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "8",
+        "closing": "1500",
         "treatment": "Financed"
       },
       "metrics": {
@@ -4958,7 +5040,8 @@
         "$587.73",
         "$60,000.00",
         "$105,790.69",
-        "$45,790.69"
+        "$45,790.69",
+        "8.4112%"
       ]
     },
     {
@@ -4966,11 +5049,11 @@
       "calculatorId": "home-equity-loan",
       "mode": "loan",
       "values": {
-        "principal": 60000,
-        "years": 10,
-        "months": 0,
-        "rate": 8,
-        "closing": 1500,
+        "principal": "60000",
+        "years": "10",
+        "months": "0",
+        "rate": "8",
+        "closing": "1500",
         "treatment": "Paid upfront"
       },
       "metrics": {
@@ -4985,7 +5068,8 @@
         "$727.97",
         "$58,500.00",
         "$87,355.87",
-        "$28,855.87"
+        "$28,855.87",
+        "8.5846%"
       ]
     },
     {
@@ -4993,11 +5077,11 @@
       "calculatorId": "home-equity-loan",
       "mode": "loan",
       "values": {
-        "principal": 60000,
-        "years": 20,
-        "months": 0,
-        "rate": 8,
-        "closing": 1500,
+        "principal": "60000",
+        "years": "20",
+        "months": "0",
+        "rate": "8",
+        "closing": "1500",
         "treatment": "Paid upfront"
       },
       "metrics": {
@@ -5012,7 +5096,64 @@
         "$501.86",
         "$58,500.00",
         "$120,447.37",
-        "$61,947.37"
+        "$61,947.37",
+        "8.3426%"
+      ]
+    },
+    {
+      "label": "15 years, USD 1,500 deducted costs",
+      "calculatorId": "home-equity-loan",
+      "mode": "loan",
+      "values": {
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "8",
+        "closing": "1500",
+        "treatment": "Deducted from proceeds"
+      },
+      "metrics": {
+        "Payment per period": 573.3912505982108,
+        "Total interest": 43210.42510767795,
+        "Total payments": 103210.42510767795,
+        "Number of payments": 180.0,
+        "Net proceeds": 58500.0,
+        "Nominal APR": 8.421713060882308
+      },
+      "display": [
+        "$573.39",
+        "$58,500.00",
+        "$103,210.43",
+        "$44,710.43",
+        "8.4217%"
+      ]
+    },
+    {
+      "label": "0% rate, USD 1,500 upfront costs",
+      "calculatorId": "home-equity-loan",
+      "mode": "loan",
+      "values": {
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "0",
+        "closing": "1500",
+        "treatment": "Paid upfront"
+      },
+      "metrics": {
+        "Payment per period": 333.3333333333333,
+        "Total interest": 0.0,
+        "Total payments": 60000.0,
+        "Number of payments": 180.0,
+        "Net proceeds": 58500.0,
+        "Nominal APR": 0.33716578740253833
+      },
+      "display": [
+        "$333.33",
+        "$58,500.00",
+        "$60,000.00",
+        "$1,500.00",
+        "0.3372%"
       ]
     }
   ],
@@ -5023,9 +5164,9 @@
       "mode": "comparison",
       "values": {
         "debts": "Loan A, 12000, 300, 12",
-        "new_rate": 8,
-        "years": 4,
-        "fees": 3,
+        "new_rate": "8",
+        "years": "4",
+        "fees": "3",
         "finance": "Yes"
       },
       "metrics": {
@@ -5038,6 +5179,7 @@
         "Interest and fee savings": 917.9008469004176
       },
       "display": [
+        "$300.00",
         "$301.74",
         "$2,483.70",
         "$917.90",
@@ -5050,9 +5192,9 @@
       "mode": "comparison",
       "values": {
         "debts": "Loan A, 12000, 300, 12",
-        "new_rate": 8,
-        "years": 8,
-        "fees": 3,
+        "new_rate": "8",
+        "years": "8",
+        "fees": "3",
         "finance": "Yes"
       },
       "metrics": {
@@ -5065,6 +5207,7 @@
         "Interest and fee savings": -1372.4187226056742
       },
       "display": [
+        "$300.00",
         "$174.73",
         "$4,774.02",
         "-$1,372.42",
@@ -5077,9 +5220,9 @@
       "mode": "comparison",
       "values": {
         "debts": "Loan A, 12000, 300, 12",
-        "new_rate": 8,
-        "years": 4,
-        "fees": 3,
+        "new_rate": "8",
+        "years": "4",
+        "fees": "3",
         "finance": "No"
       },
       "metrics": {
@@ -5092,6 +5235,7 @@
         "Interest and fee savings": 979.7561449615805
       },
       "display": [
+        "$300.00",
         "$292.96",
         "$2,421.84",
         "$979.76",
@@ -5104,9 +5248,9 @@
       "mode": "comparison",
       "values": {
         "debts": "Loan A, 12000, 300, 12",
-        "new_rate": 8,
-        "years": 4,
-        "fees": 0,
+        "new_rate": "8",
+        "years": "4",
+        "fees": "0",
         "finance": "Yes"
       },
       "metrics": {
@@ -5119,10 +5263,67 @@
         "Interest and fee savings": 1339.7561449615805
       },
       "display": [
+        "$300.00",
         "$292.96",
         "$2,061.84",
         "$1,339.76",
         "48"
+      ]
+    },
+    {
+      "label": "Two cards, 5-year new loan",
+      "calculatorId": "debt-consolidation",
+      "mode": "comparison",
+      "values": {
+        "debts": "Card A, 5000, 150, 22\nCard B, 3000, 100, 18",
+        "new_rate": "10",
+        "years": "5",
+        "fees": "3",
+        "finance": "Yes"
+      },
+      "metrics": {
+        "Payment per period": 175.07564842085057,
+        "Total interest": 2264.538905251035,
+        "Total payments": 10504.538905251035,
+        "Number of payments": 60.0,
+        "Origination fee": 240.0,
+        "Current plan total interest": 3736.2531997938686,
+        "Interest and fee savings": 1231.7142945428338
+      },
+      "display": [
+        "$250.00",
+        "$175.08",
+        "$2,504.54",
+        "$1,231.71",
+        "60"
+      ]
+    },
+    {
+      "label": "Same two cards, 3-year new loan",
+      "calculatorId": "debt-consolidation",
+      "mode": "comparison",
+      "values": {
+        "debts": "Card A, 5000, 150, 22\nCard B, 3000, 100, 18",
+        "new_rate": "10",
+        "years": "3",
+        "fees": "3",
+        "finance": "Yes"
+      },
+      "metrics": {
+        "Payment per period": 265.8816224772209,
+        "Total interest": 1331.738409179952,
+        "Total payments": 9571.738409179952,
+        "Number of payments": 36.0,
+        "Origination fee": 240.0,
+        "Current plan total interest": 3736.2531997938686,
+        "Interest and fee savings": 2164.514790613917
+      },
+      "display": [
+        "$250.00",
+        "$265.88",
+        "$1,571.74",
+        "$2,164.51",
+        "36"
       ]
     }
   ],

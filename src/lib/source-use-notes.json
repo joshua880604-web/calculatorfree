@@ -2660,7 +2660,8 @@
       ]
     },
     "calculator:debt-consolidation": {
-      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote."
+      "note": "CFPB references explain consolidation fees, extended terms and secured-debt risks. Current debt minimums and rollover budgets are fixed entered assumptions; new loans use their own installments, so the cases are not equal-budget optimization. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "calculator:average-return": {
       "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
@@ -2716,7 +2717,8 @@
       "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
     },
     "calculator:heloc": {
-      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+      "note": "CFPB references explain borrowing, phases, fees and variable-rate risk. The illustrations hold one balance and one rate constant. Annual fees are allocated during draw only; credit ceilings use an entered assumption, not a lending rule or approval. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "calculator:auto-loan": {
       "note": "Concept references explain trade debt, fee cash flows or payment allocation; they do not certify the independently calculated hypothetical results. Manual auto taxes are entered assumptions; personal-loan APR does not classify regulatory charges; student schedules exclude daily accrual and program eligibility.",
@@ -2826,7 +2828,8 @@
       "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
     },
     "calculator:home-equity-loan": {
-      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+      "note": "CFPB references explain home-secured loans, costs and collateral risk. The hypothetical fee examples distinguish gross cash, net initial cash and financed principal. Modeled cash-flow APR does not classify regulatory charges or replace a lender disclosure. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "calculator:mortgage-payoff": {
       "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote.",
@@ -3136,15 +3139,15 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/how-to-compare-debt-consolidation-loans/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
-      "updatedOn": "2026-11-04"
+      "note": "CFPB references explain consolidation fees, extended terms and secured-debt risks. Current debt minimums and rollover budgets are fixed entered assumptions; new loans use their own installments, so the cases are not equal-budget optimization. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-much-emergency-fund-should-i-have/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/how-to-calculate-home-equity-loan-payments/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
-      "updatedOn": "2026-11-04"
+      "note": "CFPB references explain home-secured loans, costs and collateral risk. The hypothetical fee examples distinguish gross cash, net initial cash and financed principal. Modeled cash-flow APR does not classify regulatory charges or replace a lender disclosure. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-to-calculate-auto-loan-payments/": {
       "note": "Concept references explain trade debt, fee cash flows or payment allocation; they do not certify the independently calculated hypothetical results. Manual auto taxes are entered assumptions; personal-loan APR does not classify regulatory charges; student schedules exclude daily accrual and program eligibility.",
@@ -3183,8 +3186,8 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/how-are-heloc-payments-calculated/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
-      "updatedOn": "2026-11-04"
+      "note": "CFPB references explain borrowing, phases, fees and variable-rate risk. The illustrations hold one balance and one rate constant. Annual fees are allocated during draw only; credit ceilings use an entered assumption, not a lending rule or approval. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/should-i-pay-off-debt-or-save/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."

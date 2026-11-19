@@ -142,3 +142,7 @@ Keep the three existing calculator pages and two existing guides. Use full-input
 ## Auto, personal and student loan content — 2026-11-19
 
 Retain the three existing calculator pages and guides, all thirteen comparison inputs and all thirteen worked examples. Add actual full-input tasks for trade equity, reverse vehicle price, personal financed fees/insurance and annual student extras. Explain net initial cash and insurance outside the loan schedule. Manual auto taxes remain assumptions. Distinguish monthly, annual and one-time extra timing. Engines and defaults stay unchanged. Preview only; production publication awaits user instruction.
+
+## HELOC, home equity and consolidation content — 2026-11-19
+
+Keep the existing three tools and guides, all fifteen prior comparison inputs and all fifteen worked examples. Expose the HELOC phase table on the calculator and keep credit-ceiling checks separate from borrowed balances. Explain gross versus net cash and draw-only fees. Preserve a zero-interest loan fee and signed consolidation losses. Mark the single- and two-debt groups and current/new budget differences explicitly; do not call contract comparisons equal-budget optimization. Engines and defaults stay unchanged. Preview only; production publication awaits user instruction.

@@ -1123,3 +1123,6 @@ guides["cd"].sources.push({"title": "CFPB Regulation DD: APY and interest-rate d
 import autoPersonalStudentExamples from './auto-personal-student-examples.json';
 for(const id of ['auto-loan','personal-loan','student-loan']as const){guides[id].examples.push(...autoPersonalStudentExamples[id].map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));guides[id].checkedOn='2026-11-19';}
 guides['auto-loan'].sources.push({title:'CFPB: unpaid trade-in debt and negative equity',url:'https://www.consumerfinance.gov/ask-cfpb/should-i-trade-in-my-car-if-its-not-paid-off-en-2045/'});
+
+import equityHelocConsolidationExamples from './equity-heloc-consolidation-examples.json';
+for(const id of ['heloc','home-equity-loan','debt-consolidation']as const){guides[id].examples.push(...equityHelocConsolidationExamples[id].map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));guides[id].checkedOn='2026-11-19';}

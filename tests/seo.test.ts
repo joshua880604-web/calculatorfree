@@ -46,6 +46,7 @@ Object.assign(wordingReviewDates,Object.fromEntries(["/1031-exchange-calculator.
 Object.assign(wordingReviewDates,Object.fromEntries(['/mortgage-calculator.html','/401k-calculator.html','/balance-transfer-calculator.html','/guides/how-to-calculate-monthly-mortgage-payment/','/guides/how-401k-matching-works/','/guides/balance-transfer-vs-personal-loan/'].map(path=>[path,'2026-11-19'])));
 Object.assign(wordingReviewDates,Object.fromEntries(['/mutual-fund-calculator.html','/investment-fee-calculator.html','/cd-calculator.html','/guides/mutual-fund-fees-and-investment-costs/','/guides/apr-vs-apy/'].map(path=>[path,'2026-11-19'])));
 Object.assign(wordingReviewDates,{"/auto-loan-calculator.html": "2026-11-19", "/personal-loan-calculator.html": "2026-11-19", "/student-loan-calculator.html": "2026-11-19", "/guides/how-to-calculate-auto-loan-payments/": "2026-11-19", "/guides/how-to-calculate-personal-loan-payments/": "2026-11-19", "/guides/how-to-calculate-student-loan-payments/": "2026-11-19"});
+Object.assign(wordingReviewDates,{"/heloc-calculator.html": "2026-11-19", "/home-equity-loan-calculator.html": "2026-11-19", "/debt-consolidation-calculator.html": "2026-11-19", "/guides/how-are-heloc-payments-calculated/": "2026-11-19", "/guides/how-to-calculate-home-equity-loan-payments/": "2026-11-19", "/guides/how-to-compare-debt-consolidation-loans/": "2026-11-19"});
 function assertContentDate(path:string,historicalDate:string){
  assert.equal(contentUpdatedOn[path],wordingReviewDates[path]??historicalDate,path);
 }

@@ -1,0 +1,3 @@
+Scenario,Calculator,Mode,Complete inputs (JSON),Independent metrics (JSON),Restore inputs
+"Assumed 80% ceiling, USD 210,000 mortgage",heloc,maximum-credit,"{""ltv"": ""80"", ""mortgage"": ""210000"", ""value"": ""500000""}","{""Estimated maximum HELOC"": 190000.0, ""Maximum total secured debt"": 400000.0}",/heloc-calculator#calc=share_version=1&mode=maximum-credit&value=500000&mortgage=210000&ltv=80
+"Same ceiling, USD 450,000 mortgage",heloc,maximum-credit,"{""ltv"": ""80"", ""mortgage"": ""450000"", ""value"": ""500000""}","{""Estimated maximum HELOC"": 0.0, ""Maximum total secured debt"": 400000.0}",/heloc-calculator#calc=share_version=1&mode=maximum-credit&value=500000&mortgage=450000&ltv=80

@@ -1,0 +1,152 @@
+{
+  "heloc": [
+    {
+      "title": "Pay a 2% HELOC closing charge outside the borrowed balance",
+      "mode": "draw-repay",
+      "values": {
+        "principal": "50000",
+        "rate": "8",
+        "draw": "10",
+        "years": "20",
+        "closing": "2",
+        "closing_unit": "Percent",
+        "closing_treatment": "Upfront",
+        "charge": "0"
+      },
+      "inputs": "$50,000 borrowed; constant 8%; ten-year draw then twenty-year repayment; 2% closing cost paid upfront; no annual fee.",
+      "steps": [
+        "Compute the closing charge as $50,000 × 2% = $1,000.",
+        "Keep the $50,000 contractual principal and gross disbursement; separately pay $1,000.",
+        "Read $49,000 as net initial cash; this matches a $1,000 deduction economically but not as gross disbursed cash."
+      ],
+      "answer": "Cash disbursed: $50,000; net initial proceeds: $49,000.",
+      "expected": {
+        "label": "Net initial proceeds after closing costs",
+        "value": 49000.0,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Start HELOC repayment without a draw period",
+      "mode": "draw-repay",
+      "values": {
+        "principal": "50000",
+        "rate": "8",
+        "draw": "0",
+        "years": "20",
+        "closing": "0",
+        "closing_unit": "Dollars",
+        "closing_treatment": "Upfront",
+        "charge": "120"
+      },
+      "inputs": "$50,000 balance; constant 8%; zero years draw; twenty-year repayment; no closing cost; $120 annual fee entered.",
+      "steps": [
+        "A zero-year draw produces no draw-period payment rows.",
+        "Annual fees apply only during draw in this model, so none is charged here.",
+        "Amortize $50,000 over 240 equal monthly payments beginning in month one."
+      ],
+      "answer": "Monthly repayment: $418.22; modeled annual draw fees: $0.",
+      "expected": {
+        "label": "Annual fees during draw",
+        "value": 0.0,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Clamp an assumed HELOC borrowing ceiling at zero",
+      "mode": "maximum-credit",
+      "values": {
+        "value": "500000",
+        "mortgage": "450000",
+        "ltv": "80"
+      },
+      "inputs": "$500,000 home value; $450,000 mortgage; hypothetical 80% maximum combined LTV.",
+      "steps": [
+        "Compute maximum secured debt as $500,000 × 80% = $400,000.",
+        "Subtract the entered $450,000 mortgage to get negative $50,000 headroom.",
+        "Clamp additional available credit to zero; this is not a negative loan, automatic approval or a payment quote."
+      ],
+      "answer": "Estimated additional HELOC credit: $0.",
+      "expected": {
+        "label": "Estimated maximum HELOC",
+        "value": 0.0,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "home-equity-loan": [
+    {
+      "title": "Deduct $1,500 home equity closing costs from proceeds",
+      "mode": "loan",
+      "values": {
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "8",
+        "closing": "1500",
+        "treatment": "Deducted from proceeds"
+      },
+      "inputs": "$60,000 loan; 8% nominal rate; fifteen years; $1,500 closing costs deducted from proceeds.",
+      "steps": [
+        "Repay $60,000 while receiving $58,500 after the deduction.",
+        "The monthly installment matches the separately-paid-cost example because the contractual principal is unchanged.",
+        "Use net initial cash once for the cash-flow APR and total-cost comparison."
+      ],
+      "answer": "Monthly payment: $573.39; net initial cash: $58,500.",
+      "expected": {
+        "label": "Net proceeds",
+        "value": 58500.0,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Keep an upfront fee when the stated interest rate is zero",
+      "mode": "loan",
+      "values": {
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "0",
+        "closing": "1500",
+        "treatment": "Paid upfront"
+      },
+      "inputs": "$60,000 loan; 0% stated rate; fifteen years; $1,500 closing costs paid upfront.",
+      "steps": [
+        "Divide $60,000 principal by 180 payments.",
+        "Net initial cash is $60,000 minus the separate $1,500 charge.",
+        "The $1,500 cash-flow cost produces a positive modeled APR even though scheduled interest is zero."
+      ],
+      "answer": "Monthly payment: $333.33; cash-flow cost: $1,500.",
+      "expected": {
+        "label": "Total interest",
+        "value": 0.0,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "debt-consolidation": [
+    {
+      "title": "Consolidate two different-rate cards with a five-year loan",
+      "mode": "comparison",
+      "values": {
+        "debts": "Card A, 5000, 150, 22\nCard B, 3000, 100, 18",
+        "new_rate": "10",
+        "years": "5",
+        "fees": "3",
+        "finance": "Yes"
+      },
+      "inputs": "Card A $5,000 at 22%, $150 fixed minimum; Card B $3,000 at 18%, $100 fixed minimum. New 10% loan, five years, 3% financed origination fee.",
+      "steps": [
+        "Keep the current $250 monthly budget and roll freed payments to the highest-rate debt.",
+        "New financed principal = $8,000 × 1.03 = $8,240.",
+        "Compare the new contractual installment and interest plus the fee with that current plan; this is not an equal-budget comparison."
+      ],
+      "answer": "New monthly payment: $175.08; interest-plus-fee savings: $1,231.71.",
+      "expected": {
+        "label": "Interest and fee savings",
+        "value": 1231.7142945428338,
+        "tolerance": 1e-06
+      }
+    }
+  ]
+}

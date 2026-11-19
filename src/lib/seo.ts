@@ -426,3 +426,6 @@ for(const path of ['/mutual-fund-calculator.html','/investment-fee-calculator.ht
 
 // Substantive fee, trade-equity and extra-payment scenario review.
 Object.assign(contentUpdatedOn,{"/auto-loan-calculator.html": "2026-11-19", "/personal-loan-calculator.html": "2026-11-19", "/student-loan-calculator.html": "2026-11-19", "/guides/how-to-calculate-auto-loan-payments/": "2026-11-19", "/guides/how-to-calculate-personal-loan-payments/": "2026-11-19", "/guides/how-to-calculate-student-loan-payments/": "2026-11-19"});
+
+// Substantive phase, closing-cash and multi-debt comparison review.
+Object.assign(contentUpdatedOn,{"/heloc-calculator.html": "2026-11-19", "/home-equity-loan-calculator.html": "2026-11-19", "/debt-consolidation-calculator.html": "2026-11-19", "/guides/how-are-heloc-payments-calculated/": "2026-11-19", "/guides/how-to-calculate-home-equity-loan-payments/": "2026-11-19", "/guides/how-to-compare-debt-consolidation-loans/": "2026-11-19"});

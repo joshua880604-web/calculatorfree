@@ -775,5 +775,144 @@
         "extra_once_month": "1"
       }
     }
+  ],
+  "heloc": [
+    {
+      "keyword": "HELOC payment calculator",
+      "mode": "draw-repay",
+      "description": "Compare a modeled interest-only draw period with later amortizing repayment at one entered rate. Annual fees apply during draw only; actual rate resets and additional draws are not simulated.",
+      "values": {
+        "principal": "50000",
+        "rate": "8",
+        "draw": "10",
+        "years": "20",
+        "closing": "0",
+        "closing_unit": "Dollars",
+        "closing_treatment": "Upfront",
+        "charge": "0"
+      },
+      "aliases": [
+        "HELOC interest only payment calculator",
+        "HELOC calculator",
+        "HELOC repayment calculator"
+      ]
+    },
+    {
+      "keyword": "HELOC payment calculator with annual fee",
+      "mode": "draw-repay",
+      "description": "Allocate an entered $120 annual fee across draw-period months only. Check the first repayment month separately; actual billing dates may differ.",
+      "values": {
+        "principal": "50000",
+        "rate": "8",
+        "draw": "10",
+        "years": "20",
+        "closing": "0",
+        "closing_unit": "Dollars",
+        "closing_treatment": "Upfront",
+        "charge": "120"
+      }
+    },
+    {
+      "keyword": "HELOC borrowing limit calculator",
+      "mode": "maximum-credit",
+      "description": "Estimate potential additional credit from home value, existing mortgage and an entered combined-LTV ceiling. This does not determine lender approval.",
+      "values": {
+        "value": "500000",
+        "mortgage": "210000",
+        "ltv": "80"
+      },
+      "aliases": [
+        "How much HELOC can I get",
+        "HELOC credit limit calculator"
+      ]
+    }
+  ],
+  "home-equity-loan": [
+    {
+      "keyword": "Home equity loan calculator",
+      "mode": "loan",
+      "description": "Calculate fixed home equity loan payments and closing-cost effects. Compare terms and upfront or financed fees; existing mortgage and property costs are separate.",
+      "values": {
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "8",
+        "closing": "1500",
+        "treatment": "Paid upfront"
+      },
+      "aliases": [
+        "Home equity loan monthly payment calculator",
+        "Home equity loan payment calculator"
+      ]
+    },
+    {
+      "keyword": "Home equity loan calculator with financed closing costs",
+      "mode": "loan",
+      "description": "Add the entered $1,500 cost to a $60,000 repayment balance and compare the installment, net initial cash and modeled APR.",
+      "values": {
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "8",
+        "closing": "1500",
+        "treatment": "Financed"
+      }
+    },
+    {
+      "keyword": "Home equity loan calculator with deducted closing costs",
+      "mode": "loan",
+      "description": "Deduct the entered $1,500 cost from disbursed cash. Compare it with separately paid costs without counting the fee twice.",
+      "values": {
+        "principal": "60000",
+        "years": "15",
+        "months": "0",
+        "rate": "8",
+        "closing": "1500",
+        "treatment": "Deducted from proceeds"
+      }
+    }
+  ],
+  "debt-consolidation": [
+    {
+      "keyword": "Debt consolidation calculator",
+      "mode": "comparison",
+      "description": "Compare debt consolidation payments, interest and origination fees with continued repayment. A smaller payment can cost more over a longer term.",
+      "values": {
+        "debts": "Loan A, 12000, 300, 12",
+        "new_rate": "8",
+        "years": "4",
+        "fees": "3",
+        "finance": "Yes"
+      },
+      "aliases": [
+        "Debt consolidation loan calculator",
+        "Debt consolidation payment calculator",
+        "Debt consolidation savings calculator"
+      ]
+    },
+    {
+      "keyword": "Debt consolidation calculator with upfront fees",
+      "mode": "comparison",
+      "description": "Keep the same replacement term and pay the origination fee separately instead of financing it. Compare interest plus the fee once.",
+      "values": {
+        "debts": "Loan A, 12000, 300, 12",
+        "new_rate": "8",
+        "years": "4",
+        "fees": "3",
+        "finance": "No"
+      }
+    },
+    {
+      "keyword": "Multiple debt consolidation calculator",
+      "mode": "comparison",
+      "description": "Compare two fixed-rate card balances and a $250 current monthly rollover budget with a five-year replacement loan. The new installment is not forced to equal the current budget.",
+      "values": {
+        "debts": "Card A, 5000, 150, 22\nCard B, 3000, 100, 18",
+        "new_rate": "10",
+        "years": "5",
+        "fees": "3",
+        "finance": "Yes"
+      }
+    }
   ]
 }

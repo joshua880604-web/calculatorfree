@@ -2029,16 +2029,16 @@
       "path": "/guides/how-are-heloc-payments-calculated/",
       "title": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
       "heading": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
-      "description": "Calculate interest-only HELOC draw payments and amortizing repayment. Compare rates, terms, annual fees and closing costs using six reproducible scenarios.",
+      "description": "Compare eight fixed-rate HELOC draw/repayment scenarios and two separate borrowing-ceiling checks. Distinguish principal, closing cash and fees; actual rate resets and new draws are not modeled.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "heloc"
       ],
       "topic": "Home equity",
       "breadcrumb": "How Are HELOC Payments Calculated? Draw and Repayment Examples",
-      "cardIntro": "Calculate interest-only HELOC draw payments and amortizing repayment. Compare rates, terms, annual fees and closing costs using six reproducible scenarios.",
+      "cardIntro": "Compare eight fixed-rate HELOC draw/repayment scenarios and two separate borrowing-ceiling checks. Distinguish principal, closing cash and fees; actual rate resets and new draws are not modeled.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/heloc-calculator",
     "calculatorLabel": "HELOC Calculator",
@@ -2099,6 +2099,16 @@
           "A calculated payment is not borrowing approval or evidence of affordability. Your home secures the obligation. CFPB warns that failing to repay can put it at risk, and access to further draws may be restricted under specified conditions. The model does not assess your income, credit, collateral value or ability to meet a higher future payment."
         ],
         "formula": ""
+      },
+      {
+        "id": "closing-and-no-draw",
+        "title": "Separate disbursed cash, net initial cash and the draw boundary",
+        "formula": "Net initial cash = borrowed principal − closing costs; annual fee allocation = entered annual fee / 12 during draw only",
+        "paragraphs": [
+          "The 2% upfront closing-cost example uses the same $50,000 principal as the base case. It disburses $50,000 and separately pays $1,000, leaving $49,000 net initial cash. The existing $1,000 deducted-cost example disburses $49,000. Both have the same modeled net cash, contractual payments and cash-flow APR, although the movement of cash at closing differs. Closing costs are not financed above the principal in this HELOC model.",
+          "With a zero-year draw period, repayment starts at the first modeled payment. Even if $120 is entered as an annual fee, this model applies it only during draw, so the no-draw example has no annual account fees. In a ten-year draw period the same entered fee is allocated as $10 per draw month and stops at the first repayment month. Confirm actual billing terms; this convention is not a prediction of every lender’s contract.",
+          "The borrowing-ceiling examples below are a separate calculation. A $190,000 estimated credit ceiling does not mean that amount is borrowed, and it does not supply the $50,000 balance in the payment examples. The selected 80% combined-LTV cap is hypothetical, not a universal lending limit or an approval."
+        ]
       }
     ],
     "columns": [
@@ -2106,11 +2116,13 @@
       "Monthly draw payment",
       "Monthly repayment",
       "Total interest",
-      "Net initial proceeds"
+      "Cash disbursed at closing",
+      "Net initial cash",
+      "Closing + draw fees"
     ],
     "chart": "heloc-guide",
-    "chartAlt": "Interest-only draw and amortizing repayment payments for the same $50,000 balance under three rate and repayment-term scenarios.",
-    "chartCaption": "Each scenario uses a constant rate, the full balance at the start, no new advances and no fees in the chart. The table separately tests fees, deducted closing costs and zero interest.",
+    "chartAlt": "Interest plus entered closing and draw-period fees for eight hypothetical fixed-rate HELOC phase scenarios.",
+    "chartCaption": "Total interest plus modeled fees over the full entered horizon. Different rates and terms have different payment schedules; this is not a matched-horizon or live-offer comparison. Credit ceilings are shown separately below.",
     "questions": [
       {
         "question": "How are interest-only HELOC payments calculated?",
@@ -2185,6 +2197,12 @@
         "href": "/guides/how-to-calculate-monthly-mortgage-payment/",
         "label": "Monthly mortgage payment guide"
       }
+    ],
+    "reviewNotes": [
+      "The full entered balance exists from the start and stays unchanged during draw. One rate is held constant through both phases; these are not future rate-reset simulations.",
+      "Upfront and deducted closing charges can have the same net initial cash while different amounts are disbursed. Neither treatment finances closing costs above the borrowed principal.",
+      "Annual fees are allocated monthly during draw only, and stop at repayment. A zero-year draw produces no draw payments or draw-period fees in this model.",
+      "Credit-ceiling examples are separate from actual borrowing and payment examples. Neither an assumed LTV cap nor the calculated ceiling establishes lender approval."
     ]
   },
   "stockprofit": {
@@ -4693,16 +4711,16 @@
       "path": "/guides/how-to-calculate-home-equity-loan-payments/",
       "title": "How to Calculate Home Equity Loan Payments and Costs",
       "heading": "How to Calculate Home Equity Loan Payments and Costs",
-      "description": "Calculate fixed home equity loan payments and closing-cost effects. Five reproducible cases compare term, net proceeds and upfront versus financed charges.",
+      "description": "Compare seven fixed home equity loan scenarios, including upfront, deducted and financed closing costs, a zero-rate fee example and different repayment terms.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "home-equity-loan"
       ],
       "topic": "Mortgage & housing",
       "breadcrumb": "How to Calculate Home Equity Loan Payments and Costs",
-      "cardIntro": "Calculate fixed home equity loan payments and closing-cost effects. Five reproducible cases compare term, net proceeds and upfront versus financed charges.",
+      "cardIntro": "Compare seven fixed home equity loan scenarios, including upfront, deducted and financed closing costs, a zero-rate fee example and different repayment terms.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/home-equity-loan-calculator",
     "calculatorLabel": "Home Equity Loan Calculator",
@@ -4762,6 +4780,16 @@
           "For a spreadsheet check, =-PMT(8%/12,15*12,60000) reproduces the no-cost monthly installment; use 61500 for financed closing costs. This form does not simulate extra principal. Use an appropriate repayment tool and actual contract terms for early payoff, or the separate HELOC tool for a draw-period and repayment-period scenario."
         ],
         "formula": ""
+      },
+      {
+        "id": "deducted-and-zero",
+        "title": "Compare deducted closing costs and a zero-interest fee case",
+        "formula": "Cash-flow cost = total loan payments − net initial cash",
+        "paragraphs": [
+          "At $60,000 over fifteen years with $1,500 closing costs, selecting Deducted from proceeds supplies $58,500. Selecting Paid upfront can instead supply $60,000 and use $1,500 outside cash; the model reports the same $58,500 net initial amount. Consequently its payment and cash-flow APR match between these two simplified cash-flow cases, while the financing transaction differs. A financed-cost case instead amortizes $61,500 and supplies $60,000 net cash.",
+          "A hypothetical 0% stated interest rate does not remove a $1,500 upfront charge. Over 180 payments, scheduled principal payments total $60,000 while net initial cash is $58,500. The resulting modeled cash-flow APR is positive even though interest on the loan schedule is zero. The APR is a nominal monthly cash-flow calculation, not a classification of regulatory charges or a replacement for the actual disclosure.",
+          "These are illustrations for a separate loan secured by a home. Existing mortgage payments, taxes, insurance, eligibility, tax deductions and actual lender costs remain outside the calculation. Turning unsecured debt into home-secured borrowing changes the consequences of nonpayment; compare the product terms and collateral risk separately from these dollar results."
+        ]
       }
     ],
     "columns": [
@@ -4769,11 +4797,12 @@
       "Monthly loan payment",
       "Net initial cash",
       "Total loan payments",
-      "Payments minus net cash"
+      "Payments minus net cash",
+      "Modeled nominal cash-flow APR"
     ],
     "chart": "equity-guide",
-    "chartAlt": "Home equity borrowing cost under five scenarios with different terms and upfront or financed closing costs.",
-    "chartCaption": "All cases use a $60,000 base amount and hypothetical 8% nominal annual rate. Financed costs and upfront costs produce different net cash amounts; they are not matched-proceeds offers.",
+    "chartAlt": "Total loan payments minus net initial cash for seven home equity loan scenarios, including a zero-interest loan with an upfront charge.",
+    "chartCaption": "Full-term cash-flow cost, not just stated interest. Net cash includes upfront or deducted closing charges; different terms do not hold the repayment horizon constant. APR is a model illustration.",
     "questions": [
       {
         "question": "What is the payment on a $60,000 home equity loan?",
@@ -4833,6 +4862,11 @@
         "href": "/loan-repayment-calculator",
         "label": "Extra principal repayment calculator"
       }
+    ],
+    "reviewNotes": [
+      "Paid upfront and Deducted from proceeds share the same economic net initial cash in this model, but the gross disbursement can differ. Do not subtract the closing charge a second time from net cash.",
+      "Financed costs increase the repayment balance; these fee-treatment rows do not all supply the same net cash. A 0% interest rate with an upfront charge can still produce a positive modeled APR.",
+      "The table excludes an existing first mortgage and ownership costs. These loans use a home as collateral; modeled savings do not evaluate that separate risk or determine eligibility."
     ]
   },
   "consolidation": {
@@ -4840,16 +4874,16 @@
       "path": "/guides/how-to-compare-debt-consolidation-loans/",
       "title": "How to Compare Debt Consolidation Loan Costs",
       "heading": "How to Compare Debt Consolidation Loan Costs",
-      "description": "Compare a consolidation loan with continued repayment using four reproducible cases. Separate lower monthly payments from interest-plus-fee savings and a longer term.",
+      "description": "Compare six consolidation scenarios, including two cards with different rates. Keep the current rollover budget, new installment, fees and term visible; a lower payment is not necessarily lower cost.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "debt-consolidation"
       ],
       "topic": "Loans & debt",
       "breadcrumb": "How to Compare Debt Consolidation Loan Costs",
-      "cardIntro": "Compare a consolidation loan with continued repayment using four reproducible cases. Separate lower monthly payments from interest-plus-fee savings and a longer term.",
+      "cardIntro": "Compare six consolidation scenarios, including two cards with different rates. Keep the current rollover budget, new installment, fees and term visible; a lower payment is not necessarily lower cost.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/debt-consolidation-calculator",
     "calculatorLabel": "Debt Consolidation Calculator",
@@ -4909,18 +4943,30 @@
           "Using home equity to replace unsecured debt adds a collateral question beyond interest arithmetic. CFPB explains that missed home-equity payments can put the home at risk. Neither a positive savings number nor a smaller installment assesses that change in risk, future spending or the household’s ability to meet payments."
         ],
         "formula": ""
+      },
+      {
+        "id": "multiple-debts",
+        "title": "Keep the current multi-debt budget visible when choosing a new term",
+        "formula": "Savings = current plan interest − new loan interest − origination fee",
+        "paragraphs": [
+          "The first four table rows retain one $12,000 balance at 12% with a fixed $300 monthly budget. The final two rows instead use Card A at $5,000, $150 fixed minimum and 22%, plus Card B at $3,000, $100 fixed minimum and 18%. Do not compare costs across these two different starting-debt groups as though only the new term changed.",
+          "For the two-card current plan, the model keeps the total $250 monthly budget, first pays the entered fixed minimums and rolls freed money toward the highest-rate remaining debt. These are fixed dollar minimum assumptions, not declining real-card minimum formulas. Rates and charges stay fixed, with no new borrowing.",
+          "The replacement loan totals $8,240 when the 3% fee on $8,000 is financed. At a hypothetical 10% rate, five years lowers the scheduled payment below the current $250 budget, while three years requires a larger installment. The tool follows each new contractual installment rather than spending the same $250 under every option. This is a contract-cost comparison, not an equal-monthly-budget optimization. Check cash-flow affordability as well as full interest plus fees.",
+          "For financed fees, the loan-payment total already repays the financed fee, so the borrowing cost is interest plus the fee once. If paid upfront, the installment schedule excludes that separately paid fee. A negative savings number means the new interest plus fee exceeds the stated current plan. No settlement, forgiveness, rate reset, prepayment charge or credit-score prediction is calculated."
+        ]
       }
     ],
     "columns": [
       "Scenario",
+      "Current fixed monthly budget",
       "New monthly payment",
       "New interest + fee",
       "Interest + fee savings",
       "New payment count"
     ],
     "chart": "consolidation-guide",
-    "chartAlt": "New loan interest plus fees under four consolidation scenarios compared with current-plan interest.",
-    "chartCaption": "All cases start with $12,000 at 12% and a fixed $300 monthly current-plan payment. New loans use 8%; the eight-year case has a lower payment but costs more in modeled interest and fees.",
+    "chartAlt": "Signed interest-plus-fee savings for six consolidation scenarios; a negative bar means the new contract costs more than its corresponding current repayment plan.",
+    "chartCaption": "Each savings bar uses that row’s stated current debts. Negative is more costly. The two-card rows have different starting balances and budgets from the first four rows; new installments are not forced to equal current budgets.",
     "questions": [
       {
         "question": "Does a lower consolidation rate always save money?",
@@ -4980,6 +5026,12 @@
         "href": "/glossary/debt-consolidation/",
         "label": "Debt consolidation glossary"
       }
+    ],
+    "reviewNotes": [
+      "The first four cases start from one $12,000 debt and a $300 monthly current budget; the last two start from two cards totaling $8,000 and a $250 current budget. Keep these starting groups separate.",
+      "Current repayment holds entered dollar minimums and total monthly budget fixed, paying minimums then rolling freed cash to the highest-rate remaining debt. Real card minimum formulas may change.",
+      "The new loan follows its own contractual installment, which can differ from the current budget. These are not equal-budget comparisons; a shorter new term can require more monthly cash.",
+      "Savings subtract new interest and the origination fee once from current-plan interest. Negative savings are retained. Financed fees are already principal in total loan payments."
     ]
   },
   "auto": {
