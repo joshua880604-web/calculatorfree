@@ -122,3 +122,7 @@ Added one original SGR calculator (3 modes), guide and term. Restored 15 curated
 ## Cash advance and COBRA — 2026-11-18
 
 User continued the agreed two-tool priority. Keep one page for credit-card cash-advance fee/interest variants; exclude MCA and statutory APR claims. COBRA uses the ordinary federal premium basis, explicit subsidy and user-selected arithmetic months; no eligibility, disability extension or state-rule inference. Preserve existing calculations and publication settings. Preview first; await publication instruction.
+
+## Repayment content review — 2026-11-19
+
+Keep one core calculation task per existing URL. Cover matching long-tail needs through actual scenarios and complete-input presets. Minimum plus a constant extra and a fixed total monthly payment remain separate tasks: identical first payments do not imply identical later budgets. Preserve all existing engines, fields, defaults, original worked examples and indexing policy. Extend the two existing guides instead of adding overlapping pages. Deployment is a preview; production publication remains pending.

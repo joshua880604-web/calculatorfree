@@ -1752,6 +1752,11 @@
       "role": "rule",
       "usedFor": "Full employee plus employer premium basis, ordinary 102% ceiling and the separate disability-extension exception.",
       "scope": "Federal premium background only. This worksheet excludes the disability extension and does not determine individual eligibility, state continuation, tax effects or actual plan charges."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/": {
+      "role": "background",
+      "usedFor": "Explain why changing minimum-only repayment and a fixed monthly payoff target are distinct tasks, under a no-new-purchases assumption.",
+      "scope": "General repayment explanation only; the original hypothetical rule and monthly model are not the issuer statement or regulatory disclosure and no source certifies the example outputs."
     }
   },
   "pages": {
@@ -2060,7 +2065,15 @@
       "note": "References explain repayment priorities and issuer practices. This site calculates its own fixed-input monthly illustration; daily balances, changing minimums and actual statement rules may differ."
     },
     "calculator:credit-card-minimum-payment": {
-      "note": "References explain repayment priorities and issuer practices. This site calculates its own fixed-input monthly illustration; daily balances, changing minimums and actual statement rules may differ."
+      "note": "Added independently checked repayment comparisons; complete input links, timing, fractional-cent and no-new-spending assumptions are explicit. No source endorsement or external professional review.",
+      "updatedOn": "2026-11-19",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/": {
+          "role": "background",
+          "usedFor": "Explain why changing minimum-only repayment and a fixed monthly payoff target are distinct tasks, under a no-new-purchases assumption.",
+          "scope": "General repayment explanation only; the original hypothetical rule and monthly model are not the issuer statement or regulatory disclosure and no source certifies the example outputs."
+        }
+      }
     },
     "calculator:credit-cards-payoff": {
       "note": "References explain repayment priorities and issuer practices. This site calculates its own fixed-input monthly illustration; daily balances, changing minimums and actual statement rules may differ."
@@ -2166,7 +2179,15 @@
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
     },
     "guide:/guides/credit-card-minimum-payment-and-payoff-time/": {
-      "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
+      "note": "Added independently checked repayment comparisons; complete input links, timing, fractional-cent and no-new-spending assumptions are explicit. No source endorsement or external professional review.",
+      "updatedOn": "2026-11-19",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/": {
+          "role": "background",
+          "usedFor": "Explain why changing minimum-only repayment and a fixed monthly payoff target are distinct tasks, under a no-new-purchases assumption.",
+          "scope": "General repayment explanation only; the original hypothetical rule and monthly model are not the issuer statement or regulatory disclosure and no source certifies the example outputs."
+        }
+      }
     },
     "guide:/guides/brrrr-refinance-cash-flow-analysis/": {
       "note": "External references support the stated concepts, methods and rule boundaries. The hypothetical scenario figures and numerical checks are this site’s work, not the sources’ observed outcomes or endorsements."
@@ -2751,13 +2772,14 @@
       "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote."
     },
     "calculator:amortization": {
-      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "note": "Added independent monthly, annual and lump-sum repayment examples. Original loan rate and contractual term remain fixed; final payments are capped and no penalties or escrow are inferred.",
       "extras": [
         {
           "title": "OpenStax: periodic loan payment and amortization method",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:house-affordability": {
       "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote.",
@@ -3047,7 +3069,8 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/how-to-read-amortization-and-loan-payments/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "Added independent monthly, annual and lump-sum repayment examples. Original loan rate and contractual term remain fixed; final payments are capped and no penalties or escrow are inferred.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/federal-estate-tax-exclusion-and-gifts/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."

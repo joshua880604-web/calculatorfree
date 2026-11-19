@@ -1,3 +1,5 @@
+import repaymentComparisons from './repayment-comparison-content.json';
+import repaymentExamples from './repayment-expanded-examples.json';
 import cashCobraContent from './cash-cobra-content.json';
 import sgrContent from './sgr-content.json';
 import ratioPropertyThreeContent from './ratio-property-three-content.json';
@@ -1078,3 +1080,17 @@ relatedCalculatorIds["cash-advance-fee"]=["credit-card", "credit-card-minimum-pa
 for(const id of relatedCalculatorIds["cash-advance-fee"])relatedCalculatorIds[id]=[...new Set(["cash-advance-fee",...(relatedCalculatorIds[id]??[])])];
 relatedCalculatorIds["cobra-cost"]=["emergency-fund", "budget", "savings"];
 for(const id of relatedCalculatorIds["cobra-cost"])relatedCalculatorIds[id]=[...new Set(["cobra-cost",...(relatedCalculatorIds[id]??[])])];
+
+// Keep existing examples and source context; add independently checked repayment cases.
+for(const id of ['amortization','credit-card-minimum-payment'] as const){
+ guides[id].summary=repaymentComparisons[id].summary;
+ guides[id].examples.push(...repaymentExamples[id]);
+ guides[id].checkedOn='2026-11-19';
+}
+guides.amortization.questions.push(
+ {question:'Is $100 extra monthly the same as $1,200 extra at year-end?',answer:'They use the same annual extra budget for a complete year, but the timing differs. Earlier principal reduction changes interest. In the stated $100,000, 6%, ten-year example, the monthly-extra plan ends in 107 payments and the yearly-extra plan in 108. Their final-year extra amounts can differ because the final payment is capped.'},
+ {question:'Does Payment per period include my first extra payment?',answer:'In this calculator that figure is the first actual modeled payment, including extra principal due that month. It is not always the scheduled principal-and-interest amount. Read the period-by-period table to distinguish the scheduled installment, your entered extras and the capped final payment.'}
+);
+guides['credit-card-minimum-payment'].questions.push({question:'Is adding $50 above the minimum the same as paying a fixed $250?',answer:'Only their first payments match in the stated example. The changing minimum plus $50 generally falls as the balance declines, while a fixed $250 payment stays level until the final capped payment. Use the separate fixed-payment calculator to inspect that strategy; do not call it an equal-lifetime-budget comparison.'});
+
+guides['credit-card-minimum-payment'].sources.push({title:'CFPB: Minimum payments and a fixed three-year payment illustration',url:"https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/"});

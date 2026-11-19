@@ -200,3 +200,7 @@ Added one original SGR calculator (3 modes), guide and term. Restored 15 curated
 ## Cash advance and COBRA preview — 2026-11-18
 
 See cash-cobra-20261118.md. Two tools / three modes, independent references and browser/static validation complete. Preview branch preview/cash-cobra-20261118; production remains f3bf037fe1e98db852043617ff051b8231c89f1f. Actual remote preview deployment status and publication checkpoint are recorded in /workspace/work/cash-cobra-development-20261118/review.json.
+
+## Repayment content preview — 2026-11-19
+
+Amortization and Credit Card Minimum Payment, plus their two existing guides, now include independently verified repayment comparisons, complete-input restore links and downloadable CSVs. See repayment-content-20261119.md and evidence/repayment-content-verification-20261119.json. All 2,928 tests, 30 browser checks and the 469-page static audit passed. Existing 354 modes/defaults are unchanged. Branch preview/repayment-content-20261119; production remains bc38ae0f8570b52a3e4159466e9163a1a723d5f0. Remote preview/publication checkpoints are recorded in /workspace/work/repayment-content-20261119/review.json. User publication instruction is still pending.

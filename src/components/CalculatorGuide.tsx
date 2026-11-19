@@ -24,6 +24,7 @@ import { longTailHref } from '@/lib/long-tail-content';
 import GuideDisclosure from './GuideDisclosure';
 import {compactReadingIds,compactReadingLeadExamples,compactReadingSections} from '@/lib/compact-reading';
 import './compact-reading.css';
+import RepaymentComparison,{hasRepaymentComparison} from './RepaymentComparison';
 export default function CalculatorGuide({
   calculator,
 }: {
@@ -54,6 +55,7 @@ export default function CalculatorGuide({
             {insight && <SiteLink href="#reading-results">Reading results</SiteLink>}
             {insight && <SiteLink href="#compare-scenarios">Compare scenarios</SiteLink>}
             {calculator.id === "roi" && <SiteLink href="#roi-formulas">ROI formulas</SiteLink>}
+            {hasRepaymentComparison(calculator.id)&&<SiteLink href="#repayment-comparison-heading">Repayment comparison</SiteLink>}
             <SiteLink href="#worked-examples">Examples</SiteLink><SiteLink href="#common-questions">Questions</SiteLink>
             <SiteLink href="#scope-assumptions">Assumptions</SiteLink><SiteLink href="#sources">Sources</SiteLink>
             {hasBlogSnippetKit(calculator.id)&&<BlogSnippetLink>For writers &amp; bloggers</BlogSnippetLink>}
@@ -76,7 +78,7 @@ export default function CalculatorGuide({
           {['barista-fire','coast-fire'].includes(calculator.id) && <p>Compare the income and withdrawal assumptions in our <SiteLink href="/guides/barista-fire-vs-coast-fire/">Barista FIRE vs. Coast FIRE guide</SiteLink>.</p>}
           {calculator.id === "house-affordability" && <HouseIncomeReference/>}
           {["personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && (compact||sections.comparisons?<GuideDisclosure title={loanCostComparisonTitle(calculator.id)}><LoanCostReference id={calculator.id}/></GuideDisclosure>:<LoanCostReference id={calculator.id}/>)}
-          {calculator.id==='pmi' && <PmiRateReference/>}<RemainingFinanceReference id={calculator.id}/><h2 id="worked-examples">Worked examples</h2>
+          {calculator.id==='pmi' && <PmiRateReference/>}{!hasRepaymentComparison(calculator.id)&&<RemainingFinanceReference id={calculator.id}/>}<RepaymentComparison id={calculator.id}/><h2 id="worked-examples">Worked examples</h2>
           {foldExamples?<>{workedExamples?.[0]}{workedExamples&&workedExamples.length>1&&<GuideDisclosure title={'More worked examples ('+(workedExamples.length-1)+')'}>{workedExamples.slice(1)}</GuideDisclosure>}</>:workedExamples}
           {calculator.id === "rmd" && <RmdReference/>}
           <h2 id="common-questions">Common questions</h2>

@@ -1,0 +1,353 @@
+{
+  "date": "2026-11-19",
+  "scope": [
+    "amortization",
+    "credit-card-minimum-payment"
+  ],
+  "release": "preview-only; production approval pending",
+  "unitTests": {
+    "passed": 2928,
+    "failed": 0,
+    "log": "/workspace/work/repayment-content-20261119/tests.log"
+  },
+  "build": {
+    "passed": true,
+    "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build",
+    "log": "/workspace/work/repayment-content-20261119/build.log"
+  },
+  "independentMath": {
+    "passed": true,
+    "cases": 8,
+    "numericChecks": 155,
+    "decimalPrecision": 70,
+    "command": "python scripts/check-repayment-content-reference.py",
+    "reference": "repayment-content-reference-20261119.json"
+  },
+  "compatibility": {
+    "passed": true,
+    "existingEntries": 169,
+    "existingModes": 354,
+    "fieldsAndDefaultResultsUnchanged": true
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      {
+        "kind": "page",
+        "id": "amortization",
+        "path": "/amortization-calculator",
+        "width": 320,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "amortization",
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "width": 320,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "credit-card-minimum-payment",
+        "path": "/credit-card-minimum-payment-calculator",
+        "width": 320,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "credit-card-minimum-payment",
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "width": 320,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "amortization",
+        "path": "/amortization-calculator",
+        "width": 390,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "amortization",
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "width": 390,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "credit-card-minimum-payment",
+        "path": "/credit-card-minimum-payment-calculator",
+        "width": 390,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "credit-card-minimum-payment",
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "width": 390,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "amortization",
+        "path": "/amortization-calculator",
+        "width": 768,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "amortization",
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "width": 768,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "actual-preset-click",
+        "parent": "amortization",
+        "case": "loan-base",
+        "allInputsRestored": true,
+        "interestAndPayoffMatched": true
+      },
+      {
+        "kind": "actual-preset-click",
+        "parent": "amortization",
+        "case": "loan-monthly",
+        "allInputsRestored": true,
+        "interestAndPayoffMatched": true
+      },
+      {
+        "kind": "actual-preset-click",
+        "parent": "amortization",
+        "case": "loan-yearly",
+        "allInputsRestored": true,
+        "interestAndPayoffMatched": true
+      },
+      {
+        "kind": "actual-preset-click",
+        "parent": "amortization",
+        "case": "loan-lump",
+        "allInputsRestored": true,
+        "interestAndPayoffMatched": true
+      },
+      {
+        "kind": "validation-and-reset",
+        "id": "amortization"
+      },
+      {
+        "kind": "page",
+        "id": "credit-card-minimum-payment",
+        "path": "/credit-card-minimum-payment-calculator",
+        "width": 768,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "credit-card-minimum-payment",
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "width": 768,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "actual-preset-click",
+        "parent": "credit-card-minimum-payment",
+        "case": "card-minimum",
+        "allInputsRestored": true,
+        "interestAndPayoffMatched": true
+      },
+      {
+        "kind": "actual-preset-click",
+        "parent": "credit-card-minimum-payment",
+        "case": "card-extra50",
+        "allInputsRestored": true,
+        "interestAndPayoffMatched": true
+      },
+      {
+        "kind": "actual-preset-click",
+        "parent": "credit-card-minimum-payment",
+        "case": "card-extra100",
+        "allInputsRestored": true,
+        "interestAndPayoffMatched": true
+      },
+      {
+        "kind": "actual-preset-click",
+        "parent": "credit-card-minimum-payment",
+        "case": "card-fixed250",
+        "allInputsRestored": true,
+        "interestAndPayoffMatched": true
+      },
+      {
+        "kind": "validation-and-reset",
+        "id": "credit-card-minimum-payment"
+      },
+      {
+        "kind": "page",
+        "id": "amortization",
+        "path": "/amortization-calculator",
+        "width": 1440,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "amortization",
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "width": 1440,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "credit-card-minimum-payment",
+        "path": "/credit-card-minimum-payment-calculator",
+        "width": 1440,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "id": "credit-card-minimum-payment",
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "width": 1440,
+        "oneH1": true,
+        "oneComparison": true,
+        "fourCases": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/amortization-calculator",
+        "fourReadableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "fourReadableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/credit-card-minimum-payment-calculator",
+        "fourReadableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "fourReadableCases": true
+      }
+    ],
+    "downloads": [
+      {
+        "id": "amortization",
+        "path": "/amortization-calculator",
+        "file": "amortization.csv"
+      },
+      {
+        "id": "amortization",
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "file": "amortization.csv"
+      },
+      {
+        "id": "credit-card-minimum-payment",
+        "path": "/credit-card-minimum-payment-calculator",
+        "file": "credit-card-minimum-payment.csv"
+      },
+      {
+        "id": "credit-card-minimum-payment",
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "file": "credit-card-minimum-payment.csv"
+      }
+    ],
+    "errors": []
+  },
+  "staticAudit": {
+    "passed": true,
+    "canonicalPages": 469,
+    "brokenFiles": [],
+    "brokenFragments": [],
+    "orphanPages": [],
+    "newGuideToolLinksReciprocal": true,
+    "previousIndexingPolicyPreserved": true,
+    "reviewedPages": [
+      {
+        "path": "/amortization-calculator",
+        "canonical": "https://www.calculatorfree.io/amortization-calculator",
+        "incomingPages": 19,
+        "oneH1": true
+      },
+      {
+        "path": "/credit-card-minimum-payment-calculator",
+        "canonical": "https://www.calculatorfree.io/credit-card-minimum-payment-calculator",
+        "incomingPages": 18,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-read-amortization-and-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-read-amortization-and-loan-payments/",
+        "incomingPages": 11,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+        "canonical": "https://www.calculatorfree.io/guides/credit-card-minimum-payment-and-payoff-time/",
+        "incomingPages": 6,
+        "oneH1": true
+      }
+    ]
+  },
+  "visual": {
+    "inspected": true,
+    "widths": [
+      320,
+      1440
+    ],
+    "screenshots": "/workspace/work/repayment-content-20261119",
+    "notes": "Both topic sections inspected at mobile and desktop widths; bounded tables scroll horizontally. No window overflow."
+  },
+  "limits": [
+    "Native Safari not tested.",
+    "No guarantee of Google indexing, rankings or AdSense acceptance.",
+    "Remote preview HTTP body is not yet verified."
+  ]
+}

@@ -100,3 +100,7 @@ This change uses the authorized classification proposal and the existing source 
 ## Cash advance and COBRA — 2026-11-18
 
 CFPB grace-period guidance and CMS federal COBRA facts were read as concept/rule references. Source roles and exclusions are recorded per tool/guide/term in src/lib/source-use-notes.json. They do not validate individual agreements or certify the original implementation.
+
+## Repayment content review — 2026-11-19
+
+Reviewed CFPB explanations of [amortization](https://www.consumerfinance.gov/ask-cfpb/what-is-amortization-and-how-could-it-affect-my-auto-loan-en-771/), [mortgage paydown](https://www.consumerfinance.gov/ask-cfpb/how-does-paying-down-a-mortgage-work-en-1943/) and the [three-year fixed payment versus minimum-payment disclosure](https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/). These are background explanations; the eight hypothetical numeric examples are independently recomputed with 70-digit Python Decimal. Existing Reg Z and card-agreement references remain. See repayment-content-20261119.md.

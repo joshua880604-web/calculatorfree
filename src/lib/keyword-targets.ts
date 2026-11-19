@@ -405,3 +405,5 @@ searchTasks["cash-advance-fee"]=[{"keyword": "Cash Advance Fee Calculator", "mod
 
 keywordTitles["cobra-cost"]="COBRA Cost Calculator";
 searchTasks["cobra-cost"]=[{"keyword": "COBRA Cost Calculator", "mode": "contributions", "description": "COBRA premium planning starts with the full plan cost, including the employer contribution. With $200 from the employee, $600 from the employer and a selected 2% administrative charge, the monthly amount is $816 before any entered subsidy. This worksheet estimates premiums, not eligibility or total medical spending.", "aliases": ["COBRA premium calculator", "COBRA insurance cost calculator"]}];
+
+for(const task of searchTasks.amortization)if(task.mode==='schedule')task.aliases=[...new Set([...(task.aliases??[]),'Loan amortization calculator','Amortization calculator with lump sum payment'])];

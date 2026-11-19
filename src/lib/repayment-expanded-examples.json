@@ -1,0 +1,174 @@
+{
+  "amortization": [
+    {
+      "title": "No extra principal — full payoff comparison",
+      "mode": "schedule",
+      "values": {
+        "principal": "100000",
+        "years": "10",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": ""
+      },
+      "inputs": "principal: 100000; years: 10; months: 0; rate: 6; start: 2026-10-01; extra_monthly: 0; extra_yearly: 0; extra_once: 0; extra_once_month: 1; extra_start: 1; extra_yearly_start: 12; dated: ",
+      "steps": [
+        "The first modeled payment is $1,110.21; the model then follows each monthly interest and principal amount.",
+        "The balance is cleared in 120 monthly periods, with $33,224.60 in total interest.",
+        "Interest differs from the stated baseline by $0.00. Final payments are capped at the amount owed."
+      ],
+      "answer": "120 payments; $33,224.60 total interest under these assumptions.",
+      "expected": {
+        "label": "Total interest",
+        "value": 33224.60232997936,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Add $100 each month — full payoff comparison",
+      "mode": "schedule",
+      "values": {
+        "principal": "100000",
+        "years": "10",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "extra_monthly": "100",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": ""
+      },
+      "inputs": "principal: 100000; years: 10; months: 0; rate: 6; start: 2026-10-01; extra_monthly: 100; extra_yearly: 0; extra_once: 0; extra_once_month: 1; extra_start: 1; extra_yearly_start: 12; dated: ",
+      "steps": [
+        "The first modeled payment is $1,210.21; the model then follows each monthly interest and principal amount.",
+        "The balance is cleared in 107 monthly periods, with $29,328.37 in total interest.",
+        "Interest differs from the stated baseline by $3,896.24. Final payments are capped at the amount owed."
+      ],
+      "answer": "107 payments; $29,328.37 total interest under these assumptions.",
+      "expected": {
+        "label": "Total interest",
+        "value": 29328.366674719142,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Add $1,200 every year, starting month 12 — full payoff comparison",
+      "mode": "schedule",
+      "values": {
+        "principal": "100000",
+        "years": "10",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "extra_monthly": "0",
+        "extra_yearly": "1200",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": ""
+      },
+      "inputs": "principal: 100000; years: 10; months: 0; rate: 6; start: 2026-10-01; extra_monthly: 0; extra_yearly: 1200; extra_once: 0; extra_once_month: 1; extra_start: 1; extra_yearly_start: 12; dated: ",
+      "steps": [
+        "The first modeled payment is $1,110.21; the model then follows each monthly interest and principal amount.",
+        "The balance is cleared in 108 monthly periods, with $29,715.84 in total interest.",
+        "Interest differs from the stated baseline by $3,508.76. Final payments are capped at the amount owed."
+      ],
+      "answer": "108 payments; $29,715.84 total interest under these assumptions.",
+      "expected": {
+        "label": "Total interest",
+        "value": 29715.84193833311,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Add $5,000 once in month 12 — full payoff comparison",
+      "mode": "schedule",
+      "values": {
+        "principal": "100000",
+        "years": "10",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "5000",
+        "extra_once_month": "12",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": ""
+      },
+      "inputs": "principal: 100000; years: 10; months: 0; rate: 6; start: 2026-10-01; extra_monthly: 0; extra_yearly: 0; extra_once: 5000; extra_once_month: 12; extra_start: 1; extra_yearly_start: 12; dated: ",
+      "steps": [
+        "The first modeled payment is $1,110.21; the model then follows each monthly interest and principal amount.",
+        "The balance is cleared in 113 monthly periods, with $29,796.97 in total interest.",
+        "Interest differs from the stated baseline by $3,427.64. Final payments are capped at the amount owed."
+      ],
+      "answer": "113 payments; $29,796.97 total interest under these assumptions.",
+      "expected": {
+        "label": "Total interest",
+        "value": 29796.967059429917,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "credit-card-minimum-payment": [
+    {
+      "title": "Recalculated minimum + $50 — full payoff comparison",
+      "mode": "minimum",
+      "values": {
+        "principal": "5000",
+        "rate": "24",
+        "minimum": "2",
+        "floor": "25",
+        "interest_extra": "Yes",
+        "extra": "50"
+      },
+      "inputs": "principal: 5000; rate: 24; minimum: 2; floor: 25; interest_extra: Yes; extra: 50",
+      "steps": [
+        "The first modeled payment is $250.00; the model then follows each monthly interest and principal amount.",
+        "The balance is cleared in 53 monthly periods, with $2,273.94 in total interest.",
+        "Interest differs from the stated baseline by $2,351.13. Final payments are capped at the amount owed."
+      ],
+      "answer": "53 payments; $2,273.94 total interest under these assumptions.",
+      "expected": {
+        "label": "Total interest",
+        "value": 2273.94144439179,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Recalculated minimum + $100 — full payoff comparison",
+      "mode": "minimum",
+      "values": {
+        "principal": "5000",
+        "rate": "24",
+        "minimum": "2",
+        "floor": "25",
+        "interest_extra": "Yes",
+        "extra": "100"
+      },
+      "inputs": "principal: 5000; rate: 24; minimum: 2; floor: 25; interest_extra: Yes; extra: 100",
+      "steps": [
+        "The first modeled payment is $300.00; the model then follows each monthly interest and principal amount.",
+        "The balance is cleared in 34 monthly periods, with $1,567.26 in total interest.",
+        "Interest differs from the stated baseline by $3,057.81. Final payments are capped at the amount owed."
+      ],
+      "answer": "34 payments; $1,567.26 total interest under these assumptions.",
+      "expected": {
+        "label": "Total interest",
+        "value": 1567.2555222846145,
+        "tolerance": 1e-06
+      }
+    }
+  ]
+}

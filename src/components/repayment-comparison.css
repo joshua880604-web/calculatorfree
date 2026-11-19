@@ -1,0 +1,10 @@
+.repayment-comparison{margin-block:1.6rem;min-width:0;max-width:100%;}
+.repayment-comparison-table{max-width:100%;overflow-x:auto;border:1px solid var(--border,#d5dfee);border-radius:10px;}
+.repayment-comparison-table:focus-visible{outline:2px solid #6457e8;outline-offset:3px;}
+.repayment-comparison-table table{width:100%;min-width:950px;border-collapse:collapse;font-size:.9rem;}
+.repayment-comparison-table caption{text-align:left;padding:12px;}
+.repayment-comparison-table th,.repayment-comparison-table td{padding:12px;text-align:left;vertical-align:top;border-top:1px solid var(--border,#d5dfee);}
+.repayment-comparison-table th[scope=row]{min-width:180px;}
+.repayment-comparison-table td{min-width:105px;}
+.repayment-comparison li{margin-block:.65rem;}
+@media print{.repayment-comparison-table{overflow:visible;}.repayment-comparison-table table{min-width:0;font-size:8pt;}.repayment-comparison-table td,.repayment-comparison-table th{min-width:0;padding:5px;}}

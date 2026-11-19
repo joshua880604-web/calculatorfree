@@ -9,6 +9,7 @@ import {serializeSchema} from '@/lib/site';
 import {calculatorPresetHref} from '@/lib/preset-links';
 import SiteLink from './SiteLink';
 import ContentReviewNotice from './ContentReviewNotice';
+import RepaymentComparison from './RepaymentComparison';
 import './decision-guide.css';
 import './practical-guide.css';
 function metricText(m:{value:number;format?:string;displayValue?:string}){if(m.displayValue)return m.displayValue;return m.format==='money'?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(m.value):new Intl.NumberFormat('en-US',{maximumFractionDigits:4}).format(m.value)+(m.format==='percent'?'%':'');}
@@ -21,6 +22,8 @@ export default function PracticalGuideArticle({slug}:{slug:string}){
  <p>{data.answer}</p><p>{data.ids.map((id,i)=>{const c=data.cases.find(c=>c.calculatorId===id)!;return <span key={id}>{i>0?' · ':''}<SiteLink href={c.path}>Open {c.tool}</SiteLink></span>})}</p>
  {slug==='how-to-read-amortization-and-loan-payments'&&<section aria-label="Start with the worked loan examples"><p><strong>Try the same $100,000 loan at 6% over ten years.</strong> Load the monthly payment, or see how an extra $100 each month changes its amortization schedule. These are hypothetical inputs, not a loan offer.</p><ul><li><SiteLink href={calculatorPresetHref('/loan-calculator','amortized',{principal:100000,years:10,months:0,rate:6,compound:'Monthly',pay:'Monthly'})}>Load the $100,000 monthly-payment example</SiteLink></li><li><SiteLink href={calculatorPresetHref(data.cases[1].path,data.cases[1].mode,data.cases[1].values)}>Load the amortization example with $100 extra monthly</SiteLink></li></ul></section>}
  <nav className="guide-nav" aria-label="Guide sections">{data.sections.map((s,i)=><a key={s.title} href={'#method-'+i}>{s.title}</a>)}<a href="#examples">Examples</a><a href="#questions">Questions</a><a href="#sources">Sources & limits</a></nav>
+ {slug==='how-to-read-amortization-and-loan-payments'&&<RepaymentComparison id="amortization" inGuide/>}
+ {slug==='credit-card-minimum-payment-and-payoff-time'&&<RepaymentComparison id="credit-card-minimum-payment" inGuide/>}
  {data.sections.map((s,i)=><section key={s.title}><h2 id={'method-'+i}>{s.title}</h2><p>{s.text}</p></section>)}
  {data.ids.includes("interest-rate")&&<InterestRateReference inGuide/>}
  {data.ids.includes("discount")&&<DiscountReference inGuide/>}

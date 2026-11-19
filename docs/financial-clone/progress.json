@@ -62,36 +62,37 @@
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
-    "id": "amortization",
-    "mode": "schedule",
-    "spec": "in_progress",
-    "implementation": "in_progress",
-    "math": "in_progress",
-    "reference_parity": "unverified",
-    "browser": "passed",
-    "visual": "unverified",
-    "local_implementation": "passed",
-    "local_numeric_smoke": "passed",
-    "evidence": {
-      "text_spec": "specs/amortization.md",
-      "numeric": "evidence/tests.tap",
-      "browser": "evidence/browser-qa.json",
-      "limitations": "remaining-work.md",
-      "seo_readiness": "seo-geo.md",
-      "ui_performance": "ui-performance.md",
-      "guide_expansion": "content-expansion.md",
-      "keyword_implementation": "keyword-implementation.md",
-      "strict_policy": "strict-functionality-policy.md",
-      "reference_map": "reference-function-map.json",
-      "local_regression": "evidence/strict-functionality-tests.tap"
-    },
-    "blockers": [
-      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-    ],
-    "fully_complete": false,
-    "updated_at": "2026-10-20T07:46:03.664Z",
-    "functional_delivery": "implemented_with_documented_independent_model"
+  "id": "amortization",
+  "mode": "schedule",
+  "spec": "in_progress",
+  "implementation": "in_progress",
+  "math": "in_progress",
+  "reference_parity": "unverified",
+  "browser": "passed",
+  "visual": "unverified",
+  "local_implementation": "passed",
+  "local_numeric_smoke": "passed",
+  "evidence": {
+    "text_spec": "specs/amortization.md",
+    "numeric": "evidence/tests.tap",
+    "browser": "evidence/browser-qa.json",
+    "limitations": "remaining-work.md",
+    "seo_readiness": "seo-geo.md",
+    "ui_performance": "ui-performance.md",
+    "guide_expansion": "content-expansion.md",
+    "keyword_implementation": "keyword-implementation.md",
+    "strict_policy": "strict-functionality-policy.md",
+    "reference_map": "reference-function-map.json",
+    "local_regression": "evidence/strict-functionality-tests.tap",
+    "repayment_content": "evidence/repayment-content-verification-20261119.json"
   },
+  "blockers": [
+    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+  ],
+  "fully_complete": false,
+  "updated_at": "2026-11-19",
+  "functional_delivery": "implemented_with_documented_independent_model"
+},
   {
     "id": "mortgage-payoff",
     "mode": "remaining-extra",

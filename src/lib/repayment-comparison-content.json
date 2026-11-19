@@ -1,0 +1,247 @@
+{
+  "amortization": {
+    "heading": "What do extra payments change on the same loan?",
+    "intro": "On this hypothetical $100,000 loan at 6% over ten years, the no-extra schedule takes 120 payments and $33,224.60 in interest. Adding $100 monthly changes that to 107 payments and $29,328.37 in interest.",
+    "columns": [
+      "Scenario",
+      "First payment",
+      "Payoff months",
+      "Total interest",
+      "Principal + interest paid",
+      "Interest saved vs no extra"
+    ],
+    "rows": [
+      {
+        "key": "loan-base",
+        "label": "No extra principal",
+        "calculatorId": "amortization",
+        "path": "/amortization-calculator",
+        "mode": "schedule",
+        "values": {
+          "principal": "100000",
+          "years": "10",
+          "months": "0",
+          "rate": "6",
+          "start": "2026-10-01",
+          "extra_monthly": "0",
+          "extra_yearly": "0",
+          "extra_once": "0",
+          "extra_once_month": "1",
+          "extra_start": "1",
+          "extra_yearly_start": "12",
+          "dated": ""
+        },
+        "display": [
+          "$1,110.21",
+          "120",
+          "$33,224.60",
+          "$133,224.60",
+          "$0.00"
+        ]
+      },
+      {
+        "key": "loan-monthly",
+        "label": "Add $100 each month",
+        "calculatorId": "amortization",
+        "path": "/amortization-calculator",
+        "mode": "schedule",
+        "values": {
+          "principal": "100000",
+          "years": "10",
+          "months": "0",
+          "rate": "6",
+          "start": "2026-10-01",
+          "extra_monthly": "100",
+          "extra_yearly": "0",
+          "extra_once": "0",
+          "extra_once_month": "1",
+          "extra_start": "1",
+          "extra_yearly_start": "12",
+          "dated": ""
+        },
+        "display": [
+          "$1,210.21",
+          "107",
+          "$29,328.37",
+          "$129,328.37",
+          "$3,896.24"
+        ]
+      },
+      {
+        "key": "loan-yearly",
+        "label": "Add $1,200 every year, starting month 12",
+        "calculatorId": "amortization",
+        "path": "/amortization-calculator",
+        "mode": "schedule",
+        "values": {
+          "principal": "100000",
+          "years": "10",
+          "months": "0",
+          "rate": "6",
+          "start": "2026-10-01",
+          "extra_monthly": "0",
+          "extra_yearly": "1200",
+          "extra_once": "0",
+          "extra_once_month": "1",
+          "extra_start": "1",
+          "extra_yearly_start": "12",
+          "dated": ""
+        },
+        "display": [
+          "$1,110.21",
+          "108",
+          "$29,715.84",
+          "$129,715.84",
+          "$3,508.76"
+        ]
+      },
+      {
+        "key": "loan-lump",
+        "label": "Add $5,000 once in month 12",
+        "calculatorId": "amortization",
+        "path": "/amortization-calculator",
+        "mode": "schedule",
+        "values": {
+          "principal": "100000",
+          "years": "10",
+          "months": "0",
+          "rate": "6",
+          "start": "2026-10-01",
+          "extra_monthly": "0",
+          "extra_yearly": "0",
+          "extra_once": "5000",
+          "extra_once_month": "12",
+          "extra_start": "1",
+          "extra_yearly_start": "12",
+          "dated": ""
+        },
+        "display": [
+          "$1,110.21",
+          "113",
+          "$29,796.97",
+          "$129,796.97",
+          "$3,427.64"
+        ]
+      }
+    ],
+    "notes": [
+      "The original principal, nominal annual rate and contractual term are unchanged. The model holds the scheduled principal-and-interest payment constant, then adds the selected extra principal at each stated payment month.",
+      "The monthly $100 and annual $1,200 cases have the same annual extra budget during a complete year, but different timing. Earlier principal reduction changes interest. Their final years and capped last payments need not use the same total extra cash.",
+      "The displayed first payment includes any extra due in month 1; it is not always the scheduled principal-and-interest amount. A one-time payment in month 12 has no effect before that month.",
+      "No payment penalties, fees, escrow, taxes, insurance or loan recast are included. Dates label monthly periods; this is not an actual-day lender payoff quote. All currency is USD, with fractional cents retained internally and display rounding at the end."
+    ],
+    "guidePath": "/guides/how-to-read-amortization-and-loan-payments/",
+    "csvPath": "/data/repayment-comparisons/amortization.csv",
+    "checkedOn": "2026-11-19",
+    "summary": "An amortization schedule separates each payment into interest, principal and the remaining balance. In the controlled example below, adding $100 monthly shortens the original ten-year loan by 13 payments while leaving the scheduled principal-and-interest installment unchanged."
+  },
+  "credit-card-minimum-payment": {
+    "heading": "How do minimum-only, extra and fixed payments compare?",
+    "intro": "For this hypothetical $5,000 balance at 24% APR, a 2%-of-opening-balance minimum plus monthly interest and a $25 floor starts at $200. Minimum-only repayment takes 138 months and $4,625.07 in interest. Adding $50 above each changing minimum takes 53 months and $2,273.94 in interest.",
+    "columns": [
+      "Scenario",
+      "First payment",
+      "Payoff months",
+      "Total interest",
+      "Principal + interest paid",
+      "Interest saved vs minimum only"
+    ],
+    "rows": [
+      {
+        "key": "card-minimum",
+        "label": "Recalculate and pay only the minimum",
+        "calculatorId": "credit-card-minimum-payment",
+        "path": "/credit-card-minimum-payment-calculator",
+        "mode": "minimum",
+        "values": {
+          "principal": "5000",
+          "rate": "24",
+          "minimum": "2",
+          "floor": "25",
+          "interest_extra": "Yes",
+          "extra": "0"
+        },
+        "display": [
+          "$200.00",
+          "138",
+          "$4,625.07",
+          "$9,625.07",
+          "$0.00"
+        ]
+      },
+      {
+        "key": "card-extra50",
+        "label": "Recalculated minimum + $50",
+        "calculatorId": "credit-card-minimum-payment",
+        "path": "/credit-card-minimum-payment-calculator",
+        "mode": "minimum",
+        "values": {
+          "principal": "5000",
+          "rate": "24",
+          "minimum": "2",
+          "floor": "25",
+          "interest_extra": "Yes",
+          "extra": "50"
+        },
+        "display": [
+          "$250.00",
+          "53",
+          "$2,273.94",
+          "$7,273.94",
+          "$2,351.13"
+        ]
+      },
+      {
+        "key": "card-extra100",
+        "label": "Recalculated minimum + $100",
+        "calculatorId": "credit-card-minimum-payment",
+        "path": "/credit-card-minimum-payment-calculator",
+        "mode": "minimum",
+        "values": {
+          "principal": "5000",
+          "rate": "24",
+          "minimum": "2",
+          "floor": "25",
+          "interest_extra": "Yes",
+          "extra": "100"
+        },
+        "display": [
+          "$300.00",
+          "34",
+          "$1,567.26",
+          "$6,567.26",
+          "$3,057.81"
+        ]
+      },
+      {
+        "key": "card-fixed250",
+        "label": "Fixed total payment of $250",
+        "calculatorId": "credit-card",
+        "path": "/single-credit-card-payoff-calculator",
+        "mode": "payment",
+        "values": {
+          "principal": "5000",
+          "rate": "24",
+          "payment": "250"
+        },
+        "display": [
+          "$250.00",
+          "26",
+          "$1,449.36",
+          "$6,449.36",
+          "$3,175.70"
+        ]
+      }
+    ],
+    "notes": [
+      "The first three rows use the same changing minimum rule: opening balance × 2% plus monthly interest, or $25 if larger, capped at the amount owed. Each fixed extra is added above the newly calculated minimum every month.",
+      "Minimum plus $50 and a fixed $250 total begin with the same $250 payment, but their later budgets differ. The minimum-plus-extra payment generally declines; the fixed-total strategy keeps paying $250 until its capped final payment. This is not an equal-lifetime-budget comparison.",
+      "The fixed-total row opens the existing Credit Card Payoff Calculator. It is a separate calculation task, not another name or mode for the changing-minimum tool.",
+      "No new purchases, fees, rate changes or multiple balances are included. Both calculations use monthly APR/12 interest and retain fractional cents. Your agreement and statement may use daily balances, other minimum rules and different rounding."
+    ],
+    "guidePath": "/guides/credit-card-minimum-payment-and-payoff-time/",
+    "csvPath": "/data/repayment-comparisons/credit-card-minimum-payment.csv",
+    "checkedOn": "2026-11-19",
+    "summary": "A minimum payment follows the rule entered from your agreement. Paying extra above that changing minimum and keeping a fixed total monthly payment are different strategies; the comparison below shows their different payoff times and interest under the same starting balance and APR."
+  }
+}

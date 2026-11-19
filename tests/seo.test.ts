@@ -234,3 +234,5 @@ test("Production SEO follows the confirmed www extensionless destination while o
 });
 
 Object.assign(wordingReviewDates,Object.fromEntries(["/cash-advance-fee-calculator.html", "/cobra-cost-calculator.html", "/guides/cash-advance-fees-vs-interest/", "/guides/cobra-premium-vs-payroll-deduction/", "/glossary/cash-advance-fee/", "/glossary/cobra-cost/"].map(path=>[path,'2026-11-18'])));
+
+Object.assign(wordingReviewDates,Object.fromEntries(["/amortization-calculator.html", "/credit-card-minimum-payment-calculator.html", "/guides/how-to-read-amortization-and-loan-payments/", "/guides/credit-card-minimum-payment-and-payoff-time/"].map(path=>[path,'2026-11-19'])));
