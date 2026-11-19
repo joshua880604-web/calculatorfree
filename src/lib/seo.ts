@@ -429,3 +429,6 @@ Object.assign(contentUpdatedOn,{"/auto-loan-calculator.html": "2026-11-19", "/pe
 
 // Substantive phase, closing-cash and multi-debt comparison review.
 Object.assign(contentUpdatedOn,{"/heloc-calculator.html": "2026-11-19", "/home-equity-loan-calculator.html": "2026-11-19", "/debt-consolidation-calculator.html": "2026-11-19", "/guides/how-are-heloc-payments-calculated/": "2026-11-19", "/guides/how-to-calculate-home-equity-loan-payments/": "2026-11-19", "/guides/how-to-compare-debt-consolidation-loans/": "2026-11-19"});
+
+// Substantive FHA/VA fee and ownership-budget scenario review.
+Object.assign(contentUpdatedOn,{"/fha-loan-calculator.html": "2026-11-19", "/va-mortgage-calculator.html": "2026-11-19", "/house-affordability-calculator.html": "2026-11-19", "/guides/how-to-calculate-fha-loan-payments/": "2026-11-19", "/guides/how-to-calculate-va-loan-payments/": "2026-11-19", "/guides/how-much-house-can-i-afford/": "2026-11-19"});

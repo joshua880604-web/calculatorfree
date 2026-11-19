@@ -1,0 +1,669 @@
+{
+  "date": "2026-11-19",
+  "status": "validated; remote preview deployment pending; production publication pending",
+  "scope": [
+    "fha-loan",
+    "va-mortgage",
+    "house-affordability"
+  ],
+  "tests": {
+    "passed": 3112,
+    "failed": 0,
+    "log": "/workspace/work/fha-va-afford-content-20261119/tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "npm run typecheck -- --incremental false",
+    "log": "/workspace/work/fha-va-afford-content-20261119/typecheck.log"
+  },
+  "build": {
+    "passed": true,
+    "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build",
+    "log": "/workspace/work/fha-va-afford-content-20261119/build.log"
+  },
+  "independentMath": {
+    "passed": true,
+    "cases": 21,
+    "numericChecks": 732,
+    "decimalPrecision": 70,
+    "reference": "fha-va-afford-reference-20261119.json",
+    "command": "python scripts/check-fha-va-afford-reference.py"
+  },
+  "compatibility": {
+    "passed": true,
+    "existingEntries": 169,
+    "existingModes": 354,
+    "fieldsDefaultsAndResultsUnchanged": true,
+    "originalWorkedExamplesPreserved": 10
+  },
+  "browser": {
+    "passed": true,
+    "uniquePages": 6,
+    "checks": [
+      {
+        "kind": "page",
+        "path": "/fha-loan-calculator",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-fha-loan-payments/",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/va-mortgage-calculator",
+        "width": 320,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-va-loan-payments/",
+        "width": 320,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/house-affordability-calculator",
+        "width": 320,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-much-house-can-i-afford/",
+        "width": 320,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/fha-loan-calculator",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-fha-loan-payments/",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/va-mortgage-calculator",
+        "width": 390,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-va-loan-payments/",
+        "width": 390,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/house-affordability-calculator",
+        "width": 390,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-much-house-can-i-afford/",
+        "width": 390,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/fha-loan-calculator",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-fha-loan-payments/",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "fha",
+        "label": "3.5% down, 30 years",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "fha",
+        "label": "10% down, 30 years",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "fha",
+        "label": "3.5% down, 15 years",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "fha",
+        "label": "Base plus entered tax, insurance and HOA",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "fha",
+        "label": "10% price down; USD 280,000 appraisal",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "fha",
+        "label": "3.5% down + USD 100 monthly extra",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "fha-loan",
+        "keyword": "FHA loan calculator with mortgage insurance",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "fha-loan",
+        "keyword": "FHA loan calculator with taxes and insurance",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "fha-loan",
+        "keyword": "FHA loan calculator with extra payments",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "fha-loan",
+        "keyword": "FHA loan calculator with mortgage insurance",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "fha-loan",
+        "keyword": "FHA loan calculator with taxes and insurance",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "fha-loan",
+        "keyword": "FHA loan calculator with extra payments",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "fha-loan"
+      },
+      {
+        "kind": "page",
+        "path": "/va-mortgage-calculator",
+        "width": 768,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-va-loan-payments/",
+        "width": 768,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "va",
+        "label": "First use, no down payment, fee financed",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "va",
+        "label": "First use, fee paid upfront",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "va",
+        "label": "First use, 5% down",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "va",
+        "label": "First use, 10% down",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "va",
+        "label": "Subsequent use, no down payment",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "va",
+        "label": "Exemption assumed established",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "va",
+        "label": "First use plus tax, insurance and HOA",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "va",
+        "label": "Prior use only for a manufactured home",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "va-mortgage",
+        "keyword": "VA mortgage calculator with funding fee",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "va-mortgage",
+        "keyword": "VA loan calculator with funding fee paid upfront",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "va-mortgage",
+        "keyword": "VA loan calculator with funding fee exemption",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "va-mortgage",
+        "keyword": "VA loan calculator with taxes and insurance",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "va-mortgage",
+        "keyword": "VA mortgage calculator with funding fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "va-mortgage",
+        "keyword": "VA loan calculator with funding fee paid upfront",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "va-mortgage",
+        "keyword": "VA loan calculator with funding fee exemption",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "va-mortgage",
+        "keyword": "VA loan calculator with taxes and insurance",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "va-mortgage"
+      },
+      {
+        "kind": "page",
+        "path": "/house-affordability-calculator",
+        "width": 768,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-much-house-can-i-afford/",
+        "width": 768,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "afford",
+        "label": "Base: USD 500 monthly other debt",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "afford",
+        "label": "USD 1,000 monthly other debt",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "afford",
+        "label": "2% annual property tax",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "afford",
+        "label": "USD 300 monthly HOA",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "afford",
+        "label": "USD 2,500 fixed housing budget",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "afford",
+        "label": "Base income + 1% annual maintenance",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "afford",
+        "label": "USD 2,500 budget; USD 100,000 cash down",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "house-affordability",
+        "keyword": "Home affordability calculator",
+        "mode": "income",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "house-affordability",
+        "keyword": "Home affordability calculator by monthly budget",
+        "mode": "budget",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "house-affordability",
+        "keyword": "House affordability calculator with maintenance",
+        "mode": "income",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "house-affordability",
+        "keyword": "Home affordability calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "house-affordability",
+        "keyword": "Home affordability calculator by monthly budget",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "house-affordability",
+        "keyword": "House affordability calculator with maintenance",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "house-affordability"
+      },
+      {
+        "kind": "page",
+        "path": "/fha-loan-calculator",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-fha-loan-payments/",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/va-mortgage-calculator",
+        "width": 1440,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-va-loan-payments/",
+        "width": 1440,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/house-affordability-calculator",
+        "width": 1440,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-much-house-can-i-afford/",
+        "width": 1440,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/fha-loan-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-calculate-fha-loan-payments/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/va-mortgage-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-calculate-va-loan-payments/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/house-affordability-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-much-house-can-i-afford/",
+        "readableCases": true
+      }
+    ],
+    "downloads": [
+      {
+        "path": "/fha-loan-calculator",
+        "file": "fha-cases.csv",
+        "cases": 6
+      },
+      {
+        "path": "/guides/how-to-calculate-fha-loan-payments/",
+        "file": "fha-cases.csv",
+        "cases": 6
+      },
+      {
+        "path": "/va-mortgage-calculator",
+        "file": "va-cases.csv",
+        "cases": 8
+      },
+      {
+        "path": "/guides/how-to-calculate-va-loan-payments/",
+        "file": "va-cases.csv",
+        "cases": 8
+      },
+      {
+        "path": "/house-affordability-calculator",
+        "file": "afford-cases.csv",
+        "cases": 7
+      },
+      {
+        "path": "/guides/how-much-house-can-i-afford/",
+        "file": "afford-cases.csv",
+        "cases": 7
+      }
+    ],
+    "errors": []
+  },
+  "staticAudit": {
+    "passed": true,
+    "canonicalPages": 469,
+    "brokenFiles": [],
+    "brokenFragments": [],
+    "orphanPages": [],
+    "reviewedPages": [
+      {
+        "path": "/fha-loan-calculator",
+        "canonical": "https://www.calculatorfree.io/fha-loan-calculator",
+        "incomingPages": 14,
+        "oneH1": true
+      },
+      {
+        "path": "/va-mortgage-calculator",
+        "canonical": "https://www.calculatorfree.io/va-mortgage-calculator",
+        "incomingPages": 7,
+        "oneH1": true
+      },
+      {
+        "path": "/house-affordability-calculator",
+        "canonical": "https://www.calculatorfree.io/house-affordability-calculator",
+        "incomingPages": 33,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-calculate-fha-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-calculate-fha-loan-payments/",
+        "incomingPages": 7,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-calculate-va-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-calculate-va-loan-payments/",
+        "incomingPages": 6,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-much-house-can-i-afford/",
+        "canonical": "https://www.calculatorfree.io/guides/how-much-house-can-i-afford/",
+        "incomingPages": 12,
+        "oneH1": true
+      }
+    ],
+    "newGuideToolLinksReciprocal": true,
+    "previousIndexingPolicyPreserved": true
+  },
+  "visual": {
+    "desktopAndMobileInspected": true,
+    "allThreeChartsDecodedAndInspected": true,
+    "screenshots": [
+      "/workspace/work/fha-va-afford-content-20261119/fha-320.png",
+      "/workspace/work/fha-va-afford-content-20261119/fha-1440.png",
+      "/workspace/work/fha-va-afford-content-20261119/fha-chart.png",
+      "/workspace/work/fha-va-afford-content-20261119/va-320.png",
+      "/workspace/work/fha-va-afford-content-20261119/va-1440.png",
+      "/workspace/work/fha-va-afford-content-20261119/va-chart.png",
+      "/workspace/work/fha-va-afford-content-20261119/afford-320.png",
+      "/workspace/work/fha-va-afford-content-20261119/afford-1440.png",
+      "/workspace/work/fha-va-afford-content-20261119/afford-chart.png"
+    ]
+  },
+  "limits": [
+    "Native Safari unverified",
+    "External professional review unverified",
+    "Remote HTTP bodies unverified",
+    "Retained FHA/VA model terms, not comprehensive current underwriting",
+    "No live offer, eligibility, exemption entitlement or lender approval",
+    "No indexing, ranking or AdSense approval guarantee"
+  ]
+}

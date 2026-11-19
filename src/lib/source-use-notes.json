@@ -2752,7 +2752,8 @@
       ]
     },
     "calculator:fha-loan": {
-      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+      "note": "HUD Mortgagee Letter 2023-05 supplies the retained ordinary-loan premium terms; HUD premium-calculation material supplies the original-schedule and rounding method, not its historical example rates. The new appraisal and extra-principal cases do not determine eligible financing, program applicability or approval. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "calculator:inflation": {
       "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
@@ -2764,7 +2765,8 @@
       ]
     },
     "calculator:va-mortgage": {
-      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
+      "note": "VA purchase-fee guidance supplies the retained April 7, 2023 chart, cash-versus-financed treatment and manufactured-home-only prior-use exception. An exemption is assumed established where selected; no eligibility determination or actual cash-to-close estimate is made. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "calculator:commission": {
       "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
@@ -2816,13 +2818,14 @@
       "updatedOn": "2026-11-19"
     },
     "calculator:house-affordability": {
-      "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote.",
+      "note": "CFPB guidance explains gross-income ratios and the need to budget ownership expenses and separate closing cash. Entered ratios and maintenance percentages are hypothetical planning choices. No lender approval, mortgage-insurance quote or verification of available savings is inferred. Sources do not certify the original hypothetical arithmetic.",
       "extras": [
         {
           "title": "CFPB: debt-to-income definition and lender-specific treatment",
           "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:mortgage-recast": {
       "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
@@ -3177,10 +3180,12 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/how-to-calculate-fha-loan-payments/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "HUD Mortgagee Letter 2023-05 supplies the retained ordinary-loan premium terms; HUD premium-calculation material supplies the original-schedule and rounding method, not its historical example rates. The new appraisal and extra-principal cases do not determine eligible financing, program applicability or approval. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-to-calculate-va-loan-payments/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "VA purchase-fee guidance supplies the retained April 7, 2023 chart, cash-versus-financed treatment and manufactured-home-only prior-use exception. An exemption is assumed established where selected; no eligibility determination or actual cash-to-close estimate is made. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/pay-off-car-loan-early/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
@@ -3196,8 +3201,8 @@
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
     },
     "guide:/guides/how-much-house-can-i-afford/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review.",
-      "updatedOn": "2026-11-03"
+      "note": "CFPB guidance explains gross-income ratios and the need to budget ownership expenses and separate closing cash. Entered ratios and maintenance percentages are hypothetical planning choices. No lender approval, mortgage-insurance quote or verification of available savings is inferred. Sources do not certify the original hypothetical arithmetic.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/roth-ira-vs-traditional-ira/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."

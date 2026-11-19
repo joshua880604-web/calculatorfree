@@ -1126,3 +1126,6 @@ guides['auto-loan'].sources.push({title:'CFPB: unpaid trade-in debt and negative
 
 import equityHelocConsolidationExamples from './equity-heloc-consolidation-examples.json';
 for(const id of ['heloc','home-equity-loan','debt-consolidation']as const){guides[id].examples.push(...equityHelocConsolidationExamples[id].map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));guides[id].checkedOn='2026-11-19';}
+
+import fhaVaAffordExamples from './fha-va-afford-examples.json';
+for(const id of ['fha-loan','va-mortgage','house-affordability']as const){guides[id].examples.push(...fhaVaAffordExamples[id].map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));guides[id].checkedOn='2026-11-19';}

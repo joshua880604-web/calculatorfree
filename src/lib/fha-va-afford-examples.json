@@ -1,0 +1,281 @@
+{
+  "fha-loan": [
+    {
+      "title": "Read FHA premium LTV using a lower appraisal",
+      "mode": "monthly",
+      "values": {
+        "price": "300000",
+        "down": "10",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "appraised_value": "280000",
+        "mip_method": "Automatic",
+        "upfront": "1.75",
+        "annual_mip": "0.5",
+        "mip_years": "11",
+        "start": "2026-11-01",
+        "tax": "0",
+        "tax_unit": "Dollars",
+        "insurance": "0",
+        "insurance_unit": "Dollars",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "0",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": ""
+      },
+      "inputs": "$300,000 price; 10% price down; $280,000 appraisal; 6% rate; thirty-year term; automatic ordinary MIP; no other costs or extras.",
+      "steps": [
+        "Base loan = $300,000 minus $30,000 = $270,000.",
+        "Premium LTV = $270,000 / $280,000 ≈ 96.4286%.",
+        "Use the documented 0.55% annual MIP and thirty-year cap for this model row; it does not establish loan eligibility."
+      ],
+      "answer": "Stated MIP duration cap: 30 years; annual MIP: 0.55%.",
+      "expected": {
+        "label": "FHA MIP duration in years",
+        "value": 30.0,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Add $100 monthly to an FHA loan without changing its premium baseline",
+      "mode": "monthly",
+      "values": {
+        "price": "300000",
+        "down": "3.5",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "appraised_value": "",
+        "mip_method": "Automatic",
+        "upfront": "1.75",
+        "annual_mip": "0.5",
+        "mip_years": "11",
+        "start": "2026-11-01",
+        "tax": "0",
+        "tax_unit": "Dollars",
+        "insurance": "0",
+        "insurance_unit": "Dollars",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "0",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "100",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": ""
+      },
+      "inputs": "$300,000 price; 3.5% down; 6% rate; thirty-year contract; automatic MIP; $100 extra monthly from month one; no other costs.",
+      "steps": [
+        "Compute P&I on the base loan plus financed upfront MIP.",
+        "Add $100 principal after each month’s interest; cap the final payment.",
+        "Keep MIP based on the original schedule and stop charging at modeled payoff or its term cap."
+      ],
+      "answer": "313 modeled payments; total recurring MIP: $29,908.93.",
+      "expected": {
+        "label": "Number of payments",
+        "value": 313.0,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "va-mortgage": [
+    {
+      "title": "Include property costs in a VA payment without monthly MIP",
+      "mode": "monthly",
+      "values": {
+        "price": "400000",
+        "down": "0",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-11-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1200",
+        "insurance_unit": "Dollars",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "600",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "repeat": "No",
+        "exempt": "No",
+        "fee_treatment": "Finance fee"
+      },
+      "inputs": "$400,000 price; no down; first use; no exemption; 6% for thirty years; fee financed; $4,800 annual tax, $1,200 insurance and $600 HOA.",
+      "steps": [
+        "Compute the 2.15% funding fee and finance it above the $400,000 base loan.",
+        "Divide $6,600 total annual ownership allowances by twelve, giving $550 per month.",
+        "Add $550 to scheduled P&I without calling it mortgage insurance."
+      ],
+      "answer": "Initial monthly total: $2,999.76.",
+      "expected": {
+        "label": "Initial monthly total",
+        "value": 2999.7634457741465,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Apply the documented manufactured-home-only prior-use category",
+      "mode": "monthly",
+      "values": {
+        "price": "400000",
+        "down": "0",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-11-01",
+        "tax": "0",
+        "tax_unit": "Dollars",
+        "insurance": "0",
+        "insurance_unit": "Dollars",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "0",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "repeat": "Only a manufactured home",
+        "exempt": "No",
+        "fee_treatment": "Finance fee"
+      },
+      "inputs": "$400,000 price; no down; 6% for thirty years; prior VA use only for a manufactured home; no established exemption; fee financed; no ownership costs.",
+      "steps": [
+        "Select the narrow Only a manufactured home previous-use category.",
+        "The documented purchase rule retains the first-use 2.15% funding fee for this category.",
+        "Apply it to the $400,000 base loan; this does not generalize to all repeat use."
+      ],
+      "answer": "Modeled funding fee: $8,600.",
+      "expected": {
+        "label": "Upfront fee",
+        "value": 8600.0,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "house-affordability": [
+    {
+      "title": "Allow for 1% annual maintenance within the same housing budget",
+      "mode": "income",
+      "values": {
+        "income": "100000",
+        "debt": "500",
+        "front": "28",
+        "back": "36",
+        "down": "20",
+        "down_unit": "Percent",
+        "rate": "6",
+        "years": "30",
+        "tax_rate": "1.2",
+        "tax_unit": "Percent of home value",
+        "insurance": "1500",
+        "insurance_unit": "Dollars per year",
+        "hoa": "0",
+        "hoa_unit": "Dollars per month",
+        "maintenance": "1",
+        "maintenance_unit": "Percent of home value"
+      },
+      "inputs": "$100,000 gross income; $500 monthly other debt; entered 28%/36% ceilings; 20% down; 6% for thirty years; 1.2% property tax; $1,500 annual insurance; 1% annual maintenance; zero HOA.",
+      "steps": [
+        "Compute the tighter entered income-ratio housing budget.",
+        "Deduct fixed insurance and allow both percentage tax and maintenance from the solved home value.",
+        "Solve the remainder as the mortgage installment; the maintenance percentage is an example, not a standard."
+      ],
+      "answer": "Estimated home price: $333,095.14.",
+      "expected": {
+        "label": "Estimated home price",
+        "value": 333095.1371488107,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Solve a home price with $100,000 cash down and fixed housing allowances",
+      "mode": "budget",
+      "values": {
+        "budget": "2500",
+        "down": "100000",
+        "down_unit": "Dollars",
+        "rate": "6",
+        "years": "30",
+        "tax_rate": "3600",
+        "tax_unit": "Dollars per year",
+        "insurance": "1500",
+        "insurance_unit": "Dollars per year",
+        "hoa": "100",
+        "hoa_unit": "Dollars per month",
+        "maintenance": "2400",
+        "maintenance_unit": "Dollars per year"
+      },
+      "inputs": "$2,500 monthly budget; $100,000 cash down; 6% for thirty years; annual tax $3,600, insurance $1,500, maintenance $2,400; $100 monthly HOA.",
+      "steps": [
+        "Fixed non-loan housing allowances total $725 per month.",
+        "Use $1,775 for P&I and amortize only the solved price above the fixed $100,000 cash down.",
+        "Keep closing costs, reserves and any applicable mortgage insurance separate; the tool does not verify available cash."
+      ],
+      "answer": "Estimated home price: $396,055.12; entered down payment: $100,000.",
+      "expected": {
+        "label": "Down payment",
+        "value": 100000.0,
+        "tolerance": 1e-06
+      }
+    }
+  ]
+}

@@ -365,13 +365,14 @@
       "keyword_implementation": "keyword-implementation.md",
       "strict_policy": "strict-functionality-policy.md",
       "reference_map": "reference-function-map.json",
-      "local_regression": "evidence/strict-functionality-tests.tap"
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/fha-va-afford-verification-20261119.json"
     },
     "blockers": [
       "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
     ],
     "fully_complete": false,
-    "updated_at": "2026-10-20T07:46:03.664Z",
+    "updated_at": "2026-11-19",
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
@@ -396,13 +397,14 @@
       "keyword_implementation": "keyword-implementation.md",
       "strict_policy": "strict-functionality-policy.md",
       "reference_map": "reference-function-map.json",
-      "local_regression": "evidence/strict-functionality-tests.tap"
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/fha-va-afford-verification-20261119.json"
     },
     "blockers": [
       "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
     ],
     "fully_complete": false,
-    "updated_at": "2026-10-20T07:46:03.664Z",
+    "updated_at": "2026-11-19",
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
@@ -678,13 +680,14 @@
       "keyword_implementation": "keyword-implementation.md",
       "strict_policy": "strict-functionality-policy.md",
       "reference_map": "reference-function-map.json",
-      "local_regression": "evidence/strict-functionality-tests.tap"
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/fha-va-afford-verification-20261119.json"
     },
     "blockers": [
       "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
     ],
     "fully_complete": false,
-    "updated_at": "2026-10-20T07:46:03.664Z",
+    "updated_at": "2026-11-19",
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
@@ -709,13 +712,14 @@
       "keyword_implementation": "keyword-implementation.md",
       "strict_policy": "strict-functionality-policy.md",
       "reference_map": "reference-function-map.json",
-      "local_regression": "evidence/strict-functionality-tests.tap"
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/fha-va-afford-verification-20261119.json"
     },
     "blockers": [
       "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
     ],
     "fully_complete": false,
-    "updated_at": "2026-10-20T07:46:03.664Z",
+    "updated_at": "2026-11-19",
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
@@ -740,13 +744,14 @@
       "keyword_implementation": "keyword-implementation.md",
       "strict_policy": "strict-functionality-policy.md",
       "reference_map": "reference-function-map.json",
-      "local_regression": "evidence/strict-functionality-tests.tap"
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/fha-va-afford-verification-20261119.json"
     },
     "blockers": [
       "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
     ],
     "fully_complete": false,
-    "updated_at": "2026-10-20T07:46:03.664Z",
+    "updated_at": "2026-11-19",
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
@@ -771,13 +776,14 @@
       "keyword_implementation": "keyword-implementation.md",
       "strict_policy": "strict-functionality-policy.md",
       "reference_map": "reference-function-map.json",
-      "local_regression": "evidence/strict-functionality-tests.tap"
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/fha-va-afford-verification-20261119.json"
     },
     "blockers": [
       "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
     ],
     "fully_complete": false,
-    "updated_at": "2026-10-20T07:46:03.664Z",
+    "updated_at": "2026-11-19",
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {

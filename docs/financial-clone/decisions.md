@@ -146,3 +146,7 @@ Retain the three existing calculator pages and guides, all thirteen comparison i
 ## HELOC, home equity and consolidation content — 2026-11-19
 
 Keep the existing three tools and guides, all fifteen prior comparison inputs and all fifteen worked examples. Expose the HELOC phase table on the calculator and keep credit-ceiling checks separate from borrowed balances. Explain gross versus net cash and draw-only fees. Preserve a zero-interest loan fee and signed consolidation losses. Mark the single- and two-debt groups and current/new budget differences explicitly; do not call contract comparisons equal-budget optimization. Engines and defaults stay unchanged. Preview only; production publication awaits user instruction.
+
+## FHA, VA and affordability content — 2026-11-19
+
+Preserve existing FHA/VA engines and policy constants. Clarify price down payment versus lower-appraisal premium LTV, original MIP baselines versus extra principal, and scheduled payment versus actual first-month outlay. Keep VA exemption and prior-use categories separate from fee payment and property costs. Add maintenance and fixed cash down to affordability while preserving its five-income comparison. Retain all old worked examples and complete original presets. Preview only; production publication awaits user instruction.

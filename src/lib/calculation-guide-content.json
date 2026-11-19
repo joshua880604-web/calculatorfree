@@ -3242,16 +3242,16 @@
       "path": "/guides/how-much-house-can-i-afford/",
       "title": "How Much House Can I Afford? Income, Debt and Ownership Costs",
       "heading": "How Much House Can I Afford? Income, Debt and Ownership Costs",
-      "description": "Estimate a home price from gross-income ratios or a monthly budget. Compare debt, taxes and HOA costs with five reproducible cases, without treating the estimate as approval.",
+      "description": "Compare seven home-affordability scenarios using income ratios or a fixed budget. Show maintenance, fixed-dollar down payments and housing-cost allowances without implying loan approval.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "house-affordability"
       ],
       "topic": "Mortgage & housing",
       "breadcrumb": "How Much House Can I Afford? Income, Debt and Ownership Costs",
-      "cardIntro": "Estimate a home price from gross-income ratios or a monthly budget. Compare debt, taxes and HOA costs with five reproducible cases, without treating the estimate as approval.",
+      "cardIntro": "Compare seven home-affordability scenarios using income ratios or a fixed budget. Show maintenance, fixed-dollar down payments and housing-cost allowances without implying loan approval.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-03"
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/house-affordability-calculator",
     "calculatorLabel": "House Affordability Calculator",
@@ -3330,6 +3330,16 @@
           "This estimate does not determine a preapproval, rate offer, property valuation, cash-to-close amount or stress-tested personal budget. Use actual tax and insurance information as it becomes available, account separately for mortgage insurance and reserves, and compare loan offers using their complete costs. An estimated maximum is not a recommended purchase target."
         ],
         "formula": ""
+      },
+      {
+        "id": "maintenance-and-cash-down",
+        "title": "Allow for maintenance and separate a cash down payment from closing cash",
+        "formula": "Monthly budget = loan payment + selected tax, insurance, HOA and maintenance allowances",
+        "paragraphs": [
+          "The added income case enters annual maintenance at a hypothetical 1% of the solved home value. It is an illustrative allowance, not a standard or a forecast of repair bills. This amount competes with the mortgage payment for the same monthly housing budget, so the model solves a lower home price than the otherwise matching zero-maintenance base case. Percentage costs are annual percentages of the solved value, not flat dollar amounts.",
+          "The separate fixed-budget example uses $2,500 monthly, $100,000 cash down, $3,600 annual tax, $1,500 annual insurance, $100 monthly HOA and $2,400 annual maintenance. Those fixed non-loan allowances total $725 monthly, leaving $1,775 for P&I. The cash down amount is not a percentage of whichever price is solved; only the remainder is amortized. This row changes several stated inputs and should not be read as a one-variable experiment.",
+          "The selected 28% housing and 36% total-debt ratios are planning inputs rather than universal lender limits. This tool does not determine approval or how much cash you have available. Down payment excludes closing costs, moving and reserves. Mortgage insurance is not automatically computed; allow separately for an actual applicable quote and other missing household expenses before interpreting the price as a comfortable purchase budget."
+        ]
       }
     ],
     "columns": [
@@ -3337,11 +3347,12 @@
       "Monthly housing budget",
       "Estimated home price",
       "Down payment",
-      "Loan amount"
+      "Loan amount",
+      "Other monthly housing costs"
     ],
     "chart": "afford-guide",
-    "chartAlt": "Estimated home prices under the same hundred-thousand-dollar gross income with higher other debt, property tax or HOA costs.",
-    "chartCaption": "Income-ratio cases use entered 28%/36% limits. The table also includes a separate fixed-$2,500 budget case; none are lender approvals.",
+    "chartAlt": "Estimated home prices under seven explicitly stated income, debt, ownership-cost and monthly-budget scenarios.",
+    "chartCaption": "Solved prices under each row’s full assumptions. Fixed-budget rows differ from income-ratio rows, and the cash-down row also changes cost units and allowances. These are not lender approvals or current mortgage offers.",
     "questions": [
       {
         "question": "How much house can I afford on a $100,000 salary?",
@@ -3374,6 +3385,10 @@
       {
         "question": "How much house can I afford with $20,000 down?",
         "answer": "A down payment alone cannot determine an affordable home price. You also need an income or monthly budget, existing debts, loan terms and ownership costs. Select Dollars for the down-payment unit and enter 20000, then account separately for any applicable PMI, closing costs and reserves. This calculator does not automatically calculate PMI or assess loan eligibility."
+      },
+      {
+        "question": "Does the estimated down payment include closing costs and emergency savings?",
+        "answer": "No. The selected percentage or dollar amount is only the modeled down payment. Closing costs, moving, reserves and actual available cash need separate planning. Mortgage insurance is also not computed automatically."
       }
     ],
     "limitations": [
@@ -3412,6 +3427,12 @@
         "href": "/guides/rent-vs-buy-a-house/",
         "label": "Rent versus buy comparison"
       }
+    ],
+    "reviewNotes": [
+      "Other monthly housing costs sum only the selected tax, insurance, HOA and maintenance allowances. Percentages are annual percentages of solved home value. Maintenance is an entered assumption, not a bill forecast.",
+      "Income-based cases apply the tighter of the two entered ratio ceilings. Fixed-budget cases start from the chosen housing budget instead; these are not approval limits.",
+      "The $100,000 cash-down case also uses different fixed ownership costs. Keep its full assumptions visible; it is not a down-payment-only comparison.",
+      "Down payment is separate from closing costs and reserves. The tool does not check available cash or automatically compute mortgage insurance; actual quotes and other household costs must be allowed for separately."
     ]
   },
   "personal": {
@@ -5656,16 +5677,16 @@
       "path": "/guides/how-to-calculate-fha-loan-payments/",
       "title": "How to Calculate FHA Loan Payments and Mortgage Insurance",
       "heading": "How to Calculate FHA Loan Payments and Mortgage Insurance",
-      "description": "Calculate FHA payments with financed upfront MIP, monthly premiums and entered property costs. Four reproducible cases compare down payment and term using documented premium assumptions.",
+      "description": "Compare six FHA payment and mortgage-insurance scenarios, including appraisal-based LTV, property costs and extra principal. Premium terms and their model limits remain explicit.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "fha-loan"
       ],
       "topic": "Mortgage & housing",
       "breadcrumb": "How to Calculate FHA Loan Payments and Mortgage Insurance",
-      "cardIntro": "Calculate FHA payments with financed upfront MIP, monthly premiums and entered property costs. Four reproducible cases compare down payment and term using documented premium assumptions.",
+      "cardIntro": "Compare six FHA payment and mortgage-insurance scenarios, including appraisal-based LTV, property costs and extra principal. Premium terms and their model limits remain explicit.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/fha-loan-calculator",
     "calculatorLabel": "FHA Loan Calculator",
@@ -5725,6 +5746,16 @@
           "MIP protects the mortgage program and is separate from homeowners insurance. Premium LTV uses the lower of price and entered appraisal; a blank appraisal assumes the purchase price in these cases. County limits, case endorsement details, special programs, taxes, closing charges and underwriting are not certified by the calculator."
         ],
         "formula": ""
+      },
+      {
+        "id": "appraisal-and-extra",
+        "title": "Separate appraisal-based MIP terms from extra principal",
+        "formula": "Premium LTV = base loan / min(purchase price, entered appraisal)",
+        "paragraphs": [
+          "In the 10%-down comparison, the price is $300,000 and the down payment is $30,000, leaving a $270,000 base loan. With an equal-price appraisal that is 90% premium LTV. Entering a lower $280,000 appraisal instead makes premium LTV about 96.4286%. Under the documented ordinary forward-loan table used here, that changes the annual MIP rate from 0.50% to 0.55% and the stated duration cap from eleven years to the thirty-year term. The base loan and principal-and-interest payment stay unchanged. This does not determine eligible maximum financing or approval.",
+          "The extra-payment case keeps the original $300,000 price, 3.5% down and thirty-year contract, adding $100 principal each month. The first-month outlay therefore includes the extra $100, rather than treating it as part of scheduled P&I. The payoff count falls while the stated MIP duration cap remains tied to original terms; premiums stop when the modeled loan is paid off.",
+          "The model recalculates MIP from the original scheduled opening balances and published rounding conventions, not the faster extra-payment balance. Crossing 80% does not trigger the conventional-PMI cancellation option. The FHA MIP schedule column is already included in monthly costs and total outlay. Upfront MIP is financed in these examples, so it is not added again as an upfront cash payment."
+        ]
       }
     ],
     "columns": [
@@ -5732,11 +5763,13 @@
       "Down payment",
       "Monthly P&I",
       "Initial monthly FHA MIP",
-      "Initial monthly total"
+      "First-month outlay incl. extras",
+      "Stated MIP cap (years)",
+      "Payments to payoff"
     ],
     "chart": "fha-guide",
-    "chartAlt": "Initial FHA monthly payments under different down payments, terms and entered property costs.",
-    "chartCaption": "FHA MIP is included once in initial monthly total. Base examples set property costs to zero; the final case adds $450 monthly entered tax, homeowners insurance and HOA.",
+    "chartAlt": "Total modeled FHA mortgage insurance across six scenarios, including a lower appraisal, an eleven-year duration cap and extra principal shortening payoff.",
+    "chartCaption": "Recurring MIP only over each modeled payment period; financed upfront MIP is separate. Different down payments and terms are stated. This is not a lender quote, eligibility test or equal-horizon comparison.",
     "questions": [
       {
         "question": "Does FHA MIP equal homeowners insurance?",
@@ -5761,6 +5794,10 @@
       {
         "question": "Does the result confirm FHA approval?",
         "answer": "No. It is a payment illustration, not an eligibility decision, appraisal review, loan-limit check or official closing disclosure."
+      },
+      {
+        "question": "Does a 10% down payment always mean eleven years of FHA MIP?",
+        "answer": "No. In these model rules, premium LTV uses the lower of purchase price and entered appraisal. A $270,000 base loan against a $280,000 appraisal is about 96.43% premium LTV, despite a $30,000 down payment on a $300,000 price. The illustrated rate and duration therefore differ; eligibility remains a separate check."
       }
     ],
     "limitations": [
@@ -5800,6 +5837,12 @@
         "href": "/guides/fha-vs-conventional-loan/",
         "label": "Compare FHA with a conventional loan over the same five years"
       }
+    ],
+    "reviewNotes": [
+      "Automatic premium terms use the lower of price and entered appraisal for premium LTV. A percentage down payment by itself does not establish the MIP rate or duration. Underwriting and maximum eligible financing are separate.",
+      "The stated MIP cap is based on original loan terms; actual modeled premiums also stop at payoff. Extra principal follows the original premium baseline rather than recalculating MIP on each accelerated balance.",
+      "First-month outlay includes entered extras and MIP. Scheduled P&I excludes both. The MIP column is already part of costs and total; do not add it twice.",
+      "The retained ordinary forward-loan terms are documented in HUD Mortgagee Letter 2023-05; special programs, historical cases, county limits and eligibility are not inferred."
     ]
   },
   "va": {
@@ -5807,15 +5850,16 @@
       "path": "/guides/how-to-calculate-va-loan-payments/",
       "title": "How to Calculate VA Loan Payments and the Funding Fee",
       "heading": "How to Calculate VA Loan Payments and the Funding Fee",
-      "description": "Calculate VA purchase-loan payments and funding-fee effects. Six reproducible cases compare financing, down payments, prior use and an assumed established exemption.",
+      "description": "Compare eight ordinary VA purchase-loan examples, distinguishing funding-fee payment, assumed exemption, prior use and entered housing costs. Eligibility and actual closing cash remain separate.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "va-mortgage"
       ],
       "topic": "Mortgage & housing",
       "breadcrumb": "How to Calculate VA Loan Payments and the Funding Fee",
-      "cardIntro": "Calculate VA purchase-loan payments and funding-fee effects. Six reproducible cases compare financing, down payments, prior use and an assumed established exemption.",
-      "format": "Calculation guide & model check"
+      "cardIntro": "Compare eight ordinary VA purchase-loan examples, distinguishing funding-fee payment, assumed exemption, prior use and entered housing costs. Eligibility and actual closing cash remain separate.",
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/va-mortgage-calculator",
     "calculatorLabel": "VA Mortgage Calculator",
@@ -5875,6 +5919,16 @@
           "These cases cover ordinary purchase scenarios, not IRRRL, cash-out refinance, NADL or every manufactured-home arrangement. A lower modeled payment is not an appraisal or underwriting conclusion. If comparing FHA and VA, align purchase price, rate, term and property costs first; the two guides use different prices and cannot be ranked by their payments as presented."
         ],
         "formula": ""
+      },
+      {
+        "id": "cash-costs-and-prior-use",
+        "title": "Separate funding-fee cash, ownership costs and the prior-use exception",
+        "formula": "Cash toward down payment and funding fee = down payment + fee if paid upfront",
+        "paragraphs": [
+          "For the no-down first-use example, financing the $8,600 fee produces a $408,600 repayment balance. Paying the fee upfront instead leaves a $400,000 balance and requires $8,600 outside the loan. The table’s down-plus-fee cash column includes only these two items, not an actual cash-to-close estimate: other closing charges, deposits and prepaid costs remain outside it.",
+          "No monthly VA mortgage insurance does not mean there are no property expenses. The entered-cost example adds $4,800 annual tax, $1,200 annual home insurance and $600 annual HOA, totaling $550 per month, without changing the funding fee or scheduled principal-and-interest payment. Actual costs and future changes require your own estimates.",
+          "The added prior-use illustration selects Only a manufactured home. VA’s documented purchase-fee guidance treats that sole previous use as first use, so the illustrated no-down funding fee remains 2.15% rather than the 3.3% subsequent-use rate. It is a narrow recorded category, not a general rule for repeat borrowers. The separate exemption case assumes the exemption has already been established and does not decide whether you qualify."
+        ]
       }
     ],
     "columns": [
@@ -5882,11 +5936,13 @@
       "Down payment",
       "Funding fee",
       "Financed loan amount",
-      "Monthly P&I"
+      "Monthly P&I",
+      "Down + funding-fee cash only",
+      "Initial monthly total"
     ],
     "chart": "va-guide",
-    "chartAlt": "VA principal-and-interest payments under different funding-fee and down-payment scenarios.",
-    "chartCaption": "All VA cases use the same $400,000 price, hypothetical 6% rate and thirty-year term. Property costs are zero only to isolate funding-fee and down-payment effects; no exemption or approval is determined.",
+    "chartAlt": "Initial monthly VA purchase-loan outlays across eight funding-fee and ownership-cost scenarios.",
+    "chartCaption": "First-month housing outlay, not lifetime borrowing cost. Only the entered-cost row adds $550 monthly ownership costs; the other rows deliberately leave those costs at zero. Cash needed for the funding fee is shown separately.",
     "questions": [
       {
         "question": "Is the VA funding fee based on home price or base loan?",
@@ -5911,6 +5967,10 @@
       {
         "question": "Are the example rates and fees an actual loan offer?",
         "answer": "No. The 6% interest rate is hypothetical; the selected fee examples follow the cited ordinary purchase chart, with eligibility and other loan types outside the calculation."
+      },
+      {
+        "question": "Does no monthly VA mortgage insurance mean my P&I is the full housing cost?",
+        "answer": "No. The entered-cost example adds $550 per month of property tax, home insurance and HOA. That changes initial housing outlay without changing scheduled P&I or the funding fee."
       }
     ],
     "limitations": [
@@ -5946,6 +6006,12 @@
         "href": "/glossary/down-payment/",
         "label": "Down payment glossary"
       }
+    ],
+    "reviewNotes": [
+      "The funding fee applies to the base loan before financing the fee. Paying it upfront reduces the loan balance but requires outside cash. Down-plus-fee cash excludes every other closing item.",
+      "Initial monthly total includes entered tax, insurance, HOA and other costs; scheduled P&I does not. No monthly VA mortgage insurance does not remove these ownership costs.",
+      "Prior use only for a manufactured home retains first-use fee treatment under the documented purchase rules. A funding-fee exemption must be established separately; selecting it does not grant eligibility.",
+      "These are ordinary purchase-loan illustrations using the retained April 7, 2023 fee chart, not cash-out refinance, IRRRL, NADL or lender-offer calculations."
     ]
   },
   "savinggoal": {
