@@ -407,3 +407,7 @@ keywordTitles["cobra-cost"]="COBRA Cost Calculator";
 searchTasks["cobra-cost"]=[{"keyword": "COBRA Cost Calculator", "mode": "contributions", "description": "COBRA premium planning starts with the full plan cost, including the employer contribution. With $200 from the employee, $600 from the employer and a selected 2% administrative charge, the monthly amount is $816 before any entered subsidy. This worksheet estimates premiums, not eligibility or total medical spending.", "aliases": ["COBRA premium calculator", "COBRA insurance cost calculator"]}];
 
 for(const task of searchTasks.amortization)if(task.mode==='schedule')task.aliases=[...new Set([...(task.aliases??[]),'Loan amortization calculator','Amortization calculator with lump sum payment'])];
+
+// Reviewed task entry points restore the stated inputs instead of synonym-only links.
+import focusedCalculationTasks from './focused-calculation-tasks.json';
+for(const [id,tasks]of Object.entries(focusedCalculationTasks))searchTasks[id]=tasks.map(task=>({...task,values:Object.fromEntries(Object.entries(task.values).map(([key,value])=>[key,String(value)]))}));

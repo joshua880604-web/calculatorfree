@@ -1,0 +1,650 @@
+{
+  "date": "2026-11-19",
+  "status": "validated; preview deployment pending; production publication pending",
+  "scope": [
+    "boat-loan",
+    "compound-interest",
+    "savings"
+  ],
+  "unitTests": {
+    "passed": 2946,
+    "failed": 0,
+    "log": "/workspace/work/growth-savings-boat-content-20261119/tests.log"
+  },
+  "build": {
+    "passed": true,
+    "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build",
+    "log": "/workspace/work/growth-savings-boat-content-20261119/build.log"
+  },
+  "independentMath": {
+    "passed": true,
+    "cases": 22,
+    "numericChecks": 189,
+    "decimalPrecision": 70,
+    "command": "python scripts/check-growth-savings-boat-reference.py",
+    "reference": "growth-savings-boat-reference-20261119.json"
+  },
+  "compatibility": {
+    "passed": true,
+    "entries": 169,
+    "modes": 354,
+    "fieldsDefaultsAndResultsUnchanged": true
+  },
+  "preservation": {
+    "passed": true,
+    "oldWorkedExamplesPreserved": 14,
+    "unrelatedGuideContentAndCasesUnchanged": true
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      {
+        "kind": "page",
+        "path": "/boat-loan-calculator",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-boat-loan-payments/",
+        "width": 320,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/compound-interest-calculator",
+        "width": 320,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/compound-interest-with-monthly-contributions/",
+        "width": 320,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/savings-calculator",
+        "width": 320,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-savings-goal/",
+        "width": 320,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/boat-loan-calculator",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-boat-loan-payments/",
+        "width": 390,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/compound-interest-calculator",
+        "width": 390,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/compound-interest-with-monthly-contributions/",
+        "width": 390,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/savings-calculator",
+        "width": 390,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-savings-goal/",
+        "width": 390,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/boat-loan-calculator",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-boat-loan-payments/",
+        "width": 768,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "boat",
+        "label": "10 years, financed tax and fees",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "boat",
+        "label": "20 years, financed tax and fees",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "boat",
+        "label": "10 years, tax and fees upfront",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "boat",
+        "label": "Solve price from USD 700 monthly",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "boat",
+        "label": "10 years, 0% entered interest",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "boat",
+        "label": "10 years, USD 20,000 down",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "boat-loan",
+        "keyword": "Boat loan calculator",
+        "mode": "payment",
+        "allInputsRestored": true
+      },
+      {
+        "kind": "task-click",
+        "id": "boat-loan",
+        "keyword": "Boat price from a monthly loan budget",
+        "mode": "price",
+        "allInputsRestored": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "boat-loan",
+        "keyword": "Boat loan calculator",
+        "allInputsRestored": true,
+        "repeatedPresetChecked": false
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "boat-loan",
+        "keyword": "Boat price from a monthly loan budget",
+        "allInputsRestored": true,
+        "repeatedPresetChecked": false
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "boat-loan"
+      },
+      {
+        "kind": "page",
+        "path": "/compound-interest-calculator",
+        "width": 768,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/compound-interest-with-monthly-contributions/",
+        "width": 768,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "compound",
+        "label": "0%, month end",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "compound",
+        "label": "5%, month end",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "compound",
+        "label": "5%, month start",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "compound",
+        "label": "8%, month end",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "compound",
+        "label": "5% nominal, daily compounding",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "compound",
+        "label": "Same yield, converted daily rate",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "compound",
+        "label": "5% monthly, 3% inflation",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "compound-interest",
+        "keyword": "Compound interest calculator with monthly contributions",
+        "mode": "growth",
+        "allInputsRestored": true
+      },
+      {
+        "kind": "task-click",
+        "id": "compound-interest",
+        "keyword": "Compound interest calculator daily",
+        "mode": "growth",
+        "allInputsRestored": true
+      },
+      {
+        "kind": "task-click",
+        "id": "compound-interest",
+        "keyword": "Equivalent interest rate calculator",
+        "mode": "conversion",
+        "allInputsRestored": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "compound-interest",
+        "keyword": "Compound interest calculator with monthly contributions",
+        "allInputsRestored": true,
+        "repeatedPresetChecked": false
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "compound-interest",
+        "keyword": "Compound interest calculator daily",
+        "allInputsRestored": true,
+        "repeatedPresetChecked": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "compound-interest",
+        "keyword": "Equivalent interest rate calculator",
+        "allInputsRestored": true,
+        "repeatedPresetChecked": false
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "compound-interest"
+      },
+      {
+        "kind": "page",
+        "path": "/savings-calculator",
+        "width": 768,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-savings-goal/",
+        "width": 768,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "savinggoal",
+        "label": "No interest, end-month deposits",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "savinggoal",
+        "label": "4% APY, end-month deposits",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "savinggoal",
+        "label": "4% APY, beginning-month deposits",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "savinggoal",
+        "label": "4% APY, 20% modeled interest tax",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "savinggoal",
+        "label": "Time needed with USD 300 monthly",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "savinggoal",
+        "label": "Existing savings already exceed target",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "savinggoal",
+        "label": "Earlier deadline: 36 months",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "savinggoal",
+        "label": "Time needed with USD 400 monthly",
+        "completeInputsRestored": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "savings",
+        "keyword": "Savings interest calculator",
+        "mode": "accumulation",
+        "allInputsRestored": true
+      },
+      {
+        "kind": "task-click",
+        "id": "savings",
+        "keyword": "Savings goal calculator",
+        "mode": "goal-contribution",
+        "allInputsRestored": true
+      },
+      {
+        "kind": "task-click",
+        "id": "savings",
+        "keyword": "How long to save calculator",
+        "mode": "goal-time",
+        "allInputsRestored": true
+      },
+      {
+        "kind": "task-click",
+        "id": "savings",
+        "keyword": "High yield savings calculator",
+        "mode": "accumulation",
+        "allInputsRestored": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "savings",
+        "keyword": "Savings interest calculator",
+        "allInputsRestored": true,
+        "repeatedPresetChecked": false
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "savings",
+        "keyword": "Savings goal calculator",
+        "allInputsRestored": true,
+        "repeatedPresetChecked": false
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "savings",
+        "keyword": "How long to save calculator",
+        "allInputsRestored": true,
+        "repeatedPresetChecked": false
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "savings",
+        "keyword": "High yield savings calculator",
+        "allInputsRestored": true,
+        "repeatedPresetChecked": false
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "savings"
+      },
+      {
+        "kind": "page",
+        "path": "/boat-loan-calculator",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-boat-loan-payments/",
+        "width": 1440,
+        "cases": 6,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/compound-interest-calculator",
+        "width": 1440,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/compound-interest-with-monthly-contributions/",
+        "width": 1440,
+        "cases": 7,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/savings-calculator",
+        "width": 1440,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-savings-goal/",
+        "width": 1440,
+        "cases": 8,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/boat-loan-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-calculate-boat-loan-payments/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/compound-interest-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/compound-interest-with-monthly-contributions/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/savings-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-calculate-savings-goal/",
+        "readableCases": true
+      }
+    ],
+    "downloads": [
+      {
+        "path": "/boat-loan-calculator",
+        "file": "boat-cases.csv",
+        "cases": 6
+      },
+      {
+        "path": "/guides/how-to-calculate-boat-loan-payments/",
+        "file": "boat-cases.csv",
+        "cases": 6
+      },
+      {
+        "path": "/compound-interest-calculator",
+        "file": "compound-cases.csv",
+        "cases": 7
+      },
+      {
+        "path": "/guides/compound-interest-with-monthly-contributions/",
+        "file": "compound-cases.csv",
+        "cases": 7
+      },
+      {
+        "path": "/savings-calculator",
+        "file": "savinggoal-cases.csv",
+        "cases": 8
+      },
+      {
+        "path": "/guides/how-to-calculate-savings-goal/",
+        "file": "savinggoal-cases.csv",
+        "cases": 8
+      }
+    ],
+    "errors": []
+  },
+  "staticAudit": {
+    "passed": true,
+    "canonicalPages": 469,
+    "brokenFiles": [],
+    "brokenFragments": [],
+    "orphanPages": [],
+    "reviewedPages": [
+      {
+        "path": "/boat-loan-calculator",
+        "canonical": "https://www.calculatorfree.io/boat-loan-calculator",
+        "incomingPages": 10,
+        "oneH1": true
+      },
+      {
+        "path": "/compound-interest-calculator",
+        "canonical": "https://www.calculatorfree.io/compound-interest-calculator",
+        "incomingPages": 31,
+        "oneH1": true
+      },
+      {
+        "path": "/savings-calculator",
+        "canonical": "https://www.calculatorfree.io/savings-calculator",
+        "incomingPages": 30,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-calculate-boat-loan-payments/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-calculate-boat-loan-payments/",
+        "incomingPages": 5,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/compound-interest-with-monthly-contributions/",
+        "canonical": "https://www.calculatorfree.io/guides/compound-interest-with-monthly-contributions/",
+        "incomingPages": 11,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-calculate-savings-goal/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-calculate-savings-goal/",
+        "incomingPages": 8,
+        "oneH1": true
+      }
+    ],
+    "newGuideToolLinksReciprocal": true,
+    "previousIndexingPolicyPreserved": true
+  },
+  "visual": {
+    "passed": true,
+    "widthsInspected": [
+      320,
+      1440
+    ],
+    "screenshots": "/workspace/work/growth-savings-boat-content-20261119",
+    "chartsInspected": [
+      "boat-chart.png",
+      "compound-chart.png",
+      "savinggoal-chart.png"
+    ],
+    "notes": "All three tool comparison sections inspected at mobile and desktop widths. Tables scroll inside their regions without window overflow."
+  },
+  "limitations": [
+    "Native Safari not tested.",
+    "No live bank or lender offers, account-statement parity or professional certification.",
+    "No guarantee of Google indexing, rankings or AdSense approval.",
+    "Remote preview HTTP response body is not yet verified."
+  ]
+}

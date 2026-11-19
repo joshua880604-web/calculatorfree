@@ -1,0 +1,173 @@
+{
+  "compound-interest": [
+    {
+      "title": "5% nominal, daily compounding",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "compound": "Daily",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "inputs": "Start with $10,000, add $200 at each month end for ten years, and enter a 5% nominal annual rate compounded daily. Annual additions, interest tax and inflation are zero.",
+      "steps": [
+        "Convert the daily nominal growth factor to a monthly equivalent: (1 + 0.05/365)^(365/12) − 1.",
+        "Grow the starting balance over 120 months and add the future value of the 120 end-month deposits. Compare against the 5% nominal monthly-compounding case with the same deposits."
+      ],
+      "answer": "Ending balance: $47,559.87.",
+      "expected": {
+        "label": "Ending balance",
+        "value": 47559.87030805225,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Same yield, converted daily rate",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "4.989953238179743998138082867303670513644704213732169798158902302411000",
+        "compound": "Daily",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "inputs": "Use the same $10,000 start, $200 end-month deposits and ten-year horizon. Daily compounding uses a converted nominal annual rate of approximately 4.9899532382%, with no annual additions, tax or inflation.",
+      "steps": [
+        "Find the effective annual growth factor of the monthly quote: (1 + 0.05/12)^12.",
+        "Convert that factor to a daily nominal quote: 365 × [(1 + 0.05/12)^(12/365) − 1].",
+        "The complete preset retains more rate digits than this explanation. Equal effective yield and equal monthly deposit timing give the same modeled ending balance."
+      ],
+      "answer": "Ending balance: $47,526.55.",
+      "expected": {
+        "label": "Ending balance",
+        "value": 47526.550866036414,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "5% monthly, 3% inflation",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "3"
+      },
+      "inputs": "Start with $10,000 and add $200 at each month end for ten years. Use a 5% nominal annual rate compounded monthly, 3% annual inflation and zero annual additions or interest tax.",
+      "steps": [
+        "Calculate the nominal balance using the monthly rate of 0.05/12.",
+        "Divide the nominal ending balance by 1.03^10 to express purchasing power in starting-period dollars. Contributions and nominal earnings are unchanged by the inflation input."
+      ],
+      "answer": "Inflation-adjusted balance: $35,364.22.",
+      "expected": {
+        "label": "Inflation-adjusted balance",
+        "value": 35364.21729544738,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "boat-loan": [
+    {
+      "title": "10 years, USD 20,000 down",
+      "mode": "payment",
+      "values": {
+        "price": "50000",
+        "down": "20000",
+        "trade": "0",
+        "tax": "7",
+        "fees": "500",
+        "finance": "Yes",
+        "rate": "7",
+        "years": "10"
+      },
+      "inputs": "Boat price $50,000; cash down payment $20,000; trade value $0; entered sales tax 7% and $500 fees financed; assumed annual interest 7%; term ten years.",
+      "steps": [
+        "Entered tax is $50,000 × 7% = $3,500. Financed principal is $50,000 − $20,000 + $3,500 + $500 = $34,000.",
+        "Use 120 monthly payments and a periodic rate of 0.07/12 in the fixed-payment formula.",
+        "Compare with $10,000 down under the same purchase and rate assumptions. Upfront cash increases by $10,000; down payment is separate from loan interest and ownership expenses."
+      ],
+      "answer": "Payment per period: $394.77.",
+      "expected": {
+        "label": "Payment per period",
+        "value": 394.7688293433218,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "savings": [
+    {
+      "title": "Earlier deadline: 36 months",
+      "mode": "goal-contribution",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "years": "3",
+        "months": "0",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "inputs": "Current savings $2,000; nominal target $20,000; deadline three years; constant 4% APY; end-month deposits; no annual deposits, interest-tax haircut or inflation adjustment.",
+      "steps": [
+        "Use the APY monthly equivalent r = 1.04^(1/12) − 1 and 36 monthly periods.",
+        "Required deposit = [20,000 − 2,000 × (1+r)^36] / [((1+r)^36 − 1)/r].",
+        "Compare the shorter deadline against the same target funded over 60 months; the deadline changes, not the assumed return."
+      ],
+      "answer": "Required monthly deposit: $465.38.",
+      "expected": {
+        "label": "Required monthly deposit",
+        "value": 465.38451107805764,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Time needed with USD 400 monthly",
+      "mode": "goal-time",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "400",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "inputs": "Current savings $2,000; nominal target $20,000; monthly deposit $400 at month end; constant 4% APY; no annual additions, tax or inflation adjustment.",
+      "steps": [
+        "Use the APY monthly equivalent and grow savings between each monthly deposit.",
+        "Find the first whole month at which the balance reaches or exceeds $20,000.",
+        "Compare against $300 monthly deposits under the same starting balance, target, yield and timing. The monthly budget changes; the final balance may exceed the target."
+      ],
+      "answer": "Months to savings goal: 42 months.",
+      "expected": {
+        "label": "Months to savings goal",
+        "value": 42.0,
+        "tolerance": 1e-06
+      }
+    }
+  ]
+}

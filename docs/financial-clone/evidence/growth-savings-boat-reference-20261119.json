@@ -1,0 +1,622 @@
+{
+  "date": "2026-11-19",
+  "precision": 70,
+  "cases": [
+    {
+      "topic": "compound",
+      "label": "0%, month end",
+      "calculatorId": "compound-interest",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "0",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Ending balance": "34000.00000000000000000000000000000000000000000000000000000000000000000",
+        "Total contributions": "34000",
+        "Starting amount": "10000",
+        "Additional contributions": "24000",
+        "Net investment earnings": "0E-65",
+        "Net earnings from starting amount": "0E-65",
+        "Net earnings from additional deposits": "0E-65",
+        "Tax on interest": "0",
+        "Inflation-adjusted balance": "34000.00000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "topic": "compound",
+      "label": "5%, month end",
+      "calculatorId": "compound-interest",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Ending balance": "47526.55086603641598276907194976424809124002965817545902346679712363437",
+        "Total contributions": "34000",
+        "Starting amount": "10000",
+        "Additional contributions": "24000",
+        "Net investment earnings": "13526.55086603641598276907194976424809124002965817545902346679712363437",
+        "Net earnings from starting amount": "6470.09497690283034185673654306280139504138442382335500404599950407522",
+        "Net earnings from additional deposits": "7056.45588913358564091233540670144669619864523435210401942079761955915",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "47526.55086603641598276907194976424809124002965817545902346679712363437"
+      }
+    },
+    {
+      "topic": "compound",
+      "label": "5%, month start",
+      "calculatorId": "compound-interest",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "Beginning of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Ending balance": "47655.95276557447258960620668062550411914085734665192612354771711371588",
+        "Total contributions": "34000",
+        "Starting amount": "10000",
+        "Additional contributions": "24000",
+        "Net investment earnings": "13655.95276557447258960620668062550411914085734665192612354771711371588",
+        "Net earnings from starting amount": "6470.09497690283034185673654306280139504138442382335500404599950407522",
+        "Net earnings from additional deposits": "7185.85778867164224774947013756270272409947292282857111950171760964066",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "47655.95276557447258960620668062550411914085734665192612354771711371588"
+      }
+    },
+    {
+      "topic": "compound",
+      "label": "8%, month end",
+      "calculatorId": "compound-interest",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "8",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Ending balance": "58785.60938178915848865437075406013260715317640213492984282612178024330",
+        "Total contributions": "34000",
+        "Starting amount": "10000",
+        "Additional contributions": "24000",
+        "Net investment earnings": "24785.60938178915848865437075406013260715317640213492984282612178024330",
+        "Net earnings from starting amount": "12196.40234544728962216359268851503315178829410053373246070653044506126",
+        "Net earnings from additional deposits": "12589.20703634186886649077806554509945536488230160119738211959133518204",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "58785.60938178915848865437075406013260715317640213492984282612178024330"
+      }
+    },
+    {
+      "topic": "compound",
+      "label": "5% nominal, daily compounding",
+      "calculatorId": "compound-interest",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "compound": "Daily",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Ending balance": "47559.87030805224734178921415441394299712086794657854835209189619013491",
+        "Total contributions": "34000",
+        "Starting amount": "10000",
+        "Additional contributions": "24000",
+        "Net investment earnings": "13559.87030805224734178921415441394299712086794657854835209189619013491",
+        "Net earnings from starting amount": "6486.64813765471830213999421196829576774385561637277382209338932050178",
+        "Net earnings from additional deposits": "7073.22217039752903964921994244564722937701233020577452999850686963313",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "47559.87030805224734178921415441394299712086794657854835209189619013491"
+      }
+    },
+    {
+      "topic": "compound",
+      "label": "Same yield, converted daily rate",
+      "calculatorId": "compound-interest",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "4.989953238179743998138082867303670513644704213732169798158902302411000",
+        "compound": "Daily",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Ending balance": "47526.55086603641598276907194976424809124002965817545902346679712367798",
+        "Total contributions": "34000",
+        "Starting amount": "10000",
+        "Additional contributions": "24000",
+        "Net investment earnings": "13526.55086603641598276907194976424809124002965817545902346679712367798",
+        "Net earnings from starting amount": "6470.09497690283034185673654306280139504138442382335500404599950409700",
+        "Net earnings from additional deposits": "7056.45588913358564091233540670144669619864523435210401942079761958098",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "47526.55086603641598276907194976424809124002965817545902346679712367798"
+      }
+    },
+    {
+      "topic": "compound",
+      "label": "5% monthly, 3% inflation",
+      "calculatorId": "compound-interest",
+      "mode": "growth",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "3"
+      },
+      "expected": {
+        "Ending balance": "47526.55086603641598276907194976424809124002965817545902346679712363437",
+        "Total contributions": "34000",
+        "Starting amount": "10000",
+        "Additional contributions": "24000",
+        "Net investment earnings": "13526.55086603641598276907194976424809124002965817545902346679712363437",
+        "Net earnings from starting amount": "6470.09497690283034185673654306280139504138442382335500404599950407522",
+        "Net earnings from additional deposits": "7056.45588913358564091233540670144669619864523435210401942079761955915",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "35364.21729544737813663780523925678631882229661394488657961631899929510"
+      }
+    },
+    {
+      "topic": "boat",
+      "label": "10 years, financed tax and fees",
+      "calculatorId": "boat-loan",
+      "mode": "payment",
+      "values": {
+        "price": "50000",
+        "down": "10000",
+        "trade": "0",
+        "tax": "7",
+        "fees": "500",
+        "finance": "Yes",
+        "rate": "7",
+        "years": "10"
+      },
+      "expected": {
+        "Boat price": "50000",
+        "Sales tax": "3500.00",
+        "Upfront cash": "10000",
+        "Payment per period": "510.8773085619458380072444455853735439693021214578954164523952707909246",
+        "Total interest": "17305.27702743350056086933347024482527631625457494744997428743249491095",
+        "Total payments": "61305.27702743350056086933347024482527631625457494744997428743249491095",
+        "Number of payments": "120"
+      }
+    },
+    {
+      "topic": "boat",
+      "label": "20 years, financed tax and fees",
+      "calculatorId": "boat-loan",
+      "mode": "payment",
+      "values": {
+        "price": "50000",
+        "down": "10000",
+        "trade": "0",
+        "tax": "7",
+        "fees": "500",
+        "finance": "Yes",
+        "rate": "7",
+        "years": "20"
+      },
+      "expected": {
+        "Boat price": "50000",
+        "Sales tax": "3500.00",
+        "Upfront cash": "10000",
+        "Payment per period": "341.1315316723047990547582190747876997784275154374629187883922355551747",
+        "Total interest": "37871.56760135315177314197257794904794682260370499110050921413653324193",
+        "Total payments": "81871.56760135315177314197257794904794682260370499110050921413653324193",
+        "Number of payments": "240"
+      }
+    },
+    {
+      "topic": "boat",
+      "label": "10 years, tax and fees upfront",
+      "calculatorId": "boat-loan",
+      "mode": "payment",
+      "values": {
+        "price": "50000",
+        "down": "10000",
+        "trade": "0",
+        "tax": "7",
+        "fees": "500",
+        "finance": "No",
+        "rate": "7",
+        "years": "10"
+      },
+      "expected": {
+        "Boat price": "50000",
+        "Sales tax": "3500.00",
+        "Upfront cash": "14000.00",
+        "Payment per period": "464.4339168744962163702222232594304945175473831435412876839957007190224",
+        "Total interest": "15732.07002493954596442666679113165934210568597722495452207948408628269",
+        "Total payments": "55732.07002493954596442666679113165934210568597722495452207948408628269",
+        "Number of payments": "120"
+      }
+    },
+    {
+      "topic": "boat",
+      "label": "Solve price from USD 700 monthly",
+      "calculatorId": "boat-loan",
+      "mode": "price",
+      "values": {
+        "payment": "700",
+        "down": "10000",
+        "trade": "0",
+        "tax": "7",
+        "fees": "500",
+        "finance": "Yes",
+        "rate": "7",
+        "years": "10"
+      },
+      "expected": {
+        "Boat price": "65222.84850370498995184714366278459510317662999122441031331208312102264",
+        "Sales tax": "4565.599395259349296629300056394921657222364099385708721931845818471585",
+        "Upfront cash": "10000",
+        "Payment per period": "7E+2",
+        "Total interest": "23711.55210103566075152355628082048323960100590938988096475607106050578",
+        "Total payments": "8.40E+4",
+        "Number of payments": "120"
+      }
+    },
+    {
+      "topic": "boat",
+      "label": "10 years, 0% entered interest",
+      "calculatorId": "boat-loan",
+      "mode": "payment",
+      "values": {
+        "price": "50000",
+        "down": "10000",
+        "trade": "0",
+        "tax": "7",
+        "fees": "500",
+        "finance": "Yes",
+        "rate": "0",
+        "years": "10"
+      },
+      "expected": {
+        "Boat price": "50000",
+        "Sales tax": "3500.00",
+        "Upfront cash": "10000",
+        "Payment per period": "366.6666666666666666666666666666666666666666666666666666666666666666667",
+        "Total interest": "0E-65",
+        "Total payments": "44000.00000000000000000000000000000000000000000000000000000000000000000",
+        "Number of payments": "120"
+      }
+    },
+    {
+      "topic": "boat",
+      "label": "10 years, USD 20,000 down",
+      "calculatorId": "boat-loan",
+      "mode": "payment",
+      "values": {
+        "price": "50000",
+        "down": "20000",
+        "trade": "0",
+        "tax": "7",
+        "fees": "500",
+        "finance": "Yes",
+        "rate": "7",
+        "years": "10"
+      },
+      "expected": {
+        "Boat price": "50000",
+        "Sales tax": "3500.00",
+        "Upfront cash": "20000",
+        "Payment per period": "394.7688293433217839146888897705159203399152756720100945313963456111690",
+        "Total interest": "13372.25952119861406976266677246191044078983308064121134376756147334028",
+        "Total payments": "47372.25952119861406976266677246191044078983308064121134376756147334028",
+        "Number of payments": "120"
+      }
+    },
+    {
+      "topic": "savinggoal",
+      "label": "No interest, end-month deposits",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "years": "5",
+        "months": "0",
+        "rate_type": "APY",
+        "rate": "0",
+        "compound": "Monthly",
+        "annual": "0",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Required monthly deposit": "3.0E+2",
+        "Ending balance": "20000.00000000000000000000000000000000000000000000000000000000000000000",
+        "Total contributions": "20000",
+        "Starting amount": "2000",
+        "Additional contributions": "18000",
+        "Net investment earnings": "0E-65",
+        "Net earnings from starting amount": "0E-66",
+        "Net earnings from additional deposits": "0E-66",
+        "Tax on interest": "0",
+        "Inflation-adjusted balance": "20000.00000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "topic": "savinggoal",
+      "label": "4% APY, end-month deposits",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "years": "5",
+        "months": "0",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Required monthly deposit": "265.4420272772126686685948040082657023735349969198774906397738828103881",
+        "Ending balance": "20000.00000000000000000000000000000000000000000000000000000000000000036",
+        "Total contributions": "17926.52163663276012011568824049594214241209981519264943838643296862334",
+        "Starting amount": "2000",
+        "Additional contributions": "15926.52163663276012011568824049594214241209981519264943838643296862334",
+        "Net investment earnings": "2073.47836336723987988431175950405785758790018480735056161356703137702",
+        "Net earnings from starting amount": "433.305804800000000000000000000000000000000000000000000000000000000048",
+        "Net earnings from additional deposits": "1640.172558567239879884311759504057857587900184807350561613567031376972",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "20000.00000000000000000000000000000000000000000000000000000000000000036"
+      }
+    },
+    {
+      "topic": "savinggoal",
+      "label": "4% APY, beginning-month deposits",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "years": "5",
+        "months": "0",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "timing": "Beginning of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Required monthly deposit": "264.5758747107619848357834662191548454303340976346760975000098903909020",
+        "Ending balance": "19999.99999999999999999999999999999999999999999999999999999999999999891",
+        "Total contributions": "17874.55248264571909014700797314929072582004585808056585000059342345406",
+        "Starting amount": "2000",
+        "Additional contributions": "15874.55248264571909014700797314929072582004585808056585000059342345406",
+        "Net investment earnings": "2125.44751735428090985299202685070927417995414191943414999940657654485",
+        "Net earnings from starting amount": "433.305804800000000000000000000000000000000000000000000000000000000048",
+        "Net earnings from additional deposits": "1692.141712554280909852992026850709274179954141919434149999406576544802",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "19999.99999999999999999999999999999999999999999999999999999999999999891"
+      }
+    },
+    {
+      "topic": "savinggoal",
+      "label": "4% APY, 20% modeled interest tax",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "years": "5",
+        "months": "0",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "timing": "End of period",
+        "tax": "20",
+        "inflation": "0"
+      },
+      "expected": {
+        "Required monthly deposit": "272.1085173663713227114668706397813379768778733488907304536718061458448",
+        "Ending balance": "20000.00000000000000000000000000000000000000000000000000000000000000062",
+        "Total contributions": "18326.51104198227936268801223838688027861267240093344382722030836875055",
+        "Starting amount": "2000",
+        "Additional contributions": "16326.51104198227936268801223838688027861267240093344382722030836875055",
+        "Net investment earnings": "1673.48895801772063731198776161311972138732759906655617277969163125007",
+        "Net earnings from starting amount": "341.145912868864000000000000000000000000000000000000000000000000000039",
+        "Net earnings from additional deposits": "1332.343045148856637311987761613119721387327599066556172779691631250031",
+        "Tax on interest": "418.3722395044301593279969404032799303468318997666390431949229078125275",
+        "Inflation-adjusted balance": "20000.00000000000000000000000000000000000000000000000000000000000000062"
+      }
+    },
+    {
+      "topic": "savinggoal",
+      "label": "Time needed with USD 300 monthly",
+      "calculatorId": "savings",
+      "mode": "goal-time",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "300",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Years to savings goal": "4.5",
+        "Months to savings goal": "54",
+        "Ending balance": "20074.65998851077975684770159061306058374280150590506956189230334707721",
+        "Total contributions": "18200",
+        "Starting amount": "2000",
+        "Additional contributions": "16200",
+        "Net investment earnings": "1874.65998851077975684770159061306058374280150590506956189230334707721",
+        "Net earnings from starting amount": "386.052650233422275058665206215469898202003242869564587983410809163147",
+        "Net earnings from additional deposits": "1488.607338277357481789036384397590685540798263035504973908892537914063",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "20074.65998851077975684770159061306058374280150590506956189230334707721"
+      }
+    },
+    {
+      "topic": "savinggoal",
+      "label": "Existing savings already exceed target",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "end": "20000",
+        "principal": "21000",
+        "years": "5",
+        "months": "0",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Required monthly deposit": "0",
+        "Ending balance": "25549.71095040000000000000000000000000000000000000000000000000000000056",
+        "Total contributions": "21000",
+        "Starting amount": "21000",
+        "Additional contributions": "0",
+        "Net investment earnings": "4549.71095040000000000000000000000000000000000000000000000000000000056",
+        "Net earnings from starting amount": "4549.71095040000000000000000000000000000000000000000000000000000000056",
+        "Net earnings from additional deposits": "0E-65",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "25549.71095040000000000000000000000000000000000000000000000000000000056"
+      }
+    },
+    {
+      "topic": "savinggoal",
+      "label": "Earlier deadline: 36 months",
+      "calculatorId": "savings",
+      "mode": "goal-contribution",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "years": "3",
+        "months": "0",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Required monthly deposit": "465.3845110780576594810667240918503493988277974013600476428645868126488",
+        "Ending balance": "19999.99999999999999999999999999999999999999999999999999999999999999934",
+        "Total contributions": "18753.84239881007574131840206730661257835780070644896171514312512525538",
+        "Starting amount": "2000",
+        "Additional contributions": "16753.84239881007574131840206730661257835780070644896171514312512525538",
+        "Net investment earnings": "1246.15760118992425868159793269338742164219929355103828485687487474396",
+        "Net earnings from starting amount": "249.728000000000000000000000000000000000000000000000000000000000000026",
+        "Net earnings from additional deposits": "996.429601189924258681597932693387421642199293551038284856874874743934",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "19999.99999999999999999999999999999999999999999999999999999999999999934"
+      }
+    },
+    {
+      "topic": "savinggoal",
+      "label": "Time needed with USD 400 monthly",
+      "calculatorId": "savings",
+      "mode": "goal-time",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "400",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "expected": {
+        "Years to savings goal": "3.5",
+        "Months to savings goal": "42",
+        "Ending balance": "20272.58230006687144021832193769384906102441332338071753743809523905468",
+        "Total contributions": "18800",
+        "Starting amount": "2000",
+        "Additional contributions": "16800",
+        "Net investment earnings": "1472.58230006687144021832193769384906102441332338071753743809523905468",
+        "Net earnings from starting amount": "294.281394455213726017947313668721055963464656605350565368664239579940",
+        "Net earnings from additional deposits": "1178.300905611657714200374624025128005060948666775366972069430999474740",
+        "Tax on interest": "0E-67",
+        "Inflation-adjusted balance": "20272.58230006687144021832193769384906102441332338071753743809523905468"
+      }
+    },
+    {
+      "topic": "conversion",
+      "label": "Convert monthly nominal rate to annual yield",
+      "calculatorId": "compound-interest",
+      "mode": "conversion",
+      "values": {
+        "rate": "5",
+        "from": "Monthly",
+        "to": "Annually"
+      },
+      "expected": {
+        "Equivalent interest rate": "5.116189788173318980487389096080009852688855382185534236161681164983900",
+        "Effective annual yield": "5.116189788173318980487389096080009852688855382185534236161681164983900"
+      }
+    }
+  ]
+}

@@ -204,3 +204,7 @@ See cash-cobra-20261118.md. Two tools / three modes, independent references and 
 ## Repayment content preview — 2026-11-19
 
 Amortization and Credit Card Minimum Payment, plus their two existing guides, now include independently verified repayment comparisons, complete-input restore links and downloadable CSVs. See repayment-content-20261119.md and evidence/repayment-content-verification-20261119.json. All 2,928 tests, 30 browser checks and the 469-page static audit passed. Existing 354 modes/defaults are unchanged. Branch preview/repayment-content-20261119; production remains bc38ae0f8570b52a3e4159466e9163a1a723d5f0. Remote preview/publication checkpoints are recorded in /workspace/work/repayment-content-20261119/review.json. User publication instruction is still pending.
+
+## Boat, compound growth and savings preview — 2026-11-19
+
+Branch preview/growth-savings-boat-20261119 extends the preceding repayment preview. Three existing pages and guides now have complete task/shortcut presets and expanded controlled comparisons. See growth-savings-boat-content-20261119.md and evidence/growth-savings-boat-verification-20261119.json. 2,946 tests, 22 independent cases / 189 numerical checks, 72 browser checks, six downloads and the 469-page static audit passed. Existing 354 mode fields/defaults/results are unchanged. Production remains bc38ae0f8570b52a3e4159466e9163a1a723d5f0. Actual preview checkpoint is in /workspace/work/growth-savings-boat-content-20261119/review.json. Await a user publication instruction.

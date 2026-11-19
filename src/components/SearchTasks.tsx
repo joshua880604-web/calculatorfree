@@ -4,6 +4,7 @@ import SiteLink from "@/components/SiteLink";
 import { searchTasks } from '@/lib/keyword-targets';
 import {motherPageCopy} from '@/lib/mother-page-ui';
 import { routeFor } from '@/lib/catalog';
+import focusedTasks from '@/lib/focused-calculation-tasks.json';
 export default function SearchTasks({id}:{id:string}) {
  const tasks=searchTasks[id];
  if(!tasks||motherPageCopy[id])return null;
@@ -12,7 +13,7 @@ export default function SearchTasks({id}:{id:string}) {
   {tasks.map(task=>{
    const href=calculatorPresetHref(routeFor(id),task.mode,task.values);
    return <div key={task.keyword}><h3>{task.keyword}</h3><p>{task.description}</p>
-    {task.aliases?.length ? <p>Related searches: {task.aliases.map((keyword,index)=><span key={keyword}>{index>0?' · ':''}<SiteLink href={href}>{keyword}</SiteLink></span>)}</p>:null}
+    {!Object.hasOwn(focusedTasks,id)&&task.aliases?.length ? <p>Related searches: {task.aliases.map((keyword,index)=><span key={keyword}>{index>0?' · ':''}<SiteLink href={href}>{keyword}</SiteLink></span>)}</p>:null}
     <SiteLink href={href}>Open this calculation</SiteLink></div>;
   })}
  </section>;

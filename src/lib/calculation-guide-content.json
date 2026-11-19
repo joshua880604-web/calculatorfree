@@ -169,7 +169,7 @@
       "path": "/guides/compound-interest-with-monthly-contributions/",
       "title": "How Compound Interest Works With Monthly Contributions",
       "heading": "How Compound Interest Works With Monthly Contributions",
-      "description": "Work through compound growth with monthly deposits, beginning versus end timing, nominal rate versus APY, Excel formulas and four checked scenarios.",
+      "description": "Compare monthly and daily compound interest, deposit timing and inflation with seven reproducible scenarios and complete inputs.",
       "publishedOn": "2026-10-31",
       "calculatorIds": [
         "compound-interest",
@@ -178,9 +178,9 @@
       ],
       "topic": "Savings & investing",
       "breadcrumb": "Compound growth with monthly deposits",
-      "cardIntro": "Four matched scenarios separate money you contribute from earnings and show the effect of deposit timing.",
+      "cardIntro": "Seven controlled scenarios distinguish deposits, nominal rate, effective yield and purchasing power.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04",
+      "updatedOn": "2026-11-19",
       "linksUpdatedOn": "2026-11-16"
     },
     "calculatorPath": "/compound-interest-calculator",
@@ -251,17 +251,36 @@
           "The linked calculator contains baseline and changed-rate reproduction presets. Those additional outputs come from the website model and are labeled accordingly; they are separate from this guide’s independently calculated reference cases."
         ],
         "formula": ""
+      },
+      {
+        "id": "daily-compounding",
+        "title": "Daily compounding does not mean daily deposits",
+        "paragraphs": [
+          "Keep $10,000 initially, $200 at month end and ten years fixed. A 5% nominal rate compounded daily produces $47,559.87, compared with $47,526.55 under monthly compounding. The rate is nominal in both rows; their effective annual yields differ.",
+          "Daily growth uses a 365-period nominal equivalent converted to monthly accumulation between deposits. Deposits still occur monthly. When the daily nominal quote is converted to 4.9899532382% to preserve the monthly case’s effective yield, the ending balances match before display rounding. This is rate equivalence, not extra return from renaming a rate."
+        ],
+        "formula": "Monthly equivalent of daily compounding = (1 + nominal annual rate / 365)^(365/12) − 1"
+      },
+      {
+        "id": "purchasing-power",
+        "title": "Read nominal balance and purchasing power separately",
+        "paragraphs": [
+          "At 3% assumed annual inflation, the 5%-monthly base case still ends at $47,526.55 in nominal dollars. Its purchasing power is $35,364.22 in starting-period dollars. Inflation does not change contributions or nominal account earnings in this model.",
+          "For a bank APY quote or deposits that rise each year, use the Savings calculator. This Compound Interest form takes a nominal annual rate and fixed monthly/annual contributions. Neither tool fetches bank offers or predicts returns."
+        ],
+        "formula": "Purchasing-power balance = nominal ending balance / (1 + annual inflation)^years"
       }
     ],
     "columns": [
       "Scenario",
       "Your total contributions",
       "Modeled earnings",
-      "Ending balance"
+      "Ending balance",
+      "Purchasing power at entered inflation"
     ],
     "chart": "monthly-contributions-guide",
-    "chartAlt": "Four 10-year scenarios have identical 34,000 dollar total contributions but different modeled earnings at zero, five and eight percent, including month-start and month-end deposits.",
-    "chartCaption": "Constant nominal rates with monthly compounding; $10,000 initially and 120 deposits of $200. No annual deposits, tax, inflation or fees. Both principal and deposits are included in contributions.",
+    "chartAlt": "Nominal ending balances for seven cases comparing zero interest, nominal return, monthly or daily compounding, deposit timing, equivalent yield and inflation.",
+    "chartCaption": "Nominal ending balances for all seven cases. Monthly deposits stay monthly in the daily-compounding cases. The equal-yield row matches the monthly base; inflation changes the separate purchasing-power column, not nominal balance.",
     "questions": [
       {
         "question": "How do I calculate compound interest with monthly contributions?",
@@ -286,6 +305,10 @@
       {
         "question": "Does daily compounding always produce a larger balance?",
         "answer": "At the same positive nominal annual rate, more frequent compounding increases effective yield. At the same APY the effective annual yield is already matched. Fees, changing rates and cash-flow timing may matter more than that isolated frequency effect."
+      },
+      {
+        "question": "Will daily compounding add daily contributions?",
+        "answer": "No. Compounding frequency changes the periodic growth implied by a nominal annual rate. Monthly and annual contribution inputs keep their stated cash-flow timing."
       }
     ],
     "limitations": [
@@ -5049,15 +5072,16 @@
       "path": "/guides/how-to-calculate-boat-loan-payments/",
       "title": "How to Calculate Boat Loan Payments and Purchase Budget",
       "heading": "How to Calculate Boat Loan Payments and Purchase Budget",
-      "description": "Calculate boat loan payments or solve price from a payment budget. Five reproducible cases compare term, tax financing, upfront cash and zero interest.",
+      "description": "Six reproducible boat-loan cases compare loan term, down payment, tax financing, upfront cash and purchase price from a monthly budget.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "boat-loan"
       ],
       "topic": "Loans & debt",
       "breadcrumb": "How to Calculate Boat Loan Payments and Purchase Budget",
-      "cardIntro": "Calculate boat loan payments or solve price from a payment budget. Five reproducible cases compare term, tax financing, upfront cash and zero interest.",
-      "format": "Calculation guide & model check"
+      "cardIntro": "Six reproducible boat-loan cases compare loan term, down payment, tax financing, upfront cash and purchase price from a monthly budget.",
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/boat-loan-calculator",
     "calculatorLabel": "Boat Loan Calculator",
@@ -5117,18 +5141,28 @@
           "For the base positive-rate payment, a spreadsheet can use =-PMT(7%/12,120,44000). Keep insurance, fuel, storage, marina costs, surveys and maintenance outside this loan calculation and budget them separately. No tax deduction, balloon payment or extra-principal schedule is automatically supplied."
         ],
         "formula": ""
+      },
+      {
+        "id": "larger-down-payment",
+        "title": "A larger down payment commits more cash at purchase",
+        "paragraphs": [
+          "For the same $50,000 boat, 7% entered sales tax and $500 financed fees, increasing the cash down payment from $10,000 to $20,000 reduces financed principal from $44,000 to $34,000. At the same assumed 7% rate and ten-year term, monthly payment becomes $394.77 and loan interest becomes $13,372.26.",
+          "Upfront cash rises by $10,000. That down payment is part of purchase spending; it is not an interest expense or an erased cost. The rate is held fixed for this comparison, and the model does not infer a better lender quote from a larger deposit. Keep reserves for ownership expenses outside the financing calculation."
+        ],
+        "formula": ""
       }
     ],
     "columns": [
       "Scenario",
       "Boat price",
+      "Financed balance",
       "Monthly loan payment",
       "Upfront cash",
       "Total loan interest"
     ],
     "chart": "boat-guide",
-    "chartAlt": "Total boat loan interest under different terms, upfront charges, a solved price and zero interest.",
-    "chartCaption": "The price-solver case purchases a different modeled boat price at a $700 loan payment budget. Boat ownership costs are separate; an entered twenty-year term or zero rate is not a lender offer.",
+    "chartAlt": "Total boat-loan interest for six cases comparing term, tax financing, a solved purchase price, zero interest and a larger cash down payment.",
+    "chartCaption": "All six cases compare total loan interest. The $700 price-solver case purchases a different modeled boat; increasing down payment or paying charges upfront uses more initial cash. Ownership expenses and available lender terms remain separate.",
     "questions": [
       {
         "question": "What is the payment on a $50,000 boat?",
@@ -5153,6 +5187,10 @@
       {
         "question": "Does trade-in value reduce sales tax here?",
         "answer": "No automatic trade tax credit is modeled. Tax applies to the full entered or solved boat price; confirm actual jurisdiction treatment separately."
+      },
+      {
+        "question": "Does a larger down payment reduce the total cash needed at purchase?",
+        "answer": "No. It increases upfront cash while reducing financed principal and future loan interest under the same assumed rate. Compare available cash and ownership reserves separately."
       }
     ],
     "limitations": [
@@ -5783,15 +5821,16 @@
       "path": "/guides/how-to-calculate-savings-goal/",
       "title": "How to Calculate a Savings Goal: Monthly Deposits and Time Needed",
       "heading": "How to Calculate a Savings Goal: Monthly Deposits and Time Needed",
-      "description": "Calculate monthly savings needed for a target or the time to reach it. Six checked examples separate APY, deposit timing, interest tax and existing savings.",
+      "description": "Eight reproducible savings-goal cases compare monthly deposits, a shorter deadline, time needed, APY, contribution timing and modeled interest tax.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "savings"
       ],
       "topic": "Savings & investing",
       "breadcrumb": "How to Calculate a Savings Goal: Monthly Deposits and Time Needed",
-      "cardIntro": "Calculate monthly savings needed for a target or the time to reach it. Six checked examples separate APY, deposit timing, interest tax and existing savings.",
-      "format": "Calculation guide & model check"
+      "cardIntro": "Eight reproducible savings-goal cases compare monthly deposits, a shorter deadline, time needed, APY, contribution timing and modeled interest tax.",
+      "format": "Calculation guide & model check",
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/savings-calculator",
     "calculatorLabel": "Savings Calculator",
@@ -5851,6 +5890,16 @@
           "The model does not fetch bank rates or account fees. Actual day counts, crediting, minimum-balance conditions, taxes and variable yields can change results. Keep emergency liquidity and the purpose of the money in view; the required deposit is arithmetic under assumptions, not a recommendation to choose a particular account."
         ],
         "formula": ""
+      },
+      {
+        "id": "deadline-and-budget",
+        "title": "A shorter deadline and a larger monthly budget answer different questions",
+        "paragraphs": [
+          "With the same $2,000 starting savings, $20,000 nominal target, constant 4% APY and end-month deposits, shortening the deadline from 60 to 36 months raises the unrounded monthly requirement from about $265.44 to $465.38. Required Monthly Deposit solves the contribution while keeping the deadline fixed.",
+          "Time Needed instead holds the contribution fixed and finds the first qualifying month. Raising the deposit from $300 to $400 reaches the same nominal target at month 42 instead of month 54. These cases have different monthly budgets and horizons; neither implies an increased investment return.",
+          "Changing a deadline does not automatically raise the target for inflation. Reassess the nominal goal if the intended purchase cost changes. Real transfers rounded to cents can differ slightly from a solver that retains fractional cents."
+        ],
+        "formula": ""
       }
     ],
     "columns": [
@@ -5861,8 +5910,8 @@
       "Modeled interest tax"
     ],
     "chart": "savinggoal-guide",
-    "chartAlt": "Monthly deposits required for a fixed savings target under zero yield, APY, deposit timing and modeled tax scenarios.",
-    "chartCaption": "The chart compares only the first four cases: the same $2,000 starting savings, $20,000 target and sixty-month deadline. The time-needed and already-covered cases appear in the table.",
+    "chartAlt": "Required monthly deposits for five savings-goal cases comparing zero yield, APY, deposit timing, modeled interest tax and a shorter deadline.",
+    "chartCaption": "Required monthly deposits for the first four 60-month cases and the added 36-month deadline. The two Time Needed rows and already-covered target appear in the table because they solve a different variable.",
     "questions": [
       {
         "question": "How much should I save monthly for a $20,000 goal?",
@@ -5887,6 +5936,10 @@
       {
         "question": "Can a zero required deposit mean I already reached the goal?",
         "answer": "Yes. Existing savings and entered annual deposits can already cover the projected target. Check liquidity and assumptions rather than interpreting zero as a recommendation to stop saving."
+      },
+      {
+        "question": "Should I enter a deadline or a monthly savings budget?",
+        "answer": "Use Required Monthly Deposit when the deadline is fixed. Use Time Needed when the monthly contribution is fixed. Keep target, existing savings and rate assumptions aligned when comparing them."
       }
     ],
     "limitations": [

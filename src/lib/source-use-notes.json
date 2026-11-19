@@ -2375,7 +2375,8 @@
       ]
     },
     "calculator:savings": {
-      "note": "Distinguish the interest, yield, day-count and tax conventions of each comparison. Entered rates are examples, not current product offers; a simplified projection is not an account disclosure or complete tax calculation."
+      "note": "Distinguish the interest, yield, day-count and tax conventions of each comparison. Entered rates are examples, not current product offers; a simplified projection is not an account disclosure or complete tax calculation. The added deadline and fixed-budget cases solve different variables using a constant entered APY. The 2026-11-19 independently checked cases retain complete assumptions; APY is not an offer and the interest-tax input is only a modeled haircut.",
+      "updatedOn": "2026-11-19"
     },
     "calculator:barista-fire": {
       "note": "References explain FIRE concepts, growth methods and access risks. Returns, spending, earnings and withdrawal rates are editable assumptions; these deterministic scenarios do not estimate a probability of retirement success."
@@ -2426,7 +2427,8 @@
       "note": "References explain FIRE concepts, growth methods and access risks. Returns, spending, earnings and withdrawal rates are editable assumptions; these deterministic scenarios do not estimate a probability of retirement success."
     },
     "calculator:compound-interest": {
-      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation."
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation. The nominal-rate frequency comparison keeps monthly deposits fixed; the converted-rate case preserves effective annual yield. Purchasing-power balances use entered inflation separately. The 2026-11-19 comparison arithmetic is independently checked; cited SEC definitions do not certify those hypothetical results.",
+      "updatedOn": "2026-11-19"
     },
     "calculator:budget": {
       "note": "Sources explain reserve planning and budget categories. Entered income, costs, saving targets and interest are assumptions; the result does not establish that a household’s plan is affordable or sufficient."
@@ -2555,11 +2557,12 @@
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
     },
     "guide:/guides/how-to-calculate-savings-goal/": {
-      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review. The added deadline and fixed-budget cases solve different variables using a constant entered APY. The 2026-11-19 independently checked cases retain complete assumptions; APY is not an offer and the interest-tax input is only a modeled haircut.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/compound-interest-with-monthly-contributions/": {
-      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review.",
-      "updatedOn": "2026-11-03"
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review. The nominal-rate frequency comparison keeps monthly deposits fixed; the converted-rate case preserves effective annual yield. Purchasing-power balances use entered inflation separately. The 2026-11-19 comparison arithmetic is independently checked; cited SEC definitions do not certify those hypothetical results.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/cagr-and-annualized-growth/": {
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
@@ -2661,13 +2664,14 @@
       "updatedOn": "2026-11-02"
     },
     "calculator:boat-loan": {
-      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
+      "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote. The added down-payment comparison holds price, rate, tax treatment and term fixed, while upfront cash changes. The 2026-11-19 independently checked cases do not establish live lender terms, tax jurisdiction treatment or total ownership affordability.",
       "extras": [
         {
           "title": "OpenStax: periodic loan payment and amortization method",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:auto-lease": {
       "note": "References distinguish payment methods, product terms and real-world borrowing limits. Equal-period planning schedules can differ from daily accrual, lender posting, contract fees and a binding payoff or lease quote.",
@@ -3121,7 +3125,8 @@
       "updatedOn": "2026-11-03"
     },
     "guide:/guides/how-to-calculate-boat-loan-payments/": {
-      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."
+      "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review. The added down-payment comparison holds price, rate, tax treatment and term fixed, while upfront cash changes. The 2026-11-19 independently checked cases do not establish live lender terms, tax jurisdiction treatment or total ownership affordability.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-to-calculate-rent-affordability/": {
       "note": "References support definitions, calculation methods and rule boundaries. The numerical examples are hypothetical site calculations, not observed borrower outcomes, current offers or an external professional review."

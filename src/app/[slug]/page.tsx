@@ -20,6 +20,7 @@ import CalculatorClient from "@/components/CalculatorEntry";
 import { defaults, runCalculation } from "@/lib/calculators";
 import Directory from "@/components/DirectoryEntry";
 import { searchTasks } from "@/lib/keyword-targets";
+import focusedTasks from "@/lib/focused-calculation-tasks.json";
 import RealEstateDirectory from "@/components/RealEstateDirectory";
 import { Sidebar } from "@/components/Shell";
 import CalculatorGuide from "@/components/CalculatorGuide";
@@ -198,7 +199,7 @@ export default async function Page({
           <><RealEstateDirectory /><CalculatorDisclaimer id={c.id}/></>
         ) : c ? (
           <>
-            <CalculatorClient calc={JSON.parse(JSON.stringify(c))} initialResult={initialResult} shortcuts={(searchTasks[c.id] ?? []).map(({keyword, mode}) => ({keyword, mode}))} />
+            <CalculatorClient calc={JSON.parse(JSON.stringify(c))} initialResult={initialResult} shortcuts={(searchTasks[c.id] ?? []).map(({keyword, mode, values}) => ({keyword, mode, ...(Object.hasOwn(focusedTasks,c.id)?{values}:{})}))} />
             <span className="calculator-end-marker" data-calculator-end aria-hidden="true" />
             <CalculatorDisclaimer id={c.id}/>
             <BlogSnippetKit id={c.id} title={c.title} path={routeFor(c.id)}/>

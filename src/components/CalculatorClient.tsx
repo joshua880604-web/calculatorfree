@@ -88,7 +88,7 @@ function ResultTables({tables,onDownload,label="Download table CSV"}:{tables:Non
   </div>
  </section>)}</>;
 }
-export default function CalculatorClient({ calc, initialResult, shortcuts = [] }: { calc: Calculator; initialResult: Result | null; shortcuts?: {keyword: string; mode: string}[] }) {
+export default function CalculatorClient({ calc, initialResult, shortcuts = [] }: { calc: Calculator; initialResult: Result | null; shortcuts?: {keyword: string; mode: string; values?: Values}[] }) {
   const id = calc.id;
   const enhancedSharing=hasShareTools(id);
   const motherCopy=motherPageCopy[id];
@@ -237,6 +237,12 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
     setError("");
     setNotice("Inputs changed. Select Calculate to update the result.");
   };
+  function openShortcut(task: {mode: string; values?: Values}) {
+    if (!task.values) { switchMode(task.mode); return; }
+    const url = new URL(calculatorPresetHref(routeFor(id), task.mode, task.values), window.location.href);
+    if (url.hash === window.location.hash) window.dispatchEvent(new Event('calculator-preset'));
+    else window.location.hash = url.hash;
+  }
   function switchMode(next: string) {
     if (next === modeId) return;
     request.current++;
@@ -581,7 +587,7 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
     <>
       <div className={"calculator-intro-row"+(motherCopy?" mother-page-intro":"")}><p className="intro">{motherCopy?.intro??calc.intro}</p>{enhancedSharing?<div className="calculator-utility-actions enhanced-sharing-actions"><FavoriteButton id={id}/><button type="button" className="calculator-share-launch" aria-haspopup="dialog" onClick={()=>setShareTab('Share')}>Share / Export</button></div>:<FavoriteButton id={id}/>}</div>
       {shareTab&&enhancedSharing&&<ShareToolsDialog key={shareTab} initialTab={shareTab} id={id} title={calc.title} path={routeFor(id)} mode={mode} values={values} result={result} fields={visible} onClose={closeShare}/>}
-      {id !== "mortgage" && !motherCopy && shortcuts.length > 0 && <nav className="task-shortcuts" aria-label="Calculation shortcuts">{shortcuts.map(task=><button type="button" key={task.keyword} onClick={()=>switchMode(task.mode)}>{task.keyword}</button>)}</nav>}
+      {id !== "mortgage" && !motherCopy && shortcuts.length > 0 && <nav className="task-shortcuts" aria-label="Calculation shortcuts">{shortcuts.map(task=><button type="button" key={task.keyword} onClick={()=>openShortcut(task)}>{task.keyword}</button>)}</nav>}
       {calc.modes.length > 1 && (
         <div className={"mode-tabs" + (compactModes ? " compact-mode-tabs" : "") + (id === "mortgage" ? " mortgage-mode-tabs" : "")} role="tablist" aria-label="Calculation mode">
           {calc.modes.map((m) => (
@@ -817,7 +823,7 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
         <strong>Other mortgage tools</strong>
         {[["pmi", "PMI"], ["biweekly-mortgage", "Biweekly payments"], ["discount-points", "Discount points"], ["mortgage-recast", "Recast"], ["fha-loan", "FHA loan"], ["va-mortgage", "VA mortgage"], ["refinance", "Refinance"], ["mortgage-payoff", "Mortgage payoff"], ["heloc", "HELOC"], ["rental-property", "Rental property"]].map(([tool, label]) => <SiteLink key={tool} href={routeFor(tool)}>{label}</SiteLink>)}
       </nav>}
-      {id === "mortgage" && shortcuts.length > 0 && <nav className="task-shortcuts" aria-label="Calculation shortcuts">{shortcuts.map(task=><button type="button" key={task.keyword} onClick={()=>switchMode(task.mode)}>{task.keyword}</button>)}</nav>}
+      {id === "mortgage" && shortcuts.length > 0 && <nav className="task-shortcuts" aria-label="Calculation shortcuts">{shortcuts.map(task=><button type="button" key={task.keyword} onClick={()=>openShortcut(task)}>{task.keyword}</button>)}</nav>}
       <section className="explanation">
         <h2>How to use this calculator</h2>
         <p>

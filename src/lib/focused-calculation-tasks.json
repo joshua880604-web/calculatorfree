@@ -1,0 +1,179 @@
+{
+  "compound-interest": [
+    {
+      "keyword": "Compound interest calculator with monthly contributions",
+      "mode": "growth",
+      "description": "Project fixed monthly deposits using a nominal annual rate compounded monthly. Compare your contributions with modeled earnings; use the complete examples below to change timing or inflation.",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "aliases": [
+        "Compound interest calculator monthly",
+        "Compound interest calculator with inflation"
+      ]
+    },
+    {
+      "keyword": "Compound interest calculator daily",
+      "mode": "growth",
+      "description": "Use daily compounding with monthly deposits. This example keeps the same nominal rate and deposit schedule as the monthly case; daily compounding does not add daily contributions.",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "compound": "Daily",
+        "annual": "0",
+        "monthly": "200",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      }
+    },
+    {
+      "keyword": "Equivalent interest rate calculator",
+      "mode": "conversion",
+      "description": "Convert a 5% nominal rate compounded monthly to an equivalent annual rate while preserving effective yield. Changing the quote is different from holding a nominal rate fixed.",
+      "values": {
+        "rate": "5",
+        "from": "Monthly",
+        "to": "Annually"
+      }
+    }
+  ],
+  "boat-loan": [
+    {
+      "keyword": "Boat loan calculator",
+      "mode": "payment",
+      "description": "Calculate the monthly payment from purchase price, cash down payment, trade value and entered tax and fees. Compare total loan interest and upfront cash; ownership expenses are separate.",
+      "values": {
+        "price": "50000",
+        "down": "10000",
+        "trade": "0",
+        "tax": "7",
+        "fees": "500",
+        "finance": "Yes",
+        "rate": "7",
+        "years": "10"
+      },
+      "aliases": [
+        "Boat payment calculator",
+        "Boat loan payment calculator",
+        "Boat loan calculator with down payment",
+        "Used boat loan calculator"
+      ]
+    },
+    {
+      "keyword": "Boat price from a monthly loan budget",
+      "mode": "price",
+      "description": "Work backward from a $700 monthly loan-payment budget. The result is a modeled purchase price under the complete entered assumptions, with operating and storage expenses budgeted separately.",
+      "values": {
+        "payment": "700",
+        "down": "10000",
+        "trade": "0",
+        "tax": "7",
+        "fees": "500",
+        "finance": "Yes",
+        "rate": "7",
+        "years": "10"
+      }
+    }
+  ],
+  "savings": [
+    {
+      "keyword": "Savings interest calculator",
+      "mode": "accumulation",
+      "description": "Project your ending balance from starting savings and deposits. Monthly and annual deposits can increase each year; separate contributions, earnings and purchasing power.",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate_type": "Nominal interest rate",
+        "rate": "5",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "100",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0",
+        "annual_increase": "0",
+        "monthly_increase": "0"
+      },
+      "aliases": [
+        "Savings calculator with monthly deposits",
+        "Savings account interest calculator",
+        "Monthly savings calculator"
+      ]
+    },
+    {
+      "keyword": "Savings goal calculator",
+      "mode": "goal-contribution",
+      "description": "Keep your target and deadline fixed to solve the monthly deposit. This example starts with $2,000 and targets $20,000 in five years at an assumed constant 4% APY.",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "years": "5",
+        "months": "0",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      },
+      "aliases": [
+        "Savings goal calculator monthly contribution"
+      ]
+    },
+    {
+      "keyword": "How long to save calculator",
+      "mode": "goal-time",
+      "description": "Keep monthly deposits fixed and find the first whole month reaching the target. This restores the $2,000 start, $20,000 goal, $300 monthly deposits and 4% APY example.",
+      "values": {
+        "end": "20000",
+        "principal": "2000",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "300",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0"
+      }
+    },
+    {
+      "keyword": "High yield savings calculator",
+      "mode": "accumulation",
+      "description": "Enter an APY quote as APY, rather than dividing it by twelve as a nominal rate. This hypothetical 4% APY example fetches no current bank rates; the compounding selector is ignored for APY.",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "annual": "0",
+        "monthly": "100",
+        "timing": "End of period",
+        "tax": "0",
+        "inflation": "0",
+        "annual_increase": "0",
+        "monthly_increase": "0"
+      },
+      "aliases": [
+        "High yield savings account calculator",
+        "HYSA calculator"
+      ]
+    }
+  ]
+}
