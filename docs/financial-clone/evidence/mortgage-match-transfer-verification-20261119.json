@@ -1,0 +1,634 @@
+{
+  "date": "2026-11-19",
+  "status": "validated; preview deployment and production publication pending",
+  "scope": [
+    "mortgage",
+    "401k",
+    "balance-transfer"
+  ],
+  "tests": {
+    "passed": 2976,
+    "failed": 0,
+    "log": "/workspace/work/mortgage-match-transfer-content-20261119/tests.log"
+  },
+  "build": {
+    "passed": true,
+    "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build",
+    "log": "/workspace/work/mortgage-match-transfer-content-20261119/build.log"
+  },
+  "independentMath": {
+    "passed": true,
+    "cases": 15,
+    "numericChecks": 199,
+    "decimalPrecision": 70,
+    "reference": "mortgage-match-transfer-reference-20261119.json",
+    "command": "python scripts/check-mortgage-match-transfer-reference.py"
+  },
+  "compatibility": {
+    "passed": true,
+    "existingEntries": 169,
+    "existingModes": 354,
+    "fieldsDefaultsAndResultsUnchanged": true,
+    "originalWorkedExamplesPreserved": 14,
+    "unrelatedGuideContentAndCasesUnchanged": true
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      {
+        "kind": "page",
+        "path": "/mortgage-calculator",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/401k-calculator",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-401k-matching-works/",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/balance-transfer-calculator",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/balance-transfer-vs-personal-loan/",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/mortgage-calculator",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/401k-calculator",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-401k-matching-works/",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/balance-transfer-calculator",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/balance-transfer-vs-personal-loan/",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/mortgage-calculator",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "mortgage",
+        "label": "30 years, 6%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "mortgage",
+        "label": "15 years, 6%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "mortgage",
+        "label": "30 years, 0%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "mortgage",
+        "label": "30 years, 10% down and manual PMI",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "mortgage",
+        "label": "30 years, tax and insurance rise 3%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "mortgage",
+        "keyword": "Mortgage calculator with taxes and insurance",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "mortgage",
+        "keyword": "Mortgage calculator with loan amount",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "mortgage",
+        "keyword": "Mortgage calculator with PMI",
+        "mode": "monthly",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "mortgage",
+        "keyword": "Mortgage calculator with taxes and insurance",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "mortgage",
+        "keyword": "Mortgage calculator with loan amount",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "mortgage",
+        "keyword": "Mortgage calculator with PMI",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "mortgage"
+      },
+      {
+        "kind": "page",
+        "path": "/401k-calculator",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-401k-matching-works/",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "matching",
+        "label": "100% of first 3% + 50% of next 2%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "matching",
+        "label": "50% of first 6%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "matching",
+        "label": "100% of first 6%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "matching",
+        "label": "High salary: 100% of first 10%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "matching",
+        "label": "50% of first 3%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "401k",
+        "keyword": "401k growth calculator",
+        "mode": "projection",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "401k",
+        "keyword": "401k contribution calculator",
+        "mode": "projection",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "401k",
+        "keyword": "401k employer match calculator",
+        "mode": "match",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "401k",
+        "keyword": "401k early withdrawal calculator",
+        "mode": "early",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "401k",
+        "keyword": "401k contribution tax savings calculator",
+        "mode": "tax-savings",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "401k",
+        "keyword": "401k growth calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "401k",
+        "keyword": "401k contribution calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "401k",
+        "keyword": "401k employer match calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "401k",
+        "keyword": "401k early withdrawal calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "401k",
+        "keyword": "401k contribution tax savings calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "401k"
+      },
+      {
+        "kind": "page",
+        "path": "/balance-transfer-calculator",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/balance-transfer-vs-personal-loan/",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "transfer",
+        "label": "18-month promotion, USD 350 monthly",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "transfer",
+        "label": "12-month promotion, financed fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "transfer",
+        "label": "12-month promotion, fee paid separately",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "transfer",
+        "label": "18-month promotion, USD 250 monthly",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "comparison-preset-click",
+        "topic": "transfer",
+        "label": "Two offers: 3% / 18 months vs 5% / 24 months",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "resultMatched": true
+      },
+      {
+        "kind": "task-click",
+        "id": "balance-transfer",
+        "keyword": "Credit card balance transfer calculator",
+        "mode": "transfer",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-click",
+        "id": "balance-transfer",
+        "keyword": "Compare balance transfer offers",
+        "mode": "offers",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "balance-transfer",
+        "keyword": "Credit card balance transfer calculator",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "balance-transfer",
+        "keyword": "Compare balance transfer offers",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "repeatedPresetAfterEdit": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "balance-transfer"
+      },
+      {
+        "kind": "page",
+        "path": "/mortgage-calculator",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/401k-calculator",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/how-401k-matching-works/",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/balance-transfer-calculator",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page",
+        "path": "/guides/balance-transfer-vs-personal-loan/",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/mortgage-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/401k-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/how-401k-matching-works/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/balance-transfer-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript",
+        "path": "/guides/balance-transfer-vs-personal-loan/",
+        "readableCases": true
+      }
+    ],
+    "downloads": [
+      {
+        "path": "/mortgage-calculator",
+        "file": "mortgage-cases.csv",
+        "cases": 5
+      },
+      {
+        "path": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "file": "mortgage-cases.csv",
+        "cases": 5
+      },
+      {
+        "path": "/401k-calculator",
+        "file": "matching-cases.csv",
+        "cases": 5
+      },
+      {
+        "path": "/guides/how-401k-matching-works/",
+        "file": "matching-cases.csv",
+        "cases": 5
+      },
+      {
+        "path": "/balance-transfer-calculator",
+        "file": "transfer-scenarios-20261119.csv",
+        "cases": 5
+      },
+      {
+        "path": "/guides/balance-transfer-vs-personal-loan/",
+        "file": "transfer-scenarios-20261119.csv",
+        "cases": 5
+      }
+    ],
+    "errors": []
+  },
+  "charts": {
+    "passed": true,
+    "checks": [
+      {
+        "topic": "mortgage",
+        "imageDecoded": true,
+        "complete": true,
+        "width": 1350,
+        "height": 750
+      },
+      {
+        "topic": "matching",
+        "imageDecoded": true,
+        "complete": true,
+        "width": 1350,
+        "height": 750
+      }
+    ]
+  },
+  "staticAudit": {
+    "passed": true,
+    "canonicalPages": 469,
+    "brokenFiles": [],
+    "brokenFragments": [],
+    "orphanPages": [],
+    "reviewedPages": [
+      {
+        "path": "/mortgage-calculator",
+        "canonical": "https://www.calculatorfree.io/mortgage-calculator",
+        "incomingPages": 53,
+        "oneH1": true
+      },
+      {
+        "path": "/401k-calculator",
+        "canonical": "https://www.calculatorfree.io/401k-calculator",
+        "incomingPages": 31,
+        "oneH1": true
+      },
+      {
+        "path": "/balance-transfer-calculator",
+        "canonical": "https://www.calculatorfree.io/balance-transfer-calculator",
+        "incomingPages": 20,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-to-calculate-monthly-mortgage-payment/",
+        "canonical": "https://www.calculatorfree.io/guides/how-to-calculate-monthly-mortgage-payment/",
+        "incomingPages": 9,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/how-401k-matching-works/",
+        "canonical": "https://www.calculatorfree.io/guides/how-401k-matching-works/",
+        "incomingPages": 8,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/balance-transfer-vs-personal-loan/",
+        "canonical": "https://www.calculatorfree.io/guides/balance-transfer-vs-personal-loan/",
+        "incomingPages": 10,
+        "oneH1": true
+      }
+    ],
+    "newGuideToolLinksReciprocal": true,
+    "previousIndexingPolicyPreserved": true
+  },
+  "visual": {
+    "inspected": true,
+    "widths": [
+      320,
+      1440
+    ],
+    "screenshots": "/workspace/work/mortgage-match-transfer-content-20261119",
+    "notes": "Three tool comparison sections and both updated charts inspected. Lazy images were explicitly decoded before the final chart screenshots."
+  },
+  "limits": [
+    "Native Safari not tested.",
+    "No live lender/card offers, issuer-statement equivalence or professional certification.",
+    "2026 limits retained; hypothetical matching formulas do not establish plan eligibility, payroll entitlement or vesting.",
+    "No guarantee of indexing, ranking or AdSense approval.",
+    "Remote preview HTTP response body not yet verified."
+  ]
+}

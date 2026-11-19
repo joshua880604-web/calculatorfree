@@ -5,113 +5,319 @@
       "calculatorId": "mortgage",
       "mode": "monthly",
       "values": {
-        "price": 375000,
-        "down": 20,
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "20",
         "down_unit": "Percent",
-        "years": 30,
-        "months": 0,
-        "rate": 6,
-        "tax": 4800,
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
         "tax_unit": "Dollars",
-        "insurance": 1800,
+        "insurance": "1800",
         "insurance_unit": "Dollars",
-        "hoa": 1200,
-        "hoa_unit": "Dollars",
-        "other": 0,
         "pmi_method": "Manual",
-        "pmi": 0,
-        "pmi_years": 0,
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "0",
         "pmi_policy": "Fixed duration",
-        "extra_monthly": 0,
-        "extra_yearly": 0,
-        "extra_once": 0,
-        "dated": ""
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
       },
       "metrics": {
         "Monthly principal & interest": 1798.6515754582572,
         "Initial monthly total": 2448.651575458257,
-        "Total interest": 347514.5671649726
+        "Down payment": 75000.0,
+        "Financed loan amount": 300000.0,
+        "Initial monthly PMI": 0.0,
+        "Total interest": 347514.5671649726,
+        "Total taxes and other costs": 234000.0,
+        "Total out of pocket": 956514.5671649725
       },
       "display": [
+        "$75,000.00",
         "$1,798.65",
         "$2,448.65",
+        "$2,448.65",
         "$347,514.57"
-      ]
+      ],
+      "extra": {
+        "month13total": 2448.651575458257,
+        "month13costs": 650.0
+      }
     },
     {
       "label": "15 years, 6%",
       "calculatorId": "mortgage",
       "mode": "monthly",
       "values": {
-        "price": 375000,
-        "down": 20,
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "20",
         "down_unit": "Percent",
-        "years": 15,
-        "months": 0,
-        "rate": 6,
-        "tax": 4800,
+        "years": "15",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
         "tax_unit": "Dollars",
-        "insurance": 1800,
+        "insurance": "1800",
         "insurance_unit": "Dollars",
-        "hoa": 1200,
-        "hoa_unit": "Dollars",
-        "other": 0,
         "pmi_method": "Manual",
-        "pmi": 0,
-        "pmi_years": 0,
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "0",
         "pmi_policy": "Fixed duration",
-        "extra_monthly": 0,
-        "extra_yearly": 0,
-        "extra_once": 0,
-        "dated": ""
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
       },
       "metrics": {
         "Monthly principal & interest": 2531.570484145354,
         "Initial monthly total": 3181.570484145354,
-        "Total interest": 155682.68714616372
+        "Down payment": 75000.0,
+        "Financed loan amount": 300000.0,
+        "Initial monthly PMI": 0.0,
+        "Total interest": 155682.68714616372,
+        "Total taxes and other costs": 117000.0,
+        "Total out of pocket": 647682.6871461637
       },
       "display": [
+        "$75,000.00",
         "$2,531.57",
         "$3,181.57",
+        "$3,181.57",
         "$155,682.69"
-      ]
+      ],
+      "extra": {
+        "month13total": 3181.570484145354,
+        "month13costs": 650.0
+      }
     },
     {
       "label": "30 years, 0%",
       "calculatorId": "mortgage",
       "mode": "monthly",
       "values": {
-        "price": 375000,
-        "down": 20,
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "20",
         "down_unit": "Percent",
-        "years": 30,
-        "months": 0,
-        "rate": 0,
-        "tax": 4800,
+        "years": "30",
+        "months": "0",
+        "rate": "0",
+        "start": "2026-10-01",
+        "tax": "4800",
         "tax_unit": "Dollars",
-        "insurance": 1800,
+        "insurance": "1800",
         "insurance_unit": "Dollars",
-        "hoa": 1200,
-        "hoa_unit": "Dollars",
-        "other": 0,
         "pmi_method": "Manual",
-        "pmi": 0,
-        "pmi_years": 0,
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "0",
         "pmi_policy": "Fixed duration",
-        "extra_monthly": 0,
-        "extra_yearly": 0,
-        "extra_once": 0,
-        "dated": ""
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
       },
       "metrics": {
         "Monthly principal & interest": 833.3333333333334,
         "Initial monthly total": 1483.3333333333333,
-        "Total interest": 0.0
+        "Down payment": 75000.0,
+        "Financed loan amount": 300000.0,
+        "Initial monthly PMI": 0.0,
+        "Total interest": 0.0,
+        "Total taxes and other costs": 234000.0,
+        "Total out of pocket": 609000.0
       },
       "display": [
+        "$75,000.00",
         "$833.33",
         "$1,483.33",
+        "$1,483.33",
         "$0.00"
+      ],
+      "extra": {
+        "month13total": 1483.3333333333333,
+        "month13costs": 650.0
+      }
+    },
+    {
+      "label": "30 years, 10% down and manual PMI",
+      "calculatorId": "mortgage",
+      "mode": "monthly",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "10",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "1500",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      },
+      "metrics": {
+        "Monthly principal & interest": 2023.4830223905394,
+        "Initial monthly total": 2798.483022390539,
+        "Down payment": 37500.0,
+        "Financed loan amount": 337500.0,
+        "Initial monthly PMI": 125.0,
+        "Total interest": 390953.88806059415,
+        "Total taxes and other costs": 250500.0,
+        "Total out of pocket": 1016453.8880605942
+      },
+      "extra": {
+        "month13total": 2798.483022390539,
+        "month13costs": 775.0
+      },
+      "display": [
+        "$37,500.00",
+        "$2,023.48",
+        "$2,798.48",
+        "$2,798.48",
+        "$390,953.89"
+      ]
+    },
+    {
+      "label": "30 years, tax and insurance rise 3%",
+      "calculatorId": "mortgage",
+      "mode": "monthly",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "20",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "0",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "3",
+        "insurance_growth": "3",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      },
+      "metrics": {
+        "Monthly principal & interest": 1798.6515754582572,
+        "Initial monthly total": 2448.651575458257,
+        "Down payment": 75000.0,
+        "Financed loan amount": 300000.0,
+        "Initial monthly PMI": 0.0,
+        "Total interest": 347514.5671649726,
+        "Total taxes and other costs": 349997.74366172525,
+        "Total out of pocket": 1072512.3108266979
+      },
+      "extra": {
+        "month13total": 2465.151575458257,
+        "month13costs": 666.5
+      },
+      "display": [
+        "$75,000.00",
+        "$1,798.65",
+        "$2,448.65",
+        "$2,465.15",
+        "$347,514.57"
       ]
     }
   ],
@@ -1358,99 +1564,139 @@
       "calculatorId": "401k",
       "mode": "match",
       "values": {
-        "age": 35,
-        "salary": 80000,
-        "match1": 100,
-        "limit1": 3,
-        "match2": 50,
-        "limit2": 2
+        "age": "35",
+        "salary": "80000",
+        "match1": "100",
+        "limit1": "3",
+        "match2": "50",
+        "limit2": "2"
       },
       "metrics": {
         "Minimum contribution rate for full match": 5.0,
         "Maximum steady contribution rate": 30.625,
+        "Age-based annual employee limit (2026)": 24500.0,
         "Annual contribution to maximize match": 4000.0,
+        "Contribution per month": 333.3333333333333,
         "Employer annual match": 3200.0,
         "Total annual additions": 7200.0
       },
       "display": [
         "$4,000.00",
         "$3,200.00",
-        "Full match attainable"
-      ]
+        "Within stated annual limits"
+      ],
+      "extra": {}
     },
     {
       "label": "50% of first 6%",
       "calculatorId": "401k",
       "mode": "match",
       "values": {
-        "age": 35,
-        "salary": 80000,
-        "match1": 50,
-        "limit1": 6,
-        "match2": 0,
-        "limit2": 0
+        "age": "35",
+        "salary": "80000",
+        "match1": "50",
+        "limit1": "6",
+        "match2": "0",
+        "limit2": "0"
       },
       "metrics": {
         "Minimum contribution rate for full match": 6.0,
         "Maximum steady contribution rate": 30.625,
+        "Age-based annual employee limit (2026)": 24500.0,
         "Annual contribution to maximize match": 4800.0,
+        "Contribution per month": 400.0,
         "Employer annual match": 2400.0,
         "Total annual additions": 7200.0
       },
       "display": [
         "$4,800.00",
         "$2,400.00",
-        "Full match attainable"
-      ]
+        "Within stated annual limits"
+      ],
+      "extra": {}
     },
     {
       "label": "100% of first 6%",
       "calculatorId": "401k",
       "mode": "match",
       "values": {
-        "age": 35,
-        "salary": 80000,
-        "match1": 100,
-        "limit1": 6,
-        "match2": 0,
-        "limit2": 0
+        "age": "35",
+        "salary": "80000",
+        "match1": "100",
+        "limit1": "6",
+        "match2": "0",
+        "limit2": "0"
       },
       "metrics": {
         "Minimum contribution rate for full match": 6.0,
         "Maximum steady contribution rate": 30.625,
+        "Age-based annual employee limit (2026)": 24500.0,
         "Annual contribution to maximize match": 4800.0,
+        "Contribution per month": 400.0,
         "Employer annual match": 4800.0,
         "Total annual additions": 9600.0
       },
       "display": [
         "$4,800.00",
         "$4,800.00",
-        "Full match attainable"
-      ]
+        "Within stated annual limits"
+      ],
+      "extra": {}
     },
     {
       "label": "High salary: 100% of first 10%",
       "calculatorId": "401k",
       "mode": "match",
       "values": {
-        "age": 35,
-        "salary": 400000,
-        "match1": 100,
-        "limit1": 10,
-        "match2": 0,
-        "limit2": 0
+        "age": "35",
+        "salary": "400000",
+        "match1": "100",
+        "limit1": "10",
+        "match2": "0",
+        "limit2": "0"
       },
       "metrics": {
         "Rate required for full match (unattainable)": 9.0,
         "Maximum steady contribution rate": 6.125,
+        "Age-based annual employee limit (2026)": 24500.0,
         "Annual contribution at employee limit": 24500.0,
+        "Contribution per month": 2041.6666666666667,
         "Employer annual match": 24500.0,
         "Total annual additions": 49000.0
       },
       "display": [
         "$24,500.00",
         "$24,500.00",
-        "Employee limit prevents full match"
+        "Employee limit restricts full match"
+      ],
+      "extra": {}
+    },
+    {
+      "label": "50% of first 3%",
+      "calculatorId": "401k",
+      "mode": "match",
+      "values": {
+        "age": "35",
+        "salary": "80000",
+        "match1": "50",
+        "limit1": "3",
+        "match2": "0",
+        "limit2": "0"
+      },
+      "metrics": {
+        "Minimum contribution rate for full match": 3.0,
+        "Maximum steady contribution rate": 30.625,
+        "Age-based annual employee limit (2026)": 24500.0,
+        "Annual contribution to maximize match": 2400.0,
+        "Contribution per month": 200.0,
+        "Employer annual match": 1200.0,
+        "Total annual additions": 3600.0
+      },
+      "extra": {},
+      "display": [
+        "$2,400.00",
+        "$1,200.00",
+        "Within stated annual limits"
       ]
     }
   ],

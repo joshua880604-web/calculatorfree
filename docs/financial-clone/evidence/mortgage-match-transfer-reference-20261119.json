@@ -1,0 +1,669 @@
+{
+  "date": "2026-11-19",
+  "precision": 70,
+  "ruleYear": 2026,
+  "cases": [
+    {
+      "topic": "mortgage",
+      "label": "30 years, 6%",
+      "calculatorId": "mortgage",
+      "mode": "monthly",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "20",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "0",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      },
+      "expected": {
+        "Monthly principal & interest": "1798.651575458257183774383731053427745111128227489264337143957861517969",
+        "Initial monthly total": "2448.651575458257183774383731053427745111128227489264337143957861517969",
+        "Down payment": "75000",
+        "Financed loan amount": "300000",
+        "Initial monthly PMI": "0",
+        "Total interest": "347514.5671649725861587781431792339882400061618961351613718248301464688",
+        "Total taxes and other costs": "234000",
+        "Total out of pocket": "956514.5671649725861587781431792339882400061618961351613718248301464688"
+      },
+      "extra": {
+        "month13total": "2448.651575458257183774383731053427745111128227489264337143957861517969",
+        "month13costs": "650"
+      }
+    },
+    {
+      "topic": "mortgage",
+      "label": "15 years, 6%",
+      "calculatorId": "mortgage",
+      "mode": "monthly",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "20",
+        "down_unit": "Percent",
+        "years": "15",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "0",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      },
+      "expected": {
+        "Monthly principal & interest": "2531.570484145353931302994082079834351000473255275539332599590781486621",
+        "Initial monthly total": "3181.570484145353931302994082079834351000473255275539332599590781486621",
+        "Down payment": "75000",
+        "Financed loan amount": "300000",
+        "Initial monthly PMI": "0",
+        "Total interest": "155682.6871461637076345389347743701831800851859495970798679263406675918",
+        "Total taxes and other costs": "117000",
+        "Total out of pocket": "647682.6871461637076345389347743701831800851859495970798679263406675918"
+      },
+      "extra": {
+        "month13total": "3181.570484145353931302994082079834351000473255275539332599590781486621",
+        "month13costs": "650"
+      }
+    },
+    {
+      "topic": "mortgage",
+      "label": "30 years, 0%",
+      "calculatorId": "mortgage",
+      "mode": "monthly",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "20",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "0",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "0",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      },
+      "expected": {
+        "Monthly principal & interest": "833.3333333333333333333333333333333333333333333333333333333333333333333",
+        "Initial monthly total": "1483.333333333333333333333333333333333333333333333333333333333333333333",
+        "Down payment": "75000",
+        "Financed loan amount": "300000",
+        "Initial monthly PMI": "0",
+        "Total interest": "0E-64",
+        "Total taxes and other costs": "234000",
+        "Total out of pocket": "609000.0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "extra": {
+        "month13total": "1483.333333333333333333333333333333333333333333333333333333333333333333",
+        "month13costs": "650"
+      }
+    },
+    {
+      "topic": "mortgage",
+      "label": "30 years, 10% down and manual PMI",
+      "calculatorId": "mortgage",
+      "mode": "monthly",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "10",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "1500",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      },
+      "expected": {
+        "Monthly principal & interest": "2023.483022390539331746181697435106213250019255925422379286952594207715",
+        "Initial monthly total": "2798.483022390539331746181697435106213250019255925422379286952594207715",
+        "Down payment": "37500",
+        "Financed loan amount": "337500",
+        "Initial monthly PMI": "125",
+        "Total interest": "390953.8880605941594286254110766382367700069321331520565433029339147774",
+        "Total taxes and other costs": "250500",
+        "Total out of pocket": "1016453.888060594159428625411076638236770006932133152056543302933914777"
+      },
+      "extra": {
+        "month13total": "2798.483022390539331746181697435106213250019255925422379286952594207715",
+        "month13costs": "775"
+      }
+    },
+    {
+      "topic": "mortgage",
+      "label": "30 years, tax and insurance rise 3%",
+      "calculatorId": "mortgage",
+      "mode": "monthly",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "20",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "0",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "3",
+        "insurance_growth": "3",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      },
+      "expected": {
+        "Monthly principal & interest": "1798.651575458257183774383731053427745111128227489264337143957861517969",
+        "Initial monthly total": "2448.651575458257183774383731053427745111128227489264337143957861517969",
+        "Down payment": "75000",
+        "Financed loan amount": "300000",
+        "Initial monthly PMI": "0",
+        "Total interest": "347514.5671649725861587781431792339882400061618961351613718248301464688",
+        "Total taxes and other costs": "349997.7436617252745013455732168049439981730601587998859606027800",
+        "Total out of pocket": "1072512.310826697860660123716396038932238179222054935047332427610146469"
+      },
+      "extra": {
+        "month13total": "2465.151575458257183774383731053427745111128227489264337143957861517969",
+        "month13costs": "666.50"
+      }
+    },
+    {
+      "topic": "matching",
+      "label": "100% of first 3% + 50% of next 2%",
+      "calculatorId": "401k",
+      "mode": "match",
+      "values": {
+        "age": "35",
+        "salary": "80000",
+        "match1": "100",
+        "limit1": "3",
+        "match2": "50",
+        "limit2": "2"
+      },
+      "expected": {
+        "Minimum contribution rate for full match": "5.00",
+        "Maximum steady contribution rate": "30.62500",
+        "Age-based annual employee limit (2026)": "24500",
+        "Annual contribution to maximize match": "4000.00",
+        "Contribution per month": "333.3333333333333333333333333333333333333333333333333333333333333333333",
+        "Employer annual match": "3200.000",
+        "Total annual additions": "7200.000"
+      },
+      "extra": {}
+    },
+    {
+      "topic": "matching",
+      "label": "50% of first 6%",
+      "calculatorId": "401k",
+      "mode": "match",
+      "values": {
+        "age": "35",
+        "salary": "80000",
+        "match1": "50",
+        "limit1": "6",
+        "match2": "0",
+        "limit2": "0"
+      },
+      "expected": {
+        "Minimum contribution rate for full match": "6.00",
+        "Maximum steady contribution rate": "30.62500",
+        "Age-based annual employee limit (2026)": "24500",
+        "Annual contribution to maximize match": "4800.00",
+        "Contribution per month": "400.00",
+        "Employer annual match": "2400.000",
+        "Total annual additions": "7200.000"
+      },
+      "extra": {}
+    },
+    {
+      "topic": "matching",
+      "label": "100% of first 6%",
+      "calculatorId": "401k",
+      "mode": "match",
+      "values": {
+        "age": "35",
+        "salary": "80000",
+        "match1": "100",
+        "limit1": "6",
+        "match2": "0",
+        "limit2": "0"
+      },
+      "expected": {
+        "Minimum contribution rate for full match": "6.00",
+        "Maximum steady contribution rate": "30.62500",
+        "Age-based annual employee limit (2026)": "24500",
+        "Annual contribution to maximize match": "4800.00",
+        "Contribution per month": "400.00",
+        "Employer annual match": "4800.00",
+        "Total annual additions": "9600.00"
+      },
+      "extra": {}
+    },
+    {
+      "topic": "matching",
+      "label": "High salary: 100% of first 10%",
+      "calculatorId": "401k",
+      "mode": "match",
+      "values": {
+        "age": "35",
+        "salary": "400000",
+        "match1": "100",
+        "limit1": "10",
+        "match2": "0",
+        "limit2": "0"
+      },
+      "expected": {
+        "Rate required for full match (unattainable)": "9.00",
+        "Maximum steady contribution rate": "6.12500",
+        "Age-based annual employee limit (2026)": "24500",
+        "Annual contribution at employee limit": "24500",
+        "Contribution per month": "2041.666666666666666666666666666666666666666666666666666666666666666667",
+        "Employer annual match": "24500",
+        "Total annual additions": "49000"
+      },
+      "extra": {}
+    },
+    {
+      "topic": "matching",
+      "label": "50% of first 3%",
+      "calculatorId": "401k",
+      "mode": "match",
+      "values": {
+        "age": "35",
+        "salary": "80000",
+        "match1": "50",
+        "limit1": "3",
+        "match2": "0",
+        "limit2": "0"
+      },
+      "expected": {
+        "Minimum contribution rate for full match": "3.00",
+        "Maximum steady contribution rate": "30.62500",
+        "Age-based annual employee limit (2026)": "24500",
+        "Annual contribution to maximize match": "2400.00",
+        "Contribution per month": "200.00",
+        "Employer annual match": "1200.000",
+        "Total annual additions": "3600.000"
+      },
+      "extra": {}
+    },
+    {
+      "topic": "transfer",
+      "label": "18-month promotion, USD 350 monthly",
+      "calculatorId": "balance-transfer",
+      "mode": "transfer",
+      "values": {
+        "balance": "6000",
+        "payment": "350",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "18",
+        "a_after": "24"
+      },
+      "expected": {
+        "Total borrowing-cost savings from transfer": "1241.23378607738163928117120852878566992379904000",
+        "Transfer fee: offer A": "180",
+        "Interest: offer A": "0",
+        "Borrowing cost: offer A": "180",
+        "Months to repay: offer A": "18",
+        "Balance when offer A promotion ends": "0",
+        "Monthly payment to clear offer A during promotion": "343.3333333333333333333333333333333333333333333333333333333333333333333",
+        "Interest: Original card": "1421.23378607738163928117120852878566992379904000",
+        "Fee: Original card": "0",
+        "Months to repay: Original card": "22",
+        "Unpaid balance after projection: offer A": "0",
+        "Unpaid balance after projection: Original card": "0E-44"
+      },
+      "extra": {
+        "boundary": {
+          "18": [
+            "18",
+            "0",
+            "230",
+            "0",
+            "230",
+            "0"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "transfer",
+      "label": "12-month promotion, financed fee",
+      "calculatorId": "balance-transfer",
+      "mode": "transfer",
+      "values": {
+        "balance": "6000",
+        "payment": "350",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "12",
+        "a_after": "24"
+      },
+      "expected": {
+        "Total borrowing-cost savings from transfer": "1098.83534799420723928117120852878566992379904000",
+        "Transfer fee: offer A": "180",
+        "Interest: offer A": "142.39843808317440",
+        "Borrowing cost: offer A": "322.39843808317440",
+        "Months to repay: offer A": "19",
+        "Balance when offer A promotion ends": "1980",
+        "Monthly payment to clear offer A during promotion": "515",
+        "Interest: Original card": "1421.23378607738163928117120852878566992379904000",
+        "Fee: Original card": "0",
+        "Months to repay: Original card": "22",
+        "Unpaid balance after projection: offer A": "0E-14",
+        "Unpaid balance after projection: Original card": "0E-44"
+      },
+      "extra": {
+        "boundary": {
+          "12": [
+            "12",
+            "0",
+            "2330",
+            "0",
+            "350",
+            "1980"
+          ],
+          "13": [
+            "13",
+            "24.00",
+            "1980",
+            "39.60",
+            "350",
+            "1669.60"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "transfer",
+      "label": "12-month promotion, fee paid separately",
+      "calculatorId": "balance-transfer",
+      "mode": "transfer",
+      "values": {
+        "balance": "6000",
+        "payment": "350",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Paid separately",
+        "a_intro": "0",
+        "a_months": "12",
+        "a_after": "24"
+      },
+      "expected": {
+        "Total borrowing-cost savings from transfer": "1121.98376852218163928117120852878566992379904000",
+        "Transfer fee: offer A": "180",
+        "Interest: offer A": "119.250017555200",
+        "Borrowing cost: offer A": "299.250017555200",
+        "Months to repay: offer A": "18",
+        "Balance when offer A promotion ends": "1800",
+        "Monthly payment to clear offer A during promotion": "500",
+        "Interest: Original card": "1421.23378607738163928117120852878566992379904000",
+        "Fee: Original card": "0",
+        "Months to repay: Original card": "22",
+        "Unpaid balance after projection: offer A": "0E-12",
+        "Unpaid balance after projection: Original card": "0E-44"
+      },
+      "extra": {
+        "boundary": {
+          "12": [
+            "12",
+            "0",
+            "2150",
+            "0",
+            "350",
+            "1800"
+          ],
+          "13": [
+            "13",
+            "24.00",
+            "1800",
+            "36.00",
+            "350",
+            "1486.00"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "transfer",
+      "label": "18-month promotion, USD 250 monthly",
+      "calculatorId": "balance-transfer",
+      "mode": "transfer",
+      "values": {
+        "balance": "6000",
+        "payment": "250",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "18",
+        "a_after": "24"
+      },
+      "expected": {
+        "Total borrowing-cost savings from transfer": "1932.960294301417147853346976028239188787756920704720131590301197271040",
+        "Transfer fee: offer A": "180",
+        "Interest: offer A": "142.6454975554862080",
+        "Borrowing cost: offer A": "322.6454975554862080",
+        "Months to repay: offer A": "26",
+        "Balance when offer A promotion ends": "1680",
+        "Monthly payment to clear offer A during promotion": "343.3333333333333333333333333333333333333333333333333333333333333333333",
+        "Interest: Original card": "2255.605791856903355853346976028239188787756920704720131590301197271040",
+        "Fee: Original card": "0",
+        "Months to repay: Original card": "34",
+        "Unpaid balance after projection: offer A": "0E-16",
+        "Unpaid balance after projection: Original card": "0E-68"
+      },
+      "extra": {
+        "boundary": {
+          "18": [
+            "18",
+            "0",
+            "1930",
+            "0",
+            "250",
+            "1680"
+          ],
+          "19": [
+            "19",
+            "24.00",
+            "1680",
+            "33.60",
+            "250",
+            "1463.60"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "transfer",
+      "label": "Two offers: 3% / 18 months vs 5% / 24 months",
+      "calculatorId": "balance-transfer",
+      "mode": "offers",
+      "values": {
+        "balance": "6000",
+        "payment": "250",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "18",
+        "a_after": "24",
+        "b_fee_rate": "5",
+        "b_fee_min": "5",
+        "b_fee_payment": "Added to balance",
+        "b_intro": "0",
+        "b_months": "24",
+        "b_after": "24"
+      },
+      "expected": {
+        "Total borrowing-cost savings: A vs B": "-15.5254975554862080",
+        "Transfer fee: offer A": "180",
+        "Interest: offer A": "142.6454975554862080",
+        "Borrowing cost: offer A": "322.6454975554862080",
+        "Months to repay: offer A": "26",
+        "Balance when offer A promotion ends": "1680",
+        "Monthly payment to clear offer A during promotion": "343.3333333333333333333333333333333333333333333333333333333333333333333",
+        "Interest: Offer B": "7.1200",
+        "Fee: Offer B": "300",
+        "Months to repay: Offer B": "26",
+        "Unpaid balance after projection: offer A": "0E-16",
+        "Unpaid balance after projection: Offer B": "0.0000"
+      },
+      "extra": {
+        "boundary": {
+          "18": [
+            "18",
+            "0",
+            "1930",
+            "0",
+            "250",
+            "1680"
+          ],
+          "19": [
+            "19",
+            "24.00",
+            "1680",
+            "33.60",
+            "250",
+            "1463.60"
+          ]
+        }
+      }
+    }
+  ]
+}

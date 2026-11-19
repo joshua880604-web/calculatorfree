@@ -24,6 +24,7 @@ import { longTailHref } from '@/lib/long-tail-content';
 import GuideDisclosure from './GuideDisclosure';
 import {compactReadingIds,compactReadingLeadExamples,compactReadingSections} from '@/lib/compact-reading';
 import './compact-reading.css';
+import TransferScenarioReference from './TransferScenarioReference';
 import RepaymentComparison,{hasRepaymentComparison} from './RepaymentComparison';
 export default function CalculatorGuide({
   calculator,
@@ -72,12 +73,12 @@ export default function CalculatorGuide({
             {compact?<GuideDisclosure title="View comparison steps and checks"><ol>{insight.compare.map(step=><li key={step}>{step}</li>)}</ol><h3>Check before comparing</h3><ul>{insight.checks.map(check=><li key={check}>{check}</li>)}</ul></GuideDisclosure>:<><ol>{insight.compare.map(step=><li key={step}>{step}</li>)}</ol><h3>Check before comparing</h3><ul>{insight.checks.map(check=><li key={check}>{check}</li>)}</ul></>}
             <p className="content-date">Result explanations checked <time dateTime={insight.checkedOn}>{insight.checkedOn}</time> against this calculator’s local model. Model scope and sources appear below.</p>
           </>}
-          {calculator.id === "roi" && <RoiReference />}
+          {calculator.id === "roi" && <RoiReference />}{calculator.id==='balance-transfer'&&<TransferScenarioReference/>}
           {calculator.id === "interest-rate" && <InterestRateReference/>}
           {calculator.id === "discount" && <DiscountReference/>}
           {['barista-fire','coast-fire'].includes(calculator.id) && <p>Compare the income and withdrawal assumptions in our <SiteLink href="/guides/barista-fire-vs-coast-fire/">Barista FIRE vs. Coast FIRE guide</SiteLink>.</p>}
           {calculator.id === "house-affordability" && <HouseIncomeReference/>}
-          {["compound-interest","personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && (compact||sections.comparisons?<GuideDisclosure title={loanCostComparisonTitle(calculator.id)}><LoanCostReference id={calculator.id}/></GuideDisclosure>:<LoanCostReference id={calculator.id}/>)}
+          {["mortgage","401k","compound-interest","personal-loan","student-loan","business-loan","break-even","annuity","annuity-payout","pension","social-security","home-equity-loan","debt-consolidation","auto-loan","boat-loan","auto-lease","cash-back-or-low-interest","fha-loan","va-mortgage","savings","simple-interest","budget","rent","future-value","present-value"].includes(calculator.id) && (compact||sections.comparisons?<GuideDisclosure title={loanCostComparisonTitle(calculator.id)}><LoanCostReference id={calculator.id}/></GuideDisclosure>:<LoanCostReference id={calculator.id}/>)}
           {calculator.id==='pmi' && <PmiRateReference/>}{!hasRepaymentComparison(calculator.id)&&<RemainingFinanceReference id={calculator.id}/>}<RepaymentComparison id={calculator.id}/><h2 id="worked-examples">Worked examples</h2>
           {foldExamples?<>{workedExamples?.[0]}{workedExamples&&workedExamples.length>1&&<GuideDisclosure title={'More worked examples ('+(workedExamples.length-1)+')'}>{workedExamples.slice(1)}</GuideDisclosure>}</>:workedExamples}
           {calculator.id === "rmd" && <RmdReference/>}

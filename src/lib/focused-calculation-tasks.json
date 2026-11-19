@@ -175,5 +175,263 @@
         "HYSA calculator"
       ]
     }
+  ],
+  "mortgage": [
+    {
+      "keyword": "Mortgage calculator with taxes and insurance",
+      "mode": "monthly",
+      "description": "Estimate principal and interest alongside property tax, homeowners insurance and other entered ownership costs. These costs can change independently of the loan payment.",
+      "aliases": [
+        "Mortgage calculator with down payment",
+        "Mortgage principal and interest calculator"
+      ],
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "400000",
+        "down": "20",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1500",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Automatic estimate",
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "0",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      }
+    },
+    {
+      "keyword": "Mortgage calculator with loan amount",
+      "mode": "monthly",
+      "description": "Start from a $320,000 loan balance and entered remaining term rather than reverse a purchase price. The $400,000 original property value supports percentage-cost and PMI assumptions; taxes and insurance remain separate.",
+      "values": {
+        "loan_basis": "Loan amount",
+        "loan_amount": "320000",
+        "property_value": "400000",
+        "price": "400000",
+        "down": "20",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1500",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Automatic estimate",
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "0",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      }
+    },
+    {
+      "keyword": "Mortgage calculator with PMI",
+      "mode": "monthly",
+      "description": "Load the hypothetical $375,000 purchase with 10% down and explicitly entered $1,500 annual PMI. Compare principal and interest, PMI and complete monthly housing costs. This is a manual illustration, not a lender PMI quote.",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "10",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "1500",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      }
+    }
+  ],
+  "401k": [
+    {
+      "keyword": "401k growth calculator",
+      "mode": "projection",
+      "description": "Project annual account growth with salary increases, employee contributions and employer matching under the documented annual limits.",
+      "values": {
+        "age": "35",
+        "retire": "67",
+        "life": "90",
+        "salary": "80000",
+        "balance": "100000",
+        "contribution": "10",
+        "match": "50",
+        "match_limit": "6",
+        "salary_growth": "2",
+        "return": "6",
+        "inflation": "2.5"
+      }
+    },
+    {
+      "keyword": "401k contribution calculator",
+      "mode": "projection",
+      "description": "Review a hypothetical 6% employee contribution on $80,000 pay, separately from a 50%-of-first-6% employer match and the existing balance. Projection assumptions are constant planning inputs, not payroll or after-tax estimates.",
+      "values": {
+        "age": "35",
+        "retire": "67",
+        "life": "90",
+        "salary": "80000",
+        "balance": "100000",
+        "contribution": "6",
+        "match": "50",
+        "match_limit": "6",
+        "salary_growth": "2",
+        "return": "6",
+        "inflation": "2.5"
+      }
+    },
+    {
+      "keyword": "401k employer match calculator",
+      "mode": "match",
+      "description": "Explore matching tiers using the Maximize Employer Match form. Eligibility and plan-specific rules must be checked separately.",
+      "aliases": [
+        "401k match calculator"
+      ],
+      "values": {
+        "age": "35",
+        "salary": "80000",
+        "match1": "100",
+        "limit1": "3",
+        "match2": "50",
+        "limit2": "2"
+      }
+    },
+    {
+      "keyword": "401k early withdrawal calculator",
+      "mode": "early",
+      "description": "Estimate the net amount after entered income-tax rates and any modeled 10% early-distribution tax. Selected qualifying exceptions waive the additional tax, not ordinary income tax.",
+      "values": {
+        "withdrawal": "10000",
+        "federal": "22",
+        "state": "5",
+        "local": "0",
+        "employed": "Yes",
+        "separated55": "No",
+        "disabled": "No",
+        "exception": "No"
+      }
+    },
+    {
+      "keyword": "401k contribution tax savings calculator",
+      "mode": "tax-savings",
+      "description": "Estimate the income-tax saving and paycheck effect of traditional and Roth employee deferrals under 2026 limits.",
+      "values": {
+        "age": "35",
+        "salary": "80000",
+        "employee": "8000",
+        "roth_share": "0",
+        "prior_wages": "0",
+        "federal": "22",
+        "state": "0",
+        "paychecks": "26"
+      }
+    }
+  ],
+  "balance-transfer": [
+    {
+      "keyword": "Credit card balance transfer calculator",
+      "mode": "transfer",
+      "description": "Compare transfer fees, promotional APR, remaining balances and total borrowing costs under the same monthly payment.",
+      "values": {
+        "balance": "6000",
+        "payment": "350",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "18",
+        "a_after": "24"
+      }
+    },
+    {
+      "keyword": "Compare balance transfer offers",
+      "mode": "offers",
+      "description": "Compare two transfer offers with the same balance and repayment budget.",
+      "values": {
+        "balance": "6000",
+        "payment": "350",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "18",
+        "a_after": "24",
+        "b_fee_rate": "3",
+        "b_fee_min": "5",
+        "b_fee_payment": "Added to balance",
+        "b_intro": "0",
+        "b_months": "12",
+        "b_after": "24"
+      }
+    }
   ]
 }

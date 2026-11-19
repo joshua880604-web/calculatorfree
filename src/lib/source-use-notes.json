@@ -1800,8 +1800,8 @@
       "note": "Separate account rules and contribution limits from editable planning assumptions. Returns, inflation and example results are not forecasts supplied or endorsed by the cited organizations."
     },
     "calculator:401k": {
-      "note": "Projection, employer-match and Roth comparison modes answer different questions. Roth vs Traditional mode starts from zero prospective employee contributions, assumes qualified Roth withdrawal and flat tax rates, and excludes employer money, existing balances and outside-account investment. The editable annual allowance is not an eligibility determination.",
-      "updatedOn": "2026-11-04",
+      "note": "Projection, employer-match and Roth comparison modes answer different questions. Roth vs Traditional mode starts from zero prospective employee contributions, assumes qualified Roth withdrawal and flat tax rates, and excludes employer money, existing balances and outside-account investment. The editable annual allowance is not an eligibility determination. The 2026 match illustrations distinguish employer match percentages from employee contribution bands, credited match from vesting, and employee limits from eligible-compensation and additions limits. New source context and example arithmetic were checked on 2026-11-19; actual plan eligibility and payroll rules are not inferred.",
+      "updatedOn": "2026-11-19",
       "extras": [
         {
           "title": "Investor.gov: traditional and Roth 401(k) plans",
@@ -1896,13 +1896,14 @@
       ]
     },
     "calculator:mortgage": {
-      "note": "Separate the payment method, PMI ending rules and dated premium illustration. No reference turns an entered or estimated rate into a current lender or insurer quote.",
+      "note": "Separate the payment method, PMI ending rules and dated premium illustration. No reference turns an entered or estimated rate into a current lender or insurer quote. Monthly P&I is separated from entered ownership costs; manual PMI and 3% tax/insurance growth are hypothetical. The new cases retain complete inputs and independently checked arithmetic.",
       "extras": [
         {
           "title": "OpenStax 8.3: loan amortization",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-does-an-hsa-work/": {
       "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
@@ -1918,8 +1919,8 @@
       }
     },
     "guide:/guides/how-401k-matching-works/": {
-      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
-      "updatedOn": "2026-11-03"
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes. The 2026 match illustrations distinguish employer match percentages from employee contribution bands, credited match from vesting, and employee limits from eligible-compensation and additions limits. New source context and example arithmetic were checked on 2026-11-19; actual plan eligibility and payroll rules are not inferred.",
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/how-long-will-retirement-savings-last/": {
       "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
@@ -1935,14 +1936,14 @@
       ]
     },
     "guide:/guides/how-to-calculate-monthly-mortgage-payment/": {
-      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
+      "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes. Monthly P&I is separated from entered ownership costs; manual PMI and 3% tax/insurance growth are hypothetical. The new cases retain complete inputs and independently checked arithmetic.",
       "extras": [
         {
           "title": "OpenStax 8.3: loan amortization",
           "url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization"
         }
       ],
-      "updatedOn": "2026-11-03"
+      "updatedOn": "2026-11-19"
     },
     "guide:/guides/roth-conversion-ladder/": {
       "note": "External references support the stated rules, methods and context. Worked figures are this site’s hypothetical calculations under the assumptions shown, not the sources’ observed outcomes.",
@@ -3328,8 +3329,8 @@
       }
     },
     "guide:/guides/balance-transfer-vs-personal-loan/": {
-      "note": "Original hypothetical examples check stated arithmetic and cash-flow conventions. The linked calculators cover only their disclosed portion of the example; no complete tax-return, accounting, contract or approval review is claimed.",
-      "updatedOn": "2026-11-04",
+      "note": "Original hypothetical examples check stated arithmetic and cash-flow conventions. The linked calculators cover only their disclosed portion of the example; no complete tax-return, accounting, contract or approval review is claimed. The 2026-11-19 controlled comparison follows the fee once, promotional deadlines and post-promo interest under an equal monthly budget. The separately paid fee requires additional initial cash. Card-versus-card rows are distinct from the existing personal-loan examples.",
+      "updatedOn": "2026-11-19",
       "overrides": {
         "https://www.consumerfinance.gov/ask-cfpb/do-personal-installment-loans-have-fees-en-2120/": {
           "role": "rule",
@@ -4744,6 +4745,10 @@
           "scope": "Federal premium background only. This worksheet excludes the disability extension and does not determine individual eligibility, state continuation, tax effects or actual plan charges."
         }
       }
+    },
+    "calculator:balance-transfer": {
+      "note": " The 2026-11-19 controlled comparison follows the fee once, promotional deadlines and post-promo interest under an equal monthly budget. The separately paid fee requires additional initial cash. Card-versus-card rows are distinct from the existing personal-loan examples.",
+      "updatedOn": "2026-11-19"
     }
   }
 }

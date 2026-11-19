@@ -1104,3 +1104,8 @@ guides.savings.questions.push({question:'What changes if my savings deadline is 
 // Keep the detailed, anchored boat answers instead of repeating the same budget/term questions.
 guides['boat-loan'].questions=guides['boat-loan'].questions.filter(q=>!['Is a twenty-year term cheaper than ten years?','What boat price fits a $700 payment?'].includes(q.question));
 guides['boat-loan'].questions.push({question:'How does increasing the boat down payment change cash and interest?',answer:'In the controlled $50,000 purchase example, increasing cash down from $10,000 to $20,000 reduces financed principal from $44,000 to $34,000. Upfront cash increases by $10,000. The payment and loan interest fall under the same assumed rate and term; that does not make the extra down payment free or replace an ownership budget.'});
+
+// Independent content checks; calculator engines and existing example inputs are unchanged.
+import mortgageMatchTransferExamples from './mortgage-match-transfer-examples.json';
+for(const id of ['mortgage','401k','balance-transfer']as const){guides[id].examples.push(...mortgageMatchTransferExamples[id].map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));guides[id].checkedOn='2026-11-19';}
+guides.mortgage.questions.push({question:'Can my housing payment change with a fixed mortgage rate?',answer:'Scheduled principal and interest can remain fixed while property tax, homeowners insurance, HOA or mortgage insurance change. In the controlled comparison, entered 3% annual tax and insurance growth increases month-thirteen housing cost without changing the loan rate or scheduled loan payment. This is not an escrow forecast.'});

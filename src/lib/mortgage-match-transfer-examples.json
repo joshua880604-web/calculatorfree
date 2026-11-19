@@ -1,0 +1,199 @@
+{
+  "mortgage": [
+    {
+      "title": "30 years, 10% down and manual PMI",
+      "mode": "monthly",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "10",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "1500",
+        "pmi_unit": "Dollars",
+        "pmi_years": "11",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "0",
+        "insurance_growth": "0",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      },
+      "inputs": "Home price $375,000; 10% down; 6% interest over thirty years; annual property tax $4,800, homeowners insurance $1,800 and HOA $1,200; manually entered PMI $1,500 annually for eleven years. No extra principal or cost growth.",
+      "steps": [
+        "Down payment is $37,500, leaving $337,500 of principal.",
+        "Apply the monthly fixed-payment formula, then add tax, homeowners insurance, HOA and entered PMI divided by twelve.",
+        "Compare both monthly obligations and the cash down payment against the 20%-down scenario. PMI is a manual hypothetical input."
+      ],
+      "answer": "Initial monthly total: $2,798.48.",
+      "expected": {
+        "label": "Initial monthly total",
+        "value": 2798.483022390539,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "30 years, tax and insurance rise 3%",
+      "mode": "monthly",
+      "values": {
+        "loan_basis": "Home price & down payment",
+        "loan_amount": "320000",
+        "property_value": "",
+        "price": "375000",
+        "down": "20",
+        "down_unit": "Percent",
+        "years": "30",
+        "months": "0",
+        "rate": "6",
+        "start": "2026-10-01",
+        "tax": "4800",
+        "tax_unit": "Dollars",
+        "insurance": "1800",
+        "insurance_unit": "Dollars",
+        "pmi_method": "Manual",
+        "pmi_credit": "740-759",
+        "pmi": "0",
+        "pmi_unit": "Dollars",
+        "pmi_years": "0",
+        "pmi_policy": "Fixed duration",
+        "hoa": "1200",
+        "hoa_unit": "Dollars",
+        "other": "0",
+        "other_unit": "Dollars",
+        "tax_growth": "3",
+        "insurance_growth": "3",
+        "hoa_growth": "0",
+        "other_growth": "0",
+        "extra_monthly": "0",
+        "extra_yearly": "0",
+        "extra_once": "0",
+        "extra_once_month": "1",
+        "extra_start": "1",
+        "extra_yearly_start": "12",
+        "dated": "",
+        "appraised_value": ""
+      },
+      "inputs": "Home price $375,000; 20% down; 6% fixed interest over thirty years. Initial annual tax $4,800 and homeowners insurance $1,800 each rise 3% after each twelve payments; HOA remains $1,200 annually. No PMI or extra principal.",
+      "steps": [
+        "Keep scheduled principal and interest unchanged.",
+        "At month thirteen, multiply the first-year property tax and insurance amounts by 1.03 and add unchanged HOA.",
+        "Read the month-thirteen schedule total separately from the initial monthly result. Loan-year cost growth is not an escrow prediction."
+      ],
+      "answer": "Initial monthly total: $2,448.65.",
+      "expected": {
+        "label": "Initial monthly total",
+        "value": 2448.651575458257,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "401k": [
+    {
+      "title": "50% of first 3%",
+      "mode": "match",
+      "values": {
+        "age": "35",
+        "salary": "80000",
+        "match1": "50",
+        "limit1": "3",
+        "match2": "0",
+        "limit2": "0"
+      },
+      "inputs": "Age 35; annual salary $80,000; employer matches 50% of the first 3% of employee pay contributed. No second match tier; use the fixed 2026 limits and equal-payroll assumptions.",
+      "steps": [
+        "Employee contribution needed for the full stated match is $80,000 × 3% = $2,400.",
+        "Employer matching is $2,400 × 50% = $1,200.",
+        "The employer match is 1.5% of pay. Credited matching does not establish vested ownership or a tax result."
+      ],
+      "answer": "Employer annual match: $1,200.00.",
+      "expected": {
+        "label": "Employer annual match",
+        "value": 1200.0,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "balance-transfer": [
+    {
+      "title": "12-month promotion, financed fee",
+      "mode": "transfer",
+      "values": {
+        "balance": "6000",
+        "payment": "350",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "12",
+        "a_after": "24"
+      },
+      "inputs": "Transfer $6,000. Use a $350 fixed monthly payment, financed 3% transfer fee, 0% APR for twelve months and 24% thereafter; compare with keeping the original balance at 24% APR.",
+      "steps": [
+        "Add each financed fee to its opening balance exactly once.",
+        "Charge monthly APR/12 interest at the applicable promotional or later rate, then subtract the capped monthly payment.",
+        "Compare interest plus the one-time fee under the same monthly budget; review remaining balances at the end of each promotion."
+      ],
+      "answer": "Offer A borrowing cost: $322.40.",
+      "expected": {
+        "label": "Borrowing cost: offer A",
+        "value": 322.3984380831744,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Two offers: 3% / 18 months vs 5% / 24 months",
+      "mode": "offers",
+      "values": {
+        "balance": "6000",
+        "payment": "250",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "18",
+        "a_after": "24",
+        "b_fee_rate": "5",
+        "b_fee_min": "5",
+        "b_fee_payment": "Added to balance",
+        "b_intro": "0",
+        "b_months": "24",
+        "b_after": "24"
+      },
+      "inputs": "Transfer $6,000. Use $250 monthly for both offers. A charges 3%, with 0% APR for eighteen months; B charges 5%, with 0% for twenty-four months. Both later APRs are 24%, and fees are financed.",
+      "steps": [
+        "Add each financed fee to its opening balance exactly once.",
+        "Charge monthly APR/12 interest at the applicable promotional or later rate, then subtract the capped monthly payment.",
+        "Compare interest plus the one-time fee under the same monthly budget; review remaining balances at the end of each promotion."
+      ],
+      "answer": "Offer A borrowing cost: $322.65.",
+      "expected": {
+        "label": "Borrowing cost: offer A",
+        "value": 322.6454975554862,
+        "tolerance": 1e-06
+      }
+    }
+  ]
+}

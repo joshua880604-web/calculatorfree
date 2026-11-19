@@ -4,16 +4,16 @@
       "path": "/guides/how-to-calculate-monthly-mortgage-payment/",
       "title": "How to Calculate Your Monthly Mortgage Payment",
       "heading": "How to Calculate Your Monthly Mortgage Payment",
-      "description": "Calculate mortgage principal and interest, add taxes and insurance, and compare 15- and 30-year examples. Includes the formula, Excel PMT and reproducible inputs.",
+      "description": "Five reproducible cases separate mortgage principal and interest, down payment, entered PMI, changing ownership costs and lifetime loan interest.",
       "publishedOn": "2026-10-31",
       "calculatorIds": [
         "mortgage"
       ],
       "topic": "Mortgages",
       "breadcrumb": "Calculate a monthly mortgage payment",
-      "cardIntro": "Separate loan repayment from tax, insurance and HOA costs, with three checked scenarios and a spreadsheet formula.",
+      "cardIntro": "Five reproducible cases separate mortgage principal and interest, down payment, entered PMI, changing ownership costs and lifetime loan interest.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/mortgage-calculator",
     "calculatorLabel": "Mortgage Calculator",
@@ -74,17 +74,37 @@
           "Extra principal can shorten payoff while leaving the scheduled installment unchanged. Recasting and refinancing are different transactions. If you want to evaluate extras, open the payoff tools rather than subtracting the extra cash from interest manually. Check the loan’s prepayment terms and how the servicer applies an extra payment before acting."
         ],
         "formula": ""
+      },
+      {
+        "id": "down-payment-and-pmi",
+        "title": "Compare cash down payment and an explicitly entered PMI cost",
+        "paragraphs": [
+          "For the same $375,000 purchase, reducing the cash down payment from 20% to 10% lowers down payment from $75,000 to $37,500 and increases principal from $300,000 to $337,500. At the same assumed 6% interest rate for thirty years, principal and interest become $2,023.48.",
+          "This comparison manually enters $1,500 annual PMI for eleven years, not an automatic lender quote. Combined with $4,800 property tax, $1,800 homeowners insurance and $1,200 HOA annually, the initial monthly total is $2,798.48. A smaller down payment preserves more purchase cash while increasing this modeled monthly obligation. Closing costs and other assets or debts are not inferred."
+        ],
+        "formula": ""
+      },
+      {
+        "id": "fixed-rate-changing-costs",
+        "title": "A fixed loan payment does not freeze taxes and insurance",
+        "paragraphs": [
+          "The added cost-growth case keeps the $300,000 loan, thirty-year term and 6% fixed interest rate. Tax and homeowners insurance each rise by an entered 3% after twelve modeled payments; HOA stays at $1,200 annually. Month 13 total rises to $2,465.15, while scheduled principal and interest remain $1,798.65.",
+          "The rate of cost growth is hypothetical. These are loan-year buckets starting from the first payment, not an escrow analysis or tax bill forecast. PMI, interest rate and ownership costs are separate inputs. Use a lender Loan Estimate and actual local tax and insurance information to replace the examples."
+        ],
+        "formula": ""
       }
     ],
     "columns": [
       "Scenario",
+      "Cash down payment",
       "Monthly principal & interest",
-      "Initial monthly outlay",
+      "Month 1 total",
+      "Month 13 total",
       "Total loan interest"
     ],
     "chart": "monthly-mortgage-guide",
-    "chartAlt": "Three scenarios compare initial monthly principal and interest plus 650 dollars of tax, insurance and HOA: 30 years at 6 percent, 15 years at 6 percent and 30 years at zero percent.",
-    "chartCaption": "Same $300,000 financed amount and $650 monthly entered costs. These initial outlays exclude PMI, extras, maintenance and utilities. The full table supplies exact displayed values.",
+    "chartAlt": "Grouped monthly housing outlays at month one and month thirteen for five mortgage scenarios with different terms, down payment, entered PMI and ownership-cost growth.",
+    "chartCaption": "Month 1 and month 13 housing outlays for all five cases. The 10%-down case uses a manual PMI assumption; the tax/insurance growth case changes ownership costs after twelve payments while scheduled loan principal and interest stay fixed.",
     "questions": [
       {
         "question": "How do I calculate a monthly mortgage payment with taxes and insurance?",
@@ -1395,16 +1415,16 @@
       "path": "/guides/how-401k-matching-works/",
       "title": "How Does 401(k) Matching Work? Formulas and Checked Examples",
       "heading": "How Does 401(k) Matching Work? Formulas and Checked Examples",
-      "description": "Calculate two-tier 401(k) matching, distinguish match rate from salary band, and understand contribution limits, payroll timing, true-ups and vesting.",
+      "description": "Five checked 2026 cases distinguish employer match percentages from employee salary bands, contribution limits, payroll timing and vesting.",
       "publishedOn": "2026-11-01",
       "calculatorIds": [
         "401k"
       ],
       "topic": "Retirement",
       "breadcrumb": "How Does 401(k) Matching Work? Formulas and Checked Examples",
-      "cardIntro": "Calculate two-tier 401(k) matching, distinguish match rate from salary band, and understand contribution limits, payroll timing, true-ups and vesting.",
+      "cardIntro": "Five checked 2026 cases distinguish employer match percentages from employee salary bands, contribution limits, payroll timing and vesting.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-19"
     },
     "calculatorPath": "/401k-calculator",
     "calculatorLabel": "401(k) Calculator",
@@ -1456,6 +1476,15 @@
           "Read the summary plan description for match formula, eligible pay, vesting, timing and true-up provisions. For a long-term projection, use the tool’s separate projection mode and review its contribution timing and fixed-year limits. A yearly matching calculation alone says nothing about future investment returns, tax treatment at withdrawal or how long savings will last."
         ],
         "formula": ""
+      },
+      {
+        "id": "match-rate-versus-band",
+        "title": "A 50% match on 3% of pay is not an employer contribution of 3%",
+        "paragraphs": [
+          "At $80,000 annual pay, a 50% match on the first 3% requires $2,400 in employee contributions and produces $1,200 in employer matching contributions. A 50% match on the first 6% requires $4,800 and produces $2,400 from the employer. The employer percentage and the employee salary band multiply; they are not interchangeable.",
+          "The table compares hypothetical plan formulas, not alternative elections that necessarily exist in your plan. The model assumes equal full-year payroll and no annual true-up or prior contributions. Credited employer matching is distinct from vested ownership, available cash, investment growth or after-tax income. Check your actual plan document and payroll rules."
+        ],
+        "formula": "Annual match in a single tier = eligible annual pay × employee contribution band × employer matching percentage"
       }
     ],
     "columns": [
@@ -1465,8 +1494,8 @@
       "Constraint"
     ],
     "chart": "matching-guide",
-    "chartAlt": "Annual employer matching dollars under three hypothetical policies at the same $80,000 salary with sufficient employee contributions.",
-    "chartCaption": "Employee contributions required are $4,000, $4,800 and $4,800 respectively. The separate high-salary case tests a binding employee limit.",
+    "chartAlt": "Employee annual contributions and employer matching under four hypothetical matching policies at eighty thousand dollars annual pay.",
+    "chartCaption": "The chart compares employee contributions and employer matching for the four $80,000-pay examples. The $400,000-pay constrained case remains in the table. These are different hypothetical plan formulas, not guaranteed offers or vested cash.",
     "questions": [
       {
         "question": "What does a 50% 401(k) match up to 6% mean?",

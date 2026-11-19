@@ -130,3 +130,7 @@ Keep one core calculation task per existing URL. Cover matching long-tail needs 
 ## Boat, compound growth and savings review — 2026-11-19
 
 Use complete-input task entries for three existing pages, including shortcut buttons; a daily-growth label must restore Daily rather than merely select the unchanged Growth mode. Preserve other pages' mode navigation. Remove rendered synonym lists only on the three reviewed pages, retaining researched aliases in data. Extend existing comparison tables/guides and preserve prior examples. Distinguish nominal rate from equal yield, upfront cash from loan interest, and fixed deadline from fixed contribution. No new routes, engines or indexing-policy changes. Preview only; production publication pending.
+
+## Mortgage, matching and balance-transfer review — 2026-11-19
+
+Preserve current engines, routes, titles and all prior worked examples. Extend existing mortgage/matching tables and add a separately scoped transfer table to the existing transfer-versus-loan guide. Distinguish down payment from loan/housing costs; employer match percentage from employee salary band; and original-card/offer comparisons from personal loans. Retain full assumptions in ten task entries and fifteen controlled presets. Remove an alias where it is already an explicit task to preserve unique keyword ownership. Keep 2026 rule constants and original publication dates. Preview only; publication pending.

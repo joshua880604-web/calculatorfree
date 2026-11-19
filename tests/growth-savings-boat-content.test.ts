@@ -54,7 +54,7 @@ test('Savings comparisons distinguish a fixed deadline from a fixed monthly budg
 
 test('All nine task links restore every input, the intended mode and the promised frequency',()=>{
  let count=0;
- for(const [id,entries]of Object.entries(tasks)){
+ for(const id of ['compound-interest','boat-loan','savings']as const){const entries=tasks[id];
   assert.deepEqual(searchTasks[id],entries);
   for(const entry of entries){
    const tool=calculators.find(c=>c.id===id)!;const mode=tool.modes.find(m=>m.id===entry.mode)!;

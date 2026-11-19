@@ -1,0 +1,220 @@
+{
+  "heading": "Compare transfer fees, promotional deadlines and repayment budgets",
+  "intro": "These examples transfer the same $6,000 balance. Each row compares offer A with the named other path at the same fixed monthly payment. The two-offer row compares two transfers; it does not compare with a personal loan. Rates and fees are hypothetical.",
+  "columns": [
+    "Scenario",
+    "Monthly budget",
+    "Comparison path",
+    "A balance at promo end",
+    "A interest + fee",
+    "Comparison interest + fee",
+    "Savings from A"
+  ],
+  "rows": [
+    {
+      "label": "18-month promotion, USD 350 monthly",
+      "calculatorId": "balance-transfer",
+      "mode": "transfer",
+      "values": {
+        "balance": "6000",
+        "payment": "350",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "18",
+        "a_after": "24"
+      },
+      "metrics": {
+        "Total borrowing-cost savings from transfer": 1241.2337860773816,
+        "Transfer fee: offer A": 180.0,
+        "Interest: offer A": 0.0,
+        "Borrowing cost: offer A": 180.0,
+        "Months to repay: offer A": 18.0,
+        "Balance when offer A promotion ends": 0.0,
+        "Monthly payment to clear offer A during promotion": 343.3333333333333,
+        "Interest: Original card": 1421.2337860773816,
+        "Fee: Original card": 0.0,
+        "Months to repay: Original card": 22.0,
+        "Unpaid balance after projection: offer A": 0.0,
+        "Unpaid balance after projection: Original card": 0.0
+      },
+      "display": [
+        "$350.00",
+        "Original card",
+        "$0.00",
+        "$180.00",
+        "$1,421.23",
+        "$1,241.23"
+      ]
+    },
+    {
+      "label": "12-month promotion, financed fee",
+      "calculatorId": "balance-transfer",
+      "mode": "transfer",
+      "values": {
+        "balance": "6000",
+        "payment": "350",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "12",
+        "a_after": "24"
+      },
+      "metrics": {
+        "Total borrowing-cost savings from transfer": 1098.8353479942073,
+        "Transfer fee: offer A": 180.0,
+        "Interest: offer A": 142.3984380831744,
+        "Borrowing cost: offer A": 322.3984380831744,
+        "Months to repay: offer A": 19.0,
+        "Balance when offer A promotion ends": 1980.0,
+        "Monthly payment to clear offer A during promotion": 515.0,
+        "Interest: Original card": 1421.2337860773816,
+        "Fee: Original card": 0.0,
+        "Months to repay: Original card": 22.0,
+        "Unpaid balance after projection: offer A": 0.0,
+        "Unpaid balance after projection: Original card": 0.0
+      },
+      "display": [
+        "$350.00",
+        "Original card",
+        "$1,980.00",
+        "$322.40",
+        "$1,421.23",
+        "$1,098.84"
+      ]
+    },
+    {
+      "label": "12-month promotion, fee paid separately",
+      "calculatorId": "balance-transfer",
+      "mode": "transfer",
+      "values": {
+        "balance": "6000",
+        "payment": "350",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Paid separately",
+        "a_intro": "0",
+        "a_months": "12",
+        "a_after": "24"
+      },
+      "metrics": {
+        "Total borrowing-cost savings from transfer": 1121.9837685221817,
+        "Transfer fee: offer A": 180.0,
+        "Interest: offer A": 119.2500175552,
+        "Borrowing cost: offer A": 299.2500175552,
+        "Months to repay: offer A": 18.0,
+        "Balance when offer A promotion ends": 1800.0,
+        "Monthly payment to clear offer A during promotion": 500.0,
+        "Interest: Original card": 1421.2337860773816,
+        "Fee: Original card": 0.0,
+        "Months to repay: Original card": 22.0,
+        "Unpaid balance after projection: offer A": 0.0,
+        "Unpaid balance after projection: Original card": 0.0
+      },
+      "display": [
+        "$350.00",
+        "Original card",
+        "$1,800.00",
+        "$299.25",
+        "$1,421.23",
+        "$1,121.98"
+      ]
+    },
+    {
+      "label": "18-month promotion, USD 250 monthly",
+      "calculatorId": "balance-transfer",
+      "mode": "transfer",
+      "values": {
+        "balance": "6000",
+        "payment": "250",
+        "current_apr": "24",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "18",
+        "a_after": "24"
+      },
+      "metrics": {
+        "Total borrowing-cost savings from transfer": 1932.9602943014172,
+        "Transfer fee: offer A": 180.0,
+        "Interest: offer A": 142.6454975554862,
+        "Borrowing cost: offer A": 322.6454975554862,
+        "Months to repay: offer A": 26.0,
+        "Balance when offer A promotion ends": 1680.0,
+        "Monthly payment to clear offer A during promotion": 343.3333333333333,
+        "Interest: Original card": 2255.6057918569036,
+        "Fee: Original card": 0.0,
+        "Months to repay: Original card": 34.0,
+        "Unpaid balance after projection: offer A": 0.0,
+        "Unpaid balance after projection: Original card": 0.0
+      },
+      "display": [
+        "$250.00",
+        "Original card",
+        "$1,680.00",
+        "$322.65",
+        "$2,255.61",
+        "$1,932.96"
+      ]
+    },
+    {
+      "label": "Two offers: 3% / 18 months vs 5% / 24 months",
+      "calculatorId": "balance-transfer",
+      "mode": "offers",
+      "values": {
+        "balance": "6000",
+        "payment": "250",
+        "a_fee_rate": "3",
+        "a_fee_min": "5",
+        "a_fee_payment": "Added to balance",
+        "a_intro": "0",
+        "a_months": "18",
+        "a_after": "24",
+        "b_fee_rate": "5",
+        "b_fee_min": "5",
+        "b_fee_payment": "Added to balance",
+        "b_intro": "0",
+        "b_months": "24",
+        "b_after": "24"
+      },
+      "metrics": {
+        "Total borrowing-cost savings: A vs B": -15.525497555486208,
+        "Transfer fee: offer A": 180.0,
+        "Interest: offer A": 142.6454975554862,
+        "Borrowing cost: offer A": 322.6454975554862,
+        "Months to repay: offer A": 26.0,
+        "Balance when offer A promotion ends": 1680.0,
+        "Monthly payment to clear offer A during promotion": 343.3333333333333,
+        "Interest: Offer B": 7.12,
+        "Fee: Offer B": 300.0,
+        "Months to repay: Offer B": 26.0,
+        "Unpaid balance after projection: offer A": 0.0,
+        "Unpaid balance after projection: Offer B": 0.0
+      },
+      "display": [
+        "$250.00",
+        "Offer B",
+        "$1,680.00",
+        "$322.65",
+        "$307.12",
+        "-$15.53"
+      ]
+    }
+  ],
+  "notes": [
+    "Offer A has a 3% fee ($180), 0% introductory APR and 24% later APR. Its introductory duration and monthly budget change only where the row says so. The other path is a 24% original card unless the row explicitly compares offer B.",
+    "The two-offer row uses $250 monthly for both paths. Offer B has a 5% fee ($300), 0% APR for 24 months and 24% afterward. A larger fee and longer promotion can trade off differently at a different repayment budget.",
+    "A financed fee is added once to the initial balance. Paying it separately requires $180 at transfer in addition to the monthly budget. The upfront-fee row therefore does not use equal initial cash. Borrowing cost counts the fee once plus modeled interest.",
+    "The subsequent APR starts in the month after the promotional period on the remaining balance. This is not deferred interest charged retroactively. Payments are capped at the final amount owed; fractional cents are retained.",
+    "The payment needed to clear a promotional balance is a payoff-plan amount, not the contractual minimum. This monthly model excludes new purchases, credit-limit eligibility, missed payments, annual fees and issuer-specific daily balance conventions."
+  ],
+  "csvPath": "/data/transfer-scenarios-20261119.csv",
+  "guidePath": "/guides/balance-transfer-vs-personal-loan/",
+  "checkedOn": "2026-11-19"
+}
