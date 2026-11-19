@@ -1,0 +1,492 @@
+{
+  "mutual-fund": {
+    "heading": "Separate sales charges, annual expenses and lost growth",
+    "intro": "Hold $10,000 initially, $100 at each month end, ten years and a hypothetical 5% gross annual return fixed. Change only the charge named in each row. The no-charge balance is a model counterfactual, not an available investment.",
+    "columns": [
+      "Scenario",
+      "No-charge balance",
+      "Net redemption value",
+      "Charges and lost-growth effect"
+    ],
+    "notes": [
+      "The entry charge reduces the starting investment and every new contribution. At 3%, investor deposits are $22,000 over ten years but $660 is withheld as entry charges before investment. The remaining money still faces the modeled annual expense.",
+      "The annual net growth factor is (1 + gross return) × (1 − annual expense). Monthly deposits use its equivalent monthly rate and arrive at month end. This is a simplified growth convention, not the fund’s exact daily expense accrual.",
+      "The 2% exit-charge case deducts 2% of the entire final pre-exit balance. Actual deferred sales charges can use different bases, schedules and exemptions; use the prospectus rather than assuming this convention matches your fund.",
+      "The gap to the no-charge balance includes both deducted charges and foregone growth. It is not a total of cash fees billed to you. The pre-exit schedule and the final redemption metric differ when an exit charge is entered.",
+      "This form uses a gross return before its entered annual operating expense. If your return already includes that expense, use the Investment Fee calculator’s After fund fees basis rather than deducting it twice. These are hypothetical constant returns with no taxes or trading costs."
+    ],
+    "guidePath": "/guides/mutual-fund-fees-and-investment-costs/",
+    "related": [
+      {
+        "href": "/investment-fee-calculator",
+        "label": "Compare expense ratios and advisor fees with a stated return basis"
+      }
+    ],
+    "rows": [
+      {
+        "label": "3% entry load; 1% annual expense",
+        "mode": "projection",
+        "values": {
+          "principal": "10000",
+          "years": "10",
+          "months": "0",
+          "rate": "5",
+          "annual": "0",
+          "monthly": "100",
+          "front": "3",
+          "back": "0",
+          "expense": "1"
+        },
+        "metrics": {
+          "Net redemption value": 28482.893013212484,
+          "Balance without charges": 31725.262397921004,
+          "Effect of fees and lost growth": 3242.3693847085206
+        },
+        "display": [
+          "$31,725.26",
+          "$28,482.89",
+          "$3,242.37"
+        ]
+      },
+      {
+        "label": "Annual expense rises to 2%",
+        "mode": "projection",
+        "values": {
+          "principal": "10000",
+          "years": "10",
+          "months": "0",
+          "rate": "5",
+          "annual": "0",
+          "monthly": "100",
+          "front": "3",
+          "back": "0",
+          "expense": "2"
+        },
+        "metrics": {
+          "Net redemption value": 26368.27997801893,
+          "Balance without charges": 31725.262397921004,
+          "Effect of fees and lost growth": 5356.982419902075
+        },
+        "display": [
+          "$31,725.26",
+          "$26,368.28",
+          "$5,356.98"
+        ]
+      },
+      {
+        "label": "No entry load; 1% annual expense",
+        "mode": "projection",
+        "values": {
+          "principal": "10000",
+          "years": "10",
+          "months": "0",
+          "rate": "5",
+          "annual": "0",
+          "monthly": "100",
+          "front": "0",
+          "back": "0",
+          "expense": "1"
+        },
+        "metrics": {
+          "Net redemption value": 29363.807230115963,
+          "Balance without charges": 31725.262397921004,
+          "Effect of fees and lost growth": 2361.4551678050416
+        },
+        "display": [
+          "$31,725.26",
+          "$29,363.81",
+          "$2,361.46"
+        ]
+      },
+      {
+        "label": "Add a 2% final-balance exit charge",
+        "mode": "projection",
+        "values": {
+          "principal": "10000",
+          "years": "10",
+          "months": "0",
+          "rate": "5",
+          "annual": "0",
+          "monthly": "100",
+          "front": "3",
+          "back": "2",
+          "expense": "1"
+        },
+        "metrics": {
+          "Net redemption value": 27913.235152948237,
+          "Balance without charges": 31725.262397921004,
+          "Effect of fees and lost growth": 3812.02724497277
+        },
+        "display": [
+          "$31,725.26",
+          "$27,913.24",
+          "$3,812.03"
+        ]
+      },
+      {
+        "label": "Same cash flows, no modeled charges",
+        "mode": "projection",
+        "values": {
+          "principal": "10000",
+          "years": "10",
+          "months": "0",
+          "rate": "5",
+          "annual": "0",
+          "monthly": "100",
+          "front": "0",
+          "back": "0",
+          "expense": "0"
+        },
+        "metrics": {
+          "Net redemption value": 31725.262397921004,
+          "Balance without charges": 31725.262397921004,
+          "Effect of fees and lost growth": 0.0
+        },
+        "display": [
+          "$31,725.26",
+          "$31,725.26",
+          "$0.00"
+        ]
+      }
+    ],
+    "checkedOn": "2026-11-19",
+    "csvPath": "/data/reviewed-scenarios/mutual-fund-20261119.csv"
+  },
+  "investment-fee": {
+    "heading": "Distinguish charged fees from the loss of future growth",
+    "intro": "Use $10,000 initially, $1,000 deposited at each year end and twenty years. The first two rows enter an 8% return before fund fees; the next two use an equivalent 7.784% return already after the 0.20% fund fee. These annual contributions differ from the Mutual Fund calculator’s monthly deposit examples.",
+    "columns": [
+      "Scenario",
+      "Entered return basis",
+      "A ending balance",
+      "A model-charged fees",
+      "A reduction from further deductions",
+      "B ending balance"
+    ],
+    "notes": [
+      "Returns apply to opening assets, then the applicable fund fee and a separate advisor fee are charged; the annual deposit arrives afterward. The total fee amount and the ending-balance reduction are different because paid fees also stop earning future growth.",
+      "An 8% pre-fee return with a 0.20% fund charge gives (1.08 × 0.998 − 1) × 100 = 7.784% after that fund charge. The two return-basis pairs therefore end at the same balances before display rounding when all other assumptions match.",
+      "For After fund fees, the fund charge is not deducted again. Model-charged fees exclude fund costs already embedded in the return. Zero further deductions or a zero balance reduction on that row does not mean the investment has no expense ratio or no economic cost.",
+      "The comparison row keeps one 8% pre-fee return and the same deposits for A and B, changing only the fund fee from 0.20% to 0.05%. Identical net-return inputs would already include each fund’s costs and cannot isolate a gross-fee advantage.",
+      "This annual model excludes sales loads, taxes, trading costs and tiered advisor contracts. Use Mutual Fund for its monthly/annual contributions and entry/exit charge assumptions. Do not rank the two tools’ balances without matching their cash-flow and charging conventions."
+    ],
+    "guidePath": "/guides/mutual-fund-fees-and-investment-costs/",
+    "related": [
+      {
+        "href": "/mutual-fund-calculator",
+        "label": "Project entry loads, annual expenses and a final exit charge"
+      }
+    ],
+    "rows": [
+      {
+        "label": "0.20% fund fee; no advisor fee",
+        "mode": "impact",
+        "values": {
+          "balance": "10000",
+          "deposit": "1000",
+          "years": "20",
+          "rate": "8",
+          "basis": "Before fund fees",
+          "fund": "0.2",
+          "advisor": "0"
+        },
+        "metrics": {
+          "Ending balance after modeled fees": 89461.83266586275,
+          "Modeled fees paid": 1650.0200225881747,
+          "Ending balance without modeled fees": 92371.5357366093,
+          "Balance reduction including lost growth": 2909.7030707465524
+        },
+        "display": [
+          "8% before fund fees",
+          "$89,461.83",
+          "$1,650.02",
+          "$2,909.70",
+          "—"
+        ]
+      },
+      {
+        "label": "Add a 1% advisor fee",
+        "mode": "impact",
+        "values": {
+          "balance": "10000",
+          "deposit": "1000",
+          "years": "20",
+          "rate": "8",
+          "basis": "Before fund fees",
+          "fund": "0.2",
+          "advisor": "1"
+        },
+        "metrics": {
+          "Ending balance after modeled fees": 76329.86538792554,
+          "Modeled fees paid": 8938.562908357926,
+          "Ending balance without modeled fees": 92371.5357366093,
+          "Balance reduction including lost growth": 16041.670348683754
+        },
+        "display": [
+          "8% before fund fees",
+          "$76,329.87",
+          "$8,938.56",
+          "$16,041.67",
+          "—"
+        ]
+      },
+      {
+        "label": "Equivalent return already after fund fees",
+        "mode": "impact",
+        "values": {
+          "balance": "10000",
+          "deposit": "1000",
+          "years": "20",
+          "rate": "7.784",
+          "basis": "After fund fees",
+          "fund": "0.2",
+          "advisor": "0"
+        },
+        "metrics": {
+          "Ending balance after modeled fees": 89461.83266586275,
+          "Modeled fees paid": 0.0,
+          "Ending balance without modeled fees": 89461.83266586275,
+          "Balance reduction including lost growth": 0.0
+        },
+        "display": [
+          "7.784% after fund fees",
+          "$89,461.83",
+          "$0.00",
+          "$0.00",
+          "—"
+        ]
+      },
+      {
+        "label": "Net return plus a separate 1% advisor fee",
+        "mode": "impact",
+        "values": {
+          "balance": "10000",
+          "deposit": "1000",
+          "years": "20",
+          "rate": "7.784",
+          "basis": "After fund fees",
+          "fund": "0.2",
+          "advisor": "1"
+        },
+        "metrics": {
+          "Ending balance after modeled fees": 76329.86538792554,
+          "Modeled fees paid": 7446.315344358271,
+          "Ending balance without modeled fees": 89461.83266586275,
+          "Balance reduction including lost growth": 13131.967277937201
+        },
+        "display": [
+          "7.784% after fund fees",
+          "$76,329.87",
+          "$7,446.32",
+          "$13,131.97",
+          "—"
+        ]
+      },
+      {
+        "label": "Compare 0.20% and 0.05% fund fees",
+        "mode": "compare",
+        "values": {
+          "balance": "10000",
+          "deposit": "1000",
+          "years": "20",
+          "rate": "8",
+          "basis": "Before fund fees",
+          "fund": "0.2",
+          "advisor": "0",
+          "fund_b": "0.05",
+          "advisor_b": "0"
+        },
+        "metrics": {
+          "Option A ending balance": 89461.83266586275,
+          "Option B ending balance": 91634.83866509782,
+          "Option B balance advantage": 2173.005999235074,
+          "Option A modeled fees paid": 1650.0200225881747,
+          "Option B modeled fees paid": 418.862482747959
+        },
+        "display": [
+          "8% before fund fees",
+          "$89,461.83",
+          "$1,650.02",
+          "$2,909.70",
+          "$91,634.84"
+        ]
+      }
+    ],
+    "checkedOn": "2026-11-19",
+    "csvPath": "/data/reviewed-scenarios/investment-fee-20261119.csv"
+  },
+  "cd": {
+    "heading": "Compare CD terms without mixing APY and nominal rate",
+    "intro": "These examples use one $10,000 deposit and an assumed constant 4% quote. Match both the term and the rate type. Longer terms earn for longer in this illustration; actual CD offers can have different yields by term.",
+    "columns": [
+      "Scenario",
+      "Rate convention",
+      "Term",
+      "Interest earned",
+      "Before-tax maturity",
+      "After modeled tax"
+    ],
+    "notes": [
+      "For APY, maturity = initial deposit × (1 + APY)^(months / 12). A 14-month term is entered as zero years plus fourteen months; twelve months is not fourteen, and a bank’s exact day-count convention can differ.",
+      "The compounding selector is ignored for an APY quote because APY already includes compounding. A nominal 4% rate compounded monthly instead uses (1 + 0.04/12)^months and therefore differs from 4% APY.",
+      "The 22% tax row applies an entered haircut to positive total interest at maturity. It is not a determination of actual tax liability, annual tax timing or account eligibility. Before-tax interest and after-tax proceeds remain separate.",
+      "The monthly schedule shows accrued interest with earnings left invested, not an automatic monthly cash payout. The model does not support monthly withdrawals or additional monthly deposits on this CD; use Savings for recurring deposits.",
+      "No live bank rates, early-withdrawal penalty, changing rate, renewal or deposit-insurance eligibility is inferred. Consult account terms; use the separate early-withdrawal calculator for a penalty scenario."
+    ],
+    "guidePath": "/guides/apr-vs-apy/",
+    "related": [
+      {
+        "href": "/cd-early-withdrawal-penalty-calculator",
+        "label": "Estimate a separately entered early-withdrawal penalty"
+      },
+      {
+        "href": "/savings-calculator",
+        "label": "Project recurring savings deposits instead of one CD deposit"
+      }
+    ],
+    "rows": [
+      {
+        "label": "6 months at 4% APY",
+        "mode": "accumulation",
+        "values": {
+          "principal": "10000",
+          "rate_type": "APY",
+          "rate": "4",
+          "compound": "Monthly",
+          "years": "0",
+          "months": "6",
+          "tax": "0"
+        },
+        "metrics": {
+          "Maturity balance": 10198.03902718557,
+          "Interest earned": 198.03902718556967,
+          "Tax on interest": 0.0,
+          "After-tax balance": 10198.03902718557,
+          "Effective annual yield (APY)": 4.0,
+          "Selected CD term in months": 6.0
+        },
+        "display": [
+          "4% APY",
+          "6 months",
+          "$198.04",
+          "$10,198.04",
+          "$10,198.04"
+        ]
+      },
+      {
+        "label": "12 months at 4% APY",
+        "mode": "accumulation",
+        "values": {
+          "principal": "10000",
+          "rate_type": "APY",
+          "rate": "4",
+          "compound": "Monthly",
+          "years": "0",
+          "months": "12",
+          "tax": "0"
+        },
+        "metrics": {
+          "Maturity balance": 10400.0,
+          "Interest earned": 400.0,
+          "Tax on interest": 0.0,
+          "After-tax balance": 10400.0,
+          "Effective annual yield (APY)": 4.0,
+          "Selected CD term in months": 12.0
+        },
+        "display": [
+          "4% APY",
+          "12 months",
+          "$400.00",
+          "$10,400.00",
+          "$10,400.00"
+        ]
+      },
+      {
+        "label": "14 months at 4% APY",
+        "mode": "accumulation",
+        "values": {
+          "principal": "10000",
+          "rate_type": "APY",
+          "rate": "4",
+          "compound": "Monthly",
+          "years": "0",
+          "months": "14",
+          "tax": "0"
+        },
+        "metrics": {
+          "Maturity balance": 10468.205248140217,
+          "Interest earned": 468.2052481402165,
+          "Tax on interest": 0.0,
+          "After-tax balance": 10468.205248140217,
+          "Effective annual yield (APY)": 4.0,
+          "Selected CD term in months": 14.0
+        },
+        "display": [
+          "4% APY",
+          "14 months",
+          "$468.21",
+          "$10,468.21",
+          "$10,468.21"
+        ]
+      },
+      {
+        "label": "12 months at 4% nominal, compounded monthly",
+        "mode": "accumulation",
+        "values": {
+          "principal": "10000",
+          "rate_type": "Nominal interest rate",
+          "rate": "4",
+          "compound": "Monthly",
+          "years": "0",
+          "months": "12",
+          "tax": "0"
+        },
+        "metrics": {
+          "Maturity balance": 10407.415429197896,
+          "Interest earned": 407.41542919789634,
+          "Tax on interest": 0.0,
+          "After-tax balance": 10407.415429197896,
+          "Effective annual yield (APY)": 4.074154291978964,
+          "Selected CD term in months": 12.0
+        },
+        "display": [
+          "4% nominal, monthly",
+          "12 months",
+          "$407.42",
+          "$10,407.42",
+          "$10,407.42"
+        ]
+      },
+      {
+        "label": "12 months at 4% APY with 22% modeled tax",
+        "mode": "accumulation",
+        "values": {
+          "principal": "10000",
+          "rate_type": "APY",
+          "rate": "4",
+          "compound": "Monthly",
+          "years": "0",
+          "months": "12",
+          "tax": "22"
+        },
+        "metrics": {
+          "Maturity balance": 10400.0,
+          "Interest earned": 400.0,
+          "Tax on interest": 88.0,
+          "After-tax balance": 10312.0,
+          "Effective annual yield (APY)": 4.0,
+          "Selected CD term in months": 12.0
+        },
+        "display": [
+          "4% APY",
+          "12 months",
+          "$400.00",
+          "$10,400.00",
+          "$10,312.00"
+        ]
+      }
+    ],
+    "checkedOn": "2026-11-19",
+    "csvPath": "/data/reviewed-scenarios/cd-20261119.csv"
+  }
+}

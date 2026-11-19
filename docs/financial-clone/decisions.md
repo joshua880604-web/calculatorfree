@@ -134,3 +134,7 @@ Use complete-input task entries for three existing pages, including shortcut but
 ## Mortgage, matching and balance-transfer review — 2026-11-19
 
 Preserve current engines, routes, titles and all prior worked examples. Extend existing mortgage/matching tables and add a separately scoped transfer table to the existing transfer-versus-loan guide. Distinguish down payment from loan/housing costs; employer match percentage from employee salary band; and original-card/offer comparisons from personal loans. Retain full assumptions in ten task entries and fifteen controlled presets. Remove an alias where it is already an explicit task to preserve unique keyword ownership. Keep 2026 rule constants and original publication dates. Preview only; publication pending.
+
+## Fund fees and CD content review — 2026-11-19
+
+Keep the three existing calculator pages and two existing guides. Use full-input tasks for fund loads, advisor fees and exact CD terms; promote six/twelve/fourteen-month terms to executable presets without duplicate keyword pages. Separate gross/net return basis and charged fees/lost growth. Do not rank the different fund models together. Preserve seven unique prior worked examples and merge one exact CD duplicate. Update only five substantive content dates. Engines, defaults, indexing policy and production remain unchanged; preview publication only.

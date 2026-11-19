@@ -1,0 +1,191 @@
+{
+  "cd": [
+    {
+      "title": "14 months at 4% APY",
+      "mode": "accumulation",
+      "values": {
+        "principal": "10000",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "years": "0",
+        "months": "14",
+        "tax": "0"
+      },
+      "inputs": "Deposit $10,000 for fourteen months at a hypothetical 4% APY. No additional deposits, withdrawals, penalty or modeled tax.",
+      "steps": [
+        "Set Deposit length to zero years and Additional months to fourteen.",
+        "Maturity = 10,000 × 1.04^(14/12). APY already includes compounding.",
+        "Subtract the initial deposit to find interest; the monthly schedule is accrued growth, not a payout."
+      ],
+      "answer": "Interest earned: $468.21.",
+      "expected": {
+        "label": "Interest earned",
+        "value": 468.2052481402165,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "mutual-fund": [
+    {
+      "title": "Annual expense rises to 2%",
+      "mode": "projection",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "annual": "0",
+        "monthly": "100",
+        "front": "3",
+        "back": "0",
+        "expense": "2"
+      },
+      "inputs": "Start with $10,000 and add $100 at each month end for ten years at an assumed 5% gross annual return. Entry load 3%; annual operating expense 2%; final-balance exit charge 0%.",
+      "steps": [
+        "Reduce each contribution by the entered entry-load percentage.",
+        "Apply the monthly equivalent of (1 + gross return) × (1 − annual expense).",
+        "Apply the exit-charge percentage to the final balance only; the gap from the no-charge case includes lost growth."
+      ],
+      "answer": "Net redemption value: $26,368.28.",
+      "expected": {
+        "label": "Net redemption value",
+        "value": 26368.27997801893,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "No entry load; 1% annual expense",
+      "mode": "projection",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "annual": "0",
+        "monthly": "100",
+        "front": "0",
+        "back": "0",
+        "expense": "1"
+      },
+      "inputs": "Start with $10,000 and add $100 at each month end for ten years at an assumed 5% gross annual return. Entry load 0%; annual operating expense 1%; final-balance exit charge 0%.",
+      "steps": [
+        "Reduce each contribution by the entered entry-load percentage.",
+        "Apply the monthly equivalent of (1 + gross return) × (1 − annual expense).",
+        "Apply the exit-charge percentage to the final balance only; the gap from the no-charge case includes lost growth."
+      ],
+      "answer": "Net redemption value: $29,363.81.",
+      "expected": {
+        "label": "Net redemption value",
+        "value": 29363.807230115963,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Add a 2% final-balance exit charge",
+      "mode": "projection",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "annual": "0",
+        "monthly": "100",
+        "front": "3",
+        "back": "2",
+        "expense": "1"
+      },
+      "inputs": "Start with $10,000 and add $100 at each month end for ten years at an assumed 5% gross annual return. Entry load 3%; annual operating expense 1%; final-balance exit charge 2%.",
+      "steps": [
+        "Reduce each contribution by the entered entry-load percentage.",
+        "Apply the monthly equivalent of (1 + gross return) × (1 − annual expense).",
+        "Apply the exit-charge percentage to the final balance only; the gap from the no-charge case includes lost growth."
+      ],
+      "answer": "Net redemption value: $27,913.24.",
+      "expected": {
+        "label": "Net redemption value",
+        "value": 27913.235152948237,
+        "tolerance": 1e-06
+      }
+    }
+  ],
+  "investment-fee": [
+    {
+      "title": "0.20% fund fee; no advisor fee",
+      "mode": "impact",
+      "values": {
+        "balance": "10000",
+        "deposit": "1000",
+        "years": "20",
+        "rate": "8",
+        "basis": "Before fund fees",
+        "fund": "0.2",
+        "advisor": "0"
+      },
+      "inputs": "Start with $10,000 and add $1,000 at each year end for twenty years. Entered return 8%, before fund fees. Fund fee A 0.20%, advisor fee 0%; no sales load or tax is modeled.",
+      "steps": [
+        "Apply the stated return, then only fees not already embedded in that return, before adding the year-end contribution.",
+        "Track actual additional charges separately from the balance reduction that includes their lost growth.",
+        "Hold deposits and return conventions fixed when comparing fee options."
+      ],
+      "answer": "Balance reduction including lost growth: $2,909.70.",
+      "expected": {
+        "label": "Balance reduction including lost growth",
+        "value": 2909.7030707465524,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Equivalent return already after fund fees",
+      "mode": "impact",
+      "values": {
+        "balance": "10000",
+        "deposit": "1000",
+        "years": "20",
+        "rate": "7.784",
+        "basis": "After fund fees",
+        "fund": "0.2",
+        "advisor": "0"
+      },
+      "inputs": "Start with $10,000 and add $1,000 at each year end for twenty years. Entered return 7.784%, after fund fees. Fund fee A 0.20%, advisor fee 0%; no sales load or tax is modeled.",
+      "steps": [
+        "Apply the stated return, then only fees not already embedded in that return, before adding the year-end contribution.",
+        "Track actual additional charges separately from the balance reduction that includes their lost growth.",
+        "Hold deposits and return conventions fixed when comparing fee options."
+      ],
+      "answer": "Ending balance after modeled fees: $89,461.83.",
+      "expected": {
+        "label": "Ending balance after modeled fees",
+        "value": 89461.83266586275,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "title": "Compare 0.20% and 0.05% fund fees",
+      "mode": "compare",
+      "values": {
+        "balance": "10000",
+        "deposit": "1000",
+        "years": "20",
+        "rate": "8",
+        "basis": "Before fund fees",
+        "fund": "0.2",
+        "advisor": "0",
+        "fund_b": "0.05",
+        "advisor_b": "0"
+      },
+      "inputs": "Start with $10,000 and add $1,000 at each year end for twenty years. Entered return 8%, before fund fees. Fund fee A 0.20%, advisor fee 0%; fund fee B 0.05% for the comparison.",
+      "steps": [
+        "Apply the stated return, then only fees not already embedded in that return, before adding the year-end contribution.",
+        "Track actual additional charges separately from the balance reduction that includes their lost growth.",
+        "Hold deposits and return conventions fixed when comparing fee options."
+      ],
+      "answer": "Option B balance advantage: $2,173.01.",
+      "expected": {
+        "label": "Option B balance advantage",
+        "value": 2173.005999235074,
+        "tolerance": 1e-06
+      }
+    }
+  ]
+}

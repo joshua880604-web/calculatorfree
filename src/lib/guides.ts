@@ -1109,3 +1109,13 @@ guides['boat-loan'].questions.push({question:'How does increasing the boat down 
 import mortgageMatchTransferExamples from './mortgage-match-transfer-examples.json';
 for(const id of ['mortgage','401k','balance-transfer']as const){guides[id].examples.push(...mortgageMatchTransferExamples[id].map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));guides[id].checkedOn='2026-11-19';}
 guides.mortgage.questions.push({question:'Can my housing payment change with a fixed mortgage rate?',answer:'Scheduled principal and interest can remain fixed while property tax, homeowners insurance, HOA or mortgage insurance change. In the controlled comparison, entered 3% annual tax and insurance growth increases month-thirteen housing cost without changing the loan rate or scheduled loan payment. This is not an escrow forecast.'});
+
+import fundFeesCdExamples from './fund-fees-cd-examples.json';
+// Merge an identical six-month APY example; retain its existing numeric-input version and presets.
+guides.cd.examples=guides.cd.examples.filter(e=>e.title!=='A six-month CD quoted at 4% APY');
+for(const id of ['mutual-fund','investment-fee','cd']as const){guides[id].examples.push(...fundFeesCdExamples[id].map(example=>({...example,values:Object.fromEntries(Object.entries(example.values).map(([key,value])=>[key,String(value)]))})));guides[id].checkedOn='2026-11-19';}
+
+// Primary sources explain definitions and boundaries, without certifying the model examples.
+guides["mutual-fund"].sources.push({"title": "SEC Investor.gov: mutual fund and ETF sales charges and operating expenses", "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/mutual-fund-fees-and-expenses"});
+guides["investment-fee"].sources.push({"title": "SEC Investor.gov: fees, expenses and their effect on portfolio growth", "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated"});
+guides["cd"].sources.push({"title": "CFPB Regulation DD: APY and interest-rate definitions", "url": "https://www.consumerfinance.gov/rules-policy/regulations/1030/2/"});

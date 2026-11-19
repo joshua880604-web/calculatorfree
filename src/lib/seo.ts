@@ -421,3 +421,5 @@ for(const path of ["/amortization-calculator.html", "/credit-card-minimum-paymen
 for(const path of ['/boat-loan-calculator.html','/compound-interest-calculator.html','/savings-calculator.html','/guides/how-to-calculate-boat-loan-payments/','/guides/compound-interest-with-monthly-contributions/','/guides/how-to-calculate-savings-goal/'])recordWordingUpdate(path,'2026-11-19');
 
 for(const path of ['/mortgage-calculator.html','/401k-calculator.html','/balance-transfer-calculator.html','/guides/how-to-calculate-monthly-mortgage-payment/','/guides/how-401k-matching-works/','/guides/balance-transfer-vs-personal-loan/'])recordWordingUpdate(path,'2026-11-19');
+
+for(const path of ['/mutual-fund-calculator.html','/investment-fee-calculator.html','/cd-calculator.html','/guides/mutual-fund-fees-and-investment-costs/','/guides/apr-vs-apy/'])recordWordingUpdate(path,'2026-11-19');

@@ -433,5 +433,168 @@
         "b_after": "24"
       }
     }
+  ],
+  "cd": [
+    {
+      "keyword": "CD interest calculator with monthly compounding",
+      "mode": "accumulation",
+      "description": "Load a twelve-month illustration using a 4% nominal annual rate compounded monthly. Its schedule shows accrued interest retained in the CD, not cash paid out monthly.",
+      "aliases": [
+        "Monthly CD interest calculator"
+      ],
+      "values": {
+        "principal": "10000",
+        "rate_type": "Nominal interest rate",
+        "rate": "4",
+        "compound": "Monthly",
+        "years": "0",
+        "months": "12",
+        "tax": "0"
+      }
+    },
+    {
+      "keyword": "6 month CD calculator",
+      "mode": "accumulation",
+      "description": "Load one $10,000 deposit for 6 months at an illustrative 4% APY, with zero modeled tax. APY already includes compounding; no current bank quote is retrieved.",
+      "values": {
+        "principal": "10000",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "years": "0",
+        "months": "6",
+        "tax": "0"
+      }
+    },
+    {
+      "keyword": "12 month CD calculator",
+      "mode": "accumulation",
+      "description": "Load one $10,000 deposit for 12 months at an illustrative 4% APY, with zero modeled tax. APY already includes compounding; no current bank quote is retrieved.",
+      "values": {
+        "principal": "10000",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "years": "0",
+        "months": "12",
+        "tax": "0"
+      }
+    },
+    {
+      "keyword": "14 month CD calculator",
+      "mode": "accumulation",
+      "description": "Load one $10,000 deposit for 14 months at an illustrative 4% APY, with zero modeled tax. APY already includes compounding; no current bank quote is retrieved.",
+      "values": {
+        "principal": "10000",
+        "rate_type": "APY",
+        "rate": "4",
+        "compound": "Monthly",
+        "years": "0",
+        "months": "14",
+        "tax": "0"
+      }
+    }
+  ],
+  "mutual-fund": [
+    {
+      "keyword": "Mutual fund calculator with fees",
+      "mode": "projection",
+      "description": "Project monthly contributions after an entry load, annual operating expense and final-balance exit charge. The default example uses a gross return before these charges.",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "annual": "0",
+        "monthly": "100",
+        "front": "3",
+        "back": "0",
+        "expense": "1"
+      }
+    },
+    {
+      "keyword": "Mutual fund calculator without a sales load",
+      "mode": "projection",
+      "description": "Remove the entry sales load while retaining the hypothetical 1% annual operating expense. No sales load does not mean no ongoing expenses.",
+      "values": {
+        "principal": "10000",
+        "years": "10",
+        "months": "0",
+        "rate": "5",
+        "annual": "0",
+        "monthly": "100",
+        "front": "0",
+        "back": "0",
+        "expense": "1"
+      }
+    }
+  ],
+  "investment-fee": [
+    {
+      "keyword": "Expense ratio calculator",
+      "mode": "impact",
+      "description": "Estimate the long-term effect of fund expense ratios and advisor fees using a transparent annual model. Compare amounts paid as fees with the balance reduction that also reflects lost growth, without deducting fund fees twice.",
+      "values": {
+        "balance": "10000",
+        "deposit": "1000",
+        "years": "20",
+        "rate": "8",
+        "basis": "Before fund fees",
+        "fund": "0.2",
+        "advisor": "0"
+      },
+      "aliases": []
+    },
+    {
+      "keyword": "Investment fee calculator",
+      "mode": "impact",
+      "aliases": [
+        "ETF expense ratio calculator",
+        "Investment management fee calculator"
+      ],
+      "description": "Estimate the long-term effect of fund expense ratios and advisor fees using a transparent annual model. Compare amounts paid as fees with the balance reduction that also reflects lost growth, without deducting fund fees twice.",
+      "values": {
+        "balance": "10000",
+        "deposit": "1000",
+        "years": "20",
+        "rate": "8",
+        "basis": "Before fund fees",
+        "fund": "0.2",
+        "advisor": "0"
+      }
+    },
+    {
+      "keyword": "Expense ratio comparison calculator",
+      "mode": "compare",
+      "aliases": [
+        "Fund fee comparison calculator"
+      ],
+      "description": "Estimate the long-term effect of fund expense ratios and advisor fees using a transparent annual model. Compare amounts paid as fees with the balance reduction that also reflects lost growth, without deducting fund fees twice.",
+      "values": {
+        "balance": "10000",
+        "deposit": "1000",
+        "years": "20",
+        "rate": "8",
+        "basis": "Before fund fees",
+        "fund": "0.2",
+        "advisor": "0",
+        "fund_b": "0.05",
+        "advisor_b": "0"
+      }
+    },
+    {
+      "keyword": "Financial advisor fee calculator",
+      "mode": "impact",
+      "description": "Estimate a separate 1% annual advisor charge with no additional fund expense in this example. Match the return basis and your actual contract; tiered and flat fees are not inferred.",
+      "values": {
+        "balance": "10000",
+        "deposit": "1000",
+        "years": "20",
+        "rate": "8",
+        "basis": "Before fund fees",
+        "fund": "0",
+        "advisor": "1"
+      }
+    }
   ]
 }

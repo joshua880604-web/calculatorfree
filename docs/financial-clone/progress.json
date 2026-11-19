@@ -1,100 +1,100 @@
 [
   {
-  "id": "mortgage",
-  "mode": "monthly",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/mortgage.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    "id": "mortgage",
+    "mode": "monthly",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/mortgage.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
-  "id": "mortgage",
-  "mode": "biweekly",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/mortgage.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    "id": "mortgage",
+    "mode": "biweekly",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/mortgage.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
-  "id": "amortization",
-  "mode": "schedule",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/amortization.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "repayment_content": "evidence/repayment-content-verification-20261119.json"
+    "id": "amortization",
+    "mode": "schedule",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/amortization.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "repayment_content": "evidence/repayment-content-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
     "id": "mortgage-payoff",
     "mode": "remaining-extra",
@@ -1496,37 +1496,37 @@
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
-  "id": "compound-interest",
-  "mode": "conversion",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/compound-interest.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    "id": "compound-interest",
+    "mode": "conversion",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/compound-interest.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
     "id": "interest-rate",
     "mode": "rate",
@@ -1559,37 +1559,37 @@
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
-  "id": "savings",
-  "mode": "accumulation",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/savings.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    "id": "savings",
+    "mode": "accumulation",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/savings.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
     "id": "simple-interest",
     "mode": "balance",
@@ -1736,13 +1736,14 @@
       "keyword_implementation": "keyword-implementation.md",
       "strict_policy": "strict-functionality-policy.md",
       "reference_map": "reference-function-map.json",
-      "local_regression": "evidence/strict-functionality-tests.tap"
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/fund-fees-cd-verification-20261119.json"
     },
     "blockers": [
       "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
     ],
     "fully_complete": false,
-    "updated_at": "2026-10-20T07:46:03.664Z",
+    "updated_at": "2026-11-19",
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
@@ -1953,13 +1954,14 @@
       "keyword_implementation": "keyword-implementation.md",
       "strict_policy": "strict-functionality-policy.md",
       "reference_map": "reference-function-map.json",
-      "local_regression": "evidence/strict-functionality-tests.tap"
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/fund-fees-cd-verification-20261119.json"
     },
     "blockers": [
       "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
     ],
     "fully_complete": false,
-    "updated_at": "2026-10-20T07:46:03.664Z",
+    "updated_at": "2026-11-19",
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
@@ -2464,110 +2466,110 @@
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
-  "id": "401k",
-  "mode": "projection",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/401k.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "parity_batch": "retirement-parity-improvements.md",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "targeted_browser": "evidence/browser-retirement-parity-qa.json",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    "id": "401k",
+    "mode": "projection",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/401k.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "parity_batch": "retirement-parity-improvements.md",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "targeted_browser": "evidence/browser-retirement-parity-qa.json",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "local_math": "passed",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "local_math": "passed",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
-  "id": "401k",
-  "mode": "early",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/401k.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "parity_batch": "retirement-parity-improvements.md",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "targeted_browser": "evidence/browser-retirement-parity-qa.json",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    "id": "401k",
+    "mode": "early",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/401k.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "parity_batch": "retirement-parity-improvements.md",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "targeted_browser": "evidence/browser-retirement-parity-qa.json",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "local_math": "passed",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "local_math": "passed",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
-  "id": "401k",
-  "mode": "match",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/401k.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "parity_batch": "retirement-parity-improvements.md",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "targeted_browser": "evidence/browser-retirement-parity-qa.json",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    "id": "401k",
+    "mode": "match",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/401k.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "parity_batch": "retirement-parity-improvements.md",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "targeted_browser": "evidence/browser-retirement-parity-qa.json",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "content_review": "evidence/mortgage-match-transfer-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "local_math": "passed",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "local_math": "passed",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
     "id": "pension",
     "mode": "lump",
@@ -4556,69 +4558,69 @@
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
-  "id": "boat-loan",
-  "mode": "payment",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/boat-loan.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    "id": "boat-loan",
+    "mode": "payment",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/boat-loan.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
-  "id": "boat-loan",
-  "mode": "price",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/boat-loan.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    "id": "boat-loan",
+    "mode": "price",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/boat-loan.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
     "id": "lease",
     "mode": "rate",
@@ -4837,101 +4839,101 @@
     "functional_delivery": "implemented_with_documented_independent_model"
   },
   {
-  "id": "compound-interest",
-  "mode": "growth",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/compound-interest.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    "id": "compound-interest",
+    "mode": "growth",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/compound-interest.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
-  "id": "savings",
-  "mode": "goal-contribution",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/savings.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    "id": "savings",
+    "mode": "goal-contribution",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/savings.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
-  "id": "savings",
-  "mode": "goal-time",
-  "spec": "in_progress",
-  "implementation": "in_progress",
-  "math": "in_progress",
-  "reference_parity": "unverified",
-  "browser": "passed",
-  "visual": "unverified",
-  "local_implementation": "passed",
-  "local_numeric_smoke": "passed",
-  "evidence": {
-    "text_spec": "specs/savings.md",
-    "numeric": "evidence/tests.tap",
-    "browser": "evidence/browser-qa.json",
-    "limitations": "remaining-work.md",
-    "seo_readiness": "seo-geo.md",
-    "ui_performance": "ui-performance.md",
-    "guide_expansion": "content-expansion.md",
-    "keyword_implementation": "keyword-implementation.md",
-    "strict_policy": "strict-functionality-policy.md",
-    "reference_map": "reference-function-map.json",
-    "local_regression": "evidence/strict-functionality-tests.tap",
-    "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    "id": "savings",
+    "mode": "goal-time",
+    "spec": "in_progress",
+    "implementation": "in_progress",
+    "math": "in_progress",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "unverified",
+    "local_implementation": "passed",
+    "local_numeric_smoke": "passed",
+    "evidence": {
+      "text_spec": "specs/savings.md",
+      "numeric": "evidence/tests.tap",
+      "browser": "evidence/browser-qa.json",
+      "limitations": "remaining-work.md",
+      "seo_readiness": "seo-geo.md",
+      "ui_performance": "ui-performance.md",
+      "guide_expansion": "content-expansion.md",
+      "keyword_implementation": "keyword-implementation.md",
+      "strict_policy": "strict-functionality-policy.md",
+      "reference_map": "reference-function-map.json",
+      "local_regression": "evidence/strict-functionality-tests.tap",
+      "content_review": "evidence/growth-savings-boat-verification-20261119.json"
+    },
+    "blockers": [
+      "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
+    ],
+    "fully_complete": false,
+    "updated_at": "2026-11-19",
+    "functional_delivery": "implemented_with_documented_independent_model"
   },
-  "blockers": [
-    "Original DOM values/select choices/form submissions and source viewport screenshots are unavailable in the current research environment."
-  ],
-  "fully_complete": false,
-  "updated_at": "2026-11-19",
-  "functional_delivery": "implemented_with_documented_independent_model"
-},
   {
     "id": "repayment",
     "mode": "extra-payments",
@@ -5529,9 +5531,10 @@
       "spec": "specs/investment-fee.md",
       "tests": "../../tests/evergreen.test.ts",
       "browser": "evidence/browser-evergreen-qa.json",
-      "seo": "evidence/page-intents-qa.json"
+      "seo": "evidence/page-intents-qa.json",
+      "content_review": "evidence/fund-fees-cd-verification-20261119.json"
     },
-    "updated_at": "2026-10-21T08:11:50.216005+00:00",
+    "updated_at": "2026-11-19",
     "local_implementation": "passed",
     "functional_delivery": "independent-model-tested"
   },
@@ -5547,9 +5550,10 @@
       "spec": "specs/investment-fee.md",
       "tests": "../../tests/evergreen.test.ts",
       "browser": "evidence/browser-evergreen-qa.json",
-      "seo": "evidence/page-intents-qa.json"
+      "seo": "evidence/page-intents-qa.json",
+      "content_review": "evidence/fund-fees-cd-verification-20261119.json"
     },
-    "updated_at": "2026-10-21T08:11:50.216006+00:00",
+    "updated_at": "2026-11-19",
     "local_implementation": "passed",
     "functional_delivery": "independent-model-tested"
   },
@@ -5793,17 +5797,268 @@
     ],
     "updated_at": "2026-10-27"
   },
-  {"id": "sortino-ratio", "mode": "statistics", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/sortino-ratio.md", "reference": "evidence/ratio-property-three-reference-20261118.json", "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log", "report": "ratio-property-three-20261118.md", "qa": "evidence/ratio-property-three-verification-20261118.json"}, "blockers": ["Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."], "updated_at": "2026-11-18"},
-  {"id": "sortino-ratio", "mode": "return-series", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/sortino-ratio.md", "reference": "evidence/ratio-property-three-reference-20261118.json", "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log", "report": "ratio-property-three-20261118.md", "qa": "evidence/ratio-property-three-verification-20261118.json"}, "blockers": ["Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."], "updated_at": "2026-11-18"},
-  {"id": "gross-rent-multiplier", "mode": "grm", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/gross-rent-multiplier.md", "reference": "evidence/ratio-property-three-reference-20261118.json", "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log", "report": "ratio-property-three-20261118.md", "qa": "evidence/ratio-property-three-verification-20261118.json"}, "blockers": ["Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."], "updated_at": "2026-11-18"},
-  {"id": "gross-rent-multiplier", "mode": "price", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/gross-rent-multiplier.md", "reference": "evidence/ratio-property-three-reference-20261118.json", "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log", "report": "ratio-property-three-20261118.md", "qa": "evidence/ratio-property-three-verification-20261118.json"}, "blockers": ["Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."], "updated_at": "2026-11-18"},
-  {"id": "gross-rent-multiplier", "mode": "rent", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/gross-rent-multiplier.md", "reference": "evidence/ratio-property-three-reference-20261118.json", "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log", "report": "ratio-property-three-20261118.md", "qa": "evidence/ratio-property-three-verification-20261118.json"}, "blockers": ["Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."], "updated_at": "2026-11-18"},
-  {"id": "debt-to-equity-ratio", "mode": "snapshot", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/debt-to-equity-ratio.md", "reference": "evidence/ratio-property-three-reference-20261118.json", "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log", "report": "ratio-property-three-20261118.md", "qa": "evidence/ratio-property-three-verification-20261118.json"}, "blockers": ["Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."], "updated_at": "2026-11-18"},
-  {"id": "debt-to-equity-ratio", "mode": "changes", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/debt-to-equity-ratio.md", "reference": "evidence/ratio-property-three-reference-20261118.json", "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log", "report": "ratio-property-three-20261118.md", "qa": "evidence/ratio-property-three-verification-20261118.json"}, "blockers": ["Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."], "updated_at": "2026-11-18"},
-  {"id": "sustainable-growth-rate", "mode": "ratios", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/sustainable-growth-rate.md", "reference": "evidence/sgr-reference-20261118.json", "qa": "evidence/sgr-internal-links-verification-20261118.json", "report": "sgr-internal-links-20261118.md"}, "blockers": ["Independent original model; native Safari, remote preview body and production deployment are not yet verified."], "updated_at": "2026-11-18"},
-  {"id": "sustainable-growth-rate", "mode": "financials", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/sustainable-growth-rate.md", "reference": "evidence/sgr-reference-20261118.json", "qa": "evidence/sgr-internal-links-verification-20261118.json", "report": "sgr-internal-links-20261118.md"}, "blockers": ["Independent original model; native Safari, remote preview body and production deployment are not yet verified."], "updated_at": "2026-11-18"},
-  {"id": "sustainable-growth-rate", "mode": "target", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/sustainable-growth-rate.md", "reference": "evidence/sgr-reference-20261118.json", "qa": "evidence/sgr-internal-links-verification-20261118.json", "report": "sgr-internal-links-20261118.md"}, "blockers": ["Independent original model; native Safari, remote preview body and production deployment are not yet verified."], "updated_at": "2026-11-18"},
-  {"id": "cash-advance-fee", "mode": "cost", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/cash-advance-fee.md", "reference": "evidence/cash-cobra-reference-20261118.json", "qa": "evidence/cash-cobra-verification-20261118.json"}, "blockers": ["Native Safari and actual issuer/plan-specific results remain unverified; this is an explicitly scoped original estimate."], "updated_at": "2026-11-18"},
-  {"id": "cobra-cost", "mode": "contributions", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/cobra-cost.md", "reference": "evidence/cash-cobra-reference-20261118.json", "qa": "evidence/cash-cobra-verification-20261118.json"}, "blockers": ["Native Safari and actual issuer/plan-specific results remain unverified; this is an explicitly scoped original estimate."], "updated_at": "2026-11-18"},
-  {"id": "cobra-cost", "mode": "premium", "spec": "passed", "implementation": "passed", "math": "passed", "reference_parity": "not_applicable", "browser": "passed", "visual": "passed", "evidence": {"spec": "specs/cobra-cost.md", "reference": "evidence/cash-cobra-reference-20261118.json", "qa": "evidence/cash-cobra-verification-20261118.json"}, "blockers": ["Native Safari and actual issuer/plan-specific results remain unverified; this is an explicitly scoped original estimate."], "updated_at": "2026-11-18"}
+  {
+    "id": "sortino-ratio",
+    "mode": "statistics",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/sortino-ratio.md",
+      "reference": "evidence/ratio-property-three-reference-20261118.json",
+      "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log",
+      "report": "ratio-property-three-20261118.md",
+      "qa": "evidence/ratio-property-three-verification-20261118.json"
+    },
+    "blockers": [
+      "Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "sortino-ratio",
+    "mode": "return-series",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/sortino-ratio.md",
+      "reference": "evidence/ratio-property-three-reference-20261118.json",
+      "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log",
+      "report": "ratio-property-three-20261118.md",
+      "qa": "evidence/ratio-property-three-verification-20261118.json"
+    },
+    "blockers": [
+      "Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "gross-rent-multiplier",
+    "mode": "grm",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/gross-rent-multiplier.md",
+      "reference": "evidence/ratio-property-three-reference-20261118.json",
+      "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log",
+      "report": "ratio-property-three-20261118.md",
+      "qa": "evidence/ratio-property-three-verification-20261118.json"
+    },
+    "blockers": [
+      "Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "gross-rent-multiplier",
+    "mode": "price",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/gross-rent-multiplier.md",
+      "reference": "evidence/ratio-property-three-reference-20261118.json",
+      "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log",
+      "report": "ratio-property-three-20261118.md",
+      "qa": "evidence/ratio-property-three-verification-20261118.json"
+    },
+    "blockers": [
+      "Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "gross-rent-multiplier",
+    "mode": "rent",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/gross-rent-multiplier.md",
+      "reference": "evidence/ratio-property-three-reference-20261118.json",
+      "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log",
+      "report": "ratio-property-three-20261118.md",
+      "qa": "evidence/ratio-property-three-verification-20261118.json"
+    },
+    "blockers": [
+      "Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "debt-to-equity-ratio",
+    "mode": "snapshot",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/debt-to-equity-ratio.md",
+      "reference": "evidence/ratio-property-three-reference-20261118.json",
+      "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log",
+      "report": "ratio-property-three-20261118.md",
+      "qa": "evidence/ratio-property-three-verification-20261118.json"
+    },
+    "blockers": [
+      "Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "debt-to-equity-ratio",
+    "mode": "changes",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/debt-to-equity-ratio.md",
+      "reference": "evidence/ratio-property-three-reference-20261118.json",
+      "tests": "/workspace/work/ratio-property-three-development-20261118/all-tests.log",
+      "report": "ratio-property-three-20261118.md",
+      "qa": "evidence/ratio-property-three-verification-20261118.json"
+    },
+    "blockers": [
+      "Independent original model; competitor interface parity is not applicable. Native Safari and production deployment have not been verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "sustainable-growth-rate",
+    "mode": "ratios",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/sustainable-growth-rate.md",
+      "reference": "evidence/sgr-reference-20261118.json",
+      "qa": "evidence/sgr-internal-links-verification-20261118.json",
+      "report": "sgr-internal-links-20261118.md"
+    },
+    "blockers": [
+      "Independent original model; native Safari, remote preview body and production deployment are not yet verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "sustainable-growth-rate",
+    "mode": "financials",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/sustainable-growth-rate.md",
+      "reference": "evidence/sgr-reference-20261118.json",
+      "qa": "evidence/sgr-internal-links-verification-20261118.json",
+      "report": "sgr-internal-links-20261118.md"
+    },
+    "blockers": [
+      "Independent original model; native Safari, remote preview body and production deployment are not yet verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "sustainable-growth-rate",
+    "mode": "target",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/sustainable-growth-rate.md",
+      "reference": "evidence/sgr-reference-20261118.json",
+      "qa": "evidence/sgr-internal-links-verification-20261118.json",
+      "report": "sgr-internal-links-20261118.md"
+    },
+    "blockers": [
+      "Independent original model; native Safari, remote preview body and production deployment are not yet verified."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "cash-advance-fee",
+    "mode": "cost",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/cash-advance-fee.md",
+      "reference": "evidence/cash-cobra-reference-20261118.json",
+      "qa": "evidence/cash-cobra-verification-20261118.json"
+    },
+    "blockers": [
+      "Native Safari and actual issuer/plan-specific results remain unverified; this is an explicitly scoped original estimate."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "cobra-cost",
+    "mode": "contributions",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/cobra-cost.md",
+      "reference": "evidence/cash-cobra-reference-20261118.json",
+      "qa": "evidence/cash-cobra-verification-20261118.json"
+    },
+    "blockers": [
+      "Native Safari and actual issuer/plan-specific results remain unverified; this is an explicitly scoped original estimate."
+    ],
+    "updated_at": "2026-11-18"
+  },
+  {
+    "id": "cobra-cost",
+    "mode": "premium",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/cobra-cost.md",
+      "reference": "evidence/cash-cobra-reference-20261118.json",
+      "qa": "evidence/cash-cobra-verification-20261118.json"
+    },
+    "blockers": [
+      "Native Safari and actual issuer/plan-specific results remain unverified; this is an explicitly scoped original estimate."
+    ],
+    "updated_at": "2026-11-18"
+  }
 ]

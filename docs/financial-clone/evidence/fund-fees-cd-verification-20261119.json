@@ -1,0 +1,637 @@
+{
+  "date": "2026-11-19",
+  "status": "validated; remote preview deployment pending; production publication pending",
+  "scope": [
+    "mutual-fund",
+    "investment-fee",
+    "cd"
+  ],
+  "tests": {
+    "passed": 3002,
+    "failed": 0,
+    "log": "/workspace/work/fund-fees-cd-content-20261119/tests.log"
+  },
+  "build": {
+    "passed": true,
+    "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build",
+    "log": "/workspace/work/fund-fees-cd-content-20261119/build.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "log": "/workspace/work/fund-fees-cd-content-20261119/typecheck.log"
+  },
+  "independentMath": {
+    "passed": true,
+    "cases": 15,
+    "numericChecks": 192,
+    "decimalPrecision": 70,
+    "reference": "fund-fees-cd-reference-20261119.json",
+    "command": "python scripts/check-fund-fees-cd-reference.py"
+  },
+  "compatibility": {
+    "passed": true,
+    "existingEntries": 169,
+    "existingModes": 354,
+    "fieldsDefaultsAndResultsUnchanged": true,
+    "originalUniqueWorkedExamplesPreserved": 7,
+    "identicalWorkedExamplesMerged": 1
+  },
+  "browser": {
+    "passed": true,
+    "uniquePages": 5,
+    "checks": [
+      {
+        "kind": "page-topic",
+        "path": "/mutual-fund-calculator",
+        "id": "mutual-fund",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "id": "mutual-fund",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/investment-fee-calculator",
+        "id": "investment-fee",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "id": "investment-fee",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/cd-calculator",
+        "id": "cd",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/apr-vs-apy/",
+        "id": "cd",
+        "width": 320,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/mutual-fund-calculator",
+        "id": "mutual-fund",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "id": "mutual-fund",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/investment-fee-calculator",
+        "id": "investment-fee",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "id": "investment-fee",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/cd-calculator",
+        "id": "cd",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/apr-vs-apy/",
+        "id": "cd",
+        "width": 390,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/mutual-fund-calculator",
+        "id": "mutual-fund",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "id": "mutual-fund",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "mutual-fund",
+        "label": "3% entry load; 1% annual expense",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "mutual-fund",
+        "label": "Annual expense rises to 2%",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "mutual-fund",
+        "label": "No entry load; 1% annual expense",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "mutual-fund",
+        "label": "Add a 2% final-balance exit charge",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "mutual-fund",
+        "label": "Same cash flows, no modeled charges",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "task-link",
+        "id": "mutual-fund",
+        "keyword": "Mutual fund calculator with fees",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-link",
+        "id": "mutual-fund",
+        "keyword": "Mutual fund calculator without a sales load",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "mutual-fund",
+        "keyword": "Mutual fund calculator with fees",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "mutual-fund",
+        "keyword": "Mutual fund calculator without a sales load",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "mutual-fund"
+      },
+      {
+        "kind": "page-topic",
+        "path": "/investment-fee-calculator",
+        "id": "investment-fee",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "id": "investment-fee",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "investment-fee",
+        "label": "0.20% fund fee; no advisor fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "investment-fee",
+        "label": "Add a 1% advisor fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "investment-fee",
+        "label": "Equivalent return already after fund fees",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "investment-fee",
+        "label": "Net return plus a separate 1% advisor fee",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "investment-fee",
+        "label": "Compare 0.20% and 0.05% fund fees",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "task-link",
+        "id": "investment-fee",
+        "keyword": "Expense ratio calculator",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-link",
+        "id": "investment-fee",
+        "keyword": "Investment fee calculator",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-link",
+        "id": "investment-fee",
+        "keyword": "Expense ratio comparison calculator",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-link",
+        "id": "investment-fee",
+        "keyword": "Financial advisor fee calculator",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "investment-fee",
+        "keyword": "Expense ratio calculator",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "investment-fee",
+        "keyword": "Investment fee calculator",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "investment-fee",
+        "keyword": "Expense ratio comparison calculator",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "investment-fee",
+        "keyword": "Financial advisor fee calculator",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "investment-fee"
+      },
+      {
+        "kind": "page-topic",
+        "path": "/cd-calculator",
+        "id": "cd",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/apr-vs-apy/",
+        "id": "cd",
+        "width": 768,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "cd",
+        "label": "6 months at 4% APY",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "cd",
+        "label": "12 months at 4% APY",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "cd",
+        "label": "14 months at 4% APY",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "cd",
+        "label": "12 months at 4% nominal, compounded monthly",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "comparison-preset",
+        "id": "cd",
+        "label": "12 months at 4% APY with 22% modeled tax",
+        "completePresetUrlAndVisibleInputsVerified": true,
+        "metricsMatched": true
+      },
+      {
+        "kind": "task-link",
+        "id": "cd",
+        "keyword": "CD interest calculator with monthly compounding",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-link",
+        "id": "cd",
+        "keyword": "6 month CD calculator",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-link",
+        "id": "cd",
+        "keyword": "12 month CD calculator",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "task-link",
+        "id": "cd",
+        "keyword": "14 month CD calculator",
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "cd",
+        "keyword": "CD interest calculator with monthly compounding",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "cd",
+        "keyword": "6 month CD calculator",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "cd",
+        "keyword": "12 month CD calculator",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "shortcut-button",
+        "id": "cd",
+        "keyword": "14 month CD calculator",
+        "repeatedPresetAfterEdit": true,
+        "completePresetUrlAndVisibleInputsVerified": true
+      },
+      {
+        "kind": "invalid-input-and-reset",
+        "id": "cd"
+      },
+      {
+        "kind": "page-topic",
+        "path": "/mutual-fund-calculator",
+        "id": "mutual-fund",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "id": "mutual-fund",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/investment-fee-calculator",
+        "id": "investment-fee",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "id": "investment-fee",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/cd-calculator",
+        "id": "cd",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "page-topic",
+        "path": "/guides/apr-vs-apy/",
+        "id": "cd",
+        "width": 1440,
+        "cases": 5,
+        "oneH1": true,
+        "noWindowOverflow": true
+      },
+      {
+        "kind": "no-javascript-topic",
+        "id": "mutual-fund",
+        "path": "/mutual-fund-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript-topic",
+        "id": "mutual-fund",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript-topic",
+        "id": "investment-fee",
+        "path": "/investment-fee-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript-topic",
+        "id": "investment-fee",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript-topic",
+        "id": "cd",
+        "path": "/cd-calculator",
+        "readableCases": true
+      },
+      {
+        "kind": "no-javascript-topic",
+        "id": "cd",
+        "path": "/guides/apr-vs-apy/",
+        "readableCases": true
+      }
+    ],
+    "downloads": [
+      {
+        "id": "mutual-fund",
+        "path": "/mutual-fund-calculator",
+        "file": "mutual-fund-20261119.csv"
+      },
+      {
+        "id": "mutual-fund",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "file": "mutual-fund-20261119.csv"
+      },
+      {
+        "id": "investment-fee",
+        "path": "/investment-fee-calculator",
+        "file": "investment-fee-20261119.csv"
+      },
+      {
+        "id": "investment-fee",
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "file": "investment-fee-20261119.csv"
+      },
+      {
+        "id": "cd",
+        "path": "/cd-calculator",
+        "file": "cd-20261119.csv"
+      },
+      {
+        "id": "cd",
+        "path": "/guides/apr-vs-apy/",
+        "file": "cd-20261119.csv"
+      }
+    ],
+    "errors": []
+  },
+  "staticAudit": {
+    "passed": true,
+    "canonicalPages": 469,
+    "brokenFiles": [],
+    "brokenFragments": [],
+    "orphanPages": [],
+    "reviewedPages": [
+      {
+        "path": "/mutual-fund-calculator",
+        "canonical": "https://www.calculatorfree.io/mutual-fund-calculator",
+        "incomingPages": 13,
+        "oneH1": true
+      },
+      {
+        "path": "/investment-fee-calculator",
+        "canonical": "https://www.calculatorfree.io/investment-fee-calculator",
+        "incomingPages": 13,
+        "oneH1": true
+      },
+      {
+        "path": "/cd-calculator",
+        "canonical": "https://www.calculatorfree.io/cd-calculator",
+        "incomingPages": 22,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/mutual-fund-fees-and-investment-costs/",
+        "canonical": "https://www.calculatorfree.io/guides/mutual-fund-fees-and-investment-costs/",
+        "incomingPages": 6,
+        "oneH1": true
+      },
+      {
+        "path": "/guides/apr-vs-apy/",
+        "canonical": "https://www.calculatorfree.io/guides/apr-vs-apy/",
+        "incomingPages": 10,
+        "oneH1": true
+      }
+    ],
+    "newGuideToolLinksReciprocal": true,
+    "previousIndexingPolicyPreserved": true
+  },
+  "visual": {
+    "desktopAndMobileInspected": true,
+    "chartDecodedAndInspected": true,
+    "screenshots": [
+      "/workspace/work/fund-fees-cd-content-20261119/mutual-fund-320.png",
+      "/workspace/work/fund-fees-cd-content-20261119/mutual-fund-1440.png",
+      "/workspace/work/fund-fees-cd-content-20261119/investment-fee-320.png",
+      "/workspace/work/fund-fees-cd-content-20261119/investment-fee-1440.png",
+      "/workspace/work/fund-fees-cd-content-20261119/cd-320.png",
+      "/workspace/work/fund-fees-cd-content-20261119/cd-1440.png",
+      "/workspace/work/fund-fees-cd-content-20261119/fee-chart.png"
+    ]
+  },
+  "limits": [
+    "Native Safari unverified",
+    "External professional review unverified",
+    "Remote HTTP bodies unverified",
+    "No indexing, ranking or AdSense approval guarantee"
+  ]
+}

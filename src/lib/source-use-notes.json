@@ -1757,6 +1757,11 @@
       "role": "background",
       "usedFor": "Explain why changing minimum-only repayment and a fixed monthly payoff target are distinct tasks, under a no-new-purchases assumption.",
       "scope": "General repayment explanation only; the original hypothetical rule and monthly model are not the issuer statement or regulatory disclosure and no source certifies the example outputs."
+    },
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/mutual-fund-fees-and-expenses": {
+      "role": "concept",
+      "usedFor": "Distinguishing fund charges, fee-related lost growth and deposit rate conventions as applicable.",
+      "scope": "Definitions and financial context only; no endorsement, guaranteed product offer, bank-statement parity or independent professional certification."
     }
   },
   "pages": {
@@ -2367,13 +2372,14 @@
       "note": "Sources explain reserve planning and budget categories. Entered income, costs, saving targets and interest are assumptions; the result does not establish that a household’s plan is affordable or sufficient."
     },
     "calculator:investment-fee": {
-      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation.",
+      "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation. The reviewed annual model distinguishes additional charged fees from their balance impact and uses After fund fees to avoid a second expense-ratio deduction. Embedded fund expenses are excluded from the displayed model-charged fee total. SEC sources give context, not a certification of the 2026-11-19 hypothetical arithmetic.",
       "extras": [
         {
           "title": "SEC Investor.gov: fee impact on an investment portfolio",
           "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:savings": {
       "note": "Distinguish the interest, yield, day-count and tax conventions of each comparison. Entered rates are examples, not current product offers; a simplified projection is not an account disclosure or complete tax calculation. The added deadline and fixed-budget cases solve different variables using a constant entered APY. The 2026-11-19 independently checked cases retain complete assumptions; APY is not an offer and the interest-tax input is only a modeled haircut.",
@@ -2407,7 +2413,8 @@
       }
     },
     "calculator:cd": {
-      "note": "Distinguish the interest, yield, day-count and tax conventions of each comparison. Entered rates are examples, not current product offers; a simplified projection is not an account disclosure or complete tax calculation."
+      "note": "Distinguish the interest, yield, day-count and tax conventions of each comparison. Entered rates are examples, not current product offers; a simplified projection is not an account disclosure or complete tax calculation. The 2026-11-19 examples distinguish stated APY from nominal compounding and load exact 6-, 12- and 14-month inputs. Accrued schedule interest is not a payout. The entered tax haircut at maturity and months/12 convention are model assumptions, not bank disclosures or a complete tax calculation.",
+      "updatedOn": "2026-11-19"
     },
     "calculator:mirr": {
       "note": "References identify the growth, return and cost concepts used by this model. The calculations follow the stated timing and input assumptions; references do not forecast future returns or certify this site’s implementation."
@@ -2569,7 +2576,18 @@
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
     },
     "guide:/guides/mutual-fund-fees-and-investment-costs/": {
-      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
+      "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review. Entry load, recurring operating expense and final-balance exit charge have distinct effects. The 2026-11-19 scenarios retain complete inputs and distinguish charge amounts from foregone growth; simplified monthly equivalents and the final charge base are explicit model assumptions. The reviewed annual model distinguishes additional charged fees from their balance impact and uses After fund fees to avoid a second expense-ratio deduction. Embedded fund expenses are excluded from the displayed model-charged fee total. SEC sources give context, not a certification of the 2026-11-19 hypothetical arithmetic.",
+      "updatedOn": "2026-11-19",
+      "extras": [
+        {
+          "title": "SEC Investor.gov: mutual fund and ETF sales charges and operating expenses",
+          "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/mutual-fund-fees-and-expenses"
+        },
+        {
+          "title": "SEC Investor.gov: fees, expenses and their effect on portfolio growth",
+          "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated"
+        }
+      ]
     },
     "guide:/guides/how-to-calculate-monthly-budget/": {
       "note": "Sources support the stated methods, concepts and rule boundaries. Worked scenarios and numerical checks are this site’s illustrations, not observed investment outcomes or an external professional review."
@@ -2904,13 +2922,14 @@
       ]
     },
     "calculator:mutual-fund": {
-      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast.",
+      "note": "References explain the calculation concepts and their limits. The site implements the stated formulas under entered assumptions; publisher documentation is not independent financial certification or a forecast. Entry load, recurring operating expense and final-balance exit charge have distinct effects. The 2026-11-19 scenarios retain complete inputs and distinguish charge amounts from foregone growth; simplified monthly equivalents and the final charge base are explicit model assumptions.",
       "extras": [
         {
           "title": "SEC Investor.gov: expense ratios and fund costs",
           "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio"
         }
-      ]
+      ],
+      "updatedOn": "2026-11-19"
     },
     "calculator:rent-vs-buy": {
       "note": "Separate repayment arithmetic from program rules, complete housing costs and lender eligibility. Entered rates and property values are assumptions; a result is not an approval, appraisal, official disclosure or current quote."
@@ -3179,8 +3198,8 @@
       "updatedOn": "2026-11-03"
     },
     "guide:/guides/apr-vs-apy/": {
-      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
-      "updatedOn": "2026-11-03",
+      "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope. The 2026-11-19 examples distinguish stated APY from nominal compounding and load exact 6-, 12- and 14-month inputs. Accrued schedule interest is not a payout. The entered tax haircut at maturity and months/12 convention are model assumptions, not bank disclosures or a complete tax calculation.",
+      "updatedOn": "2026-11-19",
       "overrides": {
         "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/": {
           "role": "rule",
@@ -3192,7 +3211,13 @@
           "usedFor": "Annualized deposit-yield disclosure context.",
           "scope": "The article’s equal-period example is simplified, not a substitute for the full disclosure rules."
         }
-      }
+      },
+      "extras": [
+        {
+          "title": "CFPB Regulation DD: APY and interest-rate definitions",
+          "url": "https://www.consumerfinance.gov/rules-policy/regulations/1030/2/"
+        }
+      ]
     },
     "guide:/guides/hsa-vs-fsa/": {
       "note": "Original controlled examples illustrate the assumptions stated beside each table. No independent professional review, current product quote or guaranteed outcome is claimed. Calculator presets reproduce only their disclosed model scope.",
