@@ -158,3 +158,8 @@ Preserve the existing three calculators and guides, including every old chart/ta
 ## GSC priority-page corrections — 2026-11-19
 
 Keep the confirmed broad visibility decline separate from unproved causal hypotheses. Fix the selected tax metric, align visible/structured review dates, add complete known-input pricing tasks and an explicit legacy minimum-payment redirect. Preserve routes, calculation modes/defaults, prior comparison work and publication dates. Include the pending housing-comparison work in the consolidated preview. Production publication still follows the existing user-request workflow.
+
+
+## 2026-11-21 — shared editorial metadata and AI-search scope
+
+Use existing editorial dates as one source for Article, sitemap and sharing metadata; distinguish link updates from mathematical checking. The five November 18 wording reviews are historical edits, not new November 21 arithmetic validation. Add the main directory as CollectionPage/ItemList rather than a fake application. Complete explicit legacy aliases without altering canonical routing. Preserve OAI search access, existing training policy and embed noindex. Treat llms.txt as optional curated navigation, not an AI-ranking requirement. Source: seo-geo-audit-20261121.md.

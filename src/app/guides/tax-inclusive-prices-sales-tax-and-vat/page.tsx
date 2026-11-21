@@ -4,5 +4,5 @@ import {guideContentDate} from '@/lib/editorial-guides';
 import {pageMetadata} from '@/lib/seo';
 const guide=practicalGuideList.find(g=>g.path==='/guides/tax-inclusive-prices-sales-tax-and-vat/')!;
 const page=pageMetadata(guide.path,guide.title,guide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:guide.publishedOn,modifiedTime:guideContentDate(guide)}};
+export const metadata=page;
 export default function Page(){return <PracticalGuideArticle slug="tax-inclusive-prices-sales-tax-and-vat"/>;}

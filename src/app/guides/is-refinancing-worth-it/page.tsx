@@ -9,7 +9,7 @@ import {pageMetadata} from '@/lib/seo';
 import {refinanceGuide,editorialSchema,guideContentDate} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(refinanceGuide.path,refinanceGuide.title,refinanceGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:refinanceGuide.publishedOn,modifiedTime:guideContentDate(refinanceGuide)}};
+export const metadata=page;
 export default function RefinanceGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Is refinancing worth it?</span></nav>
  <p className="glossary-category">Mortgages · Comparison guide</p><h1>{refinanceGuide.heading}</h1>

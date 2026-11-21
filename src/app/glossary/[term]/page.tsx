@@ -24,7 +24,7 @@ export default async function TermPage({params}:{params:Promise<{term:string}>})
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(glossarySchema(entry))}}/>
   <p className="glossary-definition">{entry.definition}</p>
   {entry.scope&&<p className="glossary-scope"><strong>Scope:</strong> {entry.scope}</p>}
-  <p className="glossary-aliases">Other names and related labels: {entry.aliases.join('; ')}.</p>
+  {entry.aliases.length>0&&<p className="glossary-aliases">Other names and related labels: {entry.aliases.join('; ')}.</p>}
   <nav className="guide-nav" aria-label="Term sections"><SiteLink href="#example">Example</SiteLink>{entry.sections?.map(s=><SiteLink key={s.id} href={'#'+s.id}>{s.title}</SiteLink>)}<SiteLink href="#misunderstanding">Common misunderstanding</SiteLink>{entry.questions?.length&&<SiteLink href="#questions">Common questions</SiteLink>}{entry.tools.length>0&&<SiteLink href="#calculators">Try a calculator</SiteLink>}<SiteLink href="#sources">Sources</SiteLink></nav>
   <section aria-labelledby="meaning"><h2 id="meaning">How it works</h2><p>{entry.explanation}</p><p className="formula">{entry.formula}</p><p>{entry.formulaNote}</p></section>
   <section className="glossary-example" aria-labelledby="example"><h2 id="example">{entry.example.title}</h2><p>{entry.example.intro}</p><ol>{entry.example.steps.map(step=><li key={step}>{step}</li>)}</ol><p className="glossary-example-answer"><strong>{entry.example.answer}</strong></p><p className="glossary-assumptions">{entry.example.assumptions}</p>

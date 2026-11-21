@@ -7,7 +7,7 @@ import {pageMetadata} from '@/lib/seo';
 import {aprGuide,editorialSchema} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(aprGuide.path,aprGuide.title,aprGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:aprGuide.publishedOn,modifiedTime:aprGuide.updatedOn??aprGuide.publishedOn}};
+export const metadata=page;
 export default function APRGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">APR vs. interest rate</span></nav>
  <p className="glossary-category">Loans &amp; debt · Comparison guide</p><h1>{aprGuide.heading}</h1>

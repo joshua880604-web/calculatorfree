@@ -4,5 +4,5 @@ import {pageMetadata} from '@/lib/seo';
 import {guideContentDate} from '@/lib/editorial-guides';
 const guide=calculationGuideEntries.matching;
 const page=pageMetadata(guide.path,guide.title,guide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:guide.publishedOn,modifiedTime:guideContentDate(guide)}};
+export const metadata=page;
 export default function Page(){return <CalculationGuideArticle topic="matching"/>;}

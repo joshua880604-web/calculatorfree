@@ -12,7 +12,7 @@ import data from '@/lib/coast-fire-guide-data.json';
 import calculationCases from '@/lib/calculation-guide-cases.json';
 import '@/components/decision-guide.css';
 const page=pageMetadata(coastFireGuide.path,coastFireGuide.title,coastFireGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:coastFireGuide.publishedOn,modifiedTime:coastFireGuide.updatedOn??coastFireGuide.publishedOn}};
+export const metadata=page;
 const base={age:35,retire:65,balance:150000,spending:40000,return:7,inflation:2.5,withdrawal:4,monthly:1000};
 const preset=(changes:Record<string,string|number>={})=>calculatorPresetHref('/coast-fire-calculator.html','coast',{...base,...changes});
 const sections=[['formula','Calculate your Coast FIRE number'],['monthly-investing','Find when you could start coasting'],['number-by-age','Compare Coast FIRE numbers by age'],['return-assumptions','Test the return assumption'],['retirement-age','Change the target retirement age'],['couples','Plan as a couple'],['benefits','Pension and Social Security worksheet'],['action-plan','Build an actionable saving plan'],['coast-vs-barista','Coast FIRE vs. FIRE vs. Barista FIRE'],['before-downshifting','Review before changing work or saving'],['questions','Common planning questions'],['sources','Sources and calculation checks']];

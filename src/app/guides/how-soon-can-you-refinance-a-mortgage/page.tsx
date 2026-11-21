@@ -3,7 +3,7 @@ import SiteLink from '@/components/SiteLink';
 import {refinanceTimingGuide as guide} from '@/lib/question-guides';
 import {pageMetadata} from '@/lib/seo';
 const meta=pageMetadata(guide.path,guide.title,guide.description);
-export const metadata={...meta,openGraph:{...meta.openGraph,type:'article' as const,publishedTime:guide.publishedOn,modifiedTime:guide.publishedOn}};
+export const metadata=meta;
 const sources=[
  {title:'Fannie Mae: limited cash-out refinance requirements',url:'https://selling-guide.fanniemae.com/sel/b2-1.3-02/limited-cash-out-refinance-transactions'},
  {title:'Fannie Mae: cash-out refinance seasoning and exceptions',url:'https://guide-selling.fanniemae.com/sel/b2-1.3-03/cash-out-refinance-transactions'},

@@ -1,119 +1,218 @@
-"""Validate generated HTML without relying on client-side rendering."""
-from pathlib import Path
+"""Check every maintained HTML route in an export, independently of client JavaScript.
+
+Usage: python scripts/check-seo-build.py https://www.calculatorfree.io
+Omit the origin for an intentionally noindex preview export. This checks static
+artifacts, not CDN responses, Google indexing, rich-result eligibility or ranking.
+"""
+from collections import Counter, defaultdict, deque
 from html.parser import HTMLParser
-import json,sys,re
+from pathlib import Path
+from urllib.parse import urljoin, urlsplit, unquote
+import json, re, subprocess, sys
 import xml.etree.ElementTree as ET
-root=Path(__file__).resolve().parents[1]
-origin=sys.argv[1].rstrip('/') if len(sys.argv)>1 else None
-if origin=='https://calculatorfree.io':origin='https://www.calculatorfree.io'
-def canonical(route):
- return origin+(route[:-5] if origin=='https://www.calculatorfree.io' and route.endswith('.html') else route)
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'out'
+origin = sys.argv[1].rstrip('/') if len(sys.argv) > 1 else None
+if origin == 'https://calculatorfree.io':
+    origin = 'https://www.calculatorfree.io'
+public_origin = 'https://www.calculatorfree.io'
+# Use the maintained registry, including later guides, glossary terms and pages.
+# A hardcoded historical list silently omitted new pages from this check.
+registry = json.loads(subprocess.check_output([
+    'node', '--import', 'tsx', '--input-type=module', '-e',
+    'import {sitemapEntries} from "./src/lib/seo.ts";'
+    'import {editorialGuides,guideContentDate} from "./src/lib/editorial-guides.ts";'
+    'console.log(JSON.stringify({pages:sitemapEntries({origin:"https://www.calculatorfree.io",indexable:true}),'
+    'guides:editorialGuides.map(g=>({path:g.path,published:g.publishedOn,modified:guideContentDate(g)}))}));'
+], cwd=ROOT, text=True))
+expected = {urlsplit(p['url']).path: p.get('lastModified') for p in registry['pages']}
+guides = {g['path']: g for g in registry['guides']}
+assert len(expected) == len(registry['pages']), 'Duplicate route in maintained registry'
+
 class Page(HTMLParser):
- def __init__(self):super().__init__();self.metas={};self.canon=[];self.h1s=[];self.in_h1=False;self.in_schema=False;self.schema_text='';self.schemas=[];self.text=[]
- def handle_starttag(self,tag,attrs):
-  a=dict(attrs)
-  if tag=='meta':self.metas[a.get('name',a.get('property',''))]=a.get('content','')
-  if tag=='link' and a.get('rel')=='canonical':self.canon.append(a.get('href'))
-  if tag=='h1':self.in_h1=True;self.h1s.append('')
-  if tag=='script' and a.get('type')=='application/ld+json':self.in_schema=True;self.schema_text=''
- def handle_endtag(self,tag):
-  if tag=='h1':self.in_h1=False
-  if tag=='script' and self.in_schema:self.schemas.append(json.loads(self.schema_text));self.in_schema=False
- def handle_data(self,data):
-  if self.in_h1:self.h1s[-1]+=data
-  if self.in_schema:self.schema_text+=data
-  self.text.append(data)
-catalog=json.loads((root/'src/lib/catalog-data.json').read_text())
-terms=json.loads((root/'src/lib/glossary-data.json').read_text())
-paths=[x['local_route'] for x in catalog]+['/loan-calculators.html','/savings-investment-calculators.html','/financial-calculator.html','/about.html','/privacy.html','/methodology.html','/glossary/']+['/glossary/'+term['slug']+'/' for term in terms]
-paths+=['/guides/how-to-calculate-coast-fire/','/guides/margin-vs-markup/','/guides/should-i-pay-off-debt-or-save/','/guides/apr-vs-interest-rate/','/guides/is-refinancing-worth-it/','/guides/roth-ira-vs-traditional-ira/','/guides/how-much-emergency-fund-should-i-have/','/guides/rent-vs-buy-a-house/','/guides/are-mortgage-points-worth-it/','/guides/pay-off-car-loan-early/','/guides/biweekly-vs-monthly-mortgage-payments/','/guides/cd-vs-savings-account/','/guides/','/guides/mortgage-recast-vs-refinance/','/guides/debt-snowball-vs-avalanche/']
-new_categories=['/retirement-calculators.html','/tax-income-calculators.html','/business-calculators.html','/everyday-calculators.html']
-paths+=new_categories
-checks=[]
-for route in paths:
- file=root/'out'/route[1:]
- if route.endswith('/'):file=file/'index.html'
- elif route in new_categories:file=file.with_suffix('.html')
- p=Page();p.feed(file.read_text())
- assert len(p.h1s)==1,(route,p.h1s)
- assert p.metas.get('description'),route
- assert ('noindex' not in p.metas.get('robots','')) if origin else ('noindex' in p.metas.get('robots',''))
- assert p.canon==([canonical(route)] if origin else []),(route,p.canon)
- if route in new_categories:
-  graph=p.schemas[0]['@graph'];assert graph[0]['@type']=='CollectionPage'
-  assert any(x['@type']=='ItemList' for x in graph)
-  assert any(x['@type']=='BreadcrumbList' for x in graph)
- if route=='/methodology.html':assert p.h1s==['Calculation methodology and sources']
- entry=next((x for x in catalog if x['local_route']==route),None)
- if entry and entry['id']!='real-estate':
-  assert len(p.schemas)==1,route
-  for heading in ['Understanding this calculation','Worked examples','Common questions','Scope and assumptions','Sources']:
-   assert heading in ''.join(p.text),(route,heading)
-  graph=p.schemas[0]['@graph'];assert graph[0]['name']==entry['title']
-  app=graph[0];assert app['offers']['price']=='0' and app['offers']['priceCurrency']=='USD'
-  assert 'aggregateRating' not in app and 'review' not in app
-  if origin:assert app['url']==canonical(route) and app['offers']['url']==canonical(route)
-  if origin:assert any(x['@type']=='BreadcrumbList' for x in graph)
- if route=='/vat-calculator.html':
-  assert 'Remove 20% VAT from a gross price of 120' in ''.join(p.text)
-  assert 'GOV.UK: VAT rates' in ''.join(p.text)
- if route.startswith('/glossary/'):
-  assert len(p.schemas)==1,route
-  kind='DefinedTermSet' if route=='/glossary/' else 'DefinedTerm'
-  assert p.schemas[0]['@graph'][0]['@type']==kind,route
-  if origin:assert any(x['@type']=='BreadcrumbList' for x in p.schemas[0]['@graph'])
-  term=next((x for x in terms if route=='/glossary/'+x['slug']+'/'),None)
-  if term:
-   assert term['definition'] in ''.join(p.text),route
-   assert term['example']['answer'] in ''.join(p.text),route
- if route.startswith('/guides/'):
-  assert len(p.schemas)==1,route
-  graph=p.schemas[0]['@graph'];assert graph[0]['@type']==('CollectionPage' if route=='/guides/' else 'Article')
-  if route!='/guides/':
-   assert graph[0]['headline']==p.h1s[0]
-   if 'mortgage-recast' in route:expected=['$1,610.75','$153,213.95','$1,753.77','27.9 months','not an equal-cash ranking']
-   elif 'cd-vs-savings' in route:expected=['$10,450.00','$10,425.00','$10,374.73','$10,499.88','$10,122.52','$87.76','50-digit Decimal','not current bank offers','does not model early closure or penalties']
-   elif 'are-mortgage-points-worth-it' in route:expected=['40.44 months','month 32','-$439.14','$955.14','$516.00','-$484.00','4,680','50-digit Decimal','not current rates']
-   elif 'how-to-calculate-coast-fire' in route:expected=['$275,551.41','$179,309.59','$650,730.07','$485,329.83','$158,096.05','$314,915.89','168 months','60-digit Decimal','Barista FIRE','no-further-deposits']
-   elif 'margin-vs-markup' in route:expected=['$142.8571','23.0769%','25.9259%','50-digit Decimal','not a complete net-profit']
-   elif 'should-i-pay-off-debt' in route:expected=['$3,254.63','$1,739.24','$1,204.64','50-digit Decimal','not a complete simulation']
-   elif 'apr-vs-interest-rate' in route:expected=['9.175%','$4,761.44','$4,331.67','not a replacement','50-digit Decimal']
-   elif 'is-refinancing-worth-it' in route:expected=['27.27 months','$318,212.12','$9,873.45','$8,567.62','50-digit Decimal']
-   elif 'roth-ira-vs-traditional' in route:expected=['$369,992.31','$417,427.22','$322,557.40','$7,500','50-digit Decimal']
-   elif 'how-much-emergency-fund' in route:expected=['$19,200.00','$13,200.00','1.875 months','50-digit Decimal','30th','not a personalized recommendation']
-   elif 'rent-vs-buy-a-house' in route:expected=['$89,600','$14,576.51','$4,280.33','$36,426.94','50-digit Decimal','240 yearly rows','not a declining-price test']
-   elif 'pay-off-car-loan' in route:expected=['$701.94','$2,370.33','$137.70','50-digit Decimal','daily-interest','precomputed']
-   elif 'biweekly-vs-monthly' in route:expected=['$74,436.02','$770.66','$73,665.36','638 periods','50-digit Decimal','not a daily-interest']
-   else:expected=['$1,792.13','$2,204.57','$412.44','Month 6','Month 22','50-digit decimal']
-   for text in expected:
-    assert text in ''.join(p.text),(route,text)
-   expected_date='2026-10-28' if route in ['/guides/how-to-calculate-coast-fire/','/guides/margin-vs-markup/','/guides/should-i-pay-off-debt-or-save/','/guides/apr-vs-interest-rate/','/guides/is-refinancing-worth-it/','/guides/roth-ira-vs-traditional-ira/','/guides/how-much-emergency-fund-should-i-have/','/guides/rent-vs-buy-a-house/'] else '2026-10-27'
-   assert graph[0]['datePublished']==expected_date
-   assert graph[0]['dateModified']=='2026-10-28'
-   updates={'mortgage-recast-vs-refinance': ['How much does a mortgage recast cost, and is there a minimum payment?', 'How many times can you recast a mortgage?', 'Can you recast an FHA or VA loan?'], 'debt-snowball-vs-avalanche': ['How do I start the debt snowball method?', 'Is snowball or avalanche better?', 'What if I can only afford the minimum payments?'], 'cd-vs-savings-account': ['Can you add money to a CD each month?', 'What happens when a CD matures?', 'Are CDs safer than savings accounts?'], 'pay-off-car-loan-early': ['Can you pay off a car loan early without a penalty?', 'How do I make an extra payment toward car-loan principal?', 'What happens after I pay off my car?'], 'biweekly-vs-monthly-mortgage-payments': ['Does paying a mortgage twice a month save the same amount?', 'How do I set up biweekly mortgage payments?', 'Do I need to pay for a biweekly mortgage service?'], 'are-mortgage-points-worth-it': ['How do you calculate the dollar cost of mortgage points?', 'How many mortgage points can I buy?', 'Can points be part of a mortgage refinance?'], 'how-much-emergency-fund-should-i-have': ['How do I build an emergency fund from scratch?', 'Is $10,000 enough for an emergency fund?', 'Where should I keep my emergency fund?'], 'rent-vs-buy-a-house': ['Is it cheaper to rent or buy a house?', 'Should I buy if the mortgage payment is lower than my rent?', 'When is buying a house better than renting?']}
-   for question in updates.get(route.strip('/').split('/')[-1],[]):assert question in ''.join(p.text),(route,question)
- checks.append({'route':route,'canonical':p.canon,'h1':p.h1s[0]})
-sitemap=(root/'out/sitemap.xml').read_text()
-robots=(root/'out/robots.txt').read_text()
-assert 'User-Agent: *' in robots and 'Allow: /' in robots
-namespace={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
-locations=[node.text for node in ET.fromstring(sitemap).findall('s:url/s:loc',namespace)]
+    voids = {'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
+    def __init__(self, source):
+        super().__init__(convert_charrefs=True)
+        self.source = source
+        self.stack = []
+        self.metas = defaultdict(list)
+        self.canonical, self.ids, self.times, self.links, self.schemas = [], set(), [], [], []
+        self.titles, self.h1s = [], []
+        self.schema = None
+        self.feed(source)
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == 'meta':
+            self.metas[a.get('name', a.get('property', ''))].append(a.get('content', ''))
+        if tag == 'link' and a.get('rel') == 'canonical':
+            self.canonical.append(a.get('href'))
+        if a.get('id'):
+            self.ids.add(a['id'])
+        if tag == 'time' and a.get('datetime'):
+            self.times.append(a['datetime'])
+        if tag == 'a' and a.get('href'):
+            self.links.append((a['href'], not any(t in self.stack for t in ('nav','header','footer'))))
+        if tag == 'title' and 'head' in self.stack:
+            self.titles.append('')
+        if tag == 'h1':
+            self.h1s.append('')
+        if tag == 'script' and a.get('type') == 'application/ld+json':
+            self.schema = ''
+        if tag not in self.voids:
+            self.stack.append(tag)
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        if tag not in self.voids:
+            self.handle_endtag(tag)
+    def handle_endtag(self, tag):
+        if tag == 'script' and self.schema is not None:
+            self.schemas.append(json.loads(self.schema))
+            self.schema = None
+        if tag in self.stack:
+            reverse_index = self.stack[::-1].index(tag)
+            del self.stack[len(self.stack)-reverse_index-1:]
+    def handle_data(self, data):
+        if self.schema is not None:
+            self.schema += data
+        if 'head' in self.stack and self.stack[-1:] == ['title']:
+            self.titles[-1] += data
+        if 'h1' in self.stack:
+            self.h1s[-1] += data
+
+def file_for(path):
+    p = OUT / path.lstrip('/')
+    candidates = [p / 'index.html'] if path.endswith('/') else [p, p.with_suffix('.html'), p / 'index.html']
+    return next((candidate for candidate in candidates if candidate.is_file()), None)
+
+def schema_nodes(value):
+    if isinstance(value, dict):
+        yield value
+        for v in value.values():
+            yield from schema_nodes(v)
+    elif isinstance(value, list):
+        for v in value:
+            yield from schema_nodes(v)
+
+pages = {}
+for path, lastmod in expected.items():
+    f = file_for(path)
+    assert f, ('Missing route', path)
+    p = pages[path] = Page(f.read_text())
+    assert len(p.titles) == 1 and p.titles[0].strip(), ('HTML head title', path, p.titles)
+    assert len(p.h1s) == 1 and p.h1s[0].strip(), ('H1', path, p.h1s)
+    assert len(p.metas['description']) == 1 and p.metas['description'][0], ('Description', path)
+    assert p.canonical == ([origin+path] if origin else []), ('Canonical', path, p.canonical)
+    assert ('noindex' not in ','.join(p.metas['robots'])) if origin else ('noindex' in ','.join(p.metas['robots']))
+    if path not in ('/privacy','/disclaimer'):
+        assert p.schemas, ('Missing JSON-LD', path)
+    if path in guides:
+        guide = guides[path]
+        articles = [n for schema in p.schemas for n in schema_nodes(schema)
+                    if n.get('@type') == 'Article' and 'datePublished' in n]
+        assert len(articles) == 1, ('Article entity', path)
+        article = articles[0]
+        assert article['datePublished'] == guide['published'], ('Publication date', path)
+        assert article['dateModified'] == guide['modified'] == lastmod, ('Article/sitemap date', path)
+        assert p.metas['og:type'] == ['article'], ('Open Graph article type', path)
+        assert p.metas['article:published_time'] == [guide['published']], ('OG publication date', path)
+        assert p.metas['article:modified_time'] == [guide['modified']], ('OG update date', path)
+        assert guide['modified'] in p.times, ('Content/link update date must be visible', path)
+    for schema in p.schemas:
+        for node in schema_nodes(schema):
+            if node.get('@type') == 'WebApplication':
+                assert node.get('offers', {}).get('price') == '0', ('Free tool offer', path)
+                assert 'aggregateRating' not in node and 'review' not in node, ('No invented review', path)
+                if origin:
+                    assert node.get('url') == origin+path, ('App URL', path)
+                    assert node['offers'].get('url') == origin+path, ('Offer URL', path)
+            if node.get('@type') == 'WebPageElement' and str(node.get('@id','')).startswith((origin or public_origin)+path+'#'):
+                assert node['@id'].split('#',1)[1] in p.ids, ('Schema section must be visible', path, node['@id'])
+# Directory entities must describe the actual visible tool destinations.
+directory = pages['/financial-calculator']
+directory_nodes = [n for schema in directory.schemas for n in schema_nodes(schema)]
+assert any(n.get('@type') == 'CollectionPage' for n in directory_nodes)
+item_lists = [n for n in directory_nodes if n.get('@type') == 'ItemList']
+assert len(item_lists) == 1
+items = item_lists[0]['itemListElement']
+tool_paths = {tool['local_route'][:-5] for tool in json.loads((ROOT/'src/lib/catalog-data.json').read_text()) if tool['id'] != 'real-estate'}
+assert item_lists[0]['numberOfItems'] == len(items) == len(tool_paths)
 if origin:
- assert len(locations)==len(set(locations))==len(checks)
- assert set(locations)=={canonical(route) for route in paths}
- assert all('?' not in url and '#' not in url for url in locations)
- assert origin+'/sitemap.xml' in robots
-else:assert not locations and 'Sitemap:' not in robots
-llms=(root/'out/llms.txt').read_text()
-assert llms==(root/'public/llms.txt').read_text()
-llms_links=re.findall(r'^- \[[^]]+\]\(([^)]+)\)',llms,re.M)
-assert llms.startswith('# CalculatorFree.io\n') and len(llms_links)==len(set(llms_links))
-# The curated guide uses the established public origin even for noindex previews.
-canonical_origin='https://www.calculatorfree.io'
-assert all(url.startswith(canonical_origin+'/') and '?' not in url and '#' not in url for url in llms_links)
-assert set(llms_links)<={canonical_origin+(route[:-5] if route.endswith('.html') else route) for route in paths}|{canonical_origin+'/sitemap.xml'}
-assert llms.index('## Business finance')<llms.index('## Supporting general-purpose calculators')
-report={'passed':True,'configuration':'indexable-test-origin' if origin else 'default-noindex-preview','test_origin':origin,'pages':len(checks),'checks':checks,'no_live_indexing_or_ranking_claim':True}
-out=root/'docs/financial-clone/evidence'/('seo-production-build.json' if origin else 'seo-preview-build.json')
-out.write_text(json.dumps(report,indent=2)+'\n')
-print(json.dumps({'passed':True,'pages':len(checks),'configuration':report['configuration']}))
+    assert {urlsplit(item['url']).path for item in items} == tool_paths
+    visible_paths = {urlsplit(urljoin(public_origin+'/financial-calculator',href)).path for href,_ in directory.links}
+    assert tool_paths <= visible_paths
+
+for field in ('titles','description'):
+    values = defaultdict(list)
+    for path, p in pages.items():
+        value = p.titles[0] if field == 'titles' else p.metas['description'][0]
+        values[value].append(path)
+    assert all(len(paths) == 1 for paths in values.values()), ('Duplicate '+field, [v for v in values.values() if len(v)>1])
+
+rules = {}
+for line in (OUT/'_redirects').read_text().splitlines():
+    if not line.strip() or line.startswith('#'):
+        continue
+    source, target, status = line.split()
+    assert status == '301' and source not in rules, ('Redirect syntax/duplicate', line)
+    rules[source] = target
+assert not set(rules.values()) & set(rules), 'Redirect chain/loop'
+assert all(target in pages for target in rules.values()), 'Redirect destination must be a canonical page'
+for tool in json.loads((ROOT/'src/lib/catalog-data.json').read_text()):
+    assert rules.get(tool['local_route']) == tool['local_route'][:-5], ('Missing explicit legacy alias',tool['id'])
+
+adj = defaultdict(set)
+incoming = defaultdict(set)
+links_checked = state_links = 0
+for path, p in pages.items():
+    for href, contextual in p.links:
+        target = urlsplit(urljoin(public_origin+path, href))
+        if target.netloc not in ('www.calculatorfree.io','calculatorfree.io'):
+            continue
+        assert target.path not in rules, ('Internal link should use final URL',path,href)
+        assert file_for(target.path), ('Broken internal file',path,href)
+        if target.fragment:
+            if target.fragment.startswith('calc='):
+                state_links += 1  # Application-state fragments are not HTML section IDs.
+            elif target.path in pages:
+                assert unquote(target.fragment) in pages[target.path].ids, ('Broken fragment',path,href)
+        if contextual and target.path in pages and target.path != path:
+            adj[path].add(target.path)
+            incoming[target.path].add(path)
+        links_checked += 1
+assert all(incoming[path] for path in pages), 'Every route needs a contextual incoming link'
+queue = deque(['/financial-calculator']); depths = {'/financial-calculator':0}
+while queue:
+    path = queue.popleft()
+    for target in adj[path]:
+        if target not in depths:
+            depths[target] = depths[path]+1
+            queue.append(target)
+assert set(depths) == set(pages), 'Some pages cannot be reached from the directory'
+
+ns = {'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+locations = [u.findtext('s:loc',namespaces=ns) for u in ET.parse(OUT/'sitemap.xml').findall('s:url',ns)]
+assert len(locations) == len(set(locations)), 'Duplicate sitemap URL'
+assert set(locations) == ({origin+path for path in pages} if origin else set()), 'Sitemap route coverage'
+robots = (OUT/'robots.txt').read_text()
+assert 'User-Agent: *' in robots and 'Allow: /' in robots
+assert (origin+'/sitemap.xml' in robots) if origin else ('Sitemap:' not in robots)
+llms = (OUT/'llms.txt').read_text()
+assert llms == (ROOT/'public/llms.txt').read_text()
+llms_links = re.findall(r'^- \[[^]]+\]\(([^)]+)\)',llms,re.M)
+assert len(llms_links) == len(set(llms_links)), 'Duplicate curated navigation link'
+for url in llms_links:
+    target = urlsplit(url)
+    assert target.netloc == 'www.calculatorfree.io' and not target.query, ('Curated URL',url)
+    assert target.path in pages or target.path == '/sitemap.xml', ('Curated target',url)
+    if target.fragment:
+        assert target.fragment in pages[target.path].ids, ('Curated fragment',url)
+report = {'passed':True,'configuration':'indexable-test-origin' if origin else 'default-noindex-preview',
+          'pages':len(pages),'guides':len(guides),'internal_links_checked':links_checked,
+          'calculator_state_links':state_links,'max_contextual_depth':max(depths.values()),
+          'redirect_rules':len(rules),'curated_llms_links':len(llms_links),
+          'no_live_indexing_or_ranking_claim':True}
+# Optional output keeps historical evidence untouched when simply rerunning a check.
+if len(sys.argv)>2:
+    Path(sys.argv[2]).write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps(report))

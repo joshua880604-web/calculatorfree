@@ -7,7 +7,7 @@ import {pageMetadata} from '@/lib/seo';
 import {rentBuyGuide,editorialSchema,guideContentDate} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(rentBuyGuide.path,rentBuyGuide.title,rentBuyGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:rentBuyGuide.publishedOn,modifiedTime:guideContentDate(rentBuyGuide)}};
+export const metadata=page;
 export default function RentBuyGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Rent vs. buy a house</span></nav>
  <p className="glossary-category">Mortgages · Comparison guide</p><h1>{rentBuyGuide.heading}</h1>

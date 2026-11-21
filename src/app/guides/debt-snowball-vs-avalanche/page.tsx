@@ -7,7 +7,7 @@ import {pageMetadata} from '@/lib/seo';
 import {debtGuide,editorialSchema} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(debtGuide.path,debtGuide.title,debtGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:debtGuide.publishedOn,modifiedTime:debtGuide.updatedOn??debtGuide.publishedOn}};
+export const metadata=page;
 export default function DebtComparisonGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Debt snowball vs. avalanche</span></nav>
  <p className="glossary-category">Loans &amp; debt · Comparison guide</p><h1>{debtGuide.heading}</h1>

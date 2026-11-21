@@ -48,13 +48,15 @@ export function pageMetadata(
 ): Metadata {
   const url = absoluteURL(path, config);
   const image = absoluteURL('/social/og-default-v1.png', config);
+  // The same maintained editorial dates feed HTML, Article JSON-LD and sharing metadata.
+  const guide = editorialGuides.find(entry => entry.path === path);
   return {
     title: title.length + (` | ${siteName}`).length > 70 || title.toLowerCase().includes(siteName) ? { absolute: title } : title,
     description,
     alternates: url ? { canonical: url } : undefined,
     robots: { index: config.indexable, follow: true },
     openGraph: {
-      type: "website",
+      ...(guide ? { type: "article" as const, publishedTime: guide.publishedOn, modifiedTime: guideContentDate(guide) } : { type: "website" as const }),
       locale: "en_US",
       siteName,
       title,
@@ -230,6 +232,16 @@ export function calculatorSchema(calc: Calculator, config = siteConfig()) {
     });
   }
   return { "@context": "https://schema.org", "@graph": graph };
+}
+
+// The main directory is a collection of the visible tools, not an application.
+export function directorySchema(config=siteConfig()) {
+ const url=absoluteURL(directoryPath,config);
+ const items=catalog.filter(tool=>tool.id!=='real-estate');
+ return {'@context':'https://schema.org','@graph':[
+  {'@type':'CollectionPage',name:'Financial calculators',description:'Free calculators for loans, savings, retirement, taxes and business finance, with supporting everyday tools.',inLanguage:'en',publisher:publisherIdentity(config),...(url?{'@id':url+'#page',url,mainEntity:{'@id':url+'#tools'}}:{})},
+  {'@type':'ItemList',...(url?{'@id':url+'#tools'}:{}),numberOfItems:items.length,itemListElement:items.map((tool,index)=>({'@type':'ListItem',position:index+1,name:tool.title,...(absoluteURL(tool.local_route,config)?{url:absoluteURL(tool.local_route,config)}:{})}))},
+ ]};
 }
 
 export function categoryPageSchema(page:CategoryPage,config=siteConfig()) {

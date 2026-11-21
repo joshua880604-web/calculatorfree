@@ -7,7 +7,7 @@ import {pageMetadata} from '@/lib/seo';
 import {debtSaveGuide,editorialSchema} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(debtSaveGuide.path,debtSaveGuide.title,debtSaveGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:debtSaveGuide.publishedOn,modifiedTime:debtSaveGuide.updatedOn??debtSaveGuide.publishedOn}};
+export const metadata=page;
 export default function DebtSaveGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Should I pay off debt or save?</span></nav>
  <p className="glossary-category">Loans &amp; debt · Comparison guide</p><h1>{debtSaveGuide.heading}</h1>

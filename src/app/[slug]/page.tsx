@@ -25,7 +25,7 @@ import RealEstateDirectory from "@/components/RealEstateDirectory";
 import { Sidebar } from "@/components/Shell";
 import CalculatorGuide from "@/components/CalculatorGuide";
 import Methodology from "@/components/Methodology";
-import { calculatorMetadata, calculatorSchema, categoryPageSchema, pageMetadata } from "@/lib/seo";
+import { calculatorMetadata, calculatorSchema, directorySchema, categoryPageSchema, pageMetadata } from "@/lib/seo";
 import { directoryPath, serializeSchema, siteName } from "@/lib/site";
 import { relatedCalculatorIds } from "@/lib/guides";
 import { hasCalculatorWorkspace } from "@/lib/workspace-layout";
@@ -121,6 +121,7 @@ export default async function Page({
           {categoryPage ? <> / {categoryPage.heading}</> : c && <> / {c.title.toLowerCase()}</>}
         </div>
         {c && !c.directory && hasShareTools(c.id)?<div className="calculator-title-row"><h1>{categoryPage?.heading ?? title}</h1><div className="mobile-title-favorite"><FavoriteButton id={c.id}/></div></div>:<h1>{categoryPage?.heading ?? title}</h1>}
+        {slug === "financial-calculator.html" && <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(directorySchema())}}/>}
         {categoryPage&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(categoryPageSchema(categoryPage))}}/>}
         {c && !c.directory && (
           <script

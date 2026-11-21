@@ -6,7 +6,7 @@ Financial calculators are the site's primary focus. The links below are a curate
 
 Interactive calculations run in the browser and require JavaScript. Default inputs and results are illustrations; estimates depend on the entered values, selected mode, timing, and rounding conventions. Future return and inflation presets are editable assumptions. General financial mathematics is not a jurisdiction-specific tax model; tax and retirement rules apply only to the jurisdictions and years stated on each page. Currency conversion uses a dated bundled reference snapshot or a manually entered rate. Consult the methodology and each tool's scope before interpreting a result.
 
-Navigation links checked: November 6, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
+Navigation links checked: November 21, 2026. This is a selected navigation file, not the full site inventory. Use the sitemap for all canonical pages and the visible page for current assumptions and review dates.
 
 ## Start here
 
@@ -322,8 +322,6 @@ Calculator pages provide Share, Cite and Export controls; Embed appears only whe
 - [Credit Card Minimum Payments: Why the Payment Can Fall While Debt Persists](https://www.calculatorfree.io/guides/credit-card-minimum-payment-and-payoff-time/): A percentage-based minimum can shrink as principal falls. A fixed extra payment changes the payoff path, but the estimate is not your issuer’s actual minimum due.
 
 ## PMI quote assumptions and cross-site comparisons
-- [PMI Calculator](https://www.calculatorfree.io/pmi-calculator): Illustrative dated rate-card assumptions are distinct from actual annual quotes; compare equal loan inputs and the 80% request, original-schedule 78% and final midpoint benchmarks.
-- [PMI calculation and cancellation guide](https://www.calculatorfree.io/guides/how-to-calculate-pmi-and-cancellation/): Explains why website estimates differ, with hypothetical 0.38% / 0.40% annual rates on the same original principal.
 
 
 ## Additional financial definitions

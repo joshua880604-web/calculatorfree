@@ -6,7 +6,7 @@ import {pageMetadata} from '@/lib/seo';
 import {carPayoffGuide,editorialSchema} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(carPayoffGuide.path,carPayoffGuide.title,carPayoffGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:carPayoffGuide.publishedOn,modifiedTime:carPayoffGuide.updatedOn??carPayoffGuide.publishedOn}};
+export const metadata=page;
 export default function CarPayoffGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Paying off a car loan early</span></nav>
  <p className="glossary-category">Loans &amp; debt · Comparison guide</p><h1>{carPayoffGuide.heading}</h1>

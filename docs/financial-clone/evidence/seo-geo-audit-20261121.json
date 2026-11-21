@@ -1,0 +1,252 @@
+{
+  "audit_date": "2026-11-21",
+  "baseline_commit": "e3c8070d61eee455fbf03ca9f3861262e6be6e82",
+  "scope": {
+    "canonical_pages": 469,
+    "working_calculators": 168,
+    "catalog_entries_including_real_estate_directory": 169,
+    "calculation_modes": 354,
+    "guides": 155,
+    "glossary_terms": 131,
+    "other_pages": 15
+  },
+  "before": {
+    "pages": 469,
+    "calc_catalog_entries": 169,
+    "guides": 155,
+    "glossary_terms": 131,
+    "error_counts": {
+      "modified-date-disagreement": 28
+    },
+    "duplicate_titles": [],
+    "duplicate_descriptions": [
+      {
+        "value": "A cash advance costs more than its upfront fee. In the example, $1,000 with a 5% fee, $3 ATM fee and 30 days of simple interest at 30% APR costs about $77.",
+        "urls": [
+          "https://www.calculatorfree.io/guides/cash-advance-fees-vs-interest/",
+          "https://www.calculatorfree.io/glossary/cash-advance-fee/"
+        ]
+      },
+      {
+        "value": "COBRA premium planning starts with the full plan cost, including the employer contribution. With $200 from the employee, $600 from the employer and a selec",
+        "urls": [
+          "https://www.calculatorfree.io/guides/cobra-premium-vs-payroll-deduction/",
+          "https://www.calculatorfree.io/glossary/cobra-cost/"
+        ]
+      }
+    ],
+    "schema_types": {
+      "WebApplication": 168,
+      "WebPage": 301,
+      "BreadcrumbList": 464,
+      "CollectionPage": 9,
+      "ItemList": 8,
+      "AboutPage": 1,
+      "Organization": 1,
+      "DefinedTermSet": 1,
+      "Article": 155,
+      "DefinedTerm": 131
+    },
+    "schema_vs_sitemap_date_mismatches": 5,
+    "articles_missing_og_modified": 52,
+    "apps_without_inputs": [],
+    "orphans": [],
+    "no_context_inlinks": [],
+    "depth_distribution": {
+      "1": 184,
+      "0": 1,
+      "2": 283,
+      "3": 1
+    },
+    "legacy_rules": 163,
+    "missing_explicit_catalog_html_redirects": [
+      "/hsa-calculator.html",
+      "/self-employment-tax-calculator.html",
+      "/barista-fire-calculator.html",
+      "/brrrr-calculator.html",
+      "/cash-on-cash-return-calculator.html",
+      "/pay-off-mortgage-vs-invest-calculator.html",
+      "/house-hacking-calculator.html",
+      "/covered-call-calculator.html",
+      "/drip-calculator.html",
+      "/roth-conversion-ladder-calculator.html",
+      "/cap-rate-calculator.html",
+      "/wacc-calculator.html",
+      "/capm-calculator.html",
+      "/cd-early-withdrawal-penalty-calculator.html",
+      "/burn-rate-calculator.html",
+      "/bond-duration-calculator.html",
+      "/mortgage-buydown-calculator.html",
+      "/cash-secured-put-calculator.html",
+      "/profitability-index-calculator.html",
+      "/return-on-equity-calculator.html",
+      "/72t-calculator.html",
+      "/credit-card-rewards-calculator.html",
+      "/accounts-receivable-turnover-calculator.html",
+      "/days-payable-outstanding-calculator.html",
+      "/cash-conversion-cycle-calculator.html",
+      "/roic-calculator.html",
+      "/interest-coverage-ratio-calculator.html",
+      "/stock-split-calculator.html",
+      "/customer-acquisition-cost-calculator.html",
+      "/dividend-discount-model-calculator.html",
+      "/earnings-per-share-calculator.html",
+      "/sharpe-ratio-calculator.html",
+      "/black-scholes-calculator.html",
+      "/business-line-of-credit-calculator.html",
+      "/triple-net-lease-calculator.html",
+      "/arm-mortgage-calculator.html",
+      "/portfolio-rebalancing-calculator.html"
+    ],
+    "llms_links": 245,
+    "llms_invalid": [],
+    "internal_anchor_count": 34341,
+    "internal_redirect_links": 0
+  },
+  "after": {
+    "pages": 469,
+    "calc_catalog_entries": 169,
+    "guides": 155,
+    "glossary_terms": 131,
+    "error_counts": {},
+    "duplicate_titles": [],
+    "duplicate_descriptions": [],
+    "schema_types": {
+      "WebApplication": 168,
+      "WebPage": 301,
+      "BreadcrumbList": 464,
+      "CollectionPage": 10,
+      "ItemList": 9,
+      "AboutPage": 1,
+      "Organization": 1,
+      "DefinedTermSet": 1,
+      "Article": 155,
+      "DefinedTerm": 131
+    },
+    "schema_vs_sitemap_date_mismatches": 0,
+    "articles_missing_og_modified": 0,
+    "apps_without_inputs": [],
+    "orphans": [],
+    "no_context_inlinks": [],
+    "depth_distribution": {
+      "1": 184,
+      "0": 1,
+      "2": 283,
+      "3": 1
+    },
+    "legacy_rules": 200,
+    "missing_explicit_catalog_html_redirects": [],
+    "llms_links": 243,
+    "llms_unique_links": 243,
+    "llms_invalid": [],
+    "internal_anchor_count": 34341,
+    "internal_redirect_links": 0
+  },
+  "browser": {
+    "passed": true,
+    "checks": 70,
+    "responsiveChecks": 56,
+    "noJavaScriptChecks": 14,
+    "pageErrors": []
+  },
+  "source_link_presence": {
+    "scope": "Visible external links in main content; link presence is not independent factual or availability verification",
+    "counts": {
+      "tool": {
+        "total": 168,
+        "with_external_links": 162
+      },
+      "other": {
+        "total": 15,
+        "with_external_links": 3
+      },
+      "guide": {
+        "total": 155,
+        "with_external_links": 155
+      },
+      "glossary": {
+        "total": 131,
+        "with_external_links": 131
+      }
+    },
+    "no_external_source_links": [
+      "/rent-affordability-calculator",
+      "/down-payment-calculator",
+      "/percentage-calculator",
+      "/tip-bill-split-calculator",
+      "/date-calculator",
+      "/scientific-calculator"
+    ]
+  },
+  "validation": {
+    "unit_tests_passed": 3154,
+    "typecheck": "passed",
+    "indexable_static_build": "passed",
+    "static_html_audit": "passed",
+    "legacy_redirect_http_checks": 403,
+    "live_CDN_or_GSC_account": "not_verified_in_this_audit",
+    "browser_total_checks": 74,
+    "post_build_typecheck": "passed",
+    "mathematical_sources_changed": false
+  },
+  "limits": [
+    "Static export/link/schema consistency is not proof of search-engine indexing or AI citations.",
+    "37 missing explicit alias rules were a portability/consistency gap; origin hosting may have normalized those addresses already.",
+    "External source link presence is not a fact check or an availability check of all cited sources.",
+    "Mathematical methods, inputs and defaults were not changed; prior substantive review dates are preserved.",
+    "Not an explanation or confirmation of the historical GSC impression collapse."
+  ],
+  "next_priorities": [
+    {
+      "priority": "P0",
+      "task": "Use latest complete GSC date comparisons and genuine Googlebot server/CDN logs to check loss timing, fetches and WAF response codes; separate Google-InspectionTool from indexing fetches.",
+      "access": "GSC/CDN account data required; not available through the public HTML."
+    },
+    {
+      "priority": "P1",
+      "task": "Review 195 crawled-not-indexed examples by canonical HTML versus CSV/embed/assets; focus on already-visible, high-intent calculator clusters.",
+      "access": "Latest URL-level export needed if continuing index diagnosis."
+    },
+    {
+      "priority": "P1",
+      "task": "Strengthen primary-source context for rent affordability and down-payment assumptions; do not present a chosen budget ratio as a lending or legal rule.",
+      "access": "Editorial research, not mechanical Schema insertion."
+    },
+    {
+      "priority": "P2",
+      "task": "Compare query intent and real utility across credit-card minimum/payoff, mortgage/amortization and interest tools; merge or reposition only with URL/query evidence.",
+      "access": "Current query-by-page GSC data and SERP review."
+    }
+  ],
+  "final_glossary_alias_browser_checks": {
+    "passed": true,
+    "checks": [
+      {
+        "term": "cobra-cost",
+        "width": 320,
+        "emptyAliasRemoved": true
+      },
+      {
+        "term": "cash-advance-fee",
+        "width": 320,
+        "emptyAliasRemoved": true
+      },
+      {
+        "term": "cobra-cost",
+        "width": 390,
+        "emptyAliasRemoved": true
+      },
+      {
+        "term": "cash-advance-fee",
+        "width": 390,
+        "emptyAliasRemoved": true
+      }
+    ]
+  },
+  "curated_navigation_cleanup": {
+    "before_links": 245,
+    "before_unique": 243,
+    "after_links": 243,
+    "invalid_targets": 0
+  }
+}

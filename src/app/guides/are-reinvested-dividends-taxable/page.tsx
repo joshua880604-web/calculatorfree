@@ -3,7 +3,7 @@ import SiteLink from '@/components/SiteLink';
 import {dividendTaxGuide as guide} from '@/lib/question-guides';
 import {pageMetadata} from '@/lib/seo';
 const meta=pageMetadata(guide.path,guide.title,guide.description);
-export const metadata={...meta,openGraph:{...meta.openGraph,type:'article' as const,publishedTime:guide.publishedOn,modifiedTime:guide.publishedOn}};
+export const metadata=meta;
 const sources=[
  {title:'IRS FAQ: reporting reinvested dividends',url:'https://www.irs.gov/faqs/capital-gains-losses-and-sale-of-home/stocks-options-splits-traders/stocks-options-splits-traders-2'},
  {title:'IRS Topic 404: dividend classifications and reporting',url:'https://www.irs.gov/taxtopics/tc404'},

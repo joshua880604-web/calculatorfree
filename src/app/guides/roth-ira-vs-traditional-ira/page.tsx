@@ -3,14 +3,14 @@ import ContentReviewNotice from '@/components/ContentReviewNotice';
 import RemainingGuideReview,{RemainingGuideSummary} from '@/components/RemainingGuideReview';
 import SiteLink from '@/components/SiteLink';
 import {pageMetadata} from '@/lib/seo';
-import {iraGuide,editorialSchema} from '@/lib/editorial-guides';
+import {iraGuide,editorialSchema,guideContentDate} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(iraGuide.path,iraGuide.title,iraGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:iraGuide.publishedOn,modifiedTime:iraGuide.updatedOn??iraGuide.publishedOn}};
+export const metadata=page;
 export default function IRAGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Roth IRA vs. Traditional IRA</span></nav>
  <p className="glossary-category">Retirement · Comparison guide</p><h1>{iraGuide.heading}</h1>
- <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published · Calculations and sources checked <time dateTime={iraGuide.publishedOn}>October 28, 2026</time> · Updated <time dateTime={iraGuide.updatedOn}>October 30, 2026</time></p><ContentReviewNotice kind="guide"/>
+ <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published · Calculations and sources checked <time dateTime={iraGuide.publishedOn}>October 28, 2026</time> · Updated <time dateTime={guideContentDate(iraGuide)}>{new Date(guideContentDate(iraGuide)+'T00:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'})}</time></p><ContentReviewNotice kind="guide"/>
  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(editorialSchema(iraGuide))}}/>
 <p>{"A Roth IRA generally trades an upfront tax deduction for tax-free qualified withdrawals. A deductible Traditional IRA contribution gives a tax benefit now, while taxable withdrawals are taxed later. The better fit depends on eligibility, whether the Traditional contribution is deductible, the tax rates that actually apply and how you intend to use the money."}</p>
 <p>{"To compare fairly, specify the budget. Putting $6,000 into each account is not the same current cash sacrifice if the Traditional contribution produces a deduction. In the example below, the same $6,000 pretax allocation funds either a $6,000 deductible Traditional contribution or a $4,680 Roth contribution after a simplified 22% current tax."}</p>

@@ -4,5 +4,5 @@ import {pageMetadata} from '@/lib/seo';
 import {guideContentDate} from '@/lib/editorial-guides';
 const guide=comparisonGuides['apr-apy'].meta;
 const meta=pageMetadata(guide.path,guide.title,guide.description);
-export const metadata={...meta,openGraph:{...meta.openGraph,type:'article' as const,publishedTime:guide.publishedOn,modifiedTime:guideContentDate(guide)}};
+export const metadata=meta;
 export default function Page(){return <ComparisonGuideArticle topic="apr-apy"/>;}

@@ -7,7 +7,7 @@ import {pageMetadata} from '@/lib/seo';
 import {biweeklyGuide,editorialSchema} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(biweeklyGuide.path,biweeklyGuide.title,biweeklyGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:biweeklyGuide.publishedOn,modifiedTime:biweeklyGuide.updatedOn??biweeklyGuide.publishedOn}};
+export const metadata=page;
 export default function BiweeklyMortgageGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Biweekly vs. monthly mortgage payments</span></nav>
  <p className="glossary-category">Mortgages · Comparison guide</p><h1>{biweeklyGuide.heading}</h1>

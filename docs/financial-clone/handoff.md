@@ -236,3 +236,8 @@ Branch preview/refinance-payoff-rentbuy-20261119 extends b4db912bc06c29a2b387df7
 ## GSC priority remediation preview — 2026-11-19
 
 See gsc-priority-remediation-20261119.md and evidence/gsc-priority-remediation-verification-20261119.json. Three priority topics reviewed; corrected pricing comparisons, nine independent pricing tasks, six task shortcuts, guide-date consistency and the minimum-payment legacy redirect. The source-generated production/preview exports each pass the 469-page canonical/link audit; all 3,152 tests pass and all 354 mode defaults/results remain. Prior refinance/payoff/rent-buy work is completed in the same consolidated preview, preserving twenty earlier calculator improvements. Branch preview/gsc-priority-repair-20261119. Production remains bc38ae0f8570b52a3e4159466e9163a1a723d5f0. Actual remote checkpoint: /workspace/work/gsc-priority-remediation-20261119/review.json.
+
+
+## Sitewide SEO/GEO audit — 2026-11-21
+
+The November 19 GSC-priority work was published as e3c8070d61eee455fbf03ca9f3861262e6be6e82 and is the verified production baseline for this task. New branch preview/seo-geo-audit-20261121 prepares central guide-date consistency, duplicate-description corrections, complete explicit legacy aliases, accurate directory collection markup and curated navigation cleanup. No models/defaults changed. See seo-geo-audit-20261121.md and evidence/seo-geo-audit-20261121.json. Production remains on e3c8070 until a separate publish instruction. Actual preview commit/deployment and delivery workbook are recorded outside the source tree in /workspace/work/seo-geo-audit-20261121/.

@@ -6,7 +6,7 @@ import {pageMetadata} from '@/lib/seo';
 import {cdSavingsGuide,editorialSchema} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
 const page=pageMetadata(cdSavingsGuide.path,cdSavingsGuide.title,cdSavingsGuide.description);
-export const metadata={...page,openGraph:{...page.openGraph,type:'article' as const,publishedTime:cdSavingsGuide.publishedOn,modifiedTime:cdSavingsGuide.updatedOn??cdSavingsGuide.publishedOn}};
+export const metadata=page;
 export default function CDSavingsGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">CD vs. savings account</span></nav>
  <p className="glossary-category">Savings &amp; investing · Comparison guide</p><h1>{cdSavingsGuide.heading}</h1>

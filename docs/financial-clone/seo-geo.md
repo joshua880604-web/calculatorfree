@@ -55,3 +55,8 @@ The SEO update's new browser screenshots are retained locally. Automatic approva
 ## Scientific calculator addition (2026-10-20)
 
 Current local scope: 80 generated pages, 75 calculator guides, 171 modes and 100 worked examples. Scientific calculator has unique English explanatory content, four FAQs and three executable examples. Preview remains noindex; public upload and deployment have not occurred.
+
+
+## Current audit — 2026-11-21
+
+Historical counts above describe earlier revisions. The current audit covers 469 canonical pages, 168 working tools, 155 guides and 131 glossary terms. See [the sitewide audit](seo-geo-audit-20261121.md) and its verification evidence for findings, fixes, validation and live-access limits. This revision is prepared for preview; production baseline is the already published e3c8070 commit.

@@ -5,7 +5,7 @@ import SiteLink from '@/components/SiteLink';
 import {pageMetadata} from '@/lib/seo';
 import {recastGuide,editorialSchema} from '@/lib/editorial-guides';
 import {directoryPath,serializeSchema} from '@/lib/site';
-export const metadata={...pageMetadata(recastGuide.path,recastGuide.title,recastGuide.description),openGraph:{...pageMetadata(recastGuide.path,recastGuide.title,recastGuide.description).openGraph,type:'article' as const,publishedTime:recastGuide.publishedOn,modifiedTime:recastGuide.updatedOn??recastGuide.publishedOn}};
+export const metadata=pageMetadata(recastGuide.path,recastGuide.title,recastGuide.description);
 export default function MortgageRecastGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Mortgage recast vs. refinance</span></nav>
  <p className="glossary-category">Mortgages · Comparison guide</p><h1>{recastGuide.heading}</h1>

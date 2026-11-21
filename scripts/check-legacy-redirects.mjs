@@ -5,6 +5,8 @@ const catalog=JSON.parse(await fs.readFile('src/lib/catalog-data.json','utf8'));
 const routes=[...new Set([...catalog.map(c=>c.local_route),'/financial-calculator.html','/about.html','/privacy.html','/methodology.html','/loan-calculators.html','/savings-investment-calculators.html','/retirement-calculators.html','/tax-income-calculators.html','/business-calculators.html','/everyday-calculators.html'])];
 const migrated=JSON.parse(await fs.readFile('src/lib/calculator-route-aliases.json','utf8'));
 const expected=new Map([['/','/financial-calculator'],['/index.html','/financial-calculator'],['/glossary.html','/glossary/'],...routes.map(p=>[p,p.slice(0,-5)])]);
+expected.set('/embed-resources.html','/embed-resources');
+expected.set('/embed-resources/','/embed-resources');
 for(const [from,to]of Object.entries(migrated)){expected.set(from,to);expected.set(from+'.html',to);}
 const rules=new Map((await fs.readFile('out/_redirects','utf8')).split(/\r?\n/).filter(l=>l.trim()&&!l.trim().startsWith('#')).map(l=>{const [a,b,c]=l.split(/\s+/);assert.equal(c,'301');return[a,b];}));
 assert.deepEqual(rules,expected);

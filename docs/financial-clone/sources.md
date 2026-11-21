@@ -136,3 +136,8 @@ Read [CFPB no-closing-cost refinance](https://www.consumerfinance.gov/ask-cfpb/i
 ## Priority-page remediation sources — 2026-11-19
 
 Google traffic-drop and helpful-content documentation informed the audit boundaries; no specific algorithmic cause is asserted. New York taxable-receipt guidance (https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/taxable_receipt.htm) is scoped to that jurisdiction. GOV.UK VAT pricing guidance (https://www.gov.uk/charge-reclaim-record-vat) is scoped to UK VAT. Tax-price arithmetic is independently checked by scripts/check-tax-price-reference.py; entered example rates do not imply taxability or a current local rate. See gsc-priority-remediation-20261119.md.
+
+
+## SEO/GEO guidance checked — 2026-11-21
+
+Google AI features (https://developers.google.com/search/docs/appearance/ai-features), Google software-app structured data (https://developers.google.com/search/docs/appearance/structured-data/software-app), and OpenAI crawler documentation (https://developers.openai.com/api/docs/bots) inform the sitewide audit. These are discoverability/markup sources, not financial-model validation or evidence of search penalties. See seo-geo-audit-20261121.md.

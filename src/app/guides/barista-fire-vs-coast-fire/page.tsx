@@ -8,7 +8,7 @@ import {pageMetadata} from '@/lib/seo';
 import {directoryPath,serializeSchema} from '@/lib/site';
 import {calculatorPresetHref} from '@/lib/preset-links';
 const meta=pageMetadata(guide.path,guide.title,guide.description);
-export const metadata={...meta,openGraph:{...meta.openGraph,type:'article' as const,publishedTime:guide.publishedOn,modifiedTime:guide.updatedOn??guide.publishedOn}};
+export const metadata=meta;
 const example={age:45,start_age:45,income_end:55,retire_age:65,balance:760000,monthly:0,spending:36000,income:24000,full_spending:24000,return:0,inflation:0,withdrawal:4};
 export default function BaristaCoastComparison(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">{guide.breadcrumb}</span></nav>
