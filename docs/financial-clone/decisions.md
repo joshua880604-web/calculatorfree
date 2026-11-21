@@ -163,3 +163,8 @@ Keep the confirmed broad visibility decline separate from unproved causal hypoth
 ## 2026-11-21 — shared editorial metadata and AI-search scope
 
 Use existing editorial dates as one source for Article, sitemap and sharing metadata; distinguish link updates from mathematical checking. The five November 18 wording reviews are historical edits, not new November 21 arithmetic validation. Add the main directory as CollectionPage/ItemList rather than a fake application. Complete explicit legacy aliases without altering canonical routing. Preserve OAI search access, existing training policy and embed noindex. Treat llms.txt as optional curated navigation, not an AI-ranking requirement. Source: seo-geo-audit-20261121.md.
+
+
+## 2026-11-21 — contextual links by next task
+
+Replace the duplicated student/college generic-loan recommendations with education cost, savings and repayment journeys. Connect noncash depreciation to operating-cash-flow reconciliation with explicit model limits. Link 24 approved concept occurrences in prose once per guide; retain 18 other one-way pairs rather than forcing a reciprocity target. Preserve every mortgage guide destination while ranking and grouping the reading tasks. Keep original numerical/source-review dates separate from November 21 link edits. See internal-link-quality-implementation-20261121.md.

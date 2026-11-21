@@ -393,6 +393,11 @@
       "id": "mortgage-housing",
       "title": "Mortgage & Housing",
       "route_preserved": true
+    },
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
     }
   },
   {
@@ -9580,6 +9585,11 @@
       "id": "loans-debt",
       "title": "Loans & Debt",
       "route_preserved": true
+    },
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
     }
   },
   {
@@ -9654,6 +9664,11 @@
       "id": "saving-investing",
       "title": "Savings & Investing",
       "route_preserved": true
+    },
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
     }
   },
   {
@@ -9915,6 +9930,11 @@
       "id": "business-finance",
       "title": "Business Finance",
       "route_preserved": true
+    },
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
     }
   },
   {

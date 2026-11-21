@@ -3,6 +3,23 @@ import {routeFor} from '@/lib/calculators';
 import {calculatorPresetHref} from '@/lib/preset-links';
 
 export default function BorrowingPaths({id}:{id:string}){
+ if(id==='college-cost')return <section className="borrowing-paths" aria-labelledby="education-next-step">
+  <h2 id="education-next-step">Saving before college or estimating loan payments?</h2>
+  <p>Use the cost projection above to compare your entered tuition-growth and saving assumptions. To explore a separate deposit plan, use the <SiteLink href={routeFor('savings')}>savings calculator</SiteLink>. If you expect to borrow part of the cost, enter that assumed balance in the <SiteLink href={routeFor('student-loan')}>student loan payment calculator</SiteLink>.</p>
+  <p>The loan worksheet models fixed payments under an entered rate and term; it does not determine eligibility, income-driven payments or forgiveness.</p>
+ </section>;
+ if(id==='student-loan')return <section className="borrowing-paths" aria-labelledby="education-next-step">
+  <h2 id="education-next-step">Planning college costs or repaying a balance?</h2>
+  <p>For costs and savings before enrollment, use the <SiteLink href={routeFor('college-cost')}>college cost and savings planner</SiteLink>. For an existing loan, use the balance, rate and term above to estimate fixed payments. Income-driven plans and forgiveness are outside this model.</p>
+ </section>;
+ if(id==='operating-cash-flow')return <section className="borrowing-paths" aria-labelledby="noncash-next-step">
+  <h2 id="noncash-next-step">Check noncash depreciation separately</h2>
+  <p>When reconciling profit to operating cash flow, depreciation already included as an expense may be part of the entered noncash adjustment. Review a separate <SiteLink href={routeFor('depreciation')}>book depreciation schedule</SiteLink> if you need to compare methods. Add an included expense back only once; its accounting allocation is not a new cash receipt.</p>
+ </section>;
+ if(id==='depreciation')return <section className="borrowing-paths" aria-labelledby="noncash-next-step">
+  <h2 id="noncash-next-step">Book expense and cash flow are different</h2>
+  <p>This schedule allocates an entered asset cost over time. To reconcile profit with entered noncash and working-capital adjustments, use the <SiteLink href={routeFor('operating-cash-flow')}>operating cash flow worksheet</SiteLink>. Depreciation is not a cash payment or a market-value forecast; neither worksheet prepares a tax return.</p>
+ </section>;
  if(id==='credit-card-minimum-payment')return <section className="borrowing-paths" aria-labelledby="payment-paths">
   <h2 id="payment-paths">Minimum payment or fixed monthly payment?</h2>
   <p>This form follows a minimum that can change as your balance falls. An extra $50 here means $50 above each recalculated minimum, so your total monthly payment can still change.</p>

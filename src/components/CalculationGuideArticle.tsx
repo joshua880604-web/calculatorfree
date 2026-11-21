@@ -1,3 +1,5 @@
+import GuideLinkUpdate from './GuideLinkUpdate';
+import {createGuideConceptLinker} from './GuideConceptLinks';
 import HelocCreditReference from './HelocCreditReference';
 import GuideToolLinks from './GuideToolLinks';
 import CapRateDecisionReference from './CapRateDecisionReference';
@@ -16,18 +18,19 @@ import SiteLink from './SiteLink';
 import './decision-guide.css';
 export default function CalculationGuideArticle({topic}:{topic:CalculationGuideTopic}){
  const data=content[topic],guide=calculationGuideEntries[topic];
+ const linkConcepts=createGuideConceptLinker(guide.path);
  const entryExample=topic==='compound'?cases.compound.find(row=>row.label==='5%, month end'):undefined;
  const checkedOn=guide.updatedOn??guide.publishedOn;
  const checkedLabel=new Date(checkedOn+'T00:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
  return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="editorial-article">
   <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">{guide.breadcrumb}</span></nav>
   <p className="glossary-category">{guide.topic} · {guide.format}</p><h1>{guide.heading}</h1>
-  <p className="guide-byline">By <SiteLink href="/about">CalculatorFree.io</SiteLink> · Arithmetic and source context checked <time dateTime={checkedOn}>{checkedLabel}</time>. Educational examples, not personalized advice.</p><ContentReviewNotice kind="guide"/>
+  <p className="guide-byline">By <SiteLink href="/about">CalculatorFree.io</SiteLink> · Arithmetic and source context checked <time dateTime={checkedOn}>{checkedLabel}</time>. Educational examples, not personalized advice.</p><ContentReviewNotice kind="guide"/><GuideLinkUpdate path={guide.path}/>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(editorialSchema(guide))}}/>
-  <p>{data.intro}</p><p>{data.answer}</p><p><SiteLink className="glossary-cta" href={entryExample?calculatorPresetHref(data.calculatorPath,entryExample.mode,entryExample.values):data.calculatorPath}>{entryExample?'Load the $10,000 + $200 monthly example':'Open the '+data.calculatorLabel} →</SiteLink></p>
+  <p>{linkConcepts(data.intro)}</p><p>{linkConcepts(data.answer)}</p><p><SiteLink className="glossary-cta" href={entryExample?calculatorPresetHref(data.calculatorPath,entryExample.mode,entryExample.values):data.calculatorPath}>{entryExample?'Load the $10,000 + $200 monthly example':'Open the '+data.calculatorLabel} →</SiteLink></p>
   <nav className="guide-nav" aria-label="Guide sections">{data.sections.map(s=><a key={s.id} href={'#'+s.id}>{s.title}</a>)}<a href="#checked-cases">Checked examples</a>{topic==='heloc'&&<a href="#heloc-credit-scenarios">Borrowing ceiling</a>}<a href="#questions">Questions</a><a href="#sources">Sources & limits</a></nav>
   {topic==='afford' && <HouseIncomeReference/>}
-  {data.sections.map(s=><section key={s.id} aria-labelledby={s.id}><h2 id={s.id}>{s.title}</h2>{s.formula&&<p className="formula">{s.formula}</p>}{s.paragraphs.map(p=><p key={p}>{p}</p>)}</section>)}
+  {data.sections.map(s=><section key={s.id} aria-labelledby={s.id}><h2 id={s.id}>{s.title}</h2>{s.formula&&<p className="formula">{s.formula}</p>}{s.paragraphs.map(p=><p key={p}>{linkConcepts(p)}</p>)}</section>)}
   {topic==='cap' && <CapRateDecisionReference/>}
   {topic==='pmi' && <PmiRateReference/>}
   <section aria-labelledby="checked-cases"><h2 id="checked-cases">Checked scenarios you can reproduce</h2><p>These are controlled hypothetical calculations, not market experiments or historical performance. Each case changes only the inputs stated in its label; complete assumptions are included in the CSV and calculator preset.</p>
@@ -36,7 +39,7 @@ export default function CalculationGuideArticle({topic}:{topic:CalculationGuideT
    <p><a href={'/data/calculation-guides/'+topic+'-cases.csv'} download>Download all cases and assumptions as CSV</a>. Calculations retain precision before display rounding.</p>
   </section>
   {topic==='heloc'&&<HelocCreditReference inGuide/>}
-  <section aria-labelledby="questions"><h2 id="questions">Common questions</h2>{data.questions.map(q=><section key={q.question}><h3>{q.question}</h3><p>{q.answer}</p></section>)}</section>
+  <section aria-labelledby="questions"><h2 id="questions">Common questions</h2>{data.questions.map(q=><section key={q.question}><h3>{q.question}</h3><p>{linkConcepts(q.answer)}</p></section>)}</section>
   <section aria-labelledby="sources"><h2 id="sources">Sources, checks and limitations</h2><ul>{data.limitations.map(p=><li key={p}>{p}</li>)}</ul><p>The {cases[topic].length} cases in this guide were independently calculated using Python Decimal at {['mortgage','matching','compound','boat','savinggoal','auto','personal','student','heloc','equity','consolidation','fha','va','afford'].includes(topic)?70:60}-digit precision and checked against the website models within 0.000001 in the stated units, before display rounding. This checks arithmetic under the stated inputs; it is not a professional review or a validation of real-world outcomes.</p><SourceReferences context={'guide:'+guide.path} sources={data.sources}/><p>External sources explain concepts and do not endorse these calculators or hypothetical rates. Read our <SiteLink href="/methodology">methodology and model limitations</SiteLink>.</p></section>
   <GuideGlossaryLinks path={guide.path}/>
   <section className="related"><h2>Related tools and reading</h2><ul>{data.related.map(s=><li key={s.href}><SiteLink href={s.href}>{s.label}</SiteLink></li>)}</ul><p><SiteLink href={data.calculatorPath}>{data.calculatorLabel}</SiteLink> · <SiteLink href="/guides/">All financial guides</SiteLink></p></section>

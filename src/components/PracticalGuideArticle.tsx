@@ -1,6 +1,7 @@
+import GuideLinkUpdate from './GuideLinkUpdate';
+import {createGuideConceptLinker} from './GuideConceptLinks';
 import FundFeesCdReference from './FundFeesCdReference';
 import TaxPriceReference from './TaxPriceReference';
-import {guideContentDate} from '@/lib/editorial-guides';
 import GuideToolLinks from './GuideToolLinks';
 import DiscountReference from './DiscountReference';
 import InterestRateReference from './InterestRateReference';
@@ -18,17 +19,18 @@ import './practical-guide.css';
 function metricText(m:{value:number;format?:string;displayValue?:string}){if(m.displayValue)return m.displayValue;return m.format==='money'?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(m.value):new Intl.NumberFormat('en-US',{maximumFractionDigits:4}).format(m.value)+(m.format==='percent'?'%':'');}
 export default function PracticalGuideArticle({slug}:{slug:string}){
  const data=content.find(g=>g.slug===slug)!;const meta=practicalGuideList.find(g=>g.path==='/guides/'+slug+'/')!;
- const feeGuide=slug==='mutual-fund-fees-and-investment-costs';const taxGuide=slug==='tax-inclusive-prices-sales-tax-and-vat';const checkedOn=guideContentDate(meta);const checkedLabel=new Date(checkedOn+'T00:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
+ const linkConcepts=createGuideConceptLinker(meta.path);
+ const feeGuide=slug==='mutual-fund-fees-and-investment-costs';const taxGuide=slug==='tax-inclusive-prices-sales-tax-and-vat';const checkedOn=meta.updatedOn??meta.publishedOn;const checkedLabel=new Date(checkedOn+'T00:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
  return <div className="page-wrap glossary-page guides-page practical-guide-page"><main id="main"><article className="editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href="/">Home</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">{data.title}</span></nav>
- <h1>{data.title}</h1><p className="guide-byline">By <SiteLink href="/about">CalculatorFree.io</SiteLink> · Model scope and source context checked <time dateTime={checkedOn}>{checkedLabel}</time>. Educational examples, not personalized advice.</p><ContentReviewNotice kind="guide"/>
+ <h1>{data.title}</h1><p className="guide-byline">By <SiteLink href="/about">CalculatorFree.io</SiteLink> · Model scope and source context checked <time dateTime={checkedOn}>{checkedLabel}</time>. Educational examples, not personalized advice.</p><ContentReviewNotice kind="guide"/><GuideLinkUpdate path={meta.path}/>
  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(editorialSchema(meta))}}/>
- <p>{data.answer}</p><p>{data.ids.map((id,i)=>{const c=data.cases.find(c=>c.calculatorId===id)!;return <span key={id}>{i>0?' · ':''}<SiteLink href={c.path}>Open {c.tool}</SiteLink></span>})}</p>
+ <p>{linkConcepts(data.answer)}</p><p>{data.ids.map((id,i)=>{const c=data.cases.find(c=>c.calculatorId===id)!;return <span key={id}>{i>0?' · ':''}<SiteLink href={c.path}>Open {c.tool}</SiteLink></span>})}</p>
  {slug==='how-to-read-amortization-and-loan-payments'&&<section aria-label="Start with the worked loan examples"><p><strong>Try the same $100,000 loan at 6% over ten years.</strong> Load the monthly payment, or see how an extra $100 each month changes its amortization schedule. These are hypothetical inputs, not a loan offer.</p><ul><li><SiteLink href={calculatorPresetHref('/loan-calculator','amortized',{principal:100000,years:10,months:0,rate:6,compound:'Monthly',pay:'Monthly'})}>Load the $100,000 monthly-payment example</SiteLink></li><li><SiteLink href={calculatorPresetHref(data.cases[1].path,data.cases[1].mode,data.cases[1].values)}>Load the amortization example with $100 extra monthly</SiteLink></li></ul></section>}
  <nav className="guide-nav" aria-label="Guide sections">{data.sections.map((s,i)=><a key={s.title} href={'#method-'+i}>{s.title}</a>)}{taxGuide&&<a href="#tax-price-tasks">Choose known inputs</a>}<a href="#examples">Examples</a><a href="#questions">Questions</a><a href="#sources">Sources & limits</a></nav>
  {slug==='how-to-read-amortization-and-loan-payments'&&<RepaymentComparison id="amortization" inGuide/>}
  {slug==='credit-card-minimum-payment-and-payoff-time'&&<RepaymentComparison id="credit-card-minimum-payment" inGuide/>}
- {data.sections.map((s,i)=><section key={s.title}><h2 id={'method-'+i}>{s.title}</h2><p>{s.text}</p></section>)}
+ {data.sections.map((s,i)=><section key={s.title}><h2 id={'method-'+i}>{s.title}</h2><p>{linkConcepts(s.text)}</p></section>)}
  {taxGuide&&<TaxPriceReference inGuide/>}
  {data.ids.includes("interest-rate")&&<InterestRateReference inGuide/>}
  {data.ids.includes("discount")&&<DiscountReference inGuide/>}
@@ -38,7 +40,7 @@ export default function PracticalGuideArticle({slug}:{slug:string}){
  <p><a href={'/data/practical-guides/'+slug+'.csv'} download>Download complete inputs and model outputs (CSV)</a>. Display amounts are rounded; calculations retain internal precision.</p>
  <details><summary>Full inputs for these examples</summary>{data.cases.map((c,i)=><section key={i}><h3>{c.tool}: {c.label}</h3><dl>{c.inputs.map(f=><div key={f.key}><dt>{f.label}</dt><dd>{String(f.value)||'(blank)'}</dd></div>)}</dl></section>)}</details></section>
 </>}
- <section><h2 id="questions">Common questions</h2>{data.questions.map(q=><section key={q.question}><h3>{q.question}</h3><p>{q.answer}</p></section>)}</section>
+ <section><h2 id="questions">Common questions</h2>{data.questions.map(q=><section key={q.question}><h3>{q.question}</h3><p>{linkConcepts(q.answer)}</p></section>)}</section>
  <section><h2 id="sources">Sources, verification and limits</h2><p>Official and educational sources provide context for the definitions and rules discussed above. They do not endorse the calculator or these hypothetical assumptions. Tax sources have the editions stated in their titles or on their pages; a cited older publication is not a claim that every provision applies unchanged to a later year. Actual contracts, account documents and filing requirements control real transactions.</p><SourceReferences context={'guide:'+'/guides/'+slug+'/'} sources={data.sources}/><p>Read the calculator’s assumptions and <SiteLink href="/methodology">site methodology</SiteLink>. Existing automated tests and additional selected independent arithmetic checks support this release; the reproduction table itself is not a separate audit of the engine. Sources and model context were checked on the date shown, not certified by a named financial reviewer.</p></section>
  <section className="related"><h2>Related tools and next steps</h2><ul>{data.ids.map(id=>{const c=data.cases.find(c=>c.calculatorId===id)!;return <li key={id}><SiteLink href={c.path}>{c.tool}</SiteLink></li>})}<li><SiteLink href="/guides/">Browse guides by financial task</SiteLink></li><li><SiteLink href="/glossary/">Look up financial terms</SiteLink></li></ul></section>
  <GuideToolLinks path={meta.path}/></article></main></div>;

@@ -1,3 +1,4 @@
+import linkReview from './internal-link-review.json';
 import guideToolRepairs from './guide-tool-repairs.json';
 import {comparisonGuideList} from './comparison-guides';
 import {questionGuideList} from './question-guides';
@@ -250,3 +251,6 @@ for(const guide of editorialGuides){
  guide.calculatorIds=guide.calculatorIds.filter(id=>!repair.removeCalculatorIds.includes(id));
  guide.linksUpdatedOn=repair.reviewedOn;
 }
+
+// Contextual links reviewed separately from mathematical/source checks.
+for(const guide of editorialGuides)if(linkReview.guides.includes(guide.path))guide.linksUpdatedOn=[guide.linksUpdatedOn??'',linkReview.reviewedOn].sort().at(-1)!;

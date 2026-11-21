@@ -1,4 +1,4 @@
-import {editorialGuides} from '@/lib/editorial-guides';
+import RelatedGuides from '@/components/RelatedGuides';
 import FavoriteButton from "@/components/FavoriteButton";
 import {hasShareTools} from "@/lib/share-tools";
 import EmbedCitationHelp from '@/components/EmbedCitationHelp';
@@ -207,7 +207,7 @@ export default async function Page({
             <SearchTasks id={c.id} />
             <CalculatorGuide calculator={c} />
             <EmbedCitationHelp id={c.id} title={c.title}/>
-            {editorialGuides.some(guide=>guide.calculatorIds.includes(c.id))&&<section className="related"><h2>Related guides</h2><ul>{editorialGuides.filter(guide=>guide.calculatorIds.includes(c.id)).map(guide=><li key={guide.path}><SiteLink href={guide.path}>{guide.heading}</SiteLink> — {guide.cardIntro}</li>)}</ul></section>}
+            <RelatedGuides id={c.id}/>
           </>
         ) : (
           <Directory />

@@ -1,0 +1,200 @@
+{
+  "/guides/cagr-and-annualized-growth/": [
+    {
+      "slug": "cagr",
+      "phrases": [
+        "CAGR"
+      ]
+    }
+  ],
+  "/guides/inflation-and-real-investment-return/": [
+    {
+      "slug": "real-rate-of-return",
+      "phrases": [
+        "real rate of return",
+        "real return"
+      ]
+    }
+  ],
+  "/guides/mutual-fund-fees-and-investment-costs/": [
+    {
+      "slug": "expense-ratio",
+      "phrases": [
+        "Expense ratio"
+      ]
+    }
+  ],
+  "/guides/how-to-read-amortization-and-loan-payments/": [
+    {
+      "slug": "amortization",
+      "phrases": [
+        "amortization"
+      ]
+    }
+  ],
+  "/guides/college-costs-and-saving-before-enrollment/": [
+    {
+      "slug": "inflation",
+      "phrases": [
+        "Inflation"
+      ]
+    }
+  ],
+  "/guides/how-to-calculate-house-flipping-profit/": [
+    {
+      "slug": "return-on-investment",
+      "phrases": [
+        "return on investment",
+        "ROI"
+      ]
+    }
+  ],
+  "/guides/simple-and-discounted-payback/": [
+    {
+      "slug": "net-present-value",
+      "phrases": [
+        "net present value",
+        "NPV"
+      ]
+    }
+  ],
+  "/guides/how-to-calculate-personal-loan-payments/": [
+    {
+      "slug": "apr",
+      "phrases": [
+        "annual percentage rate",
+        "APR"
+      ]
+    }
+  ],
+  "/guides/how-to-calculate-business-loan-payments/": [
+    {
+      "slug": "apr",
+      "phrases": [
+        "annual percentage rate",
+        "APR"
+      ]
+    }
+  ],
+  "/guides/credit-card-minimum-payment-and-payoff-time/": [
+    {
+      "slug": "apr",
+      "phrases": [
+        "annual percentage rate",
+        "APR"
+      ]
+    }
+  ],
+  "/guides/how-to-calculate-debt-to-income-ratio/": [
+    {
+      "slug": "debt-to-income-ratio",
+      "phrases": [
+        "debt-to-income ratio",
+        "DTI"
+      ]
+    }
+  ],
+  "/guides/down-payment-and-closing-cost-cash/": [
+    {
+      "slug": "down-payment",
+      "phrases": [
+        "Down payment"
+      ]
+    }
+  ],
+  "/guides/book-depreciation-methods-and-salvage/": [
+    {
+      "slug": "depreciation",
+      "phrases": [
+        "Depreciation"
+      ]
+    }
+  ],
+  "/guides/discounts-and-sales-commission-bases/": [
+    {
+      "slug": "commission",
+      "phrases": [
+        "Commission"
+      ]
+    }
+  ],
+  "/guides/currency-conversion-rate-direction-and-spread/": [
+    {
+      "slug": "exchange-rate",
+      "phrases": [
+        "Exchange rate"
+      ]
+    }
+  ],
+  "/guides/current-ratio-vs-quick-ratio/": [
+    {
+      "slug": "quick-ratio",
+      "phrases": [
+        "Quick ratio"
+      ]
+    }
+  ],
+  "/guides/how-to-calculate-cash-on-cash-return/": [
+    {
+      "slug": "net-operating-income",
+      "phrases": [
+        "net operating income",
+        "NOI"
+      ]
+    }
+  ],
+  "/guides/how-to-calculate-rental-property-cash-flow/": [
+    {
+      "slug": "net-operating-income",
+      "phrases": [
+        "net operating income",
+        "NOI"
+      ]
+    }
+  ],
+  "/guides/how-to-calculate-irr/": [
+    {
+      "slug": "modified-internal-rate-of-return",
+      "phrases": [
+        "modified internal rate of return",
+        "MIRR"
+      ]
+    }
+  ],
+  "/guides/debt-snowball-vs-avalanche/": [
+    {
+      "slug": "debt-snowball",
+      "phrases": [
+        "Debt snowball"
+      ]
+    },
+    {
+      "slug": "debt-avalanche",
+      "phrases": [
+        "Debt avalanche"
+      ]
+    }
+  ],
+  "/guides/barista-fire-vs-coast-fire/": [
+    {
+      "slug": "lean-fire",
+      "phrases": [
+        "Lean FIRE"
+      ]
+    },
+    {
+      "slug": "fat-fire",
+      "phrases": [
+        "Fat FIRE"
+      ]
+    }
+  ],
+  "/guides/leasing-vs-buying-a-car/": [
+    {
+      "slug": "money-factor",
+      "phrases": [
+        "money factor"
+      ]
+    }
+  ]
+}

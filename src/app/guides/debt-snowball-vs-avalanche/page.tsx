@@ -1,3 +1,4 @@
+import GuideLinkUpdate from '@/components/GuideLinkUpdate';
 import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
@@ -11,9 +12,9 @@ export const metadata=page;
 export default function DebtComparisonGuide(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">Debt snowball vs. avalanche</span></nav>
  <p className="glossary-category">Loans &amp; debt · Comparison guide</p><h1>{debtGuide.heading}</h1>
- <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published <time dateTime={debtGuide.publishedOn}>October 27, 2026</time> · Updated <time dateTime={debtGuide.updatedOn??debtGuide.publishedOn}>October 30, 2026</time></p><ContentReviewNotice kind="guide"/>
+ <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published <time dateTime={debtGuide.publishedOn}>October 27, 2026</time> · Updated <time dateTime={debtGuide.updatedOn??debtGuide.publishedOn}>October 30, 2026</time></p><ContentReviewNotice kind="guide"/><GuideLinkUpdate path="/guides/debt-snowball-vs-avalanche/"/>
  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(editorialSchema(debtGuide))}}/>
-<p>{"Debt snowball directs extra payments to the smallest remaining balance. Debt avalanche directs them to the highest interest rate. Both start by covering the required minimum payments on every debt."}</p>
+<p><SiteLink href="/glossary/debt-snowball/">Debt snowball</SiteLink> directs extra payments to the smallest remaining balance. <SiteLink href="/glossary/debt-avalanche/">Debt avalanche</SiteLink> directs them to the highest interest rate. Both start by covering the required minimum payments on every debt.</p>
 <p>{"The practical trade-off is between reducing interest and reaching an early payoff milestone. With the same affordable budget, compare both the date your first debt disappears and the date the entire plan ends. A faster first payoff does not necessarily mean a faster final payoff."}</p>
 <p>{"The example below uses three hypothetical debts and the same $400 monthly budget for both methods. Avalanche finishes in 26 months with $1,792.13 of interest. Snowball clears the first debt earlier but finishes in 27 months with $2,204.57 of interest. These are model results under stated assumptions, not a prediction of your own outcome."}</p>
 <GuideCheckSummary id="debt"/>

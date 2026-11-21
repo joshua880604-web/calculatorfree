@@ -1,0 +1,5 @@
+.mortgage-reading .mortgage-reading-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 1.5rem;}
+.mortgage-reading .mortgage-reading-groups h3{font-size:1rem;margin:0 0 .35rem;}
+.mortgage-reading .mortgage-reading-groups ul{margin:0;padding-left:1.2rem;}
+.mortgage-reading .mortgage-reading-groups li{margin:.25rem 0;}
+@media(max-width:640px){.mortgage-reading .mortgage-reading-groups{grid-template-columns:minmax(0,1fr);}}

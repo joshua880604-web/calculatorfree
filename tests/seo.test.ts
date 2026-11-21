@@ -1,3 +1,5 @@
+import internalLinkReview from '../src/lib/internal-link-review.json';
+import internalLinkCatalog from '../src/lib/catalog-data.json';
 const taxPriceReviewPaths=['/sales-tax-calculator.html','/vat-calculator.html','/guides/tax-inclusive-prices-sales-tax-and-vat/'];
 const businessReviewPaths=['/inventory-turnover-calculator.html','/sba-loan-calculator.html','/guides/how-to-calculate-inventory-turnover/','/guides/sba-7a-vs-504-loan-payments/','/business-calculators.html','/financial-calculator.html','/guides/','/glossary/','/glossary/inventory-turnover/','/glossary/sba-guaranty-fee/'];
 const latestGuidePaths=["/guides/how-are-heloc-payments-calculated/", "/guides/how-to-calculate-home-equity-loan-payments/", "/guides/how-to-calculate-personal-loan-payments/", "/guides/how-to-compare-debt-consolidation-loans/", "/guides/roth-conversion-ladder/", "/guides/roth-conversion-taxes/", "/guides/gross-margin-vs-net-margin/", "/guides/heloc-vs-home-equity-loan/", "/guides/balance-transfer-vs-personal-loan/", "/home-equity-loan-calculator.html", "/heloc-calculator.html", "/ira-calculator.html", "/single-credit-card-payoff-calculator.html", "/debt-consolidation-calculator.html", "/margin-calculator.html", "/personal-loan-calculator.html", "/markup-calculator.html", "/break-even-calculator.html", "/roth-conversion-ladder-calculator.html", "/guides/", "/retirement-calculators.html", "/business-calculators.html", "/real-estate-calculator.html", "/loan-calculators.html"];
@@ -245,3 +247,7 @@ test("Production SEO follows the confirmed www extensionless destination while o
 Object.assign(wordingReviewDates,Object.fromEntries(["/cash-advance-fee-calculator.html", "/cobra-cost-calculator.html", "/guides/cash-advance-fees-vs-interest/", "/guides/cobra-premium-vs-payroll-deduction/", "/glossary/cash-advance-fee/", "/glossary/cobra-cost/"].map(path=>[path,'2026-11-18'])));
 
 Object.assign(wordingReviewDates,Object.fromEntries(["/amortization-calculator.html", "/credit-card-minimum-payment-calculator.html", "/guides/how-to-read-amortization-and-loan-payments/", "/guides/credit-card-minimum-payment-and-payoff-time/"].map(path=>[path,'2026-11-19'])));
+
+Object.assign(wordingReviewDates,Object.fromEntries([...internalLinkReview.guides,...internalLinkCatalog.filter(c=>internalLinkReview.tools.includes(c.id)).map(c=>c.local_route)].map(path=>[path,internalLinkReview.reviewedOn])));
+
+wordingReviewDates['/guides/']=internalLinkReview.reviewedOn;

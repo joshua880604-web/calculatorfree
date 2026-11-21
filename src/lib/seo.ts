@@ -1,3 +1,4 @@
+import linkReview from './internal-link-review.json';
 import {publisherIdentity} from './content-transparency';
 import {embedResourcesPath,embedResourcesReviewedOn} from './embed-resources';
 import {motherPageIds,motherPageReviewedOn} from './mother-page-ui';
@@ -450,3 +451,6 @@ Object.assign(contentUpdatedOn,{"/refinance-calculator.html": "2026-11-19", "/mo
 
 // Tax-price workflows and selected-output correction, independently checked.
 Object.assign(contentUpdatedOn,{"/sales-tax-calculator.html":"2026-11-19","/vat-calculator.html":"2026-11-19","/guides/tax-inclusive-prices-sales-tax-and-vat/":"2026-11-19"});
+
+// Only the reviewed navigation pages advance; numerical review dates remain separate.
+for(const path of [...linkReview.guides,...catalog.filter(c=>linkReview.tools.includes(c.id)).map(c=>c.local_route)])recordWordingUpdate(path,linkReview.reviewedOn);

@@ -1,0 +1,34 @@
+{
+  "reviewedOn": "2026-11-21",
+  "tools": [
+    "college-cost",
+    "student-loan",
+    "operating-cash-flow",
+    "depreciation",
+    "mortgage"
+  ],
+  "guides": [
+    "/guides/cagr-and-annualized-growth/",
+    "/guides/inflation-and-real-investment-return/",
+    "/guides/mutual-fund-fees-and-investment-costs/",
+    "/guides/how-to-read-amortization-and-loan-payments/",
+    "/guides/college-costs-and-saving-before-enrollment/",
+    "/guides/how-to-calculate-house-flipping-profit/",
+    "/guides/simple-and-discounted-payback/",
+    "/guides/how-to-calculate-personal-loan-payments/",
+    "/guides/how-to-calculate-business-loan-payments/",
+    "/guides/credit-card-minimum-payment-and-payoff-time/",
+    "/guides/how-to-calculate-debt-to-income-ratio/",
+    "/guides/down-payment-and-closing-cost-cash/",
+    "/guides/book-depreciation-methods-and-salvage/",
+    "/guides/discounts-and-sales-commission-bases/",
+    "/guides/currency-conversion-rate-direction-and-spread/",
+    "/guides/current-ratio-vs-quick-ratio/",
+    "/guides/how-to-calculate-cash-on-cash-return/",
+    "/guides/how-to-calculate-rental-property-cash-flow/",
+    "/guides/how-to-calculate-irr/",
+    "/guides/debt-snowball-vs-avalanche/",
+    "/guides/barista-fire-vs-coast-fire/",
+    "/guides/leasing-vs-buying-a-car/"
+  ]
+}

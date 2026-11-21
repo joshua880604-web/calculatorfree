@@ -1136,3 +1136,9 @@ if(!guides['mortgage-payoff'].sources.some(s=>s.url==='https://www.consumerfinan
 
 // Pricing task examples and source scopes reviewed without changing model defaults.
 for(const id of ["sales-tax","vat"]){guides[id].checkedOn="2026-11-19";}
+
+// Reviewed education and noncash-expense journeys; keep the primary task first.
+relatedCalculatorIds['college-cost']=['student-loan','savings','compound-interest','inflation'];
+relatedCalculatorIds['student-loan']=['college-cost','repayment','loan','payment','interest-rate'];
+relatedCalculatorIds['operating-cash-flow']=[...new Set(['depreciation',...(relatedCalculatorIds['operating-cash-flow']??[])])];
+relatedCalculatorIds['depreciation']=[...new Set(['operating-cash-flow',...(relatedCalculatorIds['depreciation']??[])])];

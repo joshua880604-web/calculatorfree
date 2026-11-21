@@ -29,7 +29,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "mortgage",
@@ -61,7 +66,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "amortization",
@@ -3839,7 +3849,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "student-loan",
@@ -3871,7 +3886,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "student-loan",
@@ -3903,7 +3923,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "student-loan",
@@ -3935,7 +3960,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "student-loan",
@@ -3967,7 +3997,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "student-loan",
@@ -3999,7 +4034,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "student-loan",
@@ -4031,7 +4071,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "student-loan",
@@ -4063,7 +4108,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-11-19",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "college-cost",
@@ -4094,7 +4144,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-10-20T07:46:03.664Z",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "vat",
@@ -4157,7 +4212,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-10-20T07:46:03.664Z",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "depreciation",
@@ -4188,7 +4248,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-10-20T07:46:03.664Z",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "depreciation",
@@ -4219,7 +4284,12 @@
     ],
     "fully_complete": false,
     "updated_at": "2026-10-20T07:46:03.664Z",
-    "functional_delivery": "implemented_with_documented_independent_model"
+    "functional_delivery": "implemented_with_documented_independent_model",
+    "navigation_review": {
+      "reviewed_on": "2026-11-21",
+      "evidence": "internal-link-quality-implementation-20261121.md",
+      "scope": "Contextual task links and related reading only; existing numerical review status and defaults are unchanged."
+    }
   },
   {
     "id": "margin",

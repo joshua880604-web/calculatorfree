@@ -241,3 +241,8 @@ See gsc-priority-remediation-20261119.md and evidence/gsc-priority-remediation-v
 ## Sitewide SEO/GEO audit — 2026-11-21
 
 The November 19 GSC-priority work was published as e3c8070d61eee455fbf03ca9f3861262e6be6e82 and is the verified production baseline for this task. New branch preview/seo-geo-audit-20261121 prepares central guide-date consistency, duplicate-description corrections, complete explicit legacy aliases, accurate directory collection markup and curated navigation cleanup. No models/defaults changed. See seo-geo-audit-20261121.md and evidence/seo-geo-audit-20261121.json. Production remains on e3c8070 until a separate publish instruction. Actual preview commit/deployment and delivery workbook are recorded outside the source tree in /workspace/work/seo-geo-audit-20261121/.
+
+
+## Contextual internal links — 2026-11-21
+
+Preview branch preview/internal-link-quality-20261121 continues e2a708a with reviewed education/accounting task paths, 24 prose concept links in 22 guides, descriptive guide anchors and compact mortgage reading groups preserving all ten destinations. All 3,159 tests, full TypeScript, build, 469-page static checks and 105 browser checks pass. Numerical models/defaults and original numerical-review fields remain. See internal-link-quality-implementation-20261121.md and evidence/internal-link-quality-20261121.json. Actual preview commit/deployment checkpoint: /workspace/work/internal-link-implementation-20261121/review.json. Production remains e3c8070 until a separate publish instruction.

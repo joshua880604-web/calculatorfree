@@ -1,3 +1,4 @@
+import GuideLinkUpdate from '@/components/GuideLinkUpdate';
 import GuideToolLinks from '@/components/GuideToolLinks';
 import SourceReferences from '@/components/SourceReferences';
 import ContentReviewNotice from '@/components/ContentReviewNotice';
@@ -13,7 +14,7 @@ const example={age:45,start_age:45,income_end:55,retire_age:65,balance:760000,mo
 export default function BaristaCoastComparison(){return <div className="page-wrap glossary-page guides-page"><main id="main"><article className="glossary-article editorial-article">
  <nav className="breadcrumb" aria-label="Breadcrumb"><SiteLink href={directoryPath}>Calculators</SiteLink> / <SiteLink href="/guides/">Guides</SiteLink> / <span aria-current="page">{guide.breadcrumb}</span></nav>
  <p className="glossary-category">Retirement · Comparison guide</p><h1>{guide.heading}</h1>
- <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published <time dateTime="2026-10-29">October 29, 2026</time> · Updated <time dateTime={guide.updatedOn}>October 30, 2026</time></p><ContentReviewNotice kind="guide"/>
+ <p className="guide-byline">Prepared by <SiteLink href="/about">CalculatorFree.io</SiteLink> · Published <time dateTime="2026-10-29">October 29, 2026</time> · Updated <time dateTime={guide.updatedOn}>October 30, 2026</time></p><ContentReviewNotice kind="guide"/><GuideLinkUpdate path="/guides/barista-fire-vs-coast-fire/"/>
  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:serializeSchema(editorialSchema(guide))}}/>
  <p><strong>Barista FIRE combines earned income with portfolio withdrawals before full retirement. Coast FIRE, as modeled here, leaves the retirement portfolio invested while earned income covers current living costs.</strong> The difference is who pays today’s bills and when income stops. Use the <SiteLink href="/barista-fire-calculator">Barista FIRE calculator</SiteLink> for an income-and-withdrawal bridge or the <SiteLink href="/coast-fire-calculator">Coast FIRE calculator</SiteLink> for a no-withdrawal accumulation path.</p>
  <RemainingGuideSummary id="barista"/>
@@ -36,7 +37,7 @@ export default function BaristaCoastComparison(){return <div className="page-wra
  <p>With positive assumed real growth, both calculations discount the later target. The Barista calculation additionally discounts each dated spending gap. Simply dividing today’s $12,000 gap by 4% gives $300,000; it ignores the end of earnings and the different later budget.</p>
  <h2>Which assumptions should you test?</h2>
  <ul><li>Lower after-tax earnings and an earlier income-stop date.</li><li>Higher healthcare, insurance, housing and tax allowances.</li><li>Lower investment returns after fees and higher inflation.</li><li>A different withdrawal assumption for the full-retirement target.</li></ul>
- <p>Run matched scenarios rather than choosing whichever label produces the smallest number. The <SiteLink href="/fire-calculator">full FIRE calculator</SiteLink> sizes a completely portfolio-funded target; Lean FIRE and Fat FIRE describe different spending approaches rather than a guarantee about work or withdrawals.</p>
+ <p>Run matched scenarios rather than choosing whichever label produces the smallest number. The <SiteLink href="/fire-calculator">full FIRE calculator</SiteLink> sizes a completely portfolio-funded target; <SiteLink href="/glossary/lean-fire/">Lean FIRE</SiteLink> and <SiteLink href="/glossary/fat-fire/">Fat FIRE</SiteLink> describe different spending approaches rather than a guarantee about work or withdrawals.</p>
  <h2>Does either result prove a plan is safe?</h2>
  <p>No. These are deterministic illustrations, not market backtests or success probabilities. Investment losses can occur, and losses while withdrawing can matter more than the same average return during accumulation. The Barista projection stops at full retirement; it does not test spending through the rest of life. A 4% sizing assumption is not a promise of safety.</p>
  <p>Before relying on assets, review how they can be accessed. IRS rules generally impose an additional tax on early retirement-account distributions unless an exception applies. Also verify healthcare arrangements directly; a part-time job does not automatically provide insurance. Taxes, benefit eligibility, account access and emergency reserves require separate planning.</p>

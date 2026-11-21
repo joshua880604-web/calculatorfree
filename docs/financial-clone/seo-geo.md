@@ -60,3 +60,8 @@ Current local scope: 80 generated pages, 75 calculator guides, 171 modes and 100
 ## Current audit — 2026-11-21
 
 Historical counts above describe earlier revisions. The current audit covers 469 canonical pages, 168 working tools, 155 guides and 131 glossary terms. See [the sitewide audit](seo-geo-audit-20261121.md) and its verification evidence for findings, fixes, validation and live-access limits. This revision is prepared for preview; production baseline is the already published e3c8070 commit.
+
+
+## Contextual link implementation — 2026-11-21
+
+The quality audit is now implemented in a new preview: 24 prose concept links, education/accounting task paths, descriptive guide anchors and shorter mortgage reading groups preserving all ten destinations. The 374 tool-guide and 317 tool-definition pairs remain intact. See internal-link-quality-implementation-20261121.md and its evidence; production has not been updated by this revision.

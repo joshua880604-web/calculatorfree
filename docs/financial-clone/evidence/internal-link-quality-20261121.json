@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-21",
+  "baseline_preview": "e2a708ad8965b676efff63b04f0ab4ba4eaf8095",
+  "production_baseline": "e3c8070d61eee455fbf03ca9f3861262e6be6e82",
+  "scope": {
+    "pages": 469,
+    "tools": 168,
+    "modes": 354,
+    "guides": 155,
+    "terms": 131
+  },
+  "changes": {
+    "new_concept_links": 24,
+    "guides_with_new_links": 22,
+    "education_task_paths": "college cost -> savings/student loan; student loan -> college cost",
+    "accounting_task_paths": "operating cash flow <-> book depreciation with explicit scope",
+    "mortgage_related_guides_preserved": 10,
+    "mortgage_related_guides_mobile_before_px": 1842,
+    "mortgage_related_guides_mobile_after_px": 593,
+    "mortgage_mobile_viewport": 390,
+    "retained_one_way_concept_pairs": 18,
+    "descriptive_guide_anchors": "Existing destinations retained; generic method/payment-guide labels now identify the guide."
+  },
+  "relationship_checks": {
+    "tool_guide": {
+      "total": 374,
+      "both": 374,
+      "missing_tool_to_guide": 0,
+      "missing_guide_to_tool": 0
+    },
+    "tool_term": {
+      "total": 317,
+      "both": 317,
+      "missing_tool_to_term": 0,
+      "missing_term_to_tool": 0
+    },
+    "term_guide_before": {
+      "total": 172,
+      "both": 130,
+      "missing_guide_to_term": 42,
+      "missing_term_to_guide": 0
+    },
+    "term_guide_after": {
+      "total": 172,
+      "both": 154,
+      "missing_guide_to_term": 18,
+      "missing_term_to_guide": 0
+    }
+  },
+  "validation": {
+    "tests_passed": 3159,
+    "build": "passed",
+    "typecheck": "passed",
+    "static_routes": 469,
+    "internal_links_checked": 34371,
+    "browser_checks": 105,
+    "page_errors": [],
+    "concept_links_each_in_prose_once": true,
+    "javascript_disabled_navigation": "education task and minimum-payment-to-APR journeys passed"
+  },
+  "date_policy": "Page-link edits advance editorial/page dates only. Original numerical/source review fields are preserved and displayed separately.",
+  "no_math_model_or_default_changes": true,
+  "production_published": false,
+  "evidence_workdir": "/workspace/work/internal-link-implementation-20261121",
+  "limitations": [
+    "No Google indexing, traffic recovery or AI citation guarantee.",
+    "All selected contextual links use existing approved guide-term relationships; remaining one-way pairs are deliberate editorial choices, not failed requirements.",
+    "No new GSC or CDN account evidence was available in this task."
+  ]
+}
