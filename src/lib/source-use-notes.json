@@ -1858,7 +1858,39 @@
       "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
       "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
     }
+  ,
+  "https://www.federalreserve.gov/publications/2025-december-supervision-and-regulation-report-accessible-version.htm": {
+    "role": "method",
+    "usedFor": "Accounting definition and scope.",
+    "scope": "Same-period unadjusted net income / average book total assets in USD. A two-point average or supplied documented average; signed income and target rates, explicit zero-denominator states. No automatic annualization, EBIT/interest adjustments, market asset values, industry benchmarks, forecast or investment rating."
   },
+  "https://www.consumerfinance.gov/rules-policy/regulations/1026/37/": {
+    "role": "context",
+    "usedFor": "Mortgage assumption disclosure, note-rate distinction or approval-process context.",
+    "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+  },
+  "https://www.va.gov/forms/26-6381/": {
+    "role": "context",
+    "usedFor": "Mortgage assumption disclosure, note-rate distinction or approval-process context.",
+    "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+  }
+,
+  "https://www.federalreserve.gov/publications/2025-march-consumer-community-context.htm": {
+    "role": "context",
+    "usedFor": "Factor, funding, remittance and small-business financing context; not a statutory APR formula.",
+    "scope": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation."
+  },
+  "https://www.ftc.gov/business-guidance/blog/2020/02/small-business-financing-staff-perspective-outlines-issues": {
+    "role": "context",
+    "usedFor": "Factor, funding, remittance and small-business financing context; not a statutory APR formula.",
+    "scope": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation."
+  },
+  "https://www.irs.gov/pub/irs-prior/f8606--2026.pdf": {
+    "role": "method",
+    "usedFor": "Published final 2026 ordinary allocation lines; the linked narrative instructions remain the 2025 edition for context.",
+    "scope": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation."
+  }
+},
   "pages": {
     "calculator:dscr": {
       "updatedOn": "2026-11-07",
@@ -5359,5 +5391,199 @@
         }
       }
     }
+  ,
+  "calculator:return-on-assets": {
+    "note": "Original accounting or fixed-loan scenario; independently checked examples do not imply professional certification, actual loan terms or approval.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.federalreserve.gov/publications/2025-december-supervision-and-regulation-report-accessible-version.htm": {
+        "role": "method",
+        "usedFor": "Accounting denominator definition.",
+        "scope": "Same-period unadjusted net income / average book total assets in USD. A two-point average or supplied documented average; signed income and target rates, explicit zero-denominator states. No automatic annualization, EBIT/interest adjustments, market asset values, industry benchmarks, forecast or investment rating."
+      }
+    }
+  },
+  "guide:/guides/return-on-assets-average-balance-and-margin/": {
+    "note": "Original accounting or fixed-loan scenario; independently checked examples do not imply professional certification, actual loan terms or approval.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.federalreserve.gov/publications/2025-december-supervision-and-regulation-report-accessible-version.htm": {
+        "role": "method",
+        "usedFor": "Accounting denominator definition.",
+        "scope": "Same-period unadjusted net income / average book total assets in USD. A two-point average or supplied documented average; signed income and target rates, explicit zero-denominator states. No automatic annualization, EBIT/interest adjustments, market asset values, industry benchmarks, forecast or investment rating."
+      }
+    }
+  },
+  "glossary:return-on-assets": {
+    "note": "Original accounting or fixed-loan scenario; independently checked examples do not imply professional certification, actual loan terms or approval.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.federalreserve.gov/publications/2025-december-supervision-and-regulation-report-accessible-version.htm": {
+        "role": "method",
+        "usedFor": "Accounting denominator definition.",
+        "scope": "Same-period unadjusted net income / average book total assets in USD. A two-point average or supplied documented average; signed income and target rates, explicit zero-denominator states. No automatic annualization, EBIT/interest adjustments, market asset values, industry benchmarks, forecast or investment rating."
+      }
+    }
+  },
+  "calculator:assumable-mortgage": {
+    "note": "Original accounting or fixed-loan scenario; independently checked examples do not imply professional certification, actual loan terms or approval.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.consumerfinance.gov/rules-policy/regulations/1026/37/": {
+        "role": "context",
+        "usedFor": "Assumability, note-rate and approval limits; entered fees and terms are not program schedules.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      },
+      "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/": {
+        "role": "context",
+        "usedFor": "Assumability, note-rate and approval limits; entered fees and terms are not program schedules.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      },
+      "https://www.va.gov/forms/26-6381/": {
+        "role": "context",
+        "usedFor": "Assumability, note-rate and approval limits; entered fees and terms are not program schedules.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      }
+    }
+  },
+  "guide:/guides/assumable-mortgage-cash-gap-and-second-loan/": {
+    "note": "Original accounting or fixed-loan scenario; independently checked examples do not imply professional certification, actual loan terms or approval.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.consumerfinance.gov/rules-policy/regulations/1026/37/": {
+        "role": "context",
+        "usedFor": "Assumability, note-rate and approval limits; entered fees and terms are not program schedules.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      },
+      "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/": {
+        "role": "context",
+        "usedFor": "Assumability, note-rate and approval limits; entered fees and terms are not program schedules.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      },
+      "https://www.va.gov/forms/26-6381/": {
+        "role": "context",
+        "usedFor": "Assumability, note-rate and approval limits; entered fees and terms are not program schedules.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      }
+    }
+  },
+  "glossary:mortgage-assumption": {
+    "note": "Original accounting or fixed-loan scenario; independently checked examples do not imply professional certification, actual loan terms or approval.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.consumerfinance.gov/rules-policy/regulations/1026/37/": {
+        "role": "context",
+        "usedFor": "Assumability, note-rate and approval limits; entered fees and terms are not program schedules.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      },
+      "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/": {
+        "role": "context",
+        "usedFor": "Assumability, note-rate and approval limits; entered fees and terms are not program schedules.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      },
+      "https://www.va.gov/forms/26-6381/": {
+        "role": "context",
+        "usedFor": "Assumability, note-rate and approval limits; entered fees and terms are not program schedules.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      }
+    }
   }
+,
+  "calculator:merchant-cash-advance": {
+    "note": "Original scoped worksheet with independently checked examples. MCA dates and sales are assumptions; IRA inputs require established ordinary-case basis. No statutory APR, contract forecast, eligibility determination or return filing is claimed.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.federalreserve.gov/publications/2025-march-consumer-community-context.htm": {
+        "role": "context",
+        "usedFor": "Factor, funding, remittance and small-business financing context; not a statutory APR formula.",
+        "scope": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation."
+      },
+      "https://www.ftc.gov/business-guidance/blog/2020/02/small-business-financing-staff-perspective-outlines-issues": {
+        "role": "context",
+        "usedFor": "Factor, funding, remittance and small-business financing context; not a statutory APR formula.",
+        "scope": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation."
+      }
+    }
+  },
+  "guide:/guides/merchant-cash-advance-factor-rate-and-cash-flow-cost/": {
+    "note": "Original scoped worksheet with independently checked examples. MCA dates and sales are assumptions; IRA inputs require established ordinary-case basis. No statutory APR, contract forecast, eligibility determination or return filing is claimed.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.federalreserve.gov/publications/2025-march-consumer-community-context.htm": {
+        "role": "context",
+        "usedFor": "Factor, funding, remittance and small-business financing context; not a statutory APR formula.",
+        "scope": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation."
+      },
+      "https://www.ftc.gov/business-guidance/blog/2020/02/small-business-financing-staff-perspective-outlines-issues": {
+        "role": "context",
+        "usedFor": "Factor, funding, remittance and small-business financing context; not a statutory APR formula.",
+        "scope": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation."
+      }
+    }
+  },
+  "glossary:merchant-cash-advance": {
+    "note": "Original scoped worksheet with independently checked examples. MCA dates and sales are assumptions; IRA inputs require established ordinary-case basis. No statutory APR, contract forecast, eligibility determination or return filing is claimed.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.federalreserve.gov/publications/2025-march-consumer-community-context.htm": {
+        "role": "context",
+        "usedFor": "Factor, funding, remittance and small-business financing context; not a statutory APR formula.",
+        "scope": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation."
+      },
+      "https://www.ftc.gov/business-guidance/blog/2020/02/small-business-financing-staff-perspective-outlines-issues": {
+        "role": "context",
+        "usedFor": "Factor, funding, remittance and small-business financing context; not a statutory APR formula.",
+        "scope": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation."
+      }
+    }
+  },
+  "calculator:backdoor-roth-ira": {
+    "note": "Original scoped worksheet with independently checked examples. MCA dates and sales are assumptions; IRA inputs require established ordinary-case basis. No statutory APR, contract forecast, eligibility determination or return filing is claimed.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.irs.gov/pub/irs-prior/f8606--2026.pdf": {
+        "role": "method",
+        "usedFor": "Published final 2026 ordinary allocation lines; the linked narrative instructions remain the 2025 edition for context.",
+        "scope": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation."
+      },
+      "https://www.irs.gov/instructions/i8606": {
+        "role": "method",
+        "usedFor": "Published final 2026 ordinary allocation lines; the linked narrative instructions remain the 2025 edition for context.",
+        "scope": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation."
+      }
+    }
+  },
+  "guide:/guides/backdoor-roth-2026-pro-rata-and-basis/": {
+    "note": "Original scoped worksheet with independently checked examples. MCA dates and sales are assumptions; IRA inputs require established ordinary-case basis. No statutory APR, contract forecast, eligibility determination or return filing is claimed.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.irs.gov/pub/irs-prior/f8606--2026.pdf": {
+        "role": "method",
+        "usedFor": "Published final 2026 ordinary allocation lines; the linked narrative instructions remain the 2025 edition for context.",
+        "scope": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation."
+      },
+      "https://www.irs.gov/instructions/i8606": {
+        "role": "method",
+        "usedFor": "Published final 2026 ordinary allocation lines; the linked narrative instructions remain the 2025 edition for context.",
+        "scope": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation."
+      }
+    }
+  },
+  "glossary:backdoor-roth-ira": {
+    "note": "Original scoped worksheet with independently checked examples. MCA dates and sales are assumptions; IRA inputs require established ordinary-case basis. No statutory APR, contract forecast, eligibility determination or return filing is claimed.",
+    "updatedOn": "2026-11-24",
+    "overrides": {
+      "https://www.irs.gov/pub/irs-prior/f8606--2026.pdf": {
+        "role": "method",
+        "usedFor": "Published final 2026 ordinary allocation lines; the linked narrative instructions remain the 2025 edition for context.",
+        "scope": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation."
+      },
+      "https://www.irs.gov/instructions/i8606": {
+        "role": "method",
+        "usedFor": "Published final 2026 ordinary allocation lines; the linked narrative instructions remain the 2025 edition for context.",
+        "scope": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation."
+      }
+    }
+  }
+}
 }

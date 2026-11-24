@@ -1,3 +1,5 @@
+import mcaBackdoorContent from './mca-backdoor-content.json';
+import roaAssumptionContent from './roa-assumption-content.json';
 import rsuEsppContent from './rsu-espp-content.json';
 import ladderIrmaaContent from './ladder-irmaa-content.json';
 import expansionFourContent from './expansion-four-content.json';
@@ -1167,3 +1169,15 @@ relatedCalculatorIds["rsu-tax"]=["espp-tax", "capital-gains-tax", "stock-profit"
 for(const linked of relatedCalculatorIds["rsu-tax"])relatedCalculatorIds[linked]=[...new Set(["rsu-tax",...(relatedCalculatorIds[linked]??[])])];
 relatedCalculatorIds["espp-tax"]=["rsu-tax", "capital-gains-tax", "stock-profit", "income-tax"];
 for(const linked of relatedCalculatorIds["espp-tax"])relatedCalculatorIds[linked]=[...new Set(["espp-tax",...(relatedCalculatorIds[linked]??[])])];
+
+Object.assign(guides,roaAssumptionContent as unknown as Record<string,Guide>);
+relatedCalculatorIds["return-on-assets"]=["return-on-equity", "roic", "ebitda", "roas"];
+for(const linked of relatedCalculatorIds["return-on-assets"])relatedCalculatorIds[linked]=[...new Set(["return-on-assets",...(relatedCalculatorIds[linked]??[])])];
+relatedCalculatorIds["assumable-mortgage"]=["mortgage-comparison", "mortgage", "down-payment", "va-mortgage", "fha-loan"];
+for(const linked of relatedCalculatorIds["assumable-mortgage"])relatedCalculatorIds[linked]=[...new Set(["assumable-mortgage",...(relatedCalculatorIds[linked]??[])])];
+
+Object.assign(guides,mcaBackdoorContent as unknown as Record<string,Guide>);
+relatedCalculatorIds["merchant-cash-advance"]=["invoice-factoring", "business-line-of-credit", "business-loan", "apr", "irr"];
+for(const linked of relatedCalculatorIds["merchant-cash-advance"])relatedCalculatorIds[linked]=[...new Set(["merchant-cash-advance",...(relatedCalculatorIds[linked]??[])])];
+relatedCalculatorIds["backdoor-roth-ira"]=["ira", "roth-ira", "roth-conversion-ladder", "income-tax", "irmaa"];
+for(const linked of relatedCalculatorIds["backdoor-roth-ira"])relatedCalculatorIds[linked]=[...new Set(["backdoor-roth-ira",...(relatedCalculatorIds[linked]??[])])];

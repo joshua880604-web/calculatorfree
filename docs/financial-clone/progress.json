@@ -6433,5 +6433,157 @@
       "Original limited 2026 U.S. worksheet; native Safari, actual payroll/plan outcome, full return, professional review and indexing remain unverified."
     ],
     "updated_at": "2026-11-24"
+  },
+  {
+    "id": "return-on-assets",
+    "mode": "balances",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/return-on-assets.md",
+      "reference": "evidence/roa-assumption-reference-20261124.json",
+      "qa": "evidence/roa-assumption-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no competitor parity, native Safari, professional review, actual lender approval or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "return-on-assets",
+    "mode": "known-average",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/return-on-assets.md",
+      "reference": "evidence/roa-assumption-reference-20261124.json",
+      "qa": "evidence/roa-assumption-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no competitor parity, native Safari, professional review, actual lender approval or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "assumable-mortgage",
+    "mode": "cash-gap",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/assumable-mortgage.md",
+      "reference": "evidence/roa-assumption-reference-20261124.json",
+      "qa": "evidence/roa-assumption-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no competitor parity, native Safari, professional review, actual lender approval or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "assumable-mortgage",
+    "mode": "financed-gap",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/assumable-mortgage.md",
+      "reference": "evidence/roa-assumption-reference-20261124.json",
+      "qa": "evidence/roa-assumption-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no competitor parity, native Safari, professional review, actual lender approval or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "merchant-cash-advance",
+    "mode": "fixed-remittances",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/merchant-cash-advance.md",
+      "reference": "evidence/mca-backdoor-reference-20261124.json",
+      "qa": "evidence/mca-backdoor-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no competitor parity, native Safari, professional review, actual lender approval or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "merchant-cash-advance",
+    "mode": "sales-holdback",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/merchant-cash-advance.md",
+      "reference": "evidence/mca-backdoor-reference-20261124.json",
+      "qa": "evidence/mca-backdoor-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no competitor parity, native Safari, professional review, actual lender approval or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "backdoor-roth-ira",
+    "mode": "conversion-only",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/backdoor-roth-ira.md",
+      "reference": "evidence/mca-backdoor-reference-20261124.json",
+      "qa": "evidence/mca-backdoor-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no competitor parity, native Safari, professional review, actual lender approval or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "backdoor-roth-ira",
+    "mode": "full-year",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/backdoor-roth-ira.md",
+      "reference": "evidence/mca-backdoor-reference-20261124.json",
+      "qa": "evidence/mca-backdoor-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no competitor parity, native Safari, professional review, actual lender approval or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
   }
 ]

@@ -14199,5 +14199,617 @@
         ]
       }
     ]
+  },
+  {
+    "id": "return-on-assets",
+    "title": "Return on Assets Calculator",
+    "category": "Other",
+    "source_url": null,
+    "reference_parity": "not_applicable: original scoped worksheet, no competitor parity claimed",
+    "local_route": "/return-on-assets-calculator.html",
+    "modes": [
+      {
+        "id": "balances",
+        "title": "Beginning & Ending Assets",
+        "description": "Use a two-point average of book total assets with same-period net income.",
+        "fields": [
+          {
+            "key": "net_income",
+            "label": "Net income for the reporting period",
+            "value": 120000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "beginning_assets",
+            "label": "Beginning total assets",
+            "value": 800000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "ending_assets",
+            "label": "Ending total assets",
+            "value": 1200000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "revenue",
+            "label": "Revenue for that same period",
+            "value": 1500000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "target_roa",
+            "label": "Your target ROA for the same period",
+            "value": 12,
+            "unit": "%",
+            "min": -100,
+            "max": 100
+          }
+        ],
+        "formula": "Average assets = (beginning + ending assets) / 2. Period ROA = net income / average assets. Target net income = average assets \u00d7 entered target ROA."
+      },
+      {
+        "id": "known-average",
+        "title": "Known Average Assets",
+        "description": "Use a documented average balance and inspect the matching margin/turnover identity.",
+        "fields": [
+          {
+            "key": "net_income",
+            "label": "Net income for the reporting period",
+            "value": 120000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "average_assets",
+            "label": "Known average total assets",
+            "value": 1000000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "revenue",
+            "label": "Revenue for that same period",
+            "value": 1500000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "target_roa",
+            "label": "Your target ROA for the same period",
+            "value": 12,
+            "unit": "%",
+            "min": -100,
+            "max": 100
+          }
+        ],
+        "formula": "Period ROA = net income / supplied average assets. With positive denominators, net profit margin \u00d7 asset turnover = ROA."
+      }
+    ]
+  },
+  {
+    "id": "assumable-mortgage",
+    "title": "Assumable Mortgage Calculator",
+    "category": "Mortgage and Real Estate",
+    "source_url": null,
+    "reference_parity": "not_applicable: original scoped worksheet, no competitor parity claimed",
+    "local_route": "/assumable-mortgage-calculator.html",
+    "modes": [
+      {
+        "id": "cash-gap",
+        "title": "Pay the Gap in Cash",
+        "description": "Compare assumption with a new mortgage using the same cash contribution and the real remaining loan term.",
+        "fields": [
+          {
+            "key": "price",
+            "label": "Home purchase price",
+            "value": 450000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "assumed_balance",
+            "label": "Existing loan balance to assume",
+            "value": 300000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "assumed_rate",
+            "label": "Assumed loan annual note rate",
+            "value": 3,
+            "unit": "%",
+            "min": 0,
+            "max": 30
+          },
+          {
+            "key": "remaining_months",
+            "label": "Assumed loan remaining term",
+            "value": 240,
+            "unit": "months",
+            "min": 1,
+            "max": 600,
+            "step": 1
+          },
+          {
+            "key": "assumption_fees",
+            "label": "Assumption fees paid at closing",
+            "value": 3000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "new_rate",
+            "label": "Alternative new mortgage annual note rate",
+            "value": 6.5,
+            "unit": "%",
+            "min": 0,
+            "max": 30
+          },
+          {
+            "key": "new_months",
+            "label": "Alternative new mortgage term",
+            "value": 360,
+            "unit": "months",
+            "min": 1,
+            "max": 600,
+            "step": 1
+          },
+          {
+            "key": "new_fees",
+            "label": "New mortgage fees paid at closing",
+            "value": 6000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "horizon_months",
+            "label": "Same comparison horizon",
+            "value": 60,
+            "unit": "months",
+            "min": 1,
+            "max": 600,
+            "step": 1
+          }
+        ],
+        "formula": "Cash gap = price \u2212 assumed balance. Same-horizon financing cost = separately paid fees + interest through horizon. Debt still owed is shown separately."
+      },
+      {
+        "id": "financed-gap",
+        "title": "Finance Part of the Gap",
+        "description": "Add a separately amortizing gap loan and compare combined cash flows with one new mortgage.",
+        "fields": [
+          {
+            "key": "price",
+            "label": "Home purchase price",
+            "value": 450000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "assumed_balance",
+            "label": "Existing loan balance to assume",
+            "value": 300000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "assumed_rate",
+            "label": "Assumed loan annual note rate",
+            "value": 3,
+            "unit": "%",
+            "min": 0,
+            "max": 30
+          },
+          {
+            "key": "remaining_months",
+            "label": "Assumed loan remaining term",
+            "value": 240,
+            "unit": "months",
+            "min": 1,
+            "max": 600,
+            "step": 1
+          },
+          {
+            "key": "assumption_fees",
+            "label": "Assumption fees paid at closing",
+            "value": 3000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "buyer_cash",
+            "label": "Buyer cash toward purchase price, excluding fees",
+            "value": 50000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "gap_rate",
+            "label": "Gap loan annual note rate (ignored for zero gap loan)",
+            "value": 9,
+            "unit": "%",
+            "min": 0,
+            "max": 30
+          },
+          {
+            "key": "gap_months",
+            "label": "Gap loan term (ignored for zero gap loan)",
+            "value": 120,
+            "unit": "months",
+            "min": 1,
+            "max": 600,
+            "step": 1
+          },
+          {
+            "key": "gap_fees",
+            "label": "Gap loan fees paid at closing (ignored for zero gap loan)",
+            "value": 2000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "new_rate",
+            "label": "Alternative new mortgage annual note rate",
+            "value": 6.5,
+            "unit": "%",
+            "min": 0,
+            "max": 30
+          },
+          {
+            "key": "new_months",
+            "label": "Alternative new mortgage term",
+            "value": 360,
+            "unit": "months",
+            "min": 1,
+            "max": 600,
+            "step": 1
+          },
+          {
+            "key": "new_fees",
+            "label": "New mortgage fees paid at closing",
+            "value": 6000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "horizon_months",
+            "label": "Same comparison horizon",
+            "value": 60,
+            "unit": "months",
+            "min": 1,
+            "max": 600,
+            "step": 1
+          }
+        ],
+        "formula": "Gap loan = price \u2212 assumed balance \u2212 buyer cash. New-loan principal = price \u2212 the same buyer cash. Compare both paths after identical monthly payment dates."
+      }
+    ]
+  },
+  {
+    "id": "merchant-cash-advance",
+    "title": "Merchant Cash Advance Calculator",
+    "category": "Other",
+    "source_url": null,
+    "reference_parity": "not_applicable: original scoped worksheet, no competitor parity claimed",
+    "local_route": "/merchant-cash-advance-calculator.html",
+    "modes": [
+      {
+        "id": "fixed-remittances",
+        "title": "Fixed Remittance Count",
+        "description": "Use a stated count and actual payment calendar, including fees withheld from funding.",
+        "fields": [
+          {
+            "key": "advance",
+            "label": "Gross advance before withheld fees",
+            "value": 50000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "factor",
+            "label": "Factor rate (1.30 means total remittances of 130% of advance)",
+            "value": 1.3,
+            "min": 1,
+            "max": 3
+          },
+          {
+            "key": "withheld_fees",
+            "label": "Upfront fees withheld from funding",
+            "value": 1500,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "funding_date",
+            "label": "Funding date",
+            "value": "2026-12-01",
+            "type": "date"
+          },
+          {
+            "key": "first_debit",
+            "label": "First remittance date",
+            "value": "2026-12-02",
+            "type": "date"
+          },
+          {
+            "key": "calendar",
+            "label": "Assumed remittance calendar",
+            "value": "Weekdays (Mon\u2013Fri only)",
+            "type": "select",
+            "options": [
+              "Every calendar day",
+              "Weekdays (Mon\u2013Fri only)",
+              "Weekly (every 7 days)"
+            ],
+            "hint": "Weekday mode skips weekends only; public holidays are not excluded."
+          },
+          {
+            "key": "remittances",
+            "label": "Number of remittances",
+            "value": 130,
+            "unit": "payments",
+            "min": 1,
+            "max": 1000,
+            "step": 1
+          }
+        ],
+        "formula": "Total remittances = gross advance \u00d7 factor. Net funding = advance \u2212 withheld fee. Find effective annual r with net funding = \u03a3 remittance / (1+r)^(calendar days/365)."
+      },
+      {
+        "id": "sales-holdback",
+        "title": "Sales & Holdback Scenario",
+        "description": "Assume constant eligible sales per selected interval, with a reduced final remittance.",
+        "fields": [
+          {
+            "key": "advance",
+            "label": "Gross advance before withheld fees",
+            "value": 50000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "factor",
+            "label": "Factor rate (1.30 means total remittances of 130% of advance)",
+            "value": 1.3,
+            "min": 1,
+            "max": 3
+          },
+          {
+            "key": "withheld_fees",
+            "label": "Upfront fees withheld from funding",
+            "value": 1500,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "funding_date",
+            "label": "Funding date",
+            "value": "2026-12-01",
+            "type": "date"
+          },
+          {
+            "key": "first_debit",
+            "label": "First remittance date",
+            "value": "2026-12-02",
+            "type": "date"
+          },
+          {
+            "key": "calendar",
+            "label": "Assumed remittance calendar",
+            "value": "Weekdays (Mon\u2013Fri only)",
+            "type": "select",
+            "options": [
+              "Every calendar day",
+              "Weekdays (Mon\u2013Fri only)",
+              "Weekly (every 7 days)"
+            ],
+            "hint": "Weekday mode skips weekends only; public holidays are not excluded."
+          },
+          {
+            "key": "sales_per_interval",
+            "label": "Assumed eligible sales per remittance interval",
+            "value": 5000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "holdback",
+            "label": "Share of each interval\u2019s eligible sales remitted",
+            "value": 10,
+            "unit": "%",
+            "min": 1e-06,
+            "max": 100
+          }
+        ],
+        "formula": "Assumed normal remittance = eligible sales per interval \u00d7 holdback. Continue to the contracted total and truncate the final remittance. Annualize the resulting dated cash flows."
+      }
+    ]
+  },
+  {
+    "id": "backdoor-roth-ira",
+    "title": "Backdoor Roth IRA Calculator: 2026",
+    "category": "Retirement",
+    "source_url": null,
+    "reference_parity": "not_applicable: original scoped worksheet, no competitor parity claimed",
+    "local_route": "/backdoor-roth-ira-calculator.html",
+    "modes": [
+      {
+        "id": "conversion-only",
+        "title": "Conversions Only",
+        "description": "No other included distributions; all current-year nondeductible contributions are made by year end.",
+        "fields": [
+          {
+            "key": "case_scope",
+            "label": "Scope of this estimate",
+            "value": "Ordinary case; basis confirmed",
+            "type": "select",
+            "options": [
+              "Ordinary case; basis confirmed",
+              "Special adjustments or unsure"
+            ],
+            "hint": "Use established nondeductible basis. Select the other option if special adjustments apply or you are unsure."
+          },
+          {
+            "key": "prior_basis",
+            "label": "Established nondeductible basis from earlier years",
+            "value": 0,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "current_nondeductible",
+            "label": "Total nondeductible IRA contributions for tax year 2026",
+            "value": 7500,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "year_end_iras",
+            "label": "All included traditional / SEP / SIMPLE IRA values on December 31, 2026",
+            "value": 92500,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "outstanding_rollovers",
+            "label": "Included outstanding IRA-to-IRA rollovers, not already counted",
+            "value": 0,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "converted",
+            "label": "Total net Roth conversions during calendar 2026",
+            "value": 7500,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "assumed_rate",
+            "label": "Your assumed incremental income-tax rate on conversions",
+            "value": 24,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          }
+        ],
+        "formula": "Nontaxable fraction = min(1, eligible basis / (December 31 IRA values + included rollovers + conversions)). Taxable conversion = conversion \u00d7 (1 \u2212 fraction)."
+      },
+      {
+        "id": "full-year",
+        "title": "Full-Year Basis Allocation",
+        "description": "Separate other included distributions and 2026 contributions made in early 2027.",
+        "fields": [
+          {
+            "key": "case_scope",
+            "label": "Scope of this estimate",
+            "value": "Ordinary case; basis confirmed",
+            "type": "select",
+            "options": [
+              "Ordinary case; basis confirmed",
+              "Special adjustments or unsure"
+            ],
+            "hint": "Use established nondeductible basis. Select the other option if special adjustments apply or you are unsure."
+          },
+          {
+            "key": "prior_basis",
+            "label": "Established nondeductible basis from earlier years",
+            "value": 0,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "current_nondeductible",
+            "label": "Total nondeductible IRA contributions for tax year 2026",
+            "value": 7500,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "next_year_contribution",
+            "label": "Of the 2026 contribution above, amount made in early 2027",
+            "value": 0,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "year_end_iras",
+            "label": "All included traditional / SEP / SIMPLE IRA values on December 31, 2026",
+            "value": 92500,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "outstanding_rollovers",
+            "label": "Included outstanding IRA-to-IRA rollovers, not already counted",
+            "value": 0,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "converted",
+            "label": "Total net Roth conversions during calendar 2026",
+            "value": 7500,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "other_distributions",
+            "label": "Other included 2026 IRA distributions, excluding conversions",
+            "value": 10000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "assumed_rate",
+            "label": "Your assumed incremental income-tax rate on conversions",
+            "value": 24,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          }
+        ],
+        "formula": "Eligible basis excludes following-year contributions. Allocate the capped fraction across conversions and other included distributions. Remaining basis = total basis \u2212 both nontaxable allocations."
+      }
+    ]
   }
 ]

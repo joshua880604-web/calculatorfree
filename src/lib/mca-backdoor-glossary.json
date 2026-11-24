@@ -1,0 +1,153 @@
+[
+  {
+    "slug": "merchant-cash-advance",
+    "name": "Merchant cash advance (MCA)",
+    "title": "Merchant cash advance (MCA): Formula and Worked Example",
+    "description": "A merchant cash advance provides funding against future business receipts under a contract. A factor-based remittance total and a sales holdback percentage answer different cash-flow questions.",
+    "category": "Business & pricing",
+    "aliases": [],
+    "definition": "A merchant cash advance provides funding against future business receipts under a contract. A factor-based remittance total and a sales holdback percentage answer different cash-flow questions.",
+    "explanation": "A factor rate of 1.30 on a $50,000 advance means $65,000 of contracted remittances. With a $1,500 withheld fee, the business receives $48,500 and pays $16,500 more than that net funding. Annualized cost also depends on the actual remittance dates.",
+    "formula": "Total remittances = advance \u00d7 factor. Net funding = advance \u2212 withheld fees. Effective annual r solves net funding = \u03a3 remittance / (1+r)^(calendar days/365).",
+    "formulaNote": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation.",
+    "example": {
+      "title": "Reconcile gross advance, withheld fee and total cash cost",
+      "intro": "advance: 50000; factor: 1.3; withheld_fees: 1500; funding_date: 2026-12-01; first_debit: 2026-12-02; calendar: Weekdays (Mon\u2013Fri only); remittances: 130",
+      "steps": [
+        "50,000 \u00d7 1.30 = 65,000 contracted remittances.",
+        "Net funding = 50,000 \u2212 1,500 = 48,500.",
+        "Cash cost = 65,000 \u2212 48,500 = 16,500; the factor markup alone is only 15,000."
+      ],
+      "answer": "Total financing cash cost above net funding: 16,500.00 under these assumptions.",
+      "assumptions": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation.",
+      "calculator": {
+        "id": "merchant-cash-advance",
+        "mode": "fixed-remittances",
+        "values": {
+          "advance": 50000,
+          "factor": 1.3,
+          "withheld_fees": 1500,
+          "funding_date": "2026-12-01",
+          "first_debit": "2026-12-02",
+          "calendar": "Weekdays (Mon\u2013Fri only)",
+          "remittances": 130
+        },
+        "expected": [
+          {
+            "label": "Total financing cash cost above net funding",
+            "value": 16500.0,
+            "tolerance": 1e-05
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Keep the comparison basis consistent",
+      "text": "A 1.30 factor is not a 30% annual rate. Timing, amortizing remittances and fees withheld from proceeds change the effective annual cash-flow rate. A constant-sales scenario is not a guaranteed payoff date."
+    },
+    "tools": [
+      {
+        "id": "merchant-cash-advance",
+        "text": "Restore the example and inspect the accounting or loan bridge."
+      }
+    ],
+    "related": [
+      "factoring-reserve",
+      "apr"
+    ],
+    "sources": [
+      {
+        "title": "Federal Reserve, March 2025: small-business financing and MCA cost context",
+        "url": "https://www.federalreserve.gov/publications/2025-march-consumer-community-context.htm"
+      },
+      {
+        "title": "FTC staff perspective, February 2020: MCA factors, fees and reconciliation concerns",
+        "url": "https://www.ftc.gov/business-guidance/blog/2020/02/small-business-financing-staff-perspective-outlines-issues"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "scope": "One USD factor-based advance; one fee withheld at funding; all remittances later than funding. Fixed count or constant eligible-sales/holdback scenario, actual calendar dates and Actual/365 effective annual IRR. At most 1,000 remittances /3,650 days; IRR above 1,000,000% flagged. No legal APR, state disclosures, variable-sales forecast, extra fees, refinancing or actual contract reconciliation.",
+    "guides": [
+      {
+        "title": "Merchant Cash Advance Calculator",
+        "path": "/guides/merchant-cash-advance-factor-rate-and-cash-flow-cost/"
+      }
+    ]
+  },
+  {
+    "slug": "backdoor-roth-ira",
+    "name": "Backdoor Roth IRA and pro-rata basis",
+    "title": "Backdoor Roth IRA and pro-rata basis: Formula and Worked Example",
+    "description": "A backdoor Roth strategy generally involves a nondeductible traditional IRA contribution followed by a Roth conversion. The ordinary taxable split depends on the person\u2019s aggregate IRA basis and included IRA pool, not solely the new account.",
+    "category": "Retirement",
+    "aliases": [],
+    "definition": "A backdoor Roth strategy generally involves a nondeductible traditional IRA contribution followed by a Roth conversion. The ordinary taxable split depends on the person\u2019s aggregate IRA basis and included IRA pool, not solely the new account.",
+    "explanation": "A backdoor Roth conversion is not automatically tax-free. With $7,500 established nondeductible basis, $92,500 left in included IRAs at year end and $7,500 converted, the ordinary pool is $100,000. Only $562.50 of the conversion is nontaxable; $6,937.50 is taxable.",
+    "formula": "Eligible basis = prior basis + current-year nondeductible contributions \u2212 following-year portion. Fraction = min(1, eligible basis / (year-end IRA values + included rollovers + other distributions + conversions)). Remaining basis = total basis \u2212 both nontaxable allocations.",
+    "formulaNote": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation.",
+    "example": {
+      "title": "Allocate basis across existing IRA balances",
+      "intro": "case_scope: Ordinary case; basis confirmed; prior_basis: 0; current_nondeductible: 7500; year_end_iras: 92500; outstanding_rollovers: 0; converted: 7500; assumed_rate: 24",
+      "steps": [
+        "Pool = 92,500 year-end values + 7,500 conversion = 100,000.",
+        "7,500 / 100,000 = 7.5% nontaxable fraction; conversion basis is 562.50.",
+        "Taxable conversion = 7,500 \u2212 562.50 = 6,937.50."
+      ],
+      "answer": "Taxable portion of 2026 Roth conversions: 6,937.50 under these assumptions.",
+      "assumptions": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation.",
+      "calculator": {
+        "id": "backdoor-roth-ira",
+        "mode": "conversion-only",
+        "values": {
+          "case_scope": "Ordinary case; basis confirmed",
+          "prior_basis": 0,
+          "current_nondeductible": 7500,
+          "year_end_iras": 92500,
+          "outstanding_rollovers": 0,
+          "converted": 7500,
+          "assumed_rate": 24
+        },
+        "expected": [
+          {
+            "label": "Taxable portion of 2026 Roth conversions",
+            "value": 6937.5,
+            "tolerance": 1e-05
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Keep the comparison basis consistent",
+      "text": "A separate new IRA does not isolate nondeductible basis from the person\u2019s other included IRAs. Contribution tax year and calendar conversion year can differ; a contribution made in early 2027 for 2026 does not shelter a 2026 conversion in this ordinary calculation."
+    },
+    "tools": [
+      {
+        "id": "backdoor-roth-ira",
+        "text": "Restore the example and inspect the accounting or loan bridge."
+      }
+    ],
+    "related": [
+      "traditional-vs-roth-ira",
+      "roth-conversion-ladder",
+      "roth-ira-five-year-rules"
+    ],
+    "sources": [
+      {
+        "title": "IRS 2026 Form 8606: final published form, ordinary allocation lines",
+        "url": "https://www.irs.gov/pub/irs-prior/f8606--2026.pdf"
+      },
+      {
+        "title": "IRS Form 8606 instructions: 2025 edition, explanatory context",
+        "url": "https://www.irs.gov/instructions/i8606"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "scope": "U.S. 2026 ordinary individual traditional-IRA pro-rata allocation using established nondeductible basis, aggregated included December 31 IRA values, eligible outstanding IRA-to-IRA rollovers, conversions and other included distributions. Following-year contributions excluded from current allocation but retained in basis. Published 2026 Form 8606; 2025 instructions for context. No contribution/deduction eligibility engine, special adjustments, inherited/mega-backdoor plan, penalties, five-year withdrawal or full-return calculation.",
+    "guides": [
+      {
+        "title": "Backdoor Roth IRA Calculator: 2026",
+        "path": "/guides/backdoor-roth-2026-pro-rata-and-basis/"
+      }
+    ]
+  }
+]

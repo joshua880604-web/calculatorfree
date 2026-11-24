@@ -46,8 +46,8 @@ test('Education and depreciation recommendations match the next task rather than
  assert.ok(relatedCalculatorIds['operating-cash-flow'].includes('depreciation'));
  assert.ok(relatedCalculatorIds['depreciation'].includes('operating-cash-flow'));
 });
-test('Mortgage task groups preserve the eleven associated guides exactly once',()=>{
+test('Mortgage task groups preserve the twelve associated guides exactly once',()=>{
  const paths=[mortgagePaymentGuide,...mortgageReadingGroups.flatMap(g=>g.guides.map(guide=>guide.path))];
  const actual=editorialGuides.filter(g=>g.calculatorIds.includes('mortgage')).map(g=>g.path);
- assert.equal(paths.length,11);assert.equal(new Set(paths).size,11);assert.deepEqual([...paths].sort(),actual.sort());
+ assert.equal(paths.length,12);assert.equal(new Set(paths).size,12);assert.deepEqual([...paths].sort(),actual.sort());
 });

@@ -1,0 +1,281 @@
+{
+  "return-on-assets": [
+    {
+      "title": "Calculate 12% period ROA from two balance dates",
+      "mode": "balances",
+      "values": {
+        "net_income": 120000,
+        "beginning_assets": 800000,
+        "ending_assets": 1200000,
+        "revenue": 1500000,
+        "target_roa": 12
+      },
+      "inputs": "net_income: 120000; beginning_assets: 800000; ending_assets: 1200000; revenue: 1500000; target_roa: 12",
+      "steps": [
+        "Average assets = (800,000 + 1,200,000) / 2 = 1,000,000.",
+        "120,000 / 1,000,000 = 12% for the income reporting period."
+      ],
+      "answer": "Return on assets for entered period: 12.00% under these assumptions.",
+      "expected": {
+        "label": "Return on assets for entered period",
+        "value": 12.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Use a documented average rather than two endpoints",
+      "mode": "known-average",
+      "values": {
+        "net_income": 120000,
+        "revenue": 1500000,
+        "target_roa": 12,
+        "average_assets": 1500000
+      },
+      "inputs": "net_income: 120000; revenue: 1500000; target_roa: 12; average_assets: 1500000",
+      "steps": [
+        "A supplied 1,500,000 average gives 120,000 / 1,500,000 = 8%.",
+        "The higher average changes the denominator; no annualization is added."
+      ],
+      "answer": "Return on assets for entered period: 8.00% under these assumptions.",
+      "expected": {
+        "label": "Return on assets for entered period",
+        "value": 8.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Preserve a loss as negative ROA",
+      "mode": "known-average",
+      "values": {
+        "net_income": -50000,
+        "revenue": 1500000,
+        "target_roa": 12,
+        "average_assets": 1000000
+      },
+      "inputs": "net_income: -50000; revenue: 1500000; target_roa: 12; average_assets: 1000000",
+      "steps": [
+        "\u221250,000 / 1,000,000 = \u22125%.",
+        "The negative return is retained."
+      ],
+      "answer": "Return on assets for entered period: -5.00% under these assumptions.",
+      "expected": {
+        "label": "Return on assets for entered period",
+        "value": -5.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Estimate income required for a 15% period target",
+      "mode": "balances",
+      "values": {
+        "net_income": 120000,
+        "beginning_assets": 800000,
+        "ending_assets": 1200000,
+        "revenue": 1500000,
+        "target_roa": 15
+      },
+      "inputs": "net_income: 120000; beginning_assets: 800000; ending_assets: 1200000; revenue: 1500000; target_roa: 15",
+      "steps": [
+        "Target income = 1,000,000 \u00d7 15% = 150,000.",
+        "150,000 \u2212 120,000 = 30,000 additional income at unchanged average assets."
+      ],
+      "answer": "Target net income minus actual net income: 30,000.00 under these assumptions.",
+      "expected": {
+        "label": "Target net income minus actual net income",
+        "value": 30000.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Keep direct ROA when revenue is zero",
+      "mode": "known-average",
+      "values": {
+        "net_income": 120000,
+        "revenue": 0,
+        "target_roa": 12,
+        "average_assets": 1000000
+      },
+      "inputs": "net_income: 120000; revenue: 0; target_roa: 12; average_assets: 1000000",
+      "steps": [
+        "Direct ROA remains 120,000 / 1,000,000 = 12%.",
+        "Margin is undefined because revenue is zero; the margin/turnover identity is not asserted."
+      ],
+      "answer": "Return on assets for entered period: 12.00% under these assumptions.",
+      "expected": {
+        "label": "Return on assets for entered period",
+        "value": 12.0,
+        "tolerance": 1e-05
+      }
+    }
+  ],
+  "assumable-mortgage": [
+    {
+      "title": "Compare the same 150,000 cash contribution",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "inputs": "price: 450000; assumed_balance: 300000; assumed_rate: 3; remaining_months: 240; assumption_fees: 3000; new_rate: 6.5; new_months: 360; new_fees: 6000; horizon_months: 60",
+      "steps": [
+        "450,000 price \u2212 300,000 assumed balance = 150,000 cash toward price.",
+        "Add 3,000 assumption fees for 153,000 cash at closing. The alternative uses the same down payment, plus its own fees."
+      ],
+      "answer": "Purchase price minus assumed balance: 150,000.00 under these assumptions.",
+      "expected": {
+        "label": "Purchase price minus assumed balance",
+        "value": 150000.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Borrow the remaining 100,000 gap",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "inputs": "price: 450000; assumed_balance: 300000; assumed_rate: 3; remaining_months: 240; assumption_fees: 3000; new_rate: 6.5; new_months: 360; new_fees: 6000; horizon_months: 60; buyer_cash: 50000; gap_rate: 9; gap_months: 120; gap_fees: 2000",
+      "steps": [
+        "450,000 \u2212 300,000 \u2212 50,000 buyer cash = 100,000 second loan.",
+        "The alternative new mortgage is 400,000, matching total initial borrowing."
+      ],
+      "answer": "Gap loan principal: 100,000.00 under these assumptions.",
+      "expected": {
+        "label": "Gap loan principal",
+        "value": 100000.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Ignore gap-loan charges when the gap is fully cash-funded",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 150000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 99999
+      },
+      "inputs": "price: 450000; assumed_balance: 300000; assumed_rate: 3; remaining_months: 240; assumption_fees: 3000; new_rate: 6.5; new_months: 360; new_fees: 6000; horizon_months: 60; buyer_cash: 150000; gap_rate: 9; gap_months: 120; gap_fees: 99999",
+      "steps": [
+        "Buyer cash covers the full 150,000 gap, leaving zero gap principal.",
+        "No gap-loan payment, interest or fee is charged; the entered gap fee is ignored."
+      ],
+      "answer": "Gap loan principal: 0.00 under these assumptions.",
+      "expected": {
+        "label": "Gap loan principal",
+        "value": 0.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Track payoff at a horizon beyond the old remaining term",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 12,
+        "assumption_fees": 0,
+        "new_rate": 0,
+        "new_months": 24,
+        "new_fees": 0,
+        "horizon_months": 24
+      },
+      "inputs": "price: 450000; assumed_balance: 300000; assumed_rate: 0; remaining_months: 12; assumption_fees: 0; new_rate: 0; new_months: 24; new_fees: 0; horizon_months: 24",
+      "steps": [
+        "Both zero-rate loans finish by month 24.",
+        "Different payment timing does not create financing profit: interest and fees are zero on both paths."
+      ],
+      "answer": "New-loan cost minus assumption cost through horizon: 0.00 under these assumptions.",
+      "expected": {
+        "label": "New-loan cost minus assumption cost through horizon",
+        "value": 0.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Retain a negative assumption advantage when new borrowing is cheaper",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 12,
+        "remaining_months": 240,
+        "assumption_fees": 9000,
+        "new_rate": 2,
+        "new_months": 360,
+        "new_fees": 0,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "inputs": "price: 450000; assumed_balance: 300000; assumed_rate: 12; remaining_months: 240; assumption_fees: 9000; new_rate: 2; new_months: 360; new_fees: 0; horizon_months: 60; buyer_cash: 50000; gap_rate: 9; gap_months: 120; gap_fees: 2000",
+      "steps": [
+        "The assumed first loan has the higher note rate and fees in this hypothetical case.",
+        "The signed cost difference is negative, so the model does not present assumption as universally cheaper."
+      ],
+      "answer": "New-loan cost minus assumption cost through horizon: -183,931.83 under these assumptions.",
+      "expected": {
+        "label": "New-loan cost minus assumption cost through horizon",
+        "value": -183931.82621330972,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Show remaining debt before either loan is fully repaid",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 1
+      },
+      "inputs": "price: 450000; assumed_balance: 300000; assumed_rate: 3; remaining_months: 240; assumption_fees: 3000; new_rate: 6.5; new_months: 360; new_fees: 6000; horizon_months: 1",
+      "steps": [
+        "After one monthly payment, most principal remains outstanding.",
+        "The comparison includes that remaining payoff rather than counting a lower payment as a reduction of debt."
+      ],
+      "answer": "Assumption total debt remaining at horizon: 299,086.21 under these assumptions.",
+      "expected": {
+        "label": "Assumption total debt remaining at horizon",
+        "value": 299086.20720643824,
+        "tolerance": 1e-05
+      }
+    }
+  ]
+}

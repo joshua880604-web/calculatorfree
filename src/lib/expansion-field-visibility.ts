@@ -1,5 +1,6 @@
 import type {Values} from './types';
 export function expansionFieldVisible(id:string,values:Values,key:string){
+ if(id==='assumable-mortgage'&&['gap_rate','gap_months','gap_fees'].includes(key)){const gap=Number(values.price)-Number(values.assumed_balance)-Number(values.buyer_cash);return !Number.isFinite(gap)||gap>0;}
  if(id==='rsu-tax'&&key==='prior_supplemental')return values.method==='2026 optional supplemental method';
  if(id==='rsu-tax'&&key==='actual_federal')return values.method==='Enter actual federal withholding';
  if(id==='irmaa'&&key==='part_d_plan')return values.coverage!=='Part B only';

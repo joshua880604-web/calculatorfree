@@ -1,0 +1,330 @@
+{
+  "merchant-cash-advance": [
+    {
+      "title": "Reconcile gross advance, withheld fee and total cash cost",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 130
+      },
+      "inputs": "advance: 50000; factor: 1.3; withheld_fees: 1500; funding_date: 2026-12-01; first_debit: 2026-12-02; calendar: Weekdays (Mon\u2013Fri only); remittances: 130",
+      "steps": [
+        "50,000 \u00d7 1.30 = 65,000 contracted remittances.",
+        "Net funding = 50,000 \u2212 1,500 = 48,500.",
+        "Cash cost = 65,000 \u2212 48,500 = 16,500; the factor markup alone is only 15,000."
+      ],
+      "answer": "Total financing cash cost above net funding: 16,500.00 under these assumptions.",
+      "expected": {
+        "label": "Total financing cash cost above net funding",
+        "value": 16500.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Annualize the explicit weekday remittance dates",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 130
+      },
+      "inputs": "advance: 50000; factor: 1.3; withheld_fees: 1500; funding_date: 2026-12-01; first_debit: 2026-12-02; calendar: Weekdays (Mon\u2013Fri only); remittances: 130",
+      "steps": [
+        "The 130 remittances are 500 each, beginning December 2 after December 1 funding.",
+        "Skip weekends only, then discount each dated outflow on an Actual/365 basis.",
+        "The resulting compounded effective annual IRR is not the 30% factor markup or a legal APR."
+      ],
+      "answer": "Illustrative effective annual IRR, not legal APR: 243.3222% under these assumptions.",
+      "expected": {
+        "label": "Illustrative effective annual IRR, not legal APR",
+        "value": 243.32223654243344,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Match a 10% holdback to 5,000 eligible sales per interval",
+      "mode": "sales-holdback",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "sales_per_interval": 5000,
+        "holdback": 10
+      },
+      "inputs": "advance: 50000; factor: 1.3; withheld_fees: 1500; funding_date: 2026-12-01; first_debit: 2026-12-02; calendar: Weekdays (Mon\u2013Fri only); sales_per_interval: 5000; holdback: 10",
+      "steps": [
+        "5,000 \u00d7 10% = 500 per eligible interval.",
+        "65,000 / 500 = 130 assumed remittances at constant sales."
+      ],
+      "answer": "Assumed number of remittances: 130.00 under these assumptions.",
+      "expected": {
+        "label": "Assumed number of remittances",
+        "value": 130.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Reduce the final remittance to the remaining contract amount",
+      "mode": "sales-holdback",
+      "values": {
+        "advance": 1000,
+        "factor": 1.3,
+        "withheld_fees": 0,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "sales_per_interval": 3000,
+        "holdback": 10
+      },
+      "inputs": "advance: 1000; factor: 1.3; withheld_fees: 0; funding_date: 2026-12-01; first_debit: 2026-12-02; calendar: Weekdays (Mon\u2013Fri only); sales_per_interval: 3000; holdback: 10",
+      "steps": [
+        "Contracted total is 1,300 and normal remittances are 300.",
+        "Four normal remittances total 1,200; the fifth is only 100."
+      ],
+      "answer": "Final scheduled remittance: 100.00 under these assumptions.",
+      "expected": {
+        "label": "Final scheduled remittance",
+        "value": 100.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Extend the scenario when eligible sales are lower",
+      "mode": "sales-holdback",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "sales_per_interval": 2500,
+        "holdback": 10
+      },
+      "inputs": "advance: 50000; factor: 1.3; withheld_fees: 1500; funding_date: 2026-12-01; first_debit: 2026-12-02; calendar: Weekdays (Mon\u2013Fri only); sales_per_interval: 2500; holdback: 10",
+      "steps": [
+        "2,500 \u00d7 10% = 250 per interval.",
+        "The unchanged 65,000 total requires 260 remittances. Actual revenue is not forecast."
+      ],
+      "answer": "Assumed number of remittances: 260.00 under these assumptions.",
+      "expected": {
+        "label": "Assumed number of remittances",
+        "value": 260.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Keep zero financing cost at a 1.00 factor with no fee",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1,
+        "withheld_fees": 0,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 130
+      },
+      "inputs": "advance: 50000; factor: 1; withheld_fees: 0; funding_date: 2026-12-01; first_debit: 2026-12-02; calendar: Weekdays (Mon\u2013Fri only); remittances: 130",
+      "steps": [
+        "Net funding and total remittances are both 50,000.",
+        "Every future remittance discounts to the funding total at a zero rate."
+      ],
+      "answer": "Illustrative effective annual IRR, not legal APR: 0.0000% under these assumptions.",
+      "expected": {
+        "label": "Illustrative effective annual IRR, not legal APR",
+        "value": 0.0,
+        "tolerance": 1e-05
+      }
+    }
+  ],
+  "backdoor-roth-ira": [
+    {
+      "title": "Allocate basis across existing IRA balances",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24
+      },
+      "inputs": "case_scope: Ordinary case; basis confirmed; prior_basis: 0; current_nondeductible: 7500; year_end_iras: 92500; outstanding_rollovers: 0; converted: 7500; assumed_rate: 24",
+      "steps": [
+        "Pool = 92,500 year-end values + 7,500 conversion = 100,000.",
+        "7,500 / 100,000 = 7.5% nontaxable fraction; conversion basis is 562.50.",
+        "Taxable conversion = 7,500 \u2212 562.50 = 6,937.50."
+      ],
+      "answer": "Taxable portion of 2026 Roth conversions: 6,937.50 under these assumptions.",
+      "expected": {
+        "label": "Taxable portion of 2026 Roth conversions",
+        "value": 6937.5,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Convert with no other included year-end IRA value",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24
+      },
+      "inputs": "case_scope: Ordinary case; basis confirmed; prior_basis: 0; current_nondeductible: 7500; year_end_iras: 0; outstanding_rollovers: 0; converted: 7500; assumed_rate: 24",
+      "steps": [
+        "Basis and the conversion pool are both 7,500.",
+        "The fraction is capped at 100%, so the conversion is nontaxable under this ordinary case."
+      ],
+      "answer": "Taxable portion of 2026 Roth conversions: 0.00 under these assumptions.",
+      "expected": {
+        "label": "Taxable portion of 2026 Roth conversions",
+        "value": 0.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Keep growth above nondeductible basis taxable",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 7600,
+        "assumed_rate": 24
+      },
+      "inputs": "case_scope: Ordinary case; basis confirmed; prior_basis: 0; current_nondeductible: 7500; year_end_iras: 0; outstanding_rollovers: 0; converted: 7600; assumed_rate: 24",
+      "steps": [
+        "Basis is 7,500 but 7,600 is converted after assumed growth.",
+        "The conversion uses 7,500 of basis, leaving 100 taxable."
+      ],
+      "answer": "Taxable portion of 2026 Roth conversions: 100.00 under these assumptions.",
+      "expected": {
+        "label": "Taxable portion of 2026 Roth conversions",
+        "value": 100.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Exclude an early-2027 contribution from the 2026 allocation",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 7500,
+        "other_distributions": 0
+      },
+      "inputs": "case_scope: Ordinary case; basis confirmed; prior_basis: 0; current_nondeductible: 7500; year_end_iras: 92500; outstanding_rollovers: 0; converted: 7500; assumed_rate: 24; next_year_contribution: 7500; other_distributions: 0",
+      "steps": [
+        "All 7,500 of the 2026 contribution was made in early 2027.",
+        "With no prior basis, eligible 2026 allocation basis is zero; the 7,500 conversion is taxable.",
+        "The 7,500 contribution remains in total carryforward basis."
+      ],
+      "answer": "Taxable portion of 2026 Roth conversions: 7,500.00 under these assumptions.",
+      "expected": {
+        "label": "Taxable portion of 2026 Roth conversions",
+        "value": 7500.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Share basis once across conversion and other included distributions",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "inputs": "case_scope: Ordinary case; basis confirmed; prior_basis: 0; current_nondeductible: 7500; year_end_iras: 82500; outstanding_rollovers: 0; converted: 7500; assumed_rate: 24; next_year_contribution: 0; other_distributions: 10000",
+      "steps": [
+        "Pool = 82,500 + 7,500 converted + 10,000 other distributions = 100,000.",
+        "Basis used = 562.50 on conversion + 750 on other distributions = 1,312.50.",
+        "Carryforward basis = 7,500 \u2212 1,312.50 = 6,187.50."
+      ],
+      "answer": "Remaining IRA basis after 2026 allocation: 6,187.50 under these assumptions.",
+      "expected": {
+        "label": "Remaining IRA basis after 2026 allocation",
+        "value": 6187.5,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Include established basis carried from earlier years",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 2500,
+        "current_nondeductible": 7500,
+        "year_end_iras": 90000,
+        "outstanding_rollovers": 0,
+        "converted": 10000,
+        "assumed_rate": 24
+      },
+      "inputs": "case_scope: Ordinary case; basis confirmed; prior_basis: 2500; current_nondeductible: 7500; year_end_iras: 90000; outstanding_rollovers: 0; converted: 10000; assumed_rate: 24",
+      "steps": [
+        "Total eligible basis = 2,500 prior + 7,500 current = 10,000.",
+        "The 100,000 pool produces a 10% nontaxable fraction, so 9,000 of the conversion is taxable."
+      ],
+      "answer": "Taxable portion of 2026 Roth conversions: 9,000.00 under these assumptions.",
+      "expected": {
+        "label": "Taxable portion of 2026 Roth conversions",
+        "value": 9000.0,
+        "tolerance": 1e-05
+      }
+    },
+    {
+      "title": "Preserve basis when only part of a basis-only pool is converted",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 3750,
+        "outstanding_rollovers": 0,
+        "converted": 3750,
+        "assumed_rate": 24
+      },
+      "inputs": "case_scope: Ordinary case; basis confirmed; prior_basis: 0; current_nondeductible: 7500; year_end_iras: 3750; outstanding_rollovers: 0; converted: 3750; assumed_rate: 24",
+      "steps": [
+        "A 7,500 basis-only pool has 3,750 converted and 3,750 remaining.",
+        "The conversion is nontaxable and uses 3,750 basis, leaving 3,750 carried forward."
+      ],
+      "answer": "Remaining IRA basis after 2026 allocation: 3,750.00 under these assumptions.",
+      "expected": {
+        "label": "Remaining IRA basis after 2026 allocation",
+        "value": 3750.0,
+        "tolerance": 1e-05
+      }
+    }
+  ]
+}

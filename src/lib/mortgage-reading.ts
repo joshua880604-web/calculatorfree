@@ -1,6 +1,7 @@
 // Reviewed tasks, not insertion order of newly added calculators.
 export const mortgageReadingGroups=[
  {title:'Compare loan choices',guides:[
+  {path:'/guides/assumable-mortgage-cash-gap-and-second-loan/',label:'Assumable mortgage cash gap and second loan'},
   {path:'/guides/15-vs-30-year-mortgage/',label:'15-year vs. 30-year payments'},
   {path:'/guides/fha-vs-conventional-loan/',label:'FHA vs. conventional financing'},
   {path:'/guides/2-1-vs-3-2-1-mortgage-buydown/',label:'Temporary mortgage buydowns'},

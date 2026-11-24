@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-24",
+  "branch": "preview/roa-assumable-20261124",
+  "parent": "5d8cf5438dcebb6b9502fc57b57c3e993e54129d",
+  "production_parent_commit": "af78857371ef9e2974dc9132c92cb9bf40bc2d08",
+  "parent_tree_matches_published_production": true,
+  "published": false,
+  "tools": [
+    "return-on-assets",
+    "assumable-mortgage"
+  ],
+  "modes": 4,
+  "complete_presets": 11,
+  "new_guides": 2,
+  "new_glossary_terms": 2,
+  "site": {
+    "functional_tools": 178,
+    "modes": 372,
+    "canonical_pages": 499,
+    "guides": 165,
+    "glossary_terms": 141
+  },
+  "checks": {
+    "unit_tests": 3844,
+    "unit_passed": true,
+    "typecheck_passed": true,
+    "build_passed": true,
+    "decimal_cases": 58,
+    "decimal_metrics": 708,
+    "decimal_precision": 70,
+    "browser_checks": 60,
+    "calculator_csv_exports": 10,
+    "total_browser_checks": 70,
+    "page_errors": [],
+    "visual_review": "passed: all four mode forms/results at mobile and desktop; additional 320/768 geometry checks",
+    "static_seo": {
+      "passed": true,
+      "configuration": "indexable-test-origin",
+      "pages": 499,
+      "guides": 165,
+      "internal_links_checked": 36460,
+      "calculator_state_links": 3147,
+      "max_contextual_depth": 3,
+      "redirect_rules": 210,
+      "curated_llms_links": 253,
+      "no_live_indexing_or_ranking_claim": true
+    }
+  },
+  "evidence_root": "/workspace/work/roa-assumable-20261124",
+  "limitations": [
+    "Original tools; no competitor parity or external professional certification",
+    "ROA is same-period net income/book average assets, not automatic annualization or an investment rating",
+    "Mortgage terms and fees are entered assumptions; no eligibility, statutory APR, insurance or program schedule",
+    "No native Safari, live lender response, remote deployment or indexing/ranking claim"
+  ]
+}

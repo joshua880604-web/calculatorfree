@@ -1,3 +1,5 @@
+import mcaBackdoorTerms from './mca-backdoor-glossary.json';
+import roaAssumptionTerms from './roa-assumption-glossary.json';
 import rsuEsppTerms from './rsu-espp-glossary.json';
 import ladderIrmaaTerms from './ladder-irmaa-glossary.json';
 import expansionFourTerms from './expansion-four-glossary.json';
@@ -34,7 +36,7 @@ export type GlossaryTerm = {
 };
 export const glossaryCategories=['Saving & investing','Retirement','Loans & debt','Housing & property','Tax & income','Business & pricing','Everyday money'];
 export const glossaryPath='/glossary/';
-export const glossaryTerms=[...rsuEsppTerms,...ladderIrmaaTerms,...expansionFourTerms,...data,...companionTerms,...businessTerms,...financeFiveTerms,...financeNextFiveTerms,...financeSixTerms,...marketsSixTerms,...financeThreeTerms,...specialistFourTerms,...ratioPropertyThreeTerms,...sgrTerms,...cashCobraTerms] as GlossaryTerm[];
+export const glossaryTerms=[...mcaBackdoorTerms,...roaAssumptionTerms,...rsuEsppTerms,...ladderIrmaaTerms,...expansionFourTerms,...data,...companionTerms,...businessTerms,...financeFiveTerms,...financeNextFiveTerms,...financeSixTerms,...marketsSixTerms,...financeThreeTerms,...specialistFourTerms,...ratioPropertyThreeTerms,...sgrTerms,...cashCobraTerms] as GlossaryTerm[];
 const newToolGlossaryLinks:Record<string,{id:string;text:string}[]>={
  'certificate-of-deposit':[{id:'cd-ladder',text:'Build staggered maturities and compare reinvestment with retained cash.'}],
  'net-present-value':[{id:'npv',text:'Discount periodic or actual-date signed cash flows, including the time-zero investment.'}],

@@ -1,0 +1,421 @@
+{
+  "return-on-assets": {
+    "meta": {
+      "path": "/guides/return-on-assets-average-balance-and-margin/",
+      "title": "Return on Assets Calculator: Worked Comparison",
+      "heading": "Return on Assets Calculator: Worked Comparison",
+      "description": "Period ROA divides net income by average total assets",
+      "publishedOn": "2026-11-24",
+      "calculatorIds": [
+        "return-on-assets",
+        "return-on-equity",
+        "roic",
+        "ebitda",
+        "roas"
+      ],
+      "topic": "Business finance",
+      "breadcrumb": "Return on assets (ROA)",
+      "cardIntro": "Period ROA divides net income by average total assets. A company with $120,000 income and $1,000,000 average book assets has 12% ROA for that reporting period; this worksheet does not automatically annualize it.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Choose a two-point beginning/ending average or supply a documented average asset balance. Match the income period, entity scope and USD units, then inspect the margin/turnover identity and your own target-income scenario.",
+    "answer": "Period ROA divides net income by average total assets. A company with $120,000 income and $1,000,000 average book assets has 12% ROA for that reporting period; this worksheet does not automatically annualize it.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original illustrations checked against independent 70-digit Decimal accounting and loan formulas. No competitor parity, professional certification or actual lender approval is claimed.",
+    "sections": [
+      {
+        "id": "average",
+        "title": "Which asset average should I use?",
+        "paragraphs": [
+          "The default beginning balance of 800,000 and ending balance of 1,200,000 give a two-point average of 1,000,000. Match both balance dates to the net-income reporting period.",
+          "An acquisition near year end can make that average unrepresentative. Known-average mode accepts a documented monthly or daily average instead; the worksheet does not reconstruct or certify it."
+        ],
+        "formula": "ROA = net income / average total assets. Two-point average = (beginning + ending assets) / 2. With positive denominators, ROA = net profit margin \u00d7 asset turnover."
+      },
+      {
+        "id": "identity",
+        "title": "How do margin and turnover relate to ROA?",
+        "paragraphs": [
+          "With net income of 120,000, revenue of 1,500,000 and average assets of 1,000,000, net margin is 8% and asset turnover is 1.5 times for the entered period. Their product is 12% ROA.",
+          "Revenue of zero makes margin undefined, although direct net-income ROA may remain defined. An undefined factor is never replaced with a real zero merely to complete the identity."
+        ]
+      },
+      {
+        "id": "loss",
+        "title": "How should losses and zero assets be interpreted?",
+        "paragraphs": [
+          "A 50,000 loss on 1,000,000 average assets gives \u22125% period ROA. Losses stay signed; the calculator does not convert them into a positive efficiency score.",
+          "Average assets of zero have no defined ROA. Negative asset balances are rejected. A target of 15% on 1,000,000 average assets implies 150,000 income, a 30,000 increase from the default income at unchanged assets."
+        ]
+      },
+      {
+        "id": "scope",
+        "title": "What comparisons need extra care?",
+        "paragraphs": [
+          "Use matching accounting periods, asset definitions and consolidation scope when comparing companies. Capital intensity, asset age, acquisitions and accounting policies can change comparability.",
+          "This net-income ratio differs from EBIT-based operating returns, return on invested capital, return on equity and advertising return on ad spend. No universal good-ROA threshold or automatic annualization is supplied."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is ROA automatically annualized?",
+        "answer": "No. The result covers the entered net-income reporting period. An annualized approximation would require an explicit assumption about a repeatable period; this worksheet does not apply one."
+      },
+      {
+        "question": "Can ROA be negative?",
+        "answer": "Yes. Negative net income with positive average assets gives a negative ratio. The loss is preserved."
+      },
+      {
+        "question": "Is ROA the same as ROAS?",
+        "answer": "No. ROAS compares attributed advertising revenue with advertising spend. ROA here compares net income with average total book assets."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Federal Reserve: ROAA definition, December 2025 report",
+        "url": "https://www.federalreserve.gov/publications/2025-december-supervision-and-regulation-report-accessible-version.htm",
+        "usedFor": "Definition and limits of the stated accounting or mortgage assumption concept; not certification of original example figures.",
+        "scope": "Same-period unadjusted net income / average book total assets in USD. A two-point average or supplied documented average; signed income and target rates, explicit zero-denominator states. No automatic annualization, EBIT/interest adjustments, market asset values, industry benchmarks, forecast or investment rating."
+      }
+    ],
+    "related": [
+      {
+        "href": "/return-on-equity-calculator",
+        "label": "Return on Equity Calculator"
+      },
+      {
+        "href": "/roic-calculator",
+        "label": "ROIC Calculator"
+      },
+      {
+        "href": "/ebitda-calculator",
+        "label": "EBITDA & Margin Calculator"
+      },
+      {
+        "href": "/roas-calculator",
+        "label": "ROAS Calculator"
+      },
+      {
+        "href": "/glossary/return-on-assets/",
+        "label": "Return on assets (ROA) definition"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Calculate 12% period ROA from two balance dates",
+        "path": "/return-on-assets-calculator.html",
+        "mode": "balances",
+        "values": {
+          "net_income": 120000,
+          "beginning_assets": 800000,
+          "ending_assets": 1200000,
+          "revenue": 1500000,
+          "target_roa": 12
+        },
+        "featured": true
+      },
+      {
+        "label": "Use a documented average rather than two endpoints",
+        "path": "/return-on-assets-calculator.html",
+        "mode": "known-average",
+        "values": {
+          "net_income": 120000,
+          "revenue": 1500000,
+          "target_roa": 12,
+          "average_assets": 1500000
+        },
+        "featured": true
+      },
+      {
+        "label": "Preserve a loss as negative ROA",
+        "path": "/return-on-assets-calculator.html",
+        "mode": "known-average",
+        "values": {
+          "net_income": -50000,
+          "revenue": 1500000,
+          "target_roa": 12,
+          "average_assets": 1000000
+        },
+        "featured": true
+      },
+      {
+        "label": "Estimate income required for a 15% period target",
+        "path": "/return-on-assets-calculator.html",
+        "mode": "balances",
+        "values": {
+          "net_income": 120000,
+          "beginning_assets": 800000,
+          "ending_assets": 1200000,
+          "revenue": 1500000,
+          "target_roa": 15
+        },
+        "featured": true
+      },
+      {
+        "label": "Keep direct ROA when revenue is zero",
+        "path": "/return-on-assets-calculator.html",
+        "mode": "known-average",
+        "values": {
+          "net_income": 120000,
+          "revenue": 0,
+          "target_roa": 12,
+          "average_assets": 1000000
+        },
+        "featured": true
+      }
+    ],
+    "limitations": [
+      "Same-period unadjusted net income / average book total assets in USD. A two-point average or supplied documented average; signed income and target rates, explicit zero-denominator states. No automatic annualization, EBIT/interest adjustments, market asset values, industry benchmarks, forecast or investment rating.",
+      "A shrinking or poorly sampled asset denominator can increase ROA without improving operating results. A quarterly ROA is not automatically an annual ROA, and zero assets do not imply a real 0% return."
+    ]
+  },
+  "assumable-mortgage": {
+    "meta": {
+      "path": "/guides/assumable-mortgage-cash-gap-and-second-loan/",
+      "title": "Assumable Mortgage Calculator: Worked Comparison",
+      "heading": "Assumable Mortgage Calculator: Worked Comparison",
+      "description": "An assumption comparison needs the purchase-price gap, remaining old-loan term and any second loan",
+      "publishedOn": "2026-11-24",
+      "calculatorIds": [
+        "assumable-mortgage",
+        "mortgage-comparison",
+        "mortgage",
+        "down-payment",
+        "va-mortgage",
+        "fha-loan"
+      ],
+      "topic": "Mortgage & housing",
+      "breadcrumb": "Mortgage assumption",
+      "cardIntro": "An assumption comparison needs the purchase-price gap, remaining old-loan term and any second loan. Compare both options at the same holding horizon, including fees, interest and debt still owed; a lower initial payment alone does not prove a lower financing cost.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Model a hypothetical assumption with a cash-funded gap or a separately amortizing gap loan. The alternative new mortgage uses the same purchase price and buyer cash contribution. All rates and fees are your entered assumptions.",
+    "answer": "An assumption comparison needs the purchase-price gap, remaining old-loan term and any second loan. Compare both options at the same holding horizon, including fees, interest and debt still owed; a lower initial payment alone does not prove a lower financing cost.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original illustrations checked against independent 70-digit Decimal accounting and loan formulas. No competitor parity, professional certification or actual lender approval is claimed.",
+    "sections": [
+      {
+        "id": "gap",
+        "title": "How is the purchase-price gap funded?",
+        "paragraphs": [
+          "At a purchase price of 450,000 and assumed balance of 300,000, the price gap is 150,000 before fees. Cash-gap mode pays all 150,000 in cash; the new-mortgage comparison uses the same down payment.",
+          "Financed-gap mode with 50,000 buyer cash leaves a 100,000 second loan. Its rate, term and fees are separate. Both alternatives then begin with 400,000 total debt, so principal funding is matched. A second loan is an assumption, not evidence that the servicer permits it."
+        ],
+        "formula": "Gap loan = purchase price \u2212 assumed balance \u2212 buyer cash. Same-horizon financing cost = paid fees + interest. Cash at closing + P&I paid + remaining debt = purchase price + financing cost."
+      },
+      {
+        "id": "term",
+        "title": "Why use the old loan\u2019s remaining term?",
+        "paragraphs": [
+          "Enter 240 months if twenty years remain, even if the seller originally borrowed for thirty years. A shorter remaining term can raise P&I despite a lower rate.",
+          "The model keeps the new loan and optional gap loan on their own entered terms. Once a loan is paid off its later payment is zero; final payments retire the remaining amount instead of continuing into a negative balance."
+        ]
+      },
+      {
+        "id": "horizon",
+        "title": "How does the same-horizon comparison work?",
+        "paragraphs": [
+          "At each monthly payment date the schedule tracks P&I, accumulated interest and debt remaining for both paths. Paid closing fees plus interest are the financing-cost measure.",
+          "The second table adds cash at closing, payments through the horizon and remaining debt payoff. That total equals the shared purchase price plus financing cost. The outstanding debt is included explicitly, so a longer loan is not rewarded for leaving more principal unpaid."
+        ]
+      },
+      {
+        "id": "approval",
+        "title": "Does the calculator confirm assumability?",
+        "paragraphs": [
+          "No. The CFPB Loan Estimate assumption disclosure describes whether a purchaser may be allowed to assume the remaining obligation on original terms, potentially subject to conditions. Contact the servicer and obtain the actual requirements and figures.",
+          "For VA loans, assumption approval, the seller\u2019s release and entitlement questions require program-specific review. The worksheet does not determine them or automatically calculate program charges. Enter lender-confirmed fees yourself."
+        ]
+      },
+      {
+        "id": "excluded",
+        "title": "What is outside this comparison?",
+        "paragraphs": [
+          "The monthly amounts are principal and interest only. Taxes, homeowners and mortgage insurance, HOA charges, escrow/prepaids and other ownership costs are excluded. Note rates are entered, not lender APR disclosures.",
+          "No house-price growth, cash investment return, deductions, refinancing or selling costs are modeled. A positive new-cost-minus-assumption-cost means lower modeled assumption financing cost; a negative value favors the new loan under those inputs. Neither result is an approval or purchase recommendation."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Can I assume the mortgage with no cash?",
+        "answer": "Financed-gap mode can model a zero contribution toward the price, but fees still require cash. This does not establish approval, permitted combined loan-to-value or access to gap financing."
+      },
+      {
+        "question": "Does a low assumed rate guarantee savings?",
+        "answer": "No. Remaining term, gap-loan interest, fees and holding horizon all matter. Compare debt remaining as well as payments."
+      },
+      {
+        "question": "Are FHA or VA assumption fees included automatically?",
+        "answer": "No. Enter lender-confirmed charges in the fee fields. Eligibility, exemptions, insurance and VA entitlement decisions are outside the calculator."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB Regulation Z: Loan Estimate assumption disclosure, 1026.37(m)(2)",
+        "url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/37/",
+        "usedFor": "Definition and limits of the stated accounting or mortgage assumption concept; not certification of original example figures.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      },
+      {
+        "title": "CFPB: note interest rate versus APR",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/",
+        "usedFor": "Definition and limits of the stated accounting or mortgage assumption concept; not certification of original example figures.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      },
+      {
+        "title": "VA Form 26-6381: assumption approval and release application",
+        "url": "https://www.va.gov/forms/26-6381/",
+        "usedFor": "Definition and limits of the stated accounting or mortgage assumption concept; not certification of original example figures.",
+        "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return."
+      }
+    ],
+    "related": [
+      {
+        "href": "/mortgage-comparison-calculator",
+        "label": "Mortgage Comparison Calculator"
+      },
+      {
+        "href": "/mortgage-calculator",
+        "label": "Mortgage Calculator"
+      },
+      {
+        "href": "/down-payment-calculator",
+        "label": "Down Payment Calculator"
+      },
+      {
+        "href": "/va-mortgage-calculator",
+        "label": "VA Mortgage Calculator"
+      },
+      {
+        "href": "/fha-loan-calculator",
+        "label": "FHA Loan Calculator"
+      },
+      {
+        "href": "/glossary/mortgage-assumption/",
+        "label": "Mortgage assumption definition"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Compare the same 150,000 cash contribution",
+        "path": "/assumable-mortgage-calculator.html",
+        "mode": "cash-gap",
+        "values": {
+          "price": 450000,
+          "assumed_balance": 300000,
+          "assumed_rate": 3,
+          "remaining_months": 240,
+          "assumption_fees": 3000,
+          "new_rate": 6.5,
+          "new_months": 360,
+          "new_fees": 6000,
+          "horizon_months": 60
+        },
+        "featured": true
+      },
+      {
+        "label": "Borrow the remaining 100,000 gap",
+        "path": "/assumable-mortgage-calculator.html",
+        "mode": "financed-gap",
+        "values": {
+          "price": 450000,
+          "assumed_balance": 300000,
+          "assumed_rate": 3,
+          "remaining_months": 240,
+          "assumption_fees": 3000,
+          "new_rate": 6.5,
+          "new_months": 360,
+          "new_fees": 6000,
+          "horizon_months": 60,
+          "buyer_cash": 50000,
+          "gap_rate": 9,
+          "gap_months": 120,
+          "gap_fees": 2000
+        },
+        "featured": true
+      },
+      {
+        "label": "Ignore gap-loan charges when the gap is fully cash-funded",
+        "path": "/assumable-mortgage-calculator.html",
+        "mode": "financed-gap",
+        "values": {
+          "price": 450000,
+          "assumed_balance": 300000,
+          "assumed_rate": 3,
+          "remaining_months": 240,
+          "assumption_fees": 3000,
+          "new_rate": 6.5,
+          "new_months": 360,
+          "new_fees": 6000,
+          "horizon_months": 60,
+          "buyer_cash": 150000,
+          "gap_rate": 9,
+          "gap_months": 120,
+          "gap_fees": 99999
+        },
+        "featured": true
+      },
+      {
+        "label": "Track payoff at a horizon beyond the old remaining term",
+        "path": "/assumable-mortgage-calculator.html",
+        "mode": "cash-gap",
+        "values": {
+          "price": 450000,
+          "assumed_balance": 300000,
+          "assumed_rate": 0,
+          "remaining_months": 12,
+          "assumption_fees": 0,
+          "new_rate": 0,
+          "new_months": 24,
+          "new_fees": 0,
+          "horizon_months": 24
+        },
+        "featured": true
+      },
+      {
+        "label": "Retain a negative assumption advantage when new borrowing is cheaper",
+        "path": "/assumable-mortgage-calculator.html",
+        "mode": "financed-gap",
+        "values": {
+          "price": 450000,
+          "assumed_balance": 300000,
+          "assumed_rate": 12,
+          "remaining_months": 240,
+          "assumption_fees": 9000,
+          "new_rate": 2,
+          "new_months": 360,
+          "new_fees": 0,
+          "horizon_months": 60,
+          "buyer_cash": 50000,
+          "gap_rate": 9,
+          "gap_months": 120,
+          "gap_fees": 2000
+        },
+        "featured": true
+      },
+      {
+        "label": "Show remaining debt before either loan is fully repaid",
+        "path": "/assumable-mortgage-calculator.html",
+        "mode": "cash-gap",
+        "values": {
+          "price": 450000,
+          "assumed_balance": 300000,
+          "assumed_rate": 3,
+          "remaining_months": 240,
+          "assumption_fees": 3000,
+          "new_rate": 6.5,
+          "new_months": 360,
+          "new_fees": 6000,
+          "horizon_months": 1
+        },
+        "featured": true
+      }
+    ],
+    "limitations": [
+      "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return.",
+      "An old low-rate loan can require a large cash gap or an expensive second loan. Do not reset its remaining term or treat unpaid principal at the horizon as savings. Approval, release of liability and any VA entitlement substitution are separate questions."
+    ]
+  }
+}

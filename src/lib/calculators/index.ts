@@ -1,3 +1,7 @@
+import {merchantCashAdvanceCalculator} from './merchant-cash-advance';
+import {backdoorRothCalculator} from './backdoor-roth-ira';
+import {roaCalculator} from './roa';
+import {assumableMortgageCalculator} from './assumable-mortgage';
 import {rsuTaxCalculator} from './rsu-tax';
 import {esppTaxCalculator} from './espp-tax';
 import {bondLadderCalculator} from './bond-ladder';
@@ -85,6 +89,8 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
+ merchantCashAdvanceCalculator,backdoorRothCalculator,
+ roaCalculator,assumableMortgageCalculator,
  rsuTaxCalculator,esppTaxCalculator,
  bondLadderCalculator,irmaaCalculator,
  ...expansionFourCalculators, cashAdvanceFeeCalculator, cobraCostCalculator,

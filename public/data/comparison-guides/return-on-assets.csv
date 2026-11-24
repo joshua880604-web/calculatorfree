@@ -1,0 +1,6 @@
+Scenario,Mode,Input assumptions,Metric,Expected value (% for ROA; USD for income)
+Calculate 12% period ROA from two balance dates,balances,net_income: 120000; beginning_assets: 800000; ending_assets: 1200000; revenue: 1500000; target_roa: 12,Return on assets for entered period,12.0
+Use a documented average rather than two endpoints,known-average,net_income: 120000; revenue: 1500000; target_roa: 12; average_assets: 1500000,Return on assets for entered period,8.0
+Preserve a loss as negative ROA,known-average,net_income: -50000; revenue: 1500000; target_roa: 12; average_assets: 1000000,Return on assets for entered period,-5.0
+Estimate income required for a 15% period target,balances,net_income: 120000; beginning_assets: 800000; ending_assets: 1200000; revenue: 1500000; target_roa: 15,Target net income minus actual net income,30000.0
+Keep direct ROA when revenue is zero,known-average,net_income: 120000; revenue: 0; target_roa: 12; average_assets: 1000000,Return on assets for entered period,12.0

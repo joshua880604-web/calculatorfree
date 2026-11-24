@@ -1,0 +1,150 @@
+[
+  {
+    "slug": "return-on-assets",
+    "name": "Return on assets (ROA)",
+    "title": "Return on assets (ROA): Formula and Worked Example",
+    "description": "Return on assets compares net income for a reporting period with average total book assets supporting that income.",
+    "category": "Business & pricing",
+    "aliases": [],
+    "definition": "Return on assets compares net income for a reporting period with average total book assets supporting that income.",
+    "explanation": "Period ROA divides net income by average total assets. A company with $120,000 income and $1,000,000 average book assets has 12% ROA for that reporting period; this worksheet does not automatically annualize it.",
+    "formula": "ROA = net income / average total assets. Two-point average = (beginning + ending assets) / 2. With positive denominators, ROA = net profit margin \u00d7 asset turnover.",
+    "formulaNote": "Same-period unadjusted net income / average book total assets in USD. A two-point average or supplied documented average; signed income and target rates, explicit zero-denominator states. No automatic annualization, EBIT/interest adjustments, market asset values, industry benchmarks, forecast or investment rating.",
+    "example": {
+      "title": "Calculate 12% period ROA from two balance dates",
+      "intro": "net_income: 120000; beginning_assets: 800000; ending_assets: 1200000; revenue: 1500000; target_roa: 12",
+      "steps": [
+        "Average assets = (800,000 + 1,200,000) / 2 = 1,000,000.",
+        "120,000 / 1,000,000 = 12% for the income reporting period."
+      ],
+      "answer": "Return on assets for entered period: 12.00% under these assumptions.",
+      "assumptions": "Same-period unadjusted net income / average book total assets in USD. A two-point average or supplied documented average; signed income and target rates, explicit zero-denominator states. No automatic annualization, EBIT/interest adjustments, market asset values, industry benchmarks, forecast or investment rating.",
+      "calculator": {
+        "id": "return-on-assets",
+        "mode": "balances",
+        "values": {
+          "net_income": 120000,
+          "beginning_assets": 800000,
+          "ending_assets": 1200000,
+          "revenue": 1500000,
+          "target_roa": 12
+        },
+        "expected": [
+          {
+            "label": "Return on assets for entered period",
+            "value": 12.0,
+            "tolerance": 1e-05
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Keep the comparison basis consistent",
+      "text": "A shrinking or poorly sampled asset denominator can increase ROA without improving operating results. A quarterly ROA is not automatically an annual ROA, and zero assets do not imply a real 0% return."
+    },
+    "tools": [
+      {
+        "id": "return-on-assets",
+        "text": "Restore the example and inspect the accounting or loan bridge."
+      }
+    ],
+    "related": [
+      "return-on-equity",
+      "return-on-invested-capital"
+    ],
+    "sources": [
+      {
+        "title": "Federal Reserve: ROAA definition, December 2025 report",
+        "url": "https://www.federalreserve.gov/publications/2025-december-supervision-and-regulation-report-accessible-version.htm"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "scope": "Same-period unadjusted net income / average book total assets in USD. A two-point average or supplied documented average; signed income and target rates, explicit zero-denominator states. No automatic annualization, EBIT/interest adjustments, market asset values, industry benchmarks, forecast or investment rating.",
+    "guides": [
+      {
+        "title": "Return on Assets Calculator",
+        "path": "/guides/return-on-assets-average-balance-and-margin/"
+      }
+    ]
+  },
+  {
+    "slug": "mortgage-assumption",
+    "name": "Mortgage assumption",
+    "title": "Mortgage assumption: Formula and Worked Example",
+    "description": "A mortgage assumption transfers an existing loan obligation to a purchaser under terms permitted by the lender and applicable program. Its remaining balance can be less than the home purchase price.",
+    "category": "Housing & property",
+    "aliases": [],
+    "definition": "A mortgage assumption transfers an existing loan obligation to a purchaser under terms permitted by the lender and applicable program. Its remaining balance can be less than the home purchase price.",
+    "explanation": "An assumption comparison needs the purchase-price gap, remaining old-loan term and any second loan. Compare both options at the same holding horizon, including fees, interest and debt still owed; a lower initial payment alone does not prove a lower financing cost.",
+    "formula": "Gap loan = purchase price \u2212 assumed balance \u2212 buyer cash. Same-horizon financing cost = paid fees + interest. Cash at closing + P&I paid + remaining debt = purchase price + financing cost.",
+    "formulaNote": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return.",
+    "example": {
+      "title": "Compare the same 150,000 cash contribution",
+      "intro": "price: 450000; assumed_balance: 300000; assumed_rate: 3; remaining_months: 240; assumption_fees: 3000; new_rate: 6.5; new_months: 360; new_fees: 6000; horizon_months: 60",
+      "steps": [
+        "450,000 price \u2212 300,000 assumed balance = 150,000 cash toward price.",
+        "Add 3,000 assumption fees for 153,000 cash at closing. The alternative uses the same down payment, plus its own fees."
+      ],
+      "answer": "Purchase price minus assumed balance: 150,000.00 under these assumptions.",
+      "assumptions": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return.",
+      "calculator": {
+        "id": "assumable-mortgage",
+        "mode": "cash-gap",
+        "values": {
+          "price": 450000,
+          "assumed_balance": 300000,
+          "assumed_rate": 3,
+          "remaining_months": 240,
+          "assumption_fees": 3000,
+          "new_rate": 6.5,
+          "new_months": 360,
+          "new_fees": 6000,
+          "horizon_months": 60
+        },
+        "expected": [
+          {
+            "label": "Purchase price minus assumed balance",
+            "value": 150000.0,
+            "tolerance": 1e-05
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Keep the comparison basis consistent",
+      "text": "An old low-rate loan can require a large cash gap or an expensive second loan. Do not reset its remaining term or treat unpaid principal at the horizon as savings. Approval, release of liability and any VA entitlement substitution are separate questions."
+    },
+    "tools": [
+      {
+        "id": "assumable-mortgage",
+        "text": "Restore the example and inspect the accounting or loan bridge."
+      }
+    ],
+    "related": [
+      "amortization",
+      "loan-to-value-ratio"
+    ],
+    "sources": [
+      {
+        "title": "CFPB Regulation Z: Loan Estimate assumption disclosure, 1026.37(m)(2)",
+        "url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/37/"
+      },
+      {
+        "title": "CFPB: note interest rate versus APR",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/"
+      },
+      {
+        "title": "VA Form 26-6381: assumption approval and release application",
+        "url": "https://www.va.gov/forms/26-6381/"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "scope": "One hypothetical USD purchase with an assumed fixed-rate amortizing loan and optional fixed-rate gap financing; compare with one new loan at the same cash contribution and monthly horizon. Fees paid separately. No underwater transaction, escrow/insurance, FHA/VA fee table, eligibility, APR, entitlement/release decision, appreciation or cash opportunity return.",
+    "guides": [
+      {
+        "title": "Assumable Mortgage Calculator",
+        "path": "/guides/assumable-mortgage-cash-gap-and-second-loan/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1752 @@
+{
+  "precision": 70,
+  "method": "Independent closed-form annuity balance and cumulative interest; same-period Decimal accounting ratios",
+  "fixtures": [
+    {
+      "key": "balances-default",
+      "id": "return-on-assets",
+      "mode": "balances",
+      "values": {
+        "net_income": 120000,
+        "beginning_assets": 800000,
+        "ending_assets": 1200000,
+        "revenue": 1500000,
+        "target_roa": 12
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "0",
+        "Return on assets for entered period": "12.00",
+        "Asset turnover for entered period": "1.5",
+        "Net profit margin for entered period": "8.00"
+      }
+    },
+    {
+      "key": "known-average-default",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": 120000,
+        "revenue": 1500000,
+        "target_roa": 12,
+        "average_assets": 1000000
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "0",
+        "Return on assets for entered period": "12.00",
+        "Asset turnover for entered period": "1.5",
+        "Net profit margin for entered period": "8.00"
+      }
+    },
+    {
+      "key": "cash-gap-default",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "56851.30906126167538859028533632392272649316975270938342219983835124514",
+        "Initial assumption plus gap-loan monthly P&I": "1663.792793561736078188107846501785147735590614722992159134131316621251",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "232.411276917155117949387182214194150078165797628240280495217973450223",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "43753.86749216385843980103516839729078915631301970209963891021943901086",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "240926.2998784596937485145643782901819250208761363225700908623404417358",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "493753.8674921638584398010351683972907891563130197020996389102194390109",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-default",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "49356.91001297528400775849695083481563795499967396245870714047802776426",
+        "Initial assumption plus gap-loan monthly P&I": "2930.550531064231078901286136565403842956130114336562808044182634863343",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "-402.278437092376150717959431610764779204454897868252888538383581434712",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "82783.32539159209443009659705546013571624431068925285204100626569257714",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "301950.2935277382296960194288615359051388765038290590835583553076007766",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "532783.3253915920944300965970554601357162443106892528520410062656925771",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "balances--120000-0",
+      "id": "return-on-assets",
+      "mode": "balances",
+      "values": {
+        "net_income": -120000,
+        "beginning_assets": 800000,
+        "ending_assets": 1200000,
+        "revenue": 0,
+        "target_roa": 12
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "-120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "240000",
+        "Return on assets for entered period": "-12.00",
+        "Asset turnover for entered period": "0"
+      }
+    },
+    {
+      "key": "balances--120000-1500000",
+      "id": "return-on-assets",
+      "mode": "balances",
+      "values": {
+        "net_income": -120000,
+        "beginning_assets": 800000,
+        "ending_assets": 1200000,
+        "revenue": 1500000,
+        "target_roa": 12
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "-120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "240000",
+        "Return on assets for entered period": "-12.00",
+        "Asset turnover for entered period": "1.5",
+        "Net profit margin for entered period": "-8.00"
+      }
+    },
+    {
+      "key": "balances-0-0",
+      "id": "return-on-assets",
+      "mode": "balances",
+      "values": {
+        "net_income": 0,
+        "beginning_assets": 800000,
+        "ending_assets": 1200000,
+        "revenue": 0,
+        "target_roa": 12
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "0",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "120000",
+        "Return on assets for entered period": "0",
+        "Asset turnover for entered period": "0"
+      }
+    },
+    {
+      "key": "balances-0-1500000",
+      "id": "return-on-assets",
+      "mode": "balances",
+      "values": {
+        "net_income": 0,
+        "beginning_assets": 800000,
+        "ending_assets": 1200000,
+        "revenue": 1500000,
+        "target_roa": 12
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "0",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "120000",
+        "Return on assets for entered period": "0",
+        "Asset turnover for entered period": "1.5",
+        "Net profit margin for entered period": "0"
+      }
+    },
+    {
+      "key": "balances-120000-0",
+      "id": "return-on-assets",
+      "mode": "balances",
+      "values": {
+        "net_income": 120000,
+        "beginning_assets": 800000,
+        "ending_assets": 1200000,
+        "revenue": 0,
+        "target_roa": 12
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "0",
+        "Return on assets for entered period": "12.00",
+        "Asset turnover for entered period": "0"
+      }
+    },
+    {
+      "key": "balances-120000-1500000",
+      "id": "return-on-assets",
+      "mode": "balances",
+      "values": {
+        "net_income": 120000,
+        "beginning_assets": 800000,
+        "ending_assets": 1200000,
+        "revenue": 1500000,
+        "target_roa": 12
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "0",
+        "Return on assets for entered period": "12.00",
+        "Asset turnover for entered period": "1.5",
+        "Net profit margin for entered period": "8.00"
+      }
+    },
+    {
+      "key": "known-average--120000-0",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": -120000,
+        "revenue": 0,
+        "target_roa": 12,
+        "average_assets": 1000000
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "-120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "240000",
+        "Return on assets for entered period": "-12.00",
+        "Asset turnover for entered period": "0"
+      }
+    },
+    {
+      "key": "known-average--120000-1500000",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": -120000,
+        "revenue": 1500000,
+        "target_roa": 12,
+        "average_assets": 1000000
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "-120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "240000",
+        "Return on assets for entered period": "-12.00",
+        "Asset turnover for entered period": "1.5",
+        "Net profit margin for entered period": "-8.00"
+      }
+    },
+    {
+      "key": "known-average-0-0",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": 0,
+        "revenue": 0,
+        "target_roa": 12,
+        "average_assets": 1000000
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "0",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "120000",
+        "Return on assets for entered period": "0",
+        "Asset turnover for entered period": "0"
+      }
+    },
+    {
+      "key": "known-average-0-1500000",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": 0,
+        "revenue": 1500000,
+        "target_roa": 12,
+        "average_assets": 1000000
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "0",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "120000",
+        "Return on assets for entered period": "0",
+        "Asset turnover for entered period": "1.5",
+        "Net profit margin for entered period": "0"
+      }
+    },
+    {
+      "key": "known-average-120000-0",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": 120000,
+        "revenue": 0,
+        "target_roa": 12,
+        "average_assets": 1000000
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "0",
+        "Return on assets for entered period": "12.00",
+        "Asset turnover for entered period": "0"
+      }
+    },
+    {
+      "key": "known-average-120000-1500000",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": 120000,
+        "revenue": 1500000,
+        "target_roa": 12,
+        "average_assets": 1000000
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "120000",
+        "Net income at your target ROA": "120000",
+        "Target net income minus actual net income": "0",
+        "Return on assets for entered period": "12.00",
+        "Asset turnover for entered period": "1.5",
+        "Net profit margin for entered period": "8.00"
+      }
+    },
+    {
+      "key": "zero-assets",
+      "id": "return-on-assets",
+      "mode": "balances",
+      "values": {
+        "net_income": 120000,
+        "beginning_assets": 0,
+        "ending_assets": 0,
+        "revenue": 1500000,
+        "target_roa": 12
+      },
+      "expected": {
+        "Average total assets used": "0",
+        "Net income for entered period": "120000",
+        "Net income at your target ROA": "0",
+        "Target net income minus actual net income": "-120000",
+        "Net profit margin for entered period": "8.00"
+      }
+    },
+    {
+      "key": "zero-known-assets",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": 120000,
+        "revenue": 1500000,
+        "target_roa": 12,
+        "average_assets": 0
+      },
+      "expected": {
+        "Average total assets used": "0",
+        "Net income for entered period": "120000",
+        "Net income at your target ROA": "0",
+        "Target net income minus actual net income": "-120000",
+        "Net profit margin for entered period": "8.00"
+      }
+    },
+    {
+      "key": "one-zero-endpoint",
+      "id": "return-on-assets",
+      "mode": "balances",
+      "values": {
+        "net_income": 120000,
+        "beginning_assets": 0,
+        "ending_assets": 1200000,
+        "revenue": 1500000,
+        "target_roa": 12
+      },
+      "expected": {
+        "Average total assets used": "600000",
+        "Net income for entered period": "120000",
+        "Net income at your target ROA": "72000",
+        "Target net income minus actual net income": "-48000",
+        "Return on assets for entered period": "20.0",
+        "Asset turnover for entered period": "2.5",
+        "Net profit margin for entered period": "8.00"
+      }
+    },
+    {
+      "key": "negative-target",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": -50000,
+        "revenue": 1500000,
+        "target_roa": -10,
+        "average_assets": 1000000
+      },
+      "expected": {
+        "Average total assets used": "1000000",
+        "Net income for entered period": "-50000",
+        "Net income at your target ROA": "-100000",
+        "Target net income minus actual net income": "-50000",
+        "Return on assets for entered period": "-5.00",
+        "Asset turnover for entered period": "1.5",
+        "Net profit margin for entered period": "-3.333333333333333333333333333333333333333333333333333333333333333333333"
+      }
+    },
+    {
+      "key": "cash-gap-rate0-h1",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "97605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Initial assumption plus gap-loan monthly P&I": "1250",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "646.204070478891196137495028715979297813756412351232439629349290071474",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "3000",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "225000",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "453000",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate0-h60",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "97605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Initial assumption plus gap-loan monthly P&I": "1250",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "646.204070478891196137495028715979297813756412351232439629349290071474",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "3000",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "225000",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "453000",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate0-h240",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "97605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Initial assumption plus gap-loan monthly P&I": "1250",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "646.204070478891196137495028715979297813756412351232439629349290071474",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "3000",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "225000",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "453000",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate0-h600",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "97605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Initial assumption plus gap-loan monthly P&I": "1250",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "646.204070478891196137495028715979297813756412351232439629349290071474",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "3000",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "225000",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "453000",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate3-h1",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "56851.30906126167538859028533632392272649316975270938342219983835124514",
+        "Initial assumption plus gap-loan monthly P&I": "1663.792793561736078188107846501785147735590614722992159134131316621251",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "232.411276917155117949387182214194150078165797628240280495217973450223",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "43753.86749216385843980103516839729078915631301970209963891021943901086",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "240926.2998784596937485145643782901819250208761363225700908623404417358",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "493753.8674921638584398010351683972907891563130197020996389102194390109",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate3-h60",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "56851.30906126167538859028533632392272649316975270938342219983835124514",
+        "Initial assumption plus gap-loan monthly P&I": "1663.792793561736078188107846501785147735590614722992159134131316621251",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "232.411276917155117949387182214194150078165797628240280495217973450223",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "43753.86749216385843980103516839729078915631301970209963891021943901086",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "240926.2998784596937485145643782901819250208761363225700908623404417358",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "493753.8674921638584398010351683972907891563130197020996389102194390109",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate3-h240",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "56851.30906126167538859028533632392272649316975270938342219983835124514",
+        "Initial assumption plus gap-loan monthly P&I": "1663.792793561736078188107846501785147735590614722992159134131316621251",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "232.411276917155117949387182214194150078165797628240280495217973450223",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "43753.86749216385843980103516839729078915631301970209963891021943901086",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "240926.2998784596937485145643782901819250208761363225700908623404417358",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "493753.8674921638584398010351683972907891563130197020996389102194390109",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate3-h600",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "56851.30906126167538859028533632392272649316975270938342219983835124514",
+        "Initial assumption plus gap-loan monthly P&I": "1663.792793561736078188107846501785147735590614722992159134131316621251",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "232.411276917155117949387182214194150078165797628240280495217973450223",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "43753.86749216385843980103516839729078915631301970209963891021943901086",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "240926.2998784596937485145643782901819250208761363225700908623404417358",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "493753.8674921638584398010351683972907891563130197020996389102194390109",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate9-h1",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 9,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-30466.6425135522984945636705182055513796056135304948872227441581009041",
+        "Initial assumption plus gap-loan monthly P&I": "2699.177867550519115115539535936693828967849283748560407962724979143400",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "-802.973797071627918978044507220714531154092871397327968333375689071926",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "131071.8190669778323229549910229267648952550963029063702838542158911601",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "266121.1470139466854160226188667251351571841392779927458060907171425561",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "581071.8190669778323229549910229267648952550963029063702838542158911601",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate9-h60",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 9,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-30466.6425135522984945636705182055513796056135304948872227441581009041",
+        "Initial assumption plus gap-loan monthly P&I": "2699.177867550519115115539535936693828967849283748560407962724979143400",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "-802.973797071627918978044507220714531154092871397327968333375689071926",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "131071.8190669778323229549910229267648952550963029063702838542158911601",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "266121.1470139466854160226188667251351571841392779927458060907171425561",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "581071.8190669778323229549910229267648952550963029063702838542158911601",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate9-h240",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 9,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-30466.6425135522984945636705182055513796056135304948872227441581009041",
+        "Initial assumption plus gap-loan monthly P&I": "2699.177867550519115115539535936693828967849283748560407962724979143400",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "-802.973797071627918978044507220714531154092871397327968333375689071926",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "131071.8190669778323229549910229267648952550963029063702838542158911601",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "266121.1470139466854160226188667251351571841392779927458060907171425561",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "581071.8190669778323229549910229267648952550963029063702838542158911601",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-rate9-h600",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 9,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-30466.6425135522984945636705182055513796056135304948872227441581009041",
+        "Initial assumption plus gap-loan monthly P&I": "2699.177867550519115115539535936693828967849283748560407962724979143400",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "-802.973797071627918978044507220714531154092871397327968333375689071926",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "131071.8190669778323229549910229267648952550963029063702838542158911601",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "266121.1470139466854160226188667251351571841392779927458060907171425561",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "581071.8190669778323229549910229267648952550963029063702838542158911601",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate0-h1",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "90110.77750513914244755953211923210642711131269366455834605069746677512",
+        "Initial assumption plus gap-loan monthly P&I": "2516.757737502495000713178290063618695220539499613570648910051318242092",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "11.514356469359927470148414891020368531135716854739270595747735186539",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "42029.45789942823599029556188706284492708799766955075240209604625356628",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "286023.9936492785359475048644832457232138556276927365134674929671590408",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "492029.4578994282359902955618870628449270879976695507524020960462535663",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate0-h60",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "90110.77750513914244755953211923210642711131269366455834605069746677512",
+        "Initial assumption plus gap-loan monthly P&I": "2516.757737502495000713178290063618695220539499613570648910051318242092",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "11.514356469359927470148414891020368531135716854739270595747735186539",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "42029.45789942823599029556188706284492708799766955075240209604625356628",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "286023.9936492785359475048644832457232138556276927365134674929671590408",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "492029.4578994282359902955618870628449270879976695507524020960462535663",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate0-h240",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "90110.77750513914244755953211923210642711131269366455834605069746677512",
+        "Initial assumption plus gap-loan monthly P&I": "2516.757737502495000713178290063618695220539499613570648910051318242092",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "11.514356469359927470148414891020368531135716854739270595747735186539",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "42029.45789942823599029556188706284492708799766955075240209604625356628",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "286023.9936492785359475048644832457232138556276927365134674929671590408",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "492029.4578994282359902955618870628449270879976695507524020960462535663",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate0-h600",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "90110.77750513914244755953211923210642711131269366455834605069746677512",
+        "Initial assumption plus gap-loan monthly P&I": "2516.757737502495000713178290063618695220539499613570648910051318242092",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "11.514356469359927470148414891020368531135716854739270595747735186539",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "42029.45789942823599029556188706284492708799766955075240209604625356628",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "286023.9936492785359475048644832457232138556276927365134674929671590408",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "492029.4578994282359902955618870628449270879976695507524020960462535663",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate3-h1",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "49356.91001297528400775849695083481563795499967396245870714047802776426",
+        "Initial assumption plus gap-loan monthly P&I": "2930.550531064231078901286136565403842956130114336562808044182634863343",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "-402.278437092376150717959431610764779204454897868252888538383581434712",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "82783.32539159209443009659705546013571624431068925285204100626569257714",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "301950.2935277382296960194288615359051388765038290590835583553076007766",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "532783.3253915920944300965970554601357162443106892528520410062656925771",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate3-h60",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "49356.91001297528400775849695083481563795499967396245870714047802776426",
+        "Initial assumption plus gap-loan monthly P&I": "2930.550531064231078901286136565403842956130114336562808044182634863343",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "-402.278437092376150717959431610764779204454897868252888538383581434712",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "82783.32539159209443009659705546013571624431068925285204100626569257714",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "301950.2935277382296960194288615359051388765038290590835583553076007766",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "532783.3253915920944300965970554601357162443106892528520410062656925771",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate3-h240",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "49356.91001297528400775849695083481563795499967396245870714047802776426",
+        "Initial assumption plus gap-loan monthly P&I": "2930.550531064231078901286136565403842956130114336562808044182634863343",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "-402.278437092376150717959431610764779204454897868252888538383581434712",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "82783.32539159209443009659705546013571624431068925285204100626569257714",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "301950.2935277382296960194288615359051388765038290590835583553076007766",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "532783.3253915920944300965970554601357162443106892528520410062656925771",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate3-h600",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "49356.91001297528400775849695083481563795499967396245870714047802776426",
+        "Initial assumption plus gap-loan monthly P&I": "2930.550531064231078901286136565403842956130114336562808044182634863343",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "-402.278437092376150717959431610764779204454897868252888538383581434712",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "82783.32539159209443009659705546013571624431068925285204100626569257714",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "301950.2935277382296960194288615359051388765038290590835583553076007766",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "532783.3253915920944300965970554601357162443106892528520410062656925771",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate9-h1",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 9,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-37961.0415618386898753954589036946584681437836092418119378035184243850",
+        "Initial assumption plus gap-loan monthly P&I": "3965.935605053014115828717826000312524188388783362131056872776297385492",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "-1437.663511081159187645391121045673460436713566893821137366977243956861",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "170101.2769664060683132505529099896098223430939724571226859502621447264",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "327145.1406632252213635274833499708583710397669707292592735836843015969",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "620101.2769664060683132505529099896098223430939724571226859502621447264",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate9-h60",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 9,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-37961.0415618386898753954589036946584681437836092418119378035184243850",
+        "Initial assumption plus gap-loan monthly P&I": "3965.935605053014115828717826000312524188388783362131056872776297385492",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "-1437.663511081159187645391121045673460436713566893821137366977243956861",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "170101.2769664060683132505529099896098223430939724571226859502621447264",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "327145.1406632252213635274833499708583710397669707292592735836843015969",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "620101.2769664060683132505529099896098223430939724571226859502621447264",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate9-h240",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 9,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-37961.0415618386898753954589036946584681437836092418119378035184243850",
+        "Initial assumption plus gap-loan monthly P&I": "3965.935605053014115828717826000312524188388783362131056872776297385492",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "-1437.663511081159187645391121045673460436713566893821137366977243956861",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "170101.2769664060683132505529099896098223430939724571226859502621447264",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "327145.1406632252213635274833499708583710397669707292592735836843015969",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "620101.2769664060683132505529099896098223430939724571226859502621447264",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-rate9-h600",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 9,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-37961.0415618386898753954589036946584681437836092418119378035184243850",
+        "Initial assumption plus gap-loan monthly P&I": "3965.935605053014115828717826000312524188388783362131056872776297385492",
+        "Initial new-loan monthly P&I": "2528.272093971854928183326704954639063751675216468309919505799053428631",
+        "Initial monthly P&I difference: new minus assumption": "-1437.663511081159187645391121045673460436713566893821137366977243956861",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "170101.2769664060683132505529099896098223430939724571226859502621447264",
+        "New-loan interest plus fees through horizon": "132140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Assumption total debt remaining at horizon": "327145.1406632252213635274833499708583710397669707292592735836843015969",
+        "New-loan debt remaining at horizon": "374443.9097662560827468554917090166075290987973751167155777988005146235",
+        "Assumption cash through horizon including debt payoff": "620101.2769664060683132505529099896098223430939724571226859502621447264",
+        "New-loan cash through horizon including debt payoff": "582140.2354045673784378550940062949513541993103632153107481467437203414",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-all-zero-rates",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 0,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "3000.00000000000000000000000000000000000000000000000000000000000000000",
+        "Initial assumption plus gap-loan monthly P&I": "1250",
+        "Initial new-loan monthly P&I": "833.3333333333333333333333333333333333333333333333333333333333333333333",
+        "Initial monthly P&I difference: new minus assumption": "-416.6666666666666666666666666666666666666666666666666666666666666666667",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "3000",
+        "New-loan interest plus fees through horizon": "6000.00000000000000000000000000000000000000000000000000000000000000000",
+        "Assumption total debt remaining at horizon": "225000",
+        "New-loan debt remaining at horizon": "250000.0000000000000000000000000000000000000000000000000000000000000000",
+        "Assumption cash through horizon including debt payoff": "453000",
+        "New-loan cash through horizon including debt payoff": "456000.0000000000000000000000000000000000000000000000000000000000000000",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-all-one-month",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 1,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 1,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "3874.9999999999999999999999999999999999999999999999999999999999999816",
+        "Initial assumption plus gap-loan monthly P&I": "300750.0000",
+        "Initial new-loan monthly P&I": "301624.9999999999999999999999999999999999999999999999999999999999999816",
+        "Initial monthly P&I difference: new minus assumption": "874.9999999999999999999999999999999999999999999999999999999999999816",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "3750.0000",
+        "New-loan interest plus fees through horizon": "7624.9999999999999999999999999999999999999999999999999999999999999816",
+        "Assumption total debt remaining at horizon": "0",
+        "New-loan debt remaining at horizon": "0",
+        "Assumption cash through horizon including debt payoff": "453750.0000",
+        "New-loan cash through horizon including debt payoff": "457624.9999999999999999999999999999999999999999999999999999999999999816",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "cash-gap-new-cheaper",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 12,
+        "remaining_months": 240,
+        "assumption_fees": 9000,
+        "new_rate": 2,
+        "new_months": 360,
+        "new_fees": 0,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-154283.8988792753836007508016746063619631996253435745834168964440039435",
+        "Initial assumption plus gap-loan monthly P&I": "3303.258400708829931220254513757476360429521938425662179316928046359663",
+        "Initial new-loan monthly P&I": "1108.858418066461739551012102216922239107554273201180818011822137744808",
+        "Initial monthly P&I difference: new minus assumption": "-2194.399982642368191669242411540554121321967665224481361305105908614855",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "159000",
+        "Cash at closing: new-loan scenario": "150000",
+        "Assumption scenario interest plus fees through horizon": "182428.4905754570582845032553702866822425888746068790304417639580528937",
+        "New-loan interest plus fees through horizon": "28144.59169618167468375245369568032027938924926330444702486751404895018",
+        "Assumption total debt remaining at horizon": "275232.9865329272624112879845448381006168175583013392996827482752713139",
+        "New-loan debt remaining at horizon": "261613.0866121939703106917275626649859329359928712335979441581857842617",
+        "Assumption cash through horizon including debt payoff": "632428.4905754570582845032553702866822425888746068790304417639580528937",
+        "New-loan cash through horizon including debt payoff": "478144.5916961816746837524536956803202793892492633044470248675140489502",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-all-zero-rates",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 0,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 0,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 0,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "999.99999999999999999999999999999999999999999999999999999999999999996",
+        "Initial assumption plus gap-loan monthly P&I": "2083.333333333333333333333333333333333333333333333333333333333333333333",
+        "Initial new-loan monthly P&I": "1111.111111111111111111111111111111111111111111111111111111111111111111",
+        "Initial monthly P&I difference: new minus assumption": "-972.2222222222222222222222222222222222222222222222222222222222222222223",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "5000.00000000000000000000000000000000000000000000000000000000000000000",
+        "New-loan interest plus fees through horizon": "5999.99999999999999999999999999999999999999999999999999999999999999996",
+        "Assumption total debt remaining at horizon": "275000.0000000000000000000000000000000000000000000000000000000000000000",
+        "New-loan debt remaining at horizon": "333333.3333333333333333333333333333333333333333333333333333333333333333",
+        "Assumption cash through horizon including debt payoff": "455000.0000000000000000000000000000000000000000000000000000000000000000",
+        "New-loan cash through horizon including debt payoff": "456000.0000000000000000000000000000000000000000000000000000000000000000",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-all-one-month",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 1,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 1,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 1,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "1666.6666666666666666666666666666666666666666666666666666666666666421",
+        "Initial assumption plus gap-loan monthly P&I": "401500.0000",
+        "Initial new-loan monthly P&I": "402166.6666666666666666666666666666666666666666666666666666666666666421",
+        "Initial monthly P&I difference: new minus assumption": "666.6666666666666666666666666666666666666666666666666666666666666421",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "6500.0000",
+        "New-loan interest plus fees through horizon": "8166.6666666666666666666666666666666666666666666666666666666666666421",
+        "Assumption total debt remaining at horizon": "0",
+        "New-loan debt remaining at horizon": "0",
+        "Assumption cash through horizon including debt payoff": "456500.0000",
+        "New-loan cash through horizon including debt payoff": "458166.6666666666666666666666666666666666666666666666666666666666666421",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "financed-gap-new-cheaper",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 12,
+        "remaining_months": 240,
+        "assumption_fees": 9000,
+        "new_rate": 2,
+        "new_months": 360,
+        "new_fees": 0,
+        "horizon_months": 60,
+        "buyer_cash": 50000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "-183931.8262133097280297955456631091001304912065920238534773699855745265",
+        "Initial assumption plus gap-loan monthly P&I": "4570.016138211324931933432803821095055650061438039232828226979364601755",
+        "Initial new-loan monthly P&I": "1478.477890755282319401349469622562985476739030934907757349096183659744",
+        "Initial monthly P&I difference: new minus assumption": "-3091.538247456042612532083334198532070173322407104325070877883180942011",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "61000",
+        "Cash at closing: new-loan scenario": "50000",
+        "Assumption scenario interest plus fees through horizon": "221457.9484748852942747988172573495271696768722764297828438600043064600",
+        "New-loan interest plus fees through horizon": "37526.12226157556624500327159424042703918566568440592936649001873193354",
+        "Assumption total debt remaining at horizon": "336256.9801822057983587928490280838238306731859940758131502412424303547",
+        "New-loan debt remaining at horizon": "348817.4488162586270809223034168866479105813238283114639255442477123489",
+        "Assumption cash through horizon including debt payoff": "671457.9484748852942747988172573495271696768722764297828438600043064600",
+        "New-loan cash through horizon including debt payoff": "487526.1222615755662450032715942404270391856656844059293664900187319335",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "zero-gap-loan",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 150000,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 999999
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "56851.30906126167538859028533632392272649316975270938342219983835124514",
+        "Initial assumption plus gap-loan monthly P&I": "1663.792793561736078188107846501785147735590614722992159134131316621251",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "232.411276917155117949387182214194150078165797628240280495217973450223",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "153000",
+        "Cash at closing: new-loan scenario": "156000",
+        "Assumption scenario interest plus fees through horizon": "43753.86749216385843980103516839729078915631301970209963891021943901086",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "240926.2998784596937485145643782901819250208761363225700908623404417358",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "493753.8674921638584398010351683972907891563130197020996389102194390109",
+        "New-loan cash through horizon including debt payoff": "550605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "no-cash-contribution",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60,
+        "buyer_cash": 0,
+        "gap_rate": 9,
+        "gap_months": 120,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "46609.7104888320883173426027580902620936859146345889963496107978660235",
+        "Initial assumption plus gap-loan monthly P&I": "3563.929399815478579257875281597213190566399864143348132499208293984389",
+        "Initial new-loan monthly P&I": "2844.306105718336794206242543073968946720634618526848659444023935107210",
+        "Initial monthly P&I difference: new minus assumption": "-719.623294097141785051632738523244243845765245616499473055184358877179",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "150000",
+        "Cash at closing: assumption scenario": "5000",
+        "Cash at closing: new-loan scenario": "6000",
+        "Assumption scenario interest plus fees through horizon": "101298.0543413062124252443779989915581797883095240282282420542888193604",
+        "New-loan interest plus fees through horizon": "147907.7648301383007425869807570818202734742241586172245916650866853839",
+        "Assumption total debt remaining at horizon": "332462.2903523774976697718611031587667458043176754273402921017911802970",
+        "New-loan debt remaining at horizon": "421249.3984870380930902124281726436834702361470470063050250236505789513",
+        "Assumption cash through horizon including debt payoff": "551298.0543413062124252443779989915581797883095240282282420542888193604",
+        "New-loan cash through horizon including debt payoff": "597907.7648301383007425869807570818202734742241586172245916650866853839",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "price-equals-balance",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 300000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 240,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 360,
+        "new_fees": 6000,
+        "horizon_months": 60
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "56851.30906126167538859028533632392272649316975270938342219983835124514",
+        "Initial assumption plus gap-loan monthly P&I": "1663.792793561736078188107846501785147735590614722992159134131316621251",
+        "Initial new-loan monthly P&I": "1896.204070478891196137495028715979297813756412351232439629349290071474",
+        "Initial monthly P&I difference: new minus assumption": "232.411276917155117949387182214194150078165797628240280495217973450223",
+        "Purchase price minus assumed balance": "0",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "3000",
+        "Cash at closing: new-loan scenario": "6000",
+        "Assumption scenario interest plus fees through horizon": "43753.86749216385843980103516839729078915631301970209963891021943901086",
+        "New-loan interest plus fees through horizon": "100605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Assumption total debt remaining at horizon": "240926.2998784596937485145643782901819250208761363225700908623404417358",
+        "New-loan debt remaining at horizon": "280832.9323246920620601416187817624556468240980313375366833491003859676",
+        "Assumption cash through horizon including debt payoff": "343753.8674921638584398010351683972907891563130197020996389102194390109",
+        "New-loan cash through horizon including debt payoff": "400605.1765534255338283913205047212135156494827724114830611100577902560",
+        "Comparison horizon in months": "60"
+      }
+    },
+    {
+      "key": "long-zero-gap-term",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 450000,
+        "assumed_balance": 300000,
+        "assumed_rate": 3,
+        "remaining_months": 600,
+        "assumption_fees": 3000,
+        "new_rate": 6.5,
+        "new_months": 600,
+        "new_fees": 6000,
+        "horizon_months": 600,
+        "buyer_cash": 50000,
+        "gap_rate": 0,
+        "gap_months": 600,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "674361.0316113528693369412303728640826677479672510389998805498683888365",
+        "Initial assumption plus gap-loan monthly P&I": "1132.599160547460481770240162205242918168584059592267473743934907197988",
+        "Initial new-loan monthly P&I": "2254.867546566381930665142212826683055948164005010665806878184687846049",
+        "Initial monthly P&I difference: new minus assumption": "1122.268386018921448894902050621440137779579945418398333134249780648061",
+        "Purchase price minus assumed balance": "150000",
+        "Gap loan principal": "100000",
+        "Cash at closing: assumption scenario": "55000",
+        "Cash at closing: new-loan scenario": "56000",
+        "Assumption scenario interest plus fees through horizon": "284559.4963284762890621440973231457509011504357553604842463609443187925",
+        "New-loan interest plus fees through horizon": "958920.527939829158399085327696009833568898403006399484126910812707629",
+        "Assumption total debt remaining at horizon": "0",
+        "New-loan debt remaining at horizon": "0",
+        "Assumption cash through horizon including debt payoff": "734559.4963284762890621440973231457509011504357553604842463609443187925",
+        "New-loan cash through horizon including debt payoff": "1408920.527939829158399085327696009833568898403006399484126910812707629",
+        "Comparison horizon in months": "600"
+      }
+    },
+    {
+      "key": "large-principal-low-rate",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 1000000000,
+        "assumed_balance": 900000000,
+        "assumed_rate": 1e-06,
+        "remaining_months": 600,
+        "assumption_fees": 0,
+        "new_rate": 1e-06,
+        "new_months": 600,
+        "new_fees": 0,
+        "horizon_months": 600
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "0E-61",
+        "Initial assumption plus gap-loan monthly P&I": "1500000.375625031249913181423517078993199223041331423230891968432416458",
+        "Initial new-loan monthly P&I": "1500000.375625031249913181423517078993199223041331423230891968432416458",
+        "Initial monthly P&I difference: new minus assumption": "0E-63",
+        "Purchase price minus assumed balance": "100000000",
+        "Gap loan principal": "0",
+        "Cash at closing: assumption scenario": "100000000",
+        "Cash at closing: new-loan scenario": "100000000",
+        "Assumption scenario interest plus fees through horizon": "225.3750187499479088541102473959195338247988539385351810594498748",
+        "New-loan interest plus fees through horizon": "225.3750187499479088541102473959195338247988539385351810594498748",
+        "Assumption total debt remaining at horizon": "0",
+        "New-loan debt remaining at horizon": "0",
+        "Assumption cash through horizon including debt payoff": "1000000225.375018749947908854110247395919533824798853938535181059449875",
+        "New-loan cash through horizon including debt payoff": "1000000225.375018749947908854110247395919533824798853938535181059449875",
+        "Comparison horizon in months": "600"
+      }
+    },
+    {
+      "key": "large-principal-high-rate",
+      "id": "assumable-mortgage",
+      "mode": "financed-gap",
+      "values": {
+        "price": 1000000000,
+        "assumed_balance": 700000000,
+        "assumed_rate": 30,
+        "remaining_months": 600,
+        "assumption_fees": 3000,
+        "new_rate": 30,
+        "new_months": 600,
+        "new_fees": 6000,
+        "horizon_months": 600,
+        "buyer_cash": 100000000,
+        "gap_rate": 30,
+        "gap_months": 600,
+        "gap_fees": 2000
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "999.99999999999999999999999999999999999999999999999999999999999",
+        "Initial assumption plus gap-loan monthly P&I": "22500008.27681871008490691499342495942174185009507340468383983554328974",
+        "Initial new-loan monthly P&I": "22500008.27681871008490691499342495942174185009507340468383983554328974",
+        "Initial monthly P&I difference: new minus assumption": "-2E-63",
+        "Purchase price minus assumed balance": "300000000",
+        "Gap loan principal": "200000000",
+        "Cash at closing: assumption scenario": "100005000",
+        "Cash at closing: new-loan scenario": "100006000",
+        "Assumption scenario interest plus fees through horizon": "12600009966.09122605094414899605497565304511005704404281030390132597385",
+        "New-loan interest plus fees through horizon": "12600010966.09122605094414899605497565304511005704404281030390132597384",
+        "Assumption total debt remaining at horizon": "0",
+        "New-loan debt remaining at horizon": "0",
+        "Assumption cash through horizon including debt payoff": "13600009966.09122605094414899605497565304511005704404281030390132597385",
+        "New-loan cash through horizon including debt payoff": "13600010966.09122605094414899605497565304511005704404281030390132597384",
+        "Comparison horizon in months": "600"
+      }
+    },
+    {
+      "key": "tiny-principal-low-rate",
+      "id": "assumable-mortgage",
+      "mode": "cash-gap",
+      "values": {
+        "price": 1,
+        "assumed_balance": 0.01,
+        "assumed_rate": 1e-06,
+        "remaining_months": 600,
+        "assumption_fees": 0,
+        "new_rate": 1e-06,
+        "new_months": 600,
+        "new_fees": 0,
+        "horizon_months": 600
+      },
+      "expected": {
+        "New-loan cost minus assumption cost through horizon": "0E-71",
+        "Initial assumption plus gap-loan monthly P&I": "0.00001666667084027812499903534915018976659110247823701581367657742702684953",
+        "Initial new-loan monthly P&I": "0.00001666667084027812499903534915018976659110247823701581367657742702684953",
+        "Initial monthly P&I difference: new minus assumption": "0E-74",
+        "Purchase price minus assumed balance": "0.99",
+        "Gap loan principal": "0.00",
+        "Cash at closing: assumption scenario": "0.99",
+        "Cash at closing: new-loan scenario": "0.99",
+        "Assumption scenario interest plus fees through horizon": "2.50416687499942120949011385995466148694220948820594645621610972E-9",
+        "New-loan interest plus fees through horizon": "2.50416687499942120949011385995466148694220948820594645621610972E-9",
+        "Assumption total debt remaining at horizon": "0",
+        "New-loan debt remaining at horizon": "0",
+        "Assumption cash through horizon including debt payoff": "1.000000002504166874999421209490113859954661486942209488205946456216110",
+        "New-loan cash through horizon including debt payoff": "1.000000002504166874999421209490113859954661486942209488205946456216110",
+        "Comparison horizon in months": "600"
+      }
+    },
+    {
+      "key": "large-signed-income",
+      "id": "return-on-assets",
+      "mode": "known-average",
+      "values": {
+        "net_income": -1000000000000,
+        "revenue": 1000000000000,
+        "target_roa": -100,
+        "average_assets": 1000000000000
+      },
+      "expected": {
+        "Average total assets used": "1000000000000",
+        "Net income for entered period": "-1000000000000",
+        "Net income at your target ROA": "-1000000000000",
+        "Target net income minus actual net income": "0",
+        "Return on assets for entered period": "-100",
+        "Asset turnover for entered period": "1",
+        "Net profit margin for entered period": "-100"
+      }
+    }
+  ]
+}

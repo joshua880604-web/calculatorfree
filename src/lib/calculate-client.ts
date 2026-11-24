@@ -12,6 +12,10 @@ const businessTools = () => import('./calculators/business-tools').then(m => m.b
 const strategyTools=()=>import('./calculators/debt-strategies').then(m=>[m.debtSnowball,m.debtAvalanche]);
 const expansionFour=()=>import('./calculators/expansion-four').then(m=>m.expansionFourCalculators);
 const dataTools: Record<string, () => Promise<Calculator[]>> = {
+ 'merchant-cash-advance':()=>import('./calculators/merchant-cash-advance').then(m=>[m.merchantCashAdvanceCalculator]),
+ 'backdoor-roth-ira':()=>import('./calculators/backdoor-roth-ira').then(m=>[m.backdoorRothCalculator]),
+ 'return-on-assets':()=>import('./calculators/roa').then(m=>[m.roaCalculator]),
+ 'assumable-mortgage':()=>import('./calculators/assumable-mortgage').then(m=>[m.assumableMortgageCalculator]),
  'rsu-tax':()=>import('./calculators/rsu-tax').then(m=>[m.rsuTaxCalculator]),
  'espp-tax':()=>import('./calculators/espp-tax').then(m=>[m.esppTaxCalculator]),
  'bond-ladder':()=>import('./calculators/bond-ladder').then(m=>[m.bondLadderCalculator]),

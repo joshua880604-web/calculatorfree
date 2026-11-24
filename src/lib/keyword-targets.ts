@@ -433,3 +433,13 @@ keywordTitles["rsu-tax"]="RSU Tax & Withholding Calculator";
 searchTasks["rsu-tax"]=[{"keyword": "RSU tax withholding calculator", "mode": "delivery", "description": "Separate 2026 delivery wage value, federal withholding and a rate-based tax-gap assumption."}, {"keyword": "RSU capital gains and cost basis calculator", "mode": "sale", "description": "Allocate income-date basis to an already-taxed lot sale and preserve the separate capital result."}];
 keywordTitles["espp-tax"]="ESPP Tax Calculator";
 searchTasks["espp-tax"]=[{"keyword": "ESPP qualifying disposition tax calculator", "mode": "known-price", "description": "Use actual Section 423 prices and dates to split compensation, adjusted basis and capital gain/loss."}, {"keyword": "ESPP lookback and discount calculator", "mode": "discount-price", "description": "Derive actual and grant-date hypothetical prices under the stated 0\u201315% discount formula."}];
+
+keywordTitles["return-on-assets"]="Return on Assets Calculator";
+searchTasks["return-on-assets"]=[{"keyword": "Return on assets ratio calculator", "mode": "balances", "description": "Use net income and a two-point average of book assets."}, {"keyword": "ROA calculator with average total assets", "mode": "known-average", "description": "Use a documented average and match the accounting period."}];
+keywordTitles["assumable-mortgage"]="Assumable Mortgage Calculator";
+searchTasks["assumable-mortgage"]=[{"keyword": "Assumable mortgage calculator with cash gap", "mode": "cash-gap", "description": "Compare the same cash contribution and actual remaining loan term."}, {"keyword": "Mortgage assumption with second loan calculator", "mode": "financed-gap", "description": "Include separately amortizing gap financing and debts at a shared horizon."}];
+
+keywordTitles["merchant-cash-advance"]="Merchant Cash Advance Calculator";
+searchTasks["merchant-cash-advance"]=[{"keyword": "Merchant cash advance factor rate and APR estimate", "mode": "fixed-remittances", "description": "Use explicit dates to show an illustrative effective annual IRR, not statutory APR."}, {"keyword": "Merchant cash advance holdback calculator", "mode": "sales-holdback", "description": "Model constant eligible sales per interval and a capped final remittance."}];
+keywordTitles["backdoor-roth-ira"]="Backdoor Roth IRA Calculator: 2026";
+searchTasks["backdoor-roth-ira"]=[{"keyword": "Backdoor Roth IRA pro rata calculator 2026", "mode": "conversion-only", "description": "Aggregate established basis and included year-end IRA values for ordinary conversions."}, {"keyword": "Backdoor Roth conversion and basis carryforward", "mode": "full-year", "description": "Separate other included distributions and following-year contributions for the tax year."}];

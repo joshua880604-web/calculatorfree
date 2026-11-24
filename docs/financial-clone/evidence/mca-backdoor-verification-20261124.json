@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-24",
+  "branch": "preview/mca-backdoor-20261124",
+  "parent": "77448a63f4d6dc86dddc3ae39257bae6351ee016",
+  "last_confirmed_production": "af78857371ef9e2974dc9132c92cb9bf40bc2d08",
+  "published_base_local_commit": "5d8cf5438dcebb6b9502fc57b57c3e993e54129d",
+  "published": false,
+  "tools": [
+    "merchant-cash-advance",
+    "backdoor-roth-ira"
+  ],
+  "prior_pending_tools": [
+    "return-on-assets",
+    "assumable-mortgage"
+  ],
+  "pending_tools_total": 4,
+  "modes": 4,
+  "complete_presets": 13,
+  "new_guides": 2,
+  "new_glossary_terms": 2,
+  "site": {
+    "functional_tools": 180,
+    "modes": 376,
+    "canonical_pages": 505,
+    "guides": 167,
+    "glossary_terms": 143
+  },
+  "checks": {
+    "unit_tests": 3946,
+    "unit_passed": true,
+    "typecheck_passed": true,
+    "build_passed": true,
+    "decimal_cases": 50,
+    "decimal_metrics": 595,
+    "decimal_precision": 70,
+    "browser_checks": 64,
+    "calculator_csv_exports": 12,
+    "total_browser_checks": 76,
+    "page_errors": [],
+    "visual_review": "passed: full mobile and desktop forms/results for four modes, compact option labels and explicit explanatory hints",
+    "static_seo": {
+      "passed": true,
+      "configuration": "indexable-test-origin",
+      "pages": 505,
+      "guides": 167,
+      "internal_links_checked": 36891,
+      "calculator_state_links": 3181,
+      "max_contextual_depth": 3,
+      "redirect_rules": 212,
+      "curated_llms_links": 255,
+      "no_live_indexing_or_ranking_claim": true
+    }
+  },
+  "evidence_root": "/workspace/work/mca-backdoor-20261124",
+  "limitations": [
+    "Original tools; no competitor parity or external professional certification",
+    "MCA effective annual IRR is a dated hypothetical cash-flow calculation, not legal APR or a sales forecast",
+    "Roth is ordinary individual 2026 basis allocation; contribution/deduction eligibility and special adjustments excluded",
+    "2026 final Form 8606 is the math reference; linked 2025 narrative instructions are context only, no draft used",
+    "No native Safari, actual lender/custodian outcome, remote deployment or indexing/ranking claim"
+  ]
+}

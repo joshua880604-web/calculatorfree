@@ -851,5 +851,29 @@
   {"id": "bond-ladder", "title": "Bond & Treasury Bill Ladder Calculator", "category": "Investment", "local_route": "/bond-ladder-calculator.html"},
   {"id": "irmaa", "title": "Medicare IRMAA Calculator", "category": "Retirement", "local_route": "/irmaa-calculator.html"},
   {"id": "rsu-tax", "title": "RSU Tax & Withholding Calculator", "category": "Tax and Salary", "local_route": "/rsu-tax-calculator.html"},
-  {"id": "espp-tax", "title": "ESPP Tax Calculator", "category": "Tax and Salary", "local_route": "/espp-tax-calculator.html"}
+  {"id": "espp-tax", "title": "ESPP Tax Calculator", "category": "Tax and Salary", "local_route": "/espp-tax-calculator.html"},
+  {
+    "id": "return-on-assets",
+    "title": "Return on Assets Calculator",
+    "category": "Other",
+    "local_route": "/return-on-assets-calculator.html"
+  },
+  {
+    "id": "assumable-mortgage",
+    "title": "Assumable Mortgage Calculator",
+    "category": "Mortgage and Real Estate",
+    "local_route": "/assumable-mortgage-calculator.html"
+  },
+  {
+    "id": "merchant-cash-advance",
+    "title": "Merchant Cash Advance Calculator",
+    "category": "Other",
+    "local_route": "/merchant-cash-advance-calculator.html"
+  },
+  {
+    "id": "backdoor-roth-ira",
+    "title": "Backdoor Roth IRA Calculator: 2026",
+    "category": "Retirement",
+    "local_route": "/backdoor-roth-ira-calculator.html"
+  }
 ]

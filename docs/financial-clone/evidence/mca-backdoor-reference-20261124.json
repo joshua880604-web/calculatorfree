@@ -1,0 +1,1439 @@
+{
+  "precision": 70,
+  "method": "Independent per-day discount-factor root and direct Form 8606 ordinary allocation, no TypeScript imports",
+  "fixtures": [
+    {
+      "key": "fixed-remittances-default",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 130
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "500.0",
+        "Final scheduled remittance": "500.0",
+        "Assumed number of remittances": "130",
+        "Calendar days from funding to final remittance": "182",
+        "Illustrative effective annual IRR, not legal APR": "243.3222365424334377394867045148444462326642892167586326216553764288368"
+      }
+    },
+    {
+      "key": "sales-holdback-default",
+      "id": "merchant-cash-advance",
+      "mode": "sales-holdback",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "sales_per_interval": 5000,
+        "holdback": 10
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "500",
+        "Final scheduled remittance": "500",
+        "Assumed number of remittances": "130",
+        "Calendar days from funding to final remittance": "182",
+        "Illustrative effective annual IRR, not legal APR": "243.3222365424334377394867045148444462326642892167586326216553764288368"
+      }
+    },
+    {
+      "key": "conversion-only-default",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "6937.500",
+        "Nontaxable portion of 2026 Roth conversions": "562.500",
+        "Assumed incremental tax on conversions": "1665.000",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "0.000",
+        "Nontaxable other IRA distributions in this worksheet": "0.000",
+        "Basis used across conversion and other distributions": "562.500",
+        "Remaining IRA basis after 2026 allocation": "6937.500",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "92500",
+        "Nontaxable allocation percentage": "7.500"
+      }
+    },
+    {
+      "key": "full-year-default",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "6988.636363636363636363636363636363636363636363636363636363636363636364",
+        "Nontaxable portion of 2026 Roth conversions": "511.3636363636363636363636363636363636363636363636363636363636363636364",
+        "Assumed incremental tax on conversions": "1677.272727272727272727272727272727272727272727272727272727272727272727",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "110000",
+        "Taxable other IRA distributions in this worksheet": "9318.181818181818181818181818181818181818181818181818181818181818181818",
+        "Nontaxable other IRA distributions in this worksheet": "681.8181818181818181818181818181818181818181818181818181818181818181818",
+        "Basis used across conversion and other distributions": "1193.181818181818181818181818181818181818181818181818181818181818181818",
+        "Remaining IRA basis after 2026 allocation": "6306.818181818181818181818181818181818181818181818181818181818181818182",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "92500",
+        "Nontaxable allocation percentage": "6.818181818181818181818181818181818181818181818181818181818181818181818"
+      }
+    },
+    {
+      "key": "conversion-only-end0-convert0",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 0,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "0",
+        "Nontaxable portion of 2026 Roth conversions": "0",
+        "Assumed incremental tax on conversions": "0",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "0",
+        "Taxable other IRA distributions in this worksheet": "0",
+        "Nontaxable other IRA distributions in this worksheet": "0",
+        "Basis used across conversion and other distributions": "0",
+        "Remaining IRA basis after 2026 allocation": "7500",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "0"
+      }
+    },
+    {
+      "key": "conversion-only-end0-convert3750",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 3750,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "0",
+        "Nontaxable portion of 2026 Roth conversions": "3750",
+        "Assumed incremental tax on conversions": "0",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "3750",
+        "Taxable other IRA distributions in this worksheet": "0",
+        "Nontaxable other IRA distributions in this worksheet": "0",
+        "Basis used across conversion and other distributions": "3750",
+        "Remaining IRA basis after 2026 allocation": "3750",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "0",
+        "Nontaxable allocation percentage": "100"
+      }
+    },
+    {
+      "key": "conversion-only-end0-convert7500",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "0",
+        "Nontaxable portion of 2026 Roth conversions": "7500",
+        "Assumed incremental tax on conversions": "0",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "7500",
+        "Taxable other IRA distributions in this worksheet": "0",
+        "Nontaxable other IRA distributions in this worksheet": "0",
+        "Basis used across conversion and other distributions": "7500",
+        "Remaining IRA basis after 2026 allocation": "0",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "0",
+        "Nontaxable allocation percentage": "100"
+      }
+    },
+    {
+      "key": "conversion-only-end92500-convert0",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 0,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "0E-71",
+        "Nontaxable portion of 2026 Roth conversions": "0E-71",
+        "Assumed incremental tax on conversions": "0E-71",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "92500",
+        "Taxable other IRA distributions in this worksheet": "0E-71",
+        "Nontaxable other IRA distributions in this worksheet": "0E-71",
+        "Basis used across conversion and other distributions": "0E-71",
+        "Remaining IRA basis after 2026 allocation": "7500.000000000000000000000000000000000000000000000000000000000000000000",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "92500",
+        "Nontaxable allocation percentage": "8.108108108108108108108108108108108108108108108108108108108108108108108"
+      }
+    },
+    {
+      "key": "conversion-only-end92500-convert3750",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 3750,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "3457.792207792207792207792207792207792207792207792207792207792207792208",
+        "Nontaxable portion of 2026 Roth conversions": "292.2077922077922077922077922077922077922077922077922077922077922077922",
+        "Assumed incremental tax on conversions": "829.8701298701298701298701298701298701298701298701298701298701298701299",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "96250",
+        "Taxable other IRA distributions in this worksheet": "0E-71",
+        "Nontaxable other IRA distributions in this worksheet": "0E-71",
+        "Basis used across conversion and other distributions": "292.2077922077922077922077922077922077922077922077922077922077922077922",
+        "Remaining IRA basis after 2026 allocation": "7207.792207792207792207792207792207792207792207792207792207792207792208",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "92500",
+        "Nontaxable allocation percentage": "7.792207792207792207792207792207792207792207792207792207792207792207792"
+      }
+    },
+    {
+      "key": "conversion-only-end92500-convert7500",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "6937.500",
+        "Nontaxable portion of 2026 Roth conversions": "562.500",
+        "Assumed incremental tax on conversions": "1665.000",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "0.000",
+        "Nontaxable other IRA distributions in this worksheet": "0.000",
+        "Basis used across conversion and other distributions": "562.500",
+        "Remaining IRA basis after 2026 allocation": "6937.500",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "92500",
+        "Nontaxable allocation percentage": "7.500"
+      }
+    },
+    {
+      "key": "full-year-end0-convert0",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 0,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "0.00",
+        "Nontaxable portion of 2026 Roth conversions": "0.00",
+        "Assumed incremental tax on conversions": "0.00",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "10000",
+        "Taxable other IRA distributions in this worksheet": "2500.00",
+        "Nontaxable other IRA distributions in this worksheet": "7500.00",
+        "Basis used across conversion and other distributions": "7500.00",
+        "Remaining IRA basis after 2026 allocation": "0.00",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "0",
+        "Nontaxable allocation percentage": "75.00"
+      }
+    },
+    {
+      "key": "full-year-end0-convert3750",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 3750,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "1704.545454545454545454545454545454545454545454545454545454545454545454",
+        "Nontaxable portion of 2026 Roth conversions": "2045.454545454545454545454545454545454545454545454545454545454545454546",
+        "Assumed incremental tax on conversions": "409.090909090909090909090909090909090909090909090909090909090909090909",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "13750",
+        "Taxable other IRA distributions in this worksheet": "4545.454545454545454545454545454545454545454545454545454545454545454545",
+        "Nontaxable other IRA distributions in this worksheet": "5454.545454545454545454545454545454545454545454545454545454545454545455",
+        "Basis used across conversion and other distributions": "7500.000000000000000000000000000000000000000000000000000000000000000001",
+        "Remaining IRA basis after 2026 allocation": "-1E-66",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "0",
+        "Nontaxable allocation percentage": "54.54545454545454545454545454545454545454545454545454545454545454545455"
+      }
+    },
+    {
+      "key": "full-year-end0-convert7500",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "4285.714285714285714285714285714285714285714285714285714285714285714286",
+        "Nontaxable portion of 2026 Roth conversions": "3214.285714285714285714285714285714285714285714285714285714285714285714",
+        "Assumed incremental tax on conversions": "1028.571428571428571428571428571428571428571428571428571428571428571429",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "17500",
+        "Taxable other IRA distributions in this worksheet": "5714.285714285714285714285714285714285714285714285714285714285714285714",
+        "Nontaxable other IRA distributions in this worksheet": "4285.714285714285714285714285714285714285714285714285714285714285714286",
+        "Basis used across conversion and other distributions": "7500.000000000000000000000000000000000000000000000000000000000000000000",
+        "Remaining IRA basis after 2026 allocation": "0E-66",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "0",
+        "Nontaxable allocation percentage": "42.85714285714285714285714285714285714285714285714285714285714285714286"
+      }
+    },
+    {
+      "key": "full-year-end92500-convert0",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 0,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "0E-71",
+        "Nontaxable portion of 2026 Roth conversions": "0E-71",
+        "Assumed incremental tax on conversions": "0E-71",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "102500",
+        "Taxable other IRA distributions in this worksheet": "9268.292682926829268292682926829268292682926829268292682926829268292683",
+        "Nontaxable other IRA distributions in this worksheet": "731.7073170731707317073170731707317073170731707317073170731707317073171",
+        "Basis used across conversion and other distributions": "731.7073170731707317073170731707317073170731707317073170731707317073171",
+        "Remaining IRA basis after 2026 allocation": "6768.292682926829268292682926829268292682926829268292682926829268292683",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "92500",
+        "Nontaxable allocation percentage": "7.317073170731707317073170731707317073170731707317073170731707317073171"
+      }
+    },
+    {
+      "key": "full-year-end92500-convert3750",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 3750,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "3485.294117647058823529411764705882352941176470588235294117647058823529",
+        "Nontaxable portion of 2026 Roth conversions": "264.7058823529411764705882352941176470588235294117647058823529411764706",
+        "Assumed incremental tax on conversions": "836.470588235294117647058823529411764705882352941176470588235294117647",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "106250",
+        "Taxable other IRA distributions in this worksheet": "9294.117647058823529411764705882352941176470588235294117647058823529412",
+        "Nontaxable other IRA distributions in this worksheet": "705.8823529411764705882352941176470588235294117647058823529411764705882",
+        "Basis used across conversion and other distributions": "970.5882352941176470588235294117647058823529411764705882352941176470588",
+        "Remaining IRA basis after 2026 allocation": "6529.411764705882352941176470588235294117647058823529411764705882352941",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "92500",
+        "Nontaxable allocation percentage": "7.058823529411764705882352941176470588235294117647058823529411764705882"
+      }
+    },
+    {
+      "key": "full-year-end92500-convert7500",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "6988.636363636363636363636363636363636363636363636363636363636363636364",
+        "Nontaxable portion of 2026 Roth conversions": "511.3636363636363636363636363636363636363636363636363636363636363636364",
+        "Assumed incremental tax on conversions": "1677.272727272727272727272727272727272727272727272727272727272727272727",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "110000",
+        "Taxable other IRA distributions in this worksheet": "9318.181818181818181818181818181818181818181818181818181818181818181818",
+        "Nontaxable other IRA distributions in this worksheet": "681.8181818181818181818181818181818181818181818181818181818181818181818",
+        "Basis used across conversion and other distributions": "1193.181818181818181818181818181818181818181818181818181818181818181818",
+        "Remaining IRA basis after 2026 allocation": "6306.818181818181818181818181818181818181818181818181818181818181818182",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "92500",
+        "Nontaxable allocation percentage": "6.818181818181818181818181818181818181818181818181818181818181818181818"
+      }
+    },
+    {
+      "key": "prior0-late0",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "6937.500",
+        "Nontaxable portion of 2026 Roth conversions": "562.500",
+        "Assumed incremental tax on conversions": "1665.000",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "9250.000",
+        "Nontaxable other IRA distributions in this worksheet": "750.000",
+        "Basis used across conversion and other distributions": "1312.500",
+        "Remaining IRA basis after 2026 allocation": "6187.500",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "82500",
+        "Nontaxable allocation percentage": "7.500"
+      }
+    },
+    {
+      "key": "prior0-late3750",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 3750,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "7218.7500",
+        "Nontaxable portion of 2026 Roth conversions": "281.2500",
+        "Assumed incremental tax on conversions": "1732.5000",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "3750",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "9625.0000",
+        "Nontaxable other IRA distributions in this worksheet": "375.0000",
+        "Basis used across conversion and other distributions": "656.2500",
+        "Remaining IRA basis after 2026 allocation": "6843.7500",
+        "Early-2027 contribution excluded from 2026 allocation": "3750",
+        "December 31 IRA values plus included outstanding rollovers": "82500",
+        "Nontaxable allocation percentage": "3.7500"
+      }
+    },
+    {
+      "key": "prior0-late7500",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 7500,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "7500",
+        "Nontaxable portion of 2026 Roth conversions": "0",
+        "Assumed incremental tax on conversions": "1800",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "0",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "10000",
+        "Nontaxable other IRA distributions in this worksheet": "0",
+        "Basis used across conversion and other distributions": "0",
+        "Remaining IRA basis after 2026 allocation": "7500",
+        "Early-2027 contribution excluded from 2026 allocation": "7500",
+        "December 31 IRA values plus included outstanding rollovers": "82500",
+        "Nontaxable allocation percentage": "0"
+      }
+    },
+    {
+      "key": "prior2500-late0",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 2500,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "6750.0",
+        "Nontaxable portion of 2026 Roth conversions": "750.0",
+        "Assumed incremental tax on conversions": "1620.0",
+        "Total nondeductible basis before allocation": "10000",
+        "Basis eligible for 2026 allocation": "10000",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "9000.0",
+        "Nontaxable other IRA distributions in this worksheet": "1000.0",
+        "Basis used across conversion and other distributions": "1750.0",
+        "Remaining IRA basis after 2026 allocation": "8250.0",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "82500",
+        "Nontaxable allocation percentage": "10.0"
+      }
+    },
+    {
+      "key": "prior2500-late3750",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 2500,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 3750,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "7031.2500",
+        "Nontaxable portion of 2026 Roth conversions": "468.7500",
+        "Assumed incremental tax on conversions": "1687.5000",
+        "Total nondeductible basis before allocation": "10000",
+        "Basis eligible for 2026 allocation": "6250",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "9375.0000",
+        "Nontaxable other IRA distributions in this worksheet": "625.0000",
+        "Basis used across conversion and other distributions": "1093.7500",
+        "Remaining IRA basis after 2026 allocation": "8906.2500",
+        "Early-2027 contribution excluded from 2026 allocation": "3750",
+        "December 31 IRA values plus included outstanding rollovers": "82500",
+        "Nontaxable allocation percentage": "6.2500"
+      }
+    },
+    {
+      "key": "prior2500-late7500",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 2500,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 7500,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "7312.500",
+        "Nontaxable portion of 2026 Roth conversions": "187.500",
+        "Assumed incremental tax on conversions": "1755.000",
+        "Total nondeductible basis before allocation": "10000",
+        "Basis eligible for 2026 allocation": "2500",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "9750.000",
+        "Nontaxable other IRA distributions in this worksheet": "250.000",
+        "Basis used across conversion and other distributions": "437.500",
+        "Remaining IRA basis after 2026 allocation": "9562.500",
+        "Early-2027 contribution excluded from 2026 allocation": "7500",
+        "December 31 IRA values plus included outstanding rollovers": "82500",
+        "Nontaxable allocation percentage": "2.500"
+      }
+    },
+    {
+      "key": "prior20000-late0",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 20000,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 0,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "5437.500",
+        "Nontaxable portion of 2026 Roth conversions": "2062.500",
+        "Assumed incremental tax on conversions": "1305.000",
+        "Total nondeductible basis before allocation": "27500",
+        "Basis eligible for 2026 allocation": "27500",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "7250.000",
+        "Nontaxable other IRA distributions in this worksheet": "2750.000",
+        "Basis used across conversion and other distributions": "4812.500",
+        "Remaining IRA basis after 2026 allocation": "22687.500",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "82500",
+        "Nontaxable allocation percentage": "27.500"
+      }
+    },
+    {
+      "key": "prior20000-late3750",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 20000,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 3750,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "5718.7500",
+        "Nontaxable portion of 2026 Roth conversions": "1781.2500",
+        "Assumed incremental tax on conversions": "1372.5000",
+        "Total nondeductible basis before allocation": "27500",
+        "Basis eligible for 2026 allocation": "23750",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "7625.0000",
+        "Nontaxable other IRA distributions in this worksheet": "2375.0000",
+        "Basis used across conversion and other distributions": "4156.2500",
+        "Remaining IRA basis after 2026 allocation": "23343.7500",
+        "Early-2027 contribution excluded from 2026 allocation": "3750",
+        "December 31 IRA values plus included outstanding rollovers": "82500",
+        "Nontaxable allocation percentage": "23.7500"
+      }
+    },
+    {
+      "key": "prior20000-late7500",
+      "id": "backdoor-roth-ira",
+      "mode": "full-year",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 20000,
+        "current_nondeductible": 7500,
+        "year_end_iras": 82500,
+        "outstanding_rollovers": 0,
+        "converted": 7500,
+        "assumed_rate": 24,
+        "next_year_contribution": 7500,
+        "other_distributions": 10000
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "6000.0",
+        "Nontaxable portion of 2026 Roth conversions": "1500.0",
+        "Assumed incremental tax on conversions": "1440.0",
+        "Total nondeductible basis before allocation": "27500",
+        "Basis eligible for 2026 allocation": "20000",
+        "Pro-rata denominator including converted and distributed amounts": "100000",
+        "Taxable other IRA distributions in this worksheet": "8000.0",
+        "Nontaxable other IRA distributions in this worksheet": "2000.0",
+        "Basis used across conversion and other distributions": "3500.0",
+        "Remaining IRA basis after 2026 allocation": "24000.0",
+        "Early-2027 contribution excluded from 2026 allocation": "7500",
+        "December 31 IRA values plus included outstanding rollovers": "82500",
+        "Nontaxable allocation percentage": "20.0"
+      }
+    },
+    {
+      "key": "conversion-growth",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 7600,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "100.000000000000000000000000000000000000000000000000000000000000000000",
+        "Nontaxable portion of 2026 Roth conversions": "7500.000000000000000000000000000000000000000000000000000000000000000000",
+        "Assumed incremental tax on conversions": "24.000000000000000000000000000000000000000000000000000000000000000000",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "7600",
+        "Taxable other IRA distributions in this worksheet": "0E-70",
+        "Nontaxable other IRA distributions in this worksheet": "0E-70",
+        "Basis used across conversion and other distributions": "7500.000000000000000000000000000000000000000000000000000000000000000000",
+        "Remaining IRA basis after 2026 allocation": "0E-70",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "0",
+        "Nontaxable allocation percentage": "98.68421052631578947368421052631578947368421052631578947368421052631579"
+      }
+    },
+    {
+      "key": "basis-exceeds-pool",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 5000,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "0",
+        "Nontaxable portion of 2026 Roth conversions": "5000",
+        "Assumed incremental tax on conversions": "0",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "5000",
+        "Taxable other IRA distributions in this worksheet": "0",
+        "Nontaxable other IRA distributions in this worksheet": "0",
+        "Basis used across conversion and other distributions": "5000",
+        "Remaining IRA basis after 2026 allocation": "2500",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "0",
+        "Nontaxable allocation percentage": "100"
+      }
+    },
+    {
+      "key": "zero-pool",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 0,
+        "outstanding_rollovers": 0,
+        "converted": 0,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "0",
+        "Nontaxable portion of 2026 Roth conversions": "0",
+        "Assumed incremental tax on conversions": "0",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "0",
+        "Taxable other IRA distributions in this worksheet": "0",
+        "Nontaxable other IRA distributions in this worksheet": "0",
+        "Basis used across conversion and other distributions": "0",
+        "Remaining IRA basis after 2026 allocation": "7500",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "0"
+      }
+    },
+    {
+      "key": "outstanding-rollover",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 0,
+        "current_nondeductible": 7500,
+        "year_end_iras": 92500,
+        "outstanding_rollovers": 10000,
+        "converted": 7500,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "6988.636363636363636363636363636363636363636363636363636363636363636364",
+        "Nontaxable portion of 2026 Roth conversions": "511.3636363636363636363636363636363636363636363636363636363636363636364",
+        "Assumed incremental tax on conversions": "1677.272727272727272727272727272727272727272727272727272727272727272727",
+        "Total nondeductible basis before allocation": "7500",
+        "Basis eligible for 2026 allocation": "7500",
+        "Pro-rata denominator including converted and distributed amounts": "110000",
+        "Taxable other IRA distributions in this worksheet": "0E-71",
+        "Nontaxable other IRA distributions in this worksheet": "0E-71",
+        "Basis used across conversion and other distributions": "511.3636363636363636363636363636363636363636363636363636363636363636364",
+        "Remaining IRA basis after 2026 allocation": "6988.636363636363636363636363636363636363636363636363636363636363636364",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "102500",
+        "Nontaxable allocation percentage": "6.818181818181818181818181818181818181818181818181818181818181818181818"
+      }
+    },
+    {
+      "key": "large-basis",
+      "id": "backdoor-roth-ira",
+      "mode": "conversion-only",
+      "values": {
+        "case_scope": "Ordinary case; basis confirmed",
+        "prior_basis": 1000000000000.0,
+        "current_nondeductible": 0,
+        "year_end_iras": 1000000000000.0,
+        "outstanding_rollovers": 0,
+        "converted": 1000000000000.0,
+        "assumed_rate": 24
+      },
+      "expected": {
+        "Taxable portion of 2026 Roth conversions": "500000000000.00",
+        "Nontaxable portion of 2026 Roth conversions": "500000000000.00",
+        "Assumed incremental tax on conversions": "120000000000.00",
+        "Total nondeductible basis before allocation": "1000000000000.0",
+        "Basis eligible for 2026 allocation": "1000000000000.0",
+        "Pro-rata denominator including converted and distributed amounts": "2000000000000.0",
+        "Taxable other IRA distributions in this worksheet": "0.0",
+        "Nontaxable other IRA distributions in this worksheet": "0.0",
+        "Basis used across conversion and other distributions": "500000000000.00",
+        "Remaining IRA basis after 2026 allocation": "500000000000.00",
+        "Early-2027 contribution excluded from 2026 allocation": "0",
+        "December 31 IRA values plus included outstanding rollovers": "1000000000000.0",
+        "Nontaxable allocation percentage": "50.0"
+      }
+    },
+    {
+      "key": "Every calendar day-count1",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Every calendar day",
+        "remittances": 1
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "65000.0",
+        "Final scheduled remittance": "65000.0",
+        "Assumed number of remittances": "1",
+        "Calendar days from funding to final remittance": "1"
+      }
+    },
+    {
+      "key": "Every calendar day-count5",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Every calendar day",
+        "remittances": 5
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "13000.0",
+        "Final scheduled remittance": "13000.0",
+        "Assumed number of remittances": "5",
+        "Calendar days from funding to final remittance": "5"
+      }
+    },
+    {
+      "key": "Every calendar day-count20",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Every calendar day",
+        "remittances": 20
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "3250.0",
+        "Final scheduled remittance": "3250.0",
+        "Assumed number of remittances": "20",
+        "Calendar days from funding to final remittance": "20"
+      }
+    },
+    {
+      "key": "Weekdays (Mon\u2013Fri only)-count1",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 1
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "65000.0",
+        "Final scheduled remittance": "65000.0",
+        "Assumed number of remittances": "1",
+        "Calendar days from funding to final remittance": "1"
+      }
+    },
+    {
+      "key": "Weekdays (Mon\u2013Fri only)-count5",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 5
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "13000.0",
+        "Final scheduled remittance": "13000.0",
+        "Assumed number of remittances": "5",
+        "Calendar days from funding to final remittance": "7"
+      }
+    },
+    {
+      "key": "Weekdays (Mon\u2013Fri only)-count20",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 20
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "3250.0",
+        "Final scheduled remittance": "3250.0",
+        "Assumed number of remittances": "20",
+        "Calendar days from funding to final remittance": "28",
+        "Illustrative effective annual IRR, not legal APR": "261096.5522489957713141332444404865958258823953170258395990893011144469"
+      }
+    },
+    {
+      "key": "Weekly (every 7 days)-count1",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekly (every 7 days)",
+        "remittances": 1
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "65000.0",
+        "Final scheduled remittance": "65000.0",
+        "Assumed number of remittances": "1",
+        "Calendar days from funding to final remittance": "1"
+      }
+    },
+    {
+      "key": "Weekly (every 7 days)-count5",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekly (every 7 days)",
+        "remittances": 5
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "13000.0",
+        "Final scheduled remittance": "13000.0",
+        "Assumed number of remittances": "5",
+        "Calendar days from funding to final remittance": "29",
+        "Illustrative effective annual IRR, not legal APR": "209167.0502290761856699631359143440681192008609995831010561607828828777"
+      }
+    },
+    {
+      "key": "Weekly (every 7 days)-count20",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekly (every 7 days)",
+        "remittances": 20
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "3250.0",
+        "Final scheduled remittance": "3250.0",
+        "Assumed number of remittances": "20",
+        "Calendar days from funding to final remittance": "134",
+        "Illustrative effective annual IRR, not legal APR": "434.3983193316376437765835592598530610397909665216061037094044203613893"
+      }
+    },
+    {
+      "key": "fixed-remittances-zero-cost",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1,
+        "withheld_fees": 0,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 130
+      },
+      "expected": {
+        "Net cash received at funding": "50000",
+        "Total contracted remittances": "50000",
+        "Factor markup above gross advance": "0",
+        "Fees withheld at funding": "0",
+        "Total financing cash cost above net funding": "0",
+        "Total cash cost divided by net funding": "0",
+        "Initial scheduled remittance": "384.6153846153846153846153846153846153846153846153846153846153846153846",
+        "Final scheduled remittance": "384.6153846153846153846153846153846153846153846153846153846153846153846",
+        "Assumed number of remittances": "130",
+        "Calendar days from funding to final remittance": "182",
+        "Illustrative effective annual IRR, not legal APR": "0"
+      }
+    },
+    {
+      "key": "fixed-remittances-fractional",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 12345.67,
+        "factor": 1.17,
+        "withheld_fees": 123.45,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 130
+      },
+      "expected": {
+        "Net cash received at funding": "12222.22",
+        "Total contracted remittances": "14444.4339",
+        "Factor markup above gross advance": "2098.7639",
+        "Fees withheld at funding": "123.45",
+        "Total financing cash cost above net funding": "2222.2139",
+        "Total cash cost divided by net funding": "18.18175339668243576044286553506646092117471294085689833761787956688720",
+        "Initial scheduled remittance": "111.11103",
+        "Final scheduled remittance": "111.11103",
+        "Assumed number of remittances": "130",
+        "Calendar days from funding to final remittance": "182",
+        "Illustrative effective annual IRR, not legal APR": "98.85553483991607712550717182583981846811521843269755542493621877582860"
+      }
+    },
+    {
+      "key": "fixed-remittances-higher-fees",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 5000,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 130
+      },
+      "expected": {
+        "Net cash received at funding": "45000",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "5000",
+        "Total financing cash cost above net funding": "20000.0",
+        "Total cash cost divided by net funding": "44.44444444444444444444444444444444444444444444444444444444444444444440",
+        "Initial scheduled remittance": "500.0",
+        "Final scheduled remittance": "500.0",
+        "Assumed number of remittances": "130",
+        "Calendar days from funding to final remittance": "182",
+        "Illustrative effective annual IRR, not legal APR": "381.6095743419973242800100996912867192161227008577928138500429396216284"
+      }
+    },
+    {
+      "key": "sales-holdback-zero-cost",
+      "id": "merchant-cash-advance",
+      "mode": "sales-holdback",
+      "values": {
+        "advance": 50000,
+        "factor": 1,
+        "withheld_fees": 0,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "sales_per_interval": 5000,
+        "holdback": 10
+      },
+      "expected": {
+        "Net cash received at funding": "50000",
+        "Total contracted remittances": "50000",
+        "Factor markup above gross advance": "0",
+        "Fees withheld at funding": "0",
+        "Total financing cash cost above net funding": "0",
+        "Total cash cost divided by net funding": "0",
+        "Initial scheduled remittance": "500",
+        "Final scheduled remittance": "500",
+        "Assumed number of remittances": "100",
+        "Calendar days from funding to final remittance": "140",
+        "Illustrative effective annual IRR, not legal APR": "0"
+      }
+    },
+    {
+      "key": "sales-holdback-fractional",
+      "id": "merchant-cash-advance",
+      "mode": "sales-holdback",
+      "values": {
+        "advance": 12345.67,
+        "factor": 1.17,
+        "withheld_fees": 123.45,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "sales_per_interval": 5000,
+        "holdback": 10
+      },
+      "expected": {
+        "Net cash received at funding": "12222.22",
+        "Total contracted remittances": "14444.4339",
+        "Factor markup above gross advance": "2098.7639",
+        "Fees withheld at funding": "123.45",
+        "Total financing cash cost above net funding": "2222.2139",
+        "Total cash cost divided by net funding": "18.18175339668243576044286553506646092117471294085689833761787956688720",
+        "Initial scheduled remittance": "500",
+        "Final scheduled remittance": "444.4339",
+        "Assumed number of remittances": "29",
+        "Calendar days from funding to final remittance": "41",
+        "Illustrative effective annual IRR, not legal APR": "2030.251373567972496825752945607150735407594897075532443587464504144302"
+      }
+    },
+    {
+      "key": "sales-holdback-higher-fees",
+      "id": "merchant-cash-advance",
+      "mode": "sales-holdback",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 5000,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "sales_per_interval": 5000,
+        "holdback": 10
+      },
+      "expected": {
+        "Net cash received at funding": "45000",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "5000",
+        "Total financing cash cost above net funding": "20000.0",
+        "Total cash cost divided by net funding": "44.44444444444444444444444444444444444444444444444444444444444444444440",
+        "Initial scheduled remittance": "500",
+        "Final scheduled remittance": "500",
+        "Assumed number of remittances": "130",
+        "Calendar days from funding to final remittance": "182",
+        "Illustrative effective annual IRR, not legal APR": "381.6095743419973242800100996912867192161227008577928138500429396216284"
+      }
+    },
+    {
+      "key": "reduced-final",
+      "id": "merchant-cash-advance",
+      "mode": "sales-holdback",
+      "values": {
+        "advance": 1000,
+        "factor": 1.3,
+        "withheld_fees": 0,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "sales_per_interval": 3000,
+        "holdback": 10
+      },
+      "expected": {
+        "Net cash received at funding": "1000",
+        "Total contracted remittances": "1300.0",
+        "Factor markup above gross advance": "300.0",
+        "Fees withheld at funding": "0",
+        "Total financing cash cost above net funding": "300.0",
+        "Total cash cost divided by net funding": "30.0",
+        "Initial scheduled remittance": "300",
+        "Final scheduled remittance": "100.0",
+        "Assumed number of remittances": "5",
+        "Calendar days from funding to final remittance": "7"
+      }
+    },
+    {
+      "key": "slower-sales",
+      "id": "merchant-cash-advance",
+      "mode": "sales-holdback",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "sales_per_interval": 2500,
+        "holdback": 10
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "250",
+        "Final scheduled remittance": "250",
+        "Assumed number of remittances": "260",
+        "Calendar days from funding to final remittance": "364",
+        "Illustrative effective annual IRR, not legal APR": "85.49680603581775584383327859053569963819065461643457332246294341654420"
+      }
+    },
+    {
+      "key": "large-scale",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 1000000000.0,
+        "factor": 1.3,
+        "withheld_fees": 30000000,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 10
+      },
+      "expected": {
+        "Net cash received at funding": "970000000.0",
+        "Total contracted remittances": "1300000000.00",
+        "Factor markup above gross advance": "300000000.00",
+        "Fees withheld at funding": "30000000",
+        "Total financing cash cost above net funding": "330000000.00",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "130000000.00",
+        "Final scheduled remittance": "130000000.00",
+        "Assumed number of remittances": "10",
+        "Calendar days from funding to final remittance": "14"
+      }
+    },
+    {
+      "key": "tiny-scale",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 1,
+        "factor": 1,
+        "withheld_fees": 0,
+        "funding_date": "2026-12-01",
+        "first_debit": "2026-12-02",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 1
+      },
+      "expected": {
+        "Net cash received at funding": "1",
+        "Total contracted remittances": "1",
+        "Factor markup above gross advance": "0",
+        "Fees withheld at funding": "0",
+        "Total financing cash cost above net funding": "0",
+        "Total cash cost divided by net funding": "0",
+        "Initial scheduled remittance": "1",
+        "Final scheduled remittance": "1",
+        "Assumed number of remittances": "1",
+        "Calendar days from funding to final remittance": "1",
+        "Illustrative effective annual IRR, not legal APR": "0"
+      }
+    },
+    {
+      "key": "leap-weekend",
+      "id": "merchant-cash-advance",
+      "mode": "fixed-remittances",
+      "values": {
+        "advance": 50000,
+        "factor": 1.3,
+        "withheld_fees": 1500,
+        "funding_date": "2024-02-28",
+        "first_debit": "2024-02-29",
+        "calendar": "Weekdays (Mon\u2013Fri only)",
+        "remittances": 4
+      },
+      "expected": {
+        "Net cash received at funding": "48500",
+        "Total contracted remittances": "65000.0",
+        "Factor markup above gross advance": "15000.0",
+        "Fees withheld at funding": "1500",
+        "Total financing cash cost above net funding": "16500.0",
+        "Total cash cost divided by net funding": "34.02061855670103092783505154639175257731958762886597938144329896907220",
+        "Initial scheduled remittance": "16250.0",
+        "Final scheduled remittance": "16250.0",
+        "Assumed number of remittances": "4",
+        "Calendar days from funding to final remittance": "6"
+      }
+    }
+  ]
+}

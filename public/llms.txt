@@ -445,3 +445,9 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 
 - [RSU Tax and Withholding Calculator](https://www.calculatorfree.io/rsu-tax-calculator): 2026 stock delivery wage/withholding bridge and separate known-lot sale basis; no final tax or broker execution claim.
 - [ESPP Tax Calculator](https://www.calculatorfree.io/espp-tax-calculator): 2026 confirmed Section 423 sale, actual or lookback prices, compensation, adjusted basis and separate capital holding term.
+
+- [Return on Assets Calculator](https://www.calculatorfree.io/return-on-assets-calculator): Period ROA divides net income by average total assets. A company with $120,000 income and $1,000,000 average book assets has 12% ROA for that reporting period; this worksheet does not automatically annualize it.
+- [Assumable Mortgage Calculator](https://www.calculatorfree.io/assumable-mortgage-calculator): An assumption comparison needs the purchase-price gap, remaining old-loan term and any second loan. Compare both options at the same holding horizon, including fees, interest and debt still owed; a lower initial payment alone does not prove a lower financing cost.
+
+- [Merchant Cash Advance Calculator](https://www.calculatorfree.io/merchant-cash-advance-calculator): A factor rate of 1.30 on a $50,000 advance means $65,000 of contracted remittances. With a $1,500 withheld fee, the business receives $48,500 and pays $16,500 more than that net funding. Annualized cost also depends on the actual remittance dates.
+- [Backdoor Roth IRA Calculator: 2026](https://www.calculatorfree.io/backdoor-roth-ira-calculator): A backdoor Roth conversion is not automatically tax-free. With $7,500 established nondeductible basis, $92,500 left in included IRAs at year end and $7,500 converted, the ordinary pool is $100,000. Only $562.50 of the conversion is nontaxable; $6,937.50 is taxable.
