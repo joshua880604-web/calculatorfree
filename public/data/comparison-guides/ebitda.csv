@@ -1,0 +1,4 @@
+Scenario,Mode,Input assumptions,Metric,Expected value
+Reconcile net income to a 28% margin,net-income,net_income: 80000; interest: 10000; income_tax: 20000; depreciation: 20000; amortization: 10000; revenue: 500000,EBITDA,140000
+Include nonoperating income in the operating bridge,operating-income,operating_income: 105000; other_income: 5000; depreciation: 20000; amortization: 10000; revenue: 500000,EBITDA,140000
+Preserve a loss and a tax benefit,net-income,net_income: -50000; interest: 5000; income_tax: -10000; depreciation: 10000; amortization: 0; revenue: 200000,EBITDA,-45000

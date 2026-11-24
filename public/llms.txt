@@ -432,3 +432,16 @@ The property-investing, debt-strategy, installment-loan and business-finance pag
 - [SBA Loan Calculator](https://www.calculatorfree.io/sba-loan-calculator): Standard FY2027 7(a) guaranty-fee scenarios or lender-confirmed fees; separate bank and CDC 504 financing. No approval or live rate quotes.
 - [Inventory turnover guide](https://www.calculatorfree.io/guides/how-to-calculate-inventory-turnover/): COGS, average inventory, seasonal limitations and worked period comparisons.
 - [SBA 7(a) and 504 payment guide](https://www.calculatorfree.io/guides/sba-7a-vs-504-loan-payments/): Gross approvals, borrower fees, project allocation and bank maturity balances.
+
+## New worked calculation tasks — November 24, 2026
+
+- [Ebitda Calculator](https://www.calculatorfree.io/ebitda-calculator): Same-period earnings reconciliation and EBITDA margin, distinct from cash flow.
+- [Invoice Factoring Calculator](https://www.calculatorfree.io/invoice-factoring-calculator): Advance, reserve, interval fees and signed final settlement on one collected invoice.
+- [Average Daily Balance Calculator](https://www.calculatorfree.io/average-daily-balance-calculator): Posting-date timeline or weighted segments, with optional simple-interest estimate.
+- [Construction Loan Calculator](https://www.calculatorfree.io/construction-loan-calculator): Actual dated draws, commitment ceiling and separately paid interest and fees.
+
+- [Bond and Treasury Bill Ladder Calculator](https://www.calculatorfree.io/bond-ladder-calculator): Manual coupon, discount and staggered-maturity cash flows; same-face renewals; no market valuation.
+- [Medicare IRMAA Calculator](https://www.calculatorfree.io/irmaa-calculator): Official 2026/2027 full-Part-B and Part-D adjustment tables, applicable income years and per-person coverage limits.
+
+- [RSU Tax and Withholding Calculator](https://www.calculatorfree.io/rsu-tax-calculator): 2026 stock delivery wage/withholding bridge and separate known-lot sale basis; no final tax or broker execution claim.
+- [ESPP Tax Calculator](https://www.calculatorfree.io/espp-tax-calculator): 2026 confirmed Section 423 sale, actual or lookback prices, compensation, adjusted basis and separate capital holding term.

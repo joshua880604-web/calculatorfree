@@ -16,7 +16,7 @@ test('Reviewed concepts point to existing definitions already associated with th
  assert.equal(Object.values(concepts).flat().length,24);
  for(const [path,entries]of Object.entries(concepts)){
   const guide=editorialGuides.find(g=>g.path===path)!;assert.ok(guide,path);
-  assert.equal(guide.linksUpdatedOn,linkReview.reviewedOn,path);
+  assert.ok(guide.linksUpdatedOn!>=linkReview.reviewedOn,path+' preserves the concept review date when later links are reviewed');
   assert.ok(guideContentDate(guide)>=linkReview.reviewedOn,path+' content date covers the link review and any later content edits');
   for(const entry of entries){const term=glossaryTerms.find(t=>t.slug===entry.slug)!;assert.ok(term);assert.ok(term.guides?.some(g=>g.path===path),path);assert.ok(glossaryTermPath(term.slug).startsWith('/glossary/'));}
  }
@@ -46,8 +46,8 @@ test('Education and depreciation recommendations match the next task rather than
  assert.ok(relatedCalculatorIds['operating-cash-flow'].includes('depreciation'));
  assert.ok(relatedCalculatorIds['depreciation'].includes('operating-cash-flow'));
 });
-test('Mortgage task groups preserve all ten existing associated guides exactly once',()=>{
+test('Mortgage task groups preserve the eleven associated guides exactly once',()=>{
  const paths=[mortgagePaymentGuide,...mortgageReadingGroups.flatMap(g=>g.guides.map(guide=>guide.path))];
  const actual=editorialGuides.filter(g=>g.calculatorIds.includes('mortgage')).map(g=>g.path);
- assert.equal(paths.length,10);assert.equal(new Set(paths).size,10);assert.deepEqual([...paths].sort(),actual.sort());
+ assert.equal(paths.length,11);assert.equal(new Set(paths).size,11);assert.deepEqual([...paths].sort(),actual.sort());
 });

@@ -1,0 +1,524 @@
+{
+  "precision": 70,
+  "method": "Python Decimal with daily enumeration and hand-selected scenarios",
+  "fixtures": [
+    {
+      "key": "ebitda-public-1",
+      "id": "ebitda",
+      "mode": "net-income",
+      "values": {
+        "net_income": 80000,
+        "interest": 10000,
+        "income_tax": 20000,
+        "depreciation": 20000,
+        "amortization": 10000,
+        "revenue": 500000
+      },
+      "expected": {
+        "EBITDA": "140000",
+        "EBIT": "110000",
+        "EBITDA margin": "28.00"
+      }
+    },
+    {
+      "key": "ebitda-public-2",
+      "id": "ebitda",
+      "mode": "operating-income",
+      "values": {
+        "operating_income": 105000,
+        "other_income": 5000,
+        "depreciation": 20000,
+        "amortization": 10000,
+        "revenue": 500000
+      },
+      "expected": {
+        "EBITDA": "140000",
+        "EBIT": "110000",
+        "EBITDA margin": "28.00"
+      }
+    },
+    {
+      "key": "ebitda-public-3",
+      "id": "ebitda",
+      "mode": "net-income",
+      "values": {
+        "net_income": -50000,
+        "interest": 5000,
+        "income_tax": -10000,
+        "depreciation": 10000,
+        "amortization": 0,
+        "revenue": 200000
+      },
+      "expected": {
+        "EBITDA": "-45000",
+        "EBIT": "-55000",
+        "EBITDA margin": "-22.500"
+      }
+    },
+    {
+      "key": "invoice-factoring-public-1",
+      "id": "invoice-factoring",
+      "mode": "fees",
+      "values": {
+        "invoice": 10000,
+        "advance_rate": 80,
+        "fee_rate": 2,
+        "interval": 30,
+        "days": 45,
+        "billing": "Prorated periods",
+        "fee_base": "Invoice face value",
+        "other_fees": 50
+      },
+      "expected": {
+        "Total net proceeds": "9650.0",
+        "Advance received today": "8000",
+        "Reserve before fees": "2000",
+        "Total fees": "350.0",
+        "Signed settlement after fees": "1650.0",
+        "Additional amount owed at settlement": "0"
+      }
+    },
+    {
+      "key": "invoice-factoring-public-2",
+      "id": "invoice-factoring",
+      "mode": "fees",
+      "values": {
+        "invoice": 10000,
+        "advance_rate": 80,
+        "fee_rate": 2,
+        "interval": 30,
+        "days": 45,
+        "billing": "Started periods",
+        "fee_base": "Invoice face value",
+        "other_fees": 50
+      },
+      "expected": {
+        "Total net proceeds": "9550",
+        "Advance received today": "8000",
+        "Reserve before fees": "2000",
+        "Total fees": "450",
+        "Signed settlement after fees": "1550",
+        "Additional amount owed at settlement": "0"
+      }
+    },
+    {
+      "key": "invoice-factoring-public-3",
+      "id": "invoice-factoring",
+      "mode": "fees",
+      "values": {
+        "invoice": 10000,
+        "advance_rate": 99,
+        "fee_rate": 2,
+        "interval": 30,
+        "days": 30,
+        "billing": "Prorated periods",
+        "fee_base": "Invoice face value",
+        "other_fees": 0
+      },
+      "expected": {
+        "Total net proceeds": "9800",
+        "Advance received today": "9900",
+        "Reserve before fees": "100",
+        "Total fees": "200",
+        "Signed settlement after fees": "-100",
+        "Additional amount owed at settlement": "100"
+      }
+    },
+    {
+      "key": "average-daily-balance-public-1",
+      "id": "average-daily-balance",
+      "mode": "ledger",
+      "values": {
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "opening": 500,
+        "transactions": "2026-11-10, 200\n2026-11-20, -300",
+        "apr": 24,
+        "day_basis": "365"
+      },
+      "expected": {
+        "Average daily balance": "530",
+        "Estimated simple cycle interest": "10.45479452054794520547945205479452054794520547945205479452054794520548",
+        "Balance-days total": "15900",
+        "Cycle days": "30"
+      }
+    },
+    {
+      "key": "average-daily-balance-public-2",
+      "id": "average-daily-balance",
+      "mode": "segments",
+      "values": {
+        "cycle_days": 30,
+        "segments": "500, 9\n700, 10\n400, 11",
+        "apr": 24,
+        "day_basis": "365"
+      },
+      "expected": {
+        "Average daily balance": "530",
+        "Estimated simple cycle interest": "10.45479452054794520547945205479452054794520547945205479452054794520548",
+        "Balance-days total": "15900",
+        "Cycle days": "30"
+      }
+    },
+    {
+      "key": "average-daily-balance-public-3",
+      "id": "average-daily-balance",
+      "mode": "ledger",
+      "values": {
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "opening": 500,
+        "transactions": "2026-11-10, 200\n2026-11-10, -300",
+        "apr": 24,
+        "day_basis": "365"
+      },
+      "expected": {
+        "Average daily balance": "430",
+        "Estimated simple cycle interest": "8.482191780821917808219178082191780821917808219178082191780821917808219",
+        "Balance-days total": "12900",
+        "Cycle days": "30"
+      }
+    },
+    {
+      "key": "construction-loan-public-1",
+      "id": "construction-loan",
+      "mode": "draws",
+      "values": {
+        "commitment": 200000,
+        "opening": 0,
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "draws": "2026-11-01, 50000\n2026-11-16, 50000",
+        "apr": 12,
+        "day_basis": "365",
+        "fees": 1000
+      },
+      "expected": {
+        "Total construction interest": "739.7260273972602739726027397260273972602739726027397260273972602739728",
+        "Interest plus entered fees": "1739.726027397260273972602739726027397260273972602739726027397260273973",
+        "Ending drawn principal": "100000",
+        "Undrawn commitment": "100000",
+        "Average drawn balance": "75000",
+        "Interest days": "30"
+      }
+    },
+    {
+      "key": "construction-loan-public-2",
+      "id": "construction-loan",
+      "mode": "draws",
+      "values": {
+        "commitment": 200000,
+        "opening": 0,
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "draws": "2026-11-01, 50000\n2026-11-16, 50000",
+        "apr": 12,
+        "day_basis": "360",
+        "fees": 1000
+      },
+      "expected": {
+        "Total construction interest": "749.9999999999999999999999999999999999999999999999999999999999999999998",
+        "Interest plus entered fees": "1750.000000000000000000000000000000000000000000000000000000000000000000",
+        "Ending drawn principal": "100000",
+        "Undrawn commitment": "100000",
+        "Average drawn balance": "75000",
+        "Interest days": "30"
+      }
+    },
+    {
+      "key": "construction-loan-public-3",
+      "id": "construction-loan",
+      "mode": "draws",
+      "values": {
+        "commitment": 200000,
+        "opening": 0,
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "draws": "2026-11-01, 50000\n2026-11-30, 50000",
+        "apr": 12,
+        "day_basis": "365",
+        "fees": 1000
+      },
+      "expected": {
+        "Total construction interest": "509.5890410958904109589041095890410958904109589041095890410958904109582",
+        "Interest plus entered fees": "1509.589041095890410958904109589041095890410958904109589041095890410958",
+        "Ending drawn principal": "100000",
+        "Undrawn commitment": "100000",
+        "Average drawn balance": "51666.66666666666666666666666666666666666666666666666666666666666666667",
+        "Interest days": "30"
+      }
+    },
+    {
+      "key": "tax-interest-benefits",
+      "id": "ebitda",
+      "mode": "net-income",
+      "values": {
+        "net_income": 100,
+        "interest": -20,
+        "income_tax": -10,
+        "depreciation": 0,
+        "amortization": 0,
+        "revenue": 1000
+      },
+      "expected": {
+        "EBITDA": "70",
+        "EBIT": "70",
+        "EBITDA margin": "7.00"
+      }
+    },
+    {
+      "key": "zero-revenue",
+      "id": "ebitda",
+      "mode": "net-income",
+      "values": {
+        "net_income": 80000,
+        "interest": 10000,
+        "income_tax": 20000,
+        "depreciation": 20000,
+        "amortization": 10000,
+        "revenue": 0
+      },
+      "expected": {
+        "EBITDA": "140000",
+        "EBIT": "110000"
+      }
+    },
+    {
+      "key": "advance-fee-base",
+      "id": "invoice-factoring",
+      "mode": "fees",
+      "values": {
+        "invoice": 10000,
+        "advance_rate": 80,
+        "fee_rate": 2,
+        "interval": 30,
+        "days": 45,
+        "billing": "Prorated periods",
+        "fee_base": "Advance amount",
+        "other_fees": 50
+      },
+      "expected": {
+        "Total net proceeds": "9710.0",
+        "Advance received today": "8000",
+        "Reserve before fees": "2000",
+        "Total fees": "290.0",
+        "Signed settlement after fees": "1710.0",
+        "Additional amount owed at settlement": "0"
+      }
+    },
+    {
+      "key": "zero-days-fixed-fees",
+      "id": "invoice-factoring",
+      "mode": "fees",
+      "values": {
+        "invoice": 10000,
+        "advance_rate": 80,
+        "fee_rate": 2,
+        "interval": 30,
+        "days": 0,
+        "billing": "Started periods",
+        "fee_base": "Invoice face value",
+        "other_fees": 50
+      },
+      "expected": {
+        "Total net proceeds": "9950",
+        "Advance received today": "8000",
+        "Reserve before fees": "2000",
+        "Total fees": "50",
+        "Signed settlement after fees": "1950",
+        "Additional amount owed at settlement": "0"
+      }
+    },
+    {
+      "key": "exact-period",
+      "id": "invoice-factoring",
+      "mode": "fees",
+      "values": {
+        "invoice": 10000,
+        "advance_rate": 80,
+        "fee_rate": 2,
+        "interval": 30,
+        "days": 30,
+        "billing": "Started periods",
+        "fee_base": "Invoice face value",
+        "other_fees": 50
+      },
+      "expected": {
+        "Total net proceeds": "9750",
+        "Advance received today": "8000",
+        "Reserve before fees": "2000",
+        "Total fees": "250",
+        "Signed settlement after fees": "1750",
+        "Additional amount owed at settlement": "0"
+      }
+    },
+    {
+      "key": "inclusive-first-last",
+      "id": "average-daily-balance",
+      "mode": "ledger",
+      "values": {
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "opening": 500,
+        "transactions": "2026-11-01, 100\n2026-11-30, -600",
+        "apr": 24,
+        "day_basis": "365"
+      },
+      "expected": {
+        "Average daily balance": "580",
+        "Estimated simple cycle interest": "11.44109589041095890410958904109589041095890410958904109589041095890411",
+        "Balance-days total": "17400",
+        "Cycle days": "30"
+      }
+    },
+    {
+      "key": "leap-day",
+      "id": "average-daily-balance",
+      "mode": "ledger",
+      "values": {
+        "start": "2028-02-28",
+        "end": "2028-03-01",
+        "opening": 100,
+        "transactions": "2028-02-29, 50",
+        "apr": 24,
+        "day_basis": "360"
+      },
+      "expected": {
+        "Average daily balance": "133.3333333333333333333333333333333333333333333333333333333333333333333",
+        "Estimated simple cycle interest": "0.2666666666666666666666666666666666666666666666666666666666666666666666",
+        "Balance-days total": "400",
+        "Cycle days": "3"
+      }
+    },
+    {
+      "key": "negative-credit",
+      "id": "average-daily-balance",
+      "mode": "ledger",
+      "values": {
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "opening": -100,
+        "transactions": "",
+        "apr": 24,
+        "day_basis": "365"
+      },
+      "expected": {
+        "Average daily balance": "-100",
+        "Estimated simple cycle interest": "0",
+        "Balance-days total": "-3000",
+        "Cycle days": "30"
+      }
+    },
+    {
+      "key": "constant-no-events",
+      "id": "average-daily-balance",
+      "mode": "ledger",
+      "values": {
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "opening": 500,
+        "transactions": "",
+        "apr": 24,
+        "day_basis": "365"
+      },
+      "expected": {
+        "Average daily balance": "500",
+        "Estimated simple cycle interest": "9.863013698630136986301369863013698630136986301369863013698630136986301",
+        "Balance-days total": "15000",
+        "Cycle days": "30"
+      }
+    },
+    {
+      "key": "zero-rate",
+      "id": "construction-loan",
+      "mode": "draws",
+      "values": {
+        "commitment": 200000,
+        "opening": 0,
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "draws": "2026-11-01, 50000\n2026-11-16, 50000",
+        "apr": 0,
+        "day_basis": "365",
+        "fees": 1000
+      },
+      "expected": {
+        "Total construction interest": "0",
+        "Interest plus entered fees": "1000",
+        "Ending drawn principal": "100000",
+        "Undrawn commitment": "100000",
+        "Average drawn balance": "75000",
+        "Interest days": "30"
+      }
+    },
+    {
+      "key": "no-draws",
+      "id": "construction-loan",
+      "mode": "draws",
+      "values": {
+        "commitment": 200000,
+        "opening": 10000,
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "draws": "",
+        "apr": 12,
+        "day_basis": "365",
+        "fees": 1000
+      },
+      "expected": {
+        "Total construction interest": "98.63013698630136986301369863013698630136986301369863013698630136986309",
+        "Interest plus entered fees": "1098.630136986301369863013698630136986301369863013698630136986301369863",
+        "Ending drawn principal": "10000",
+        "Undrawn commitment": "190000",
+        "Average drawn balance": "10000",
+        "Interest days": "30"
+      }
+    },
+    {
+      "key": "single-day",
+      "id": "construction-loan",
+      "mode": "draws",
+      "values": {
+        "commitment": 200000,
+        "opening": 0,
+        "start": "2026-11-01",
+        "end": "2026-11-01",
+        "draws": "2026-11-01, 1000",
+        "apr": 12,
+        "day_basis": "360",
+        "fees": 1000
+      },
+      "expected": {
+        "Total construction interest": "0.3333333333333333333333333333333333333333333333333333333333333333333333",
+        "Interest plus entered fees": "1000.333333333333333333333333333333333333333333333333333333333333333333",
+        "Ending drawn principal": "1000",
+        "Undrawn commitment": "199000",
+        "Average drawn balance": "1000",
+        "Interest days": "1"
+      }
+    },
+    {
+      "key": "unsorted-same-day",
+      "id": "construction-loan",
+      "mode": "draws",
+      "values": {
+        "commitment": 200000,
+        "opening": 0,
+        "start": "2026-11-01",
+        "end": "2026-11-30",
+        "draws": "2026-11-16, 20000\n2026-11-01, 50000\n2026-11-16, 30000",
+        "apr": 12,
+        "day_basis": "365",
+        "fees": 1000
+      },
+      "expected": {
+        "Total construction interest": "739.7260273972602739726027397260273972602739726027397260273972602739728",
+        "Interest plus entered fees": "1739.726027397260273972602739726027397260273972602739726027397260273973",
+        "Ending drawn principal": "100000",
+        "Undrawn commitment": "100000",
+        "Average drawn balance": "75000",
+        "Interest days": "30"
+      }
+    }
+  ]
+}

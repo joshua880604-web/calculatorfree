@@ -1,0 +1,591 @@
+{
+  "ebitda": {
+    "meta": {
+      "path": "/guides/how-to-calculate-ebitda-and-margin/",
+      "title": "EBITDA and Margin: Reconcile Net Income Without Double Counting",
+      "heading": "EBITDA and Margin: Reconcile Net Income Without Double Counting",
+      "description": "EBITDA adds deducted interest, income tax, depreciation and amortization back to net income.",
+      "publishedOn": "2026-11-24",
+      "calculatorIds": [
+        "ebitda",
+        "operating-cash-flow",
+        "interest-coverage-ratio",
+        "roic",
+        "return-on-equity"
+      ],
+      "topic": "Business profitability",
+      "breadcrumb": "EBITDA",
+      "cardIntro": "EBITDA adds deducted interest, income tax, depreciation and amortization back to net income. For $80,000 net income, $10,000 net interest expense, $20,000 income tax and $30,000 D&A, EBITDA is $140,000. Against $500,000 revenue, the margin is 28%.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Choose a net-income reconciliation or an operating-income bridge, then enter only amounts for the same reporting period. The examples below explain signed tax benefits, other nonoperating items and why a margin does not measure available cash.",
+    "answer": "EBITDA adds deducted interest, income tax, depreciation and amortization back to net income. For $80,000 net income, $10,000 net interest expense, $20,000 income tax and $30,000 D&A, EBITDA is $140,000. Against $500,000 revenue, the margin is 28%.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original scenarios checked with independent high-precision arithmetic for the stated assumptions. This is not an issuer bill, lender quote or external professional review.",
+    "sections": [
+      {
+        "id": "bridge",
+        "title": "Which earnings figure should I start with?",
+        "paragraphs": [
+          "Start with net income and a reconciliation of each deducted item. A positive tax expense is added back; a tax benefit is negative and is subtracted. Net interest income also enters as negative expense. Use all inputs for the same entity, accounting period and currency.",
+          "The operating-income mode separately includes other nonoperating income or expense, excluding interest and tax. For example, 105,000 operating income plus 5,000 nonoperating income corresponds to EBIT 110,000. Do not add interest and tax again in that mode."
+        ],
+        "formula": "EBITDA = net income + net interest expense + income tax expense + D&A; margin = EBITDA / revenue \u00d7 100%."
+      },
+      {
+        "id": "margin",
+        "title": "How is EBITDA margin calculated?",
+        "paragraphs": [
+          "Divide EBITDA by same-period revenue and multiply by 100. The example is 140,000 / 500,000 = 28%. A negative EBITDA gives a negative margin. Zero or negative revenue is displayed as an unsuitable denominator rather than a misleading zero margin."
+        ]
+      },
+      {
+        "id": "cash",
+        "title": "Why is EBITDA different from operating cash flow?",
+        "paragraphs": [
+          "Depreciation and amortization are noncash accounting expenses, but adding them back does not capture collections, inventory, payables or other working-capital changes. Capital expenditure and debt principal are also outside this earnings measure.",
+          "The example\u2019s 140,000 EBITDA is not a statement that 140,000 is available to spend. Use a cash-flow reconciliation for cash questions, and keep lender-specific adjusted EBITDA definitions separate."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is EBIT the same as EBITDA?",
+        "answer": "No. In the example EBIT is 110,000 and D&A is 30,000, making EBITDA 140,000."
+      },
+      {
+        "question": "Can EBITDA be negative?",
+        "answer": "Yes. Losses and signed tax or interest benefits can produce negative EBITDA. The calculator preserves that loss."
+      },
+      {
+        "question": "Can I use this as adjusted EBITDA?",
+        "answer": "The worksheet does not add back discretionary costs or infer a lender\u2019s adjustments. Such definitions need their own reconciliation and clear labeling."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC: Non-GAAP Financial Measures, section 103",
+        "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures",
+        "usedFor": "Concept definitions and model limits; example arithmetic is independently calculated.",
+        "scope": "Unadjusted same-period earnings reconciliation in one currency. Signed losses, net-interest income and tax benefits are supported. Operating-income mode includes separately entered other nonoperating income or expense, excluding interest and tax. No cash-flow forecast, valuation or discretionary adjusted-EBITDA addbacks."
+      }
+    ],
+    "related": [
+      {
+        "href": "/operating-cash-flow-calculator",
+        "label": "Operating Cash Flow Calculator"
+      },
+      {
+        "href": "/interest-coverage-ratio-calculator",
+        "label": "Interest Coverage Ratio Calculator"
+      },
+      {
+        "href": "/roic-calculator",
+        "label": "Roic Calculator"
+      },
+      {
+        "href": "/return-on-equity-calculator",
+        "label": "Return On Equity Calculator"
+      },
+      {
+        "href": "/glossary/ebitda/",
+        "label": "EBITDA definition"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reconcile net income to a 28% margin",
+        "path": "/ebitda-calculator.html",
+        "mode": "net-income",
+        "values": {
+          "net_income": 80000,
+          "interest": 10000,
+          "income_tax": 20000,
+          "depreciation": 20000,
+          "amortization": 10000,
+          "revenue": 500000
+        },
+        "featured": true
+      },
+      {
+        "label": "Include nonoperating income in the operating bridge",
+        "path": "/ebitda-calculator.html",
+        "mode": "operating-income",
+        "values": {
+          "operating_income": 105000,
+          "other_income": 5000,
+          "depreciation": 20000,
+          "amortization": 10000,
+          "revenue": 500000
+        },
+        "featured": true
+      },
+      {
+        "label": "Preserve a loss and a tax benefit",
+        "path": "/ebitda-calculator.html",
+        "mode": "net-income",
+        "values": {
+          "net_income": -50000,
+          "interest": 5000,
+          "income_tax": -10000,
+          "depreciation": 10000,
+          "amortization": 0,
+          "revenue": 200000
+        },
+        "featured": true
+      }
+    ],
+    "limitations": [
+      "Unadjusted same-period earnings reconciliation in one currency. Signed losses, net-interest income and tax benefits are supported. Operating-income mode includes separately entered other nonoperating income or expense, excluding interest and tax. No cash-flow forecast, valuation or discretionary adjusted-EBITDA addbacks.",
+      "Do not add D&A twice or confuse operating income with net income. Other nonoperating items can make an operating-income shortcut differ from a net-income reconciliation."
+    ]
+  },
+  "invoice-factoring": {
+    "meta": {
+      "path": "/guides/invoice-factoring-fees-and-reserve/",
+      "title": "Invoice Factoring Fees: Advance, Reserve and Final Cash",
+      "heading": "Invoice Factoring Fees: Advance, Reserve and Final Cash",
+      "description": "A factoring advance is part of the invoice proceeds, not extra revenue.",
+      "publishedOn": "2026-11-24",
+      "calculatorIds": [
+        "invoice-factoring",
+        "business-line-of-credit",
+        "business-loan",
+        "accounts-receivable-turnover",
+        "operating-cash-flow"
+      ],
+      "topic": "Business financing",
+      "breadcrumb": "Factoring reserve and settlement",
+      "cardIntro": "A factoring advance is part of the invoice proceeds, not extra revenue. On a $10,000 invoice with an 80% advance, 2% per 30 days prorated for 45 days and $50 other fees, you receive $8,000 today and $1,650 at settlement: $9,650 in total.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Before comparing offers, separate cash arriving now from the reserve released at collection. Enter the fee base and billing rule from the agreement; the examples show how period rounding and a small reserve change the final cash flow.",
+    "answer": "A factoring advance is part of the invoice proceeds, not extra revenue. On a $10,000 invoice with an 80% advance, 2% per 30 days prorated for 45 days and $50 other fees, you receive $8,000 today and $1,650 at settlement: $9,650 in total.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original scenarios checked with independent high-precision arithmetic for the stated assumptions. This is not an issuer bill, lender quote or external professional review.",
+    "sections": [
+      {
+        "id": "cash",
+        "title": "How much cash arrives now and later?",
+        "paragraphs": [
+          "The example\u2019s 8,000 advance leaves a 2,000 reserve. With 350 fees deducted at collection, the remaining cash is 1,650. Together they total 9,650, which is the invoice face value less fees.",
+          "The reserve is a timing difference; it is not automatically a fee. The model assumes full collection and no customer default. If your contract deducts fees before paying the advance, today\u2019s cash will differ."
+        ],
+        "formula": "Advance = invoice \u00d7 advance rate; reserve = invoice \u2212 advance; signed settlement = reserve \u2212 fees; total proceeds = invoice \u2212 fees."
+      },
+      {
+        "id": "periods",
+        "title": "What changes under started-period billing?",
+        "paragraphs": [
+          "A 45-day collection takes 1.5 prorated 30-day periods or two started periods. On an invoice-face fee base, 2% per interval creates 300 or 400 periodic fees, respectively, before the additional 50.",
+          "Confirm the actual fee base, minimum periods and extension charges in your agreement. The selected constant interval rate is not an annual rate. A single invoice discount cannot be compared with a loan APR without examining timing and all costs."
+        ]
+      },
+      {
+        "id": "reserve",
+        "title": "What if fees exceed the reserve?",
+        "paragraphs": [
+          "The 99% advance example leaves only 100 held back, while fees total 200. The final signed cash flow is \u2212100. That additional amount owed is shown openly rather than truncated to zero.",
+          "Larger advances can change cash timing without changing total fees when the fee base remains invoice face value. If the fee base is the advance, changing the advance rate also changes the modeled fee."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is the advance extra income?",
+        "answer": "No. It is an early payment of part of the invoice proceeds. Adding it again to the full invoice after fees double counts it."
+      },
+      {
+        "question": "Are factoring fees always based on invoice face value?",
+        "answer": "Contract terms differ. This tool supports the entered invoice-face or advance-amount fee base and an explicit interval rule."
+      },
+      {
+        "question": "Does this calculator determine APR or approval?",
+        "answer": "No. It shows cash timing and specified charges for one fully collected invoice. It does not quote finance terms or determine eligibility."
+      }
+    ],
+    "sources": [
+      {
+        "title": "1st Commercial Credit: invoice factoring calculator and input definitions",
+        "url": "https://www.1stcommercialcredit.com/invoice-factoring-calculator",
+        "usedFor": "Concept definitions and model limits; example arithmetic is independently calculated.",
+        "scope": "One fully collected invoice, one advance today and all fees deducted at collection. Select invoice-face or advance fee base, a constant per-interval rate, prorated or started intervals and separately entered other fees. No default, recourse, upfront deductions, statutory APR, lender quote or financing approval."
+      }
+    ],
+    "related": [
+      {
+        "href": "/business-line-of-credit-calculator",
+        "label": "Business Line Of Credit Calculator"
+      },
+      {
+        "href": "/business-loan-calculator",
+        "label": "Business Loan Calculator"
+      },
+      {
+        "href": "/accounts-receivable-turnover-calculator",
+        "label": "Accounts Receivable Turnover Calculator"
+      },
+      {
+        "href": "/operating-cash-flow-calculator",
+        "label": "Operating Cash Flow Calculator"
+      },
+      {
+        "href": "/glossary/factoring-reserve/",
+        "label": "Factoring reserve and settlement definition"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Prorate a 45-day fee interval",
+        "path": "/invoice-factoring-calculator.html",
+        "mode": "fees",
+        "values": {
+          "invoice": 10000,
+          "advance_rate": 80,
+          "fee_rate": 2,
+          "interval": 30,
+          "days": 45,
+          "billing": "Prorated periods",
+          "fee_base": "Invoice face value",
+          "other_fees": 50
+        },
+        "featured": true
+      },
+      {
+        "label": "Charge every started period",
+        "path": "/invoice-factoring-calculator.html",
+        "mode": "fees",
+        "values": {
+          "invoice": 10000,
+          "advance_rate": 80,
+          "fee_rate": 2,
+          "interval": 30,
+          "days": 45,
+          "billing": "Started periods",
+          "fee_base": "Invoice face value",
+          "other_fees": 50
+        },
+        "featured": true
+      },
+      {
+        "label": "Fees exceed the reserve",
+        "path": "/invoice-factoring-calculator.html",
+        "mode": "fees",
+        "values": {
+          "invoice": 10000,
+          "advance_rate": 99,
+          "fee_rate": 2,
+          "interval": 30,
+          "days": 30,
+          "billing": "Prorated periods",
+          "fee_base": "Invoice face value",
+          "other_fees": 0
+        },
+        "featured": true
+      }
+    ],
+    "limitations": [
+      "One fully collected invoice, one advance today and all fees deducted at collection. Select invoice-face or advance fee base, a constant per-interval rate, prorated or started intervals and separately entered other fees. No default, recourse, upfront deductions, statutory APR, lender quote or financing approval.",
+      "Do not add the advance to the entire invoice amount after fees. The advance was already paid out of that invoice. A negative final settlement means more is owed than the held reserve."
+    ]
+  },
+  "average-daily-balance": {
+    "meta": {
+      "path": "/guides/average-daily-balance-posting-dates/",
+      "title": "Average Daily Balance: Posting Dates and Weighted Days",
+      "heading": "Average Daily Balance: Posting Dates and Weighted Days",
+      "description": "Average daily balance weights each daily balance by how long it lasts.",
+      "publishedOn": "2026-11-24",
+      "calculatorIds": [
+        "average-daily-balance",
+        "credit-card-minimum-payment",
+        "credit-card",
+        "cash-advance-fee"
+      ],
+      "topic": "Credit-card interest",
+      "breadcrumb": "Average daily balance",
+      "cardIntro": "Average daily balance weights each daily balance by how long it lasts. A $500 balance for 9 days, $700 for 10 days and $400 for 11 days totals 15,900 balance-days. Over 30 days, the average is $530; at 24% / 365, estimated simple interest is $10.45.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Build the balance timeline from posting dates, or enter consecutive balance-and-day segments when you already know the intervals. Both modes answer the same weighted-average question; optional interest is a separately stated approximation.",
+    "answer": "Average daily balance weights each daily balance by how long it lasts. A $500 balance for 9 days, $700 for 10 days and $400 for 11 days totals 15,900 balance-days. Over 30 days, the average is $530; at 24% / 365, estimated simple interest is $10.45.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original scenarios checked with independent high-precision arithmetic for the stated assumptions. This is not an issuer bill, lender quote or external professional review.",
+    "sections": [
+      {
+        "id": "timeline",
+        "title": "Which day does a purchase or payment start counting?",
+        "paragraphs": [
+          "In this worksheet, a change applies on its posting day. The opening balance is immediately before the first day, and both cycle endpoints are included. Enter a positive charge and a negative payment or credit.",
+          "The example starts November 1 at 500, adds 200 on November 10, and subtracts 300 on November 20. The resulting intervals contain 9, 10 and 11 days. Your statement\u2019s posting rules may differ."
+        ],
+        "formula": "ADB = sum(balance \u00d7 days) / cycle days; simple interest estimate = max(ADB, 0) \u00d7 APR / year basis \u00d7 cycle days."
+      },
+      {
+        "id": "weighted",
+        "title": "Why not average the three balance amounts?",
+        "paragraphs": [
+          "The balances 500, 700 and 400 last different lengths of time. Their unweighted mean is about 533.33, while the correct time-weighted average under this timeline is 530.",
+          "Use the segment mode when you already know each constant balance and its duration. Enter every consecutive segment and make the counts sum exactly to cycle length. Missing days are not silently filled."
+        ]
+      },
+      {
+        "id": "interest",
+        "title": "Does the interest estimate reproduce my statement?",
+        "paragraphs": [
+          "The optional estimate uses 530 \u00d7 24% / 365 \u00d7 30 = about 10.45. Changing the year basis to 360 gives 10.60. Neither selection infers your issuer\u2019s convention.",
+          "A single APR and simple daily accrual do not include daily compounding, purchase grace periods, fee capitalization or multiple APR categories. Negative average balances produce zero interest in this estimate. A negative balance remains visible in ADB; it is not treated as interest income."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Do payments reduce the average immediately?",
+        "answer": "In this worksheet, a payment reduces the balance from its posting date, including that day. Use the actual posting date rather than the initiation date."
+      },
+      {
+        "question": "What if two transactions post on the same day?",
+        "answer": "Their signed amounts are combined before that day\u2019s balance is counted. Input order does not change the result."
+      },
+      {
+        "question": "Can I use ADB for a savings-account fee requirement?",
+        "answer": "You can calculate a weighted balance, but minimum-balance, qualifying deposit and fee-waiver rules depend on the bank. This tool does not decide eligibility."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: how credit-card interest is calculated",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/",
+        "usedFor": "Concept definitions and model limits; example arithmetic is independently calculated.",
+        "scope": "Single-balance, inclusive-date or consecutive segment worksheet. Posting-day changes count that day and same-day changes combine. Signed credit balances are retained. Optional simple interest uses max(ADB, 0), one entered APR and a 360/365 divisor; no grace periods, daily compounding, multiple APR buckets or exact issuer bill."
+      },
+      {
+        "title": "CFPB: daily periodic rate and 360/365 divisors",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-daily-periodic-rate-on-a-credit-card-en-46/",
+        "usedFor": "Concept definitions and model limits; example arithmetic is independently calculated.",
+        "scope": "Single-balance, inclusive-date or consecutive segment worksheet. Posting-day changes count that day and same-day changes combine. Signed credit balances are retained. Optional simple interest uses max(ADB, 0), one entered APR and a 360/365 divisor; no grace periods, daily compounding, multiple APR buckets or exact issuer bill."
+      }
+    ],
+    "related": [
+      {
+        "href": "/credit-card-minimum-payment-calculator",
+        "label": "Credit Card Minimum Payment Calculator"
+      },
+      {
+        "href": "/credit-card-calculator",
+        "label": "Credit Card Calculator"
+      },
+      {
+        "href": "/cash-advance-fee-calculator",
+        "label": "Cash Advance Fee Calculator"
+      },
+      {
+        "href": "/glossary/average-daily-balance/",
+        "label": "Average daily balance definition"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Weight a purchase and payment by posting date",
+        "path": "/average-daily-balance-calculator.html",
+        "mode": "ledger",
+        "values": {
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "opening": 500,
+          "transactions": "2026-11-10, 200\n2026-11-20, -300",
+          "apr": 24,
+          "day_basis": "365"
+        },
+        "featured": true
+      },
+      {
+        "label": "Restore the equivalent consecutive segments",
+        "path": "/average-daily-balance-calculator.html",
+        "mode": "segments",
+        "values": {
+          "cycle_days": 30,
+          "segments": "500, 9\n700, 10\n400, 11",
+          "apr": 24,
+          "day_basis": "365"
+        },
+        "featured": true
+      },
+      {
+        "label": "Combine transactions on the same posting day",
+        "path": "/average-daily-balance-calculator.html",
+        "mode": "ledger",
+        "values": {
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "opening": 500,
+          "transactions": "2026-11-10, 200\n2026-11-10, -300",
+          "apr": 24,
+          "day_basis": "365"
+        },
+        "featured": true
+      }
+    ],
+    "limitations": [
+      "Single-balance, inclusive-date or consecutive segment worksheet. Posting-day changes count that day and same-day changes combine. Signed credit balances are retained. Optional simple interest uses max(ADB, 0), one entered APR and a 360/365 divisor; no grace periods, daily compounding, multiple APR buckets or exact issuer bill.",
+      "A simple average of three balance amounts ignores their duration. Posting dates, grace periods and separate APR categories can make a card issuer\u2019s bill differ from a single-balance simple-interest estimate."
+    ]
+  },
+  "construction-loan": {
+    "meta": {
+      "path": "/guides/construction-loan-draws-and-interest/",
+      "title": "Construction Loan Interest: Draw Dates Versus Commitment",
+      "heading": "Construction Loan Interest: Draw Dates Versus Commitment",
+      "description": "Construction interest depends on funds actually drawn.",
+      "publishedOn": "2026-11-24",
+      "calculatorIds": [
+        "construction-loan",
+        "mortgage",
+        "mortgage-comparison",
+        "closing-cost",
+        "house-affordability"
+      ],
+      "topic": "Construction financing",
+      "breadcrumb": "Construction loan draw",
+      "cardIntro": "Construction interest depends on funds actually drawn. With $50,000 drawn November 1 and another $50,000 November 16, the average outstanding balance for November is $75,000. At 12% on an actual/365 basis, 30 days cost $739.73 before separately paid fees.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Map each advance to the dates it is actually outstanding. The examples compare draw timing and day-count divisors while keeping the loan commitment, principal, separately paid fees and construction interest distinct.",
+    "answer": "Construction interest depends on funds actually drawn. With $50,000 drawn November 1 and another $50,000 November 16, the average outstanding balance for November is $75,000. At 12% on an actual/365 basis, 30 days cost $739.73 before separately paid fees.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original scenarios checked with independent high-precision arithmetic for the stated assumptions. This is not an issuer bill, lender quote or external professional review.",
+    "sections": [
+      {
+        "id": "draws",
+        "title": "Why does the commitment differ from interest-bearing principal?",
+        "paragraphs": [
+          "The example\u2019s commitment is 200,000, but only 50,000 is drawn at the start and another 50,000 halfway through the 30-day period. Interest follows the 50,000 and 100,000 balances, not the untouched commitment.",
+          "The ending principal is 100,000 and the undrawn commitment is 100,000. The 739.73 interest does not reduce principal. Separately entered fees of 1,000 create total modeled interest-and-fee cost of 1,739.73."
+        ],
+        "formula": "Interval interest = actual principal outstanding \u00d7 annual rate \u00d7 actual days / 360 or 365; total interest = sum(interval interest)."
+      },
+      {
+        "id": "dates",
+        "title": "How do draw dates change total interest?",
+        "paragraphs": [
+          "The worksheet includes the draw date and the final interest day. Moving the second 50,000 draw to November 30 leaves 50,000 outstanding for 29 days and 100,000 for one day, reducing interest to about 509.59 under the same rate assumption.",
+          "Same-day draws combine, and unordered input lines are sorted. Every draw must fall inside the modeled period and cumulative principal cannot exceed the commitment. No principal repayments are inferred."
+        ]
+      },
+      {
+        "id": "basis",
+        "title": "What do actual/365 and actual/360 mean here?",
+        "paragraphs": [
+          "The numerator uses actual elapsed calendar days, including leap days. The chosen fixed divisor is 365 or 360. Selecting 360 does not turn the calendar into 30-day months.",
+          "The interval schedule is an accrual breakdown, not a lender\u2019s monthly bill. Interest is paid separately and never capitalized. A lender with an interest reserve, variable rate or draw inspection fees may produce a different cash requirement."
+        ]
+      },
+      {
+        "id": "permanent",
+        "title": "Does this include construction-to-permanent mortgage payments?",
+        "paragraphs": [
+          "No. This release covers the construction draw-and-interest stage. Once a permanent loan begins, amortization, final financed balance, fees and its rate need a separate mortgage calculation.",
+          "The commitment ceiling is an input constraint, not an approved amount or a calculation of land-equity qualification. The tool supplies no live financing quote."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Are fees included in the drawn principal?",
+        "answer": "No. All entered fees are paid separately; they are included in interest-plus-fee cost once and never earn interest."
+      },
+      {
+        "question": "Can I capitalize interest or repay principal during construction?",
+        "answer": "This release assumes separately paid simple interest and no principal repayments. Those different cash-flow conventions need another model."
+      },
+      {
+        "question": "Is this a preapproval calculator?",
+        "answer": "No. The commitment is a user-entered limit, not a lender\u2019s eligibility or credit decision."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: construction loan advances and repayment choices",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-construction-loan-en-108/",
+        "usedFor": "Concept definitions and model limits; example arithmetic is independently calculated.",
+        "scope": "Constant-rate, interest-paid-separately construction period with dated nonnegative draws, opening principal and a commitment ceiling. Includes draw day and final day; actual calendar days divided by chosen 360/365. No principal repayments, interest capitalization, land equity, approval or permanent mortgage stage."
+      }
+    ],
+    "related": [
+      {
+        "href": "/mortgage-calculator",
+        "label": "Mortgage Calculator"
+      },
+      {
+        "href": "/mortgage-comparison-calculator",
+        "label": "Mortgage Comparison Calculator"
+      },
+      {
+        "href": "/closing-cost-calculator",
+        "label": "Closing Cost Calculator"
+      },
+      {
+        "href": "/house-affordability-calculator",
+        "label": "House Affordability Calculator"
+      },
+      {
+        "href": "/glossary/construction-loan-draw/",
+        "label": "Construction loan draw definition"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Two draws across a 30-day construction period",
+        "path": "/construction-loan-calculator.html",
+        "mode": "draws",
+        "values": {
+          "commitment": 200000,
+          "opening": 0,
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "draws": "2026-11-01, 50000\n2026-11-16, 50000",
+          "apr": 12,
+          "day_basis": "365",
+          "fees": 1000
+        },
+        "featured": true
+      },
+      {
+        "label": "Choose an actual/360 rate convention",
+        "path": "/construction-loan-calculator.html",
+        "mode": "draws",
+        "values": {
+          "commitment": 200000,
+          "opening": 0,
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "draws": "2026-11-01, 50000\n2026-11-16, 50000",
+          "apr": 12,
+          "day_basis": "360",
+          "fees": 1000
+        },
+        "featured": true
+      },
+      {
+        "label": "Delay the second draw to the final day",
+        "path": "/construction-loan-calculator.html",
+        "mode": "draws",
+        "values": {
+          "commitment": 200000,
+          "opening": 0,
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "draws": "2026-11-01, 50000\n2026-11-30, 50000",
+          "apr": 12,
+          "day_basis": "365",
+          "fees": 1000
+        },
+        "featured": true
+      }
+    ],
+    "limitations": [
+      "Constant-rate, interest-paid-separately construction period with dated nonnegative draws, opening principal and a commitment ceiling. Includes draw day and final day; actual calendar days divided by chosen 360/365. No principal repayments, interest capitalization, land equity, approval or permanent mortgage stage.",
+      "Do not charge a full month of interest on the entire approved commitment when only part has been advanced. Interest reserves and capitalized interest require a separate model."
+    ]
+  }
+}

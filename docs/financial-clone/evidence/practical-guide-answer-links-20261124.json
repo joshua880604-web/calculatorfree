@@ -1,0 +1,1173 @@
+{
+  "date": "2026-11-24",
+  "production_base": "89f038b209e249ad9f8adf976dbe0462ac1341f5",
+  "local_base_same_tree": "d3b85e25043ae6418ce690b7bc2367591064afd7",
+  "affected_guides": 13,
+  "question_blocks": 21,
+  "previous_configured_destinations": 33,
+  "final_question_links": 27,
+  "question_families_with_revised_targets": [
+    "covered-call-expiry-profit-and-downside",
+    "credit-card-minimum-payment-and-payoff-time"
+  ],
+  "validation": {
+    "typecheck": "passed",
+    "tests_passed": 3161,
+    "production_build": "passed",
+    "static_seo": {
+      "passed": true,
+      "configuration": "indexable-test-origin",
+      "pages": 469,
+      "guides": 155,
+      "internal_links_checked": 34404,
+      "calculator_state_links": 3017,
+      "max_contextual_depth": 3,
+      "redirect_rules": 200,
+      "curated_llms_links": 243,
+      "no_live_indexing_or_ranking_claim": true
+    },
+    "browser": {
+      "passed": true,
+      "testedAt": "2026-11-24T02:32:15.706Z",
+      "scope": "Local production export; third-party requests blocked; no Cloudflare or Google indexing claim",
+      "guideViewportChecks": 39,
+      "calculatorLinkClicks": 54,
+      "checks": [
+        {
+          "width": 320,
+          "guide": "/guides/how-to-calculate-debt-to-income-ratio/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/down-payment-and-closing-cost-cash/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/bond-price-coupon-and-yield/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/mutual-fund-fees-and-investment-costs/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/simple-and-discounted-payback/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/hourly-to-salary-and-paid-time-off/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/currency-conversion-rate-direction-and-spread/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/inflation-and-real-investment-return/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/college-costs-and-saving-before-enrollment/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/current-ratio-vs-quick-ratio/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/covered-call-expiry-profit-and-downside/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/how-to-calculate-debt-to-income-ratio/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/down-payment-and-closing-cost-cash/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/bond-price-coupon-and-yield/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/mutual-fund-fees-and-investment-costs/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/simple-and-discounted-payback/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/hourly-to-salary-and-paid-time-off/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/currency-conversion-rate-direction-and-spread/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/inflation-and-real-investment-return/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/college-costs-and-saving-before-enrollment/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/current-ratio-vs-quick-ratio/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/covered-call-expiry-profit-and-downside/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/how-to-calculate-debt-to-income-ratio/",
+          "label": "Calculate the entered debt-to-income ratio",
+          "target": "/debt-ratio-calculator",
+          "mode": "ratio",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/how-to-calculate-debt-to-income-ratio/",
+          "label": "Estimate an income-based home budget",
+          "target": "/house-affordability-calculator",
+          "mode": "income",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/down-payment-and-closing-cost-cash/",
+          "label": "Estimate cash needed to buy",
+          "target": "/down-payment-calculator",
+          "mode": "cash",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/down-payment-and-closing-cost-cash/",
+          "label": "Solve for a home-price budget",
+          "target": "/down-payment-calculator",
+          "mode": "price",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/bond-price-coupon-and-yield/",
+          "label": "Calculate a modeled bond price",
+          "target": "/bond-calculator",
+          "mode": "price",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/bond-price-coupon-and-yield/",
+          "label": "Solve for a modeled yield",
+          "target": "/bond-calculator",
+          "mode": "yield",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/bond-price-coupon-and-yield/",
+          "label": "Use settlement and maturity dates",
+          "target": "/bond-calculator",
+          "mode": "dated",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/mutual-fund-fees-and-investment-costs/",
+          "label": "Project fund contributions and fees",
+          "target": "/mutual-fund-calculator",
+          "mode": "projection",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/simple-and-discounted-payback/",
+          "label": "Enter unequal annual cash flows",
+          "target": "/payback-period-calculator",
+          "mode": "irregular",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/simple-and-discounted-payback/",
+          "label": "Use a repeating annual cash flow",
+          "target": "/payback-period-calculator",
+          "mode": "fixed",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/hourly-to-salary-and-paid-time-off/",
+          "label": "Convert $62,400 annual salary to hourly",
+          "target": "/salary-calculator",
+          "mode": "conversion",
+          "inputFieldsVerified": 6,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/currency-conversion-rate-direction-and-spread/",
+          "label": "Convert 100 USD at a hypothetical 0.90 EUR rate",
+          "target": "/currency-converter",
+          "mode": "manual",
+          "inputFieldsVerified": 4,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/inflation-and-real-investment-return/",
+          "label": "Compare nominal and real rates",
+          "target": "/real-return-calculator",
+          "mode": "rate",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/inflation-and-real-investment-return/",
+          "label": "Project inflation-adjusted value",
+          "target": "/real-return-calculator",
+          "mode": "value",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/college-costs-and-saving-before-enrollment/",
+          "label": "Plan from an entered college cost",
+          "target": "/college-cost-calculator",
+          "mode": "planning",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/current-ratio-vs-quick-ratio/",
+          "label": "Calculate the 1.6 quick ratio",
+          "target": "/quick-ratio-calculator",
+          "mode": "components",
+          "inputFieldsVerified": 4,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/current-ratio-vs-quick-ratio/",
+          "label": "Review all excluded asset categories",
+          "target": "/quick-ratio-calculator",
+          "mode": "exclusions",
+          "inputFieldsVerified": 5,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/current-ratio-vs-quick-ratio/",
+          "label": "Enter net current receivables",
+          "target": "/quick-ratio-calculator",
+          "mode": "components",
+          "inputFieldsVerified": 4,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+          "label": "Open self-employment tax calculator",
+          "target": "/self-employment-tax-calculator",
+          "mode": "annual",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+          "label": "Open self-employment tax calculator",
+          "target": "/self-employment-tax-calculator",
+          "mode": "annual",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+          "label": "Open self-employment tax calculator",
+          "target": "/self-employment-tax-calculator",
+          "mode": "annual",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/covered-call-expiry-profit-and-downside/",
+          "label": "Inspect expiry profit at a $60 stock price",
+          "target": "/covered-call-calculator",
+          "mode": "expiry",
+          "inputFieldsVerified": 9,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/covered-call-expiry-profit-and-downside/",
+          "label": "Load a $2 per-share premium on two contracts",
+          "target": "/covered-call-calculator",
+          "mode": "expiry",
+          "inputFieldsVerified": 9,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/covered-call-expiry-profit-and-downside/",
+          "label": "Inspect net debit with a $10 stock purchase fee",
+          "target": "/covered-call-calculator",
+          "mode": "expiry",
+          "inputFieldsVerified": 9,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+          "label": "Inspect the first minimum payment on a $5,000 balance",
+          "target": "/credit-card-minimum-payment-calculator",
+          "mode": "minimum",
+          "inputFieldsVerified": 6,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+          "label": "Enter your statement’s minimum-payment assumptions",
+          "target": "/credit-card-minimum-payment-calculator",
+          "mode": "minimum",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 390,
+          "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+          "label": "Estimate minimum-only payoff on a $5,000 balance",
+          "target": "/credit-card-minimum-payment-calculator",
+          "mode": "minimum",
+          "inputFieldsVerified": 6,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/how-to-calculate-debt-to-income-ratio/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/down-payment-and-closing-cost-cash/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/bond-price-coupon-and-yield/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/mutual-fund-fees-and-investment-costs/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/simple-and-discounted-payback/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/hourly-to-salary-and-paid-time-off/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/currency-conversion-rate-direction-and-spread/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/inflation-and-real-investment-return/",
+          "expectedLinks": 2,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/college-costs-and-saving-before-enrollment/",
+          "expectedLinks": 1,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/current-ratio-vs-quick-ratio/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/covered-call-expiry-profit-and-downside/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+          "expectedLinks": 3,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/how-to-calculate-debt-to-income-ratio/",
+          "label": "Calculate the entered debt-to-income ratio",
+          "target": "/debt-ratio-calculator",
+          "mode": "ratio",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/how-to-calculate-debt-to-income-ratio/",
+          "label": "Estimate an income-based home budget",
+          "target": "/house-affordability-calculator",
+          "mode": "income",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/down-payment-and-closing-cost-cash/",
+          "label": "Estimate cash needed to buy",
+          "target": "/down-payment-calculator",
+          "mode": "cash",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/down-payment-and-closing-cost-cash/",
+          "label": "Solve for a home-price budget",
+          "target": "/down-payment-calculator",
+          "mode": "price",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/bond-price-coupon-and-yield/",
+          "label": "Calculate a modeled bond price",
+          "target": "/bond-calculator",
+          "mode": "price",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/bond-price-coupon-and-yield/",
+          "label": "Solve for a modeled yield",
+          "target": "/bond-calculator",
+          "mode": "yield",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/bond-price-coupon-and-yield/",
+          "label": "Use settlement and maturity dates",
+          "target": "/bond-calculator",
+          "mode": "dated",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/mutual-fund-fees-and-investment-costs/",
+          "label": "Project fund contributions and fees",
+          "target": "/mutual-fund-calculator",
+          "mode": "projection",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/simple-and-discounted-payback/",
+          "label": "Enter unequal annual cash flows",
+          "target": "/payback-period-calculator",
+          "mode": "irregular",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/simple-and-discounted-payback/",
+          "label": "Use a repeating annual cash flow",
+          "target": "/payback-period-calculator",
+          "mode": "fixed",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/hourly-to-salary-and-paid-time-off/",
+          "label": "Convert $62,400 annual salary to hourly",
+          "target": "/salary-calculator",
+          "mode": "conversion",
+          "inputFieldsVerified": 6,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/currency-conversion-rate-direction-and-spread/",
+          "label": "Convert 100 USD at a hypothetical 0.90 EUR rate",
+          "target": "/currency-converter",
+          "mode": "manual",
+          "inputFieldsVerified": 4,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/inflation-and-real-investment-return/",
+          "label": "Compare nominal and real rates",
+          "target": "/real-return-calculator",
+          "mode": "rate",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/inflation-and-real-investment-return/",
+          "label": "Project inflation-adjusted value",
+          "target": "/real-return-calculator",
+          "mode": "value",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/college-costs-and-saving-before-enrollment/",
+          "label": "Plan from an entered college cost",
+          "target": "/college-cost-calculator",
+          "mode": "planning",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/current-ratio-vs-quick-ratio/",
+          "label": "Calculate the 1.6 quick ratio",
+          "target": "/quick-ratio-calculator",
+          "mode": "components",
+          "inputFieldsVerified": 4,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/current-ratio-vs-quick-ratio/",
+          "label": "Review all excluded asset categories",
+          "target": "/quick-ratio-calculator",
+          "mode": "exclusions",
+          "inputFieldsVerified": 5,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/current-ratio-vs-quick-ratio/",
+          "label": "Enter net current receivables",
+          "target": "/quick-ratio-calculator",
+          "mode": "components",
+          "inputFieldsVerified": 4,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+          "label": "Open self-employment tax calculator",
+          "target": "/self-employment-tax-calculator",
+          "mode": "annual",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+          "label": "Open self-employment tax calculator",
+          "target": "/self-employment-tax-calculator",
+          "mode": "annual",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+          "label": "Open self-employment tax calculator",
+          "target": "/self-employment-tax-calculator",
+          "mode": "annual",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/covered-call-expiry-profit-and-downside/",
+          "label": "Inspect expiry profit at a $60 stock price",
+          "target": "/covered-call-calculator",
+          "mode": "expiry",
+          "inputFieldsVerified": 9,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/covered-call-expiry-profit-and-downside/",
+          "label": "Load a $2 per-share premium on two contracts",
+          "target": "/covered-call-calculator",
+          "mode": "expiry",
+          "inputFieldsVerified": 9,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/covered-call-expiry-profit-and-downside/",
+          "label": "Inspect net debit with a $10 stock purchase fee",
+          "target": "/covered-call-calculator",
+          "mode": "expiry",
+          "inputFieldsVerified": 9,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+          "label": "Inspect the first minimum payment on a $5,000 balance",
+          "target": "/credit-card-minimum-payment-calculator",
+          "mode": "minimum",
+          "inputFieldsVerified": 6,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+          "label": "Enter your statement’s minimum-payment assumptions",
+          "target": "/credit-card-minimum-payment-calculator",
+          "mode": "minimum",
+          "inputFieldsVerified": 0,
+          "resultVisible": true
+        },
+        {
+          "width": 1440,
+          "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+          "label": "Estimate minimum-only payoff on a $5,000 balance",
+          "target": "/credit-card-minimum-payment-calculator",
+          "mode": "minimum",
+          "inputFieldsVerified": 6,
+          "resultVisible": true
+        }
+      ],
+      "errors": []
+    },
+    "mobile_screenshots_visually_reviewed": true
+  },
+  "source_preservation": {
+    "answer_text_unchanged": true,
+    "original_case_tables_unchanged": true,
+    "algorithms_unchanged": true,
+    "numerical_review_dates_unchanged": true
+  },
+  "links": [
+    {
+      "guide": "/guides/how-to-calculate-debt-to-income-ratio/",
+      "question": "Does a debt-to-income result establish loan approval?",
+      "anchor": "use-approval",
+      "id": "debt-to-income-ratio",
+      "mode": "ratio",
+      "label": "Calculate the entered debt-to-income ratio",
+      "href": "/debt-ratio-calculator#calc=share_version=1&mode=ratio"
+    },
+    {
+      "guide": "/guides/how-to-calculate-debt-to-income-ratio/",
+      "question": "Does a debt-to-income result establish loan approval?",
+      "anchor": "use-approval",
+      "id": "house-affordability",
+      "mode": "income",
+      "label": "Estimate an income-based home budget",
+      "href": "/house-affordability-calculator#calc=share_version=1&mode=income"
+    },
+    {
+      "guide": "/guides/down-payment-and-closing-cost-cash/",
+      "question": "Does the cash-needed result include closing costs?",
+      "anchor": "use-closing-cash",
+      "id": "down-payment",
+      "mode": "cash",
+      "label": "Estimate cash needed to buy",
+      "href": "/down-payment-calculator#calc=share_version=1&mode=cash"
+    },
+    {
+      "guide": "/guides/down-payment-and-closing-cost-cash/",
+      "question": "Does the cash-needed result include closing costs?",
+      "anchor": "use-closing-cash",
+      "id": "down-payment",
+      "mode": "price",
+      "label": "Solve for a home-price budget",
+      "href": "/down-payment-calculator#calc=share_version=1&mode=price"
+    },
+    {
+      "guide": "/guides/bond-price-coupon-and-yield/",
+      "question": "How are bond price and yield related in this model?",
+      "anchor": "use-price-yield",
+      "id": "bond",
+      "mode": "price",
+      "label": "Calculate a modeled bond price",
+      "href": "/bond-calculator#calc=share_version=1&mode=price"
+    },
+    {
+      "guide": "/guides/bond-price-coupon-and-yield/",
+      "question": "How are bond price and yield related in this model?",
+      "anchor": "use-price-yield",
+      "id": "bond",
+      "mode": "yield",
+      "label": "Solve for a modeled yield",
+      "href": "/bond-calculator#calc=share_version=1&mode=yield"
+    },
+    {
+      "guide": "/guides/bond-price-coupon-and-yield/",
+      "question": "How are bond price and yield related in this model?",
+      "anchor": "use-price-yield",
+      "id": "bond",
+      "mode": "dated",
+      "label": "Use settlement and maturity dates",
+      "href": "/bond-calculator#calc=share_version=1&mode=dated"
+    },
+    {
+      "guide": "/guides/mutual-fund-fees-and-investment-costs/",
+      "question": "How do lump sums and recurring deposits affect this fund projection?",
+      "anchor": "use-deposits-fees",
+      "id": "mutual-fund",
+      "mode": "projection",
+      "label": "Project fund contributions and fees",
+      "href": "/mutual-fund-calculator#calc=share_version=1&mode=projection"
+    },
+    {
+      "guide": "/guides/simple-and-discounted-payback/",
+      "question": "How do unequal cash flows and a discount rate affect payback?",
+      "anchor": "use-uneven-flows",
+      "id": "payback-period",
+      "mode": "irregular",
+      "label": "Enter unequal annual cash flows",
+      "href": "/payback-period-calculator#calc=share_version=1&mode=irregular"
+    },
+    {
+      "guide": "/guides/simple-and-discounted-payback/",
+      "question": "How do unequal cash flows and a discount rate affect payback?",
+      "anchor": "use-uneven-flows",
+      "id": "payback-period",
+      "mode": "fixed",
+      "label": "Use a repeating annual cash flow",
+      "href": "/payback-period-calculator#calc=share_version=1&mode=fixed"
+    },
+    {
+      "guide": "/guides/hourly-to-salary-and-paid-time-off/",
+      "question": "How do I convert an annual salary to an hourly rate?",
+      "anchor": "use-salary-to-hourly",
+      "id": "salary",
+      "mode": "conversion",
+      "label": "Convert $62,400 annual salary to hourly",
+      "values": {
+        "salary": "62400",
+        "frequency": "Annually",
+        "hours": "40",
+        "days": "5",
+        "holidays": "0",
+        "vacation": "0"
+      },
+      "href": "/salary-calculator#calc=share_version=1&mode=conversion&salary=62400&frequency=Annually&hours=40&days=5&holidays=0&vacation=0"
+    },
+    {
+      "guide": "/guides/currency-conversion-rate-direction-and-spread/",
+      "question": "How do I convert currencies with a custom exchange rate?",
+      "anchor": "use-custom-exchange-rate",
+      "id": "currency",
+      "mode": "manual",
+      "label": "Convert 100 USD at a hypothetical 0.90 EUR rate",
+      "values": {
+        "amount": "100",
+        "from": "USD",
+        "to": "EUR",
+        "rate": "0.9"
+      },
+      "href": "/currency-converter#calc=share_version=1&mode=manual&amount=100&from=USD&to=EUR&rate=0.9"
+    },
+    {
+      "guide": "/guides/inflation-and-real-investment-return/",
+      "question": "How do nominal return and inflation combine?",
+      "anchor": "use-inflation",
+      "id": "real-return",
+      "mode": "rate",
+      "label": "Compare nominal and real rates",
+      "href": "/real-return-calculator#calc=share_version=1&mode=rate"
+    },
+    {
+      "guide": "/guides/inflation-and-real-investment-return/",
+      "question": "How do nominal return and inflation combine?",
+      "anchor": "use-inflation",
+      "id": "real-return",
+      "mode": "value",
+      "label": "Project inflation-adjusted value",
+      "href": "/real-return-calculator#calc=share_version=1&mode=value"
+    },
+    {
+      "guide": "/guides/college-costs-and-saving-before-enrollment/",
+      "question": "How can I estimate future college costs and a savings gap?",
+      "anchor": "use-future-cost",
+      "id": "college-cost",
+      "mode": "planning",
+      "label": "Plan from an entered college cost",
+      "href": "/college-cost-calculator#calc=share_version=1&mode=planning"
+    },
+    {
+      "guide": "/guides/current-ratio-vs-quick-ratio/",
+      "question": "How do I calculate the quick ratio?",
+      "anchor": "use-quick-formula",
+      "id": "quick-ratio",
+      "mode": "components",
+      "label": "Calculate the 1.6 quick ratio",
+      "values": {
+        "cash": "20000",
+        "securities": "5000",
+        "receivables": "15000",
+        "liabilities": "25000"
+      },
+      "href": "/quick-ratio-calculator#calc=share_version=1&mode=components&cash=20000&securities=5000&receivables=15000&liabilities=25000"
+    },
+    {
+      "guide": "/guides/current-ratio-vs-quick-ratio/",
+      "question": "Why does the quick ratio exclude inventory and prepaid expenses?",
+      "anchor": "use-quick-inventory",
+      "id": "quick-ratio",
+      "mode": "exclusions",
+      "label": "Review all excluded asset categories",
+      "values": {
+        "assets": "80000",
+        "inventory": "30000",
+        "prepaid": "5000",
+        "nonquick": "5000",
+        "liabilities": "25000"
+      },
+      "href": "/quick-ratio-calculator#calc=share_version=1&mode=exclusions&assets=80000&inventory=30000&prepaid=5000&nonquick=5000&liabilities=25000"
+    },
+    {
+      "guide": "/guides/current-ratio-vs-quick-ratio/",
+      "question": "Should I use gross or net accounts receivable?",
+      "anchor": "use-quick-receivables",
+      "id": "quick-ratio",
+      "mode": "components",
+      "label": "Enter net current receivables",
+      "values": {
+        "cash": "20000",
+        "securities": "5000",
+        "receivables": "15000",
+        "liabilities": "25000"
+      },
+      "href": "/quick-ratio-calculator#calc=share_version=1&mode=components&cash=20000&securities=5000&receivables=15000&liabilities=25000"
+    },
+    {
+      "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+      "question": "How do I calculate self-employment tax?",
+      "anchor": "use-se-how",
+      "id": "self-employment-tax",
+      "mode": "annual",
+      "label": "Open self-employment tax calculator",
+      "href": "/self-employment-tax-calculator#calc=share_version=1&mode=annual"
+    },
+    {
+      "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+      "question": "How is tax calculated if I am employed and self-employed?",
+      "anchor": "use-se-w2",
+      "id": "self-employment-tax",
+      "mode": "annual",
+      "label": "Open self-employment tax calculator",
+      "href": "/self-employment-tax-calculator#calc=share_version=1&mode=annual"
+    },
+    {
+      "guide": "/guides/self-employment-tax-net-profit-and-wages/",
+      "question": "Can I deduct half of my self-employment tax?",
+      "anchor": "use-se-deduction",
+      "id": "self-employment-tax",
+      "mode": "annual",
+      "label": "Open self-employment tax calculator",
+      "href": "/self-employment-tax-calculator#calc=share_version=1&mode=annual"
+    },
+    {
+      "guide": "/guides/covered-call-expiry-profit-and-downside/",
+      "question": "How do you calculate covered call profit at expiry?",
+      "anchor": "use-covered-call-profit",
+      "id": "covered-call",
+      "mode": "expiry",
+      "label": "Inspect expiry profit at a $60 stock price",
+      "values": {
+        "stock": "50",
+        "strike": "55",
+        "premium": "2",
+        "contracts": "1",
+        "stock_fee": "0",
+        "option_fee": "0.65",
+        "exit_fee": "0",
+        "expiry": "60",
+        "days": "30"
+      },
+      "href": "/covered-call-calculator#calc=share_version=1&mode=expiry&stock=50&strike=55&premium=2&contracts=1&stock_fee=0&option_fee=0.65&exit_fee=0&expiry=60&days=30"
+    },
+    {
+      "guide": "/guides/covered-call-expiry-profit-and-downside/",
+      "question": "How do I calculate the total covered call premium?",
+      "anchor": "use-covered-call-premium",
+      "id": "covered-call",
+      "mode": "expiry",
+      "label": "Load a $2 per-share premium on two contracts",
+      "values": {
+        "stock": "50",
+        "strike": "55",
+        "premium": "2",
+        "contracts": "2",
+        "stock_fee": "0",
+        "option_fee": "0.65",
+        "exit_fee": "0",
+        "expiry": "52",
+        "days": "30"
+      },
+      "href": "/covered-call-calculator#calc=share_version=1&mode=expiry&stock=50&strike=55&premium=2&contracts=2&stock_fee=0&option_fee=0.65&exit_fee=0&expiry=52&days=30"
+    },
+    {
+      "guide": "/guides/covered-call-expiry-profit-and-downside/",
+      "question": "How is the net debit calculated in a covered call?",
+      "anchor": "use-covered-call-debit",
+      "id": "covered-call",
+      "mode": "expiry",
+      "label": "Inspect net debit with a $10 stock purchase fee",
+      "values": {
+        "stock": "50",
+        "strike": "55",
+        "premium": "2",
+        "contracts": "1",
+        "stock_fee": "10",
+        "option_fee": "0.65",
+        "exit_fee": "0",
+        "expiry": "52",
+        "days": "30"
+      },
+      "href": "/covered-call-calculator#calc=share_version=1&mode=expiry&stock=50&strike=55&premium=2&contracts=1&stock_fee=10&option_fee=0.65&exit_fee=0&expiry=52&days=30"
+    },
+    {
+      "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+      "question": "How is the credit card minimum payment calculated?",
+      "anchor": "use-card-minimum-formula",
+      "id": "credit-card-minimum-payment",
+      "mode": "minimum",
+      "label": "Inspect the first minimum payment on a $5,000 balance",
+      "values": {
+        "principal": "5000",
+        "rate": "24",
+        "minimum": "2",
+        "floor": "25",
+        "interest_extra": "Yes",
+        "extra": "0"
+      },
+      "href": "/credit-card-minimum-payment-calculator#calc=share_version=1&mode=minimum&principal=5000&rate=24&minimum=2&floor=25&interest_extra=Yes&extra=0"
+    },
+    {
+      "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+      "question": "Where do I find my actual minimum-payment rule?",
+      "anchor": "use-card-minimum-find-rule",
+      "id": "credit-card-minimum-payment",
+      "mode": "minimum",
+      "label": "Enter your statement’s minimum-payment assumptions",
+      "href": "/credit-card-minimum-payment-calculator#calc=share_version=1&mode=minimum"
+    },
+    {
+      "guide": "/guides/credit-card-minimum-payment-and-payoff-time/",
+      "question": "How long will it take to pay off a card with minimum payments?",
+      "anchor": "use-card-minimum-payoff",
+      "id": "credit-card-minimum-payment",
+      "mode": "minimum",
+      "label": "Estimate minimum-only payoff on a $5,000 balance",
+      "values": {
+        "principal": "5000",
+        "rate": "24",
+        "minimum": "2",
+        "floor": "25",
+        "interest_extra": "Yes",
+        "extra": "0"
+      },
+      "href": "/credit-card-minimum-payment-calculator#calc=share_version=1&mode=minimum&principal=5000&rate=24&minimum=2&floor=25&interest_extra=Yes&extra=0"
+    }
+  ],
+  "published": false
+}

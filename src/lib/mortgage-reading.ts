@@ -13,6 +13,7 @@ export const mortgageReadingGroups=[
   {path:'/guides/biweekly-vs-monthly-mortgage-payments/',label:'Biweekly vs. monthly payments'},
  ]},
  {title:'Plan the wider housing budget',guides:[
+  {path:'/guides/construction-loan-draws-and-interest/',label:'Construction draws and interest'},
   {path:'/guides/rent-vs-buy-a-house/',label:'Renting vs. buying over the same horizon'},
  ]},
 ];

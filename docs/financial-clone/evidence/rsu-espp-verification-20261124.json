@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-24",
+  "branch": "preview/rsu-espp-20261124",
+  "parent": "a38d076b227a14fdaa1ca7d195147683afacbbcc",
+  "published": false,
+  "tools": [
+    "rsu-tax",
+    "espp-tax"
+  ],
+  "modes": 4,
+  "complete_presets": 13,
+  "new_guides": 2,
+  "new_glossary_terms": 2,
+  "site": {
+    "functional_tools": 176,
+    "modes": 368,
+    "canonical_pages": 493,
+    "guides": 163,
+    "glossary_terms": 139
+  },
+  "checks": {
+    "unit_tests": 3744,
+    "unit_passed": true,
+    "typecheck_passed": true,
+    "build_passed": true,
+    "decimal_cases": 83,
+    "decimal_metrics": 970,
+    "decimal_precision": 70,
+    "browser_checks": 64,
+    "calculator_csv_exports": 10,
+    "total_browser_checks": 74,
+    "page_errors": [],
+    "visual_review": "passed: four modes, mobile and desktop forms/results",
+    "static_seo": {
+      "passed": true,
+      "configuration": "indexable-test-origin",
+      "pages": 493,
+      "guides": 163,
+      "internal_links_checked": 36041,
+      "calculator_state_links": 3117,
+      "max_contextual_depth": 3,
+      "redirect_rules": 208,
+      "curated_llms_links": 251,
+      "no_live_indexing_or_ranking_claim": true
+    }
+  },
+  "evidence_root": "/workspace/work/rsu-espp-20261124",
+  "limitations": [
+    "2026 scoped U.S. scenarios; supplied tax-rate assumptions, not a full return",
+    "RSU delivery requires simultaneous income recognition and stock transfer; other withholding is supplied",
+    "ESPP requires a confirmed Section 423 lot; no plan/employment qualification or $25k accrual test",
+    "No native Safari, live payroll/plan result, external professional review, deployment or Google indexing/ranking claim"
+  ]
+}

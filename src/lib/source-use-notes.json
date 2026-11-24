@@ -1777,6 +1777,86 @@
       "role": "method",
       "usedFor": "VAT-inclusive pricing and the distinction between a price before VAT and a total including VAT.",
       "scope": "UK VAT guidance. The shared gross/net identity does not make VAT equivalent to U.S. sales tax or certify the entered rate."
+    },
+    "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures": {
+      "role": "method",
+      "usedFor": "Net-income-based EBIT/EBITDA reconciliation and separation from differently adjusted measures.",
+      "scope": "SEC non-GAAP disclosure interpretations; not a cash-flow forecast, valuation or endorsement of this worksheet."
+    },
+    "https://www.1stcommercialcredit.com/invoice-factoring-calculator": {
+      "role": "context",
+      "usedFor": "The distinct concepts of invoice face value, advance rate, fees and reserve settlement.",
+      "scope": "Provider example only; contract terms vary. Its displayed total-cash formula can double count the advance, so the model uses independently checked cash conservation instead. No quoted rates or approval claims are adopted."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-daily-periodic-rate-on-a-credit-card-en-46/": {
+      "role": "method",
+      "usedFor": "Daily-balance context, separate APR categories, grace periods and the issuer-specific 360/365 divisor.",
+      "scope": "Does not establish a universal simple-interest bill: compounding, negative balances and posting rules can differ. This calculator explicitly states its own single-balance estimate."
+    },
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-construction-loan-en-108/": {
+      "role": "context",
+      "usedFor": "Construction funding by staged advances and the distinction between construction lending and a later mortgage.",
+      "scope": "Does not prescribe a universal draw-day, accrual or billing convention. This model explicitly selects its dates, fixed divisor and separately paid interest."
+    },
+    "https://www.treasurydirect.gov/marketable-securities/treasury-notes/": {
+      "role": "method",
+      "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+      "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+    },
+    "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles": {
+      "role": "rule",
+      "usedFor": "Official full Part B standard/IRMAA and Part D adjustment tables for the premium year in this source URL.",
+      "scope": "The stated premium year only; not a forecast, SSA decision, immunosuppressive-drug-only premium or full medical-cost estimate."
+    },
+    "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles": {
+      "role": "rule",
+      "usedFor": "Official full Part B standard/IRMAA and Part D adjustment tables for the premium year in this source URL.",
+      "scope": "The stated premium year only; not a forecast, SSA decision, immunosuppressive-drug-only premium or full medical-cost estimate."
+    },
+    "https://www.ssa.gov/benefits/medicare/medicare-premiums.html": {
+      "role": "rule",
+      "usedFor": "Medicare MAGI, lookback context or the filing-separately/living-apart procedure.",
+      "scope": "Use CMS for the year-specific dollar tables. Special decisions and attestations are handled by SSA, not this worksheet."
+    },
+    "https://secure.ssa.gov/apps10/poms.nsf/lnx/0601120060": {
+      "role": "rule",
+      "usedFor": "Medicare MAGI, lookback context or the filing-separately/living-apart procedure.",
+      "scope": "Use CMS for the year-specific dollar tables. Special decisions and attestations are handled by SSA, not this worksheet."
+    },
+    "https://www.irs.gov/publications/p15": {
+      "role": "rule",
+      "usedFor": "2026 supplemental withholding section 7: optional 22% under eligible conditions and mandatory 37% on excess annual supplemental wages.",
+      "scope": "2026 federal payroll withholding method only; not final tax rates, FICA, state laws or every employer payroll method."
+    },
+    "https://www.irs.gov/pub/irs-pdf/p5992.pdf": {
+      "role": "context",
+      "usedFor": "RSU types, stock-transfer context and why special deferred/83(i) arrangements need separate analysis.",
+      "scope": "June 2024 audit-technique context, expressly not an official pronouncement of law; no plan-specific result is inferred."
+    },
+    "https://www.irs.gov/taxtopics/tc409": {
+      "role": "rule",
+      "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+      "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+    },
+    "https://www.irs.gov/publications/p525": {
+      "role": "rule",
+      "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+      "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+    },
+    "https://www.irs.gov/instructions/i3921": {
+      "role": "method",
+      "usedFor": "Form 3922 price/date definitions, including grant-date as-if exercise price versus actual purchase price.",
+      "scope": "April 2025 instructions; no filing is performed and plan/employment qualification is not established."
+    },
+    "https://www.govinfo.gov/content/pkg/CFR-2025-title26-vol7/xhtml/CFR-2025-title26-vol7-sec1-423-1.html": {
+      "role": "rule",
+      "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+      "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+    },
+    "https://www.irs.gov/irm/part4/irm_04-023-005r": {
+      "role": "rule",
+      "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+      "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
     }
   },
   "pages": {
@@ -4834,6 +4914,450 @@
     "calculator:balance-transfer": {
       "note": " The 2026-11-19 controlled comparison follows the fee once, promotional deadlines and post-promo interest under an equal monthly budget. The separately paid fee requires additional initial cash. Card-versus-card rows are distinct from the existing personal-loan examples.",
       "updatedOn": "2026-11-19"
+    },
+    "calculator:ebitda": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures": {
+          "role": "method",
+          "usedFor": "Net-income-based EBIT/EBITDA reconciliation and separation from differently adjusted measures.",
+          "scope": "SEC non-GAAP disclosure interpretations; not a cash-flow forecast, valuation or endorsement of this worksheet."
+        }
+      }
+    },
+    "guide:/guides/how-to-calculate-ebitda-and-margin/": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures": {
+          "role": "method",
+          "usedFor": "Net-income-based EBIT/EBITDA reconciliation and separation from differently adjusted measures.",
+          "scope": "SEC non-GAAP disclosure interpretations; not a cash-flow forecast, valuation or endorsement of this worksheet."
+        }
+      }
+    },
+    "glossary:ebitda": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures": {
+          "role": "method",
+          "usedFor": "Net-income-based EBIT/EBITDA reconciliation and separation from differently adjusted measures.",
+          "scope": "SEC non-GAAP disclosure interpretations; not a cash-flow forecast, valuation or endorsement of this worksheet."
+        }
+      }
+    },
+    "calculator:invoice-factoring": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.1stcommercialcredit.com/invoice-factoring-calculator": {
+          "role": "context",
+          "usedFor": "The distinct concepts of invoice face value, advance rate, fees and reserve settlement.",
+          "scope": "Provider example only; contract terms vary. Its displayed total-cash formula can double count the advance, so the model uses independently checked cash conservation instead. No quoted rates or approval claims are adopted."
+        }
+      }
+    },
+    "guide:/guides/invoice-factoring-fees-and-reserve/": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.1stcommercialcredit.com/invoice-factoring-calculator": {
+          "role": "context",
+          "usedFor": "The distinct concepts of invoice face value, advance rate, fees and reserve settlement.",
+          "scope": "Provider example only; contract terms vary. Its displayed total-cash formula can double count the advance, so the model uses independently checked cash conservation instead. No quoted rates or approval claims are adopted."
+        }
+      }
+    },
+    "glossary:factoring-reserve": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.1stcommercialcredit.com/invoice-factoring-calculator": {
+          "role": "context",
+          "usedFor": "The distinct concepts of invoice face value, advance rate, fees and reserve settlement.",
+          "scope": "Provider example only; contract terms vary. Its displayed total-cash formula can double count the advance, so the model uses independently checked cash conservation instead. No quoted rates or approval claims are adopted."
+        }
+      }
+    },
+    "calculator:average-daily-balance": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/": {
+          "role": "method",
+          "usedFor": "Daily-balance context, separate APR categories, grace periods and the issuer-specific 360/365 divisor.",
+          "scope": "Does not establish a universal simple-interest bill: compounding, negative balances and posting rules can differ. This calculator explicitly states its own single-balance estimate."
+        },
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-daily-periodic-rate-on-a-credit-card-en-46/": {
+          "role": "method",
+          "usedFor": "Daily-balance context, separate APR categories, grace periods and the issuer-specific 360/365 divisor.",
+          "scope": "Does not establish a universal simple-interest bill: compounding, negative balances and posting rules can differ. This calculator explicitly states its own single-balance estimate."
+        }
+      }
+    },
+    "guide:/guides/average-daily-balance-posting-dates/": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/": {
+          "role": "method",
+          "usedFor": "Daily-balance context, separate APR categories, grace periods and the issuer-specific 360/365 divisor.",
+          "scope": "Does not establish a universal simple-interest bill: compounding, negative balances and posting rules can differ. This calculator explicitly states its own single-balance estimate."
+        },
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-daily-periodic-rate-on-a-credit-card-en-46/": {
+          "role": "method",
+          "usedFor": "Daily-balance context, separate APR categories, grace periods and the issuer-specific 360/365 divisor.",
+          "scope": "Does not establish a universal simple-interest bill: compounding, negative balances and posting rules can differ. This calculator explicitly states its own single-balance estimate."
+        }
+      }
+    },
+    "glossary:average-daily-balance": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/": {
+          "role": "method",
+          "usedFor": "Daily-balance context, separate APR categories, grace periods and the issuer-specific 360/365 divisor.",
+          "scope": "Does not establish a universal simple-interest bill: compounding, negative balances and posting rules can differ. This calculator explicitly states its own single-balance estimate."
+        },
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-daily-periodic-rate-on-a-credit-card-en-46/": {
+          "role": "method",
+          "usedFor": "Daily-balance context, separate APR categories, grace periods and the issuer-specific 360/365 divisor.",
+          "scope": "Does not establish a universal simple-interest bill: compounding, negative balances and posting rules can differ. This calculator explicitly states its own single-balance estimate."
+        }
+      }
+    },
+    "calculator:construction-loan": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-construction-loan-en-108/": {
+          "role": "context",
+          "usedFor": "Construction funding by staged advances and the distinction between construction lending and a later mortgage.",
+          "scope": "Does not prescribe a universal draw-day, accrual or billing convention. This model explicitly selects its dates, fixed divisor and separately paid interest."
+        }
+      }
+    },
+    "guide:/guides/construction-loan-draws-and-interest/": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-construction-loan-en-108/": {
+          "role": "context",
+          "usedFor": "Construction funding by staged advances and the distinction between construction lending and a later mortgage.",
+          "scope": "Does not prescribe a universal draw-day, accrual or billing convention. This model explicitly selects its dates, fixed divisor and separately paid interest."
+        }
+      }
+    },
+    "glossary:construction-loan-draw": {
+      "note": "Original user-entered worksheet. Reference pages support definitions and limits; public examples were checked separately with high-precision arithmetic. No competitor numerical parity, live quote or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-construction-loan-en-108/": {
+          "role": "context",
+          "usedFor": "Construction funding by staged advances and the distinction between construction lending and a later mortgage.",
+          "scope": "Does not prescribe a universal draw-day, accrual or billing convention. This model explicitly selects its dates, fixed divisor and separately paid interest."
+        }
+      }
+    },
+    "calculator:bond-ladder": {
+      "note": "Original hypothetical worksheet. Ladder arithmetic uses user-entered prices and coupon assumptions; IRMAA uses separately versioned official CMS premium-year tables. Independent high-precision examples do not imply a live security quote, tax return, SSA determination or external professional review.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.treasurydirect.gov/marketable-securities/treasury-notes/": {
+          "role": "method",
+          "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+          "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+        },
+        "https://www.treasurydirect.gov/marketable-securities/treasury-bills/": {
+          "role": "method",
+          "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+          "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+        },
+        "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds": {
+          "role": "method",
+          "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+          "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+        }
+      }
+    },
+    "guide:/guides/bond-ladder-coupons-and-treasury-bills/": {
+      "note": "Original hypothetical worksheet. Ladder arithmetic uses user-entered prices and coupon assumptions; IRMAA uses separately versioned official CMS premium-year tables. Independent high-precision examples do not imply a live security quote, tax return, SSA determination or external professional review.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.treasurydirect.gov/marketable-securities/treasury-notes/": {
+          "role": "method",
+          "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+          "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+        },
+        "https://www.treasurydirect.gov/marketable-securities/treasury-bills/": {
+          "role": "method",
+          "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+          "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+        },
+        "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds": {
+          "role": "method",
+          "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+          "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+        }
+      }
+    },
+    "glossary:bond-ladder": {
+      "note": "Original hypothetical worksheet. Ladder arithmetic uses user-entered prices and coupon assumptions; IRMAA uses separately versioned official CMS premium-year tables. Independent high-precision examples do not imply a live security quote, tax return, SSA determination or external professional review.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.treasurydirect.gov/marketable-securities/treasury-notes/": {
+          "role": "method",
+          "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+          "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+        },
+        "https://www.treasurydirect.gov/marketable-securities/treasury-bills/": {
+          "role": "method",
+          "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+          "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+        },
+        "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds": {
+          "role": "method",
+          "usedFor": "Regular coupon mechanics or bill discount/face-redemption definitions and bond risks.",
+          "scope": "Not live prices, yield quotes, an auction schedule or a guarantee of execution. Date clamping and same-face renewal are explicit worksheet assumptions."
+        }
+      }
+    },
+    "calculator:irmaa": {
+      "note": "Original hypothetical worksheet. Ladder arithmetic uses user-entered prices and coupon assumptions; IRMAA uses separately versioned official CMS premium-year tables. Independent high-precision examples do not imply a live security quote, tax return, SSA determination or external professional review.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles": {
+          "role": "rule",
+          "usedFor": "Official full Part B standard/IRMAA and Part D adjustment tables for the premium year in this source URL.",
+          "scope": "The stated premium year only; not a forecast, SSA decision, immunosuppressive-drug-only premium or full medical-cost estimate."
+        },
+        "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles": {
+          "role": "rule",
+          "usedFor": "Official full Part B standard/IRMAA and Part D adjustment tables for the premium year in this source URL.",
+          "scope": "The stated premium year only; not a forecast, SSA decision, immunosuppressive-drug-only premium or full medical-cost estimate."
+        },
+        "https://www.ssa.gov/benefits/medicare/medicare-premiums.html": {
+          "role": "rule",
+          "usedFor": "Medicare MAGI, lookback context or the filing-separately/living-apart procedure.",
+          "scope": "Use CMS for the year-specific dollar tables. Special decisions and attestations are handled by SSA, not this worksheet."
+        },
+        "https://secure.ssa.gov/apps10/poms.nsf/lnx/0601120060": {
+          "role": "rule",
+          "usedFor": "Medicare MAGI, lookback context or the filing-separately/living-apart procedure.",
+          "scope": "Use CMS for the year-specific dollar tables. Special decisions and attestations are handled by SSA, not this worksheet."
+        }
+      }
+    },
+    "guide:/guides/medicare-irmaa-magi-and-premium-years/": {
+      "note": "Original hypothetical worksheet. Ladder arithmetic uses user-entered prices and coupon assumptions; IRMAA uses separately versioned official CMS premium-year tables. Independent high-precision examples do not imply a live security quote, tax return, SSA determination or external professional review.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles": {
+          "role": "rule",
+          "usedFor": "Official full Part B standard/IRMAA and Part D adjustment tables for the premium year in this source URL.",
+          "scope": "The stated premium year only; not a forecast, SSA decision, immunosuppressive-drug-only premium or full medical-cost estimate."
+        },
+        "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles": {
+          "role": "rule",
+          "usedFor": "Official full Part B standard/IRMAA and Part D adjustment tables for the premium year in this source URL.",
+          "scope": "The stated premium year only; not a forecast, SSA decision, immunosuppressive-drug-only premium or full medical-cost estimate."
+        },
+        "https://www.ssa.gov/benefits/medicare/medicare-premiums.html": {
+          "role": "rule",
+          "usedFor": "Medicare MAGI, lookback context or the filing-separately/living-apart procedure.",
+          "scope": "Use CMS for the year-specific dollar tables. Special decisions and attestations are handled by SSA, not this worksheet."
+        },
+        "https://secure.ssa.gov/apps10/poms.nsf/lnx/0601120060": {
+          "role": "rule",
+          "usedFor": "Medicare MAGI, lookback context or the filing-separately/living-apart procedure.",
+          "scope": "Use CMS for the year-specific dollar tables. Special decisions and attestations are handled by SSA, not this worksheet."
+        }
+      }
+    },
+    "glossary:irmaa": {
+      "note": "Original hypothetical worksheet. Ladder arithmetic uses user-entered prices and coupon assumptions; IRMAA uses separately versioned official CMS premium-year tables. Independent high-precision examples do not imply a live security quote, tax return, SSA determination or external professional review.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles": {
+          "role": "rule",
+          "usedFor": "Official full Part B standard/IRMAA and Part D adjustment tables for the premium year in this source URL.",
+          "scope": "The stated premium year only; not a forecast, SSA decision, immunosuppressive-drug-only premium or full medical-cost estimate."
+        },
+        "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles": {
+          "role": "rule",
+          "usedFor": "Official full Part B standard/IRMAA and Part D adjustment tables for the premium year in this source URL.",
+          "scope": "The stated premium year only; not a forecast, SSA decision, immunosuppressive-drug-only premium or full medical-cost estimate."
+        },
+        "https://www.ssa.gov/benefits/medicare/medicare-premiums.html": {
+          "role": "rule",
+          "usedFor": "Medicare MAGI, lookback context or the filing-separately/living-apart procedure.",
+          "scope": "Use CMS for the year-specific dollar tables. Special decisions and attestations are handled by SSA, not this worksheet."
+        },
+        "https://secure.ssa.gov/apps10/poms.nsf/lnx/0601120060": {
+          "role": "rule",
+          "usedFor": "Medicare MAGI, lookback context or the filing-separately/living-apart procedure.",
+          "scope": "Use CMS for the year-specific dollar tables. Special decisions and attestations are handled by SSA, not this worksheet."
+        }
+      }
+    },
+    "calculator:rsu-tax": {
+      "note": "Original single-lot 2026 worksheet with explicit scope. Federal withholding is distinct from final tax; entered marginal rates are assumptions. Dates and source editions are stated. No actual payroll, full tax return, plan eligibility or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.irs.gov/publications/p15": {
+          "role": "rule",
+          "usedFor": "2026 supplemental withholding section 7: optional 22% under eligible conditions and mandatory 37% on excess annual supplemental wages.",
+          "scope": "2026 federal payroll withholding method only; not final tax rates, FICA, state laws or every employer payroll method."
+        },
+        "https://www.irs.gov/pub/irs-pdf/p5992.pdf": {
+          "role": "context",
+          "usedFor": "RSU types, stock-transfer context and why special deferred/83(i) arrangements need separate analysis.",
+          "scope": "June 2024 audit-technique context, expressly not an official pronouncement of law; no plan-specific result is inferred."
+        },
+        "https://www.irs.gov/taxtopics/tc409": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        }
+      }
+    },
+    "guide:/guides/rsu-withholding-and-sale-cost-basis/": {
+      "note": "Original single-lot 2026 worksheet with explicit scope. Federal withholding is distinct from final tax; entered marginal rates are assumptions. Dates and source editions are stated. No actual payroll, full tax return, plan eligibility or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.irs.gov/publications/p15": {
+          "role": "rule",
+          "usedFor": "2026 supplemental withholding section 7: optional 22% under eligible conditions and mandatory 37% on excess annual supplemental wages.",
+          "scope": "2026 federal payroll withholding method only; not final tax rates, FICA, state laws or every employer payroll method."
+        },
+        "https://www.irs.gov/pub/irs-pdf/p5992.pdf": {
+          "role": "context",
+          "usedFor": "RSU types, stock-transfer context and why special deferred/83(i) arrangements need separate analysis.",
+          "scope": "June 2024 audit-technique context, expressly not an official pronouncement of law; no plan-specific result is inferred."
+        },
+        "https://www.irs.gov/taxtopics/tc409": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        }
+      }
+    },
+    "glossary:restricted-stock-units": {
+      "note": "Original single-lot 2026 worksheet with explicit scope. Federal withholding is distinct from final tax; entered marginal rates are assumptions. Dates and source editions are stated. No actual payroll, full tax return, plan eligibility or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.irs.gov/publications/p15": {
+          "role": "rule",
+          "usedFor": "2026 supplemental withholding section 7: optional 22% under eligible conditions and mandatory 37% on excess annual supplemental wages.",
+          "scope": "2026 federal payroll withholding method only; not final tax rates, FICA, state laws or every employer payroll method."
+        },
+        "https://www.irs.gov/pub/irs-pdf/p5992.pdf": {
+          "role": "context",
+          "usedFor": "RSU types, stock-transfer context and why special deferred/83(i) arrangements need separate analysis.",
+          "scope": "June 2024 audit-technique context, expressly not an official pronouncement of law; no plan-specific result is inferred."
+        },
+        "https://www.irs.gov/taxtopics/tc409": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        }
+      }
+    },
+    "calculator:espp-tax": {
+      "note": "Original single-lot 2026 worksheet with explicit scope. Federal withholding is distinct from final tax; entered marginal rates are assumptions. Dates and source editions are stated. No actual payroll, full tax return, plan eligibility or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.irs.gov/publications/p525": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        },
+        "https://www.irs.gov/instructions/i3921": {
+          "role": "method",
+          "usedFor": "Form 3922 price/date definitions, including grant-date as-if exercise price versus actual purchase price.",
+          "scope": "April 2025 instructions; no filing is performed and plan/employment qualification is not established."
+        },
+        "https://www.govinfo.gov/content/pkg/CFR-2025-title26-vol7/xhtml/CFR-2025-title26-vol7-sec1-423-1.html": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        },
+        "https://www.irs.gov/irm/part4/irm_04-023-005r": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        },
+        "https://www.irs.gov/taxtopics/tc409": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        }
+      }
+    },
+    "guide:/guides/espp-qualifying-disposition-and-cost-basis/": {
+      "note": "Original single-lot 2026 worksheet with explicit scope. Federal withholding is distinct from final tax; entered marginal rates are assumptions. Dates and source editions are stated. No actual payroll, full tax return, plan eligibility or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.irs.gov/publications/p525": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        },
+        "https://www.irs.gov/instructions/i3921": {
+          "role": "method",
+          "usedFor": "Form 3922 price/date definitions, including grant-date as-if exercise price versus actual purchase price.",
+          "scope": "April 2025 instructions; no filing is performed and plan/employment qualification is not established."
+        },
+        "https://www.govinfo.gov/content/pkg/CFR-2025-title26-vol7/xhtml/CFR-2025-title26-vol7-sec1-423-1.html": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        },
+        "https://www.irs.gov/irm/part4/irm_04-023-005r": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        },
+        "https://www.irs.gov/taxtopics/tc409": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        }
+      }
+    },
+    "glossary:employee-stock-purchase-plan": {
+      "note": "Original single-lot 2026 worksheet with explicit scope. Federal withholding is distinct from final tax; entered marginal rates are assumptions. Dates and source editions are stated. No actual payroll, full tax return, plan eligibility or external professional review is claimed.",
+      "updatedOn": "2026-11-24",
+      "overrides": {
+        "https://www.irs.gov/publications/p525": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        },
+        "https://www.irs.gov/instructions/i3921": {
+          "role": "method",
+          "usedFor": "Form 3922 price/date definitions, including grant-date as-if exercise price versus actual purchase price.",
+          "scope": "April 2025 instructions; no filing is performed and plan/employment qualification is not established."
+        },
+        "https://www.govinfo.gov/content/pkg/CFR-2025-title26-vol7/xhtml/CFR-2025-title26-vol7-sec1-423-1.html": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        },
+        "https://www.irs.gov/irm/part4/irm_04-023-005r": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        },
+        "https://www.irs.gov/taxtopics/tc409": {
+          "role": "rule",
+          "usedFor": "The stated statutory disposition, adjusted-basis, ordinary-compensation or capital holding-period mechanism.",
+          "scope": "Mechanism checked November 24, 2026; publications retain their stated edition. No complete return, live quote, tax-lot adjustment, eligibility determination or final liability is inferred."
+        }
+      }
     }
   }
 }

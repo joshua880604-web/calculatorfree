@@ -6167,5 +6167,271 @@
       "Native Safari and actual issuer/plan-specific results remain unverified; this is an explicitly scoped original estimate."
     ],
     "updated_at": "2026-11-18"
+  },
+  {
+    "id": "ebitda",
+    "mode": "net-income",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/ebitda.md",
+      "reference": "evidence/expansion-four-reference-20261124.json",
+      "qa": "evidence/expansion-four-verification-20261124.json"
+    },
+    "blockers": [
+      "Original model; no competitor UI parity, native Safari, live lender/issuer result or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "ebitda",
+    "mode": "operating-income",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/ebitda.md",
+      "reference": "evidence/expansion-four-reference-20261124.json",
+      "qa": "evidence/expansion-four-verification-20261124.json"
+    },
+    "blockers": [
+      "Original model; no competitor UI parity, native Safari, live lender/issuer result or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "invoice-factoring",
+    "mode": "fees",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/invoice-factoring.md",
+      "reference": "evidence/expansion-four-reference-20261124.json",
+      "qa": "evidence/expansion-four-verification-20261124.json"
+    },
+    "blockers": [
+      "Original model; no competitor UI parity, native Safari, live lender/issuer result or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "average-daily-balance",
+    "mode": "ledger",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/average-daily-balance.md",
+      "reference": "evidence/expansion-four-reference-20261124.json",
+      "qa": "evidence/expansion-four-verification-20261124.json"
+    },
+    "blockers": [
+      "Original model; no competitor UI parity, native Safari, live lender/issuer result or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "average-daily-balance",
+    "mode": "segments",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/average-daily-balance.md",
+      "reference": "evidence/expansion-four-reference-20261124.json",
+      "qa": "evidence/expansion-four-verification-20261124.json"
+    },
+    "blockers": [
+      "Original model; no competitor UI parity, native Safari, live lender/issuer result or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "construction-loan",
+    "mode": "draws",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/construction-loan.md",
+      "reference": "evidence/expansion-four-reference-20261124.json",
+      "qa": "evidence/expansion-four-verification-20261124.json"
+    },
+    "blockers": [
+      "Original model; no competitor UI parity, native Safari, live lender/issuer result or Google indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "bond-ladder",
+    "mode": "coupon-bonds",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/bond-ladder.md",
+      "reference": "evidence/ladder-irmaa-reference-20261124.json",
+      "qa": "evidence/ladder-irmaa-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no native Safari, live market/SSA result, external professional review or indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "bond-ladder",
+    "mode": "treasury-bills",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/bond-ladder.md",
+      "reference": "evidence/ladder-irmaa-reference-20261124.json",
+      "qa": "evidence/ladder-irmaa-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no native Safari, live market/SSA result, external professional review or indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "irmaa",
+    "mode": "known-magi",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/irmaa.md",
+      "reference": "evidence/ladder-irmaa-reference-20261124.json",
+      "qa": "evidence/ladder-irmaa-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no native Safari, live market/SSA result, external professional review or indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "irmaa",
+    "mode": "agi-bridge",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/irmaa.md",
+      "reference": "evidence/ladder-irmaa-reference-20261124.json",
+      "qa": "evidence/ladder-irmaa-verification-20261124.json"
+    },
+    "blockers": [
+      "Original tool; no native Safari, live market/SSA result, external professional review or indexing claim."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "rsu-tax",
+    "mode": "delivery",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/rsu-tax.md",
+      "reference": "evidence/rsu-espp-reference-20261124.json",
+      "qa": "evidence/rsu-espp-verification-20261124.json"
+    },
+    "blockers": [
+      "Original limited 2026 U.S. worksheet; native Safari, actual payroll/plan outcome, full return, professional review and indexing remain unverified."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "rsu-tax",
+    "mode": "sale",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/rsu-tax.md",
+      "reference": "evidence/rsu-espp-reference-20261124.json",
+      "qa": "evidence/rsu-espp-verification-20261124.json"
+    },
+    "blockers": [
+      "Original limited 2026 U.S. worksheet; native Safari, actual payroll/plan outcome, full return, professional review and indexing remain unverified."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "espp-tax",
+    "mode": "known-price",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/espp-tax.md",
+      "reference": "evidence/rsu-espp-reference-20261124.json",
+      "qa": "evidence/rsu-espp-verification-20261124.json"
+    },
+    "blockers": [
+      "Original limited 2026 U.S. worksheet; native Safari, actual payroll/plan outcome, full return, professional review and indexing remain unverified."
+    ],
+    "updated_at": "2026-11-24"
+  },
+  {
+    "id": "espp-tax",
+    "mode": "discount-price",
+    "spec": "passed",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "not_applicable",
+    "browser": "passed",
+    "visual": "passed",
+    "evidence": {
+      "spec": "specs/espp-tax.md",
+      "reference": "evidence/rsu-espp-reference-20261124.json",
+      "qa": "evidence/rsu-espp-verification-20261124.json"
+    },
+    "blockers": [
+      "Original limited 2026 U.S. worksheet; native Safari, actual payroll/plan outcome, full return, professional review and indexing remain unverified."
+    ],
+    "updated_at": "2026-11-24"
   }
 ]

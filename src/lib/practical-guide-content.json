@@ -8292,14 +8292,20 @@
         "answer": "For this buy-write, subtract the net initial debit and entered expiry exit costs from 100 × contracts × the lower of the expiry stock price and strike. The stock value and short-call intrinsic liability are reconciled separately below. Below strike, stock value is marked to market; profit is not automatically realized cash.",
         "links": [
           {
-            "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
-          },
-          {
-            "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "id": "covered-call",
+            "mode": "expiry",
+            "label": "Inspect expiry profit at a $60 stock price",
+            "values": {
+              "stock": "50",
+              "strike": "55",
+              "premium": "2",
+              "contracts": "1",
+              "stock_fee": "0",
+              "option_fee": "0.65",
+              "exit_fee": "0",
+              "expiry": "60",
+              "days": "30"
+            }
           }
         ]
       },
@@ -8309,14 +8315,20 @@
         "answer": "Multiply the quoted premium per share by 100 and by the number of standard contracts. A $2 per-share premium on two contracts gives $400 gross premium. Enter the premium from your option quote or an explicit assumption; this calculator totals it but does not price options or estimate a fair premium.",
         "links": [
           {
-            "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
-          },
-          {
-            "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "id": "covered-call",
+            "mode": "expiry",
+            "label": "Load a $2 per-share premium on two contracts",
+            "values": {
+              "stock": "50",
+              "strike": "55",
+              "premium": "2",
+              "contracts": "2",
+              "stock_fee": "0",
+              "option_fee": "0.65",
+              "exit_fee": "0",
+              "expiry": "52",
+              "days": "30"
+            }
           }
         ]
       },
@@ -8326,14 +8338,20 @@
         "answer": "Net initial debit equals the stock purchase amount plus total stock purchase fees and option opening fees, minus the gross option premium received. Option opening fee is per contract; stock fees are entered for the entire position. Net debit is the return denominator here, not a statement of broker margin or buying-power requirements.",
         "links": [
           {
-            "id": "roi",
-            "text": "Compare a clearly defined investment return basis.",
-            "mode": "length"
-          },
-          {
-            "id": "investment",
-            "text": "Explore a separate long-term investment projection.",
-            "mode": "end"
+            "id": "covered-call",
+            "mode": "expiry",
+            "label": "Inspect net debit with a $10 stock purchase fee",
+            "values": {
+              "stock": "50",
+              "strike": "55",
+              "premium": "2",
+              "contracts": "1",
+              "stock_fee": "10",
+              "option_fee": "0.65",
+              "exit_fee": "0",
+              "expiry": "52",
+              "days": "30"
+            }
           }
         ]
       }
@@ -8697,14 +8715,17 @@
         "answer": "In this model, calculate a percentage of the opening balance and optionally add monthly interest. Compare that amount with the dollar floor and use the larger, capped at the amount owed. This is one selectable approximation; an issuer may use a different balance definition, fees and rounding.",
         "links": [
           {
-            "id": "credit-card",
-            "mode": "payment",
-            "label": "Test a fixed total monthly payment"
-          },
-          {
-            "id": "debt-snowball",
-            "mode": "snowball",
-            "label": "Plan repayment across multiple debts"
+            "id": "credit-card-minimum-payment",
+            "mode": "minimum",
+            "label": "Inspect the first minimum payment on a $5,000 balance",
+            "values": {
+              "principal": "5000",
+              "rate": "24",
+              "minimum": "2",
+              "floor": "25",
+              "interest_extra": "Yes",
+              "extra": "0"
+            }
           }
         ]
       },
@@ -8714,14 +8735,9 @@
         "answer": "Check your current statement and cardmember agreement. Enter your own percentage, floor and interest treatment. Brand names alone are not enough to choose a rule, so this tool has no issuer preset and does not retrieve your account.",
         "links": [
           {
-            "id": "credit-card",
-            "mode": "payment",
-            "label": "Test a fixed total monthly payment"
-          },
-          {
-            "id": "debt-snowball",
-            "mode": "snowball",
-            "label": "Plan repayment across multiple debts"
+            "id": "credit-card-minimum-payment",
+            "mode": "minimum",
+            "label": "Enter your statement’s minimum-payment assumptions"
           }
         ]
       },
@@ -8731,14 +8747,17 @@
         "answer": "It depends on the balance, APR, floor and percentage rule. Calculate to see a month-by-month schedule and total interest. The minimum can fall as debt falls, which can make repayment much longer than maintaining the first payment as a fixed monthly amount.",
         "links": [
           {
-            "id": "credit-card",
-            "mode": "payment",
-            "label": "Test a fixed total monthly payment"
-          },
-          {
-            "id": "debt-snowball",
-            "mode": "snowball",
-            "label": "Plan repayment across multiple debts"
+            "id": "credit-card-minimum-payment",
+            "mode": "minimum",
+            "label": "Estimate minimum-only payoff on a $5,000 balance",
+            "values": {
+              "principal": "5000",
+              "rate": "24",
+              "minimum": "2",
+              "floor": "25",
+              "interest_extra": "Yes",
+              "extra": "0"
+            }
           }
         ]
       }

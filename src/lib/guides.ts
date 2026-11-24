@@ -1,3 +1,6 @@
+import rsuEsppContent from './rsu-espp-content.json';
+import ladderIrmaaContent from './ladder-irmaa-content.json';
+import expansionFourContent from './expansion-four-content.json';
 import repaymentComparisons from './repayment-comparison-content.json';
 import repaymentExamples from './repayment-expanded-examples.json';
 import cashCobraContent from './cash-cobra-content.json';
@@ -1142,3 +1145,25 @@ relatedCalculatorIds['college-cost']=['student-loan','savings','compound-interes
 relatedCalculatorIds['student-loan']=['college-cost','repayment','loan','payment','interest-rate'];
 relatedCalculatorIds['operating-cash-flow']=[...new Set(['depreciation',...(relatedCalculatorIds['operating-cash-flow']??[])])];
 relatedCalculatorIds['depreciation']=[...new Set(['operating-cash-flow',...(relatedCalculatorIds['depreciation']??[])])];
+
+Object.assign(guides,expansionFourContent as unknown as Record<string,Guide>);
+relatedCalculatorIds["ebitda"]=["operating-cash-flow", "interest-coverage-ratio", "roic", "return-on-equity"];
+for(const linked of relatedCalculatorIds["ebitda"])relatedCalculatorIds[linked]=[...new Set(["ebitda",...(relatedCalculatorIds[linked]??[])])];
+relatedCalculatorIds["invoice-factoring"]=["business-line-of-credit", "business-loan", "accounts-receivable-turnover", "operating-cash-flow"];
+for(const linked of relatedCalculatorIds["invoice-factoring"])relatedCalculatorIds[linked]=[...new Set(["invoice-factoring",...(relatedCalculatorIds[linked]??[])])];
+relatedCalculatorIds["average-daily-balance"]=["credit-card-minimum-payment", "credit-card", "cash-advance-fee"];
+for(const linked of relatedCalculatorIds["average-daily-balance"])relatedCalculatorIds[linked]=[...new Set(["average-daily-balance",...(relatedCalculatorIds[linked]??[])])];
+relatedCalculatorIds["construction-loan"]=["mortgage", "mortgage-comparison", "closing-cost", "house-affordability"];
+for(const linked of relatedCalculatorIds["construction-loan"])relatedCalculatorIds[linked]=[...new Set(["construction-loan",...(relatedCalculatorIds[linked]??[])])];
+
+Object.assign(guides,ladderIrmaaContent as unknown as Record<string,Guide>);
+relatedCalculatorIds["bond-ladder"]=["bond", "treasury-bill", "cd-ladder", "bond-duration", "retirement-withdrawal"];
+for(const linked of relatedCalculatorIds["bond-ladder"])relatedCalculatorIds[linked]=[...new Set(["bond-ladder",...(relatedCalculatorIds[linked]??[])])];
+relatedCalculatorIds["irmaa"]=["retirement-withdrawal", "roth-conversion-ladder", "income-tax", "cobra-cost"];
+for(const linked of relatedCalculatorIds["irmaa"])relatedCalculatorIds[linked]=[...new Set(["irmaa",...(relatedCalculatorIds[linked]??[])])];
+
+Object.assign(guides,rsuEsppContent as unknown as Record<string,Guide>);
+relatedCalculatorIds["rsu-tax"]=["espp-tax", "capital-gains-tax", "stock-profit", "take-home-paycheck"];
+for(const linked of relatedCalculatorIds["rsu-tax"])relatedCalculatorIds[linked]=[...new Set(["rsu-tax",...(relatedCalculatorIds[linked]??[])])];
+relatedCalculatorIds["espp-tax"]=["rsu-tax", "capital-gains-tax", "stock-profit", "income-tax"];
+for(const linked of relatedCalculatorIds["espp-tax"])relatedCalculatorIds[linked]=[...new Set(["espp-tax",...(relatedCalculatorIds[linked]??[])])];

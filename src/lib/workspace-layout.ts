@@ -2,6 +2,9 @@ import type { Metric, Result } from "./types";
 
 // Complex tax forms, multi-debt entry sheets and the 401(k) story keep their wider flow.
 export const workspaceIds = [
+ "rsu-tax", "espp-tax",
+ "bond-ladder", "irmaa",
+ "ebitda", "invoice-factoring", "average-daily-balance", "construction-loan",
  "cash-advance-fee", "cobra-cost",
   "sustainable-growth-rate",
   "sortino-ratio", "gross-rent-multiplier", "debt-to-equity-ratio",
@@ -31,7 +34,7 @@ export const workspaceIds = [
 export function hasCalculatorWorkspace(id: string): boolean { return (workspaceIds as readonly string[]).includes(id); }
 export function workspaceLayout(id: string, mode: string): "split" | "stacked" | null {
   if (!hasCalculatorWorkspace(id)) return null;
-  return (id === 'sortino-ratio' && mode === 'return-series') || id === 'arm-mortgage' || id === 'portfolio-rebalancing' || (id === 'business-line-of-credit' && mode === 'ledger') || id === 'operating-cash-flow' || (id === 'stock-split' && mode === 'chain') || (id === 'earnings-per-share' && mode === 'weighted-schedule') || (id === 'sharpe-ratio' && mode === 'return-series') || id === 'black-scholes' || id === 'credit-card-rewards' || id === 'cash-conversion-cycle' && mode!=='days' || id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
+  return id === 'rsu-tax' || id === 'espp-tax' || id === 'bond-ladder' || id === 'irmaa' || id === 'average-daily-balance' || id === 'construction-loan' || (id === 'sortino-ratio' && mode === 'return-series') || id === 'arm-mortgage' || id === 'portfolio-rebalancing' || (id === 'business-line-of-credit' && mode === 'ledger') || id === 'operating-cash-flow' || (id === 'stock-split' && mode === 'chain') || (id === 'earnings-per-share' && mode === 'weighted-schedule') || (id === 'sharpe-ratio' && mode === 'return-series') || id === 'black-scholes' || id === 'credit-card-rewards' || id === 'cash-conversion-cycle' && mode!=='days' || id === 'stock-average' || id === 'fix-and-flip' || (id === "cap-rate" && mode === "rental") || id === "roth-conversion-ladder" || id === "drip" || id === "covered-call" || id === "house-hacking" || id === "mortgage-vs-invest" || (id === "cash-on-cash-return" && mode === "property") || id === "brrrr" || (id === "retirement" && mode === "required") || (id === "payback-period" && mode === "irregular") ? "stacked" : "split";
 }
 
 const priorities: Record<string, string[]> = {

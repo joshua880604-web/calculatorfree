@@ -1,0 +1,4 @@
+Scenario,Mode,Input assumptions,Metric,Expected value
+Prorate a 45-day fee interval,fees,invoice: 10000; advance_rate: 80; fee_rate: 2; interval: 30; days: 45; billing: Prorated periods; fee_base: Invoice face value; other_fees: 50,Total net proceeds,9650
+Charge every started period,fees,invoice: 10000; advance_rate: 80; fee_rate: 2; interval: 30; days: 45; billing: Started periods; fee_base: Invoice face value; other_fees: 50,Total net proceeds,9550
+Fees exceed the reserve,fees,invoice: 10000; advance_rate: 99; fee_rate: 2; interval: 30; days: 30; billing: Prorated periods; fee_base: Invoice face value; other_fees: 0,Signed settlement after fees,-100

@@ -1,0 +1,32 @@
+{
+  "checkedOn": "2026-11-24",
+  "scope": "United States Medicare full Part B coverage and Part D income-related adjustments; excludes immunosuppressive-drug-only Part B.",
+  "years": {
+    "2026": {
+      "premiumYear": 2026,
+      "usualIncomeYear": 2024,
+      "publishedOn": "2025-11-14",
+      "source": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles",
+      "standardPartB": 202.9,
+      "individualUpper": [109000, 137000, 171000, 205000, 500000, null],
+      "jointUpper": [218000, 274000, 342000, 410000, 750000, null],
+      "separateTogetherUpper": [109000, 391000, null],
+      "partBAdjustment": [0, 81.2, 202.9, 324.6, 446.3, 487],
+      "partDAdjustment": [0, 14.5, 37.5, 60.4, 83.3, 91],
+      "partBTotal": [202.9, 284.1, 405.8, 527.5, 649.2, 689.9]
+    },
+    "2027": {
+      "premiumYear": 2027,
+      "usualIncomeYear": 2025,
+      "publishedOn": "2026-11-17",
+      "source": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles",
+      "standardPartB": 209.4,
+      "individualUpper": [112000, 141000, 177000, 212000, 500000, null],
+      "jointUpper": [224000, 282000, 354000, 424000, 750000, null],
+      "separateTogetherUpper": [112000, 388000, null],
+      "partBAdjustment": [0, 83.7, 209.4, 335, 460.6, 502.4],
+      "partDAdjustment": [0, 15.4, 39.7, 64, 88.3, 96.4],
+      "partBTotal": [209.4, 293.1, 418.8, 544.4, 670, 711.8]
+    }
+  }
+}

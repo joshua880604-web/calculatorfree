@@ -1,0 +1,404 @@
+{
+  "ebitda": {
+    "summary": "EBITDA adds deducted interest, income tax, depreciation and amortization back to net income. For $80,000 net income, $10,000 net interest expense, $20,000 income tax and $30,000 D&A, EBITDA is $140,000. Against $500,000 revenue, the margin is 28%.",
+    "scope": "Unadjusted same-period earnings reconciliation in one currency. Signed losses, net-interest income and tax benefits are supported. Operating-income mode includes separately entered other nonoperating income or expense, excluding interest and tax. No cash-flow forecast, valuation or discretionary adjusted-EBITDA addbacks.",
+    "examples": [
+      {
+        "title": "Reconcile net income to a 28% margin",
+        "mode": "net-income",
+        "values": {
+          "net_income": 80000,
+          "interest": 10000,
+          "income_tax": 20000,
+          "depreciation": 20000,
+          "amortization": 10000,
+          "revenue": 500000
+        },
+        "inputs": "net_income: 80000; interest: 10000; income_tax: 20000; depreciation: 20000; amortization: 10000; revenue: 500000",
+        "steps": [
+          "EBIT = 80,000 + 10,000 + 20,000 = 110,000.",
+          "Add deducted D&A of 20,000 + 10,000: EBITDA = 140,000.",
+          "140,000 / 500,000 \u00d7 100 = 28%."
+        ],
+        "answer": "EBITDA: 140,000.00 under these assumptions.",
+        "expected": {
+          "label": "EBITDA",
+          "value": 140000,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Include nonoperating income in the operating bridge",
+        "mode": "operating-income",
+        "values": {
+          "operating_income": 105000,
+          "other_income": 5000,
+          "depreciation": 20000,
+          "amortization": 10000,
+          "revenue": 500000
+        },
+        "inputs": "operating_income: 105000; other_income: 5000; depreciation: 20000; amortization: 10000; revenue: 500000",
+        "steps": [
+          "Operating income 105,000 plus other nonoperating income 5,000 gives EBIT 110,000.",
+          "Add 30,000 D&A to recover the same 140,000 EBITDA. Interest and income tax are not added again."
+        ],
+        "answer": "EBITDA: 140,000.00 under these assumptions.",
+        "expected": {
+          "label": "EBITDA",
+          "value": 140000,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Preserve a loss and a tax benefit",
+        "mode": "net-income",
+        "values": {
+          "net_income": -50000,
+          "interest": 5000,
+          "income_tax": -10000,
+          "depreciation": 10000,
+          "amortization": 0,
+          "revenue": 200000
+        },
+        "inputs": "net_income: -50000; interest: 5000; income_tax: -10000; depreciation: 10000; amortization: 0; revenue: 200000",
+        "steps": [
+          "Start with a loss of 50,000. Add interest expense 5,000, subtract the 10,000 income-tax benefit, then add 10,000 depreciation.",
+          "EBITDA is \u221245,000; margin on 200,000 revenue is \u221222.5%."
+        ],
+        "answer": "EBITDA: -45,000.00 under these assumptions.",
+        "expected": {
+          "label": "EBITDA",
+          "value": -45000,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC: Non-GAAP Financial Measures, section 103",
+        "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "questions": [
+      {
+        "question": "Is EBIT the same as EBITDA?",
+        "answer": "No. In the example EBIT is 110,000 and D&A is 30,000, making EBITDA 140,000."
+      },
+      {
+        "question": "Can EBITDA be negative?",
+        "answer": "Yes. Losses and signed tax or interest benefits can produce negative EBITDA. The calculator preserves that loss."
+      },
+      {
+        "question": "Can I use this as adjusted EBITDA?",
+        "answer": "The worksheet does not add back discretionary costs or infer a lender\u2019s adjustments. Such definitions need their own reconciliation and clear labeling."
+      }
+    ]
+  },
+  "invoice-factoring": {
+    "summary": "A factoring advance is part of the invoice proceeds, not extra revenue. On a $10,000 invoice with an 80% advance, 2% per 30 days prorated for 45 days and $50 other fees, you receive $8,000 today and $1,650 at settlement: $9,650 in total.",
+    "scope": "One fully collected invoice, one advance today and all fees deducted at collection. Select invoice-face or advance fee base, a constant per-interval rate, prorated or started intervals and separately entered other fees. No default, recourse, upfront deductions, statutory APR, lender quote or financing approval.",
+    "examples": [
+      {
+        "title": "Prorate a 45-day fee interval",
+        "mode": "fees",
+        "values": {
+          "invoice": 10000,
+          "advance_rate": 80,
+          "fee_rate": 2,
+          "interval": 30,
+          "days": 45,
+          "billing": "Prorated periods",
+          "fee_base": "Invoice face value",
+          "other_fees": 50
+        },
+        "inputs": "invoice: 10000; advance_rate: 80; fee_rate: 2; interval: 30; days: 45; billing: Prorated periods; fee_base: Invoice face value; other_fees: 50",
+        "steps": [
+          "Advance = 10,000 \u00d7 80% = 8,000; reserve = 2,000.",
+          "Chargeable periods = 45 / 30 = 1.5. Fee = 10,000 \u00d7 2% \u00d7 1.5 + 50 = 350.",
+          "Final settlement = 2,000 \u2212 350 = 1,650. Total = 8,000 + 1,650 = 9,650."
+        ],
+        "answer": "Total net proceeds: 9,650.00 under these assumptions.",
+        "expected": {
+          "label": "Total net proceeds",
+          "value": 9650,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Charge every started period",
+        "mode": "fees",
+        "values": {
+          "invoice": 10000,
+          "advance_rate": 80,
+          "fee_rate": 2,
+          "interval": 30,
+          "days": 45,
+          "billing": "Started periods",
+          "fee_base": "Invoice face value",
+          "other_fees": 50
+        },
+        "inputs": "invoice: 10000; advance_rate: 80; fee_rate: 2; interval: 30; days: 45; billing: Started periods; fee_base: Invoice face value; other_fees: 50",
+        "steps": [
+          "45 days starts two 30-day intervals. Fee = 10,000 \u00d7 2% \u00d7 2 + 50 = 450.",
+          "The advance stays 8,000, but final settlement falls to 1,550."
+        ],
+        "answer": "Total net proceeds: 9,550.00 under these assumptions.",
+        "expected": {
+          "label": "Total net proceeds",
+          "value": 9550,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Fees exceed the reserve",
+        "mode": "fees",
+        "values": {
+          "invoice": 10000,
+          "advance_rate": 99,
+          "fee_rate": 2,
+          "interval": 30,
+          "days": 30,
+          "billing": "Prorated periods",
+          "fee_base": "Invoice face value",
+          "other_fees": 0
+        },
+        "inputs": "invoice: 10000; advance_rate: 99; fee_rate: 2; interval: 30; days: 30; billing: Prorated periods; fee_base: Invoice face value; other_fees: 0",
+        "steps": [
+          "A 99% advance pays 9,900 today and leaves a reserve of 100.",
+          "The 30-day fee is 200. Settlement = 100 \u2212 200 = \u2212100: another 100 is owed.",
+          "Total proceeds = 9,900 \u2212 100 = 9,800."
+        ],
+        "answer": "Signed settlement after fees: -100.00 under these assumptions.",
+        "expected": {
+          "label": "Signed settlement after fees",
+          "value": -100,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "1st Commercial Credit: invoice factoring calculator and input definitions",
+        "url": "https://www.1stcommercialcredit.com/invoice-factoring-calculator"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "questions": [
+      {
+        "question": "Is the advance extra income?",
+        "answer": "No. It is an early payment of part of the invoice proceeds. Adding it again to the full invoice after fees double counts it."
+      },
+      {
+        "question": "Are factoring fees always based on invoice face value?",
+        "answer": "Contract terms differ. This tool supports the entered invoice-face or advance-amount fee base and an explicit interval rule."
+      },
+      {
+        "question": "Does this calculator determine APR or approval?",
+        "answer": "No. It shows cash timing and specified charges for one fully collected invoice. It does not quote finance terms or determine eligibility."
+      }
+    ]
+  },
+  "average-daily-balance": {
+    "summary": "Average daily balance weights each daily balance by how long it lasts. A $500 balance for 9 days, $700 for 10 days and $400 for 11 days totals 15,900 balance-days. Over 30 days, the average is $530; at 24% / 365, estimated simple interest is $10.45.",
+    "scope": "Single-balance, inclusive-date or consecutive segment worksheet. Posting-day changes count that day and same-day changes combine. Signed credit balances are retained. Optional simple interest uses max(ADB, 0), one entered APR and a 360/365 divisor; no grace periods, daily compounding, multiple APR buckets or exact issuer bill.",
+    "examples": [
+      {
+        "title": "Weight a purchase and payment by posting date",
+        "mode": "ledger",
+        "values": {
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "opening": 500,
+          "transactions": "2026-11-10, 200\n2026-11-20, -300",
+          "apr": 24,
+          "day_basis": "365"
+        },
+        "inputs": "start: 2026-11-01; end: 2026-11-30; opening: 500; transactions: 2026-11-10, 200\n2026-11-20, -300; apr: 24; day_basis: 365",
+        "steps": [
+          "November 1\u20139: 500 \u00d7 9 = 4,500 balance-days.",
+          "November 10\u201319: (500 + 200) \u00d7 10 = 7,000.",
+          "November 20\u201330: (700 \u2212 300) \u00d7 11 = 4,400. Total 15,900 / 30 = 530."
+        ],
+        "answer": "Average daily balance: 530.00 under these assumptions.",
+        "expected": {
+          "label": "Average daily balance",
+          "value": 530,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Restore the equivalent consecutive segments",
+        "mode": "segments",
+        "values": {
+          "cycle_days": 30,
+          "segments": "500, 9\n700, 10\n400, 11",
+          "apr": 24,
+          "day_basis": "365"
+        },
+        "inputs": "cycle_days: 30; segments: 500, 9\n700, 10\n400, 11; apr: 24; day_basis: 365",
+        "steps": [
+          "The three segments cover 9 + 10 + 11 = 30 days exactly.",
+          "Interest estimate = 530 \u00d7 0.24 \u00d7 30 / 365 = 10.45479452."
+        ],
+        "answer": "Estimated simple cycle interest: 10.45 under these assumptions.",
+        "expected": {
+          "label": "Estimated simple cycle interest",
+          "value": 10.454794520547944,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Combine transactions on the same posting day",
+        "mode": "ledger",
+        "values": {
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "opening": 500,
+          "transactions": "2026-11-10, 200\n2026-11-10, -300",
+          "apr": 24,
+          "day_basis": "365"
+        },
+        "inputs": "start: 2026-11-01; end: 2026-11-30; opening: 500; transactions: 2026-11-10, 200\n2026-11-10, -300; apr: 24; day_basis: 365",
+        "steps": [
+          "The purchase 200 and payment \u2212300 both post November 10, a net \u2212100.",
+          "500 lasts 9 days; 400 lasts 21 days. (4,500 + 8,400) / 30 = 430."
+        ],
+        "answer": "Average daily balance: 430.00 under these assumptions.",
+        "expected": {
+          "label": "Average daily balance",
+          "value": 430,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: how credit-card interest is calculated",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/"
+      },
+      {
+        "title": "CFPB: daily periodic rate and 360/365 divisors",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-daily-periodic-rate-on-a-credit-card-en-46/"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "questions": [
+      {
+        "question": "Do payments reduce the average immediately?",
+        "answer": "In this worksheet, a payment reduces the balance from its posting date, including that day. Use the actual posting date rather than the initiation date."
+      },
+      {
+        "question": "What if two transactions post on the same day?",
+        "answer": "Their signed amounts are combined before that day\u2019s balance is counted. Input order does not change the result."
+      },
+      {
+        "question": "Can I use ADB for a savings-account fee requirement?",
+        "answer": "You can calculate a weighted balance, but minimum-balance, qualifying deposit and fee-waiver rules depend on the bank. This tool does not decide eligibility."
+      }
+    ]
+  },
+  "construction-loan": {
+    "summary": "Construction interest depends on funds actually drawn. With $50,000 drawn November 1 and another $50,000 November 16, the average outstanding balance for November is $75,000. At 12% on an actual/365 basis, 30 days cost $739.73 before separately paid fees.",
+    "scope": "Constant-rate, interest-paid-separately construction period with dated nonnegative draws, opening principal and a commitment ceiling. Includes draw day and final day; actual calendar days divided by chosen 360/365. No principal repayments, interest capitalization, land equity, approval or permanent mortgage stage.",
+    "examples": [
+      {
+        "title": "Two draws across a 30-day construction period",
+        "mode": "draws",
+        "values": {
+          "commitment": 200000,
+          "opening": 0,
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "draws": "2026-11-01, 50000\n2026-11-16, 50000",
+          "apr": 12,
+          "day_basis": "365",
+          "fees": 1000
+        },
+        "inputs": "commitment: 200000; opening: 0; start: 2026-11-01; end: 2026-11-30; draws: 2026-11-01, 50000\n2026-11-16, 50000; apr: 12; day_basis: 365; fees: 1000",
+        "steps": [
+          "50,000 is outstanding for November 1\u201315: 15 days.",
+          "100,000 is outstanding for November 16\u201330: 15 days.",
+          "Interest = (50,000 \u00d7 15 + 100,000 \u00d7 15) \u00d7 0.12 / 365 = 739.72602740."
+        ],
+        "answer": "Total construction interest: 739.73 under these assumptions.",
+        "expected": {
+          "label": "Total construction interest",
+          "value": 739.7260273972603,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Choose an actual/360 rate convention",
+        "mode": "draws",
+        "values": {
+          "commitment": 200000,
+          "opening": 0,
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "draws": "2026-11-01, 50000\n2026-11-16, 50000",
+          "apr": 12,
+          "day_basis": "360",
+          "fees": 1000
+        },
+        "inputs": "commitment: 200000; opening: 0; start: 2026-11-01; end: 2026-11-30; draws: 2026-11-01, 50000\n2026-11-16, 50000; apr: 12; day_basis: 360; fees: 1000",
+        "steps": [
+          "Use the same draw timeline and divide actual days by 360 instead of 365.",
+          "Interest = 2,250,000 \u00d7 0.12 / 360 = 750. Add separately paid fees of 1,000 for cost of 1,750."
+        ],
+        "answer": "Interest plus entered fees: 1,750.00 under these assumptions.",
+        "expected": {
+          "label": "Interest plus entered fees",
+          "value": 1750,
+          "tolerance": 1e-07
+        }
+      },
+      {
+        "title": "Delay the second draw to the final day",
+        "mode": "draws",
+        "values": {
+          "commitment": 200000,
+          "opening": 0,
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "draws": "2026-11-01, 50000\n2026-11-30, 50000",
+          "apr": 12,
+          "day_basis": "365",
+          "fees": 1000
+        },
+        "inputs": "commitment: 200000; opening: 0; start: 2026-11-01; end: 2026-11-30; draws: 2026-11-01, 50000\n2026-11-30, 50000; apr: 12; day_basis: 365; fees: 1000",
+        "steps": [
+          "50,000 lasts 29 days, then 100,000 lasts one day.",
+          "Interest = (50,000 \u00d7 29 + 100,000) \u00d7 0.12 / 365 = 509.58904110."
+        ],
+        "answer": "Total construction interest: 509.59 under these assumptions.",
+        "expected": {
+          "label": "Total construction interest",
+          "value": 509.5890410958904,
+          "tolerance": 1e-07
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: construction loan advances and repayment choices",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-construction-loan-en-108/"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "questions": [
+      {
+        "question": "Are fees included in the drawn principal?",
+        "answer": "No. All entered fees are paid separately; they are included in interest-plus-fee cost once and never earn interest."
+      },
+      {
+        "question": "Can I capitalize interest or repay principal during construction?",
+        "answer": "This release assumes separately paid simple interest and no principal repayments. Those different cash-flow conventions need another model."
+      },
+      {
+        "question": "Is this a preapproval calculator?",
+        "answer": "No. The commitment is a user-entered limit, not a lender\u2019s eligibility or credit decision."
+      }
+    ]
+  }
+}

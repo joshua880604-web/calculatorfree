@@ -1,0 +1,7 @@
+Scenario,Mode,Input assumptions,Metric,Expected value
+Two draws across a 30-day construction period,draws,"commitment: 200000; opening: 0; start: 2026-11-01; end: 2026-11-30; draws: 2026-11-01, 50000
+2026-11-16, 50000; apr: 12; day_basis: 365; fees: 1000",Total construction interest,739.7260273972603
+Choose an actual/360 rate convention,draws,"commitment: 200000; opening: 0; start: 2026-11-01; end: 2026-11-30; draws: 2026-11-01, 50000
+2026-11-16, 50000; apr: 12; day_basis: 360; fees: 1000",Interest plus entered fees,1750
+Delay the second draw to the final day,draws,"commitment: 200000; opening: 0; start: 2026-11-01; end: 2026-11-30; draws: 2026-11-01, 50000
+2026-11-30, 50000; apr: 12; day_basis: 365; fees: 1000",Total construction interest,509.5890410958904

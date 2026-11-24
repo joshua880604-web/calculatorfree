@@ -1,4 +1,5 @@
 import GuideLinkUpdate from './GuideLinkUpdate';
+import PracticalGuideQuestions,{type PracticalGuideQuestion} from './PracticalGuideQuestions';
 import {createGuideConceptLinker} from './GuideConceptLinks';
 import FundFeesCdReference from './FundFeesCdReference';
 import TaxPriceReference from './TaxPriceReference';
@@ -40,7 +41,7 @@ export default function PracticalGuideArticle({slug}:{slug:string}){
  <p><a href={'/data/practical-guides/'+slug+'.csv'} download>Download complete inputs and model outputs (CSV)</a>. Display amounts are rounded; calculations retain internal precision.</p>
  <details><summary>Full inputs for these examples</summary>{data.cases.map((c,i)=><section key={i}><h3>{c.tool}: {c.label}</h3><dl>{c.inputs.map(f=><div key={f.key}><dt>{f.label}</dt><dd>{String(f.value)||'(blank)'}</dd></div>)}</dl></section>)}</details></section>
 </>}
- <section><h2 id="questions">Common questions</h2>{data.questions.map(q=><section key={q.question}><h3>{q.question}</h3><p>{linkConcepts(q.answer)}</p></section>)}</section>
+ <section><h2 id="questions">Common questions</h2><PracticalGuideQuestions questions={data.questions as unknown as PracticalGuideQuestion[]} linkConcepts={linkConcepts}/></section>
  <section><h2 id="sources">Sources, verification and limits</h2><p>Official and educational sources provide context for the definitions and rules discussed above. They do not endorse the calculator or these hypothetical assumptions. Tax sources have the editions stated in their titles or on their pages; a cited older publication is not a claim that every provision applies unchanged to a later year. Actual contracts, account documents and filing requirements control real transactions.</p><SourceReferences context={'guide:'+'/guides/'+slug+'/'} sources={data.sources}/><p>Read the calculator’s assumptions and <SiteLink href="/methodology">site methodology</SiteLink>. Existing automated tests and additional selected independent arithmetic checks support this release; the reproduction table itself is not a separate audit of the engine. Sources and model context were checked on the date shown, not certified by a named financial reviewer.</p></section>
  <section className="related"><h2>Related tools and next steps</h2><ul>{data.ids.map(id=>{const c=data.cases.find(c=>c.calculatorId===id)!;return <li key={id}><SiteLink href={c.path}>{c.tool}</SiteLink></li>})}<li><SiteLink href="/guides/">Browse guides by financial task</SiteLink></li><li><SiteLink href="/glossary/">Look up financial terms</SiteLink></li></ul></section>
  <GuideToolLinks path={meta.path}/></article></main></div>;

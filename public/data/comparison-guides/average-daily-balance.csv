@@ -1,0 +1,8 @@
+Scenario,Mode,Input assumptions,Metric,Expected value
+Weight a purchase and payment by posting date,ledger,"start: 2026-11-01; end: 2026-11-30; opening: 500; transactions: 2026-11-10, 200
+2026-11-20, -300; apr: 24; day_basis: 365",Average daily balance,530
+Restore the equivalent consecutive segments,segments,"cycle_days: 30; segments: 500, 9
+700, 10
+400, 11; apr: 24; day_basis: 365",Estimated simple cycle interest,10.454794520547944
+Combine transactions on the same posting day,ledger,"start: 2026-11-01; end: 2026-11-30; opening: 500; transactions: 2026-11-10, 200
+2026-11-10, -300; apr: 24; day_basis: 365",Average daily balance,430

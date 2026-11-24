@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-24",
+  "branch": "preview/bond-ladder-irmaa-20261124",
+  "published": false,
+  "newTools": [
+    "bond-ladder",
+    "irmaa"
+  ],
+  "newModes": 4,
+  "workedExamples": 11,
+  "newGuides": 2,
+  "newGlossaryTerms": 2,
+  "totalFunctionalTools": 174,
+  "totalModes": 364,
+  "totalGuides": 161,
+  "totalGlossaryTerms": 137,
+  "tests": {
+    "passed": true,
+    "count": 3630,
+    "command": "npm test"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "npm run typecheck"
+  },
+  "build": {
+    "passed": true,
+    "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build"
+  },
+  "independentReference": {
+    "passed": true,
+    "scenarios": 374,
+    "metricChecks": 3352,
+    "precision": 70,
+    "command": "python scripts/check-ladder-irmaa-reference.py",
+    "file": "ladder-irmaa-reference-20261124.json"
+  },
+  "staticSEO": {
+    "passed": true,
+    "configuration": "indexable-test-origin",
+    "pages": 487,
+    "guides": 161,
+    "internal_links_checked": 35621,
+    "calculator_state_links": 3083,
+    "max_contextual_depth": 3,
+    "redirect_rules": 206,
+    "curated_llms_links": 249,
+    "no_live_indexing_or_ranking_claim": true
+  },
+  "browser": {
+    "passed": true,
+    "totalChecks": 65,
+    "mainChecks": 60,
+    "calculatorCsvExports": 5,
+    "pageErrors": [],
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "artifacts": "/workspace/work/bond-ladder-irmaa-20261124"
+  },
+  "visual": {
+    "passed": true,
+    "scope": "All four mode form/result screenshots at 390/1440 reviewed; 320/768 interaction/geometry checked.",
+    "screenshots": "/workspace/work/bond-ladder-irmaa-20261124"
+  },
+  "sourceReview": {
+    "checkedOn": "2026-11-24",
+    "sources": [
+      {
+        "url": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles",
+        "publishedOn": "2026-11-17",
+        "usedFor": "2027 full Part B standard/adjustment totals and Part D IRMAA; all individual/joint/MFS-lived-together bracket facts transcribed."
+      },
+      {
+        "url": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles",
+        "publishedOn": "2025-11-14",
+        "usedFor": "2026 full Part B standard/adjustment totals and Part D IRMAA."
+      },
+      {
+        "url": "https://secure.ssa.gov/apps10/poms.nsf/lnx/0601101020",
+        "usedFor": "Independent official cross-check of 2026 full Part B/Part D brackets, including MFS top total 689.90."
+      },
+      {
+        "url": "https://www.ssa.gov/benefits/medicare/medicare-premiums.html",
+        "usedFor": "MAGI definition, lookback context and official decision/appeal limits; not the authoritative numeric table for this implementation."
+      },
+      {
+        "url": "https://secure.ssa.gov/apps10/poms.nsf/lnx/0601120060",
+        "usedFor": "MFS lived apart throughout the tax year can use individual schedule subject to SSA attestation."
+      },
+      {
+        "url": "https://www.treasurydirect.gov/marketable-securities/treasury-bills/",
+        "usedFor": "Bills pay face at maturity, with discount as interest and no periodic coupon; no live price copied."
+      },
+      {
+        "url": "https://www.treasurydirect.gov/marketable-securities/treasury-notes/",
+        "usedFor": "Notes have fixed semiannual coupons; no live quote copied."
+      },
+      {
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
+        "usedFor": "Bond capital/coupon distinction and risk context."
+      }
+    ],
+    "sourceConflict": {
+      "description": "SSA consumer overview showed 2026 MFS top Part B adjustment 487.90, whereas CMS fact sheet and SSA POMS give total 689.90, implying adjustment 487.00 above standard 202.90. Use CMS 487.00 and POMS cross-check; do not silently adopt the inconsistent overview number."
+    },
+    "limitations": [
+      "Federal Register 2027 PDF was opened and confirms standard Part B 209.40, but individual table figures were not extracted from the remaining PDF tables; no second-source verification of every 2027 cell is claimed.",
+      "Dates and renewal conventions are original worksheet choices; no competitor UI, live auction, SSA decision or external professional review claim."
+    ]
+  },
+  "preserved": {
+    "base": "64bd34ad2399463693c0119683227128e715b592",
+    "priorNewTools": 4,
+    "priorPendingGuides": 13,
+    "priorPendingQuestionLinks": 27,
+    "unchangedImplementationFiles": [
+      "src/lib/calculators/expansion-four.ts",
+      "src/lib/expansion-four-content.json",
+      "src/lib/expansion-four-guide-content.json",
+      "src/lib/expansion-four-glossary.json",
+      "src/components/PracticalGuideQuestions.tsx",
+      "src/components/PracticalGuideArticle.tsx",
+      "src/lib/practical-guide-answer-links.json",
+      "tests/practical-guide-question-links.test.ts"
+    ]
+  },
+  "limits": [
+    "Unpublished; no live body, Googlebot access, indexing or ranking claim.",
+    "No native Safari, live security prices, actual SSA determination or external professional review."
+  ]
+}

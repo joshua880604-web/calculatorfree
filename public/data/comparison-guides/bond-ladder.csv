@@ -1,0 +1,12 @@
+Scenario,Mode,Input assumptions,Metric,Expected value
+Let three coupon bonds mature without renewal,coupon-bonds,"settlement: 2026-12-01; rungs: 10000, 100, 4, 2, 2
+10000, 100, 4, 4, 2
+10000, 100, 4, 6, 2; horizon_months: 36; maturity: Retain maturity proceeds; renewal_months: 36; renewal_coupon: 4",Retained cash through horizon,32400
+Preserve a premium-bond redemption loss,coupon-bonds,"settlement: 2026-12-01; rungs: 10000, 105, 2, 2, 2; horizon_months: 12; maturity: Retain maturity proceeds; renewal_months: 36; renewal_coupon: 4","Realized cash-flow gain, not tax income",-300
+Roll coupon principal at par and keep coupons in cash,coupon-bonds,"settlement: 2026-12-01; rungs: 10000, 100, 4, 2, 2
+10000, 100, 4, 4, 2
+10000, 100, 4, 6, 2; horizon_months: 36; maturity: Roll same face amount; renewal_months: 36; renewal_coupon: 4",Retained cash through horizon,13600
+Separate bill principal from its discount income,treasury-bills,"settlement: 2026-12-01; rungs: 10000, 99, 28
+10000, 98, 56
+10000, 97, 84; horizon_days: 84; maturity: Retain maturity proceeds; renewal_days: 91; renewal_price: 98.75",Realized discount gain through horizon,600
+Roll the same bill face rather than all maturity cash,treasury-bills,"settlement: 2026-12-01; rungs: 10000, 99, 28; horizon_days: 56; maturity: Roll same face amount; renewal_days: 28; renewal_price: 98.75",Retained cash through horizon,10125

@@ -1,3 +1,8 @@
+import {rsuTaxCalculator} from './rsu-tax';
+import {esppTaxCalculator} from './espp-tax';
+import {bondLadderCalculator} from './bond-ladder';
+import {irmaaCalculator} from './irmaa';
+import {expansionFourCalculators} from './expansion-four';
 import {cashAdvanceFeeCalculator} from './cash-advance-fee';
 import {cobraCostCalculator} from './cobra-cost';
 import {sustainableGrowthRateCalculator} from './sustainable-growth-rate';
@@ -80,7 +85,9 @@ import { everydayCalculators } from "./everyday";
 import { otherCalculators } from "./other";
 import { defaults, type Calculator, type Values, type Result } from "../types";
 export const calculators: Calculator[] = [
- cashAdvanceFeeCalculator, cobraCostCalculator,
+ rsuTaxCalculator,esppTaxCalculator,
+ bondLadderCalculator,irmaaCalculator,
+ ...expansionFourCalculators, cashAdvanceFeeCalculator, cobraCostCalculator,
   sustainableGrowthRateCalculator,
   sortinoRatioCalculator,grossRentMultiplierCalculator,debtToEquityRatioCalculator,
   businessLineOfCreditCalculator,tripleNetLeaseCalculator,armMortgageCalculator,portfolioRebalancingCalculator,

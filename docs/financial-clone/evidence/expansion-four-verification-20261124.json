@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-24",
+  "branch": "preview/finance-expansion-four-20261124",
+  "published": false,
+  "tools": [
+    "ebitda",
+    "invoice-factoring",
+    "average-daily-balance",
+    "construction-loan"
+  ],
+  "newTools": 4,
+  "newModes": 6,
+  "publicWorkedExamples": 12,
+  "newGuides": 4,
+  "newGlossaryTerms": 4,
+  "totalFunctionalTools": 172,
+  "totalModes": 360,
+  "tests": {
+    "passed": true,
+    "count": 3226,
+    "command": "npm test",
+    "log": "/workspace/work/finance-expansion-four-20261124/tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "npm run typecheck"
+  },
+  "build": {
+    "passed": true,
+    "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build"
+  },
+  "independentReference": {
+    "passed": true,
+    "cases": 25,
+    "metricChecks": 120,
+    "precision": 70,
+    "command": "python scripts/check-expansion-four-reference.py",
+    "path": "expansion-four-reference-20261124.json"
+  },
+  "staticSEO": {
+    "passed": true,
+    "configuration": "indexable-test-origin",
+    "pages": 481,
+    "guides": 159,
+    "internal_links_checked": 35200,
+    "calculator_state_links": 3053,
+    "max_contextual_depth": 3,
+    "redirect_rules": 204,
+    "curated_llms_links": 247,
+    "no_live_indexing_or_ranking_claim": true
+  },
+  "browser": {
+    "passed": true,
+    "mainChecks": 88,
+    "additionalCsvExports": 5,
+    "totalChecks": 93,
+    "artifacts": "/workspace/work/finance-expansion-four-20261124",
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "pageErrors": [],
+    "method": "Local Chromium production export, external traffic blocked; all six modes, twelve presets at mobile/desktop, validation repair/Enter/Reset, no-JS reading, guide/calculator CSVs"
+  },
+  "visual": {
+    "status": "passed",
+    "scope": "Default and alternate-mode form/result screenshots, mobile and desktop; representative composites inspected.",
+    "screenshots": "/workspace/work/finance-expansion-four-20261124"
+  },
+  "sourceReview": {
+    "checkedOn": "2026-11-24",
+    "method": "Public source pages read through search-service web reader",
+    "sources": [
+      {
+        "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures",
+        "finding": "Section 103 anchors earnings to net income and requires clear reconciliation; operating-income bridge includes other nonoperating items instead of assuming they never exist."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/",
+        "finding": "Daily account balances, APR categories and grace periods matter; site estimate explicitly excludes issuer-specific compounding and allocation."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-daily-periodic-rate-on-a-credit-card-en-46/",
+        "finding": "360/365 daily divisors depend on issuer; daily compounding is not implemented by the simple-interest approximation."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-construction-loan-en-108/",
+        "finding": "Staged construction advances; a permanent loan is a separate stage. Source does not establish universal date/accrual rules."
+      },
+      {
+        "url": "https://www.1stcommercialcredit.com/invoice-factoring-calculator",
+        "finding": "Inputs describe invoice face, advance, fees and reserve. Displayed formula appears to add advance to full invoice less fee; not copied. Independently implement advance + reserve less fees = invoice less fees."
+      }
+    ],
+    "no_source_parity_or_professional_review_claim": true
+  },
+  "preserved": {
+    "priorTools": 168,
+    "pendingGuideQuestionLinks": 27,
+    "pendingGuides": 13,
+    "calculationModels": true,
+    "robotsPolicy": true,
+    "adsAndDeploymentConfig": true
+  },
+  "limits": [
+    "Not published; no live HTML, Googlebot or indexing/ranking claim.",
+    "No native Safari, lender/issuer agreement parity or external professional review."
+  ]
+}

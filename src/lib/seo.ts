@@ -1,4 +1,5 @@
 import linkReview from './internal-link-review.json';
+import answerLinkReview from './practical-guide-answer-links.json';
 import {publisherIdentity} from './content-transparency';
 import {embedResourcesPath,embedResourcesReviewedOn} from './embed-resources';
 import {motherPageIds,motherPageReviewedOn} from './mother-page-ui';
@@ -460,3 +461,13 @@ for(const path of ['/single-credit-card-payoff-calculator.html','/guides/how-to-
 
 // Follow-up: payoff-mode selection, period interest and deriving an entered FX rate.
 for(const path of ['/loan-calculator.html','/loan-repayment-calculator.html','/guides/currency-conversion-rate-direction-and-spread/'])recordWordingUpdate(path,'2026-11-24');
+
+// Expose existing question-to-calculator links; keep arithmetic/source dates intact.
+for(const path of [...answerLinkReview.guides,'/guides/'])recordWordingUpdate(path,answerLinkReview.reviewedOn);
+
+// Four original tools, worked articles and definitions added on November 24.
+for(const path of ["/ebitda-calculator.html", "/invoice-factoring-calculator.html", "/average-daily-balance-calculator.html", "/construction-loan-calculator.html", "/guides/how-to-calculate-ebitda-and-margin/", "/guides/invoice-factoring-fees-and-reserve/", "/guides/average-daily-balance-posting-dates/", "/guides/construction-loan-draws-and-interest/", "/glossary/ebitda/", "/glossary/factoring-reserve/", "/glossary/average-daily-balance/", "/glossary/construction-loan-draw/", "/financial-calculator.html", "/real-estate-calculator.html", "/business-calculators.html", "/loan-calculators.html", "/guides/", "/glossary/"])recordWordingUpdate(path,'2026-11-24');
+
+for(const path of ["/bond-ladder-calculator.html", "/irmaa-calculator.html", "/guides/bond-ladder-coupons-and-treasury-bills/", "/guides/medicare-irmaa-magi-and-premium-years/", "/glossary/bond-ladder/", "/glossary/irmaa/", "/financial-calculator.html", "/retirement-calculators.html", "/savings-investment-calculators.html", "/guides/", "/glossary/"])recordWordingUpdate(path,'2026-11-24');
+
+for(const path of ["/rsu-tax-calculator.html", "/espp-tax-calculator.html", "/guides/rsu-withholding-and-sale-cost-basis/", "/guides/espp-qualifying-disposition-and-cost-basis/", "/glossary/restricted-stock-units/", "/glossary/employee-stock-purchase-plan/", "/financial-calculator.html", "/tax-income-calculators.html", "/guides/", "/glossary/"])recordWordingUpdate(path,'2026-11-24');

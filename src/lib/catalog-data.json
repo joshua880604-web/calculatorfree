@@ -843,5 +843,13 @@
   {"id": "debt-to-equity-ratio", "title": "Debt-to-Equity Ratio Calculator", "category": "Other", "local_route": "/debt-to-equity-ratio-calculator.html"},
   {"id": "sustainable-growth-rate", "category": "Other", "title": "Sustainable Growth Rate Calculator", "local_route": "/sustainable-growth-rate-calculator.html"},
   {"id": "cash-advance-fee", "category": "Other", "title": "Cash Advance Fee Calculator", "local_route": "/cash-advance-fee-calculator.html"},
-  {"id": "cobra-cost", "category": "Other", "title": "COBRA Cost Calculator", "local_route": "/cobra-cost-calculator.html"}
+  {"id": "cobra-cost", "category": "Other", "title": "COBRA Cost Calculator", "local_route": "/cobra-cost-calculator.html"},
+  {"id": "ebitda", "title": "EBITDA & Margin Calculator", "category": "Other", "local_route": "/ebitda-calculator.html"},
+  {"id": "invoice-factoring", "title": "Invoice Factoring Calculator", "category": "Other", "local_route": "/invoice-factoring-calculator.html"},
+  {"id": "average-daily-balance", "title": "Average Daily Balance Calculator", "category": "Other", "local_route": "/average-daily-balance-calculator.html"},
+  {"id": "construction-loan", "title": "Construction Loan Calculator: Draws & Interest", "category": "Mortgage and Real Estate", "local_route": "/construction-loan-calculator.html"},
+  {"id": "bond-ladder", "title": "Bond & Treasury Bill Ladder Calculator", "category": "Investment", "local_route": "/bond-ladder-calculator.html"},
+  {"id": "irmaa", "title": "Medicare IRMAA Calculator", "category": "Retirement", "local_route": "/irmaa-calculator.html"},
+  {"id": "rsu-tax", "title": "RSU Tax & Withholding Calculator", "category": "Tax and Salary", "local_route": "/rsu-tax-calculator.html"},
+  {"id": "espp-tax", "title": "ESPP Tax Calculator", "category": "Tax and Salary", "local_route": "/espp-tax-calculator.html"}
 ]

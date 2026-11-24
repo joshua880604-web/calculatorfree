@@ -411,3 +411,25 @@ for(const task of searchTasks.amortization)if(task.mode==='schedule')task.aliase
 // Reviewed task entry points restore the stated inputs instead of synonym-only links.
 import focusedCalculationTasks from './focused-calculation-tasks.json';
 for(const [id,tasks]of Object.entries(focusedCalculationTasks))searchTasks[id]=tasks.map(task=>({...task,values:Object.fromEntries(Object.entries(task.values).map(([key,value])=>[key,String(value)]))}));
+
+keywordTitles["ebitda"]="Ebitda Calculator";
+searchTasks["ebitda"]=[{"keyword": "EBITDA and EBITDA margin calculator", "mode": "net-income", "description": "Unadjusted same-period earnings reconciliation in one currency. Signed losses, net-interest income and tax benefits are supported. Operating-income mode includes separately entered other nonoperating income or expense, excluding interest and tax. No cash-flow forecast, valuation or discretionary adjusted-EBITDA addbacks."}];
+
+keywordTitles["invoice-factoring"]="Invoice Factoring Calculator";
+searchTasks["invoice-factoring"]=[{"keyword": "Invoice factoring fee calculator", "mode": "fees", "description": "One fully collected invoice, one advance today and all fees deducted at collection. Select invoice-face or advance fee base, a constant per-interval rate, prorated or started intervals and separately entered other fees. No default, recourse, upfront deductions, statutory APR, lender quote or financing approval."}];
+
+keywordTitles["average-daily-balance"]="Average Daily Balance Calculator";
+searchTasks["average-daily-balance"]=[{"keyword": "Average daily balance calculator", "mode": "ledger", "description": "Single-balance, inclusive-date or consecutive segment worksheet. Posting-day changes count that day and same-day changes combine. Signed credit balances are retained. Optional simple interest uses max(ADB, 0), one entered APR and a 360/365 divisor; no grace periods, daily compounding, multiple APR buckets or exact issuer bill."}];
+
+keywordTitles["construction-loan"]="Construction Loan Calculator";
+searchTasks["construction-loan"]=[{"keyword": "Construction loan interest calculator", "mode": "draws", "description": "Constant-rate, interest-paid-separately construction period with dated nonnegative draws, opening principal and a commitment ceiling. Includes draw day and final day; actual calendar days divided by chosen 360/365. No principal repayments, interest capitalization, land equity, approval or permanent mortgage stage."}];
+
+keywordTitles["bond-ladder"]="Bond Ladder Calculator";
+searchTasks["bond-ladder"]=[{"keyword": "Bond ladder calculator", "mode": "coupon-bonds", "description": "Schedule regular coupon payments, staggered maturities and at-par principal renewal assumptions."}, {"keyword": "Treasury bill ladder calculator", "mode": "treasury-bills", "description": "Separate face redemptions, discount gains and same-face bill renewals at your assumed purchase price."}];
+keywordTitles["irmaa"]="Medicare IRMAA Calculator: 2026 & 2027";
+searchTasks["irmaa"]=[{"keyword": "Medicare IRMAA calculator 2026 and 2027", "mode": "known-magi", "description": "Use official premium-year tables, applicable lookback MAGI, filing/living status and selected Part B/D coverage."}, {"keyword": "How to calculate MAGI for IRMAA", "mode": "agi-bridge", "description": "Add known AGI and tax-exempt interest, then look up the corresponding premium-year table."}];
+
+keywordTitles["rsu-tax"]="RSU Tax & Withholding Calculator";
+searchTasks["rsu-tax"]=[{"keyword": "RSU tax withholding calculator", "mode": "delivery", "description": "Separate 2026 delivery wage value, federal withholding and a rate-based tax-gap assumption."}, {"keyword": "RSU capital gains and cost basis calculator", "mode": "sale", "description": "Allocate income-date basis to an already-taxed lot sale and preserve the separate capital result."}];
+keywordTitles["espp-tax"]="ESPP Tax Calculator";
+searchTasks["espp-tax"]=[{"keyword": "ESPP qualifying disposition tax calculator", "mode": "known-price", "description": "Use actual Section 423 prices and dates to split compensation, adjusted basis and capital gain/loss."}, {"keyword": "ESPP lookback and discount calculator", "mode": "discount-price", "description": "Derive actual and grant-date hypothetical prices under the stated 0\u201315% discount formula."}];

@@ -10,7 +10,13 @@ const loaders: Record<string, () => Promise<Calculator[]>> = {
 };
 const businessTools = () => import('./calculators/business-tools').then(m => m.businessTools);
 const strategyTools=()=>import('./calculators/debt-strategies').then(m=>[m.debtSnowball,m.debtAvalanche]);
+const expansionFour=()=>import('./calculators/expansion-four').then(m=>m.expansionFourCalculators);
 const dataTools: Record<string, () => Promise<Calculator[]>> = {
+ 'rsu-tax':()=>import('./calculators/rsu-tax').then(m=>[m.rsuTaxCalculator]),
+ 'espp-tax':()=>import('./calculators/espp-tax').then(m=>[m.esppTaxCalculator]),
+ 'bond-ladder':()=>import('./calculators/bond-ladder').then(m=>[m.bondLadderCalculator]),
+ 'irmaa':()=>import('./calculators/irmaa').then(m=>[m.irmaaCalculator]),
+ 'ebitda':expansionFour,'invoice-factoring':expansionFour,'average-daily-balance':expansionFour,'construction-loan':expansionFour,
  'cash-advance-fee':()=>import('./calculators/cash-advance-fee').then(m=>[m.cashAdvanceFeeCalculator]),
  'cobra-cost':()=>import('./calculators/cobra-cost').then(m=>[m.cobraCostCalculator]),
   'sustainable-growth-rate':()=>import('./calculators/sustainable-growth-rate').then(m=>[m.sustainableGrowthRateCalculator]),

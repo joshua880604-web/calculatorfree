@@ -1,0 +1,21 @@
+{
+  "checkedOn": "2026-11-24",
+  "supportedTaxYear": 2026,
+  "federalSupplemental": {
+    "threshold": 1000000,
+    "optionalRate": 0.22,
+    "excessRate": 0.37,
+    "sourceEdition": "IRS Publication 15 (2026), section 7",
+    "source": "https://www.irs.gov/publications/p15",
+    "scope": "Separately identified supplemental wages, optional flat method eligible below threshold; mandatory excess withholding above threshold. No aggregate payroll method or FICA calculation."
+  },
+  "espp": {
+    "section": "IRC 423",
+    "minimumPriceFraction": 0.85,
+    "grantHoldingYears": 2,
+    "purchaseHoldingYears": 1,
+    "source": "https://www.irs.gov/publications/p525",
+    "sourceEdition": "Publication 525 (2025), statutory options/employee stock purchase plan; mechanism checked alongside IRC 423 and Form 3922 instructions on 2026-11-24",
+    "dateConvention": "Calendar holding periods are completed after the corresponding anniversary dates; verify anniversary-day cases with plan/tax records. February 29 anniversaries clamp to February 28 in non-leap years."
+  }
+}

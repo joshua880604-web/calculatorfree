@@ -13143,5 +13143,1061 @@
   {"id": "debt-to-equity-ratio", "title": "Debt-to-Equity Ratio Calculator", "category": "Other", "local_route": "/debt-to-equity-ratio-calculator.html", "directory": false, "source_status": "Independent original model; concept references in source-use-notes.json; no competitor interface parity claim", "implemented_modes": [{"id": "snapshot", "title": "Balance-Sheet Snapshot", "fields": [{"key": "debt_basis", "label": "Numerator definition used consistently", "value": "Total liabilities", "type": "select", "options": ["Total liabilities", "Interest-bearing debt"]}, {"key": "debt", "label": "Amount under the selected numerator definition", "value": 240000, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "equity", "label": "Book shareholders’ equity at the same date and scope", "value": 160000, "unit": "$", "min": -1000000000000, "max": 1000000000000, "hint": "Use matching company scope and currency. Negative book equity is permitted but flagged."}], "formula": "D/E = selected total liabilities or interest-bearing debt / positive book shareholders’ equity.", "description": "Choose a numerator definition and compare it with matching book equity."}, {"id": "changes", "title": "Repayment & New Equity Scenarios", "fields": [{"key": "debt_basis", "label": "Numerator definition used consistently", "value": "Total liabilities", "type": "select", "options": ["Total liabilities", "Interest-bearing debt"]}, {"key": "debt", "label": "Amount under the selected numerator definition", "value": 240000, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "equity", "label": "Book shareholders’ equity at the same date and scope", "value": 160000, "unit": "$", "min": -1000000000000, "max": 1000000000000, "hint": "Use matching company scope and currency. Negative book equity is permitted but flagged."}, {"key": "repayment", "label": "Repayment from existing company cash (up to selected numerator)", "value": 40000, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "equity_injection", "label": "New equity capital retained in the company", "value": 40000, "unit": "$", "min": 0, "max": 1000000000000}], "formula": "After-change D/E = (selected numerator − repayment) / (book equity + new equity capital), when the denominator is positive.", "description": "Separate a repayment from existing cash and a new capital injection retained as cash."}], "spec": "specs/debt-to-equity-ratio.md", "evidence": "ratio-property-three-20261118.md"},
   {"id": "sustainable-growth-rate", "title": "Sustainable Growth Rate Calculator", "category": "Other", "local_route": "/sustainable-growth-rate-calculator.html", "directory": false, "source_status": "Independent original annual ROE × retention model; published concept references read, no competitor interface parity claimed.", "source_url": "https://www.wallstreetprep.com/knowledge/sustainable-growth-rate/", "implemented_modes": [{"id": "ratios", "title": "ROE & Dividend Payout", "fields": [{"key": "roe", "label": "Annual return on equity (ROE)", "value": 15, "unit": "%", "min": -1000, "max": 1000}, {"key": "payout", "label": "Annual dividend payout ratio", "value": 40, "unit": "%", "min": 0, "max": 100}]}, {"id": "financials", "title": "Income, Dividends & Equity", "fields": [{"key": "net_income", "label": "Annual net income for the selected shareholder scope", "value": 180000, "unit": "$", "min": -1000000000000, "max": 1000000000000}, {"key": "dividends", "label": "Annual dividends for the same shareholder scope", "value": 72000, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "equity_begin", "label": "Beginning book equity for that scope", "value": 1000000, "unit": "$", "min": -1000000000000, "max": 1000000000000}, {"key": "equity_end", "label": "Ending book equity for that scope", "value": 1400000, "unit": "$", "min": -1000000000000, "max": 1000000000000}]}, {"id": "target", "title": "Retention Needed for a Target", "fields": [{"key": "roe", "label": "Annual return on equity (ROE)", "value": 15, "unit": "%", "min": -1000, "max": 1000}, {"key": "target_growth", "label": "Selected annual growth target", "value": 12, "unit": "%", "min": 0, "max": 1000}]}], "spec": "specs/sustainable-growth-rate.md", "evidence": "sgr-internal-links-20261118.md"},
   {"id": "cash-advance-fee", "title": "Cash Advance Fee Calculator", "category": "Other", "local_route": "/cash-advance-fee-calculator.html", "directory": false, "source_url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/", "source_status": "Independent original model; official background read; no competitor UI or numerical parity claimed.", "implemented_modes": [{"id": "cost", "title": "Fees & Interest", "fields": [{"key": "amount", "label": "Cash advance amount received", "value": 1000, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "fee_rate", "label": "Cash advance fee rate", "value": 5, "unit": "%", "min": 0, "max": 100}, {"key": "minimum_fee", "label": "Minimum cash advance fee", "value": 10, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "atm_fee", "label": "Additional ATM fee", "value": 3, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "apr", "label": "Cash advance APR", "value": 30, "unit": "%", "min": 0, "max": 100}, {"key": "days", "label": "Accrued days until full repayment", "value": 30, "unit": "days", "min": 0, "max": 3650, "step": 1}, {"key": "day_basis", "label": "Daily-rate year basis", "value": "365", "type": "select", "options": ["365", "360"]}, {"key": "interest_method", "label": "Interest approximation", "value": "Simple daily", "type": "select", "options": ["Simple daily", "Daily compound"]}, {"key": "fee_treatment", "label": "Treatment of both entered fees", "value": "Pay upfront", "type": "select", "options": ["Pay upfront", "Finance fees"]}]}], "spec": "specs/cash-advance-fee.md", "evidence": "cash-cobra-20261118.md"},
-  {"id": "cobra-cost", "title": "COBRA Cost Calculator", "category": "Other", "local_route": "/cobra-cost-calculator.html", "directory": false, "source_url": "https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_fact_sheet", "source_status": "Independent original model; official background read; no competitor UI or numerical parity claimed.", "implemented_modes": [{"id": "contributions", "title": "Employee + Employer Shares", "fields": [{"key": "employee_share", "label": "Previous employee monthly premium share", "value": 200, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "employer_share", "label": "Previous employer monthly premium share", "value": 600, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "admin_rate", "label": "Administrative charge on full premium", "value": 2, "unit": "%", "min": 0, "max": 2}, {"key": "monthly_subsidy", "label": "Applicable subsidy each planning month", "value": 0, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "months", "label": "Months you want to model", "value": 6, "unit": "months", "min": 1, "max": 36, "step": 1}]}, {"id": "premium", "title": "Known Full Plan Premium", "fields": [{"key": "total_premium", "label": "Full monthly plan premium before administrative charge", "value": 800, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "previous_payment", "label": "Previous employee payment per month", "value": 200, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "admin_rate", "label": "Administrative charge on full premium", "value": 2, "unit": "%", "min": 0, "max": 2}, {"key": "monthly_subsidy", "label": "Applicable subsidy each planning month", "value": 0, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "months", "label": "Months you want to model", "value": 6, "unit": "months", "min": 1, "max": 36, "step": 1}]}], "spec": "specs/cobra-cost.md", "evidence": "cash-cobra-20261118.md"}
+  {"id": "cobra-cost", "title": "COBRA Cost Calculator", "category": "Other", "local_route": "/cobra-cost-calculator.html", "directory": false, "source_url": "https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/cobra_fact_sheet", "source_status": "Independent original model; official background read; no competitor UI or numerical parity claimed.", "implemented_modes": [{"id": "contributions", "title": "Employee + Employer Shares", "fields": [{"key": "employee_share", "label": "Previous employee monthly premium share", "value": 200, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "employer_share", "label": "Previous employer monthly premium share", "value": 600, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "admin_rate", "label": "Administrative charge on full premium", "value": 2, "unit": "%", "min": 0, "max": 2}, {"key": "monthly_subsidy", "label": "Applicable subsidy each planning month", "value": 0, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "months", "label": "Months you want to model", "value": 6, "unit": "months", "min": 1, "max": 36, "step": 1}]}, {"id": "premium", "title": "Known Full Plan Premium", "fields": [{"key": "total_premium", "label": "Full monthly plan premium before administrative charge", "value": 800, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "previous_payment", "label": "Previous employee payment per month", "value": 200, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "admin_rate", "label": "Administrative charge on full premium", "value": 2, "unit": "%", "min": 0, "max": 2}, {"key": "monthly_subsidy", "label": "Applicable subsidy each planning month", "value": 0, "unit": "$", "min": 0, "max": 1000000000000}, {"key": "months", "label": "Months you want to model", "value": 6, "unit": "months", "min": 1, "max": 36, "step": 1}]}], "spec": "specs/cobra-cost.md", "evidence": "cash-cobra-20261118.md"},
+  {
+    "id": "ebitda",
+    "title": "EBITDA & Margin Calculator",
+    "category": "Other",
+    "local_route": "/ebitda-calculator.html",
+    "directory": false,
+    "source_url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures",
+    "source_status": "Original independently specified model; sources establish concepts and limits, not competitor numerical or UI parity.",
+    "implemented_modes": [
+      {
+        "id": "net-income",
+        "title": "Net Income Reconciliation",
+        "fields": [
+          {
+            "key": "net_income",
+            "label": "Net income (loss)",
+            "value": 80000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "interest",
+            "label": "Net interest expense (income)",
+            "value": 10000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "income_tax",
+            "label": "Income tax expense (benefit)",
+            "value": 20000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "depreciation",
+            "label": "Depreciation deducted in earnings",
+            "value": 20000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "amortization",
+            "label": "Amortization deducted in earnings",
+            "value": 10000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "revenue",
+            "label": "Revenue for the same period",
+            "value": 500000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          }
+        ]
+      },
+      {
+        "id": "operating-income",
+        "title": "Operating Income Bridge",
+        "fields": [
+          {
+            "key": "operating_income",
+            "label": "Operating income (loss)",
+            "value": 110000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "other_income",
+            "label": "Other nonoperating income (expense), excluding interest and tax",
+            "value": 0,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "depreciation",
+            "label": "Depreciation deducted in earnings",
+            "value": 20000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "amortization",
+            "label": "Amortization deducted in earnings",
+            "value": 10000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "revenue",
+            "label": "Revenue for the same period",
+            "value": 500000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "invoice-factoring",
+    "title": "Invoice Factoring Calculator",
+    "category": "Other",
+    "local_route": "/invoice-factoring-calculator.html",
+    "directory": false,
+    "source_url": "https://www.1stcommercialcredit.com/invoice-factoring-calculator",
+    "source_status": "Original independently specified model; sources establish concepts and limits, not competitor numerical or UI parity.",
+    "implemented_modes": [
+      {
+        "id": "fees",
+        "title": "Advance, Fees & Settlement",
+        "fields": [
+          {
+            "key": "invoice",
+            "label": "Invoice face value",
+            "value": 10000,
+            "unit": "$",
+            "min": 0.01,
+            "max": 1000000000000
+          },
+          {
+            "key": "advance_rate",
+            "label": "Advance rate",
+            "value": 80,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "fee_rate",
+            "label": "Fee rate per billing interval",
+            "value": 2,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "interval",
+            "label": "Days per billing interval",
+            "value": 30,
+            "unit": "days",
+            "min": 1,
+            "max": 366,
+            "step": 1
+          },
+          {
+            "key": "days",
+            "label": "Days until full collection",
+            "value": 45,
+            "unit": "days",
+            "min": 0,
+            "max": 3660,
+            "step": 1
+          },
+          {
+            "key": "billing",
+            "label": "Fee period charging",
+            "value": "Prorated periods",
+            "type": "select",
+            "options": [
+              "Prorated periods",
+              "Started periods"
+            ]
+          },
+          {
+            "key": "fee_base",
+            "label": "Fee charged on",
+            "value": "Invoice face value",
+            "type": "select",
+            "options": [
+              "Invoice face value",
+              "Advance amount"
+            ]
+          },
+          {
+            "key": "other_fees",
+            "label": "Other fees deducted at collection",
+            "value": 50,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "average-daily-balance",
+    "title": "Average Daily Balance Calculator",
+    "category": "Other",
+    "local_route": "/average-daily-balance-calculator.html",
+    "directory": false,
+    "source_url": "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/",
+    "source_status": "Original independently specified model; sources establish concepts and limits, not competitor numerical or UI parity.",
+    "implemented_modes": [
+      {
+        "id": "ledger",
+        "title": "Dated Transactions",
+        "fields": [
+          {
+            "key": "start",
+            "label": "Cycle start date",
+            "value": "2026-11-01",
+            "type": "date"
+          },
+          {
+            "key": "end",
+            "label": "Cycle end date",
+            "value": "2026-11-30",
+            "type": "date"
+          },
+          {
+            "key": "opening",
+            "label": "Opening balance before cycle starts",
+            "value": 500,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "transactions",
+            "label": "Posting date, signed amount — one per line",
+            "value": "2026-11-10, 200\n2026-11-20, -300",
+            "type": "textarea",
+            "hint": "YYYY-MM-DD, amount. Positive charges; negative payments. Blank means no transactions.",
+            "optional": true
+          },
+          {
+            "key": "apr",
+            "label": "Optional annual interest rate (0 for average only)",
+            "value": 24,
+            "unit": "%",
+            "min": 0,
+            "max": 1000
+          },
+          {
+            "key": "day_basis",
+            "label": "Days per rate year",
+            "value": "365",
+            "type": "select",
+            "options": [
+              "365",
+              "360"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "segments",
+        "title": "Balance & Day Segments",
+        "fields": [
+          {
+            "key": "cycle_days",
+            "label": "Total billing cycle days",
+            "value": 30,
+            "unit": "days",
+            "min": 1,
+            "max": 3660,
+            "step": 1
+          },
+          {
+            "key": "segments",
+            "label": "Balance, days — one consecutive segment per line",
+            "value": "500, 9\n700, 10\n400, 11",
+            "type": "textarea",
+            "hint": "No currency symbols or thousands separators. Day counts must cover the complete cycle."
+          },
+          {
+            "key": "apr",
+            "label": "Optional annual interest rate (0 for average only)",
+            "value": 24,
+            "unit": "%",
+            "min": 0,
+            "max": 1000
+          },
+          {
+            "key": "day_basis",
+            "label": "Days per rate year",
+            "value": "365",
+            "type": "select",
+            "options": [
+              "365",
+              "360"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "construction-loan",
+    "title": "Construction Loan Calculator: Draws & Interest",
+    "category": "Mortgage and Real Estate",
+    "local_route": "/construction-loan-calculator.html",
+    "directory": false,
+    "source_url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-construction-loan-en-108/",
+    "source_status": "Original independently specified model; sources establish concepts and limits, not competitor numerical or UI parity.",
+    "implemented_modes": [
+      {
+        "id": "draws",
+        "title": "Draw Schedule & Interest",
+        "fields": [
+          {
+            "key": "commitment",
+            "label": "Loan commitment ceiling",
+            "value": 200000,
+            "unit": "$",
+            "min": 0.01,
+            "max": 1000000000000
+          },
+          {
+            "key": "opening",
+            "label": "Principal outstanding before start date",
+            "value": 0,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "start",
+            "label": "First interest day",
+            "value": "2026-11-01",
+            "type": "date"
+          },
+          {
+            "key": "end",
+            "label": "Last interest day (included)",
+            "value": "2026-11-30",
+            "type": "date"
+          },
+          {
+            "key": "draws",
+            "label": "Draw date, amount — one per line",
+            "value": "2026-11-01, 50000\n2026-11-16, 50000",
+            "type": "textarea",
+            "hint": "YYYY-MM-DD, positive amount. Blank means no new draws.",
+            "optional": true
+          },
+          {
+            "key": "apr",
+            "label": "Constant annual interest rate",
+            "value": 12,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "day_basis",
+            "label": "Days per rate year",
+            "value": "365",
+            "type": "select",
+            "options": [
+              "365",
+              "360"
+            ]
+          },
+          {
+            "key": "fees",
+            "label": "Total fees paid separately",
+            "value": 1000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bond-ladder",
+    "title": "Bond & Treasury Bill Ladder Calculator",
+    "category": "Investment",
+    "local_route": "/bond-ladder-calculator.html",
+    "directory": false,
+    "source_url": "https://www.treasurydirect.gov/marketable-securities/treasury-notes/",
+    "source_status": "Original cash-flow model or official 2026/2027 premium-year table implementation; no competitor UI/numerical parity claim.",
+    "implemented_modes": [
+      {
+        "id": "coupon-bonds",
+        "title": "Coupon Bond Ladder",
+        "fields": [
+          {
+            "key": "settlement",
+            "label": "Common settlement just after a coupon date",
+            "value": "2026-12-01",
+            "type": "date"
+          },
+          {
+            "key": "rungs",
+            "label": "Face, price per $100, annual coupon %, periods left, payments/year",
+            "value": "10000, 100, 4, 2, 2\n10000, 100, 4, 4, 2\n10000, 100, 4, 6, 2",
+            "type": "textarea",
+            "hint": "One bond per line. Frequencies 1/2/4/12. Up to 20 regular-coupon bonds; no accrued interest."
+          },
+          {
+            "key": "horizon_months",
+            "label": "Cash-flow horizon",
+            "value": 36,
+            "unit": "months",
+            "min": 1,
+            "max": 360,
+            "step": 1
+          },
+          {
+            "key": "maturity",
+            "label": "Principal at maturity",
+            "value": "Retain maturity proceeds",
+            "type": "select",
+            "options": [
+              "Retain maturity proceeds",
+              "Roll same face amount"
+            ]
+          },
+          {
+            "key": "renewal_months",
+            "label": "Renewal term (multiple of 6 months)",
+            "value": 36,
+            "unit": "months",
+            "min": 6,
+            "max": 360,
+            "step": 1
+          },
+          {
+            "key": "renewal_coupon",
+            "label": "Assumed annual coupon on par renewals",
+            "value": 4,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "id": "treasury-bills",
+        "title": "Treasury Bill Ladder",
+        "fields": [
+          {
+            "key": "settlement",
+            "label": "Common bill settlement date",
+            "value": "2026-12-01",
+            "type": "date"
+          },
+          {
+            "key": "rungs",
+            "label": "Face, purchase price per $100, days left",
+            "value": "10000, 99, 28\n10000, 98, 56\n10000, 97, 84",
+            "type": "textarea",
+            "hint": "One bill per line; price at or below 100; whole remaining days 1\u2013366. No live quotes."
+          },
+          {
+            "key": "horizon_days",
+            "label": "Cash-flow horizon",
+            "value": 84,
+            "unit": "days",
+            "min": 1,
+            "max": 3660,
+            "step": 1
+          },
+          {
+            "key": "maturity",
+            "label": "Principal at maturity",
+            "value": "Retain maturity proceeds",
+            "type": "select",
+            "options": [
+              "Retain maturity proceeds",
+              "Roll same face amount"
+            ]
+          },
+          {
+            "key": "renewal_days",
+            "label": "Term for each renewed bill (calendar days)",
+            "value": "91",
+            "type": "select",
+            "options": [
+              "28",
+              "42",
+              "56",
+              "91",
+              "119",
+              "182",
+              "364"
+            ]
+          },
+          {
+            "key": "renewal_price",
+            "label": "Assumed renewal purchase price per $100 face",
+            "value": 98.75,
+            "min": 0.01,
+            "max": 100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "irmaa",
+    "title": "Medicare IRMAA Calculator",
+    "category": "Retirement",
+    "local_route": "/irmaa-calculator.html",
+    "directory": false,
+    "source_url": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles",
+    "source_status": "Original cash-flow model or official 2026/2027 premium-year table implementation; no competitor UI/numerical parity claim.",
+    "implemented_modes": [
+      {
+        "id": "known-magi",
+        "title": "Known Medicare MAGI",
+        "fields": [
+          {
+            "key": "year",
+            "label": "Medicare premium year",
+            "value": "2027",
+            "type": "select",
+            "options": [
+              "2026",
+              "2027"
+            ]
+          },
+          {
+            "key": "status",
+            "label": "Tax filing and spouse living arrangement",
+            "value": "Single / head of household / qualifying surviving spouse",
+            "type": "select",
+            "options": [
+              "Single / head of household / qualifying surviving spouse",
+              "Married filing jointly",
+              "Married filing separately: lived together",
+              "Married filing separately: lived apart all year"
+            ]
+          },
+          {
+            "key": "coverage",
+            "label": "Coverage to include",
+            "value": "Part B + Part D",
+            "type": "select",
+            "options": [
+              "Part B + Part D",
+              "Part B only",
+              "Part D only"
+            ]
+          },
+          {
+            "key": "people",
+            "label": "Covered people (2 requires a joint return)",
+            "value": "1",
+            "type": "select",
+            "options": [
+              "1",
+              "2"
+            ]
+          },
+          {
+            "key": "part_d_plan",
+            "label": "Part D plan premium per person per month (your quote)",
+            "value": 35,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "extra_income",
+            "label": "Additional MAGI for same-year comparison",
+            "value": 1000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "magi",
+            "label": "Lookback MAGI: 2024 for 2026; normally 2025 for 2027",
+            "value": 112000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          }
+        ]
+      },
+      {
+        "id": "agi-bridge",
+        "title": "AGI + Tax-Exempt Interest",
+        "fields": [
+          {
+            "key": "year",
+            "label": "Medicare premium year",
+            "value": "2027",
+            "type": "select",
+            "options": [
+              "2026",
+              "2027"
+            ]
+          },
+          {
+            "key": "status",
+            "label": "Tax filing and spouse living arrangement",
+            "value": "Single / head of household / qualifying surviving spouse",
+            "type": "select",
+            "options": [
+              "Single / head of household / qualifying surviving spouse",
+              "Married filing jointly",
+              "Married filing separately: lived together",
+              "Married filing separately: lived apart all year"
+            ]
+          },
+          {
+            "key": "coverage",
+            "label": "Coverage to include",
+            "value": "Part B + Part D",
+            "type": "select",
+            "options": [
+              "Part B + Part D",
+              "Part B only",
+              "Part D only"
+            ]
+          },
+          {
+            "key": "people",
+            "label": "Covered people (2 requires a joint return)",
+            "value": "1",
+            "type": "select",
+            "options": [
+              "1",
+              "2"
+            ]
+          },
+          {
+            "key": "part_d_plan",
+            "label": "Part D plan premium per person per month (your quote)",
+            "value": 35,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "extra_income",
+            "label": "Additional MAGI for same-year comparison",
+            "value": 1000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "agi",
+            "label": "Federal AGI from applicable lookback return",
+            "value": 110000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "tax_exempt_interest",
+            "label": "Tax-exempt interest from the same return",
+            "value": 2000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rsu-tax",
+    "title": "RSU Tax & Withholding Calculator",
+    "category": "Tax and Salary",
+    "local_route": "/rsu-tax-calculator.html",
+    "directory": false,
+    "source_url": "https://www.irs.gov/publications/p15",
+    "source_status": "Original limited 2026 single-event / single-lot worksheet; published payroll and statutory ESPP mechanisms independently checked. No full return, payroll result or competitor parity claim.",
+    "implemented_modes": [
+      {
+        "id": "delivery",
+        "title": "Delivery & Withholding",
+        "fields": [
+          {
+            "key": "settlement",
+            "label": "Nonrestricted share delivery / income date",
+            "value": "2026-11-24",
+            "type": "date"
+          },
+          {
+            "key": "shares",
+            "label": "Gross shares delivered before withholding",
+            "value": 100,
+            "min": 1e-06,
+            "max": 100000000
+          },
+          {
+            "key": "fmv",
+            "label": "Payroll FMV per share on the income date",
+            "value": 50,
+            "unit": "$",
+            "min": 1e-06,
+            "max": 100000000
+          },
+          {
+            "key": "method",
+            "label": "Federal withholding method",
+            "value": "2026 optional supplemental method",
+            "type": "select",
+            "options": [
+              "2026 optional supplemental method",
+              "Enter actual federal withholding"
+            ]
+          },
+          {
+            "key": "prior_supplemental",
+            "label": "Prior 2026 supplemental wages before this award",
+            "value": 0,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "actual_federal",
+            "label": "Actual federal income tax withholding allocated to award",
+            "value": 1100,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "other_withholding",
+            "label": "Other allocated withholding: enter dollars",
+            "value": 400,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "assumed_federal_rate",
+            "label": "Your assumed incremental federal income tax rate",
+            "value": 32,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "id": "sale",
+        "title": "Sale & Adjusted Basis",
+        "fields": [
+          {
+            "key": "acquired",
+            "label": "Actual nonrestricted share acquisition date",
+            "value": "2026-01-15",
+            "type": "date"
+          },
+          {
+            "key": "sold",
+            "label": "Sale trade date in 2026",
+            "value": "2026-11-24",
+            "type": "date"
+          },
+          {
+            "key": "sold_shares",
+            "label": "Shares sold from this known lot",
+            "value": 70,
+            "min": 1e-06,
+            "max": 100000000
+          },
+          {
+            "key": "income_fmv",
+            "label": "Income-date FMV basis per share already taxed as wages",
+            "value": 50,
+            "unit": "$",
+            "min": 0,
+            "max": 100000000
+          },
+          {
+            "key": "sale_price",
+            "label": "Gross sale price per share",
+            "value": 80,
+            "unit": "$",
+            "min": 0,
+            "max": 100000000
+          },
+          {
+            "key": "fees",
+            "label": "Selling fees allocated to these shares",
+            "value": 10,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "short_rate",
+            "label": "Assumed short-term marginal tax rate",
+            "value": 32,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "long_rate",
+            "label": "Assumed long-term marginal tax rate",
+            "value": 15,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "espp-tax",
+    "title": "ESPP Tax Calculator",
+    "category": "Tax and Salary",
+    "local_route": "/espp-tax-calculator.html",
+    "directory": false,
+    "source_url": "https://www.irs.gov/publications/p525",
+    "source_status": "Original limited 2026 single-event / single-lot worksheet; published payroll and statutory ESPP mechanisms independently checked. No full return, payroll result or competitor parity claim.",
+    "implemented_modes": [
+      {
+        "id": "known-price",
+        "title": "Actual Purchase & Grant Prices",
+        "fields": [
+          {
+            "key": "plan",
+            "label": "Plan treatment confirmed by your records",
+            "value": "Section 423 plan confirmed",
+            "type": "select",
+            "options": [
+              "Section 423 plan confirmed",
+              "Nonqualified plan or unsure"
+            ]
+          },
+          {
+            "key": "grant",
+            "label": "Grant / offering date",
+            "value": "2023-12-01",
+            "type": "date"
+          },
+          {
+            "key": "purchase",
+            "label": "Exercise and share transfer date",
+            "value": "2024-06-01",
+            "type": "date"
+          },
+          {
+            "key": "sale",
+            "label": "Sale trade date in 2026",
+            "value": "2026-11-24",
+            "type": "date"
+          },
+          {
+            "key": "shares",
+            "label": "Shares sold from this lot",
+            "value": 100,
+            "min": 1e-06,
+            "max": 100000000
+          },
+          {
+            "key": "grant_fmv",
+            "label": "FMV per share on grant date (Form 3922 box 3)",
+            "value": 100,
+            "unit": "$",
+            "min": 1e-06,
+            "max": 100000000
+          },
+          {
+            "key": "purchase_fmv",
+            "label": "FMV per share on exercise date (box 4)",
+            "value": 80,
+            "unit": "$",
+            "min": 1e-06,
+            "max": 100000000
+          },
+          {
+            "key": "sale_price",
+            "label": "Sale price per share; assumed sale-date FMV",
+            "value": 120,
+            "unit": "$",
+            "min": 0,
+            "max": 100000000
+          },
+          {
+            "key": "fees",
+            "label": "Selling fees for this lot",
+            "value": 10,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "ordinary_rate",
+            "label": "Assumed incremental tax rate on compensation",
+            "value": 32,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "short_rate",
+            "label": "Assumed short-term capital-gain rate",
+            "value": 32,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "long_rate",
+            "label": "Assumed long-term capital-gain rate",
+            "value": 15,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "paid",
+            "label": "Actual purchase price per share (box 5)",
+            "value": 68,
+            "unit": "$",
+            "min": 1e-06,
+            "max": 100000000,
+            "hint": "Use the actual exercise price; no purchase commission is modeled."
+          },
+          {
+            "key": "grant_option",
+            "label": "Grant-date option price as if exercised (box 8 or fixed price)",
+            "value": 85,
+            "unit": "$",
+            "min": 1e-06,
+            "max": 100000000
+          }
+        ]
+      },
+      {
+        "id": "discount-price",
+        "title": "Discount & Lookback Formula",
+        "fields": [
+          {
+            "key": "plan",
+            "label": "Plan treatment confirmed by your records",
+            "value": "Section 423 plan confirmed",
+            "type": "select",
+            "options": [
+              "Section 423 plan confirmed",
+              "Nonqualified plan or unsure"
+            ]
+          },
+          {
+            "key": "grant",
+            "label": "Grant / offering date",
+            "value": "2023-12-01",
+            "type": "date"
+          },
+          {
+            "key": "purchase",
+            "label": "Exercise and share transfer date",
+            "value": "2024-06-01",
+            "type": "date"
+          },
+          {
+            "key": "sale",
+            "label": "Sale trade date in 2026",
+            "value": "2026-11-24",
+            "type": "date"
+          },
+          {
+            "key": "shares",
+            "label": "Shares sold from this lot",
+            "value": 100,
+            "min": 1e-06,
+            "max": 100000000
+          },
+          {
+            "key": "grant_fmv",
+            "label": "FMV per share on grant date (Form 3922 box 3)",
+            "value": 100,
+            "unit": "$",
+            "min": 1e-06,
+            "max": 100000000
+          },
+          {
+            "key": "purchase_fmv",
+            "label": "FMV per share on exercise date (box 4)",
+            "value": 80,
+            "unit": "$",
+            "min": 1e-06,
+            "max": 100000000
+          },
+          {
+            "key": "sale_price",
+            "label": "Sale price per share; assumed sale-date FMV",
+            "value": 120,
+            "unit": "$",
+            "min": 0,
+            "max": 100000000
+          },
+          {
+            "key": "fees",
+            "label": "Selling fees for this lot",
+            "value": 10,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "ordinary_rate",
+            "label": "Assumed incremental tax rate on compensation",
+            "value": 32,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "short_rate",
+            "label": "Assumed short-term capital-gain rate",
+            "value": 32,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "long_rate",
+            "label": "Assumed long-term capital-gain rate",
+            "value": 15,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "discount",
+            "label": "Purchase discount under selected formula",
+            "value": 15,
+            "unit": "%",
+            "min": 0,
+            "max": 15
+          },
+          {
+            "key": "price_base",
+            "label": "FMV base for actual purchase price",
+            "value": "Lower of grant / purchase FMV",
+            "type": "select",
+            "options": [
+              "Lower of grant / purchase FMV",
+              "Purchase-date FMV only"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 ]

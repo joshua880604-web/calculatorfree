@@ -1,0 +1,424 @@
+{
+  "bond-ladder": {
+    "meta": {
+      "path": "/guides/bond-ladder-coupons-and-treasury-bills/",
+      "title": "Bond Ladders: Coupons, Bill Discounts and Maturity Cash",
+      "heading": "Bond Ladders: Coupons, Bill Discounts and Maturity Cash",
+      "description": "A bond ladder staggers principal maturities; coupon income and returned principal are different cash flows.",
+      "publishedOn": "2026-11-24",
+      "calculatorIds": [
+        "bond-ladder",
+        "bond",
+        "treasury-bill",
+        "cd-ladder",
+        "bond-duration",
+        "retirement-withdrawal"
+      ],
+      "topic": "Savings & investing",
+      "breadcrumb": "Bond ladder",
+      "cardIntro": "A bond ladder staggers principal maturities; coupon income and returned principal are different cash flows. Three $10,000 par bonds paying 4% and maturing in one, two and three years return $30,000 face plus $2,400 coupons when allowed to run off.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Choose regular coupon bonds or discount Treasury bills, enter your prices and inspect the dated cash-flow schedule. Compare retaining proceeds with renewing the same face amount; neither outstanding face nor purchase cost is a current market valuation.",
+    "answer": "A bond ladder staggers principal maturities; coupon income and returned principal are different cash flows. Three $10,000 par bonds paying 4% and maturing in one, two and three years return $30,000 face plus $2,400 coupons when allowed to run off.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original hypothetical examples checked against independent high-precision calculations and published CMS tables. No live security quote, SSA determination or external professional review is claimed.",
+    "sections": [
+      {
+        "id": "cash",
+        "title": "What is income and what is returned capital?",
+        "paragraphs": [
+          "Coupon bonds distribute contractual coupons while principal remains outstanding, then return face value at maturity. In the three-rung example, the one-, two- and three-year bonds contribute 400, 800 and 1,200 in coupons. Their 30,000 face redemption is separate.",
+          "A discounted bill has no periodic coupon in this worksheet. A 10,000-face bill bought for 9,900 realizes a 100 cash-flow gain when 10,000 is paid back. It does not earn 10,000 in interest."
+        ],
+        "formula": "Retained cash = coupons + principal redemptions \u2212 renewal purchases. Cash + outstanding purchase cost \u2212 initial cost = modeled realized cash-flow gain."
+      },
+      {
+        "id": "renewal",
+        "title": "What does rolling the same face amount do?",
+        "paragraphs": [
+          "Coupon renewals buy the same face at par and use your chosen coupon rate and term. Coupons are retained in zero-interest cash. Bill renewals buy the same face at your chosen price, retaining the difference between redemption and the new purchase cost.",
+          "This is different from reinvesting every dollar of maturity cash or adding coupon income to new principal. A maturity exactly on the horizon is retained in cash; later maturities remain outstanding. Future renewal prices and coupons are assumptions."
+        ]
+      },
+      {
+        "id": "values",
+        "title": "How should I compare cash and outstanding balances?",
+        "paragraphs": [
+          "A runoff ladder and a rolling ladder can end with very different cash while still holding different securities. The comparison shows cash, outstanding face, outstanding purchase cost and realized cash-flow gain separately.",
+          "Cash plus outstanding purchase cost minus initial purchase cost reconciles to the worksheet\u2019s realized cash-flow gain. It does not mark securities to market, calculate unrealized gains or establish a tax basis. Do not rank the alternatives as total-return winners from this table."
+        ]
+      },
+      {
+        "id": "dates",
+        "title": "Which dates and risks does the schedule cover?",
+        "paragraphs": [
+          "All initial rungs share the entered settlement date. Coupon bonds must settle immediately after a regular coupon date; dates follow month anniversaries with month-end clamping. Bills use actual calendar-day offsets. No business-day adjustments, accrued interest or irregular coupons are modeled.",
+          "The model does not price early sales, default, calls, inflation-linked securities, taxes or fees. Bill face amounts can be fractional for arithmetic; they are not TreasuryDirect order increments or evidence an auction order can execute."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is this a CD ladder calculator?",
+        "answer": "No. Coupon bonds and discount bills have distinct cash flows here. Use the separate CD ladder for APY-based deposit scenarios."
+      },
+      {
+        "question": "Does the renewal rate come from live auctions?",
+        "answer": "No. You supply future coupon rates or bill purchase prices. These are scenarios, not market quotes."
+      },
+      {
+        "question": "What happens to a maturity exactly at the horizon?",
+        "answer": "It pays into retained cash without another renewal. Face amounts due later remain outstanding and are not treated as cash."
+      }
+    ],
+    "sources": [
+      {
+        "title": "TreasuryDirect: Treasury notes and semiannual coupons",
+        "url": "https://www.treasurydirect.gov/marketable-securities/treasury-notes/",
+        "usedFor": "Stated definitions, product mechanics or official year-specific income/premium tables.",
+        "scope": "Original USD cash-flow ladder with 1\u201320 regular-coupon bonds or discount bills. Common settlement, manually entered prices, explicit horizon, no default/call/fees/tax/early sale. Coupon bonds settle just after a coupon; renewals are semiannual at par. Bill renewals use same face and an entered future price. Outstanding cost and face are not market values."
+      },
+      {
+        "title": "TreasuryDirect: bills, discount purchase and face redemption",
+        "url": "https://www.treasurydirect.gov/marketable-securities/treasury-bills/",
+        "usedFor": "Stated definitions, product mechanics or official year-specific income/premium tables.",
+        "scope": "Original USD cash-flow ladder with 1\u201320 regular-coupon bonds or discount bills. Common settlement, manually entered prices, explicit horizon, no default/call/fees/tax/early sale. Coupon bonds settle just after a coupon; renewals are semiannual at par. Bill renewals use same face and an entered future price. Outstanding cost and face are not market values."
+      },
+      {
+        "title": "SEC Investor.gov: bond cash flows and risks",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
+        "usedFor": "Stated definitions, product mechanics or official year-specific income/premium tables.",
+        "scope": "Original USD cash-flow ladder with 1\u201320 regular-coupon bonds or discount bills. Common settlement, manually entered prices, explicit horizon, no default/call/fees/tax/early sale. Coupon bonds settle just after a coupon; renewals are semiannual at par. Bill renewals use same face and an entered future price. Outstanding cost and face are not market values."
+      }
+    ],
+    "related": [
+      {
+        "href": "/bond-calculator",
+        "label": "Bond Calculator"
+      },
+      {
+        "href": "/treasury-bill-calculator",
+        "label": "Treasury Bill Calculator"
+      },
+      {
+        "href": "/cd-ladder-calculator",
+        "label": "Cd Ladder Calculator"
+      },
+      {
+        "href": "/bond-duration-calculator",
+        "label": "Bond Duration Calculator"
+      },
+      {
+        "href": "/retirement-withdrawal-calculator",
+        "label": "Retirement Withdrawal Calculator"
+      },
+      {
+        "href": "/glossary/bond-ladder/",
+        "label": "Bond ladder definition"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Let three coupon bonds mature without renewal",
+        "path": "/bond-ladder-calculator.html",
+        "mode": "coupon-bonds",
+        "values": {
+          "settlement": "2026-12-01",
+          "rungs": "10000, 100, 4, 2, 2\n10000, 100, 4, 4, 2\n10000, 100, 4, 6, 2",
+          "horizon_months": 36,
+          "maturity": "Retain maturity proceeds",
+          "renewal_months": 36,
+          "renewal_coupon": 4
+        },
+        "featured": true
+      },
+      {
+        "label": "Preserve a premium-bond redemption loss",
+        "path": "/bond-ladder-calculator.html",
+        "mode": "coupon-bonds",
+        "values": {
+          "settlement": "2026-12-01",
+          "rungs": "10000, 105, 2, 2, 2",
+          "horizon_months": 12,
+          "maturity": "Retain maturity proceeds",
+          "renewal_months": 36,
+          "renewal_coupon": 4
+        },
+        "featured": true
+      },
+      {
+        "label": "Roll coupon principal at par and keep coupons in cash",
+        "path": "/bond-ladder-calculator.html",
+        "mode": "coupon-bonds",
+        "values": {
+          "settlement": "2026-12-01",
+          "rungs": "10000, 100, 4, 2, 2\n10000, 100, 4, 4, 2\n10000, 100, 4, 6, 2",
+          "horizon_months": 36,
+          "maturity": "Roll same face amount",
+          "renewal_months": 36,
+          "renewal_coupon": 4
+        },
+        "featured": true
+      },
+      {
+        "label": "Separate bill principal from its discount income",
+        "path": "/bond-ladder-calculator.html",
+        "mode": "treasury-bills",
+        "values": {
+          "settlement": "2026-12-01",
+          "rungs": "10000, 99, 28\n10000, 98, 56\n10000, 97, 84",
+          "horizon_days": 84,
+          "maturity": "Retain maturity proceeds",
+          "renewal_days": "91",
+          "renewal_price": 98.75
+        },
+        "featured": true
+      },
+      {
+        "label": "Roll the same bill face rather than all maturity cash",
+        "path": "/bond-ladder-calculator.html",
+        "mode": "treasury-bills",
+        "values": {
+          "settlement": "2026-12-01",
+          "rungs": "10000, 99, 28",
+          "horizon_days": 56,
+          "maturity": "Roll same face amount",
+          "renewal_days": "28",
+          "renewal_price": 98.75
+        },
+        "featured": true
+      }
+    ],
+    "limitations": [
+      "Original USD cash-flow ladder with 1\u201320 regular-coupon bonds or discount bills. Common settlement, manually entered prices, explicit horizon, no default/call/fees/tax/early sale. Coupon bonds settle just after a coupon; renewals are semiannual at par. Bill renewals use same face and an entered future price. Outstanding cost and face are not market values.",
+      "Principal coming back is not all interest. Outstanding face and cost are not guaranteed sale prices; cash-flow gain is not a tax calculation or a total-return ranking."
+    ]
+  },
+  "irmaa": {
+    "meta": {
+      "path": "/guides/medicare-irmaa-magi-and-premium-years/",
+      "title": "Medicare IRMAA 2026\u20132027: Income Years, Tiers and Surcharges",
+      "heading": "Medicare IRMAA 2026\u20132027: Income Years, Tiers and Surcharges",
+      "description": "IRMAA adds income-related charges to Medicare Part B and Part D premiums.",
+      "publishedOn": "2026-11-24",
+      "calculatorIds": [
+        "irmaa",
+        "retirement-withdrawal",
+        "roth-conversion-ladder",
+        "income-tax",
+        "cobra-cost"
+      ],
+      "topic": "Retirement",
+      "breadcrumb": "Medicare IRMAA",
+      "cardIntro": "IRMAA adds income-related charges to Medicare Part B and Part D premiums. Under the official 2027 table, individual MAGI of $112,000 has no surcharge; $112,001 enters a bracket with $83.70 Part B and $15.40 Part D IRMAA per person per month.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Select the premium year and use income and filing status from the applicable return. This guide separates the official 2026 and 2027 brackets, usual lookback years, per-person surcharges, plan premiums and exact threshold boundaries.",
+    "answer": "IRMAA adds income-related charges to Medicare Part B and Part D premiums. Under the official 2027 table, individual MAGI of $112,000 has no surcharge; $112,001 enters a bracket with $83.70 Part B and $15.40 Part D IRMAA per person per month.",
+    "featuredBeforeIntro": true,
+    "exampleNote": "Original hypothetical examples checked against independent high-precision calculations and published CMS tables. No live security quote, SSA determination or external professional review is claimed.",
+    "sections": [
+      {
+        "id": "years",
+        "title": "Which income year belongs to each premium year?",
+        "paragraphs": [
+          "The official 2026 premium-year table normally uses tax-year 2024 income; the official 2027 table normally uses tax-year 2025 income. These are different years and different threshold schedules. SSA can use an older available return or make a new determination, so follow the actual notice.",
+          "The 2027 table was published by CMS on November 17, 2026. This calculator includes that announced data alongside 2026; it does not extrapolate thresholds for later unannounced years."
+        ],
+        "formula": "Medicare IRMAA MAGI = AGI + tax-exempt interest. Monthly surcharge = applicable Part B adjustment + Part D adjustment for selected coverage, per covered person."
+      },
+      {
+        "id": "magi",
+        "title": "Which MAGI definition is used for Medicare?",
+        "paragraphs": [
+          "For this worksheet, Medicare IRMAA MAGI is known federal AGI plus tax-exempt interest. It is not the same as every MAGI definition used for tax credits or IRA contributions. The AGI bridge does not prepare a tax return.",
+          "A Roth conversion can interact with taxable Social Security, deductions and other tax calculations. The optional added-income scenario simply adds the MAGI change you specify to the same income-year input and applies the same premium-year table; it does not calculate an optimal conversion."
+        ]
+      },
+      {
+        "id": "cliff",
+        "title": "What happens exactly at a bracket boundary?",
+        "paragraphs": [
+          "For a 2027 individual, 112,000 is still in the zero-IRMAA tier. At 112,001, monthly combined Part B/D IRMAA is 99.10 per person. The yearly 1,189.20 surcharge is not an income-tax marginal rate.",
+          "Intermediate upper limits are inclusive, while the final bracket begins exactly at 500,000 individual or 750,000 joint. Filing separately while living together has a distinct schedule, with the 2027 top bracket beginning at 388,000. The complete selected table is displayed beside the calculation."
+        ]
+      },
+      {
+        "id": "people",
+        "title": "Does a joint return mean one surcharge for the household?",
+        "paragraphs": [
+          "The threshold uses the joint return, but Medicare premiums and adjustments are assessed per covered person. If both spouses have the same selected coverage, multiply the per-person adjustment by two. Different coverage, plan quotes or enrollment months require separate calculations.",
+          "Part D IRMAA is additional to the selected plan\u2019s own premium. The entered 35 plan premium in these examples is hypothetical, not an official national plan price or quotation."
+        ]
+      },
+      {
+        "id": "exceptions",
+        "title": "What requires a separate official decision?",
+        "paragraphs": [
+          "This worksheet uses full Part B coverage and the published income tables. Immunosuppressive-drug-only premiums, subsidies, hold-harmless protection, late penalties, Medicare Advantage reductions, actual enrollment timing and out-of-pocket medical costs are outside the calculation.",
+          "Living apart throughout the applicable tax year can change the schedule for married separate filers; SSA may require an attestation. An amended return or qualifying life-changing event can warrant a different determination. Use SSA guidance for that process; this calculator neither submits nor predicts an appeal."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is the 2027 standard Part B premium itself an IRMAA surcharge?",
+        "answer": "No. The 209.40 standard monthly premium is separate from the income adjustment. The output lists surcharge and total premium amounts distinctly."
+      },
+      {
+        "question": "Does only the excess income pay IRMAA?",
+        "answer": "No. IRMAA is a bracket-based premium adjustment per covered person, not a marginal income-tax rate applied only to the excess income."
+      },
+      {
+        "question": "Can two spouses have different total costs?",
+        "answer": "Yes. Different enrollment, Part D plan premiums and coverage can differ even when a joint-return income threshold applies. Run separate estimates when the same-coverage assumption does not fit."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CMS: official 2027 full Part B premiums and Part D IRMAA",
+        "url": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles",
+        "usedFor": "Stated definitions, product mechanics or official year-specific income/premium tables.",
+        "scope": "U.S. full-Part-B and Part-D IRMAA for official premium years 2026/2027, using entered Medicare MAGI or known AGI plus tax-exempt interest. Selected coverage and one person, or two identically covered people on a joint return, annualized for 12 months. No SSA determination, appeal, subsidy, hold-harmless, tax optimization or immunosuppressive-drug-only premium model."
+      },
+      {
+        "title": "CMS: official 2026 full Part B premiums and Part D IRMAA",
+        "url": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles",
+        "usedFor": "Stated definitions, product mechanics or official year-specific income/premium tables.",
+        "scope": "U.S. full-Part-B and Part-D IRMAA for official premium years 2026/2027, using entered Medicare MAGI or known AGI plus tax-exempt interest. Selected coverage and one person, or two identically covered people on a joint return, annualized for 12 months. No SSA determination, appeal, subsidy, hold-harmless, tax optimization or immunosuppressive-drug-only premium model."
+      },
+      {
+        "title": "SSA: MAGI, lookback years and higher-income premium rules",
+        "url": "https://www.ssa.gov/benefits/medicare/medicare-premiums.html",
+        "usedFor": "Stated definitions, product mechanics or official year-specific income/premium tables.",
+        "scope": "U.S. full-Part-B and Part-D IRMAA for official premium years 2026/2027, using entered Medicare MAGI or known AGI plus tax-exempt interest. Selected coverage and one person, or two identically covered people on a joint return, annualized for 12 months. No SSA determination, appeal, subsidy, hold-harmless, tax optimization or immunosuppressive-drug-only premium model."
+      },
+      {
+        "title": "SSA POMS: filing separately while living apart all year",
+        "url": "https://secure.ssa.gov/apps10/poms.nsf/lnx/0601120060",
+        "usedFor": "Stated definitions, product mechanics or official year-specific income/premium tables.",
+        "scope": "U.S. full-Part-B and Part-D IRMAA for official premium years 2026/2027, using entered Medicare MAGI or known AGI plus tax-exempt interest. Selected coverage and one person, or two identically covered people on a joint return, annualized for 12 months. No SSA determination, appeal, subsidy, hold-harmless, tax optimization or immunosuppressive-drug-only premium model."
+      }
+    ],
+    "related": [
+      {
+        "href": "/retirement-withdrawal-calculator",
+        "label": "Retirement Withdrawal Calculator"
+      },
+      {
+        "href": "/roth-conversion-ladder-calculator",
+        "label": "Roth Conversion Ladder Calculator"
+      },
+      {
+        "href": "/tax-calculator",
+        "label": "Income Tax Calculator"
+      },
+      {
+        "href": "/cobra-cost-calculator",
+        "label": "Cobra Cost Calculator"
+      },
+      {
+        "href": "/glossary/irmaa/",
+        "label": "Medicare IRMAA definition"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Use the exact 2027 first threshold",
+        "path": "/irmaa-calculator.html",
+        "mode": "known-magi",
+        "values": {
+          "year": "2027",
+          "status": "Single / head of household / qualifying surviving spouse",
+          "coverage": "Part B + Part D",
+          "people": "1",
+          "part_d_plan": 35,
+          "extra_income": 1000,
+          "magi": 112000
+        },
+        "featured": true
+      },
+      {
+        "label": "Move one dollar above the 2027 threshold",
+        "path": "/irmaa-calculator.html",
+        "mode": "known-magi",
+        "values": {
+          "year": "2027",
+          "status": "Single / head of household / qualifying surviving spouse",
+          "coverage": "Part B + Part D",
+          "people": "1",
+          "part_d_plan": 35,
+          "extra_income": 1000,
+          "magi": 112001
+        },
+        "featured": true
+      },
+      {
+        "label": "Count both covered people on a 2026 joint return",
+        "path": "/irmaa-calculator.html",
+        "mode": "known-magi",
+        "values": {
+          "year": "2026",
+          "status": "Married filing jointly",
+          "coverage": "Part B + Part D",
+          "people": "2",
+          "part_d_plan": 35,
+          "extra_income": 1000,
+          "magi": 218001
+        },
+        "featured": true
+      },
+      {
+        "label": "Build Medicare MAGI from known AGI and exempt interest",
+        "path": "/irmaa-calculator.html",
+        "mode": "agi-bridge",
+        "values": {
+          "year": "2027",
+          "status": "Single / head of household / qualifying surviving spouse",
+          "coverage": "Part B + Part D",
+          "people": "1",
+          "part_d_plan": 35,
+          "extra_income": 1000,
+          "agi": 110000,
+          "tax_exempt_interest": 2000
+        },
+        "featured": true
+      },
+      {
+        "label": "Check the exact 2027 separately-filing top boundary",
+        "path": "/irmaa-calculator.html",
+        "mode": "known-magi",
+        "values": {
+          "year": "2027",
+          "status": "Married filing separately: lived together",
+          "coverage": "Part B + Part D",
+          "people": "1",
+          "part_d_plan": 35,
+          "extra_income": 1000,
+          "magi": 388000
+        },
+        "featured": true
+      },
+      {
+        "label": "Include only Part D when Part B is not selected",
+        "path": "/irmaa-calculator.html",
+        "mode": "known-magi",
+        "values": {
+          "year": "2027",
+          "status": "Single / head of household / qualifying surviving spouse",
+          "coverage": "Part D only",
+          "people": "1",
+          "part_d_plan": 35,
+          "extra_income": 1000,
+          "magi": 112001
+        },
+        "featured": true
+      }
+    ],
+    "limitations": [
+      "U.S. full-Part-B and Part-D IRMAA for official premium years 2026/2027, using entered Medicare MAGI or known AGI plus tax-exempt interest. Selected coverage and one person, or two identically covered people on a joint return, annualized for 12 months. No SSA determination, appeal, subsidy, hold-harmless, tax optimization or immunosuppressive-drug-only premium model.",
+      "Do not apply a premium-year table to the wrong income year, count a joint-return surcharge only once when both spouses are covered, or substitute Part D IRMAA for the separate plan premium."
+    ]
+  }
+}

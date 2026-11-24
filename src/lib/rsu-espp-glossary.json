@@ -1,0 +1,176 @@
+[
+  {
+    "slug": "restricted-stock-units",
+    "name": "Restricted stock units (RSUs)",
+    "title": "Restricted stock units (RSUs): Income, Basis and Worked Example",
+    "description": "An RSU is an employer\u2019s promise to deliver shares or cash after conditions are met. In the supported stock-delivery case, wage income and later sale gain are separate tax events.",
+    "category": "Tax & income",
+    "aliases": [],
+    "definition": "An RSU is an employer\u2019s promise to deliver shares or cash after conditions are met. In the supported stock-delivery case, wage income and later sale gain are separate tax events.",
+    "explanation": "RSU withholding and final tax are different. In a 2026 illustration, 100 delivered shares at $50 create $5,000 wage income. With $1,100 federal withholding and $400 other allocated withholding, retained value is $3,500, or 70 shares at that same price.",
+    "formula": "Delivery wages = gross shares \u00d7 income-date FMV. Sale basis = shares sold \u00d7 FMV already included as wages. Capital gain = net sale proceeds \u2212 allocated basis.",
+    "formulaNote": "U.S. 2026 stock-settled RSU delivery with simultaneous vesting/income recognition and no purchase price, or a single 2026 sale of an already-taxed nonrestricted lot. Optional federal supplemental method or entered actual withholding; other withholding and marginal tax rates are supplied assumptions. No payroll/FICA/state-law engine, deferred/private-company special timing, 83(i), wash sale, full return or final tax determination.",
+    "example": {
+      "title": "Separate wage value from retained shares equivalent",
+      "intro": "settlement: 2026-11-24; shares: 100; fmv: 50; method: 2026 optional supplemental method; prior_supplemental: 0; actual_federal: 1100; other_withholding: 400; assumed_federal_rate: 32",
+      "steps": [
+        "100 \u00d7 50 = 5,000 taxable wage value.",
+        "Optional federal withholding at 22% is 1,100. Add the entered 400 other withholding.",
+        "Retained value = 5,000 \u2212 1,500 = 3,500; 3,500 / 50 = 70 shares equivalent. This is not broker rounding."
+      ],
+      "answer": "Value after allocated withholding: 3,500.00 for the stated assumptions.",
+      "assumptions": "U.S. 2026 stock-settled RSU delivery with simultaneous vesting/income recognition and no purchase price, or a single 2026 sale of an already-taxed nonrestricted lot. Optional federal supplemental method or entered actual withholding; other withholding and marginal tax rates are supplied assumptions. No payroll/FICA/state-law engine, deferred/private-company special timing, 83(i), wash sale, full return or final tax determination.",
+      "calculator": {
+        "id": "rsu-tax",
+        "mode": "delivery",
+        "values": {
+          "settlement": "2026-11-24",
+          "shares": 100,
+          "fmv": 50,
+          "method": "2026 optional supplemental method",
+          "prior_supplemental": 0,
+          "actual_federal": 1100,
+          "other_withholding": 400,
+          "assumed_federal_rate": 32
+        },
+        "expected": [
+          {
+            "label": "Value after allocated withholding",
+            "value": 3500,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Separate compensation from capital gain",
+      "text": "The grant price and the value remaining after withholding are not the income-date basis of the gross shares. Do not tax the same wage amount again as sale gain or mistake optional federal withholding for final tax."
+    },
+    "tools": [
+      {
+        "id": "rsu-tax",
+        "text": "Restore the worked example and inspect the income/basis bridge."
+      }
+    ],
+    "related": [
+      "cost-basis",
+      "capital-gains"
+    ],
+    "sources": [
+      {
+        "title": "IRS Publication 15 (2026), section 7: supplemental withholding",
+        "url": "https://www.irs.gov/publications/p15"
+      },
+      {
+        "title": "IRS Publication 5992 (June 2024): equity compensation context",
+        "url": "https://www.irs.gov/pub/irs-pdf/p5992.pdf"
+      },
+      {
+        "title": "IRS Topic 409: capital basis and holding periods",
+        "url": "https://www.irs.gov/taxtopics/tc409"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "scope": "U.S. 2026 stock-settled RSU delivery with simultaneous vesting/income recognition and no purchase price, or a single 2026 sale of an already-taxed nonrestricted lot. Optional federal supplemental method or entered actual withholding; other withholding and marginal tax rates are supplied assumptions. No payroll/FICA/state-law engine, deferred/private-company special timing, 83(i), wash sale, full return or final tax determination.",
+    "guides": [
+      {
+        "title": "RSU Taxes: Delivery Withholding Versus Sale Basis",
+        "path": "/guides/rsu-withholding-and-sale-cost-basis/"
+      }
+    ]
+  },
+  {
+    "slug": "employee-stock-purchase-plan",
+    "name": "Employee stock purchase plan (ESPP)",
+    "title": "Employee stock purchase plan (ESPP): Income, Basis and Worked Example",
+    "description": "A Section 423 ESPP lets eligible employees purchase employer shares under a qualifying plan. A later disposition can produce ordinary compensation and a separate capital gain or loss.",
+    "category": "Tax & income",
+    "aliases": [],
+    "definition": "A Section 423 ESPP lets eligible employees purchase employer shares under a qualifying plan. A later disposition can produce ordinary compensation and a separate capital gain or loss.",
+    "explanation": "A Section 423 ESPP sale can contain both compensation and capital gain. In the stated qualifying-date example, 100 shares bought for $68 have $1,500 compensation and $8,300 adjusted basis; selling at $120 with $10 fees leaves $3,690 capital gain.",
+    "formula": "Adjusted basis = purchase cost + compensation included in income. Capital result = net sale proceeds \u2212 adjusted basis. Compensation + capital result = economic gain/loss before tax.",
+    "formulaNote": "One U.S. 2026 sale of a confirmed Section 423 ESPP lot, with exercise and nonrestricted share transfer together. Actual purchase/grant-date-as-if prices or a stated 0\u201315% discount formula; ordinary compensation, adjusted basis and separate capital term. Entered tax rates are assumptions. No plan/employment qualification, $25,000 accrual test, nonqualified plan, ISO, deferral, gift/death, wash sale, tax return or filing.",
+    "example": {
+      "title": "Keep the lookback purchase price distinct from the grant-date price",
+      "intro": "plan: Section 423 plan confirmed; grant: 2023-12-01; purchase: 2024-06-01; sale: 2026-11-24; shares: 100; grant_fmv: 100; purchase_fmv: 80; sale_price: 120; fees: 10; ordinary_rate: 32; short_rate: 32; long_rate: 15; paid: 68; grant_option: 85",
+      "steps": [
+        "Actual price is 68, while grant-date as-if exercise price is 85 against grant FMV 100.",
+        "Qualifying compensation per share = min(100 \u2212 85, 120 \u2212 68) = 15. For 100 shares this is 1,500.",
+        "Basis = 6,800 + 1,500 = 8,300. Net proceeds 11,990 less basis gives 3,690 capital gain."
+      ],
+      "answer": "Capital gain / loss after compensation basis: 3,690.00 for the stated assumptions.",
+      "assumptions": "One U.S. 2026 sale of a confirmed Section 423 ESPP lot, with exercise and nonrestricted share transfer together. Actual purchase/grant-date-as-if prices or a stated 0\u201315% discount formula; ordinary compensation, adjusted basis and separate capital term. Entered tax rates are assumptions. No plan/employment qualification, $25,000 accrual test, nonqualified plan, ISO, deferral, gift/death, wash sale, tax return or filing.",
+      "calculator": {
+        "id": "espp-tax",
+        "mode": "known-price",
+        "values": {
+          "plan": "Section 423 plan confirmed",
+          "grant": "2023-12-01",
+          "purchase": "2024-06-01",
+          "sale": "2026-11-24",
+          "shares": 100,
+          "grant_fmv": 100,
+          "purchase_fmv": 80,
+          "sale_price": 120,
+          "fees": 10,
+          "ordinary_rate": 32,
+          "short_rate": 32,
+          "long_rate": 15,
+          "paid": 68,
+          "grant_option": 85
+        },
+        "expected": [
+          {
+            "label": "Capital gain / loss after compensation basis",
+            "value": 3690,
+            "tolerance": 1e-07
+          }
+        ]
+      }
+    },
+    "pitfall": {
+      "title": "Separate compensation from capital gain",
+      "text": "A disqualifying ESPP sale can have wage income despite an economic loss, or can have long-term capital gain if only the grant-date test fails. Do not apply the ISO sale-gain cap or the RSU withholding formula to Section 423 compensation."
+    },
+    "tools": [
+      {
+        "id": "espp-tax",
+        "text": "Restore the worked example and inspect the income/basis bridge."
+      }
+    ],
+    "related": [
+      "cost-basis",
+      "capital-gains"
+    ],
+    "sources": [
+      {
+        "title": "IRS Publication 525: Section 423 ESPP compensation and basis",
+        "url": "https://www.irs.gov/publications/p525"
+      },
+      {
+        "title": "IRS Form 3922 instructions: actual price and grant-date hypothetical price",
+        "url": "https://www.irs.gov/instructions/i3921"
+      },
+      {
+        "title": "Treasury regulation 1.423-1: holding and employment conditions",
+        "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title26-vol7/xhtml/CFR-2025-title26-vol7-sec1-423-1.html"
+      },
+      {
+        "title": "IRS employment-tax guidance: statutory option disposition treatment",
+        "url": "https://www.irs.gov/irm/part4/irm_04-023-005r"
+      },
+      {
+        "title": "IRS Topic 409: capital holding periods",
+        "url": "https://www.irs.gov/taxtopics/tc409"
+      }
+    ],
+    "checkedOn": "2026-11-24",
+    "scope": "One U.S. 2026 sale of a confirmed Section 423 ESPP lot, with exercise and nonrestricted share transfer together. Actual purchase/grant-date-as-if prices or a stated 0\u201315% discount formula; ordinary compensation, adjusted basis and separate capital term. Entered tax rates are assumptions. No plan/employment qualification, $25,000 accrual test, nonqualified plan, ISO, deferral, gift/death, wash sale, tax return or filing.",
+    "guides": [
+      {
+        "title": "ESPP Taxes: Disposition Dates, Compensation and Adjusted Basis",
+        "path": "/guides/espp-qualifying-disposition-and-cost-basis/"
+      }
+    ]
+  }
+]

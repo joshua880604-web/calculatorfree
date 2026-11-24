@@ -1,0 +1,271 @@
+{
+  "bond-ladder": [
+    {
+      "title": "Let three coupon bonds mature without renewal",
+      "mode": "coupon-bonds",
+      "values": {
+        "settlement": "2026-12-01",
+        "rungs": "10000, 100, 4, 2, 2\n10000, 100, 4, 4, 2\n10000, 100, 4, 6, 2",
+        "horizon_months": 36,
+        "maturity": "Retain maturity proceeds",
+        "renewal_months": 36,
+        "renewal_coupon": 4
+      },
+      "inputs": "settlement: 2026-12-01; rungs: 10000, 100, 4, 2, 2\n10000, 100, 4, 4, 2\n10000, 100, 4, 6, 2; horizon_months: 36; maturity: Retain maturity proceeds; renewal_months: 36; renewal_coupon: 4",
+      "steps": [
+        "All three $10,000 bonds are bought at par; initial cost = $30,000.",
+        "Semiannual coupons are $200 per bond. They pay 2, 4 and 6 remaining coupons, totaling $2,400.",
+        "Retained cash after all original maturities = $30,000 + $2,400 = $32,400."
+      ],
+      "answer": "Retained cash through horizon: 32,400.00 for the stated case.",
+      "expected": {
+        "label": "Retained cash through horizon",
+        "value": 32400,
+        "tolerance": 1e-07
+      }
+    },
+    {
+      "title": "Preserve a premium-bond redemption loss",
+      "mode": "coupon-bonds",
+      "values": {
+        "settlement": "2026-12-01",
+        "rungs": "10000, 105, 2, 2, 2",
+        "horizon_months": 12,
+        "maturity": "Retain maturity proceeds",
+        "renewal_months": 36,
+        "renewal_coupon": 4
+      },
+      "inputs": "settlement: 2026-12-01; rungs: 10000, 105, 2, 2, 2; horizon_months: 12; maturity: Retain maturity proceeds; renewal_months: 36; renewal_coupon: 4",
+      "steps": [
+        "Pay $10,500 for $10,000 face. Two $100 coupons total $200.",
+        "Maturity returns $10,000, so cash is $10,200 and cash-flow gain is \u2212$300. No tax amortization is inferred."
+      ],
+      "answer": "Realized cash-flow gain, not tax income: -300.00 for the stated case.",
+      "expected": {
+        "label": "Realized cash-flow gain, not tax income",
+        "value": -300,
+        "tolerance": 1e-07
+      }
+    },
+    {
+      "title": "Roll coupon principal at par and keep coupons in cash",
+      "mode": "coupon-bonds",
+      "values": {
+        "settlement": "2026-12-01",
+        "rungs": "10000, 100, 4, 2, 2\n10000, 100, 4, 4, 2\n10000, 100, 4, 6, 2",
+        "horizon_months": 36,
+        "maturity": "Roll same face amount",
+        "renewal_months": 36,
+        "renewal_coupon": 4
+      },
+      "inputs": "settlement: 2026-12-01; rungs: 10000, 100, 4, 2, 2\n10000, 100, 4, 4, 2\n10000, 100, 4, 6, 2; horizon_months: 36; maturity: Roll same face amount; renewal_months: 36; renewal_coupon: 4",
+      "steps": [
+        "The one-year and two-year original maturities buy new three-year par bonds. Coupons remain in cash.",
+        "At month 36, $20,000 face remains outstanding and the final original $10,000 maturity stays in cash.",
+        "Coupon cash totals $3,600 across original and renewed bonds, leaving $13,600 retained cash."
+      ],
+      "answer": "Retained cash through horizon: 13,600.00 for the stated case.",
+      "expected": {
+        "label": "Retained cash through horizon",
+        "value": 13600,
+        "tolerance": 1e-07
+      }
+    },
+    {
+      "title": "Separate bill principal from its discount income",
+      "mode": "treasury-bills",
+      "values": {
+        "settlement": "2026-12-01",
+        "rungs": "10000, 99, 28\n10000, 98, 56\n10000, 97, 84",
+        "horizon_days": 84,
+        "maturity": "Retain maturity proceeds",
+        "renewal_days": "91",
+        "renewal_price": 98.75
+      },
+      "inputs": "settlement: 2026-12-01; rungs: 10000, 99, 28\n10000, 98, 56\n10000, 97, 84; horizon_days: 84; maturity: Retain maturity proceeds; renewal_days: 91; renewal_price: 98.75",
+      "steps": [
+        "Purchase costs are $9,900, $9,800 and $9,700: total $29,400.",
+        "Each bill pays $10,000 face at maturity; all three redeem by day 84.",
+        "Cash is $30,000, while realized discount gain is only $600."
+      ],
+      "answer": "Realized discount gain through horizon: 600.00 for the stated case.",
+      "expected": {
+        "label": "Realized discount gain through horizon",
+        "value": 600,
+        "tolerance": 1e-07
+      }
+    },
+    {
+      "title": "Roll the same bill face rather than all maturity cash",
+      "mode": "treasury-bills",
+      "values": {
+        "settlement": "2026-12-01",
+        "rungs": "10000, 99, 28",
+        "horizon_days": 56,
+        "maturity": "Roll same face amount",
+        "renewal_days": "28",
+        "renewal_price": 98.75
+      },
+      "inputs": "settlement: 2026-12-01; rungs: 10000, 99, 28; horizon_days: 56; maturity: Roll same face amount; renewal_days: 28; renewal_price: 98.75",
+      "steps": [
+        "Pay $9,900 initially. Day 28 redemption pays $10,000; renewal costs $9,875 at a price of 98.75 per $100, leaving $125 cash.",
+        "Day 56 is the horizon, so the renewed bill pays $10,000 without another renewal.",
+        "Retained cash is $10,125; subtract original $9,900 for realized cash-flow gain $225."
+      ],
+      "answer": "Retained cash through horizon: 10,125.00 for the stated case.",
+      "expected": {
+        "label": "Retained cash through horizon",
+        "value": 10125,
+        "tolerance": 1e-07
+      }
+    }
+  ],
+  "irmaa": [
+    {
+      "title": "Use the exact 2027 first threshold",
+      "mode": "known-magi",
+      "values": {
+        "year": "2027",
+        "status": "Single / head of household / qualifying surviving spouse",
+        "coverage": "Part B + Part D",
+        "people": "1",
+        "part_d_plan": 35,
+        "extra_income": 1000,
+        "magi": 112000
+      },
+      "inputs": "year: 2027; status: Single / head of household / qualifying surviving spouse; coverage: Part B + Part D; people: 1; part_d_plan: 35; extra_income: 1000; magi: 112000",
+      "steps": [
+        "2027 individual MAGI at 112,000 remains in the zero-IRMAA tier.",
+        "Full Part B standard premium 209.40 plus the hypothetical entered Part D plan premium 35 gives 244.40 per month; none of that is IRMAA."
+      ],
+      "answer": "Monthly IRMAA for selected people: 0.00 for the stated case.",
+      "expected": {
+        "label": "Monthly IRMAA for selected people",
+        "value": 0,
+        "tolerance": 1e-07
+      }
+    },
+    {
+      "title": "Move one dollar above the 2027 threshold",
+      "mode": "known-magi",
+      "values": {
+        "year": "2027",
+        "status": "Single / head of household / qualifying surviving spouse",
+        "coverage": "Part B + Part D",
+        "people": "1",
+        "part_d_plan": 35,
+        "extra_income": 1000,
+        "magi": 112001
+      },
+      "inputs": "year: 2027; status: Single / head of household / qualifying surviving spouse; coverage: Part B + Part D; people: 1; part_d_plan: 35; extra_income: 1000; magi: 112001",
+      "steps": [
+        "112,001 exceeds the inclusive 112,000 threshold.",
+        "Monthly Part B IRMAA 83.70 plus Part D IRMAA 15.40 = 99.10 per person.",
+        "Twelve-month surcharge = 99.10 \u00d7 12 = 1,189.20, in addition to standard and plan premiums."
+      ],
+      "answer": "12-month IRMAA for selected people: 1,189.20 for the stated case.",
+      "expected": {
+        "label": "12-month IRMAA for selected people",
+        "value": 1189.2,
+        "tolerance": 1e-07
+      }
+    },
+    {
+      "title": "Count both covered people on a 2026 joint return",
+      "mode": "known-magi",
+      "values": {
+        "year": "2026",
+        "status": "Married filing jointly",
+        "coverage": "Part B + Part D",
+        "people": "2",
+        "part_d_plan": 35,
+        "extra_income": 1000,
+        "magi": 218001
+      },
+      "inputs": "year: 2026; status: Married filing jointly; coverage: Part B + Part D; people: 2; part_d_plan: 35; extra_income: 1000; magi: 218001",
+      "steps": [
+        "For 2026, the usual lookback is tax year 2024. Joint MAGI 218,001 enters the first adjustment bracket.",
+        "Per person: 81.20 Part B plus 14.50 Part D = 95.70 monthly. Both covered spouses: 191.40 monthly."
+      ],
+      "answer": "Monthly IRMAA for selected people: 191.40 for the stated case.",
+      "expected": {
+        "label": "Monthly IRMAA for selected people",
+        "value": 191.4,
+        "tolerance": 1e-07
+      }
+    },
+    {
+      "title": "Build Medicare MAGI from known AGI and exempt interest",
+      "mode": "agi-bridge",
+      "values": {
+        "year": "2027",
+        "status": "Single / head of household / qualifying surviving spouse",
+        "coverage": "Part B + Part D",
+        "people": "1",
+        "part_d_plan": 35,
+        "extra_income": 1000,
+        "agi": 110000,
+        "tax_exempt_interest": 2000
+      },
+      "inputs": "year: 2027; status: Single / head of household / qualifying surviving spouse; coverage: Part B + Part D; people: 1; part_d_plan: 35; extra_income: 1000; agi: 110000; tax_exempt_interest: 2000",
+      "steps": [
+        "Known AGI 110,000 plus tax-exempt interest 2,000 gives MAGI 112,000.",
+        "Under the 2027 individual table this is still the inclusive zero-IRMAA threshold."
+      ],
+      "answer": "MAGI used for tier lookup: 112,000.00 for the stated case.",
+      "expected": {
+        "label": "MAGI used for tier lookup",
+        "value": 112000,
+        "tolerance": 1e-07
+      }
+    },
+    {
+      "title": "Check the exact 2027 separately-filing top boundary",
+      "mode": "known-magi",
+      "values": {
+        "year": "2027",
+        "status": "Married filing separately: lived together",
+        "coverage": "Part B + Part D",
+        "people": "1",
+        "part_d_plan": 35,
+        "extra_income": 1000,
+        "magi": 388000
+      },
+      "inputs": "year: 2027; status: Married filing separately: lived together; coverage: Part B + Part D; people: 1; part_d_plan: 35; extra_income: 1000; magi: 388000",
+      "steps": [
+        "For 2027 filing separately while living together, 388,000 begins the top tier.",
+        "Part B adjustment 502.40 plus Part D adjustment 96.40 = 598.80 monthly."
+      ],
+      "answer": "Monthly IRMAA for selected people: 598.80 for the stated case.",
+      "expected": {
+        "label": "Monthly IRMAA for selected people",
+        "value": 598.8,
+        "tolerance": 1e-07
+      }
+    },
+    {
+      "title": "Include only Part D when Part B is not selected",
+      "mode": "known-magi",
+      "values": {
+        "year": "2027",
+        "status": "Single / head of household / qualifying surviving spouse",
+        "coverage": "Part D only",
+        "people": "1",
+        "part_d_plan": 35,
+        "extra_income": 1000,
+        "magi": 112001
+      },
+      "inputs": "year: 2027; status: Single / head of household / qualifying surviving spouse; coverage: Part D only; people: 1; part_d_plan: 35; extra_income: 1000; magi: 112001",
+      "steps": [
+        "Selected Part D IRMAA is 15.40; no Part B standard premium or adjustment is included.",
+        "Add the hypothetical plan premium 35 to obtain monthly total 50.40."
+      ],
+      "answer": "Monthly total premiums for selected people: 50.40 for the stated case.",
+      "expected": {
+        "label": "Monthly total premiums for selected people",
+        "value": 50.4,
+        "tolerance": 1e-07
+      }
+    }
+  ]
+}
