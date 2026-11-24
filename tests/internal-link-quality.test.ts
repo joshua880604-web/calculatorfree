@@ -16,7 +16,8 @@ test('Reviewed concepts point to existing definitions already associated with th
  assert.equal(Object.values(concepts).flat().length,24);
  for(const [path,entries]of Object.entries(concepts)){
   const guide=editorialGuides.find(g=>g.path===path)!;assert.ok(guide,path);
-  assert.equal(guideContentDate(guide),linkReview.reviewedOn,path);
+  assert.equal(guide.linksUpdatedOn,linkReview.reviewedOn,path);
+  assert.ok(guideContentDate(guide)>=linkReview.reviewedOn,path+' content date covers the link review and any later content edits');
   for(const entry of entries){const term=glossaryTerms.find(t=>t.slug===entry.slug)!;assert.ok(term);assert.ok(term.guides?.some(g=>g.path===path),path);assert.ok(glossaryTermPath(term.slug).startsWith('/glossary/'));}
  }
 });

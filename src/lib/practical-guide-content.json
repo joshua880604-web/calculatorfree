@@ -5095,6 +5095,10 @@
       {
         "question": "Does this currency converter work without a live exchange-rate API?",
         "answer": "Yes. Custom Exchange Rate uses the rate you enter; Saved Reference Rates uses historical data bundled with the site and displays its dates. Neither mode requests external data. Snapshots do not update automatically and do not represent an executable bank quote; BTC conversion requires a manual rate."
+      },
+      {
+        "question": "How do I calculate an exchange rate from two amounts, including in Excel?",
+        "answer": "Divide the target-currency amount by the source-currency amount, using a positive source amount and keeping both amounts from the same conversion. If 1,000 USD converts to 900 EUR before separate fees, the rate is 900 / 1,000 = 0.90 EUR per USD. In a spreadsheet with 1,000 in A2 and 900 in B2, =B2/A2 returns that rate. To convert another USD amount using a known EUR-per-USD rate in C2, use =A2*C2. Reversing the pair requires the reciprocal rate. If the amounts include fees or a spread, their ratio is an effective transaction rate; it does not identify a fee-free reference rate or a current market quote."
       }
     ],
     "sources": [
@@ -5779,6 +5783,10 @@
       }
     ],
     "questions": [
+      {
+        "question": "What do tax-inclusive and tax-exclusive prices mean?",
+        "answer": "A tax-inclusive price already contains the tax; a tax-exclusive price is the amount before that tax is added. For the same $100 taxable base at an entered 7% rate, the tax-exclusive price is $100 and the tax-inclusive price is $107. These are two descriptions of the same purchase, not different tax rates. Check which basis a quoted price uses before entering it. Included tax does not mean that every separate fee is included or that the calculator has determined which charges are taxable."
+      },
       {
         "question": "Is included tax just gross times the rate?",
         "answer": "No. Recover net as gross/(1+rate), then subtract it from gross."

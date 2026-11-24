@@ -1,0 +1,306 @@
+{
+  "date": "2026-11-24",
+  "scope": "Representative question/task coverage on the first 12 page candidates; not a manual audit of all 5,551 question candidates.",
+  "reviewed_pages": 12,
+  "changed_pages": 3,
+  "pages": [
+    {
+      "path": "/amortization-calculator",
+      "url": "https://www.calculatorfree.io/amortization-calculator",
+      "main_keyword": "amortization calculator",
+      "main_volume": 246000.0,
+      "main_kd": 74.0,
+      "metric_source": "S17",
+      "representative_question": "额外还本金如何改变还款计划",
+      "existing_coverage": "已有月付、年付和一次性额外还款示例及问答",
+      "action": "保留现有内容",
+      "changed": false
+    },
+    {
+      "path": "/credit-card-minimum-payment-calculator",
+      "url": "https://www.calculatorfree.io/credit-card-minimum-payment-calculator",
+      "main_keyword": "credit card minimum payment calculator",
+      "main_volume": 3600.0,
+      "main_kd": 40.0,
+      "metric_source": "S16",
+      "representative_question": "最低还款如何计算及多久还清",
+      "existing_coverage": "已有计算规则、账单差异、额外付款比较",
+      "action": "保留现有内容",
+      "changed": false
+    },
+    {
+      "path": "/multiple-credit-card-payoff-calculator",
+      "url": "https://www.calculatorfree.io/multiple-credit-card-payoff-calculator",
+      "main_keyword": "multiple credit card payoff calculator",
+      "main_volume": 390.0,
+      "main_kd": 12.0,
+      "metric_source": "S15",
+      "representative_question": "多张卡的总预算是否包括最低还款",
+      "existing_coverage": "已有总预算、付款转移和高息优先问答",
+      "action": "保留现有内容",
+      "changed": false
+    },
+    {
+      "path": "/guides/roth-conversion-ladder/",
+      "url": "https://www.calculatorfree.io/guides/roth-conversion-ladder/",
+      "main_keyword": "roth conversion ladder",
+      "main_volume": 2400.0,
+      "main_kd": 19.0,
+      "metric_source": "S13",
+      "representative_question": "什么是 Roth conversion ladder",
+      "existing_coverage": "已有定义、开始时间、税与五年期区别",
+      "action": "保留现有内容",
+      "changed": false
+    },
+    {
+      "path": "/roth-conversion-ladder-calculator",
+      "url": "https://www.calculatorfree.io/roth-conversion-ladder-calculator",
+      "main_keyword": "roth conversion ladder calculator",
+      "main_volume": 90.0,
+      "main_kd": 25.0,
+      "metric_source": "S13",
+      "representative_question": "五年过渡现金和转换税如何安排",
+      "existing_coverage": "已有五年期、税款、缺口及401(k)范围说明",
+      "action": "保留现有内容",
+      "changed": false
+    },
+    {
+      "path": "/guides/how-to-calculate-monthly-budget/",
+      "url": "https://www.calculatorfree.io/guides/how-to-calculate-monthly-budget/",
+      "main_keyword": "how to create a monthly budget",
+      "main_volume": 49500.0,
+      "main_kd": 20.0,
+      "metric_source": "S11",
+      "representative_question": "如何创建月度预算",
+      "existing_coverage": "已有六组算例和频率、税前税后说明；缺少直接起步流程",
+      "action": "新增五步有序列表：收入、费用频率、储蓄与债务一次计入、结余、对账",
+      "changed": true
+    },
+    {
+      "path": "/guides/credit-card-minimum-payment-and-payoff-time/",
+      "url": "https://www.calculatorfree.io/guides/credit-card-minimum-payment-and-payoff-time/",
+      "main_keyword": "how is credit card minimum payment calculated",
+      "main_volume": 1300.0,
+      "main_kd": 37.0,
+      "metric_source": "S16",
+      "representative_question": "最低还款和固定月供是否相同",
+      "existing_coverage": "已有同一预算下的最低、额外、固定付款比较",
+      "action": "保留现有内容",
+      "changed": false
+    },
+    {
+      "path": "/guides/tax-inclusive-prices-sales-tax-and-vat/",
+      "url": "https://www.calculatorfree.io/guides/tax-inclusive-prices-sales-tax-and-vat/",
+      "main_keyword": "tax inclusive meaning",
+      "main_volume": 170.0,
+      "main_kd": 13.0,
+      "metric_source": "S10",
+      "representative_question": "含税和未税价格分别是什么意思",
+      "existing_coverage": "已有加税、去税公式；缺少直接术语对照",
+      "action": "新增同一$100税基、7%假设税率的$100/$107定义问答",
+      "changed": true
+    },
+    {
+      "path": "/sales-tax-calculator",
+      "url": "https://www.calculatorfree.io/sales-tax-calculator",
+      "main_keyword": "sales tax calculator",
+      "main_volume": null,
+      "main_kd": null,
+      "metric_source": "",
+      "representative_question": "如何从含税总额倒算税前价格",
+      "existing_coverage": "已有三种任务及去税除法、输入选择",
+      "action": "保留现有内容",
+      "changed": false
+    },
+    {
+      "path": "/compound-interest-calculator",
+      "url": "https://www.calculatorfree.io/compound-interest-calculator",
+      "main_keyword": "compound interest calculator",
+      "main_volume": 2740000.0,
+      "main_kd": 76.0,
+      "metric_source": "S12",
+      "representative_question": "月度存款和复利频率是否相同",
+      "existing_coverage": "已有固定月度投入、时点、频率、APY问答及能力边界",
+      "action": "保留现有内容；不宣称支持逐年增长投入",
+      "changed": false
+    },
+    {
+      "path": "/guides/simple-interest-vs-compound-interest/",
+      "url": "https://www.calculatorfree.io/guides/simple-interest-vs-compound-interest/",
+      "main_keyword": "simple interest vs compound interest",
+      "main_volume": 4400.0,
+      "main_kd": 49.0,
+      "metric_source": "S12",
+      "representative_question": "单利与复利有什么区别",
+      "existing_coverage": "已有公式、同本金同利率案例和直接问答",
+      "action": "保留现有内容",
+      "changed": false
+    },
+    {
+      "path": "/single-credit-card-payoff-calculator",
+      "url": "https://www.calculatorfree.io/single-credit-card-payoff-calculator",
+      "main_keyword": "credit card payoff calculator",
+      "main_volume": 22200.0,
+      "main_kd": 55.0,
+      "metric_source": "S15",
+      "representative_question": "已知月供求期限，或已知期限求月供",
+      "existing_coverage": "原两张任务卡共用泛化描述，虽指向不同模式",
+      "action": "分别说明固定月供→还清时间与利息、目标期限→所需月供",
+      "changed": true
+    }
+  ],
+  "sources_rechecked": [
+    {
+      "url": "https://www.consumerfinance.gov/owning-a-home/prepare/assess-your-spending/",
+      "scope": "Actual spending, irregular costs, savings allocations and reconciliation with take-home pay"
+    },
+    {
+      "url": "https://www.gov.uk/charge-reclaim-record-vat",
+      "scope": "Inclusive/exclusive definitions and multiplication/division identity; UK context"
+    },
+    {
+      "url": "https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/taxable_receipt.htm",
+      "scope": "Taxable base and entered rate; New York-specific context"
+    }
+  ],
+  "validation": {
+    "related_tests_passed": 905,
+    "typecheck": "passed",
+    "production_build": "passed",
+    "static_seo": {
+      "passed": true,
+      "configuration": "indexable-test-origin",
+      "pages": 469,
+      "guides": 155,
+      "internal_links_checked": 34372,
+      "calculator_state_links": 2985,
+      "max_contextual_depth": 3,
+      "redirect_rules": 200,
+      "curated_llms_links": 243,
+      "no_live_indexing_or_ranking_claim": true
+    },
+    "browser": {
+      "passed": true,
+      "testedAt": "2026-11-24T01:50:46.980Z",
+      "scope": "Local production export; does not test Cloudflare or Google indexing",
+      "checks": [
+        {
+          "width": 320,
+          "path": "/guides/how-to-calculate-monthly-budget/",
+          "status": 200,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "path": "/guides/tax-inclusive-prices-sales-tax-and-vat/",
+          "status": 200,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 320,
+          "path": "/single-credit-card-payoff-calculator",
+          "task": "Credit card interest calculator",
+          "selectedMode": "payment"
+        },
+        {
+          "width": 320,
+          "path": "/single-credit-card-payoff-calculator",
+          "task": "Credit card payment calculator",
+          "selectedMode": "term"
+        },
+        {
+          "width": 320,
+          "path": "/single-credit-card-payoff-calculator",
+          "status": 200,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "path": "/guides/how-to-calculate-monthly-budget/",
+          "status": 200,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "path": "/guides/tax-inclusive-prices-sales-tax-and-vat/",
+          "status": 200,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 390,
+          "path": "/single-credit-card-payoff-calculator",
+          "task": "Credit card interest calculator",
+          "selectedMode": "payment"
+        },
+        {
+          "width": 390,
+          "path": "/single-credit-card-payoff-calculator",
+          "task": "Credit card payment calculator",
+          "selectedMode": "term"
+        },
+        {
+          "width": 390,
+          "path": "/single-credit-card-payoff-calculator",
+          "status": 200,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "path": "/guides/how-to-calculate-monthly-budget/",
+          "status": 200,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "path": "/guides/tax-inclusive-prices-sales-tax-and-vat/",
+          "status": 200,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        },
+        {
+          "width": 1440,
+          "path": "/single-credit-card-payoff-calculator",
+          "task": "Credit card interest calculator",
+          "selectedMode": "payment"
+        },
+        {
+          "width": 1440,
+          "path": "/single-credit-card-payoff-calculator",
+          "task": "Credit card payment calculator",
+          "selectedMode": "term"
+        },
+        {
+          "width": 1440,
+          "path": "/single-credit-card-payoff-calculator",
+          "status": 200,
+          "canonical": true,
+          "indexable": true,
+          "noOverflow": true
+        }
+      ],
+      "errors": []
+    },
+    "mobile_screenshots_visually_reviewed": true
+  },
+  "publication": "Not published",
+  "limitations": [
+    "Semrush metrics are historical US estimates, not promises of traffic or rankings.",
+    "Local export checks do not verify Cloudflare behavior or Google indexing.",
+    "No calculation algorithms or canonical URLs were changed."
+  ]
+}

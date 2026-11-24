@@ -30,7 +30,7 @@ export default function CalculationGuideArticle({topic}:{topic:CalculationGuideT
   <p>{linkConcepts(data.intro)}</p><p>{linkConcepts(data.answer)}</p><p><SiteLink className="glossary-cta" href={entryExample?calculatorPresetHref(data.calculatorPath,entryExample.mode,entryExample.values):data.calculatorPath}>{entryExample?'Load the $10,000 + $200 monthly example':'Open the '+data.calculatorLabel} →</SiteLink></p>
   <nav className="guide-nav" aria-label="Guide sections">{data.sections.map(s=><a key={s.id} href={'#'+s.id}>{s.title}</a>)}<a href="#checked-cases">Checked examples</a>{topic==='heloc'&&<a href="#heloc-credit-scenarios">Borrowing ceiling</a>}<a href="#questions">Questions</a><a href="#sources">Sources & limits</a></nav>
   {topic==='afford' && <HouseIncomeReference/>}
-  {data.sections.map(s=><section key={s.id} aria-labelledby={s.id}><h2 id={s.id}>{s.title}</h2>{s.formula&&<p className="formula">{s.formula}</p>}{s.paragraphs.map(p=><p key={p}>{linkConcepts(p)}</p>)}</section>)}
+  {data.sections.map(s=><section key={s.id} aria-labelledby={s.id}><h2 id={s.id}>{s.title}</h2>{s.formula&&<p className="formula">{s.formula}</p>}{s.paragraphs.map(p=><p key={p}>{linkConcepts(p)}</p>)}{'steps' in s&&s.steps&&<ol>{s.steps.map(step=><li key={step}>{linkConcepts(step)}</li>)}</ol>}</section>)}
   {topic==='cap' && <CapRateDecisionReference/>}
   {topic==='pmi' && <PmiRateReference/>}
   <section aria-labelledby="checked-cases"><h2 id="checked-cases">Checked scenarios you can reproduce</h2><p>These are controlled hypothetical calculations, not market experiments or historical performance. Each case changes only the inputs stated in its label; complete assumptions are included in the CSV and calculator preset.</p>

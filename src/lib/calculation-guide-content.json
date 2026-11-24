@@ -6348,13 +6348,28 @@
       "breadcrumb": "How to Calculate a Monthly Budget from Income and Expenses",
       "cardIntro": "Build a monthly budget with mixed pay frequencies, spending and saving allocations. Six checked examples explain tax assumptions, irregular bills and signed deficits.",
       "format": "Calculation guide & model check",
-      "updatedOn": "2026-11-04"
+      "updatedOn": "2026-11-24"
     },
     "calculatorPath": "/budget-calculator",
     "calculatorLabel": "Budget Calculator",
     "intro": "A useful monthly budget puts income and every outflow on the same time basis. Separate taxes from take-home pay, include less frequent bills and reserve room for the savings you plan to make. This guide checks six hypothetical cases using the existing Budget Calculator; it is a worksheet model, not an account connection or a tax return.",
     "answer": "In the base case, $6,000 monthly gross income with a hypothetical 20% income-tax allowance leaves $4,800. Entered spending and savings allocations total $3,000 monthly, leaving $1,800 unallocated. The $300 emergency-saving transfer is already included in outflows; subtracting that transfer from the displayed surplus a second time would count its cash allocation twice.",
     "sections": [
+      {
+        "id": "create-budget",
+        "title": "How do I create a monthly budget?",
+        "paragraphs": [
+          "Start with your actual income and spending records, then use the calculator to put each amount on a monthly basis. Work through these five steps before changing the example inputs:"
+        ],
+        "steps": [
+          "List income on one consistent basis. If you enter take-home pay, set the tax allowance to zero so the calculator does not deduct tax again.",
+          "List recurring expenses and less frequent bills. Select the frequency for each amount; for example, a $1,200 annual bill needs a $100 monthly provision.",
+          "Include planned savings and debt commitments once. Check whether payroll deductions or current credit-card purchases are already included elsewhere in your figures.",
+          "Subtract monthly spending and saving allocations from monthly take-home income. Keep a negative result visible: it shows a gap to address, rather than money available to spend.",
+          "Compare the worksheet with bank statements and actual bill dates. Adjust missing or unrealistic entries before deciding how to use a surplus or reduce a deficit."
+        ],
+        "formula": ""
+      },
       {
         "id": "income",
         "title": "Choose a consistent income basis before deducting tax",

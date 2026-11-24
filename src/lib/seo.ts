@@ -454,3 +454,9 @@ Object.assign(contentUpdatedOn,{"/sales-tax-calculator.html":"2026-11-19","/vat-
 
 // Only the reviewed navigation pages advance; numerical review dates remain separate.
 for(const path of [...linkReview.guides,...catalog.filter(c=>linkReview.tools.includes(c.id)).map(c=>c.local_route)])recordWordingUpdate(path,linkReview.reviewedOn);
+
+// Question-led explanations and task descriptions; no calculation model changes.
+for(const path of ['/single-credit-card-payoff-calculator.html','/guides/how-to-calculate-monthly-budget/','/guides/tax-inclusive-prices-sales-tax-and-vat/'])recordWordingUpdate(path,'2026-11-24');
+
+// Follow-up: payoff-mode selection, period interest and deriving an entered FX rate.
+for(const path of ['/loan-calculator.html','/loan-repayment-calculator.html','/guides/currency-conversion-rate-direction-and-spread/'])recordWordingUpdate(path,'2026-11-24');

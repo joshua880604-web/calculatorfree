@@ -312,7 +312,8 @@
     {
       "id": "credit-card",
       "keyword": "Credit card interest calculator",
-      "mode": "payment"
+      "mode": "payment",
+      "description": "Enter your balance, APR and fixed monthly payment to estimate payoff time and total interest. The model assumes no new purchases, fees or changing APR."
     },
     {
       "id": "debt-payoff",
@@ -322,7 +323,8 @@
     {
       "id": "credit-card",
       "keyword": "Credit card payment calculator",
-      "mode": "term"
+      "mode": "term",
+      "description": "Enter your balance, APR and target payoff period to calculate the monthly payment needed. The model assumes no new purchases, fees or changing APR."
     },
     {
       "id": "debt-payoff",

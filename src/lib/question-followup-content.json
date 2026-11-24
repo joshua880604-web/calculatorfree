@@ -1,0 +1,26 @@
+{
+  "loan": {
+    "updatedOn": "2026-11-24",
+    "items": [
+      {
+        "anchor": "use-calculate-loan-interest",
+        "queries": ["how to calculate interest on a loan", "how do you calculate interest on a loan"],
+        "question": "How do I calculate interest on an amortizing loan?",
+        "answer": "For this fixed-rate model, each period's interest equals the opening balance times the effective rate for that payment period. With monthly compounding and monthly payments, a 6% nominal annual rate gives 0.5% per month. A $100,000 balance therefore incurs $500 interest in the first month. The rest of that month's payment reduces principal, so the next month's interest is calculated on a smaller balance. Total interest is the sum across the schedule, not the original principal times the annual rate times the full term. Match frequencies and check fees and day-count rules separately for an actual loan.",
+        "links": [{"id": "loan", "mode": "amortized", "label": "Inspect the $100,000 loan at 6% with monthly payments", "values": {"principal": "100000", "years": "30", "months": "0", "rate": "6", "compound": "Monthly", "pay": "Monthly"}}]
+      }
+    ]
+  },
+  "repayment": {
+    "updatedOn": "2026-11-24",
+    "items": [
+      {
+        "anchor": "use-loan-payoff-time",
+        "queries": ["how long to pay off a loan", "how long will it take to pay off loan", "how long to pay off loan calculator"],
+        "question": "How long will it take to pay off my loan with a fixed payment?",
+        "answer": "Use Fixed Payment when you know your balance, rate and payment amount. Choose the compounding and payment frequencies, then read Number of payments and Total interest. At a $20,000 balance, 6% nominal annual interest compounded monthly and $400 monthly payments, the model gives 58 payments and $3,072.27 total interest; the last payment is smaller than $400. Fixed Term answers the reverse question: the installment needed for a chosen repayment duration. To compare additional principal against your regular monthly payment, use Loan Payoff with Extra Payments.",
+        "links": [{"id": "repayment", "mode": "payment", "label": "Estimate payoff time for $20,000 at $400 a month", "values": {"principal": "20000", "rate": "6", "payment": "400", "compound": "Monthly", "pay": "Monthly"}}, {"id": "repayment", "mode": "term", "label": "Find the payment for the same balance over five years", "values": {"principal": "20000", "rate": "6", "years": "5", "months": "0", "compound": "Monthly", "pay": "Monthly"}}]
+      }
+    ]
+  }
+}

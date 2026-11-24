@@ -246,3 +246,11 @@ The November 19 GSC-priority work was published as e3c8070d61eee455fbf03ca9f3861
 ## Contextual internal links — 2026-11-21
 
 Preview branch preview/internal-link-quality-20261121 continues e2a708a with reviewed education/accounting task paths, 24 prose concept links in 22 guides, descriptive guide anchors and compact mortgage reading groups preserving all ten destinations. All 3,159 tests, full TypeScript, build, 469-page static checks and 105 browser checks pass. Numerical models/defaults and original numerical-review fields remain. See internal-link-quality-implementation-20261121.md and evidence/internal-link-quality-20261121.json. Actual preview commit/deployment checkpoint: /workspace/work/internal-link-implementation-20261121/review.json. Production remains e3c8070 until a separate publish instruction.
+
+## Question-research release candidate — 2026-11-24
+
+The November 22 production promotion is confirmed at 77fcef0d3d50a6ea525037c55baac83bc8cd053a. The historical production checkpoints above describe their own earlier task states.
+
+The question-research candidate improves six existing pages: monthly-budget and tax-inclusive guides, single-card payoff task descriptions, generic loan interest, loan-repayment mode selection and the currency-conversion guide. It preserves calculation algorithms, canonical routes and robots policy. All 54 keyword-plan URL candidates received representative task/visible-content review; five primary-topic candidates were revised without inventing missing metrics, and 495 possible FX quote queries are held for intent/data-capability review. This is not a manual audit of every keyword or every US SERP.
+
+Full release check: all 3,159 tests pass, in addition to the recorded TypeScript/production build, 469-page static SEO check and 51 follow-up browser checks. The full suite exposed an obsolete link-review test assumption; the test now preserves the November 21 link-review date while allowing the article content date to advance after substantive edits. See question-content-review-20261124.md, question-followup-review-20261124.md and their evidence JSON files. The local release checkpoint is /workspace/work/question-content-release-20261124/review.json. Publication remains pending the current user direction.
