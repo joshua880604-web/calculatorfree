@@ -1,3 +1,4 @@
+import { visibleCalculatorModes } from "@/lib/mode-handoffs";
 import RefinancePayoffRentBuyReference from './RefinancePayoffRentBuyReference';
 import TaxPriceReference,{hasTaxPriceReference} from './TaxPriceReference';
 import HelocCreditReference from './HelocCreditReference';
@@ -50,7 +51,7 @@ export default function CalculatorGuide({
     <h3>{example.title}</h3><p>{example.inputs}</p>
     <ol>{example.steps.map(step=><li key={step}>{step}</li>)}</ol>
     <p><strong>{example.answer}</strong></p>
-    <SiteLink href={calculatorPresetHref(routeFor(calculator.id),example.mode,example.values)}>Try these inputs</SiteLink>
+    <SiteLink href={calculatorPresetHref(routeFor(calculator.id),example.mode,example.values)}>{calculator.id === 'credit-card' && example.mode === 'minimum' ? 'Try these inputs in the minimum payment calculator' : 'Try these inputs'}</SiteLink>
   </section>);
   return (
     <section className={"calculator-guide"+(motherPageCopy[calculator.id]?" mother-page-guide":"")+(compact||selective?" compact-reading":"")} data-reading-layout={compact?'compact':selective?'selective':undefined} aria-label="Calculation guide">
@@ -114,7 +115,7 @@ export default function CalculatorGuide({
       )}
       <details className="model-reference" id="calculation-methods">
         <summary>Calculation methods and formulas</summary>
-        {calculator.modes.map((mode) => (
+        {visibleCalculatorModes(calculator).map((mode) => (
           <section key={mode.id}>
             <h3>{mode.title}</h3>
             <p>{mode.description}</p>

@@ -25,7 +25,7 @@
         "inputs": "$10,000 principal, 12% nominal interest compounded monthly, 12 monthly payments and no fees.",
         "steps": [
           "The periodic interest rate is 12% / 12 = 1%.",
-          "Discounting the scheduled payments at 1% per month returns the $10,000 proceeds. Nominal APR is 1% \u00d7 12 = 12%."
+          "Discounting the scheduled payments at 1% per month returns the $10,000 proceeds. Nominal APR is 1% × 12 = 12%."
         ],
         "answer": "Nominal APR is 12%; effective annual APR is approximately 12.6825%.",
         "expected": {
@@ -91,7 +91,7 @@
           "apy to apr calculator"
         ],
         "question": "Is APR the same as APY on savings?",
-        "answer": "No. The loan result shows nominal annualized borrowing cost, while effective annual APR includes compounding of that periodic yield. CD APY describes an effective annual deposit yield. Use the CD calculator\u2019s APY setting for savings instead of treating this loan-fee model as a deposit quote.",
+        "answer": "No. The loan result shows nominal annualized borrowing cost, while effective annual APR includes compounding of that periodic yield. CD APY describes an effective annual deposit yield. Use the CD calculator’s APY setting for savings instead of treating this loan-fee model as a deposit quote.",
         "links": [
           {
             "id": "cd",
@@ -125,7 +125,7 @@
         },
         "inputs": "$10,000 deposit, 4% APY, six months and zero tax estimate.",
         "steps": [
-          "An APY already includes compounding. Use $10,000 \u00d7 1.04^(6/12).",
+          "An APY already includes compounding. Use $10,000 × 1.04^(6/12).",
           "Maturity balance is $10,198.0390; interest is $198.0390."
         ],
         "answer": "About $198.04 interest and $10,198.04 at maturity.",
@@ -144,7 +144,7 @@
           "how to calculate interest on a cd"
         ],
         "question": "How much interest does a six-month CD earn?",
-        "answer": "For a fixed APY, interest is deposit \u00d7 [(1 + APY)^(6/12) \u2212 1]. A $10,000 deposit at 4% APY earns about $198.04 over six months in this model. Bank day-count and crediting conventions may produce a slightly different amount.",
+        "answer": "For a fixed APY, interest is deposit × [(1 + APY)^(6/12) − 1]. A $10,000 deposit at 4% APY earns about $198.04 over six months in this model. Bank day-count and crediting conventions may produce a slightly different amount.",
         "links": [
           {
             "id": "cd",
@@ -175,7 +175,7 @@
           "cd rate calculator",
           "cd interest rate calculator"
         ],
-        "question": "Does this CD rate calculator find today\u2019s best bank rate?",
+        "question": "Does this CD rate calculator find today’s best bank rate?",
         "answer": "No. You supply the rate or APY from a bank offer. The tool calculates the resulting interest and maturity amount; it does not fetch quotes or predict rates. Check the term, minimum deposit, early-withdrawal terms and whether the quoted APY requires conditions.",
         "links": [
           {
@@ -191,7 +191,7 @@
           "Can I add monthly deposits to a CD in this calculator?"
         ],
         "question": "Can I add monthly deposits to a CD in this calculator?",
-        "answer": "This CD model uses one opening deposit and reinvested interest, with no additional deposits. If your product permits add-on deposits, use the savings or compound-interest calculator and match the account\u2019s actual contribution rules. Do not read the monthly interest table as monthly deposits or a promised cash payout.",
+        "answer": "This CD model uses one opening deposit and reinvested interest, with no additional deposits. If your product permits add-on deposits, use the savings or compound-interest calculator and match the account’s actual contribution rules. Do not read the monthly interest table as monthly deposits or a promised cash payout.",
         "links": [
           {
             "id": "cd",
@@ -226,8 +226,8 @@
         },
         "inputs": "$8,000 traditional employee deferral; 22% federal marginal rate; zero state benefit; 26 equal paychecks.",
         "steps": [
-          "Estimated current income-tax saving is $8,000 \u00d7 22% = $1,760.",
-          "Annual paycheck reduction is $8,000 \u2212 $1,760 = $6,240, or $240 per paycheck. Employee Social Security and Medicare savings are zero."
+          "Estimated current income-tax saving is $8,000 × 22% = $1,760.",
+          "Annual paycheck reduction is $8,000 − $1,760 = $6,240, or $240 per paycheck. Employee Social Security and Medicare savings are zero."
         ],
         "answer": "Estimated income-tax saving $1,760; paycheck reduction $240 each.",
         "expected": {
@@ -259,7 +259,7 @@
           "how long will my 401k last calculator"
         ],
         "question": "How long will my 401(k) last?",
-        "answer": "Use the retirement calculator\u2019s savings-longevity mode to model a specific withdrawal budget, or inspect the 401(k) retirement-withdrawal schedule for its stated horizon. Results depend on investment returns, inflation, withdrawals and taxes. A modeled smooth return path does not establish a safe withdrawal rate.",
+        "answer": "Use the retirement calculator’s savings-longevity mode to model a specific withdrawal budget, or inspect the 401(k) retirement-withdrawal schedule for its stated horizon. Results depend on investment returns, inflation, withdrawals and taxes. A modeled smooth return path does not establish a safe withdrawal rate.",
         "links": [
           {
             "id": "retirement",
@@ -326,8 +326,8 @@
         },
         "inputs": "$10,000 opening balance, 20% APR, 2% principal minimum, $25 floor and interest added.",
         "steps": [
-          "First-month interest is $10,000 \u00d7 20% / 12 = $166.6667.",
-          "The modeled minimum is max($25, $10,000 \u00d7 2% + $166.6667) = $366.6667."
+          "First-month interest is $10,000 × 20% / 12 = $166.6667.",
+          "The modeled minimum is max($25, $10,000 × 2% + $166.6667) = $366.6667."
         ],
         "answer": "The first modeled minimum is about $366.67, then changes as the balance falls.",
         "expected": {
@@ -344,13 +344,21 @@
           "how is credit card minimum payment calculated",
           "how to calculate minimum payment on credit card"
         ],
-        "question": "How is the credit card minimum payment calculated?",
-        "answer": "The selected rule takes the larger of your dollar floor or a percentage of the opening balance, adding monthly interest only if you select Yes. For $10,000 at 20% APR with a 2% principal rule plus interest, the first minimum is about $366.67. Real issuers can use statement balances, fees and rounding rules that differ from this illustration.",
+        "question": "Where can I calculate changing minimum payments?",
+        "answer": "Use the separate Credit Card Minimum Payment Calculator to model a percentage rule, dollar floor and optional monthly interest. For $10,000 at 20% APR with a 2% principal rule plus interest, its first modeled minimum is about $366.67. This page models a fixed total monthly payment or a payoff deadline; actual issuer minimums can differ.",
         "links": [
           {
-            "id": "credit-card",
+            "id": "credit-card-minimum-payment",
             "mode": "minimum",
-            "label": "Open credit card calculator"
+            "label": "Open the minimum payment calculator",
+            "values": {
+              "principal": "10000",
+              "rate": "20",
+              "minimum": "2",
+              "floor": "25",
+              "interest_extra": "Yes",
+              "extra": "0"
+            }
           }
         ],
         "replacesQuestion": "How does the credit card minimum payment calculator work?"
@@ -361,12 +369,20 @@
           "What happens if I pay $25 more than the minimum?"
         ],
         "question": "What happens if I pay $25 more than the minimum?",
-        "answer": "The comparison table adds a fixed extra amount to each month\u2019s recalculated minimum and shows payoff time and total interest. As the balance falls, the total monthly payment can fall too. To keep paying a fixed total amount every month, use Fixed Monthly Payment instead.",
+        "answer": "The separate minimum-payment tool compares a fixed extra amount above each recalculated minimum. The total monthly payment can fall as the balance declines. For a fixed total payment instead, use this page’s Fixed Monthly Payment mode.",
         "links": [
           {
-            "id": "credit-card",
+            "id": "credit-card-minimum-payment",
             "mode": "minimum",
-            "label": "Open credit card calculator"
+            "label": "Open the minimum payment calculator",
+            "values": {
+              "principal": "10000",
+              "rate": "20",
+              "minimum": "2",
+              "floor": "25",
+              "interest_extra": "Yes",
+              "extra": "25"
+            }
           }
         ]
       },
@@ -376,12 +392,20 @@
           "Does the minimum payment percent include interest?"
         ],
         "question": "Does the minimum payment percent include interest?",
-        "answer": "It depends on the rule you choose. Select No to model the percent amount with no separate interest add-on; select Yes for a percent principal component plus monthly interest. Both use the dollar floor and final-payment cap. Check your statement and card agreement before choosing a rule.",
+        "answer": "In the linked minimum-payment tool, choose No for the percentage without a separate interest add-on, or Yes for percentage principal plus monthly interest. The dollar floor and final-payment cap apply. Check your statement and agreement before choosing the rule.",
         "links": [
           {
-            "id": "credit-card",
+            "id": "credit-card-minimum-payment",
             "mode": "minimum",
-            "label": "Open credit card calculator"
+            "label": "Open the minimum payment calculator",
+            "values": {
+              "principal": "10000",
+              "rate": "20",
+              "minimum": "2",
+              "floor": "25",
+              "interest_extra": "Yes",
+              "extra": "0"
+            }
           }
         ]
       },
@@ -391,12 +415,20 @@
           "Is the calculated minimum the amount due on my actual statement?"
         ],
         "question": "Is the calculated minimum the amount due on my actual statement?",
-        "answer": "No. The calculator estimates a selected rule on an opening balance, using APR divided by 12 and no new charges. Your issuer may use average daily balances, statement interest, past-due amounts or multiple APRs. Pay at least the actual minimum by the due date shown on your statement.",
+        "answer": "No. The linked minimum-payment tool estimates your selected rule with monthly APR/12 interest. Issuer statements can use average daily balances, fees and multiple APRs. The statement determines the minimum actually due.",
         "links": [
           {
-            "id": "credit-card",
+            "id": "credit-card-minimum-payment",
             "mode": "minimum",
-            "label": "Open credit card calculator"
+            "label": "Open the minimum payment calculator",
+            "values": {
+              "principal": "10000",
+              "rate": "20",
+              "minimum": "2",
+              "floor": "25",
+              "interest_extra": "Yes",
+              "extra": "0"
+            }
           }
         ]
       }
@@ -404,7 +436,7 @@
   },
   "self-employment-tax": {
     "updatedOn": "2026-10-29",
-    "summary": "Self-employment tax pays into Social Security and Medicare and is separate from ordinary income tax. Use net business profit after expenses, then add W-2 wages where applicable. This calculator estimates the regular method for 2025 or 2026, coordinates each spouse\u2019s Social Security wage-base room separately, and shows the SE and wage portions of Additional Medicare tax without combining them into an unexplained total.",
+    "summary": "Self-employment tax pays into Social Security and Medicare and is separate from ordinary income tax. Use net business profit after expenses, then add W-2 wages where applicable. This calculator estimates the regular method for 2025 or 2026, coordinates each spouse’s Social Security wage-base room separately, and shows the SE and wage portions of Additional Medicare tax without combining them into an unexplained total.",
     "scope": "U.S. regular nonfarm SE method; one taxpayer or two spouses filing jointly. Losses are floored at zero for each owner. Assumes entered profit is already eligible net business income. Excludes optional Schedule SE methods, church employee rules, RRTA income, foreign agreements, withholding credits, QBI and ordinary income tax. The quarterly figure is a reserve illustration, not a required estimated installment or safe-harbor calculation.",
     "sources": [
       {
@@ -440,8 +472,8 @@
         },
         "inputs": "$80,000 net profit, no wages and single filing in 2026.",
         "steps": [
-          "Adjusted earnings are $80,000 \u00d7 92.35% = $73,880.",
-          "Social Security is $73,880 \u00d7 12.4% = $9,161.12; regular Medicare is $73,880 \u00d7 2.9% = $2,142.52.",
+          "Adjusted earnings are $80,000 × 92.35% = $73,880.",
+          "Social Security is $73,880 × 12.4% = $9,161.12; regular Medicare is $73,880 × 2.9% = $2,142.52.",
           "Total regular SE tax is $11,303.64. Half, $5,651.82, is the modeled income adjustment. No Additional Medicare applies."
         ],
         "answer": "SE tax $11,303.64; deductible half $5,651.82.",
@@ -475,7 +507,7 @@
           "employed and self employed tax calculator"
         ],
         "question": "How is tax calculated if I am employed and self-employed?",
-        "answer": "Enter your own W-2 Social Security wages and Medicare wages separately. Your wages use your Social Security wage-base room before SE earnings. Medicare wages also use the filing-status threshold before the SE portion of Additional Medicare is calculated. A spouse\u2019s wage base is separate.",
+        "answer": "Enter your own W-2 Social Security wages and Medicare wages separately. Your wages use your Social Security wage-base room before SE earnings. Medicare wages also use the filing-status threshold before the SE portion of Additional Medicare is calculated. A spouse’s wage base is separate.",
         "links": [
           {
             "id": "self-employment-tax",
@@ -535,7 +567,7 @@
           "How do married spouses calculate self-employment tax?"
         ],
         "question": "How do married spouses calculate self-employment tax?",
-        "answer": "For joint filing, enter each owner\u2019s profit and wages separately so the regular Social Security cap is applied individually. The Additional Medicare test uses joint Medicare wages and SE earnings. Separate filing uses only the individual\u2019s inputs; special community-property and joint-business allocation issues require separate review.",
+        "answer": "For joint filing, enter each owner’s profit and wages separately so the regular Social Security cap is applied individually. The Additional Medicare test uses joint Medicare wages and SE earnings. Separate filing uses only the individual’s inputs; special community-property and joint-business allocation issues require separate review.",
         "links": [
           {
             "id": "self-employment-tax",

@@ -2784,8 +2784,8 @@
     "checkedOn": "2026-10-20"
   },
   "credit-card": {
-    "summary": "For a single card, estimate how long a fixed monthly payment takes, find the payment for a chosen deadline, or model a percentage minimum with a dollar floor. Compare total interest and payment count, not just the first payment.",
-    "scope": "One balance at a constant APR using opening monthly balance × APR/12. No new purchases, unentered fees, grace periods, daily statement balances, promotional-rate changes or multiple APR buckets are modeled. Minimum-payment mode uses your entered percentage, dollar floor and interest option; it does not read issuer rules. Results are estimates, not a statement or lender payoff quote.",
+    "summary": "For a single card, estimate how long a fixed total monthly payment takes, or find the payment needed for a chosen deadline. Compare total interest and payment count. Use the separate minimum-payment calculator when the payment changes with the balance.",
+    "scope": "One balance at a constant APR using opening monthly balance × APR/12. No new purchases, unentered fees, grace periods, daily statement balances, promotional-rate changes or multiple APR buckets are modeled. Fixed-payment and deadline estimates do not determine your issuer’s minimum due. The linked minimum-payment calculator uses a separate user-defined rule. Results are estimates, not a statement or lender payoff quote.",
     "examples": [
       {
         "title": "Pay down a zero-APR credit card with fixed payments",

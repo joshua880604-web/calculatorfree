@@ -443,3 +443,8 @@ keywordTitles["merchant-cash-advance"]="Merchant Cash Advance Calculator";
 searchTasks["merchant-cash-advance"]=[{"keyword": "Merchant cash advance factor rate and APR estimate", "mode": "fixed-remittances", "description": "Use explicit dates to show an illustrative effective annual IRR, not statutory APR."}, {"keyword": "Merchant cash advance holdback calculator", "mode": "sales-holdback", "description": "Model constant eligible sales per interval and a capped final remittance."}];
 keywordTitles["backdoor-roth-ira"]="Backdoor Roth IRA Calculator: 2026";
 searchTasks["backdoor-roth-ira"]=[{"keyword": "Backdoor Roth IRA pro rata calculator 2026", "mode": "conversion-only", "description": "Aggregate established basis and included year-end IRA values for ordinary conversions."}, {"keyword": "Backdoor Roth conversion and basis carryforward", "mode": "full-year", "description": "Separate other included distributions and following-year contributions for the tax year."}];
+
+// Minimum-payment searches belong to the dedicated tool; keep fixed-payment
+// and deadline tasks on the single-card payoff page.
+searchTasks["credit-card"] = searchTasks["credit-card"].filter(task => task.mode !== "minimum");
+keywordTitles["credit-card"] = "Credit Card Payoff Calculator - Fixed Payment & Payoff Time";

@@ -266,3 +266,5 @@ Object.assign(wordingReviewDates,Object.fromEntries(["/rsu-tax-calculator.html",
 Object.assign(wordingReviewDates,Object.fromEntries(["/return-on-assets-calculator.html", "/assumable-mortgage-calculator.html", "/guides/return-on-assets-average-balance-and-margin/", "/guides/assumable-mortgage-cash-gap-and-second-loan/", "/glossary/return-on-assets/", "/glossary/mortgage-assumption/", "/financial-calculator.html", "/business-calculators.html", "/real-estate-calculator.html", "/guides/", "/glossary/"].map(path=>[path,'2026-11-24'])));
 
 Object.assign(wordingReviewDates,Object.fromEntries(["/merchant-cash-advance-calculator.html", "/backdoor-roth-ira-calculator.html", "/guides/merchant-cash-advance-factor-rate-and-cash-flow-cost/", "/guides/backdoor-roth-2026-pro-rata-and-basis/", "/glossary/merchant-cash-advance/", "/glossary/backdoor-roth-ira/", "/financial-calculator.html", "/business-calculators.html", "/retirement-calculators.html", "/guides/", "/glossary/"].map(path=>[path,'2026-11-24'])));
+
+wordingReviewDates["/single-credit-card-payoff-calculator.html"]="2026-11-25";

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { calculatorPresetHref } from '../src/lib/preset-links';
-import { calculators, defaults, routeFor } from '../src/lib/calculators';
+import { calculators, defaults, routeFor, runCalculation } from '../src/lib/calculators';
 import { sharedInputs } from '../src/lib/sharing';
 import { guides } from '../src/lib/guides';
 import { searchTasks } from '../src/lib/keyword-targets';
@@ -23,8 +23,18 @@ test('Published example, search and glossary presets preserve exactly the legacy
     const legacy='?'+new URLSearchParams({mode:p.mode,...Object.fromEntries(Object.entries(p.values??{}).filter(([,v])=>v!==undefined).map(([k,v])=>[k,String(v)]))});
     const url=new URL(calculatorPresetHref(routeFor(p.id),p.mode,p.values),'https://www.calculatorfree.io');
     assert.equal(url.search,'',p.id+'/'+p.mode);
-    assert.equal(url.pathname,routeFor(p.id).slice(0,-5));
-    assert.deepEqual(sharedInputs(calc,'',url.hash),sharedInputs(calc,legacy,''),p.id+'/'+p.mode);
+    if (p.id === 'credit-card' && p.mode === 'minimum') {
+      const target = calculators.find(c => c.id === 'credit-card-minimum-payment')!;
+      const old = sharedInputs(calc, legacy, '')!;
+      const next = sharedInputs(target, '', url.hash)!;
+      assert.equal(url.pathname, '/credit-card-minimum-payment-calculator');
+      assert.deepEqual(next.values, {...old.values, extra: old.values.extra || '0'});
+      assert.deepEqual(runCalculation(target.id, next.mode.id, next.values).rows,
+        runCalculation(calc.id, old.mode.id, old.values).rows);
+    } else {
+      assert.equal(url.pathname,routeFor(p.id).slice(0,-5));
+      assert.deepEqual(sharedInputs(calc,'',url.hash),sharedInputs(calc,legacy,''),p.id+'/'+p.mode);
+    }
   }
 });
 

@@ -8953,6 +8953,12 @@
       "id": "loans-debt",
       "title": "Loans & Debt",
       "route_preserved": true
+    },
+    "task_handoff_review": {
+      "reviewed_on": "2026-11-25",
+      "evidence": "credit-minimum-handoff-20261125.md",
+      "scope": "Visible single-card tasks are fixed payment and payoff deadline; changing minimums open the dedicated tool. Preserve legacy input defaults and numerical contracts.",
+      "published": false
     }
   },
   {

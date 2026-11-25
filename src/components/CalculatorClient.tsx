@@ -2,6 +2,7 @@
 import SiteLink from "@/components/SiteLink";
 import {compactReadingIds} from "@/lib/compact-reading";
 import CreditCardFields from "./CreditCardFields";
+import { visibleCalculatorModes, minimumPaymentHref, legacyMinimumPaymentHref } from "@/lib/mode-handoffs";
 import FavoriteButton from "./FavoriteButton";
 import { calculatorPresetHref } from "@/lib/preset-links";
 
@@ -90,6 +91,7 @@ function ResultTables({tables,onDownload,label="Download table CSV"}:{tables:Non
 }
 export default function CalculatorClient({ calc, initialResult, shortcuts = [] }: { calc: Calculator; initialResult: Result | null; shortcuts?: {keyword: string; mode: string; values?: Values}[] }) {
   const id = calc.id;
+  const modes = visibleCalculatorModes(calc);
   const enhancedSharing=hasShareTools(id);
   const motherCopy=motherPageCopy[id];
   const [shareTab,setShareTab]=useState<ShareTab|null>(null);
@@ -110,8 +112,9 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
   const runCalculation = (_id: string, mode: string, values: Values) => runClientCalculation(calc.id, calc.category, mode, values);
   const [sharedReviewValues,setSharedReviewValues]=useState<Values|null>(null);
   const [coastSharedRates,setCoastSharedRates]=useState<Values|null>(null);
-  const [modeId, setModeId] = useState(calc.modes[0].id);
+  const [modeId, setModeId] = useState(modes[0].id);
   const mode = calc.modes.find((m) => m.id === modeId)!;
+  const legacyMinimum = id === 'credit-card' && modeId === 'minimum';
   const [values, setValues] = useState<Values>(() => defaults(mode)),
     [result, setResult] = useState<Result | null>(initialResult),
     [error, setError] = useState(""),
@@ -138,7 +141,7 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
     request = useRef(0);
   const modeDrafts = useRef<Record<string, Values>>({});
   const mortgageBasisDrafts = useRef<Record<string, Values>>({});
-  const compactModes = calc.modes.length >= 4 || id === "savings";
+  const compactModes = modes.length >= 4 || id === "savings";
   const payoff = id === "mortgage-payoff";
   const taskModes = Boolean(taskModeGroups[id]) || id === "savings";
   function loadCoastExample(next:Values,title:string){setSharedReviewValues(null);setCoastSharedRates(null);request.current++;clearScenarios();setCalculating(false);setValues({...next});setResult(null);setError('');setNotice('Example loaded: '+title+'. Review inputs, then Calculate.');setShowResultShare(false);setShowAll(false);setYearly(false);}
@@ -163,13 +166,15 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
       const previousSource = lastSource;
       lastSource=source;
       try {
+        const handoff = legacyMinimumPaymentHref(calc, window.location.search, window.location.hash);
+        if (handoff) { window.location.replace(handoff); return; }
         const shared=sharedInputs(calc,window.location.search,window.location.hash);
         if(!shared){
           // Back to the original document restores its initial form. Ordinary
           // guide anchors keep edits and results, including legacy query inputs.
           if(previousSource?.startsWith('#calc=') && !window.location.hash && !window.location.search){
             request.current++;clearScenarios();modeDrafts.current={};mortgageBasisDrafts.current={};
-            setCalculating(false);setModeId(calc.modes[0].id);setValues(defaults(calc.modes[0]));if(id==='coast-fire')setCoastSharedRates(null);setSharedReviewValues(null);
+            setCalculating(false);setModeId(modes[0].id);setValues(defaults(modes[0]));if(id==='coast-fire')setCoastSharedRates(null);setSharedReviewValues(null);
             setResult(initialResult);setError('');setNotice('');setShowAll(false);setYearly(false);
           }
           return;
@@ -248,7 +253,7 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
     request.current++;
     clearScenarios();
     setCalculating(false);
-    const m = calc.modes.find((x) => x.id === next)!;
+    const m = modes.find((x) => x.id === next)!;
     const nextInputs = switchModeInputs(id, mode, m, values, modeDrafts.current);
     modeDrafts.current = nextInputs.drafts;
     setModeId(next);
@@ -588,19 +593,19 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
       <div className={"calculator-intro-row"+(motherCopy?" mother-page-intro":"")}><p className="intro">{motherCopy?.intro??calc.intro}</p>{enhancedSharing?<div className="calculator-utility-actions enhanced-sharing-actions"><FavoriteButton id={id}/><button type="button" className="calculator-share-launch" aria-haspopup="dialog" onClick={()=>setShareTab('Share')}>Share / Export</button></div>:<FavoriteButton id={id}/>}</div>
       {shareTab&&enhancedSharing&&<ShareToolsDialog key={shareTab} initialTab={shareTab} id={id} title={calc.title} path={routeFor(id)} mode={mode} values={values} result={result} fields={visible} onClose={closeShare}/>}
       {id !== "mortgage" && (!motherCopy || shortcuts.some(task=>task.values)) && shortcuts.length > 0 && <nav className="task-shortcuts" aria-label="Calculation shortcuts">{shortcuts.map(task=><button type="button" key={task.keyword} onClick={()=>openShortcut(task)}>{task.keyword}</button>)}</nav>}
-      {calc.modes.length > 1 && (
+      {modes.length > 1 && (
         <div className={"mode-tabs" + (compactModes ? " compact-mode-tabs" : "") + (id === "mortgage" ? " mortgage-mode-tabs" : "")} role="tablist" aria-label="Calculation mode">
-          {calc.modes.map((m) => (
+          {modes.map((m) => (
             <button
               role="tab"
               tabIndex={modeId === m.id ? 0 : -1}
               onKeyDown={(e) => {
                 if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) return;
                 e.preventDefault();
-                const current = calc.modes.findIndex(x => x.id === modeId);
-                const index = e.key === "Home" ? 0 : e.key === "End" ? calc.modes.length - 1 : (current + (e.key === "ArrowRight" ? 1 : -1) + calc.modes.length) % calc.modes.length;
-                switchMode(calc.modes[index].id);
-                document.getElementById("tab-" + calc.modes[index].id)?.focus();
+                const current = modes.findIndex(x => x.id === modeId);
+                const index = e.key === "Home" ? 0 : e.key === "End" ? modes.length - 1 : (current + (e.key === "ArrowRight" ? 1 : -1) + modes.length) % modes.length;
+                switchMode(modes[index].id);
+                document.getElementById("tab-" + modes[index].id)?.focus();
               }}
               aria-selected={modeId === m.id}
               aria-controls="calculator-panel"
@@ -641,24 +646,25 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [] }
           </> : <>
             <label className="mobile-mode-label" htmlFor="calculation-mode">Calculation mode</label>
             <select id="calculation-mode" value={modeId} onChange={e => switchMode(e.target.value)}>
-              {calc.modes.map(m => <option key={m.id} value={m.id}>{m.title}</option>)}
+              {modes.map(m => <option key={m.id} value={m.id}>{m.title}</option>)}
             </select>
           </>}
         </div>
       )}
+      {id === "credit-card" && <p className="result-note" data-minimum-payment-handoff>{legacyMinimum ? 'This older link uses inputs outside the dedicated tool’s supported range. Its saved minimum-payment calculation remains available here. For a new estimate, use the ' : 'For changing minimum payments, use the '}<SiteLink href={minimumPaymentHref(legacyMinimum ? {} : {principal: values.principal, rate: values.rate})}>Credit Card Minimum Payment Calculator</SiteLink>.{!legacyMinimum && ' Your balance and APR carry over; review the minimum-payment rule there.'}</p>}
       <div ref={workspaceRef} className={hasWorkspace ? "calculator-workspace" + (workspace === "stacked" ? " workspace-stacked" : "") : undefined}>
       <div
         id="calculator-panel"
         role="tabpanel"
         tabIndex={-1}
-        aria-label={compactModes ? mode.title : undefined}
-        aria-labelledby={!compactModes && calc.modes.length > 1 ? "tab-" + modeId : undefined}
+        aria-label={compactModes || legacyMinimum ? mode.title : undefined}
+        aria-labelledby={!compactModes && !legacyMinimum && modes.length > 1 ? "tab-" + modeId : undefined}
       >
-        {((motherCopy?.scope??scope)||(id !== "mortgage" && !(motherCopy?.suppressSingleModeDescription&&calc.modes.length===1)))&&<details className="calculator-help" key={mode.id}>
+        {((motherCopy?.scope??scope)||(id !== "mortgage" && !(motherCopy?.suppressSingleModeDescription&&modes.length===1)))&&<details className="calculator-help" key={mode.id}>
           <summary>Assumptions &amp; limits</summary>
           <div className="calculator-help-content">
             {(motherCopy?.scope??scope)&&<p className={"result-note calculator-scope"+(motherCopy?" mother-page-scope":"")+(id==="mortgage"?" mortgage-scope":"")}>{motherCopy?.scope??scope}</p>}
-            {id !== "mortgage" && !(motherCopy?.suppressSingleModeDescription&&calc.modes.length===1)&&<p className="mode-description">{mode.description}</p>}
+            {id !== "mortgage" && !(motherCopy?.suppressSingleModeDescription&&modes.length===1)&&<p className="mode-description">{mode.description}</p>}
             {id === "credit-card" && <p className="result-note">One card: compare fixed payments, a payoff deadline or a minimum-payment rule below. For several cards sharing one monthly budget, use the <SiteLink href={routeFor("credit-cards-payoff")}>Multiple Credit Cards Payoff Calculator</SiteLink>.</p>}
             {id === "irr" && <p className="result-note dated-cash-flow-link">For cash flows on specific calendar dates, use the <SiteLink href={calculatorPresetHref(routeFor("average-return"), "cashflows")}>Average Return Calculator’s Dated Cash Flows mode</SiteLink>.</p>}
           </div>

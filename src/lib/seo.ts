@@ -475,3 +475,6 @@ for(const path of ["/rsu-tax-calculator.html", "/espp-tax-calculator.html", "/gu
 for(const path of ["/return-on-assets-calculator.html", "/assumable-mortgage-calculator.html", "/guides/return-on-assets-average-balance-and-margin/", "/guides/assumable-mortgage-cash-gap-and-second-loan/", "/glossary/return-on-assets/", "/glossary/mortgage-assumption/", "/financial-calculator.html", "/business-calculators.html", "/real-estate-calculator.html", "/guides/", "/glossary/"])recordWordingUpdate(path,'2026-11-24');
 
 for(const path of ["/merchant-cash-advance-calculator.html", "/backdoor-roth-ira-calculator.html", "/guides/merchant-cash-advance-factor-rate-and-cash-flow-cost/", "/guides/backdoor-roth-2026-pro-rata-and-basis/", "/glossary/merchant-cash-advance/", "/glossary/backdoor-roth-ira/", "/financial-calculator.html", "/business-calculators.html", "/retirement-calculators.html", "/guides/", "/glossary/"])recordWordingUpdate(path,'2026-11-24');
+
+// Consolidate changing minimum-payment navigation without changing arithmetic.
+recordWordingUpdate("/single-credit-card-payoff-calculator.html","2026-11-25");

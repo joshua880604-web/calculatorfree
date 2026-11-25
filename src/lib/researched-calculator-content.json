@@ -190,10 +190,10 @@
           "how to calculate credit card payoff"
         ],
         "question": "How does the credit card minimum payment calculator work?",
-        "answer": "Enter the balance percentage, dollar floor and whether monthly interest is added to that percentage. The payment changes as the balance declines. In the linked $6,000, 20% example, 2% of opening balance plus interest gives a first payment of $220: $120 plus $100 interest. The $25 floor matters later. Your issuer’s rules may differ; the model does not calculate an official minimum due.",
+        "answer": "Use the separate Credit Card Minimum Payment Calculator for a percentage minimum, dollar floor and optional interest. Its payment is recalculated as the balance changes. This page instead models a fixed total monthly payment or the payment required for a deadline. In the linked $6,000, 20% example, 2% of opening balance plus interest gives a first minimum of $220. Your issuer’s statement determines the actual amount due.",
         "links": [
           {
-            "id": "credit-card",
+            "id": "credit-card-minimum-payment",
             "mode": "minimum",
             "label": "Model a percentage minimum plus interest",
             "values": {
@@ -201,7 +201,8 @@
               "rate": "20",
               "minimum": "2",
               "floor": "25",
-              "interest_extra": "Yes"
+              "interest_extra": "Yes",
+              "extra": "0"
             }
           }
         ]

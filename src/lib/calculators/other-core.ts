@@ -279,7 +279,7 @@ const credit = tool(
       };
     },
   })),
-  "Calculate credit card payoff time, payment targets, and minimum-payment costs.",
+  "Calculate credit card payoff time and interest from a fixed monthly payment, or find the payment needed for a deadline.",
 );
 const debtField = () =>
   area(

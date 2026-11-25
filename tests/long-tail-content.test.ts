@@ -32,9 +32,10 @@ test('Contextual guide links open real calculation modes with valid declared pre
           if (declaredField.options) assert.ok(declaredField.options.includes(value), key + ': ' + value);
         }
         const url = new URL(longTailHref(link), 'https://calculatorfree.io');
-        assert.equal(url.pathname, navigationHref(routeFor(link.id)));
+        const destinationId = link.id === 'credit-card' && link.mode === 'minimum' ? 'credit-card-minimum-payment' : link.id;
+        assert.equal(url.pathname, navigationHref(routeFor(destinationId)));
         assert.equal(url.search, '');
-        assert.equal(sharedInputs(calc!,'',url.hash)!.mode.id, mode.id);
+        assert.equal(sharedInputs(calculators.find(c => c.id === destinationId)!,'',url.hash)!.mode.id, mode.id);
         const result = runCalculation(link.id, mode.id, {...defaults(mode), ...link.values});
         assert.ok(result.metrics.length > 0);
         assert.ok(result.metrics.every(metric => Number.isFinite(metric.value)));

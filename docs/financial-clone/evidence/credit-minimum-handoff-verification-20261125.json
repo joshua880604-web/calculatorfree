@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-25",
+  "published": false,
+  "base_local_commit": "0ab5c39b920e1eb47482dd51477d5dc5910a9143",
+  "previously_confirmed_production_commit": "0f964463d0ba40bac03f70ac08ddea1cc80221ed",
+  "summary": {
+    "functional_calculators": 180,
+    "registered_modes_including_legacy": 376,
+    "visible_tasks": 375,
+    "canonical_pages": 505,
+    "tests_passed": 3954,
+    "tests_failed": 0,
+    "browser_checks": 40,
+    "browser_page_errors": 0,
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "typecheck_passed": true,
+    "production_build_passed": true,
+    "financial_formulas_changed": false,
+    "obsolete_internally_generated_minimum_links": 0,
+    "links_to_dedicated_minimum_page": 59
+  },
+  "static": {
+    "passed": true,
+    "configuration": "indexable-test-origin",
+    "pages": 505,
+    "guides": 167,
+    "internal_links_checked": 36891,
+    "calculator_state_links": 3181,
+    "max_contextual_depth": 3,
+    "redirect_rules": 212,
+    "curated_llms_links": 255,
+    "no_live_indexing_or_ranking_claim": true
+  },
+  "behavior": [
+    "Single-card payoff exposes fixed total payment and deadline only.",
+    "Dedicated minimum link carries the current balance and APR in a versioned fragment.",
+    "Older query/hash inputs preserve historical defaults and calculation rows on handoff.",
+    "Older cases beyond the dedicated numeric/time bounds retain the legacy model and explanatory text.",
+    "Invalid share versions still fail explicitly.",
+    "No canonical page, calculator or legacy numeric API was removed."
+  ],
+  "evidence_directory": "/workspace/work/gsc-content-review-20261125",
+  "browser_evidence": "browser-handoff.json",
+  "checks_log": "full-tests.log",
+  "limits": [
+    "Local Chromium checks are not a production deployment, native Safari test or a new GSC crawl.",
+    "This cleanup does not establish the cause of the historical visibility collapse or guarantee indexing."
+  ]
+}
