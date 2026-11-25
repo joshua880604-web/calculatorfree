@@ -478,3 +478,6 @@ for(const path of ["/merchant-cash-advance-calculator.html", "/backdoor-roth-ira
 
 // Consolidate changing minimum-payment navigation without changing arithmetic.
 recordWordingUpdate("/single-credit-card-payoff-calculator.html","2026-11-25");
+
+// Reviewed mode/case entry points and answer links; numerical review dates stay intact.
+for(const path of ["/prorated-rent-calculator.html", "/basis-point-calculator.html", "/credit-utilization-calculator.html", "/operating-cash-flow-calculator.html", "/business-line-of-credit-calculator.html", "/guides/how-to-prorate-rent-by-days/", "/guides/basis-points-vs-percentage-points/", "/guides/how-to-calculate-credit-utilization/", "/guides/operating-cash-flow-vs-net-income/", "/guides/business-line-of-credit-vs-term-loan/", "/guides/"])recordWordingUpdate(path,"2026-11-25");

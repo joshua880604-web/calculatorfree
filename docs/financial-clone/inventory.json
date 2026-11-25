@@ -14817,5 +14817,638 @@
         "formula": "Eligible basis excludes following-year contributions. Allocate the capped fraction across conversions and other included distributions. Remaining basis = total basis \u2212 both nontaxable allocations."
       }
     ]
+  },
+  {
+    "id": "prorated-rent",
+    "title": "Prorated Rent Calculator",
+    "category": "Mortgage and Real Estate",
+    "source_url": null,
+    "reference_urls": [
+      "https://www.zillow.com/rentals-network/prorated-rent-calculator/"
+    ],
+    "source_status": "Existing original calculator; scoped task/navigation review. No competitor DOM parity claimed.",
+    "local_route": "/prorated-rent-calculator",
+    "modes": [
+      {
+        "id": "dates",
+        "title": "By Billable Dates",
+        "defaults": {
+          "monthly_rent": "2000",
+          "start": "2026-01-17",
+          "end": "2026-01-31",
+          "basis": "Actual days in each month"
+        },
+        "fields": [
+          {
+            "key": "monthly_rent",
+            "label": "Monthly rent",
+            "value": 2000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "start",
+            "label": "First billable day (included)",
+            "value": "2026-01-17",
+            "type": "date"
+          },
+          {
+            "key": "end",
+            "label": "Last billable day (included)",
+            "value": "2026-01-31",
+            "type": "date"
+          },
+          {
+            "key": "basis",
+            "label": "Day-count method",
+            "value": "Actual days in each month",
+            "type": "select",
+            "options": [
+              "Actual days in each month",
+              "30-day month",
+              "365-day year",
+              "Actual days in each year"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "days",
+        "title": "By Known Billable Days",
+        "defaults": {
+          "monthly_rent": "2000",
+          "billable_days": "15",
+          "month_days": "31",
+          "basis": "Actual days in each month"
+        },
+        "fields": [
+          {
+            "key": "monthly_rent",
+            "label": "Monthly rent",
+            "value": 2000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "billable_days",
+            "label": "Billable days in this calendar month",
+            "value": 15,
+            "unit": "days",
+            "min": 0,
+            "max": 31,
+            "step": 1
+          },
+          {
+            "key": "month_days",
+            "label": "Actual calendar days in this month",
+            "value": 31,
+            "unit": "days",
+            "min": 28,
+            "max": 31,
+            "step": 1
+          },
+          {
+            "key": "basis",
+            "label": "Day-count method",
+            "value": "Actual days in each month",
+            "type": "select",
+            "options": [
+              "Actual days in each month",
+              "30-day month",
+              "365-day year"
+            ]
+          }
+        ]
+      }
+    ],
+    "reviewed_on": "2026-11-25",
+    "evidence": "five-existing-tasks-20261125.md"
+  },
+  {
+    "id": "basis-point",
+    "title": "Basis Point Calculator",
+    "category": "Investment",
+    "source_url": null,
+    "reference_urls": [
+      "https://www.investor.gov/introduction-investing/investing-basics/glossary/basis-point"
+    ],
+    "source_status": "Existing original calculator; scoped task/navigation review. No competitor DOM parity claimed.",
+    "local_route": "/basis-point-calculator",
+    "modes": [
+      {
+        "id": "convert",
+        "title": "Convert BPS, Percent & Decimal",
+        "defaults": {
+          "value": "25",
+          "unit": "Basis points"
+        },
+        "fields": [
+          {
+            "key": "value",
+            "label": "Value to convert",
+            "value": 25,
+            "min": -1000000000,
+            "max": 1000000000
+          },
+          {
+            "key": "unit",
+            "label": "Input unit",
+            "value": "Basis points",
+            "type": "select",
+            "options": [
+              "Basis points",
+              "Percent / percentage points",
+              "Decimal"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rate-change",
+        "title": "Change Between Two Rates",
+        "defaults": {
+          "start_rate": "5",
+          "end_rate": "5.25"
+        },
+        "fields": [
+          {
+            "key": "start_rate",
+            "label": "Starting rate",
+            "value": 5,
+            "unit": "%",
+            "min": -1000000,
+            "max": 1000000
+          },
+          {
+            "key": "end_rate",
+            "label": "Ending rate",
+            "value": 5.25,
+            "unit": "%",
+            "min": -1000000,
+            "max": 1000000
+          }
+        ]
+      },
+      {
+        "id": "amount",
+        "title": "Basis Points of an Amount",
+        "defaults": {
+          "amount": "200000",
+          "bps": "25"
+        },
+        "fields": [
+          {
+            "key": "amount",
+            "label": "Amount used as the calculation base",
+            "value": 200000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "bps",
+            "label": "Basis points to apply",
+            "value": 25,
+            "unit": "bps",
+            "min": -1000000,
+            "max": 1000000
+          }
+        ]
+      }
+    ],
+    "reviewed_on": "2026-11-25",
+    "evidence": "five-existing-tasks-20261125.md"
+  },
+  {
+    "id": "credit-utilization",
+    "title": "Credit Utilization Calculator",
+    "category": "Other",
+    "source_url": null,
+    "reference_urls": [
+      "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-keep-a-good-credit-score-en-318/",
+      "https://www.myfico.com/credit-education/credit-scores/fico-scores-credit-limit"
+    ],
+    "source_status": "Existing original calculator; scoped task/navigation review. No competitor DOM parity claimed.",
+    "local_route": "/credit-utilization-calculator",
+    "modes": [
+      {
+        "id": "cards",
+        "title": "Card Balances & Targets",
+        "defaults": {
+          "cards": "1500, 5000\n500, 5000",
+          "target": "30"
+        },
+        "fields": [
+          {
+            "key": "cards",
+            "label": "Card balances and limits",
+            "value": "1500, 5000\n500, 5000",
+            "type": "textarea",
+            "hint": "One card per line: balance, credit limit. No card names or account numbers; omit thousands separators."
+          },
+          {
+            "key": "target",
+            "label": "Utilization target",
+            "value": 30,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          }
+        ]
+      }
+    ],
+    "reviewed_on": "2026-11-25",
+    "evidence": "five-existing-tasks-20261125.md"
+  },
+  {
+    "id": "operating-cash-flow",
+    "title": "Operating Cash Flow Calculator",
+    "category": "Other",
+    "source_url": null,
+    "reference_urls": [
+      "https://www.sec.gov/investor/pubs/begfinstmtguide.htm"
+    ],
+    "source_status": "Existing original calculator; scoped task/navigation review. No competitor DOM parity claimed.",
+    "local_route": "/operating-cash-flow-calculator",
+    "modes": [
+      {
+        "id": "indirect",
+        "title": "Indirect: Component Changes",
+        "defaults": {
+          "net_income": "120000",
+          "noncash": "30000",
+          "ar_change": "15000",
+          "inventory_change": "10000",
+          "other_assets_change": "5000",
+          "ap_change": "8000",
+          "other_liabilities_change": "2000"
+        },
+        "fields": [
+          {
+            "key": "net_income",
+            "label": "Net income for the reporting period",
+            "value": 120000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "noncash",
+            "label": "Net noncash / nonoperating adjustments",
+            "value": 30000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000,
+            "hint": "Signed net amount: add noncash expenses; subtract applicable noncash income or gains. Avoid double counting."
+          },
+          {
+            "key": "ar_change",
+            "label": "Increase / (decrease) in operating receivables",
+            "value": 15000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "inventory_change",
+            "label": "Increase / (decrease) in inventory",
+            "value": 10000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "other_assets_change",
+            "label": "Increase / (decrease) in other operating assets",
+            "value": 5000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "ap_change",
+            "label": "Increase / (decrease) in trade payables",
+            "value": 8000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "other_liabilities_change",
+            "label": "Increase / (decrease) in other operating liabilities",
+            "value": 2000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          }
+        ]
+      },
+      {
+        "id": "nwc",
+        "title": "Indirect: Known Working-Capital Change",
+        "defaults": {
+          "net_income": "120000",
+          "noncash": "30000",
+          "nwc_change": "20000"
+        },
+        "fields": [
+          {
+            "key": "net_income",
+            "label": "Net income for the reporting period",
+            "value": 120000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "noncash",
+            "label": "Net noncash / nonoperating adjustments",
+            "value": 30000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000,
+            "hint": "Signed net amount: add noncash expenses; subtract applicable noncash income or gains. Avoid double counting."
+          },
+          {
+            "key": "nwc_change",
+            "label": "Increase / (decrease) in operating net working capital",
+            "value": 20000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000,
+            "hint": "Ending minus beginning operating assets less operating liabilities. Exclude cash and interest-bearing debt."
+          }
+        ]
+      },
+      {
+        "id": "direct",
+        "title": "Direct: Cash Receipts & Payments",
+        "defaults": {
+          "receipts": "600000",
+          "suppliers": "300000",
+          "employees": "100000",
+          "taxes": "30000",
+          "interest": "10000",
+          "other": "30000"
+        },
+        "fields": [
+          {
+            "key": "receipts",
+            "label": "Net operating cash receipts",
+            "value": 600000,
+            "unit": "$",
+            "min": -1000000000000,
+            "max": 1000000000000
+          },
+          {
+            "key": "suppliers",
+            "label": "Cash paid to suppliers",
+            "value": 300000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "employees",
+            "label": "Cash paid to employees",
+            "value": 100000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "taxes",
+            "label": "Operating income-tax cash payments",
+            "value": 30000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "interest",
+            "label": "Operating interest cash payments",
+            "value": 10000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "other",
+            "label": "Other operating cash payments",
+            "value": 30000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          }
+        ]
+      }
+    ],
+    "reviewed_on": "2026-11-25",
+    "evidence": "five-existing-tasks-20261125.md"
+  },
+  {
+    "id": "business-line-of-credit",
+    "title": "Business Line of Credit Calculator",
+    "category": "Other",
+    "source_url": null,
+    "reference_urls": [
+      "https://www.sba.gov/loans/7a-loans/"
+    ],
+    "source_status": "Existing original calculator; scoped task/navigation review. No competitor DOM parity claimed.",
+    "local_route": "/business-line-of-credit-calculator",
+    "modes": [
+      {
+        "id": "interest",
+        "title": "Constant-Balance Interest",
+        "defaults": {
+          "balance": "25000",
+          "rate": "12",
+          "days": "30",
+          "basis": "365",
+          "fees": "50"
+        },
+        "fields": [
+          {
+            "key": "balance",
+            "label": "Principal outstanding for every day",
+            "value": 25000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "rate",
+            "label": "Annual interest rate assumption",
+            "value": 12,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "days",
+            "label": "Days interest accrues",
+            "value": 30,
+            "unit": "days",
+            "min": 0,
+            "max": 3660,
+            "step": 1
+          },
+          {
+            "key": "basis",
+            "label": "Simple-interest days per year",
+            "value": "365",
+            "type": "select",
+            "options": [
+              "365",
+              "360"
+            ]
+          },
+          {
+            "key": "fees",
+            "label": "Fees paid separately for this period",
+            "value": 50,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          }
+        ]
+      },
+      {
+        "id": "ledger",
+        "title": "Dated Draws & Principal Repayments",
+        "defaults": {
+          "start": "2026-12-01",
+          "end": "2027-01-01",
+          "opening": "10000",
+          "limit": "50000",
+          "rate": "12",
+          "basis": "365",
+          "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+          "fees": "50"
+        },
+        "fields": [
+          {
+            "key": "start",
+            "label": "Start date (included)",
+            "value": "2026-12-01",
+            "type": "date"
+          },
+          {
+            "key": "end",
+            "label": "End date (excluded)",
+            "value": "2027-01-01",
+            "type": "date"
+          },
+          {
+            "key": "opening",
+            "label": "Principal at start before listed transactions",
+            "value": 10000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "limit",
+            "label": "Entered credit limit",
+            "value": 50000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "rate",
+            "label": "Annual interest rate assumption",
+            "value": 12,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "basis",
+            "label": "Simple-interest days per year",
+            "value": "365",
+            "type": "select",
+            "options": [
+              "365",
+              "360"
+            ]
+          },
+          {
+            "key": "transactions",
+            "label": "Date, signed principal change",
+            "value": "2026-12-10, 5000\n2026-12-20, -3000",
+            "type": "textarea",
+            "hint": "Positive draws; negative principal-only repayments. Transactions take effect before that day’s accrual. No currency signs or thousands separators; leave blank for no activity.",
+            "optional": true
+          },
+          {
+            "key": "fees",
+            "label": "Period fees paid separately",
+            "value": 50,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          }
+        ]
+      },
+      {
+        "id": "paydown",
+        "title": "Fixed Monthly Payment, No Redraws",
+        "defaults": {
+          "balance": "25000",
+          "rate": "12",
+          "payment": "1000",
+          "monthly_fee": "0",
+          "max_months": "600"
+        },
+        "fields": [
+          {
+            "key": "balance",
+            "label": "Starting principal",
+            "value": 25000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "rate",
+            "label": "Annual interest rate assumption",
+            "value": 12,
+            "unit": "%",
+            "min": 0,
+            "max": 100
+          },
+          {
+            "key": "payment",
+            "label": "Chosen total monthly payment",
+            "value": 1000,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "monthly_fee",
+            "label": "Fee charged each active month",
+            "value": 0,
+            "unit": "$",
+            "min": 0,
+            "max": 1000000000000
+          },
+          {
+            "key": "max_months",
+            "label": "Maximum modeled months",
+            "value": 600,
+            "unit": "months",
+            "min": 1,
+            "max": 1200,
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "reviewed_on": "2026-11-25",
+    "evidence": "five-existing-tasks-20261125.md"
   }
 ]

@@ -1,0 +1,369 @@
+{
+  "reviewedOn": "2026-11-25",
+  "guidePaths": [
+    "/guides/how-to-prorate-rent-by-days/",
+    "/guides/basis-points-vs-percentage-points/",
+    "/guides/how-to-calculate-credit-utilization/",
+    "/guides/operating-cash-flow-vs-net-income/",
+    "/guides/business-line-of-credit-vs-term-loan/"
+  ],
+  "questionPatches": [
+    {
+      "topic": "prorated-rent",
+      "question": "Do I count the move-in and move-out days?",
+      "anchor": "use-rent-billable-dates",
+      "links": [
+        {
+          "id": "prorated-rent",
+          "mode": "dates",
+          "label": "Count the January 17–31 billable dates",
+          "values": {
+            "monthly_rent": "2000",
+            "start": "2026-01-17",
+            "end": "2026-01-31",
+            "basis": "Actual days in each month"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "prorated-rent",
+      "question": "Should I divide rent by 30 or by the days in the month?",
+      "anchor": "use-rent-day-count-method",
+      "links": [
+        {
+          "id": "prorated-rent",
+          "mode": "dates",
+          "label": "Calculate fifteen days using the actual 31-day month",
+          "values": {
+            "monthly_rent": "2000",
+            "start": "2026-01-17",
+            "end": "2026-01-31",
+            "basis": "Actual days in each month"
+          }
+        },
+        {
+          "id": "prorated-rent",
+          "mode": "days",
+          "label": "Calculate the same fifteen days using a 30-day denominator",
+          "values": {
+            "monthly_rent": "2000",
+            "billable_days": "15",
+            "month_days": "31",
+            "basis": "30-day month"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "prorated-rent",
+      "question": "How does a leap year affect prorated rent?",
+      "anchor": "use-rent-leap-year",
+      "links": [
+        {
+          "id": "prorated-rent",
+          "mode": "dates",
+          "label": "Calculate February 15–29 in a leap year",
+          "values": {
+            "monthly_rent": "2000",
+            "start": "2028-02-15",
+            "end": "2028-02-29",
+            "basis": "Actual days in each month"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "prorated-rent",
+      "question": "Can a 30-day calculation exceed the monthly rent?",
+      "anchor": "use-rent-full-30-day-method",
+      "links": [
+        {
+          "id": "prorated-rent",
+          "mode": "dates",
+          "label": "Inspect a full 31-day month under the fixed-30 method",
+          "values": {
+            "monthly_rent": "2000",
+            "start": "2026-01-01",
+            "end": "2026-01-31",
+            "basis": "30-day month"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "basis-point",
+      "question": "How many basis points are in 1%?",
+      "anchor": "use-bps-one-percent",
+      "links": [
+        {
+          "id": "basis-point",
+          "mode": "convert",
+          "label": "Convert a 1% rate quantity to basis points",
+          "values": {
+            "value": "1",
+            "unit": "Percent / percentage points"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "basis-point",
+      "question": "Is 25 bps the same as 0.25%?",
+      "anchor": "use-bps-25",
+      "links": [
+        {
+          "id": "basis-point",
+          "mode": "convert",
+          "label": "Convert 25 bps to percent and decimal form",
+          "values": {
+            "value": "25",
+            "unit": "Basis points"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "basis-point",
+      "question": "How do I convert a decimal to basis points?",
+      "anchor": "use-bps-decimal",
+      "links": [
+        {
+          "id": "basis-point",
+          "mode": "convert",
+          "label": "Convert the decimal fraction 0.0025 to basis points",
+          "values": {
+            "value": "0.0025",
+            "unit": "Decimal"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "basis-point",
+      "question": "Can basis points be negative?",
+      "anchor": "use-bps-negative-change",
+      "links": [
+        {
+          "id": "basis-point",
+          "mode": "rate-change",
+          "label": "Compare a rate fall from 5% to 4.5%",
+          "values": {
+            "start_rate": "5",
+            "end_rate": "4.5"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "basis-point",
+      "question": "Does 25 bps on a mortgage equal a $500 payment change?",
+      "anchor": "use-bps-fixed-base-amount",
+      "links": [
+        {
+          "id": "basis-point",
+          "mode": "amount",
+          "label": "Apply 25 bps to a fixed $200,000 base",
+          "values": {
+            "amount": "200000",
+            "bps": "25"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "credit-utilization",
+      "question": "Is overall utilization the average of card percentages?",
+      "anchor": "use-credit-weighted-ratio",
+      "links": [
+        {
+          "id": "credit-utilization",
+          "mode": "cards",
+          "label": "Compare two unequal credit limits at a 10% example target",
+          "values": {
+            "cards": "900, 1000\n100, 9000",
+            "target": "10"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "credit-utilization",
+      "question": "Why does the per-card target require a larger payment?",
+      "anchor": "use-credit-per-card-target",
+      "links": [
+        {
+          "id": "credit-utilization",
+          "mode": "cards",
+          "label": "Inspect the $800 per-card target with no aggregate payment",
+          "values": {
+            "cards": "900, 1000\n100, 9000",
+            "target": "10"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "credit-utilization",
+      "question": "Can a ratio exceed 100% or be undefined?",
+      "anchor": "use-credit-zero-limit",
+      "links": [
+        {
+          "id": "credit-utilization",
+          "mode": "cards",
+          "label": "Inspect one zero-limit card alongside a positive-limit card",
+          "values": {
+            "cards": "500, 0\n100, 1000",
+            "target": "10"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "operating-cash-flow",
+      "question": "What is the operating cash flow formula?",
+      "anchor": "use-ocf-methods",
+      "links": [
+        {
+          "id": "operating-cash-flow",
+          "mode": "indirect",
+          "label": "Reconcile operating cash flow using component changes",
+          "values": {
+            "net_income": "120000",
+            "noncash": "30000",
+            "ar_change": "15000",
+            "inventory_change": "10000",
+            "other_assets_change": "5000",
+            "ap_change": "8000",
+            "other_liabilities_change": "2000"
+          }
+        },
+        {
+          "id": "operating-cash-flow",
+          "mode": "direct",
+          "label": "Calculate operating receipts minus cash payments",
+          "values": {
+            "receipts": "600000",
+            "suppliers": "300000",
+            "employees": "100000",
+            "taxes": "30000",
+            "interest": "10000",
+            "other": "30000"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "operating-cash-flow",
+      "question": "Does an increase in accounts receivable add or subtract cash?",
+      "anchor": "use-ocf-receivables-sign",
+      "links": [
+        {
+          "id": "operating-cash-flow",
+          "mode": "indirect",
+          "label": "Inspect the cash effect of a receivables increase",
+          "values": {
+            "net_income": "120000",
+            "noncash": "30000",
+            "ar_change": "15000",
+            "inventory_change": "10000",
+            "other_assets_change": "5000",
+            "ap_change": "8000",
+            "other_liabilities_change": "2000"
+          }
+        },
+        {
+          "id": "operating-cash-flow",
+          "mode": "indirect",
+          "label": "Inspect the cash effect of a $30,000 receivables decrease",
+          "values": {
+            "net_income": "120000",
+            "noncash": "30000",
+            "ar_change": "-30000",
+            "inventory_change": "10000",
+            "other_assets_change": "5000",
+            "ap_change": "8000",
+            "other_liabilities_change": "2000"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "operating-cash-flow",
+      "question": "Can operating cash flow be negative when net income is positive?",
+      "anchor": "use-ocf-positive-profit-negative-cash",
+      "links": [
+        {
+          "id": "operating-cash-flow",
+          "mode": "nwc",
+          "label": "Inspect positive net income with negative operating cash flow",
+          "values": {
+            "net_income": "10000",
+            "noncash": "0",
+            "nwc_change": "20000"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "business-line-of-credit",
+      "question": "Why is the $176.25 ledger cost not the reduction in debt?",
+      "anchor": "use-loc-principal-ledger",
+      "links": [
+        {
+          "id": "business-line-of-credit",
+          "mode": "ledger",
+          "label": "Reproduce the dated ledger and remaining principal",
+          "values": {
+            "start": "2026-12-01",
+            "end": "2027-01-01",
+            "opening": "10000",
+            "limit": "50000",
+            "rate": "12",
+            "basis": "365",
+            "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+            "fees": "50"
+          }
+        }
+      ]
+    },
+    {
+      "topic": "business-line-of-credit",
+      "question": "What needs checking when the worksheet differs from a statement?",
+      "anchor": "use-loc-day-basis",
+      "links": [
+        {
+          "id": "business-line-of-credit",
+          "mode": "interest",
+          "label": "Inspect the same 30 days on a 365-day basis",
+          "values": {
+            "balance": "25000",
+            "rate": "12",
+            "days": "30",
+            "basis": "365",
+            "fees": "50"
+          }
+        },
+        {
+          "id": "business-line-of-credit",
+          "mode": "interest",
+          "label": "Inspect the same 30 days on a 360-day basis",
+          "values": {
+            "balance": "25000",
+            "rate": "12",
+            "days": "30",
+            "basis": "360",
+            "fees": "50"
+          }
+        }
+      ]
+    }
+  ],
+  "toolIds": [
+    "prorated-rent",
+    "basis-point",
+    "credit-utilization",
+    "operating-cash-flow",
+    "business-line-of-credit"
+  ]
+}

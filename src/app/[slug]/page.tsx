@@ -1,3 +1,4 @@
+import fiveTaskLinkReview from "@/lib/five-existing-task-links.json";
 import RelatedGuides from '@/components/RelatedGuides';
 import FavoriteButton from "@/components/FavoriteButton";
 import {hasShareTools} from "@/lib/share-tools";
@@ -200,7 +201,7 @@ export default async function Page({
           <><RealEstateDirectory /><CalculatorDisclaimer id={c.id}/></>
         ) : c ? (
           <>
-            <CalculatorClient calc={JSON.parse(JSON.stringify(c))} initialResult={initialResult} shortcuts={(searchTasks[c.id] ?? []).map(({keyword, mode, values}) => ({keyword, mode, ...(Object.hasOwn(focusedTasks,c.id)?{values}:{})}))} />
+            <CalculatorClient calc={JSON.parse(JSON.stringify(c))} initialResult={initialResult} mobileShortcuts={fiveTaskLinkReview.toolIds.includes(c.id)} shortcuts={(searchTasks[c.id] ?? []).map(({keyword, mode, values}) => ({keyword, mode, ...(Object.hasOwn(focusedTasks,c.id)?{values}:{})}))} />
             <span className="calculator-end-marker" data-calculator-end aria-hidden="true" />
             <CalculatorDisclaimer id={c.id}/>
             <BlogSnippetKit id={c.id} title={c.title} path={routeFor(c.id)}/>

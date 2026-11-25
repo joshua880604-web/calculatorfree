@@ -268,3 +268,5 @@ Object.assign(wordingReviewDates,Object.fromEntries(["/return-on-assets-calculat
 Object.assign(wordingReviewDates,Object.fromEntries(["/merchant-cash-advance-calculator.html", "/backdoor-roth-ira-calculator.html", "/guides/merchant-cash-advance-factor-rate-and-cash-flow-cost/", "/guides/backdoor-roth-2026-pro-rata-and-basis/", "/glossary/merchant-cash-advance/", "/glossary/backdoor-roth-ira/", "/financial-calculator.html", "/business-calculators.html", "/retirement-calculators.html", "/guides/", "/glossary/"].map(path=>[path,'2026-11-24'])));
 
 wordingReviewDates["/single-credit-card-payoff-calculator.html"]="2026-11-25";
+
+Object.assign(wordingReviewDates,Object.fromEntries(["/prorated-rent-calculator.html", "/basis-point-calculator.html", "/credit-utilization-calculator.html", "/operating-cash-flow-calculator.html", "/business-line-of-credit-calculator.html", "/guides/how-to-prorate-rent-by-days/", "/guides/basis-points-vs-percentage-points/", "/guides/how-to-calculate-credit-utilization/", "/guides/operating-cash-flow-vs-net-income/", "/guides/business-line-of-credit-vs-term-loan/", "/guides/"].map(path=>[path,"2026-11-25"])));

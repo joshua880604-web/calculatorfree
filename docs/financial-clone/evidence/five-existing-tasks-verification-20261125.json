@@ -1,0 +1,93 @@
+{
+  "reviewed_on": "2026-11-25",
+  "branch": "preview/five-existing-tasks-20261125",
+  "published": false,
+  "base_commit": "442d158639beca50cc2540903c2714502d3c7e79",
+  "published_matching_base": "bb56274523dedd71154dea87c8c2056ea9483bfe",
+  "tools": [
+    "prorated-rent",
+    "basis-point",
+    "credit-utilization",
+    "operating-cash-flow",
+    "business-line-of-credit"
+  ],
+  "scope": {
+    "existing_modes": 12,
+    "complete_task_presets": 14,
+    "guide_answer_links": 21,
+    "question_anchors": 17,
+    "new_tools": 0,
+    "new_canonical_pages": 0
+  },
+  "checks": {
+    "tests": {
+      "passed": 3980,
+      "failed": 0,
+      "command": "npm test",
+      "log": "/workspace/work/five-existing-tools-20261125/full-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "npm run typecheck",
+      "log": "/workspace/work/five-existing-tools-20261125/typecheck.log"
+    },
+    "production_build": {
+      "passed": true,
+      "command": "SITE_URL=https://www.calculatorfree.io SITE_INDEXABLE=true npm run build",
+      "log": "/workspace/work/five-existing-tools-20261125/build.log"
+    },
+    "independent_numeric": {
+      "passed": true,
+      "scenarios": 22,
+      "numeric_expectations": 77,
+      "method": "Independent 70-digit Python Decimal references; daily ledger separately accrued day by day.",
+      "reference": "five-existing-task-reference-20261125.json"
+    },
+    "preservation": {
+      "passed": true,
+      "modes": 376,
+      "toolCount": 180,
+      "scope": "All original mode fields, defaults and default results unchanged"
+    },
+    "browser": {
+      "passed": true,
+      "checks": 130,
+      "widths": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "log": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "coverage": [
+        "14 actual task buttons and 21 guide links at mobile/desktop widths",
+        "repeat application after editing inputs",
+        "no-JavaScript links and default results",
+        "layout and anchors",
+        "no page errors"
+      ]
+    },
+    "visual": {
+      "passed": true,
+      "scope": "Local screenshots; five mobile tools and representative desktop/guide screenshots inspected. Original vendor visual parity unverified."
+    },
+    "static_audit": {
+      "passed": true,
+      "configuration": "indexable-test-origin",
+      "pages": 505,
+      "guides": 167,
+      "internal_links_checked": 36912,
+      "calculator_state_links": 3202,
+      "max_contextual_depth": 3,
+      "redirect_rules": 212,
+      "curated_llms_links": 255,
+      "no_live_indexing_or_ranking_claim": true
+    }
+  },
+  "limitations": [
+    "Local candidate not published.",
+    "No new Google indexing/ranking or production-crawl outcome is claimed.",
+    "Original vendor DOM, native Safari, live lender or professional certification not verified.",
+    "OCF ratio mode and unrelated utility-bill credit-score queries deferred."
+  ]
+}

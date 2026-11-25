@@ -1719,3 +1719,7 @@ body:has(.calculator-page) {--shell-width:1120px;}
 /* Focused property/minimum-payment forms keep full-width controls beside long units. */
 .focused-tool-fields .field-row { grid-template-columns: minmax(0, 1fr); gap: 6px; margin-bottom: 14px; }
 .focused-tool-fields .field-control { width: 100%; }
+
+/* Reviewed task inputs remain directly reachable on these five tool pages. */
+.task-shortcuts.mobile-task-shortcuts button {font-size:14px;line-height:1.4;}
+@media(max-width:700px){.task-shortcuts.mobile-task-shortcuts {display:flex;}}

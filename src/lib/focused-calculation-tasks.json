@@ -1571,5 +1571,191 @@
         "tax": ""
       }
     }
+  ],
+  "prorated-rent": [
+    {
+      "keyword": "Prorated rent calculator",
+      "mode": "dates",
+      "description": "Calculate partial-month rent by inclusive billable dates or a known day count. Choose the actual-calendar, 30-day or annual method required for your agreement.",
+      "values": {
+        "monthly_rent": "2000",
+        "start": "2026-01-17",
+        "end": "2026-01-31",
+        "basis": "Actual days in each month"
+      },
+      "aliases": [
+        "Prorate rent calculator",
+        "Rent prorate calculator"
+      ]
+    },
+    {
+      "keyword": "Prorate rent by known billable days",
+      "mode": "days",
+      "description": "Compare fifteen billable days in a 31-day month using a fixed 30-day denominator. This convention can differ from actual-calendar rent.",
+      "values": {
+        "monthly_rent": "2000",
+        "billable_days": "15",
+        "month_days": "31",
+        "basis": "30-day month"
+      }
+    },
+    {
+      "keyword": "Prorated rent in a leap-year February",
+      "mode": "dates",
+      "description": "Count February 15 through February 29 inclusive using the actual 29-day month. This calendar example does not decide which days a lease makes billable.",
+      "values": {
+        "monthly_rent": "2000",
+        "start": "2028-02-15",
+        "end": "2028-02-29",
+        "basis": "Actual days in each month"
+      }
+    }
+  ],
+  "basis-point": [
+    {
+      "keyword": "Basis point calculator",
+      "mode": "convert",
+      "description": "Convert financial basis points to percent and decimal form. For a difference between two rates or a fixed-base monetary amount, choose the matching task.",
+      "values": {
+        "value": "25",
+        "unit": "Basis points"
+      },
+      "aliases": [
+        "Basis points calculator",
+        "BPS calculator",
+        "Basis points conversion calculator"
+      ]
+    },
+    {
+      "keyword": "Basis point change between rates",
+      "mode": "rate-change",
+      "description": "Compare 5% with 5.25%: the absolute change is 25 bps, while the relative increase is 5%.",
+      "values": {
+        "start_rate": "5",
+        "end_rate": "5.25"
+      }
+    },
+    {
+      "keyword": "Basis points of an amount",
+      "mode": "amount",
+      "description": "Apply 25 bps to an unchanged $200,000 base. The $500 proportional amount is not a monthly mortgage-payment change.",
+      "values": {
+        "amount": "200000",
+        "bps": "25"
+      }
+    }
+  ],
+  "credit-utilization": [
+    {
+      "keyword": "Credit utilization calculator",
+      "mode": "cards",
+      "description": "Calculate overall and per-card revolving-credit utilization from balances and limits for the same date. Compare a user-chosen overall target with separate per-card targets.",
+      "values": {
+        "cards": "900, 1000\n100, 9000",
+        "target": "10"
+      },
+      "aliases": [
+        "Credit card utilization calculator",
+        "Credit utilization ratio calculator"
+      ]
+    },
+    {
+      "keyword": "Credit utilization target payments",
+      "mode": "cards",
+      "description": "Compare the overall and per-card payments for two equal-limit cards at a selected 10% target. The target is an example input, not a score threshold or a recommendation to carry debt.",
+      "values": {
+        "cards": "1500, 5000\n500, 5000",
+        "target": "10"
+      }
+    }
+  ],
+  "operating-cash-flow": [
+    {
+      "keyword": "Operating cash flow calculator",
+      "mode": "indirect",
+      "description": "Reconcile operating cash flow from net income and signed adjustments, or use actual operating cash receipts and payments. Keep all inputs within the same reporting period.",
+      "values": {
+        "net_income": "120000",
+        "noncash": "30000",
+        "ar_change": "15000",
+        "inventory_change": "10000",
+        "other_assets_change": "5000",
+        "ap_change": "8000",
+        "other_liabilities_change": "2000"
+      },
+      "aliases": [
+        "Cash flow from operations calculator"
+      ]
+    },
+    {
+      "keyword": "Cash flow from operations using working-capital change",
+      "mode": "nwc",
+      "description": "Use a known $20,000 increase in operating net working capital once, with $120,000 net income and $30,000 net noncash adjustments.",
+      "values": {
+        "net_income": "120000",
+        "noncash": "30000",
+        "nwc_change": "20000"
+      }
+    },
+    {
+      "keyword": "Direct operating cash flow calculator",
+      "mode": "direct",
+      "description": "Subtract the entered, nonoverlapping operating cash payments from operating receipts. The illustration does not classify transactions or prepare a complete compliant statement.",
+      "values": {
+        "receipts": "600000",
+        "suppliers": "300000",
+        "employees": "100000",
+        "taxes": "30000",
+        "interest": "10000",
+        "other": "30000"
+      }
+    }
+  ],
+  "business-line-of-credit": [
+    {
+      "keyword": "Business line of credit calculator",
+      "mode": "interest",
+      "description": "Estimate constant-balance interest, track dated principal draws and repayments, or model a fixed-payment paydown with no redraws. Inspect fees and remaining principal.",
+      "values": {
+        "balance": "25000",
+        "rate": "12",
+        "days": "30",
+        "basis": "365",
+        "fees": "50"
+      },
+      "aliases": [
+        "Business line of credit loan calculator"
+      ]
+    },
+    {
+      "keyword": "Business line of credit interest with dated draws",
+      "mode": "ledger",
+      "description": "Use actual elapsed days, include the start date and exclude the end date. Enter principal-only draws and repayments; period fees are paid separately.",
+      "values": {
+        "start": "2026-12-01",
+        "end": "2027-01-01",
+        "opening": "10000",
+        "limit": "50000",
+        "rate": "12",
+        "basis": "365",
+        "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+        "fees": "50"
+      }
+    },
+    {
+      "keyword": "Business line of credit payment calculator",
+      "mode": "paydown",
+      "description": "Model a chosen $1,000 total monthly payment on a $25,000 balance at a 12% annual interest-rate assumption, with no new draws. Check whether principal remains at the chosen horizon.",
+      "values": {
+        "balance": "25000",
+        "rate": "12",
+        "payment": "1000",
+        "monthly_fee": "0",
+        "max_months": "600"
+      },
+      "aliases": [
+        "Business line of credit monthly payment calculator"
+      ]
+    }
   ]
 }

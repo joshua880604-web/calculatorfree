@@ -1,5 +1,6 @@
 import linkReview from './internal-link-review.json';
 import answerLinkReview from './practical-guide-answer-links.json';
+import fiveTaskLinkReview from './five-existing-task-links.json';
 import guideToolRepairs from './guide-tool-repairs.json';
 import {comparisonGuideList} from './comparison-guides';
 import {questionGuideList} from './question-guides';
@@ -256,3 +257,4 @@ for(const guide of editorialGuides){
 // Contextual links reviewed separately from mathematical/source checks.
 for(const guide of editorialGuides)if(linkReview.guides.includes(guide.path))guide.linksUpdatedOn=[guide.linksUpdatedOn??'',linkReview.reviewedOn].sort().at(-1)!;
 for(const guide of editorialGuides)if(answerLinkReview.guides.includes(guide.path))guide.linksUpdatedOn=[guide.linksUpdatedOn??'',answerLinkReview.reviewedOn].sort().at(-1)!;
+for(const guide of editorialGuides)if(fiveTaskLinkReview.guidePaths.includes(guide.path))guide.linksUpdatedOn=[guide.linksUpdatedOn??'',fiveTaskLinkReview.reviewedOn].sort().at(-1)!;

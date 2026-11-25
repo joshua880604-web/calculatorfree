@@ -1,0 +1,1083 @@
+{
+  "prorated-rent": {
+    "meta": {
+      "path": "/guides/how-to-prorate-rent-by-days/",
+      "title": "How to Prorate Rent: Actual Days, 30-Day Months & Leap Years",
+      "heading": "How to Prorate Rent: Actual Days, 30-Day Months & Leap Years",
+      "description": "Compare actual-month, 30-day and annual rent proration. Follow inclusive dates, leap years, cross-month calculations and rounding examples.",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "prorated-rent",
+        "rent",
+        "rental-property",
+        "vacancy-rate"
+      ],
+      "topic": "Rent & housing",
+      "breadcrumb": "Prorated rent",
+      "cardIntro": "Prorated rent charges only the selected billable days. With $2,000 monthly rent and January 17–31 included, the actual-calendar calculation is $2,000 / 31 × 15 = $967.74. A 30-day denominator gives $1,000 for the same dates. Use the method and billable-date convention required by your agreement and applicable rules.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Manual constant monthly rent and explicitly included billable dates. The selected day-count method is an assumption, not a legal ruling or a determination of lease obligations. No deposits, utilities, concessions or automatic monthly caps.",
+    "answer": "Prorated rent charges only the selected billable days. With $2,000 monthly rent and January 17–31 included, the actual-calendar calculation is $2,000 / 31 × 15 = $967.74. A 30-day denominator gives $1,000 for the same dates. Use the method and billable-date convention required by your agreement and applicable rules.",
+    "featuredBeforeIntro": true,
+    "sections": [
+      {
+        "id": "dates",
+        "title": "Choose billable dates before choosing a formula",
+        "paragraphs": [
+          "A move date alone may not tell you which days are chargeable. The calculator asks for the first and last billable days and includes both. January 17 through January 31 contains fifteen billable days. If an agreement excludes the departure day, enter the day before departure rather than silently treating the displayed end date as exclusive.",
+          "The date mode counts calendar days, not hours, so daylight-saving transitions do not create partial days. It splits an interval at month boundaries. Monthly rent stays constant across those segments; a mid-period rent increase, concession or separate utility charge requires a separate calculation. This tool does not interpret the lease or determine local legal entitlements."
+        ]
+      },
+      {
+        "id": "basis",
+        "title": "See why the denominator changes the charge",
+        "paragraphs": [
+          "For $2,000 monthly rent and fifteen billable days in a 31-day month, the actual-month method uses an unrounded daily rate of $2,000 / 31 and gives $967.74 after final rounding. A fixed-30-day method divides the same monthly rent by 30 and gives $1,000. The difference comes from the denominator, not from counting different dates.",
+          "A fixed-365-year method uses twelve times monthly rent divided by 365, then multiplies by billable days. An actual-year method uses 365 or 366 according to each segment’s calendar year. These are explicit alternatives for comparison. They do not establish which convention a landlord or tenant is entitled to apply."
+        ]
+      },
+      {
+        "id": "months",
+        "title": "Split cross-month and leap-year intervals visibly",
+        "paragraphs": [
+          "For January 30 through February 2, 2026, include two January days and two February days. At $2,000 monthly rent, the actual-calendar total is $2,000 × 2/31 plus $2,000 × 2/28, or about $271.89. Applying only January’s daily rate to all four days would miss February’s denominator.",
+          "In February 2024, the actual-month denominator is 29. Fifteen days at $1,800 monthly rent give $1,800 × 15/29, or about $931.03. The actual-year method instead gives $1,800 × 12 × 15/366, or about $885.25. Both are internally consistent arithmetic conventions, so select the one that matches the agreement rather than whichever produces a preferred amount."
+        ]
+      },
+      {
+        "id": "rounding",
+        "title": "Reconcile the displayed estimate with a billing record",
+        "paragraphs": [
+          "The calculation retains unrounded daily rates and monthly segment charges, sums them, and rounds the displayed monetary total. For the January example, rounding $2,000 / 31 to $64.52 first and multiplying by fifteen gives $967.80, six cents more than retaining precision until the end. The segment CSV exposes the unrounded values used by this worksheet.",
+          "Known-days mode is useful when you have already confirmed the count for one calendar month. Enter the actual month length even when comparing a fixed denominator. It accepts zero billable days and returns zero charge. Use date mode for intervals spanning months or years. A fixed-30 calculation does not invent a full-month cap, and neither mode creates an invoice, security-deposit statement or legal determination."
+        ]
+      },
+      {
+        "id": "worked-cases",
+        "title": "Reproduce the worked scenarios",
+        "paragraphs": [
+          "Each preset restores the complete selected units, dates or sign conventions. The CSV records the hypothetical assumptions and independently checked selected result. These are arithmetic illustrations, not observed market outcomes."
+        ],
+        "table": {
+          "caption": "Prorated Rent Calculator — checked scenarios",
+          "headers": [
+            "Scenario",
+            "Input assumptions",
+            "Selected result"
+          ],
+          "rows": [
+            [
+              "Fifteen January days at $2,000 monthly rent",
+              "$2,000.00 monthly rent; 2026-01-17 through 2026-01-31, both included; Actual days in each month.",
+              "Estimated rent is $967.74 after final rounding."
+            ],
+            [
+              "The same fifteen days with a 30-day denominator",
+              "$2,000.00 monthly rent; 2026-01-17 through 2026-01-31, both included; 30-day month.",
+              "Estimated rent is $1,000; the difference from actual-calendar rent comes from the selected method."
+            ],
+            [
+              "Split four billable days across January and February",
+              "$2,000.00 monthly rent; 2026-01-30 through 2026-02-02, both included; Actual days in each month.",
+              "The estimated total is $271.89, with both monthly denominators visible in the breakdown."
+            ],
+            [
+              "Count February 29 in a leap-year partial month",
+              "$1,800.00 monthly rent; 2024-02-15 through 2024-02-29, both included; Actual days in each month.",
+              "The actual-month estimate is $931.03, with the leap day counted once."
+            ],
+            [
+              "Use a fixed 365-day annual denominator",
+              "$2,000.00 monthly rent; 2026-01-17 through 2026-01-31, both included; 365-day year.",
+              "The fixed-365 estimate is $986.30 for this interval."
+            ],
+            [
+              "Use 366 annual days for the leap-year illustration",
+              "$1,800.00 monthly rent; 2024-02-15 through 2024-02-29, both included; Actual days in each year.",
+              "The actual-year estimate is $885.25; it uses a different convention from the $931.03 actual-month case."
+            ],
+            [
+              "Use a confirmed count of fifteen days in a 31-day month",
+              "$2,000 monthly rent; fifteen known billable days; actual month length 31.",
+              "The estimate is $967.74, matching the corresponding January date example."
+            ],
+            [
+              "Zero billable days produces a zero partial rent charge",
+              "$2,000 monthly rent; zero billable days; 31-day month.",
+              "The calculated rent is $0; separate fees or contractual charges are not inferred."
+            ]
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "Do I count the move-in and move-out days?",
+        "answer": "This calculator includes both entered billable dates. Whether a departure day is chargeable depends on your agreement and applicable rules. If it is excluded, enter the preceding day as the last billable day."
+      },
+      {
+        "question": "Should I divide rent by 30 or by the days in the month?",
+        "answer": "Use the method applicable to your agreement. Actual-calendar, fixed-30-day and annual methods can differ. The calculator displays the selected method and does not determine which one is legally required."
+      },
+      {
+        "question": "How does a leap year affect prorated rent?",
+        "answer": "The actual-month method uses 29 days for February in a leap year. The actual-year method uses 366 days for that year; fixed-365 and fixed-30 methods keep their stated denominators."
+      },
+      {
+        "question": "Can a 30-day calculation exceed the monthly rent?",
+        "answer": "Yes. Applying monthly rent / 30 to 31 actual billable days gives 31/30 of monthly rent. This worksheet imposes no cap and does not implement a 30/360 date-count convention; check any contractual cap separately."
+      },
+      {
+        "question": "Why can my invoice differ by a few cents?",
+        "answer": "The worksheet keeps full daily-rate precision and rounds the final total for display. An invoice that rounds each daily charge or each monthly line before summing can differ; use the agreed rounding policy."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Zillow Rental Manager: Prorated rent",
+        "url": "https://www.zillow.com/rentals-network/prorated-rent-calculator/",
+        "usedFor": "A practical example of monthly rent divided by calendar-month days, then multiplied by occupancy days.",
+        "scope": "One arithmetic convention, not a universal legal requirement. Our alternative-method and cross-month examples are original calculations."
+      }
+    ],
+    "related": [
+      {
+        "href": "/prorated-rent-calculator.html",
+        "label": "Prorated Rent Calculator"
+      },
+      {
+        "href": "/rent-affordability-calculator.html",
+        "label": "Rent Affordability Calculator"
+      },
+      {
+        "href": "/rental-property-calculator.html",
+        "label": "Rental Property Calculator"
+      },
+      {
+        "href": "/vacancy-rate-calculator.html",
+        "label": "Vacancy Rate Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Fifteen January days at $2,000 monthly rent",
+        "path": "/prorated-rent-calculator",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 2000,
+          "start": "2026-01-17",
+          "end": "2026-01-31",
+          "basis": "Actual days in each month"
+        },
+        "featured": true
+      },
+      {
+        "label": "The same fifteen days with a 30-day denominator",
+        "path": "/prorated-rent-calculator",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 2000,
+          "start": "2026-01-17",
+          "end": "2026-01-31",
+          "basis": "30-day month"
+        }
+      },
+      {
+        "label": "Split four billable days across January and February",
+        "path": "/prorated-rent-calculator",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 2000,
+          "start": "2026-01-30",
+          "end": "2026-02-02",
+          "basis": "Actual days in each month"
+        }
+      },
+      {
+        "label": "Count February 29 in a leap-year partial month",
+        "path": "/prorated-rent-calculator",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 1800,
+          "start": "2024-02-15",
+          "end": "2024-02-29",
+          "basis": "Actual days in each month"
+        }
+      },
+      {
+        "label": "Use a fixed 365-day annual denominator",
+        "path": "/prorated-rent-calculator",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 2000,
+          "start": "2026-01-17",
+          "end": "2026-01-31",
+          "basis": "365-day year"
+        }
+      },
+      {
+        "label": "Use 366 annual days for the leap-year illustration",
+        "path": "/prorated-rent-calculator",
+        "mode": "dates",
+        "values": {
+          "monthly_rent": 1800,
+          "start": "2024-02-15",
+          "end": "2024-02-29",
+          "basis": "Actual days in each year"
+        }
+      },
+      {
+        "label": "Use a confirmed count of fifteen days in a 31-day month",
+        "path": "/prorated-rent-calculator",
+        "mode": "days",
+        "values": {
+          "monthly_rent": 2000,
+          "billable_days": 15,
+          "month_days": 31,
+          "basis": "Actual days in each month"
+        }
+      },
+      {
+        "label": "Zero billable days produces a zero partial rent charge",
+        "path": "/prorated-rent-calculator",
+        "mode": "days",
+        "values": {
+          "monthly_rent": 2000,
+          "billable_days": 0,
+          "month_days": 31,
+          "basis": "Actual days in each month"
+        }
+      }
+    ],
+    "limitations": [
+      "Manual constant monthly rent and explicitly included billable dates. The selected day-count method is an assumption, not a legal ruling or a determination of lease obligations. No deposits, utilities, concessions or automatic monthly caps.",
+      "The calculator cannot verify your source inputs or establish legal or accounting compliance. No independent professional review or source endorsement is claimed."
+    ]
+  },
+  "basis-point": {
+    "meta": {
+      "path": "/guides/basis-points-vs-percentage-points/",
+      "title": "Basis Points vs. Percentage Points: Convert Rates Without Mixing Units",
+      "heading": "Basis Points vs. Percentage Points: Convert Rates Without Mixing Units",
+      "description": "Understand basis points versus percentage points with rate comparisons, decimal conversions and a worked fixed-balance fee example.",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "basis-point",
+        "interest-rate",
+        "percentage",
+        "investment-fee"
+      ],
+      "topic": "Rates & units",
+      "breadcrumb": "Basis point",
+      "cardIntro": "One basis point is 0.01 percentage point, so 25 bps equals 0.25% as a rate quantity and 0.0025 as a decimal. A move from 5% to 5.25% is a 25-bps absolute increase and a 5% relative increase. Use the mode that matches a conversion, a rate comparison or a proportional monetary amount.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "Financial rate conversion and proportional amounts only. No live rates, compounding, mortgage payment calculation or implied time period. Relative rate change is shown only for a positive starting rate.",
+    "answer": "One basis point is 0.01 percentage point, so 25 bps equals 0.25% as a rate quantity and 0.0025 as a decimal. A move from 5% to 5.25% is a 25-bps absolute increase and a 5% relative increase. Use the mode that matches a conversion, a rate comparison or a proportional monetary amount.",
+    "featuredBeforeIntro": true,
+    "sections": [
+      {
+        "id": "units",
+        "title": "Start by identifying the unit you actually have",
+        "paragraphs": [
+          "A quoted percentage, a decimal fraction and a basis-point value can represent the same rate. Enter 25 with Basis points selected, 0.25 with Percent selected, or 0.0025 with Decimal selected to describe the same quantity. Entering 0.25 as a decimal instead describes 25%, or 2,500 bps. The input-unit selection is part of the calculation, not a cosmetic label.",
+          "A percentage point describes the difference between two percentages. Basis points make small differences easier to state without ambiguous percent language. This guide concerns financial rates; the abbreviation bps can also mean bits per second in networking, which uses a different measurement entirely."
+        ]
+      },
+      {
+        "id": "change",
+        "title": "Separate absolute rate differences from relative changes",
+        "paragraphs": [
+          "Suppose a hypothetical rate rises from 5% to 5.25%. Subtract the percentages to obtain 0.25 percentage point, then multiply by 100 to obtain 25 bps. For the relative increase, divide that 0.25-point difference by the original 5% rate: 0.25 / 5 × 100 = 5%. Both numbers describe the same move, but they answer different questions.",
+          "A fall from 5% to 4.5% is a −0.5-percentage-point change, or −50 bps. Relative to a positive 5% starting rate, that is a 10% decrease. At zero, the relative division is undefined; a negative starting rate makes the everyday interpretation of percent growth problematic. The calculator retains the absolute basis-point change and omits that relative comparison."
+        ]
+      },
+      {
+        "id": "amount",
+        "title": "Apply basis points to a stated monetary base",
+        "paragraphs": [
+          "For a hypothetical $200,000 base and 25 bps, calculate $200,000 × 25 / 10,000 = $500. Specify whether the context is a one-time fee, an annual charge or another stated period. The arithmetic itself does not introduce a year or a monthly billing cycle. A negative basis-point entry produces a negative proportional adjustment.",
+          "If a fee is annual and the balance stays exactly $200,000 for a full year, the simple 25-bps annual amount is $500. A changing balance, tiered fee, minimum charge or different billing convention requires more detail. A mortgage-rate difference is particularly easy to misread: $500 of simple annual rate effect is not the difference between two amortizing monthly payments."
+        ]
+      },
+      {
+        "id": "compare",
+        "title": "Use a small reconciliation before comparing offers",
+        "paragraphs": [
+          "Record the original quote, its unit, the comparison quote and any stated period. Use the rate-change mode for two quoted rates, then use the amount mode only if a fixed-base proportional comparison is relevant. Keep taxes, fee scope and compounding outside a comparison unless the chosen calculator explicitly models them.",
+          "The worked cases below isolate unit conversion and rate direction. Their values are hypothetical, with no claim that any lender or fund currently offers these rates. Preset links restore the selected unit as well as the numeric input, and the CSV keeps those assumptions beside the selected result."
+        ]
+      },
+      {
+        "id": "worked-cases",
+        "title": "Reproduce the worked scenarios",
+        "paragraphs": [
+          "Each preset restores the complete selected units, dates or sign conventions. The CSV records the hypothetical assumptions and independently checked selected result. These are arithmetic illustrations, not observed market outcomes."
+        ],
+        "table": {
+          "caption": "Basis Point Calculator — checked scenarios",
+          "headers": [
+            "Scenario",
+            "Input assumptions",
+            "Selected result"
+          ],
+          "rows": [
+            [
+              "Convert 25 bps to 0.25% and 0.0025",
+              "25 financial basis points.",
+              "The equivalents are 0.25% and 0.0025; the original quantity remains 25 bps."
+            ],
+            [
+              "A 1.25% rate quantity equals 125 bps",
+              "1.25 entered as a percent quantity, not a decimal fraction.",
+              "The result is 125 bps, equivalent to a 0.0125 decimal fraction."
+            ],
+            [
+              "A 0.0025 decimal fraction equals 25 bps",
+              "0.0025 with Decimal selected.",
+              "The same rate quantity is 25 bps or 0.25%."
+            ],
+            [
+              "A move from 5% to 5.25% is 25 bps, not a 25% rise",
+              "Starting rate 5%; ending rate 5.25%.",
+              "The rate rose 25 bps, which is a 5% relative increase from the starting rate."
+            ],
+            [
+              "A fall from 5% to 4.5% is negative 50 bps",
+              "Starting rate 5%; ending rate 4.5%.",
+              "The change is −50 bps, a 10% relative decrease from the positive starting rate."
+            ],
+            [
+              "Apply 25 bps to a fixed $200,000 base",
+              "$200,000 fixed base; 25 basis points; no time period implied.",
+              "The proportional amount is $500 under the fixed-base assumption."
+            ]
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "How many basis points are in 1%?",
+        "answer": "A 1% rate quantity equals 100 basis points. A change of one percentage point also equals 100 bps; a 1% relative increase is a different comparison."
+      },
+      {
+        "question": "Is 25 bps the same as 0.25%?",
+        "answer": "Yes as a rate quantity: 25 bps = 0.25% = 0.0025 in decimal form. A 25-bps change means 0.25 percentage point, not necessarily a 0.25% relative change."
+      },
+      {
+        "question": "How do I convert a decimal to basis points?",
+        "answer": "Multiply the decimal fraction by 10,000. For example, 0.0025 × 10,000 = 25 bps. In Convert mode, select Decimal before entering 0.0025."
+      },
+      {
+        "question": "Can basis points be negative?",
+        "answer": "Yes. A rate move from 5% to 4.5% is −50 bps. Conversion preserves the sign; relative change is omitted for a zero or negative starting rate."
+      },
+      {
+        "question": "Does 25 bps on a mortgage equal a $500 payment change?",
+        "answer": "On a fixed $200,000 base, 25 bps represents $500 of proportional amount. That is not a change in monthly mortgage payment; an amortizing payment also depends on the term, balance and payment frequency."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC Investor.gov: Basis Point",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/basis-point",
+        "usedFor": "The financial definition of a basis point.",
+        "scope": "The rate definition does not establish a quoted product rate or calculate an amortizing payment."
+      }
+    ],
+    "related": [
+      {
+        "href": "/basis-point-calculator.html",
+        "label": "Basis Point Calculator"
+      },
+      {
+        "href": "/interest-rate-calculator.html",
+        "label": "Interest Rate Calculator"
+      },
+      {
+        "href": "/percentage-calculator.html",
+        "label": "Percentage Calculator"
+      },
+      {
+        "href": "/investment-fee-calculator.html",
+        "label": "Investment Fee Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Convert 25 bps to 0.25% and 0.0025",
+        "path": "/basis-point-calculator",
+        "mode": "convert",
+        "values": {
+          "value": 25,
+          "unit": "Basis points"
+        },
+        "featured": true
+      },
+      {
+        "label": "A 1.25% rate quantity equals 125 bps",
+        "path": "/basis-point-calculator",
+        "mode": "convert",
+        "values": {
+          "value": 1.25,
+          "unit": "Percent / percentage points"
+        }
+      },
+      {
+        "label": "A 0.0025 decimal fraction equals 25 bps",
+        "path": "/basis-point-calculator",
+        "mode": "convert",
+        "values": {
+          "value": 0.0025,
+          "unit": "Decimal"
+        }
+      },
+      {
+        "label": "A move from 5% to 5.25% is 25 bps, not a 25% rise",
+        "path": "/basis-point-calculator",
+        "mode": "rate-change",
+        "values": {
+          "start_rate": 5,
+          "end_rate": 5.25
+        }
+      },
+      {
+        "label": "A fall from 5% to 4.5% is negative 50 bps",
+        "path": "/basis-point-calculator",
+        "mode": "rate-change",
+        "values": {
+          "start_rate": 5,
+          "end_rate": 4.5
+        }
+      },
+      {
+        "label": "Apply 25 bps to a fixed $200,000 base",
+        "path": "/basis-point-calculator",
+        "mode": "amount",
+        "values": {
+          "amount": 200000,
+          "bps": 25
+        }
+      }
+    ],
+    "limitations": [
+      "Financial rate conversion and proportional amounts only. No live rates, compounding, mortgage payment calculation or implied time period. Relative rate change is shown only for a positive starting rate.",
+      "The calculator cannot verify your source inputs or establish legal or accounting compliance. No independent professional review or source endorsement is claimed."
+    ]
+  },
+  "credit-utilization": {
+    "meta": {
+      "path": "/guides/how-to-calculate-credit-utilization/",
+      "title": "How to Calculate Credit Utilization Across Multiple Cards",
+      "heading": "How to Calculate Credit Utilization Across Multiple Cards",
+      "description": "Calculate overall and per-card utilization, compare two payment targets, and distinguish balance arithmetic from credit score predictions.",
+      "publishedOn": "2026-11-05",
+      "calculatorIds": [
+        "credit-utilization",
+        "credit-card",
+        "balance-transfer",
+        "credit-card-minimum-payment"
+      ],
+      "topic": "Loans & debt",
+      "breadcrumb": "How to Calculate Credit Utilization Across Multiple Cards",
+      "cardIntro": "Calculate overall and per-card utilization, compare two payment targets, and distinguish balance arithmetic from credit score predictions.",
+      "format": "Guide & worked examples"
+    },
+    "answer": "Overall credit utilization is total included revolving balances divided by total included credit limits. It is weighted by limits, rather than a simple average of card percentages. Meeting an overall target does not mean every card meets that target, and no target percentage guarantees a credit score.",
+    "intro": "This guide uses invented balances on open revolving cards to explain the arithmetic. It does not access a credit report or predict the effect of a payment. Use balances and limits for a consistent reporting date, and keep paying obligations and interest-cost decisions separate from a ratio illustration.",
+    "sections": [
+      {
+        "id": "inputs",
+        "title": "Choose balances and limits for the same question",
+        "paragraphs": [
+          "For a reported-credit scenario, use balances and limits actually shown on the relevant reports or issuer reporting information. A current account balance, statement balance and reported balance can be different snapshots. This calculator does not know which date an issuer will report.",
+          "Enter revolving credit cards rather than mixing installment principal, mortgage balances and charge accounts into one denominator. Keep account numbers and other personal identifiers out of the worksheet; it needs only balances and limits.",
+          "A zero limit creates an undefined ratio for that card. The calculator keeps its entered balance in the combined arithmetic, but that is not a statement about how a scoring model classifies a closed, zero-limit or otherwise unusual account. Check the real account treatment separately."
+        ],
+        "formula": "Overall utilization = sum of reported revolving balances / sum of included credit limits × 100%."
+      },
+      {
+        "id": "weighted",
+        "title": "Do not average the individual percentages",
+        "paragraphs": [
+          "Card A has a $900 balance and a $1,000 limit, or 90% utilization. Card B has a $100 balance and a $9,000 limit, or about 1.1111%. Combined balances are $1,000 and combined limits are $10,000, giving 10% overall utilization.",
+          "The simple average of 90% and 1.1111% is about 45.5556%, which is not the overall ratio. That average gives the small-limit and large-limit accounts equal weight. Summing balances and limits first answers the aggregate question correctly.",
+          "The combined 10% also does not make Card A a 10%-used account. Displaying each row helps keep that distinction visible when comparing payment scenarios."
+        ],
+        "table": {
+          "caption": "Original two-card example; reported figures assumed to share one date",
+          "headers": [
+            "Card",
+            "Balance",
+            "Limit",
+            "Individual utilization"
+          ],
+          "rows": [
+            [
+              "A",
+              "$900.00",
+              "$1,000.00",
+              "90%"
+            ],
+            [
+              "B",
+              "$100.00",
+              "$9,000.00",
+              "1.1111%"
+            ],
+            [
+              "Combined",
+              "$1,000.00",
+              "$10,000.00",
+              "10%"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "targets",
+        "title": "Overall and per-card payment targets can differ",
+        "paragraphs": [
+          "At an illustrative 10% overall target, the two-card example needs no aggregate balance reduction: $1,000 already equals 10% of $10,000. To bring every card to 10%, however, Card A must fall to $100, requiring an $800 payment. Card B is already below its own $900 target balance.",
+          "The per-card total can therefore exceed the payment needed for the overall target. The aggregate result is a dollar requirement without an allocation recommendation. It does not say to move a balance, close an account, obtain a higher limit or prioritize one creditor over another.",
+          "For a second example, balances of $1,500 and $500 against two $5,000 limits produce 20% overall utilization. Bringing the combined balance to 10% requires $1,000. Paying $1,000 to the first card also brings each card to 10% in this particular example. Agreement in one example is not a general rule."
+        ],
+        "formula": "Overall target payment = max(0, total balance − total limit × target fraction). Per-card payment = sum of max(0, each balance − each limit × target fraction).",
+        "table": {
+          "caption": "No new spending, fees or interest; chosen 10% target is illustrative",
+          "headers": [
+            "Starting balances / limits",
+            "Overall ratio",
+            "Payment for overall target",
+            "Payment for every card target"
+          ],
+          "rows": [
+            [
+              "$900/$1,000 and $100/$9,000",
+              "10%",
+              "$0.00",
+              "$800.00"
+            ],
+            [
+              "$1,500/$5,000 and $500/$5,000",
+              "20%",
+              "$1,000.00",
+              "$1,000.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "score",
+        "title": "A percentage is not a score promise",
+        "paragraphs": [
+          "The CFPB advises keeping credit use low and notes commonly discussed percentage guidelines. Those are not a universal scoring switch. Credit scores reflect multiple factors, and a model may consider individual accounts differently from the combined number.",
+          "Carrying an interest-bearing balance is not necessary merely to demonstrate utilization. A selected ratio target does not replace paying on time, reviewing statements or understanding the interest and minimum-payment terms of an account.",
+          "This calculator does not estimate points gained or lost, lender approval or the date a payment reaches a report. Different reports, models, limits and future transactions can produce different observed results from the same payment."
+        ],
+        "links": [
+          {
+            "href": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-keep-a-good-credit-score-en-318/",
+            "label": "CFPB guidance on credit use and repayment"
+          },
+          {
+            "href": "/glossary/credit-utilization/",
+            "label": "Credit utilization terminology"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Separate ratio planning from debt repayment cost",
+        "paragraphs": [
+          "Paying enough to meet a ratio does not necessarily pay off the debt or stop interest. Use the payoff or minimum-payment tools to examine a repayment budget and borrowing costs. If comparing a balance transfer, include its fees and terms rather than assuming a lower displayed ratio makes the transfer beneficial.",
+          "New purchases, interest, fees and a changed limit can alter the ratio after the modeled payment. Recalculate with the numbers appropriate to the later date. Keep emergency cash and payment affordability in the wider household decision; the utilization calculation alone does not answer those questions."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is overall utilization the average of card percentages?",
+        "answer": "No. Add included balances and limits separately and divide the totals. A simple average gives accounts with very different limits equal weight and can materially misstate the overall ratio."
+      },
+      {
+        "question": "Why does the per-card target require a larger payment?",
+        "answer": "A combined target can be met using unused capacity elsewhere, while an individual target applies to each account. The $900/$1,000 example needs $800 on that card for a 10% individual target even though the combined ratio is already 10%."
+      },
+      {
+        "question": "Is 30% a guaranteed scoring cutoff?",
+        "answer": "No. It is a common guideline, not a universal score boundary or a recommendation to carry debt. The calculator’s target is editable and no score effect is predicted."
+      },
+      {
+        "question": "Will paying today change my reported ratio immediately?",
+        "answer": "The worksheet does not know reporting dates or account processing. Current and reported balances can differ. Confirm what was actually reported and when rather than treating a modeled payment as an immediate credit-report update."
+      },
+      {
+        "question": "Can a ratio exceed 100% or be undefined?",
+        "answer": "A balance above a positive limit can exceed 100%. A zero limit makes that card’s ratio undefined; a zero total limit makes the overall ratio undefined. Neither should be silently relabeled as zero usage."
+      }
+    ],
+    "sources": [
+      {
+        "title": "CFPB: how to build and keep a good credit score",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-keep-a-good-credit-score-en-318/",
+        "usedFor": "Credit-use guidance, repayment history and the fact that carrying a balance is unnecessary.",
+        "scope": "No scoring threshold or points-change prediction is derived from the guidance."
+      },
+      {
+        "title": "myFICO: how credit scores look at card limits",
+        "url": "https://www.myfico.com/credit-education/credit-scores/fico-scores-credit-limit",
+        "usedFor": "Why account balances, limits and credit usage matter in score context.",
+        "scope": "Scoring behavior depends on the model and account facts; our examples are arithmetic only."
+      }
+    ],
+    "related": [
+      {
+        "href": "/credit-utilization-calculator",
+        "label": "Credit Utilization Calculator"
+      },
+      {
+        "href": "/glossary/credit-utilization/",
+        "label": "Credit utilization"
+      },
+      {
+        "href": "/single-credit-card-payoff-calculator",
+        "label": "Credit Card Payoff Calculator"
+      },
+      {
+        "href": "/guides/balance-transfer-vs-personal-loan/",
+        "label": "Compare borrowing costs separately"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reproduce weighted utilization and the $800 per-card target",
+        "path": "/credit-utilization-calculator",
+        "mode": "cards",
+        "values": {
+          "cards": "900, 1000\n100, 9000",
+          "target": 10
+        },
+        "caseKey": "credit-weighted"
+      },
+      {
+        "label": "Reproduce the $1,000 overall target payment",
+        "path": "/credit-utilization-calculator",
+        "mode": "cards",
+        "values": {
+          "cards": "1500, 5000\n500, 5000",
+          "target": 10
+        },
+        "caseKey": "credit-payment"
+      }
+    ],
+    "limitations": [
+      "Entered open revolving balances and limits for one consistent date; no credit-report access.",
+      "No interest, new spending, reporting schedule, credit score or lender approval prediction.",
+      "Targets are illustrative percentages and aggregate payments are not an allocation recommendation."
+    ]
+  },
+  "operating-cash-flow": {
+    "meta": {
+      "path": "/guides/operating-cash-flow-vs-net-income/",
+      "title": "Operating Cash Flow vs. Net Income: Working Capital & the Cash Bridge",
+      "heading": "Operating Cash Flow vs. Net Income: Working Capital & the Cash Bridge",
+      "description": "Reconcile net income to operating cash flow. Follow signed working-capital changes and cross-check the indirect and direct methods.",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "operating-cash-flow",
+        "cash-conversion-cycle",
+        "roic",
+        "burn-rate"
+      ],
+      "topic": "Business cash flow",
+      "breadcrumb": "Operating cash flow",
+      "cardIntro": "Operating cash flow measures cash generated or used by the entered operating activities. In the worked reconciliation, $120,000 net income plus $30,000 adjustments minus a $20,000 operating working-capital increase gives $130,000 OCF. The same result can be reconstructed from consistent operating cash receipts and payments; it is not the same measure as profit or free cash flow.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "A manual operating-cash-flow worksheet for one consistent reporting scope. Inputs require reconciled classifications; the tool does not prepare a complete accounting statement, retrieve company accounts or calculate free cash flow.",
+    "answer": "Operating cash flow measures cash generated or used by the entered operating activities. In the worked reconciliation, $120,000 net income plus $30,000 adjustments minus a $20,000 operating working-capital increase gives $130,000 OCF. The same result can be reconstructed from consistent operating cash receipts and payments; it is not the same measure as profit or free cash flow.",
+    "featuredBeforeIntro": true,
+    "sections": [
+      {
+        "id": "reconcile",
+        "title": "Explain the gap between earnings and operating cash",
+        "paragraphs": [
+          "Accrual earnings and operating cash answer different questions. A credit sale can enter revenue before collection; depreciation can reduce earnings without a current-period cash payment. A useful reconciliation identifies the specific items separating the two measures instead of assuming net income is money available in a bank account.",
+          "In our hypothetical period, net income is $120,000 and signed noncash or nonoperating adjustments total $30,000. The operating asset changes are $15,000 more receivables, $10,000 more inventory and $5,000 more other operating assets. Those increases subtract $30,000 from the cash bridge. Increases of $8,000 trade payables and $2,000 other operating liabilities add $10,000 back. The resulting OCF is $130,000."
+        ]
+      },
+      {
+        "id": "signs",
+        "title": "Enter balance changes with their actual signs",
+        "paragraphs": [
+          "Every change field means ending balance minus beginning balance. An operating receivable growing from $40,000 to $55,000 is a positive $15,000 change; the worksheet subtracts it. A fall from $55,000 to $25,000 is a negative $30,000 change; the worksheet adds $30,000. Do not pre-negate an asset increase and then let the formula negate it a second time.",
+          "The same sign convention applies to liabilities, but their cash effect is opposite: an included operating payable increase adds to the indirect bridge, while a decrease subtracts. Balance-sheet differences caused by acquisitions, disposals, foreign-currency translation or other noncash changes need reconciliation first. This calculator cannot infer those adjustments from two reported balances."
+        ]
+      },
+      {
+        "id": "nwc",
+        "title": "Use either component changes or an already reconciled net amount",
+        "paragraphs": [
+          "For the worked case, operating assets increase $30,000 while operating liabilities increase $10,000. The increase in operating net working capital is therefore $20,000. Known Working-Capital Change mode computes $120,000 + $30,000 − $20,000, matching the component mode. Use the aggregate instead of entering its components again.",
+          "The operating definition excludes cash, cash equivalents and interest-bearing debt. Noncash adjustments are also signed: depreciation that was included in earnings can be added back, while applicable noncash income or investing gains may require subtraction. An adjustment already reflected in another line must not be counted again. The worksheet accepts your reconciled inputs; it does not select an accounting policy."
+        ]
+      },
+      {
+        "id": "direct",
+        "title": "Cross-check using receipts and payments without subtracting depreciation",
+        "paragraphs": [
+          "A separately specified direct illustration uses $600,000 operating cash receipts and cash payments of $300,000 to suppliers, $100,000 to employees, $30,000 income taxes, $10,000 interest and $30,000 other operating costs. Payments total $470,000, leaving $130,000 OCF. These hypothetical amounts are deliberately consistent with the indirect example; arbitrary inputs from unrelated statements need not match.",
+          "Direct mode subtracts actual cash payments, not accrual expense totals. Do not subtract depreciation again. This U.S.-oriented illustration includes operating interest and income-tax cash payments, but classification depends on the reporting framework and transaction facts. Asset purchases, borrowing principal and owner distributions belong outside this operating worksheet. OCF therefore does not equal the entire change in cash and does not by itself establish free cash flow or distributable cash."
+        ]
+      },
+      {
+        "id": "worked-cases",
+        "title": "Reproduce the worked scenarios",
+        "paragraphs": [
+          "Each preset restores the complete selected units, dates or sign conventions. The CSV records the hypothetical assumptions and independently checked selected result. These are arithmetic illustrations, not observed market outcomes."
+        ],
+        "table": {
+          "caption": "Operating Cash Flow Calculator — checked scenarios",
+          "headers": [
+            "Scenario",
+            "Input assumptions",
+            "Selected result"
+          ],
+          "rows": [
+            [
+              "Reconcile $120,000 net income to $130,000 operating cash flow",
+              "Same period: net income $120,000; adjustments $30,000; operating asset increases $15,000 receivables, $10,000 inventory and $5,000 other; operating liability increases $8,000 payables and $2,000 other.",
+              "OCF is $130,000; the positive $20,000 net working-capital increase is a cash use."
+            ],
+            [
+              "Replace the component changes with one $20,000 operating NWC increase",
+              "Same period: net income $120,000; signed adjustments $30,000; already reconciled operating NWC increase $20,000.",
+              "OCF remains $130,000, matching the component case."
+            ],
+            [
+              "Cross-check $600,000 receipts against $470,000 operating payments",
+              "Same illustrative period: receipts $600,000; supplier payments $300,000; employees $100,000; income tax $30,000; interest $10,000; other operating payments $30,000.",
+              "The direct illustration also gives $130,000 OCF under the specified operating classifications."
+            ],
+            [
+              "A $30,000 receivables decrease releases cash in the bridge",
+              "Keep the first case unchanged except receivables fall by $30,000; enter that change as −30000.",
+              "OCF becomes $175,000; the $45,000 difference from the first case comes entirely from the changed receivables assumption."
+            ],
+            [
+              "A net loss can coexist with a further operating cash outflow",
+              "Net loss $20,000; positive noncash adjustments $30,000; operating NWC increase $20,000.",
+              "OCF is −$10,000. The worksheet preserves the cash outflow rather than describing it as zero."
+            ]
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the operating cash flow formula?",
+        "answer": "In this indirect worksheet, start with net income, add signed noncash and nonoperating reconciliation adjustments, then subtract the increase in operating net working capital. Direct mode subtracts operating cash payments from operating receipts."
+      },
+      {
+        "question": "Does an increase in accounts receivable add or subtract cash?",
+        "answer": "An included operating receivables increase is subtracted in the indirect reconciliation. A decrease is entered as a negative change and adds cash, assuming the change has been reconciled for noncash and nonoperating movements."
+      },
+      {
+        "question": "Do I include cash and debt in working capital?",
+        "answer": "Not in this worksheet’s operating net working-capital definition. Exclude cash, cash equivalents and interest-bearing debt. Include the operating asset and operating liability items required by your reconciliation."
+      },
+      {
+        "question": "Can operating cash flow be negative when net income is positive?",
+        "answer": "Yes. A large operating working-capital increase or other cash-consuming adjustment can outweigh positive net income. A negative result alone does not identify its cause or prove insolvency."
+      },
+      {
+        "question": "Is operating cash flow the same as free cash flow?",
+        "answer": "No. Capital expenditure is a separate investing cash-flow item. Free cash flow commonly adjusts operating cash flow for capital spending, but definitions vary and this calculator does not label OCF as free cash flow."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC: Beginners’ guide to financial statements",
+        "url": "https://www.sec.gov/investor/pubs/begfinstmtguide.htm",
+        "usedFor": "The distinction between income, operating cash flow and the investing/financing sections.",
+        "scope": "General educational context; our signed worksheet examples are hypothetical, not a complete compliant cash-flow statement."
+      }
+    ],
+    "related": [
+      {
+        "href": "/operating-cash-flow-calculator.html",
+        "label": "Operating Cash Flow Calculator"
+      },
+      {
+        "href": "/cash-conversion-cycle-calculator.html",
+        "label": "Cash Conversion Cycle Calculator"
+      },
+      {
+        "href": "/roic-calculator.html",
+        "label": "ROIC Calculator"
+      },
+      {
+        "href": "/burn-rate-calculator.html",
+        "label": "Burn Rate & Cash Runway Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Reconcile $120,000 net income to $130,000 operating cash flow",
+        "path": "/operating-cash-flow-calculator",
+        "mode": "indirect",
+        "values": {
+          "net_income": 120000,
+          "noncash": 30000,
+          "ar_change": 15000,
+          "inventory_change": 10000,
+          "other_assets_change": 5000,
+          "ap_change": 8000,
+          "other_liabilities_change": 2000
+        },
+        "featured": true
+      },
+      {
+        "label": "Replace the component changes with one $20,000 operating NWC increase",
+        "path": "/operating-cash-flow-calculator",
+        "mode": "nwc",
+        "values": {
+          "net_income": 120000,
+          "noncash": 30000,
+          "nwc_change": 20000
+        }
+      },
+      {
+        "label": "Cross-check $600,000 receipts against $470,000 operating payments",
+        "path": "/operating-cash-flow-calculator",
+        "mode": "direct",
+        "values": {
+          "receipts": 600000,
+          "suppliers": 300000,
+          "employees": 100000,
+          "taxes": 30000,
+          "interest": 10000,
+          "other": 30000
+        }
+      },
+      {
+        "label": "A $30,000 receivables decrease releases cash in the bridge",
+        "path": "/operating-cash-flow-calculator",
+        "mode": "indirect",
+        "values": {
+          "net_income": 120000,
+          "noncash": 30000,
+          "ar_change": -30000,
+          "inventory_change": 10000,
+          "other_assets_change": 5000,
+          "ap_change": 8000,
+          "other_liabilities_change": 2000
+        }
+      },
+      {
+        "label": "A net loss can coexist with a further operating cash outflow",
+        "path": "/operating-cash-flow-calculator",
+        "mode": "nwc",
+        "values": {
+          "net_income": -20000,
+          "noncash": 30000,
+          "nwc_change": 20000
+        }
+      }
+    ],
+    "limitations": [
+      "A manual operating-cash-flow worksheet for one consistent reporting scope. Inputs require reconciled classifications; the tool does not prepare a complete accounting statement, retrieve company accounts or calculate free cash flow.",
+      "The calculator cannot verify your source inputs or establish legal or accounting compliance. No independent professional review or source endorsement is claimed."
+    ]
+  },
+  "business-line-of-credit": {
+    "meta": {
+      "path": "/guides/business-line-of-credit-vs-term-loan/",
+      "title": "Business Line of Credit vs. Term Loan: Timing, Fees & Principal",
+      "heading": "Business Line of Credit vs. Term Loan: Follow the Cash and Principal",
+      "description": "Separate simple interest, principal repayments and paid fees. Compare a dated credit ledger with a no-redraw monthly payment plan using complete examples.",
+      "publishedOn": "2026-11-18",
+      "calculatorIds": [
+        "business-line-of-credit",
+        "business-loan",
+        "apr",
+        "operating-cash-flow",
+        "burn-rate"
+      ],
+      "topic": "Business financing",
+      "breadcrumb": "Line of credit vs. term loan",
+      "cardIntro": "The decision in these examples is how to reconcile the money paid with the debt still outstanding. The daily illustrations and monthly paydown illustration use their own stated timing conventions. They are not quotes for interchangeable products, and a smaller displayed payment does not establish a lower total borrowing cost.",
+      "format": "Worked guide & calculator"
+    },
+    "intro": "The decision in these examples is how to reconcile the money paid with the debt still outstanding. The daily illustrations and monthly paydown illustration use their own stated timing conventions. They are not quotes for interchangeable products, and a smaller displayed payment does not establish a lower total borrowing cost.",
+    "answer": "An interest charge measures borrowing cost; it does not show how much principal has been repaid. A dated line-of-credit worksheet tracks each draw and principal repayment, while the separate fixed-payment model assumes no redraws. Read the closing balance alongside every cost or payoff figure.",
+    "exampleNote": "The linked scenarios restore every input used for their own worksheet. Arithmetic was checked separately with 80-digit Decimal calculations, calendar-day enumeration, hand-specified ARM rate segments and exact rational cent allocation. The CSV preserves complete inputs and selected reference results. These checks establish the stated numerical examples, not a lender agreement, lease interpretation, professional review or investment recommendation.",
+    "featuredBeforeIntro": true,
+    "sections": [
+      {
+        "id": "purpose",
+        "title": "What question does each worksheet answer?",
+        "paragraphs": [
+          "The constant-balance worksheet is useful when one principal amount remains outstanding for a known number of days. It calculates the interest charge under a selected annual day basis and adds a separate entered fee. It does not determine how much principal a lender requires you to repay, nor whether a credit facility can be renewed or redrawn.",
+          "The dated ledger instead lets borrowing needs change. Positive activity adds principal, and negative activity reduces principal. The chosen credit limit constrains each activity row. The monthly payment worksheet is another task: it starts with one balance, prohibits new draws, and applies a chosen payment until payoff or the entered horizon. That is an amortization scenario, not a reconstructed business-credit agreement."
+        ]
+      },
+      {
+        "id": "basis",
+        "title": "Why can the same balance and annual rate give different period charges?",
+        "paragraphs": [
+          "For an original illustration, keep $25,000 outstanding for 30 counted days at a 12% annual interest assumption. With a 365-day denominator, interest is $246.58. A 360-day denominator produces $250.00. Adding the same separately paid $50 fee gives $296.58 or $300.00. The difference is caused by the stated denominator; it is not a newly inferred lender margin.",
+          "A quoted annual rate does not identify every billing detail. Record the actual day-count convention, whether a transaction affects the balance before or after that date’s accrual, and how fees or unpaid charges are handled. These simple-interest worksheets keep the rate constant and pay charges separately. If an agreement capitalizes charges or uses a different balance convention, the model needs adjustment before its result can be treated as a reconciliation."
+        ],
+        "formula": "Daily-model interest = annual rate / selected year basis × sum of principal × days at that principal."
+      },
+      {
+        "id": "dated",
+        "title": "How does a draw or repayment change the daily ledger?",
+        "paragraphs": [
+          "Consider December 1 through December 31, with January 1 excluded. Opening principal is $10,000. A $5,000 draw on December 10 increases it to $15,000; a $3,000 principal repayment on December 20 leaves $12,000. Transactions take effect before interest accrues on their dates. The result is nine days at $10,000, ten at $15,000, and twelve at $12,000.",
+          "The 384,000 balance-days give $126.25 interest at 12% on a 365-day basis. A separate $50 fee raises the cost amount to $176.25, while principal ends at $12,000. The $3,000 transaction is principal-only. Entering a total bank payment that already includes interest would reduce principal too far in this worksheet. Same-day rows are processed in entered order, so each must also respect the credit limit."
+        ]
+      },
+      {
+        "id": "horizon",
+        "title": "When does a payment table actually establish payoff?",
+        "paragraphs": [
+          "The monthly comparison below starts with $1,000, a 12% nominal annual rate, a $200 total monthly payment and a $5 fee each active month. Interest in this separate model is opening principal multiplied by the annual rate divided by 12. The first payment covers $10 interest, $5 fee and $185 principal. The next month therefore starts with $815.",
+          "If the horizon is two months, $628.15 principal remains after the two payments. Extending the horizon allows the same payment rule to continue; the final payment is reduced when the remaining debt is smaller than $200. A row count is a payoff time only when the remaining principal is zero. The model rejects an initial payment that cannot cover interest plus the fee, because unpaid-charge capitalization is outside its scope."
+        ]
+      },
+      {
+        "id": "comparison",
+        "title": "Compare a short horizon with the completed payment scenario",
+        "paragraphs": [
+          "These two rows use the same starting principal, rate, fee and payment. Only the maximum number of modeled months changes. They isolate the difference between showing activity through a date and reporting a complete repayment outcome. The daily credit examples above use a different day-based convention and should not be substituted into this monthly schedule without a stated conversion."
+        ],
+        "table": {
+          "caption": "Identical monthly payment rule, different model horizons",
+          "headers": [
+            "Scenario",
+            "Payments modeled",
+            "Interest within horizon",
+            "Principal at model end"
+          ],
+          "rows": [
+            [
+              "Horizon ends before payoff",
+              "2",
+              "$18.15",
+              "$628.15"
+            ],
+            [
+              "Fixed payment with a monthly fee",
+              "6",
+              "$31.88",
+              "$0.00"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "comparison-limits",
+        "title": "How should I compare a line of credit with a separate term-loan quote?",
+        "paragraphs": [
+          "Match the amount and dates on which money is actually needed, then distinguish principal, interest, fees and unused borrowing availability. A fixed loan and a changing line balance can fund different amounts over different periods. Comparing their headline payment amounts without those cash flows can hide remaining debt or change the question midway through the comparison.",
+          "Keep a reconciliation record with the account period, principal-only activity, charge convention and final balance. This site’s business-loan calculator can illustrate a separate fixed-loan schedule, but it does not turn a line-of-credit ledger into a lender’s renewal, minimum-payment or underwriting terms. The worked results demonstrate the stated arithmetic, not an offered facility or a borrowing recommendation."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why is the $176.25 ledger cost not the reduction in debt?",
+        "answer": "It is modeled interest plus a separately paid fee. Principal changes only through the entered draws and principal repayments; the example ends with $12,000 principal."
+      },
+      {
+        "question": "Can I compare the daily ledger directly with the monthly payment example?",
+        "answer": "They use different explicitly stated timing conventions. Match actual funding and payment dates and the intended convention before treating results as alternatives for the same financing need."
+      },
+      {
+        "question": "What needs checking when the worksheet differs from a statement?",
+        "answer": "Check the date boundary, principal-only transaction amounts, day basis, rate changes, fee classification and capitalization. The worksheet does not infer missing contractual rules."
+      }
+    ],
+    "sources": [
+      {
+        "title": "SBA: 7(a) loans and monitored lines of credit",
+        "url": "https://www.sba.gov/loans/7a-loans/",
+        "usedFor": "General context for working-capital lending and the distinction between term loans and lines of credit.",
+        "scope": "Background only. This calculator is not an SBA product, an eligibility worksheet or a quotation of program rates, fees or guarantees."
+      }
+    ],
+    "related": [
+      {
+        "href": "/business-line-of-credit-calculator.html",
+        "label": "Business Line of Credit Calculator"
+      },
+      {
+        "href": "/business-loan-calculator.html",
+        "label": "Business Loan Calculator"
+      },
+      {
+        "href": "/apr-calculator.html",
+        "label": "APR Calculator"
+      },
+      {
+        "href": "/operating-cash-flow-calculator.html",
+        "label": "Operating Cash Flow Calculator"
+      },
+      {
+        "href": "/burn-rate-calculator.html",
+        "label": "Burn Rate & Cash Runway Calculator"
+      }
+    ],
+    "presets": [
+      {
+        "label": "Two dated principal changes through December",
+        "path": "/business-line-of-credit-calculator",
+        "mode": "ledger",
+        "values": {
+          "start": "2026-12-01",
+          "end": "2027-01-01",
+          "opening": "10000",
+          "limit": "50000",
+          "rate": "12",
+          "basis": "365",
+          "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+          "fees": "50"
+        },
+        "featured": true
+      },
+      {
+        "label": "Horizon ends before payoff",
+        "path": "/business-line-of-credit-calculator",
+        "mode": "paydown",
+        "values": {
+          "balance": "1000",
+          "rate": "12",
+          "payment": "200",
+          "monthly_fee": "5",
+          "max_months": "2"
+        }
+      },
+      {
+        "label": "Fixed payment with a monthly fee",
+        "path": "/business-line-of-credit-calculator",
+        "mode": "paydown",
+        "values": {
+          "balance": "1000",
+          "rate": "12",
+          "payment": "200",
+          "monthly_fee": "5",
+          "max_months": "12"
+        }
+      }
+    ],
+    "limitations": [
+      "A manual principal and interest worksheet with stated date boundaries, simple-interest bases and separate paid fees. No lender minimum-payment rule, revolving-account APR disclosure, compounding of unpaid charges, live offer or credit approval.",
+      "Examples are original hypothetical inputs; sources support the identified concepts and do not endorse or professionally review this site."
+    ]
+  }
+}

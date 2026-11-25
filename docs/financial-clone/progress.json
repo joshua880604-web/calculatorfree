@@ -6603,5 +6603,317 @@
       "Original tool; no competitor parity, native Safari, professional review, actual lender approval or Google indexing claim."
     ],
     "updated_at": "2026-11-24"
+  },
+  {
+    "id": "prorated-rent",
+    "mode": "dates",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/prorated-rent.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-prorated-rent-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-prorated-rent-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "prorated-rent",
+    "mode": "days",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/prorated-rent.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-prorated-rent-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-prorated-rent-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "basis-point",
+    "mode": "convert",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/basis-point.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-basis-point-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-basis-point-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "basis-point",
+    "mode": "rate-change",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/basis-point.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-basis-point-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-basis-point-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "basis-point",
+    "mode": "amount",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/basis-point.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-basis-point-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-basis-point-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "credit-utilization",
+    "mode": "cards",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/credit-utilization.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-credit-utilization-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-credit-utilization-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "operating-cash-flow",
+    "mode": "indirect",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/operating-cash-flow.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-operating-cash-flow-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-operating-cash-flow-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "operating-cash-flow",
+    "mode": "nwc",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/operating-cash-flow.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-operating-cash-flow-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-operating-cash-flow-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "operating-cash-flow",
+    "mode": "direct",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/operating-cash-flow.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-operating-cash-flow-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-operating-cash-flow-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "business-line-of-credit",
+    "mode": "interest",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/business-line-of-credit.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-business-line-of-credit-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-business-line-of-credit-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "business-line-of-credit",
+    "mode": "ledger",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/business-line-of-credit.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-business-line-of-credit-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-business-line-of-credit-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
+  },
+  {
+    "id": "business-line-of-credit",
+    "mode": "paydown",
+    "spec": "in_progress",
+    "implementation": "passed",
+    "math": "passed",
+    "reference_parity": "unverified",
+    "browser": "passed",
+    "visual": "passed",
+    "fully_complete": false,
+    "scope": "Existing local mode preserved; complete task inputs and answer links reviewed. Local visual checks only.",
+    "evidence": {
+      "text_spec": "specs/business-line-of-credit.md",
+      "numeric": "evidence/five-existing-task-reference-20261125.json",
+      "verification": "evidence/five-existing-tasks-verification-20261125.json",
+      "browser": "/workspace/work/five-existing-tools-20261125/browser.json",
+      "screenshots": [
+        "/workspace/work/five-existing-tools-20261125/tool-business-line-of-credit-390.png",
+        "/workspace/work/five-existing-tools-20261125/tool-business-line-of-credit-1440.png"
+      ]
+    },
+    "blockers": [
+      "Original vendor DOM and same-input viewport parity were not researched in this task."
+    ],
+    "updated_at": "2026-11-25"
   }
 ]

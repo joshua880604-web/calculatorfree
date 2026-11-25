@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-25",
+  "database": "US",
+  "source": "User-uploaded Semrush broad-match exports dated 2026-11-25",
+  "selection": [
+    {
+      "keyword": "prorated rent calculator",
+      "volume": 12100,
+      "kd": 31,
+      "source_root": "prorated-rent"
+    },
+    {
+      "keyword": "prorate rent calculator",
+      "volume": 3600,
+      "kd": 23,
+      "source_root": "prorated-rent"
+    },
+    {
+      "keyword": "how to calculate prorated rent",
+      "volume": 1600,
+      "kd": 23,
+      "source_root": "prorated-rent"
+    },
+    {
+      "keyword": "basis point calculator",
+      "volume": 1900,
+      "kd": 13,
+      "source_root": "basis-points"
+    },
+    {
+      "keyword": "basis points calculator",
+      "volume": 1000,
+      "kd": 1,
+      "source_root": "basis-points"
+    },
+    {
+      "keyword": "basis points conversion calculator",
+      "volume": 480,
+      "kd": 11,
+      "source_root": "basis-points"
+    },
+    {
+      "keyword": "credit utilization calculator",
+      "volume": 2400,
+      "kd": 0,
+      "source_root": "credit-utilization"
+    },
+    {
+      "keyword": "credit card utilization calculator",
+      "volume": 2400,
+      "kd": 52,
+      "source_root": "credit-utilization"
+    },
+    {
+      "keyword": "credit utilization ratio calculator",
+      "volume": 480,
+      "kd": 0,
+      "source_root": "credit-utilization"
+    },
+    {
+      "keyword": "operating cash flow calculator",
+      "volume": 1600,
+      "kd": 35,
+      "source_root": "operating-cash-flow"
+    },
+    {
+      "keyword": "cash flow from operations formula",
+      "volume": 2400,
+      "kd": 15,
+      "source_root": "operating-cash-flow"
+    },
+    {
+      "keyword": "how to calculate cash flow from operations",
+      "volume": 1900,
+      "kd": 22,
+      "source_root": "operating-cash-flow"
+    },
+    {
+      "keyword": "business line of credit calculator",
+      "volume": 590,
+      "kd": 14,
+      "source_root": "business-line-of-credit-calculator"
+    },
+    {
+      "keyword": "business line of credit payment calculator",
+      "volume": 140,
+      "kd": 11,
+      "source_root": "business-line-of-credit-calculator"
+    },
+    {
+      "keyword": "business line of credit interest calculator",
+      "volume": 90,
+      "kd": 10,
+      "source_root": "business-line-of-credit-calculator"
+    },
+    {
+      "keyword": "business line of credit monthly payment calculator",
+      "volume": 70,
+      "kd": 9,
+      "source_root": "business-line-of-credit-calculator"
+    }
+  ],
+  "excluded_from_implementation": [
+    "Brand/company-specific requests",
+    "does paying utilities build credit",
+    "Credit-score point predictions",
+    "Permanent mortgage point calculations within temporary buydown",
+    "Operating cash flow ratio: separate future evaluation, not an existing mode"
+  ],
+  "limits": [
+    "Estimated search volume and KD are not GSC impressions, forecasts or ranking guarantees.",
+    "Questions/variants are mapped to existing tools and reading; no new keyword-specific document.",
+    "This is a selected intent review, not a claim that every row of the 33,057-word initial screen was manually validated."
+  ]
+}

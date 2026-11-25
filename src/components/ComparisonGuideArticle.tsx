@@ -6,6 +6,7 @@ import SiteLink from './SiteLink';
 import {comparisonGuides} from '@/lib/comparison-guides';
 import {calculatorPresetHref} from '@/lib/preset-links';
 import GuideGlossaryLinks from './GuideGlossaryLinks';
+import PracticalGuideQuestions from './PracticalGuideQuestions';
 export default function ComparisonGuideArticle({topic}:{topic:string}){
  const data=comparisonGuides[topic];
  const linkConcepts=createGuideConceptLinker(data.meta.path);
@@ -16,7 +17,7 @@ export default function ComparisonGuideArticle({topic}:{topic:string}){
   {topic==='apr-apy'&&<FundFeesCdReference id="cd" inGuide/>}
   {topic==='balance-personal'&&<TransferScenarioReference inGuide/>}
   <section aria-labelledby="examples"><h2 id="examples">Reproduce the examples and review their limits</h2><p>{data.exampleNote??'The original examples use stated hypothetical assumptions, not market quotes or observed investment returns. Arithmetic was checked independently with Python Decimal calculations. Calculator links restore the inputs for the specific part of the example they model; they do not reproduce an entire tax return, combined loan portfolio or historical backtest.'}</p><ul>{data.presets.map((p,i)=><li key={i}><SiteLink href={calculatorPresetHref(p.path,p.mode,p.values)}>{p.label}</SiteLink></li>)}</ul><p><a href={'/data/comparison-guides/'+topic+'.csv'} download>{topic==='balance-personal'?'Download the transfer-vs-loan example tables as CSV':'Download the guide’s example tables as CSV'}</a>. Full assumptions appear beside each table.</p><ul>{data.limitations.map(l=><li key={l}>{l}</li>)}</ul></section>
-  <section aria-labelledby="questions"><h2 id="questions">Common questions</h2>{data.questions.map(q=><section key={q.question}><h3>{q.question}</h3><p>{linkConcepts(q.answer)}</p></section>)}</section>
+  <section aria-labelledby="questions"><h2 id="questions">Common questions</h2><PracticalGuideQuestions questions={data.questions} linkConcepts={linkConcepts}/></section>
   <GuideGlossaryLinks path={data.meta.path}/>
   <section className="related"><h2>Related tools and reading</h2><ul>{data.related.map(l=><li key={l.href}><SiteLink href={l.href}>{l.label}</SiteLink></li>)}</ul></section>
  </QuestionGuideArticle>;

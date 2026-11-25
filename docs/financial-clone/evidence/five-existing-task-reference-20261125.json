@@ -1,0 +1,364 @@
+{
+  "method": "Independent 70-digit Decimal calculations. Rent sums per calendar day; ledger accrues principal day by day; paydown uses a closed-form payment count and last-payment balance.",
+  "date": "2026-11-25",
+  "fixtures": [
+    {
+      "key": "rent-dates",
+      "id": "prorated-rent",
+      "mode": "dates",
+      "values": {
+        "monthly_rent": "2000",
+        "start": "2026-01-17",
+        "end": "2026-01-31",
+        "basis": "Actual days in each month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "967.7419354838709677419354838709677419354838709677419354838709677419351",
+        "Billable days included": "15",
+        "Average daily charge across selected dates": "64.51612903225806451612903225806451612903225806451612903225806451612901"
+      }
+    },
+    {
+      "key": "rent-days-30",
+      "id": "prorated-rent",
+      "mode": "days",
+      "values": {
+        "monthly_rent": "2000",
+        "billable_days": "15",
+        "month_days": "31",
+        "basis": "30-day month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "1000.000000000000000000000000000000000000000000000000000000000000000000",
+        "Billable days included": "15",
+        "Daily rate under selected method": "66.66666666666666666666666666666666666666666666666666666666666666666667"
+      }
+    },
+    {
+      "key": "rent-leap",
+      "id": "prorated-rent",
+      "mode": "dates",
+      "values": {
+        "monthly_rent": "2000",
+        "start": "2028-02-15",
+        "end": "2028-02-29",
+        "basis": "Actual days in each month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "1034.482758620689655172413793103448275862068965517241379310344827586207",
+        "Billable days included": "15",
+        "Average daily charge across selected dates": "68.9655172413793103448275862068965517241379310344827586206896551724138"
+      }
+    },
+    {
+      "key": "bps-convert",
+      "id": "basis-point",
+      "mode": "convert",
+      "values": {
+        "value": "25",
+        "unit": "Basis points"
+      },
+      "expected": {
+        "Basis points": "25",
+        "Equivalent percent": "0.25",
+        "Equivalent decimal fraction": "0.0025"
+      }
+    },
+    {
+      "key": "bps-change",
+      "id": "basis-point",
+      "mode": "rate-change",
+      "values": {
+        "start_rate": "5",
+        "end_rate": "5.25"
+      },
+      "expected": {
+        "Rate change in basis points": "25.00",
+        "Rate change in percentage points": "0.25",
+        "Relative change from positive starting rate": "5.00"
+      }
+    },
+    {
+      "key": "bps-amount",
+      "id": "basis-point",
+      "mode": "amount",
+      "values": {
+        "amount": "200000",
+        "bps": "25"
+      },
+      "expected": {
+        "Amount represented by entered basis points": "500",
+        "Equivalent rate": "0.25"
+      }
+    },
+    {
+      "key": "credit-weighted",
+      "id": "credit-utilization",
+      "mode": "cards",
+      "values": {
+        "cards": "900, 1000\n100, 9000",
+        "target": "10"
+      },
+      "expected": {
+        "Overall credit utilization": "10.0",
+        "Payment to reach overall target": "0",
+        "Payments to bring every card to target": "800.0",
+        "Total reported balances": "1000",
+        "Total credit limits": "10000"
+      }
+    },
+    {
+      "key": "credit-target",
+      "id": "credit-utilization",
+      "mode": "cards",
+      "values": {
+        "cards": "1500, 5000\n500, 5000",
+        "target": "10"
+      },
+      "expected": {
+        "Overall credit utilization": "20.0",
+        "Payment to reach overall target": "1000.0",
+        "Payments to bring every card to target": "1000.0",
+        "Total reported balances": "2000",
+        "Total credit limits": "10000"
+      }
+    },
+    {
+      "key": "ocf-indirect",
+      "id": "operating-cash-flow",
+      "mode": "indirect",
+      "values": {
+        "net_income": "120000",
+        "noncash": "30000",
+        "ar_change": "15000",
+        "inventory_change": "10000",
+        "other_assets_change": "5000",
+        "ap_change": "8000",
+        "other_liabilities_change": "2000"
+      },
+      "expected": {
+        "Operating cash flow under entered assumptions": "130000",
+        "Increase in operating net working capital": "20000",
+        "Working-capital cash-flow effect": "-20000"
+      }
+    },
+    {
+      "key": "ocf-nwc",
+      "id": "operating-cash-flow",
+      "mode": "nwc",
+      "values": {
+        "net_income": "120000",
+        "noncash": "30000",
+        "nwc_change": "20000"
+      },
+      "expected": {
+        "Operating cash flow under entered assumptions": "130000",
+        "Increase in operating net working capital": "20000",
+        "Working-capital cash-flow effect": "-20000"
+      }
+    },
+    {
+      "key": "ocf-direct",
+      "id": "operating-cash-flow",
+      "mode": "direct",
+      "values": {
+        "receipts": "600000",
+        "suppliers": "300000",
+        "employees": "100000",
+        "taxes": "30000",
+        "interest": "10000",
+        "other": "30000"
+      },
+      "expected": {
+        "Operating cash flow under entered assumptions": "130000",
+        "Operating cash payments entered": "470000"
+      }
+    },
+    {
+      "key": "loc-interest",
+      "id": "business-line-of-credit",
+      "mode": "interest",
+      "values": {
+        "balance": "25000",
+        "rate": "12",
+        "days": "30",
+        "basis": "365",
+        "fees": "50"
+      },
+      "expected": {
+        "Modeled interest for entered period": "246.5753424657534246575342465753424657534246575342465753424657534246575",
+        "Interest plus entered fees": "296.5753424657534246575342465753424657534246575342465753424657534246575",
+        "Days in modeled period": "30"
+      }
+    },
+    {
+      "key": "loc-ledger",
+      "id": "business-line-of-credit",
+      "mode": "ledger",
+      "values": {
+        "start": "2026-12-01",
+        "end": "2027-01-01",
+        "opening": "10000",
+        "limit": "50000",
+        "rate": "12",
+        "basis": "365",
+        "transactions": "2026-12-10, 5000\n2026-12-20, -3000",
+        "fees": "50"
+      },
+      "expected": {
+        "Modeled interest over selected dates": "126.2465753424657534246575342465753424657534246575342465753424657534247",
+        "Interest plus entered fees": "176.2465753424657534246575342465753424657534246575342465753424657534247",
+        "Closing principal balance": "12000",
+        "Average daily principal balance": "12387.09677419354838709677419354838709677419354838709677419354838709677",
+        "Principal drawn": "5000",
+        "Principal repaid": "3000",
+        "Unused credit at closing": "38000",
+        "Days in modeled period": "31"
+      }
+    },
+    {
+      "key": "loc-paydown",
+      "id": "business-line-of-credit",
+      "mode": "paydown",
+      "values": {
+        "balance": "25000",
+        "rate": "12",
+        "payment": "1000",
+        "monthly_fee": "0",
+        "max_months": "600"
+      },
+      "expected": {
+        "Modeled payoff time in months": "29",
+        "Interest over modeled payments": "3912.2092574575011941443798532343428068774684255343145282425000",
+        "Total payments including fees": "28912.2092574575011941443798532343428068774684255343145282425000",
+        "Principal remaining at model end": "0",
+        "Payments modeled": "29"
+      }
+    },
+    {
+      "key": "rent-full-30",
+      "id": "prorated-rent",
+      "mode": "dates",
+      "values": {
+        "monthly_rent": "2000",
+        "start": "2026-01-01",
+        "end": "2026-01-31",
+        "basis": "30-day month"
+      },
+      "expected": {
+        "Estimated rent for selected billable days": "2066.666666666666666666666666666666666666666666666666666666666666666672",
+        "Billable days included": "31",
+        "Average daily charge across selected dates": "66.66666666666666666666666666666666666666666666666666666666666666666684"
+      }
+    },
+    {
+      "key": "bps-one-percent",
+      "id": "basis-point",
+      "mode": "convert",
+      "values": {
+        "value": "1",
+        "unit": "Percent / percentage points"
+      },
+      "expected": {
+        "Basis points": "100",
+        "Equivalent percent": "1",
+        "Equivalent decimal fraction": "0.01"
+      }
+    },
+    {
+      "key": "bps-decimal",
+      "id": "basis-point",
+      "mode": "convert",
+      "values": {
+        "value": "0.0025",
+        "unit": "Decimal"
+      },
+      "expected": {
+        "Basis points": "25.0000",
+        "Equivalent percent": "0.2500",
+        "Equivalent decimal fraction": "0.0025"
+      }
+    },
+    {
+      "key": "bps-negative",
+      "id": "basis-point",
+      "mode": "rate-change",
+      "values": {
+        "start_rate": "5",
+        "end_rate": "4.5"
+      },
+      "expected": {
+        "Rate change in basis points": "-50.0",
+        "Rate change in percentage points": "-0.5",
+        "Relative change from positive starting rate": "-10.0"
+      }
+    },
+    {
+      "key": "credit-zero-limit",
+      "id": "credit-utilization",
+      "mode": "cards",
+      "values": {
+        "cards": "500, 0\n100, 1000",
+        "target": "10"
+      },
+      "expected": {
+        "Overall credit utilization": "60.0",
+        "Payment to reach overall target": "500.0",
+        "Payments to bring every card to target": "500.0",
+        "Total reported balances": "600",
+        "Total credit limits": "1000"
+      }
+    },
+    {
+      "key": "ocf-receivables-down",
+      "id": "operating-cash-flow",
+      "mode": "indirect",
+      "values": {
+        "net_income": "120000",
+        "noncash": "30000",
+        "ar_change": "-30000",
+        "inventory_change": "10000",
+        "other_assets_change": "5000",
+        "ap_change": "8000",
+        "other_liabilities_change": "2000"
+      },
+      "expected": {
+        "Operating cash flow under entered assumptions": "175000",
+        "Increase in operating net working capital": "-25000",
+        "Working-capital cash-flow effect": "25000"
+      }
+    },
+    {
+      "key": "ocf-profit-positive-cash-negative",
+      "id": "operating-cash-flow",
+      "mode": "nwc",
+      "values": {
+        "net_income": "10000",
+        "noncash": "0",
+        "nwc_change": "20000"
+      },
+      "expected": {
+        "Operating cash flow under entered assumptions": "-10000",
+        "Increase in operating net working capital": "20000",
+        "Working-capital cash-flow effect": "-20000"
+      }
+    },
+    {
+      "key": "loc-360",
+      "id": "business-line-of-credit",
+      "mode": "interest",
+      "values": {
+        "balance": "25000",
+        "rate": "12",
+        "days": "30",
+        "basis": "360",
+        "fees": "50"
+      },
+      "expected": {
+        "Modeled interest for entered period": "250",
+        "Interest plus entered fees": "300",
+        "Days in modeled period": "30"
+      }
+    }
+  ]
+}
