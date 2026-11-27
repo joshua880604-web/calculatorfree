@@ -134,6 +134,22 @@ directory_nodes = [n for schema in directory.schemas for n in schema_nodes(schem
 assert any(n.get('@type') == 'CollectionPage' for n in directory_nodes)
 item_lists = [n for n in directory_nodes if n.get('@type') == 'ItemList']
 assert len(item_lists) == 1
+if origin:
+    # The root redirects to this directory; publish one consistent site identity here.
+    websites = [n for n in directory.schemas[0]['@graph'] if n.get('@type') == 'WebSite']
+    publishers = [n for n in directory.schemas[0]['@graph'] if n.get('@type') == 'Organization']
+    assert len(websites) == len(publishers) == 1, 'Homepage site/publisher identity'
+    website, publisher = websites[0], publishers[0]
+    assert website['url'] == origin+'/' and website['name'] == publisher['name']
+    assert website['publisher']['@id'] == publisher['@id'], 'Site publisher reference'
+    assert publisher['url'] == origin+'/' and publisher['email'], 'Public publisher details'
+    logo = publisher['logo']
+    logo_path = OUT / urlsplit(logo['url']).path.lstrip('/')
+    assert logo['url'].startswith(origin+'/') and logo_path.is_file(), 'Published brand logo'
+    logo_bytes = logo_path.read_bytes()
+    assert logo_bytes[:8] == b'\x89PNG\r\n\x1a\n', 'PNG brand logo'
+    width, height = (int.from_bytes(logo_bytes[i:i+4], 'big') for i in (16,20))
+    assert width == logo['width'] and height == logo['height'] and min(width,height) >= 112, 'Logo dimensions'
 items = item_lists[0]['itemListElement']
 tool_paths = {tool['local_route'][:-5] for tool in json.loads((ROOT/'src/lib/catalog-data.json').read_text()) if tool['id'] != 'real-estate'}
 assert item_lists[0]['numberOfItems'] == len(items) == len(tool_paths)

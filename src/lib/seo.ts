@@ -1,6 +1,6 @@
 import linkReview from './internal-link-review.json';
 import answerLinkReview from './practical-guide-answer-links.json';
-import {publisherIdentity} from './content-transparency';
+import {publisherIdentity,websiteIdentity} from './content-transparency';
 import {embedResourcesPath,embedResourcesReviewedOn} from './embed-resources';
 import {motherPageIds,motherPageReviewedOn} from './mother-page-ui';
 import {guidesPath,editorialGuides,guideContentDate} from './editorial-guides';
@@ -239,10 +239,13 @@ export function calculatorSchema(calc: Calculator, config = siteConfig()) {
 // The main directory is a collection of the visible tools, not an application.
 export function directorySchema(config=siteConfig()) {
  const url=absoluteURL(directoryPath,config);
+ const website=websiteIdentity(config);
  const items=catalog.filter(tool=>tool.id!=='real-estate');
  return {'@context':'https://schema.org','@graph':[
-  {'@type':'CollectionPage',name:'Financial calculators',description:'Free calculators for loans, savings, retirement, taxes and business finance, with supporting everyday tools.',inLanguage:'en',publisher:publisherIdentity(config),...(url?{'@id':url+'#page',url,mainEntity:{'@id':url+'#tools'}}:{})},
+  {'@type':'CollectionPage',name:'Financial calculators',description:'Free calculators for loans, savings, retirement, taxes and business finance, with supporting everyday tools.',inLanguage:'en',publisher:publisherIdentity(config),...(url?{'@id':url+'#page',url,mainEntity:{'@id':url+'#tools'},isPartOf:{'@id':website['@id']}}:{})},
   {'@type':'ItemList',...(url?{'@id':url+'#tools'}:{}),numberOfItems:items.length,itemListElement:items.map((tool,index)=>({'@type':'ListItem',position:index+1,name:tool.title,...(absoluteURL(tool.local_route,config)?{url:absoluteURL(tool.local_route,config)}:{})}))},
+  website,
+  publisherIdentity(config),
  ]};
 }
 
