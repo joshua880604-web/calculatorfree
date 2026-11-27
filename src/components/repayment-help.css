@@ -1,0 +1,12 @@
+.first-payment-explanation {
+  margin: 1rem 0;
+  padding-top: .75rem;
+  border-top: 1px solid var(--module-border, #ccd8e0);
+  overflow-wrap: anywhere;
+}
+.first-payment-explanation h3 { margin: 0 0 .5rem; font-size: 1rem; }
+.first-payment-explanation p { margin: .5rem 0; font-size: 1rem; line-height: 1.6; }
+.repayment-task-links p, .repayment-task-links li, .repayment-task-links a { font-size: 1rem; line-height: 1.6; }
+.repayment-task-links ul { padding-left: 1.25rem; }
+.repayment-task-links li { margin: .75rem 0; }
+.repayment-task-links a { display: inline; margin: 0; }

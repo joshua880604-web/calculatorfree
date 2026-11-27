@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-27",
+  "productionPublished": false,
+  "branch": "preview/gsc-two-repayment-pages-20261127",
+  "baseLocalCommit": "e4bb5e6187ff598432584b5b89f8b846b4d2b29d",
+  "pages": [
+    "/amortization-calculator",
+    "/credit-card-minimum-payment-calculator"
+  ],
+  "changes": [
+    "Explain the first monthly payment using interest, principal and remaining balance from the existing calculated row.",
+    "Replace keyword-alias blocks on these two pages with task-based links to distinct repayment tools and guides.",
+    "Update content wording dates for these two calculator pages only."
+  ],
+  "tests": {
+    "passed": 3985,
+    "failed": 0,
+    "typecheckPassed": true,
+    "productionBuildPassed": true,
+    "browserChecks": 14,
+    "downloadChecks": 2,
+    "browserErrors": [],
+    "seoCheckPassed": true,
+    "canonicalPagesChecked": 505
+  },
+  "scope": {
+    "pagesCompared": 505,
+    "pagesWithChangedVisibleMainContent": [
+      {
+        "url": "https://www.calculatorfree.io/amortization-calculator",
+        "changedFields": [
+          "mainTextSha256"
+        ]
+      },
+      {
+        "url": "https://www.calculatorfree.io/credit-card-minimum-payment-calculator",
+        "changedFields": [
+          "mainTextSha256"
+        ]
+      }
+    ],
+    "otherPagesUnchanged": 503,
+    "titlesDescriptionsCanonicalsRobotsAndSchemaUnchanged": true
+  },
+  "calculationEngineChanged": false,
+  "indexingOrRankingRecoveryClaim": false,
+  "limits": [
+    "Google indexing recovery is not established by these content changes.",
+    "Browser tests used the local production build, with the advertising script stubbed.",
+    "Source and numerical-example checking dates remain their actual prior dates."
+  ]
+}

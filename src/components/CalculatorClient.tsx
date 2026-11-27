@@ -2,6 +2,7 @@
 import SiteLink from "@/components/SiteLink";
 import {compactReadingIds} from "@/lib/compact-reading";
 import CreditCardFields from "./CreditCardFields";
+import FirstPayment from "./FirstPayment";
 import { visibleCalculatorModes, minimumPaymentHref, legacyMinimumPaymentHref } from "@/lib/mode-handoffs";
 import FavoriteButton from "./FavoriteButton";
 import { calculatorPresetHref } from "@/lib/preset-links";
@@ -798,6 +799,7 @@ export default function CalculatorClient({ calc, initialResult, shortcuts = [], 
           {context && id !== "mortgage" && <p className="result-context">{context}</p>}
           {summary && summary.highlights.length > 0 && <dl className="workspace-key-figures" aria-label="Key calculated figures">{summary.highlights.map(m => <div className="metric" key={m.label}><dt><span>{m.label}</span></dt><dd><strong>{formatMetric(m)}</strong></dd></div>)}</dl>}
           {context && id === "mortgage" && <p className="result-context">{context}</p>}
+          <FirstPayment id={id} result={result}/>
           {summary && summary.details.length > 0 && <details className="workspace-breakdown" key={mode.id + "-breakdown"}>
             <summary>Result breakdown ({summary.details.length})</summary>
             {summary.details.map(m => <div className="metric" key={m.label}><span>{m.label}</span><strong>{formatMetric(m)}</strong></div>)}
